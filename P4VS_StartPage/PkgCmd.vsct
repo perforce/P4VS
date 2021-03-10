@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!--*************************************************************************
+
+	Copyright (c) 2011 Perforce Software, Inc.  All rights reserved.
+
+	Redistribution and use in source and binary forms, with or without
+	modification, are permitted provided that the following conditions are met:
+
+	1.  Redistributions of source code must retain the above copyright
+			notice, this list of conditions and the following disclaimer.
+
+	2.  Redistributions in binary form must reproduce the above copyright
+			notice, this list of conditions and the following disclaimer in the
+			documentation and/or other materials provided with the distribution.
+
+	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+	AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+	ARE DISCLAIMED. IN NO EVENT SHALL PERFORCE SOFTWARE, INC. BE LIABLE FOR ANY
+	DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGESimnu
+	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+	ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+	**************************************************************************-->
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<!--<Extern href="msobtnid.h"/>-->
+    <Include href="HelixMoniker.vsct"/>
+	
+	<Commands package="guidP4VsProviderPkg">
+		<Menus>
+			<!-- Menu for source control commands under File/SourceControl -->
+			<Menu guid="guidP4VsProviderCmdSet" id="imnuFileSourceControlMenu" priority="0x0000" type="Menu">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpFileSourceControl"/>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Perforce</ButtonText>
+				</Strings>
+			</Menu>
+            
+      <!-- Manage submenu in SE context menu-->
+      <Menu guid="guidP4VsProviderCmdSet" id="imnuManageMenu" priority="0x0030" type="Menu">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>
+		  <CommandFlag>TextChanges</CommandFlag>
+		  <Strings>
+			  <ButtonText>Manage Files</ButtonText>
+        </Strings>
+      </Menu>
+
+      <!-- Revisions submenu in SE context menu-->
+      <Menu guid="guidP4VsProviderCmdSet" id="imnuRevisionsMenu" priority="0x0040" type="Menu">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>
+		  <CommandFlag>TextChanges</CommandFlag>
+		  <Strings>
+			  <ButtonText>Revisions</ButtonText>
+        </Strings>
+      </Menu>
+
+      <!-- Copy/Merge submenu in SE context menu-->
+      <Menu guid="guidP4VsProviderCmdSet" id="imnuCopyMergeMenu" priority="0x0050" type="Menu">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>
+        <!--<Icon guid="guidP4VsProviderImages" id="iconDiff"/> how to add icons here?-->
+		  <CommandFlag>TextChanges</CommandFlag>
+		  <Strings>
+			  <ButtonText>Copy/Merge</ButtonText>
+        </Strings>
+      </Menu>
+      
+			<!-- Diff submenu in SE context menu-->
+			<Menu guid="guidP4VsProviderCmdSet" id="imnuDiffMenu" priority="0x0060" type="Menu">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>
+				<!--<Icon guid="guidP4VsProviderImages" id="iconDiff"/> how to add icons here?-->
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Diff</ButtonText>
+					<!--<CommandName>Diff</CommandName>-->
+				</Strings>
+			</Menu>
+
+			<!-- Views submenu in SE context menu-->
+			<Menu guid="guidP4VsProviderCmdSet" id="imnuViewsMenu" priority="0x0070" type="Menu">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Views</ButtonText>
+					<CommandName>Views</CommandName>
+				</Strings>
+			</Menu>
+      <!-- 	View/HistoryToolWindow command defined --><!--
+      <Button guid="guidP4VsProviderCmdSet" id="icmdViewHistoryToolWindow" priority="0x0100" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="1"/>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <Strings>
+          <ButtonText>&amp;File History</ButtonText>
+        </Strings>
+      </Button>-->
+      
+      
+			<!--  Menu for commands in toolwindow's toolbar -->
+			<!--<Menu guid="guidP4VsProviderCmdSet" id="imnuToolWindowToolbarMenu" priority="0x0000" type="ToolWindowToolbar">
+				<Parent guid="guidP4VsProviderCmdSet" id="imnuToolWindowToolbarMenu"/>
+				<Strings>
+					<ButtonText>WindowBar</ButtonText>
+					<CommandName>Window Bar</CommandName>
+				</Strings>
+			</Menu>-->
+			<!--  Create a top-level toolbar for source control commands -->
+			<Menu guid="guidP4VsProviderCmdSet" id="itbrSccToolbar" priority="0x0000" type="Toolbar">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpSccNowhere"/>
+				<CommandFlag>DefaultDocked</CommandFlag>
+				<Strings>
+					<ButtonText>P4VS</ButtonText>
+					<CommandName>P4VS</CommandName>
+				</Strings>
+			</Menu>
+
+			<Menu guid="guidP4VsProviderCmdSet" id="itbrSccConnectionToolbar" priority="0x0000" type="Toolbar">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpSccNowhere"/>
+				<Strings>
+					<ButtonText>P4Connection</ButtonText>
+					<CommandName>P4 Connection</CommandName>
+				</Strings>
+			</Menu>
+      <Menu guid="guidP4VsProviderCmdSet" id="itbrSccToolWindowToolbar" priority="0x0000" type="Toolbar">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpSccNowhere"/>
+        <Strings>
+          <ButtonText>P4Views</ButtonText>
+          <CommandName>P4 Views</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+		<Groups>
+			<!-- 	Group for Perforce commands in the File main menu -->
+			<Group guid="guidP4VsProviderCmdSet" id="igrpFileSourceControl" priority="0x0800">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_FILE"/>
+			</Group>
+
+      <!-- 	Group for scci buttons in the File/SourceControl menu -->
+			<Group guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands" priority="0x1000">
+				<Parent guid="guidP4VsProviderCmdSet" id="imnuFileSourceControlMenu"/>
+			</Group>
+      <!-- 	Group for refresh command in the File/SourceControl menu -->
+      <Group guid="guidP4VsProviderCmdSet" id="igrpRefreshGroup" priority="0x0010">
+        <Parent guid="guidP4VsProviderCmdSet" id="imnuFileSourceControlMenu"/>
+      </Group>
+      <!-- 	Group for main commands in the File/SourceControl menu -->
+      <Group guid="guidP4VsProviderCmdSet" id="igrpMainCmdGroup" priority="0x0020">
+        <Parent guid="guidP4VsProviderCmdSet" id="imnuFileSourceControlMenu"/>
+      </Group>
+
+      <!--Group for main commands in the document tab menu-->
+      <Group guid="guidP4VsProviderCmdSet" id="igrpMainCmdGroup" priority="0x0999">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_EZDOCWINTAB"/>
+      </Group>
+      <!-- 	Group for all other command groups in document tab menu -->
+      <Group guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands" priority="0x1000">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_EZDOCWINTAB"/>
+      </Group>
+
+      <!-- 	Group for commands under View main menu -->
+			<Group guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup" priority="0x0100">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_VIEW"/>
+			</Group>
+			<!-- 	Group for commands under Help main menu -->
+			<Group guid="guidP4VsProviderCmdSet" id="igrpHelpGroup" priority="0x0A00">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_HELP"/>
+			</Group>
+      <!-- 	Group for commands under manage files menu in the context menu-->
+      <Group guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup" priority="0x0030">
+        <Parent guid="guidP4VsProviderCmdSet" id="imnuManageMenu"/>
+      </Group>
+      <!-- 	Group for commands under revisions menu in the context menu-->
+      <Group guid="guidP4VsProviderCmdSet" id="igrpRevisionsMenuGroup" priority="0x0040">
+        <Parent guid="guidP4VsProviderCmdSet" id="imnuRevisionsMenu"/>
+      </Group>
+      <!-- 	Group for commands under copy/merge menu in the context menu-->
+      <Group guid="guidP4VsProviderCmdSet" id="igrpCopyMergeMenuGroup" priority="0x0050">
+        <Parent guid="guidP4VsProviderCmdSet" id="imnuCopyMergeMenu"/>
+      </Group>
+      <!-- 	Group for commands under diff menu in the context menu-->
+			<Group guid="guidP4VsProviderCmdSet" id="igrpDiffMenuGroup" priority="0x0060">
+				<Parent guid="guidP4VsProviderCmdSet" id="imnuDiffMenu"/>
+			</Group>
+			<!-- 	Group for commands under views menu in the context menu-->
+			<Group guid="guidP4VsProviderCmdSet" id="igrpViewsMenuGroup" priority="0x0070">
+				<Parent guid="guidP4VsProviderCmdSet" id="imnuViewsMenu"/>
+			</Group>
+
+			<!-- 	Group for commands under File main menu --><!--
+			<Group guid="guidP4VsProviderCmdSet" id="igrpFileMenuGroup" priority="0x0100">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_FILE"/>
+			</Group>-->
+			<!-- 	Group for buttons in toolwindow's toolbar -->
+			<!--
+			<Group guid="guidP4VsProviderCmdSet" id="igrpToolWindowToolbarGroup" priority="0x0100">
+				<Parent guid="guidP4VsProviderCmdSet" id="imnuToolWindowToolbarMenu"/>
+			</Group>
+			-->
+			<Group guid="guidP4VsProviderCmdSet" id="itbrSccConnectionToolbarGroup" priority="0xFF45">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>
+			</Group>
+      <Group guid="guidP4VsProviderCmdSet" id="itbrSccStatusToolbar" priority="0xFF45">
+        <Parent guid="guidStatusBarCmdSet" id="icmdAddToSrcCtrl"/>
+      </Group>
+
+		</Groups>
+		<Buttons>
+	<!-- 	Icon Monkier for Helix Core   -->
+      <Button guid="guidP4VsProviderCmdSet" id="icmdFileOpenInDepot" priority="0x0100" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpFileSourceControl"/>
+        <Icon guid="HelixMoniker" id="Helix"/>
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText></ButtonText>
+        </Strings>
+      </Button>
+      <!-- Helix submenu in Status Bar Add to Source Control Menu-->
+      <Button guid="guidP4VsProviderCmdSet" id="icmdPublish" priority="0x0100" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="itbrSccStatusToolbar"/>
+        <Icon guid="HelixMoniker" id="Helix"/>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>Helix Core</ButtonText>
+          <LocCanonicalName>Perforce.P4VS.Helix_Core</LocCanonicalName>
+        </Strings>
+      </Button>
+			<!-- 	View/ToolWindow command defined -->
+			<Button guid="guidP4VsProviderCmdSet" id="icmdViewWorkspaceToolWindow" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconWorkspaces"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>&amp;Workspaces</ButtonText>
+          <LocCanonicalName>Perforce.P4VS.Workspaces</LocCanonicalName>
+				</Strings>
+			</Button>
+			<!-- 	View/HistoryToolWindow command defined -->
+			<Button guid="guidP4VsProviderCmdSet" id="icmdViewHistoryToolWindow" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="1"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>&amp;File History</ButtonText>
+          <LocCanonicalName>Perforce.P4VS.File_History</LocCanonicalName>
+				</Strings>
+			</Button>
+		<!-- 	View/JobsToolWindow command defined -->
+		<Button guid="guidP4VsProviderCmdSet" id="icmdViewJobsToolWindow" priority="0x0100" type="Button">
+			<Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+			<Icon guid="guidP4VsProviderImages" id="5"/>
+			<CommandFlag>DynamicVisibility</CommandFlag>
+			<CommandFlag>DefaultInvisible</CommandFlag>
+			<CommandFlag>TextChanges</CommandFlag>
+			<Strings>
+				<ButtonText>&amp;Jobs</ButtonText>
+        <LocCanonicalName>Perforce.P4VS.Jobs</LocCanonicalName>
+			</Strings>
+		</Button>
+			<!-- 	View/P4ToolWindow command defined 
+			<Button guid="guidP4VsProviderCmdSet" id="icmdViewP4ToolWindow" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<Strings>
+					<ButtonText>&amp;P4</ButtonText>
+				</Strings>
+			</Button>-->
+      <!-- 	View/SubmittedToolWindow command defined -->
+			<Button guid="guidP4VsProviderCmdSet" id="icmdViewSubmittedChangelistsToolWindow" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="4"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>&amp;Submitted Changelists</ButtonText>
+          <LocCanonicalName>Perforce.P4VS.Submitted_Changelists</LocCanonicalName>
+				</Strings>
+			</Button>
+			<!-- 	View/PendingToolWindow command defined -->
+			<Button guid="guidP4VsProviderCmdSet" id="icmdViewPendingChangelistsToolWindow" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconPending"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>&amp;Pending Changelists</ButtonText>
+          <LocCanonicalName>Perforce.P4VS.Pending_Changelists</LocCanonicalName>
+				</Strings>
+			</Button>
+			<!-- 	View/LabelsToolWindow command defined -->
+			<Button guid="guidP4VsProviderCmdSet" id="icmdViewLabelsToolWindow" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconLabels"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>&amp;Labels</ButtonText>
+         <LocCanonicalName>Perforce.P4VS.Labels</LocCanonicalName>
+				</Strings>
+			</Button>
+			<!-- 	View/SwarmToolWindow command defined -->
+			<!--<Button guid="guidP4VsProviderCmdSet" id="icmdViewSwarmToolWindow" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconSwarm"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<Strings>
+					<ButtonText>S&amp;warm</ButtonText>
+				</Strings>
+			</Button>-->
+      <!-- 	View/SwarmToolWindow command defined -->
+      <!--<Button guid="guidP4VsProviderCmdSet" id="icmdViewReviewsToolWindow" priority="0x0100" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconReviews"/>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <Strings>
+          <ButtonText>R&amp;eviews</ButtonText>
+        </Strings>
+      </Button>-->
+			<!-- 	View/StreamsToolWindow command defined -->
+      <Button guid="guidP4VsProviderCmdSet" id="icmdViewStreamsToolWindow" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconStreams"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<Strings>
+					<ButtonText>S&amp;treams</ButtonText>
+				</Strings>
+			</Button>
+			
+			<!-- 	Help/P4VSHelp command defined -->
+			<Button guid="guidP4VsProviderCmdSet" id="icmdP4VSHelp" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpHelpGroup"/>
+				<!--<Icon guid="guidP4VsProviderImages" id="iconPending"/>-->
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>P4VS Help</ButtonText>
+          <LocCanonicalName>Perforce.P4VS.Help</LocCanonicalName>
+				</Strings>
+			</Button>
+
+      <!-- 	P4VS System Info command defined -->
+      <Button guid="guidP4VsProviderCmdSet" id="icmdP4VSSystemInfo" priority="0x0102" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpHelpGroup"/>
+        <!--<Icon guid="guidP4VsProviderImages" id="iconPending"/>-->
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>P4VS System Info</ButtonText>
+          <LocCanonicalName>Perforce.P4VS.SystemInfo</LocCanonicalName>
+        </Strings>
+      </Button>
+
+			<!-- 	File/Open Project in Perforce Depot command defined -->
+			<Button guid="guidP4VsProviderCmdSet" id="icmdFileOpenInDepot" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpFileSourceControl"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Open Solution/Project in Helix Core server...</ButtonText>
+          <LocCanonicalName>Perforce.P4VS.Open_Solution_in_Perforce_Depot</LocCanonicalName>
+				</Strings>
+			</Button>
+
+			<!-- 	File/Open connection in Perforce Depot command defined -->
+			<Button guid="guidP4VsProviderCmdSet" id="icmdOpenConnection" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpFileSourceControl"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Open Connection to a Helix Core server...</ButtonText>
+          <LocCanonicalName>Perforce.P4VS.Open_Connection_to_a_Perforce_Depot</LocCanonicalName>
+				</Strings>
+			</Button>
+
+			<!-- 	File/Open connection in Perforce Depot command defined -->
+			<Button guid="guidP4VsProviderCmdSet" id="icmdCloseConnection" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpFileSourceControl"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Close Connection to the Helix Core server</ButtonText>
+          <LocCanonicalName>Perforce.P4VS.Close_Connection_to_the_Perforce_Depot</LocCanonicalName>
+				</Strings>
+			</Button>
+
+			<!-- 	Buttons in the toolwindow's toolbar -->
+			<!--
+			<Button guid="guidP4VsProviderCmdSet" id="icmdToolWindowToolbarCommand" priority="0x0100" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpToolWindowToolbarGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconCheckout"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<Strings>
+					<ButtonText>ToolButton</ButtonText>
+				</Strings>
+			</Button>
+			-->
+			<!-- 	Scc commands in context menus for SolutionExplorer -->
+			<Button guid="guidP4VsProviderCmdSet" id="icmdScmRefresh" priority="0x0000" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpRefreshGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconRefresh"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Refresh View</ButtonText>
+					<MenuText>Refresh View</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Refresh_View</LocCanonicalName>
+					<CommandName>Refresh</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdAddToSourceControl" priority="0x0001" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpMainCmdGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconAdd"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Mark for Add</ButtonText>
+					<MenuText>Mark for &amp;Add...</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Mark_for_Add</LocCanonicalName>
+					<CommandName>MarkforAdd</CommandName>
+				</Strings>
+			</Button>
+      <Button guid="guidP4VsProviderCmdSet" id="icmdCheckin" priority="0x0002" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpMainCmdGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconSubmit"/>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+		  <CommandFlag>TextChanges</CommandFlag>
+		  <Strings>
+          <ButtonText>Submit</ButtonText>
+          <MenuText>&amp;Submit...</MenuText>
+        <LocCanonicalName>Perforce.P4VS.Submit</LocCanonicalName>
+          <CommandName>Submit</CommandName>
+        </Strings>
+      </Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdCheckout" priority="0x0003" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpMainCmdGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconCheckout"/>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Checkout...</ButtonText>
+					<MenuText>Check&amp;out...</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Checkout</LocCanonicalName>
+					<CommandName>Checkout... (P4VsProvider)</CommandName>
+				</Strings>
+			</Button>
+      <Button guid="guidP4VsProviderCmdSet" id="icmdCheckoutProject" priority="0x0003" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpSccNowhere"/>
+        <!--<Icon guid="guidP4VsProviderImages" id="iconCheckout"/>-->
+        <CommandFlag>TextChanges</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+	    <CommandFlag>TextChanges</CommandFlag>
+		<Strings>
+          <ButtonText>Checkout All in Project</ButtonText>
+          <MenuText>Checkout All in &amp;Project</MenuText>
+      <LocCanonicalName>Perforce.P4VS.Checkout_All_in_Project</LocCanonicalName>
+          <CommandName>Checkout All in Project (P4VsProvider)</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidP4VsProviderCmdSet" id="icmdCheckoutSolution" priority="0x0003" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpSccNowhere"/>
+        <!--<Icon guid="guidP4VsProviderImages" id="iconCheckout"/>-->
+        <CommandFlag>TextChanges</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <Strings>
+          <ButtonText>Checkout All in Solution</ButtonText>
+          <MenuText>Checkout All in &amp;Solution</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Checkout_All_in_Solution</LocCanonicalName>
+          <CommandName>Checkout All in Solution (P4VsProvider)</CommandName>
+        </Strings>
+      </Button>
+			<!--<Button guid="guidP4VsProviderCmdSet" id="icmdUseSccOffline" priority="0x0000" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<Strings>
+					<ButtonText>Project uses Scc Offline</ButtonText>
+					<MenuText>Project uses Scc O&amp;ffline</MenuText>
+					<CommandName>Use Scc Offline (P4VsProvider)</CommandName>
+				</Strings>
+			</Button> -->
+      <Button guid="guidP4VsProviderCmdSet" id="icmdShelve" priority="0x0004" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpMainCmdGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconShelve"/>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+		<CommandFlag>TextChanges</CommandFlag>
+		<Strings>
+          <ButtonText>Shelve</ButtonText>
+          <MenuText>Shelve...</MenuText>
+          <CommandName>Shelve File (P4VsProvider)</CommandName>
+      <LocCanonicalName>Perforce.P4VS.Shelve</LocCanonicalName>
+        </Strings>
+      </Button>
+      <Button guid="guidP4VsProviderCmdSet" id="icmdReconcile" priority="0x0004" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconReconcile"/>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>Reconcile Offline Work</ButtonText>
+          <MenuText>Reconcile Offline Work</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Reconcile</LocCanonicalName>
+          <CommandName>Revert</CommandName>
+        </Strings>
+      </Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdRevert" priority="0x0005" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconRevert"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Revert</ButtonText>
+					<MenuText>Revert</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Revert</LocCanonicalName>
+					<CommandName>Revert</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdRevertUnchanged" priority="0x0006" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconRevertUnchanged"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Revert Unchanged</ButtonText>
+					<MenuText>Revert if Unchanged</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Revert_if_Unchanged</LocCanonicalName>
+					<CommandName>RevertUnchanged</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdLock" priority="0x0007" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconLock"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Lock</ButtonText>
+					<MenuText>&amp;Lock</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Lock</LocCanonicalName>
+					<CommandName>LockFiles</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdUnlock" priority="0x0008" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconUnlock"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Unlock</ButtonText>
+					<MenuText>&amp;Unlock</MenuText>
+					<LocCanonicalName>Perforce.P4VS.Unlock</LocCanonicalName>
+					<CommandName>UnlockFiles</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdChangeFileType" priority="0x0009" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconChangeFiletype"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Change Filetype</ButtonText>
+					<MenuText>Change Filetype...</MenuText>
+					<LocCanonicalName>Perforce.P4VS.Change_Filetype</LocCanonicalName>
+					<CommandName>Change Filetype (P4VsProvider)</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdMoveToChangelist" priority="0x000A" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconMoveToChangelist"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Move to Another Changelist...</ButtonText>
+					<MenuText>Move to Another Changelist...</MenuText>
+					<LocCanonicalName>Perforce.P4VS.Move_To_Another_Changelist</LocCanonicalName>
+					<CommandName>Move To Another Changelist (P4VsProvider)</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdAddToIgnoreList" priority="0x000B" type="Button">
+							<Parent guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup"/>
+							<Icon guid="guidP4VsProviderImages" id="iconAddToIgnoreList"/>
+							<CommandFlag>DynamicVisibility</CommandFlag>
+							<CommandFlag>DefaultInvisible</CommandFlag>
+							<CommandFlag>TextChanges</CommandFlag>
+							<Strings>
+								<ButtonText>Add to Ignore List</ButtonText>
+								<MenuText>Add to Ignore List</MenuText>
+								<LocCanonicalName>Perforce.P4VS.Add_to_Ignore_List</LocCanonicalName>
+								<CommandName>Add to Ignore List(P4VsProvider)</CommandName>
+							</Strings>
+						</Button>
+						<Button guid="guidP4VsProviderCmdSet" id="icmdRemoveFromIgnoreList" priority="0x000B" type="Button">
+							<Parent guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup"/>
+							<Icon guid="guidP4VsProviderImages" id="iconRemoveFromIgnoreList"/>
+							<CommandFlag>DynamicVisibility</CommandFlag>
+							<CommandFlag>DefaultInvisible</CommandFlag>
+							<CommandFlag>TextChanges</CommandFlag>
+							<Strings>
+								<ButtonText>Remove from Ignore List</ButtonText>
+								<MenuText>Remove from Ignore List</MenuText>
+								<LocCanonicalName>Perforce.P4VS.Remove_from_Ignore_List</LocCanonicalName>
+								<CommandName>Remove from Ignore List(P4VsProvider)</CommandName>
+							</Strings>
+						</Button>
+						<Button guid="guidP4VsProviderCmdSet" id="icmdEditIgnoreList" priority="0x000B" type="Button">
+							<Parent guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup"/>
+							<Icon guid="guidP4VsProviderImages" id="iconEditIgnoreList"/>
+							<CommandFlag>DynamicVisibility</CommandFlag>
+							<CommandFlag>DefaultInvisible</CommandFlag>
+							<CommandFlag>TextChanges</CommandFlag>
+							<Strings>
+								<ButtonText>Edit Ignore List</ButtonText>
+								<MenuText>Edit Ignore List</MenuText>
+								<LocCanonicalName>Perforce.P4VS.Edit_Ignore_List</LocCanonicalName>
+								<CommandName>Edit Ignore List(P4VsProvider)</CommandName>
+							</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdSyncHead" priority="0x0010" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpRevisionsMenuGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconGetLatest"/>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+		  <CommandFlag>TextChanges</CommandFlag>
+		  <Strings>
+          <ButtonText>Get Latest Revision</ButtonText>
+          <MenuText>Get Latest Revision</MenuText>
+        <LocCanonicalName>Perforce.P4VS.Get_Latest_Revision</LocCanonicalName>
+          <CommandName>GetLatest</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidP4VsProviderCmdSet" id="icmdSync" priority="0x0011" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpRevisionsMenuGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconGetRevision"/>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+		  <CommandFlag>TextChanges</CommandFlag>
+		  <Strings>
+            <ButtonText>Get Revision</ButtonText>
+            <MenuText>Get Revision...</MenuText>
+        <LocCanonicalName>Perforce.P4VS.Get_Revision</LocCanonicalName>
+            <CommandName>GetRevisio</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidP4VsProviderCmdSet" id="icmdShowHistory" priority="0x0012" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpRevisionsMenuGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="1"/>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+		  <CommandFlag>TextChanges</CommandFlag>
+		  <Strings>
+            <ButtonText>Show History</ButtonText>
+            <MenuText>Show History</MenuText>
+        <LocCanonicalName>Perforce.P4VS.Show_History</LocCanonicalName>
+            <CommandName>ShowHistory</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidP4VsProviderCmdSet" id="icmdScmCopy" priority="0x0013" type="Button">
+	      <Parent guid="guidP4VsProviderCmdSet" id="igrpCopyMergeMenuGroup"/>
+		  <Icon guid="guidP4VsProviderImages" id="iconCopy"/>
+		  <CommandFlag>DynamicVisibility</CommandFlag>
+		  <CommandFlag>DefaultInvisible</CommandFlag>
+		  <CommandFlag>TextChanges</CommandFlag>
+		  <Strings>
+            <ButtonText>Copy</ButtonText>
+            <MenuText>Copy to Stream...</MenuText>
+        <LocCanonicalName>Perforce.P4VS.Copy_to_Stream</LocCanonicalName>
+            <CommandName>Copy</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidP4VsProviderCmdSet" id="icmdScmMerge" priority="0x0014" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="igrpCopyMergeMenuGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconMerge"/>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+		<CommandFlag>TextChanges</CommandFlag>
+		<Strings>
+            <ButtonText>Merge</ButtonText>
+            <MenuText>Merge to Stream...</MenuText>
+      <LocCanonicalName>Perforce.P4VS.Merge_to_Stream</LocCanonicalName>
+            <CommandName>Merge</CommandName>
+        </Strings>
+      </Button>
+	  <Button guid="guidP4VsProviderCmdSet" id="icmdResolve" priority="0x0015" type="Button">
+		<Parent guid="guidP4VsProviderCmdSet" id="igrpCopyMergeMenuGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconResolve"/>
+		<CommandFlag>DynamicVisibility</CommandFlag>
+		<CommandFlag>DefaultInvisible</CommandFlag>
+		<CommandFlag>TextChanges</CommandFlag>
+		<Strings>
+			<ButtonText>Resolve</ButtonText>
+			<MenuText>Resolve...</MenuText>
+      <LocCanonicalName>Perforce.P4VS.Resolve</LocCanonicalName>
+			<CommandName>ResolveFiles</CommandName>
+		</Strings>
+	  </Button>
+      
+			<!--<Button guid="guidP4VsProviderCmdSet" id="icmdMarkForDelete" priority="0x0000" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<Strings>
+					<ButtonText>Delete from SCM</ButtonText>
+					<MenuText>Delete from SCM</MenuText>
+					<CommandName>Delete Files from SCM</CommandName>
+				</Strings>
+			</Button>-->
+			
+			<Button guid="guidP4VsProviderCmdSet" id="icmdDiffVsHave" priority="0x0016" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpDiffMenuGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconDiffHave"/>
+				<!--<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>-->
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Diff Against Have Revision</ButtonText>
+					<MenuText>Diff Against Have Revision</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Diff_Against_Have_Revision</LocCanonicalName>
+					<CommandName>DiffAgainstHave</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdDiffVsAny" priority="0x0017" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpDiffMenuGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconDiff"/>
+				<!--<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>-->
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Diff Against...</ButtonText>
+					<MenuText>Diff Against...</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Diff_Against</LocCanonicalName>
+					<CommandName>DiffAgainstRevision</CommandName>
+				</Strings>
+			</Button>
+			<!--<Button guid="guidP4VsProviderCmdSet" id="icmdAddProjectToSCC" priority="0x0000" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<Strings>
+					<ButtonText>Add to Source Control</ButtonText>
+					<MenuText>Add to Source Control</MenuText>
+					<CommandName>Add to Source Control</CommandName>
+				</Strings>
+			</Button>-->
+			
+			
+			<!--<Button guid="guidP4VsProviderCmdSet" id="icmdScmAttributes" priority="0x0000" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<Strings>
+					<ButtonText>Change Filetype</ButtonText>
+					<MenuText>Change Filetype...</MenuText>
+					<CommandName>Change Filetype</CommandName>
+				</Strings>
+			</Button>-->
+			
+
+			<Button guid="guidP4VsProviderCmdSet" id="icmdP4V" priority="0x0018" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewsMenuGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconViews"/>
+				<!--<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>-->
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>View in P4V</ButtonText>
+					<MenuText>View in P4V</MenuText>
+          <LocCanonicalName>Perforce.P4VS.View_in_P4V</LocCanonicalName>
+					<CommandName>ViewinP4V</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdTimeLapse" priority="0x0019" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewsMenuGroup"/>
+        <!--<Icon guid="guidP4VsProviderImages" id="iconViews"/>-->
+				<!--<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>-->
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Time-lapse View</ButtonText>
+					<MenuText>Time-lapse View</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Time-lapse_View</LocCanonicalName>
+					<CommandName>TimelapseView</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdRevGraph" priority="0x0020" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewsMenuGroup"/>
+        <!--<Icon guid="guidP4VsProviderImages" id="iconViews"/>-->
+				<!--<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>-->
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Revision Graph</ButtonText>
+					<MenuText>Revision Graph</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Revision_Graph</LocCanonicalName>
+					<CommandName>RevisionGraph</CommandName>
+				</Strings>
+			</Button>
+			<Button guid="guidP4VsProviderCmdSet" id="icmdStreamGraph" priority="0x0021" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="igrpViewsMenuGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconStreamGraph"/>
+				<!--<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>-->
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Stream Graph</ButtonText>
+					<MenuText>Stream Graph</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Stream_Graph</LocCanonicalName>
+					<CommandName>StreamGraph</CommandName>
+				</Strings>
+			</Button>
+
+			<Button guid="guidP4VsProviderCmdSet" id="cmdidCancelActiveCommand" priority="0x0001" type="Button">
+				<Parent guid="guidP4VsProviderCmdSet" id="itbrSccConnectionToolbarGroup"/>
+				<Icon guid="guidP4VsProviderImages" id="iconCancel"/>
+				<!--<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>-->
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<Strings>
+					<ButtonText>Cancel Command</ButtonText>
+					<MenuText>Cancel Command</MenuText>
+					<LocCanonicalName>Perforce.P4VS.Cancel_Command</LocCanonicalName>
+					<CommandName>CancelCommand</CommandName>
+				</Strings>
+			</Button>
+
+      <Button guid="guidP4VsProviderCmdSet" id="cmdidCurrentStream" priority="0x0004" type="Button">
+        <Parent guid="guidP4VsProviderCmdSet" id="itbrSccConnectionToolbarGroup"/>
+        <Icon guid="guidP4VsProviderImages" id="iconStreams"/>
+        <!--<Parent guid="guidP4VsProviderCmdSet" id="igrpSourceControlCommands"/>-->
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <CommandFlag>IconAndText</CommandFlag>
+        <Strings>
+          <ButtonText>Current Stream</ButtonText>
+          <MenuText>Current Stream</MenuText>
+          <LocCanonicalName>Perforce.P4VS.Current_Stream_Command</LocCanonicalName>
+          <CommandName>CurrentStreamCommand</CommandName>
+        </Strings>
+      </Button>
+    </Buttons>
+		<!--<Bitmaps>
+			<Bitmap guid="guidP4VsProviderImages" href="Resources\Images_32bit.bmp" usedList="iconCheckout, iconCheckin, iconUncheckout, iconAdd"/>
+		</Bitmaps>-->
+		<!--<Bitmaps>
+			<Bitmap guid="guidP4VsProviderImages" href="Resources\toolwindow_icons_strip.png"/>
+		</Bitmaps>-->
+
+		<Combos>
+			<Combo guid="guidP4VsProviderCmdSet" id="cmdidConnectionDropDownCombo" priority="0x0002" type="DropDownCombo" defaultWidth="300" idCommandList="cmdidConnectionDropDownComboGetList">
+				<Parent guid="guidP4VsProviderCmdSet" id="itbrSccConnectionToolbarGroup"/>
+				<!--<CommandFlag>IconAndText</CommandFlag>-->
+				<CommandFlag>CommandWellOnly</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <Strings>
+					<MenuText>Perforce Connection: </MenuText>
+					<ButtonText>Perforce Connection</ButtonText>
+					<ToolTipText>Open a connection to a Perforce server</ToolTipText>
+					<CanonicalName>Perforce Connection</CanonicalName>
+					<CommandName>Perforce Connection</CommandName>
+				</Strings>
+			</Combo>
+
+			<Combo guid="guidP4VsProviderCmdSet" id="cmdidActiveChangelistDropDownCombo" priority="0x0003" type="DropDownCombo" defaultWidth="300" idCommandList="cmdidActiveChangelistDropDownComboGetList">
+				<Parent guid="guidP4VsProviderCmdSet" id="itbrSccConnectionToolbarGroup"/>
+				<!--<CommandFlag>IconAndText</CommandFlag>-->
+				<CommandFlag>CommandWellOnly</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <Strings>
+					<MenuText>Active Changelist: </MenuText>
+					<ButtonText>Active Changelist</ButtonText>
+					<ToolTipText>Select changelist for files opened for add and edit</ToolTipText>
+					<CanonicalName>Active Changelist</CanonicalName>
+					<CommandName>Active Changelist</CommandName>
+				</Strings>
+			</Combo>
+		</Combos>
+	</Commands>
+	<CommandPlacements>
+		<!--Context menu group for SolutionExplorer -->
+		<!--To add commands in context menus, a new group can be defined and placed into existing menus, -->
+		<!--in which case you'll have to add it to context menus for nodes of interest (solution, project, -->
+		<!--folder, item, solution folder, web reference node, properties node, etc),  -->
+		<!--A better approach though is to use one of the existing groups created for source control commands, -->
+		<!--like IDG_VS_CTXT_ITEM_SCC, IDG_VS_CTXT_PROJECT_SCC, IDG_VS_CTXT_SOLUTION_SCC. -->
+
+		<!--Place the source control commands defined in context menu for Solution Explorer also under File/SourceControl menu -->
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpRefreshGroup" priority="0x0000">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpRefreshGroup" priority="0x0000">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpRefreshGroup" priority="0x0000">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmRefresh" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmRefresh" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmRefresh" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdAddToSourceControl" priority="0x0001">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdAddToSourceControl" priority="0x0001">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdAddToSourceControl" priority="0x0001">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdCheckin" priority="0x0002">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdCheckin" priority="0x0002">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdCheckin" priority="0x0002">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdCheckout" priority="0x0003">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdCheckout" priority="0x0003">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdCheckout" priority="0x0003">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+ 
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdCheckoutProject" priority="0x0003">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+    </CommandPlacement>
+    
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdCheckoutSolution" priority="0x0003">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+    </CommandPlacement>
+    
+ 		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdShelve" priority="0x0004">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdShelve" priority="0x004">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdShelve" priority="0x0004">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+
+		<!--<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdSyncHead" priority="0x0011">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdSyncHead" priority="0x0011">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdSyncHead" priority="0x0011">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdSync" priority="0x0012">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdSync" priority="0x0012">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdSync" priority="0x0012">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdChangeFileType" priority="0x0021">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdChangeFileType" priority="0x0021">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdChangeFileType" priority="0x0021">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdLock" priority="0x0022">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdLock" priority="0x0022">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdLock" priority="0x0022">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdUnlock" priority="0x0023">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdUnlock" priority="0x0023">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdUnlock" priority="0x0023">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>-->
+		
+		<!--<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdRevert" priority="0x0031">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdRevert" priority="0x031">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdRevert" priority="0x0031">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdRevertUnchanged" priority="0x0032">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdRevertUnchanged" priority="0x0032">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdRevertUnchanged" priority="0x0032">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmMerge" priority="0x0041">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmMerge" priority="0x0041">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmMerge" priority="0x0041">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmCopy" priority="0x0042">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmCopy" priority="0x0042">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmCopy" priority="0x0042">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdResolve" priority="0x0043">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdResolve" priority="0x0043">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdResolve" priority="0x0043">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdShowHistory" priority="0x0051">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdShowHistory" priority="0x0051">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdShowHistory" priority="0x0051">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>-->
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuManageMenu" priority="0x005">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuManageMenu" priority="0x005">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuManageMenu" priority="0x005">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC" />
+    </CommandPlacement>
+
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuRevisionsMenu" priority="0x006">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuRevisionsMenu" priority="0x006">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuRevisionsMenu" priority="0x006">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC" />
+    </CommandPlacement>
+
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuCopyMergeMenu" priority="0x050">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuCopyMergeMenu" priority="0x050">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuCopyMergeMenu" priority="0x050">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC" />
+    </CommandPlacement>
+    
+        <CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuDiffMenu" priority="0x060">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC" />
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuDiffMenu" priority="0x060">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC" />
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuDiffMenu" priority="0x060">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC" />
+		</CommandPlacement>
+
+		<!--<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdDiffVsHave" priority="0x0061">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdDiffVsHave" priority="0x0061">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdDiffVsHave" priority="0x0061">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdDiffVsAny" priority="0x0062">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdDiffVsAny" priority="0x0062">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdDiffVsAny" priority="0x0062">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>-->
+
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuViewsMenu" priority="0x070">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC" />
+    </CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuViewsMenu" priority="0x070">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC" />
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="imnuViewsMenu" priority="0x070">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC" />
+		</CommandPlacement>
+
+		<!--<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdP4V" priority="0x0071">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdP4V" priority="0x0071">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdP4V" priority="0x0071">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdTimeLapse" priority="0x0072">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdTimeLapse" priority="0x0072">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdTimeLapse" priority="0x0072">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdRevGraph" priority="0x0073">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdRevGraph" priority="0x0073">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdRevGraph" priority="0x0073">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdStreamGraph" priority="0x0074">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdStreamGraph" priority="0x0074">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdStreamGraph" priority="0x0074">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdUseSccOffline" priority="0x0100">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdUseSccOffline" priority="0x0100">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdUseSccOffline" priority="0x0100">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdMarkForDelete" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdMarkForDelete" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdMarkForDelete" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>-->
+		<!--<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdAddProjectToSCC" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdAddProjectToSCC" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>-->
+		<!--<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmAttributes" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmAttributes" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_SCC"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="icmdScmAttributes" priority="0x0000">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_SCC"/>
+		</CommandPlacement>-->
+		
+		<!-- Also place the scc commands in the toolbar -->
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpMainCmdGroup" priority="0x0010">
+      <Parent guid="guidP4VsProviderCmdSet" id="itbrSccToolbar"/>
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpRefreshGroup" priority="0x0000">
+      <Parent guid="guidP4VsProviderCmdSet" id="itbrSccToolbar"/>
+    </CommandPlacement>
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpManageMenuGroup" priority="0x0020">
+			<Parent guid="guidP4VsProviderCmdSet" id="itbrSccToolbar"/>
+		</CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpRevisionsMenuGroup" priority="0x0030">
+      <Parent guid="guidP4VsProviderCmdSet" id="itbrSccToolbar"/>
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpCopyMergeMenuGroup" priority="0x0040">
+      <Parent guid="guidP4VsProviderCmdSet" id="itbrSccToolbar"/>
+    </CommandPlacement>
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpDiffMenuGroup" priority="0x0050">
+      <Parent guid="guidP4VsProviderCmdSet" id="itbrSccToolbar"/>
+    </CommandPlacement>
+    <!--<CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpViewsMenuGroup" priority="0x0000">
+      <Parent guid="guidP4VsProviderCmdSet" id="itbrSccToolbar"/>
+    </CommandPlacement>-->
+
+		<CommandPlacement guid="guidP4VsProviderCmdSet" id="itbrSccConnectionToolbarGroup" priority="0x0100">
+			<Parent guid="guidP4VsProviderCmdSet" id="itbrSccConnectionToolbar"/>
+		</CommandPlacement>
+
+    <CommandPlacement guid="guidP4VsProviderCmdSet" id="igrpViewToolWindowGroup" priority="0x0100">
+      <Parent guid="guidP4VsProviderCmdSet" id="itbrSccToolWindowToolbar"/>
+    </CommandPlacement>
+
+  </CommandPlacements>
+
+  <!--how to add keybindings. this adds Ctrl-1 to submit
+  <KeyBindings>
+    <KeyBinding    guid="guidP4VsProviderCmdSet" id="icmdCheckin" editor="guidVSStd97"
+    key1="1" mod1="Control" />
+  </KeyBindings>-->
+	<Symbols>
+		<GuidSymbol name="guidP4VsProviderPkg" value="{8D316614-311A-48F4-85F7-DF7020F62357}" />
+    <GuidSymbol name="guidP4VsProviderCmdSet" value="{4C690E93-4B58-4866-B02C-6A9E5F0BD0F2}" >
+		
+      <!-- View Menu 100-10F -->
+			<IDSymbol name="icmdViewWorkspaceToolWindow" value="0x100"/>
+			<IDSymbol name="icmdViewHistoryToolWindow" value="0x0101" />
+			<IDSymbol name="icmdViewJobsToolWindow" value="0x0102" />
+			<!--IDSymbol name="icmdToolWindowToolbarCommand" value="0x103"/-->
+			<!--<IDSymbol name="icmdViewP4ToolWindow" value="0x0104" />-->
+			<IDSymbol name="icmdViewSubmittedChangelistsToolWindow" value="0x0105" />
+			<IDSymbol name="icmdViewPendingChangelistsToolWindow" value="0x0106" />
+			<IDSymbol name="icmdViewLabelsToolWindow" value="0x0107" />
+			<!--<IDSymbol name="icmdViewSwarmToolWindow" value="0x0108" />-->
+			<IDSymbol name="icmdViewStreamsToolWindow" value="0x0109" />
+			<!--<IDSymbol name="icmdViewReviewsToolWindow" value="0x010A" />-->
+
+      <!-- File Menu 110-11F -->
+			<IDSymbol name="icmdFileOpenInDepot" value="0x110"/>
+			<IDSymbol name="icmdOpenConnection" value="0x111"/>
+			<IDSymbol name="icmdCloseConnection" value="0x112"/>
+
+			<!-- Help Menu 120-12F -->
+			<IDSymbol name="icmdP4VSHelp" value="0x120"/>
+      <IDSymbol name="icmdP4VSSystemInfo" value="0x122"/>
+
+      <!-- Define the list of menus related to launching P4V 140 - 14F -->
+			<IDSymbol name="icmdP4V" value="0x0140" />
+			<IDSymbol name="icmdTimeLapse" value="0x0141" />
+			<IDSymbol name="icmdRevGraph" value="0x0142" />
+			<IDSymbol name="icmdStreamGraph" value="0x0143" />
+
+			<!-- Context Menu Items 150-199 -->
+			<IDSymbol name="icmdScmRefresh" value="0x150"/>
+			<IDSymbol name="icmdAddToSourceControl" value="0x151"/>
+			<IDSymbol name="icmdCheckout" value="0x152"/>
+			<IDSymbol name="icmdCheckoutProject" value="0x153"/>
+			<IDSymbol name="icmdCheckoutSolution" value="0x154"/>
+			<IDSymbol name="icmdCheckin" value="0x155"/>
+			<!--<IDSymbol name="icmdUseSccOffline" value="0x156"/>-->
+			<IDSymbol name="icmdRevert" value="0x157"/>
+			<IDSymbol name="icmdRevertUnchanged" value="0x158"/>
+			<IDSymbol name="icmdLock" value="0x159"/>
+			<IDSymbol name="icmdUnlock" value="0x160"/>
+			<IDSymbol name="icmdChangeFileType" value="0x161"/>
+			<IDSymbol name="icmdMoveToChangelist" value="0x162"/>
+			<!--<IDSymbol name="icmdMarkForDelete" value="0x162"/>-->
+			<IDSymbol name="icmdSyncHead" value="0x163"/>
+			<IDSymbol name="icmdSync" value="0x164"/>
+			<IDSymbol name="icmdDiffVsHave" value="0x165"/>
+			<IDSymbol name="icmdDiffVsAny" value="0x166"/>
+			<IDSymbol name="icmdAddToIgnoreList" value="0x167"/>
+			<!--<IDSymbol name="icmdAddProjectToSCC" value="0x167"/>-->
+			<IDSymbol name="icmdShowHistory" value="0x168"/>
+			<IDSymbol name="icmdShelve" value="0x169"/>
+			<!--<IDSymbol name="icmdScmAttributes" value="0x170"/>-->
+			<IDSymbol name="icmdScmCopy" value="0x171"/>
+			<IDSymbol name="icmdScmMerge" value="0x172"/>
+			<IDSymbol name="icmdResolve" value="0x173"/>
+			<IDSymbol name="icmdRemoveFromIgnoreList" value="0x174"/>
+			<IDSymbol name="icmdEditIgnoreList" value="0x175"/>
+      <IDSymbol name="icmdReconcile" value="0x176"/>
+      <IDSymbol name="icmdPublish" value="0x177"/>
+
+
+      <IDSymbol name="imnuFileSourceControlMenu" value="0x200"/>
+			<IDSymbol name="imnuToolWindowToolbarMenu" value="0x201"/>
+			<IDSymbol name="imnuManageMenu" value="0x202"/>
+			<IDSymbol name="imnuRevisionsMenu" value="0x203"/>
+			<IDSymbol name="imnuCopyMergeMenu" value="0x204"/>
+			<IDSymbol name="imnuViewsMenu" value="0x205"/>
+			<IDSymbol name="imnuDiffMenu" value="0x206"/>
+			<IDSymbol name="IDM_VS_CTXT_EZDOCWINTAB" value="0x207"/>
+
+			<!-- Connection Toolbar commands -->
+			<IDSymbol name="cmdidConnectionDropDownCombo" value="0x220"/>
+			<IDSymbol name="cmdidConnectionDropDownComboGetList" value="0x221"/>
+
+			<IDSymbol name="cmdidActiveChangelistDropDownCombo" value="0x222"/>
+			<IDSymbol name="cmdidActiveChangelistDropDownComboGetList" value="0x223"/>
+
+			<IDSymbol name="cmdidCancelActiveCommand" value="0x224"/>
+      <IDSymbol name="cmdidCurrentStream" value="0x225"/>
+
+      <!-- Group IDs -->
+			<IDSymbol name="igrpFileSourceControl" value="0x300"/>
+			<IDSymbol name="igrpSourceControlCommands" value="0x301"/>
+			<IDSymbol name="igrpViewToolWindowGroup" value="0x302"/>
+			<IDSymbol name="igrpHelpGroup" value="0x303"/>
+			<!--IDSymbol name="igrpToolWindowToolbarGroup" value="0x303"/-->
+			<IDSymbol name="igrpSccNowhere" value="0x304"/>
+			<IDSymbol name="igrpFileMenuGroup" value="0x305"/>
+			<IDSymbol name="igrpRefreshGroup" value="0x306"/>
+			<IDSymbol name="igrpMainCmdGroup" value="0x307"/>
+			<IDSymbol name="igrpManageMenuGroup" value="0x308"/>
+			<IDSymbol name="igrpRevisionsMenuGroup" value="0x309"/>
+			<IDSymbol name="igrpCopyMergeMenuGroup" value="0x310"/>
+			<IDSymbol name="igrpDiffMenuGroup" value="0x311"/>
+			<IDSymbol name="igrpViewsMenuGroup" value="0x312"/>
+      
+			<IDSymbol name="itbrSccToolbar" value="0x400"/>
+
+			<IDSymbol name="itbrSccConnectionToolbar" value="0x401"/>
+			<IDSymbol name="itbrSccConnectionToolbarGroup" value="0x402"/>
+      <IDSymbol name="itbrSccToolWindowToolbar" value="0x403"/>
+      <IDSymbol name="itbrSccStatusToolbar" value="0x404"/>
+    </GuidSymbol>
+    <GuidSymbol name="guidStatusBarCmdSet" value="{24FC9963-73A7-4B4D-AAA2-87D424E87BC7}" >
+      <IDSymbol name="icmdAddToSrcCtrl" value="0x1000"/>
+    </GuidSymbol>
+		<GuidSymbol name="guidP4VsProviderImages" value="{614B607D-F6FB-4878-984B-A12F45608EF5}" >
+			<!--<GuidSymbol name="guidP4VsProviderImages" value="{614B607D-F6FB-4878-984B-A12F45608EF5}" >
+			-->
+			<IDSymbol name="iconHistory" value="1"/>
+			<IDSymbol name="iconWorkspaces" value="2"/>
+			<IDSymbol name="iconPending" value="3"/>
+			<IDSymbol name="iconSubmitted" value="4"/>
+			<IDSymbol name="iconJobs" value="5"/>
+			<IDSymbol name="iconLabels" value="6"/>
+			<IDSymbol name="iconAdd" value="7"/>
+			<IDSymbol name="iconCheckout" value="8"/>
+			<IDSymbol name="iconSubmit" value="9"/>
+			<IDSymbol name="iconRevert" value="10"/>
+			<IDSymbol name="iconRevertUnchanged" value="11"/>
+			<IDSymbol name="iconLock" value="12"/>
+			<IDSymbol name="iconUnlock" value="13"/>
+			<IDSymbol name="iconChangeFiletype" value="14"/>
+			<IDSymbol name="iconResolve" value="15"/>
+			<IDSymbol name="iconGetRevision" value="16"/>
+			<IDSymbol name="iconGetLatest" value="17"/>
+			<IDSymbol name="iconShelve" value="18"/>
+			<IDSymbol name="iconMerge" value="19"/>
+			<IDSymbol name="iconCopy" value="20"/>
+			<IDSymbol name="iconRefresh" value="21"/>
+			<IDSymbol name="iconDiff" value="22"/>
+			<IDSymbol name="iconDiffHave" value="23"/>
+			<IDSymbol name="iconViews" value="24"/>
+			<IDSymbol name="iconStreamGraph" value="25"/>
+			<IDSymbol name="iconMoveToChangelist" value="26"/>
+			<IDSymbol name="iconAddToIgnoreList" value="27"/>
+			<IDSymbol name="iconRemoveFromIgnoreList" value="28"/>
+			<IDSymbol name="iconEditIgnoreList" value="29"/>
+			<IDSymbol name="iconCancel" value="30"/>
+			<IDSymbol name="iconStreams" value="31"/>
+      <!--<IDSymbol name="iconReviews" value="32"/>-->
+      <!--<IDSymbol name="iconSwarm" value="32"/>-->
+      <IDSymbol name="iconReconcile" value="33"/>
+    </GuidSymbol>
+	</Symbols>
+</CommandTable>

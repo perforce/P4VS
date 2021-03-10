@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="path1ValueTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 20</value>
+  </data>
+  <data name="diffBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 331</value>
+  </data>
+  <data name="diffBtn.Text" xml:space="preserve">
+    <value>比較</value>
+  </data>
+  <data name="cancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>492, 331</value>
+  </data>
+  <data name="cancelBtn.Text" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="specifier1stCB.AutoCompleteCustomSource" xml:space="preserve">
+    <value>リビジョン</value>
+  </data>
+  <data name="specifier1stCB.AutoCompleteCustomSource1" xml:space="preserve">
+    <value>チェンジリスト</value>
+  </data>
+  <data name="specifier1stCB.AutoCompleteCustomSource2" xml:space="preserve">
+    <value>日付/時間</value>
+  </data>
+  <data name="specifier1stCB.AutoCompleteCustomSource3" xml:space="preserve">
+    <value>ラベル</value>
+  </data>
+  <data name="specifier1stCB.AutoCompleteCustomSource4" xml:space="preserve">
+    <value>ワークスペース</value>
+  </data>
+  <data name="specifier1stCB.Items" xml:space="preserve">
+    <value>リビジョン</value>
+  </data>
+  <data name="specifier1stCB.Items1" xml:space="preserve">
+    <value>チェンジリスト</value>
+  </data>
+  <data name="specifier1stCB.Items2" xml:space="preserve">
+    <value>日付/時間</value>
+  </data>
+  <data name="specifier1stCB.Items3" xml:space="preserve">
+    <value>ラベル</value>
+  </data>
+  <data name="specifier1stCB.Items4" xml:space="preserve">
+    <value>ワークスペース</value>
+  </data>
+  <data name="specifier2ndRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 17</value>
+  </data>
+  <data name="specifier2ndRB.Text" xml:space="preserve">
+    <value>リビジョンを指定</value>
+  </data>
+  <data name="have2ndRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 17</value>
+  </data>
+  <data name="have2ndRB.Text" xml:space="preserve">
+    <value>所有リビジョン（#{0} - ディポから取得した最新リビジョン)</value>
+  </data>
+  <data name="workspace2ndRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 17</value>
+  </data>
+  <data name="workspace2ndRB.Text" xml:space="preserve">
+    <value>ローカル・ディスク上のワークスペースのバージョン</value>
+  </data>
+  <data name="latest2ndRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 17</value>
+  </data>
+  <data name="latest2ndRB.Text" xml:space="preserve">
+    <value>最新リビジョン(#{0} )</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 188</value>
+  </data>
+  <data name="specifier1stRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 17</value>
+  </data>
+  <data name="specifier1stRB.Text" xml:space="preserve">
+    <value>リビジョンを指定</value>
+  </data>
+  <data name="latest1stRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 17</value>
+  </data>
+  <data name="latest1stRB.Text" xml:space="preserve">
+    <value>最新リビジョン(#{0} )</value>
+  </data>
+  <data name="have1stRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 17</value>
+  </data>
+  <data name="have1stRB.Text" xml:space="preserve">
+    <value>所有リビジョン（#{0} - ディポから取得した最新リビジョン)</value>
+  </data>
+  <data name="workspace1stRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 17</value>
+  </data>
+  <data name="workspace1stRB.Text" xml:space="preserve">
+    <value>ローカル・ディスク上のワークスペースのバージョン</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 30</value>
+  </data>
+  <data name="specifier2ndCB.AutoCompleteCustomSource" xml:space="preserve">
+    <value>リビジョン</value>
+  </data>
+  <data name="specifier2ndCB.AutoCompleteCustomSource1" xml:space="preserve">
+    <value>チェンジリスト</value>
+  </data>
+  <data name="specifier2ndCB.AutoCompleteCustomSource2" xml:space="preserve">
+    <value>日付/時間</value>
+  </data>
+  <data name="specifier2ndCB.AutoCompleteCustomSource3" xml:space="preserve">
+    <value>ラベル</value>
+  </data>
+  <data name="specifier2ndCB.AutoCompleteCustomSource4" xml:space="preserve">
+    <value>ワークスペース</value>
+  </data>
+  <data name="specifier2ndCB.Items" xml:space="preserve">
+    <value>リビジョン</value>
+  </data>
+  <data name="specifier2ndCB.Items1" xml:space="preserve">
+    <value>チェンジリスト</value>
+  </data>
+  <data name="specifier2ndCB.Items2" xml:space="preserve">
+    <value>日付/時間</value>
+  </data>
+  <data name="specifier2ndCB.Items3" xml:space="preserve">
+    <value>ラベル</value>
+  </data>
+  <data name="specifier2ndCB.Items4" xml:space="preserve">
+    <value>ワークスペース</value>
+  </data>
+  <data name="path2RevLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>476, 298</value>
+  </data>
+  <data name="path2RevLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 13</value>
+  </data>
+  <data name="path2RevLbl.Text" xml:space="preserve">
+    <value>リビジョン番号を入力</value>
+  </data>
+  <data name="path2BrowseBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>492, 292</value>
+  </data>
+  <data name="path2BrowseBtn.Text" xml:space="preserve">
+    <value>表示</value>
+  </data>
+  <data name="path2ValueTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 20</value>
+  </data>
+  <data name="path2TB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 169</value>
+  </data>
+  <data name="path2TB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 20</value>
+  </data>
+  <data name="path1TB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 11</value>
+  </data>
+  <data name="path1TB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 20</value>
+  </data>
+  <data name="path2Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="path2Lbl.Text" xml:space="preserve">
+    <value>2番目のパス:</value>
+  </data>
+  <data name="path1RevLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>473, 139</value>
+  </data>
+  <data name="path1RevLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 13</value>
+  </data>
+  <data name="path1RevLbl.Text" xml:space="preserve">
+    <value>リビジョン番号を入力</value>
+  </data>
+  <data name="path1BrowseBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>489, 133</value>
+  </data>
+  <data name="path1BrowseBtn.Text" xml:space="preserve">
+    <value>表示</value>
+  </data>
+  <data name="path1Lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="path1Lbl.Text" xml:space="preserve">
+    <value>1番目のパス:</value>
+  </data>
+  <data name="path1dateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 20</value>
+  </data>
+  <data name="path2dateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 20</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 372</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>585, 364</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAQAMAABMLAAATCwAAAAAAAAAA
+        AADaoCzYni7WmzDUmDLSljTQlDbOkjjMjzrLjTzIhzivcCSzcyvJiELFhEPAgkXBgUbboirZoCzXnS7V
+        mzDSmDLRljTPlDbNkTjPjTLAjkyIj5psbm+rcS7MjETBgkPBgkXdpSjboirZoCzXnS7goTHhoTPenjXd
+        nDjblzLam0XI1OKeqbmeaCjglkPKiUTCg0TfpybepSrcpCzbnymwexamcRKnchSncRenbRelahW6urqq
+        s79yTiKhZyG4fDjKiUTjqyXkpx7npBPkpB7DytWzu8ixtr+ss7ykq7eboamztbi4uLeZnaSEk6ZxWTvQ
+        iTnprh3CljORdDSObinO1eTq7fPd3+DR0tHY2tzGy9S7vsWysrS0tbe1wtF7cWXGgTDiowLo1qr7///Q
+        1uSrkFzt9f/d4eiJg3mmagDmmx3LqXW6x9uDfna4eiTPk0TKiTziowDr1Z3////W3uuaXADrxGzZ4O/k
+        7PhyZk7DeQDdqlK9yuCJjI+rbhbZljvIiz3kpwDq1pr+///m6e2JfGCWfk2FhYSQkJPW4PJuWTXRjxnI
+        zdaWoa+YaSHbmjnKjTvlqQDr1Zr6///19vb7///p9f/j5eiWlZWZm5vEzt1wTQ/Hv7Cns8eJZSvdmjPM
+        kDroqgDs1pr////k5+/MuILq0pnb3ufb3N19f4PT1t2goaKjnZe7w9J+aEHZlSjPkznorADt15r////Q
+        1N2iZQDplwDSzLnb4vGakoLIxsbIzNe+vb26wcx+cl7Rjx7TljnqrQDt15r////o6O6KfFqfj2bX2tvV
+        4PqfhEbosDTJ0uu2uLrAw8eEgXrFhRfYmzfqrgDu3qv////7///8///t+//f6v+7wNDJlBPpoQDgvXG9
+        zOy5xNmHlKqueRbeoDTutQTtzGTx3KPs15fm0pXiz5jXwYXWoRzqrRbhqSbhoAnauXTFt5m1pojEjifb
+        nTDwvhzuuAvrsQfssAfrrgfrrgfsrgjstB3msCfkriniqyripRnhohfkpB7gpTLYoDUAAJAoAAAAAAAA
+        HR0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>比較</value>
+  </data>
+  <data name="path1dateTimePicker.CustomFormat" xml:space="preserve">
+    <value>yyyy/MM/dd h:mm:ss tt</value>
+  </data>
+  <data name="path2dateTimePicker.CustomFormat" xml:space="preserve">
+    <value>yyyy/MM/dd h:mm:ss tt</value>
+  </data>
+</root>

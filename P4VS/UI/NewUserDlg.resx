@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="userNameLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="userNameLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="userNameLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 16</value>
+  </data>
+  <data name="userNameLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="userNameLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userNameLbl.Text" xml:space="preserve">
+    <value>User Name:</value>
+  </data>
+  <data name="&gt;&gt;userNameLbl.Name" xml:space="preserve">
+    <value>userNameLbl</value>
+  </data>
+  <data name="&gt;&gt;userNameLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;userNameLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;userNameLbl.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="fullNameLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="fullNameLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fullNameLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 55</value>
+  </data>
+  <data name="fullNameLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="fullNameLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="fullNameLbl.Text" xml:space="preserve">
+    <value>Full Name:</value>
+  </data>
+  <data name="&gt;&gt;fullNameLbl.Name" xml:space="preserve">
+    <value>fullNameLbl</value>
+  </data>
+  <data name="&gt;&gt;fullNameLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;fullNameLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;fullNameLbl.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="passwordLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="passwordLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="passwordLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 94</value>
+  </data>
+  <data name="passwordLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="passwordLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="passwordLbl.Text" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="&gt;&gt;passwordLbl.Name" xml:space="preserve">
+    <value>passwordLbl</value>
+  </data>
+  <data name="&gt;&gt;passwordLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;passwordLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;passwordLbl.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="emailLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="emailLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="emailLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 133</value>
+  </data>
+  <data name="emailLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="emailLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="emailLbl.Text" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="&gt;&gt;emailLbl.Name" xml:space="preserve">
+    <value>emailLbl</value>
+  </data>
+  <data name="&gt;&gt;emailLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;emailLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;emailLbl.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="userNameinstLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="userNameinstLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="userNameinstLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 36</value>
+  </data>
+  <data name="userNameinstLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 13</value>
+  </data>
+  <data name="userNameinstLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="userNameinstLbl.Text" xml:space="preserve">
+    <value>Name used for log in (no spaces allowed)</value>
+  </data>
+  <data name="&gt;&gt;userNameinstLbl.Name" xml:space="preserve">
+    <value>userNameinstLbl</value>
+  </data>
+  <data name="&gt;&gt;userNameinstLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;userNameinstLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;userNameinstLbl.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="fullNameinstLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="fullNameinstLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fullNameinstLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 75</value>
+  </data>
+  <data name="fullNameinstLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
+  </data>
+  <data name="fullNameinstLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="fullNameinstLbl.Text" xml:space="preserve">
+    <value>First and last name</value>
+  </data>
+  <data name="&gt;&gt;fullNameinstLbl.Name" xml:space="preserve">
+    <value>fullNameinstLbl</value>
+  </data>
+  <data name="&gt;&gt;fullNameinstLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;fullNameinstLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;fullNameinstLbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="passwordinstLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="passwordinstLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="passwordinstLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 114</value>
+  </data>
+  <data name="passwordinstLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 13</value>
+  </data>
+  <data name="passwordinstLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="passwordinstLbl.Text" xml:space="preserve">
+    <value>Enter password twice</value>
+  </data>
+  <data name="&gt;&gt;passwordinstLbl.Name" xml:space="preserve">
+    <value>passwordinstLbl</value>
+  </data>
+  <data name="&gt;&gt;passwordinstLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;passwordinstLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;passwordinstLbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="userNameTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="userNameTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="userNameTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 20</value>
+  </data>
+  <data name="userNameTB.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;userNameTB.Name" xml:space="preserve">
+    <value>userNameTB</value>
+  </data>
+  <data name="&gt;&gt;userNameTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;userNameTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;userNameTB.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="fullNameTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="fullNameTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 52</value>
+  </data>
+  <data name="fullNameTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 20</value>
+  </data>
+  <data name="fullNameTB.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;fullNameTB.Name" xml:space="preserve">
+    <value>fullNameTB</value>
+  </data>
+  <data name="&gt;&gt;fullNameTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;fullNameTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;fullNameTB.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="password1TB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="password1TB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 91</value>
+  </data>
+  <data name="password1TB.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="password1TB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="password1TB.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;password1TB.Name" xml:space="preserve">
+    <value>password1TB</value>
+  </data>
+  <data name="&gt;&gt;password1TB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;password1TB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;password1TB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="password2TB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="password2TB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 91</value>
+  </data>
+  <data name="password2TB.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="password2TB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 20</value>
+  </data>
+  <data name="password2TB.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;password2TB.Name" xml:space="preserve">
+    <value>password2TB</value>
+  </data>
+  <data name="&gt;&gt;password2TB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;password2TB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;password2TB.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="emailTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="emailTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 130</value>
+  </data>
+  <data name="emailTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 20</value>
+  </data>
+  <data name="emailTB.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;emailTB.Name" xml:space="preserve">
+    <value>emailTB</value>
+  </data>
+  <data name="&gt;&gt;emailTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;emailTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;emailTB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="saveBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="saveBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="saveBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="saveBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 161</value>
+  </data>
+  <data name="saveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="saveBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="saveBtn.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;saveBtn.Name" xml:space="preserve">
+    <value>saveBtn</value>
+  </data>
+  <data name="&gt;&gt;saveBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;saveBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;saveBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cancelBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="cancelBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>346, 161</value>
+  </data>
+  <data name="cancelBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="cancelBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="cancelBtn.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;cancelBtn.Name" xml:space="preserve">
+    <value>cancelBtn</value>
+  </data>
+  <data name="&gt;&gt;cancelBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;cancelBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;cancelBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gridLayoutPanel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="gridPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 156</value>
+  </data>
+  <data name="gridPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 28</value>
+  </data>
+  <data name="gridPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Name" xml:space="preserve">
+    <value>gridPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="gridLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridLayoutPanel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="gridLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridLayoutPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="gridLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>434, 197</value>
+  </data>
+  <data name="gridLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Name" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>434, 197</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAQAMAABMLAAATCwAAAAAAAAAA
+        AADaoCzYni7WmzDUmDLSljTQlDbOkjjMjzrLjTzIhzivcCSzcyvJiELFhEPAgkXBgUbboirZoCzXnS7V
+        mzDSmDLRljTPlDbNkTjPjTLAjkyIj5psbm+rcS7MjETBgkPBgkXdpSjboirZoCzXnS7goTHhoTPenjXd
+        nDjblzLam0XI1OKeqbmeaCjglkPKiUTCg0TfpybepSrcpCzbnymwexamcRKnchSncRenbRelahW6urqq
+        s79yTiKhZyG4fDjKiUTjqyXkpx7npBPkpB7DytWzu8ixtr+ss7ykq7eboamztbi4uLeZnaSEk6ZxWTvQ
+        iTnprh3CljORdDSObinO1eTq7fPd3+DR0tHY2tzGy9S7vsWysrS0tbe1wtF7cWXGgTDiowLo1qr7///Q
+        1uSrkFzt9f/d4eiJg3mmagDmmx3LqXW6x9uDfna4eiTPk0TKiTziowDr1Z3////W3uuaXADrxGzZ4O/k
+        7PhyZk7DeQDdqlK9yuCJjI+rbhbZljvIiz3kpwDq1pr+///m6e2JfGCWfk2FhYSQkJPW4PJuWTXRjxnI
+        zdaWoa+YaSHbmjnKjTvlqQDr1Zr6///19vb7///p9f/j5eiWlZWZm5vEzt1wTQ/Hv7Cns8eJZSvdmjPM
+        kDroqgDs1pr////k5+/MuILq0pnb3ufb3N19f4PT1t2goaKjnZe7w9J+aEHZlSjPkznorADt15r////Q
+        1N2iZQDplwDSzLnb4vGakoLIxsbIzNe+vb26wcx+cl7Rjx7TljnqrQDt15r////o6O6KfFqfj2bX2tvV
+        4PqfhEbosDTJ0uu2uLrAw8eEgXrFhRfYmzfqrgDu3qv////7///8///t+//f6v+7wNDJlBPpoQDgvXG9
+        zOy5xNmHlKqueRbeoDTutQTtzGTx3KPs15fm0pXiz5jXwYXWoRzqrRbhqSbhoAnauXTFt5m1pojEjifb
+        nTDwvhzuuAvrsQfssAfrrgfrrgfsrgjstB3msCfkriniqyripRnhohfkpB7gpTLYoDUAAJAoAAAAAAAA
+        HR0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>New User</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>NewUserDlg</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

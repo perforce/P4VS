@@ -1,0 +1,2673 @@
+                           Release Notes for
+                P4VS, the Helix Plugin for Visual Studio
+
+                            Version 2020.2
+
+Introduction
+
+        This document lists all user-visible changes in P4VS
+        release 2020.2
+
+        Perforce numbers releases YYYY.R/CCCCC, e.g. 2002.2/30547.
+        YYYY is the year; R is the release of that year; CCCCC is the
+        bug fix change level. Each bug fix in these release notes is
+        marked by its change number. Any build includes (1) all bug fixes
+        of all previous releases and (2) all bug fixes of the current
+        release up to the bug fix change level.
+
+Compatibility Statements
+
+        Server Compatibility
+
+          You can use this release of P4VS with any release of the
+          Perforce server at or later than 2018.1
+
+        Platform Compatibility
+
+          This release is supported on the following platforms:
+
+              Windows 7 and 10
+
+        Visual Studio Compatibility
+
+          P4VS supports Visual Studio 2015 and later.
+
+          It is important to make sure your Visual Studio installation
+          has been updated to the latest available service pack.
+
+        Compatibility with Previous Releases
+
+          Unless otherwise stated below, the 2020.2 release of P4VS is
+          compatible with previous releases from Perforce Software.
+
+        Installation
+
+          After installing with p4vs.vsix for Visual Studio, confirm that
+          P4VS is the current source control plug-in by navigating to
+          Tools -> Options -> Source Control -> Plug-in
+          Selection and make sure that P4VS - Helix Plugin for
+          Visual Studio is the selection in the drop down on that
+          options page. If the plug-in does not appear in the drop
+          down, confirm that it is enabled by checking the list of
+          Installed Extensions in Tools -> Extension Manager, or
+          Extensions -> Manage Extensions in Visual Studio 2019.
+
+          To uninstall P4VS, use the Extension Manager via Tools ->
+          Extension Manager, or Extensions -> Manage Extensions
+          in Visual Studio 2019.. Select the P4VS extension in the
+          list of installed extensions and click the Uninstall button.
+
+          Silent installation from the command line:
+
+          "C:\Program Files (x86)\Microsoft Visual Studio <version #>\
+          Common7\IDE\VSIXInstaller.exe" /q <path to>\p4vs<version#>.vsix
+
+        P4VS User's Guide
+          http://www.perforce.com/perforce/doc.current/manuals/p4vs/p4vs.pdf
+          http://www.perforce.com/perforce/doc.current/manuals/p4vs/index.html
+
+        Known Limitations
+
+          When using File -> Move into -> <project> with a C++ project, if
+          the file selected is currently marked for add a dialog may appear
+          asking if the file should be deleted in the Depot (Files that are
+          marked for add will be reverted). This is due to Visual Studio trying
+          delete the file as part of the move. Select NO in this dialog if you
+          want to keep the file marked for add.
+
+          If the option "Warn before reverting files" is disabled and a file
+          is reverted that is currently loaded in an editor, Visual Studio
+          will not detect the change to the file and prompt to reload or
+          ignore the changes. As a result, the reverted changes in the file
+          will remain in the editor.
+
+          If the connection dialog does not appear after Visual Studio
+          upgrade, it is likely active but not on the screen. Use ALT+TAB
+          to attempt to cycle to the Visual Studio application icon that
+          is the P4VS connection dialog and attempt to restore, move, or maximize
+          the dialog. If ALT+TAB does not allow access to the connection dialog,
+          the related screen position saved preference may be edited or deleted.
+          The settings file can be found in:
+          C:\Users\<user name>\AppData\Roaming\Perforce\P4VS\localsettings.ini
+          and the related lines in that file are:
+                <OpenConnectionDlg_Width type="int">#</OpenConnectionDlg_Width>
+                <OpenConnectionDlg_Height type="int">#</OpenConnectionDlg_Height>
+                <OpenConnectionDlg_Top type="int">#</OpenConnectionDlg_Top>
+                <OpenConnectionDlg_Left type="int">#</OpenConnectionDlg_Left>
+
+          Integration functionality is limited to merge and copy while
+          working in a Streams workspace.
+
+          Performance issues may occur when connecting to a locally hosted
+          server and using localhost in the server field for the
+          connection. To avoid this, use the IP address of the machine or
+          127.0.0.1 instead.
+
+          If when opening a P4VS options page, the message "An error
+          occurred loading this property page" appears, Cancel out of the
+          options pages and bring them up again to restore the page.
+
+          If connecting to a unicode Perforce server, the Arial Unicode
+          Microsoft font must be installed in order to properly display all
+          unicode characters in P4VS.
+
+          Opening a new project when a current solution is opened and
+          unsaved may result in an "Error closing solution" error message
+          if the "Save as..." prompt is canceled. The new project will not
+          be opened. To open a new project and not save the currently
+          opened solution, close the solution via File -> Close Solution
+          and select "No" when prompted to save.
+
+          Clicking View -> View in P4V on a file that has non-ASCII
+          characters in its path will result in a "paths do not exist"
+          error being returned from P4V.
+
+          The View actions for P4VS (e.g. View -> View in P4V) use P4V
+          launched with a command. On Windows, Japanese systems use code
+          page 932. CP932 is Microsoft's extended version of ShiftJis; it
+          also includes the NEC special characters. When using ShiftJis on
+          Windows, you have to instruct Qt 4.8.+ to use CP932 and the
+          extension, instead of plain ShiftJis, to avoid mojibake. You need
+          to set the following environment variable:
+               UNICODEMAP_JP=cp932,nec-vdc
+          Then, when P4V or P4Merge runs, it will use the modified ShiftJis (CP932)
+          implementation, and apply the extension to recognize NEC special
+          characters when encoding/decoding characters.
+
+          When loading a large project under Perforce control, if
+          directories containing a large number of files are in an expanded
+          state during load, the opening of the project may take
+          considerably longer to complete. To avoid this issue, collapse
+          expanded directories before closing the IDE.
+
+        3rd party software
+
+          This product includes software, libraries and components developed by
+          third parties. License information can be found in LICENSE.txt which
+          can be accessed via the License link in the vsix installer.
+
+---------------------------------------------------------------------------
+
+Key to symbols used in change notes below.
+
+          * -- requires new P4VS
+         ** -- requires new p4d server program
+
+---------------------------------------------------------------------------
+
+New Functionality in 2020.2
+
+        (Job #105438) * **
+           Added support for 2020.2 P4D.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2020.2
+
+        (Job #101904) *
+            Fixed issue where P4VS could invalidate current working directory.
+
+---------------------------------------------------------------------------
+Bugs fixed in 2020.1 Patch 1
+
+        1977237 (Job #102731) *
+            P4VS installer has been updated with a new signing certificate.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2020.1
+
+        #1932822 (Job #101745)
+            P4VS now has context menu items to launch File History and
+            Time-lapse View on files under Submitted changelists in the
+            Submitted Changelist tool window.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2019.3 Patch 1
+
+        1840211 (Job #99521) *
+            P4VS will no longer fail to launch the Time-lapse View and
+            Revision Graph components from P4V with files that have spaces
+            in their paths.
+
+        1920788 (Job #101440) *
+            P4VS will no longer fail to load in Visual Studio due to
+            conflicting versions of NLog.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2019.3
+
+        #1881870 (Job #100075)
+            P4VS now uses P4VC (the P4V rich client framework) to launch
+            Stream Graph, Time-lapse View and Revision Graph components
+            from P4V.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2019.3
+
+        1893332 (Job #100750) *
+            P4VS will no longer run multiple additional fstat commands on
+            project files when opening a solution from within Visual
+            Studio.
+
+        1892856 (Job #100751) *
+            P4VS will no longer run an additional fstat command on the
+            .sln file when opening from File->Open Solution/Project in
+            Helix Core Server.
+
+        1888501 (Job #78880) *
+            When clicking on an item in the Depot Browser, P4VS now
+            correctly changes the current selection to that item.
+
+        1888477 (Job #56002) *
+            P4VS now consistently uses the term "workspace view" across
+            the product.
+
+        1885855 (Job #100748) *
+            P4VS will no run an additional fstat command on the
+            .sln file on refresh.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2019.2 Patch 2
+
+        #1857112 (Job #99777)
+            P4VS now supports login via the Helix Authentication Service.
+            See the GitHub project at
+            https://github.com/perforce/helix-authentication-service.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2019.2 Patch 2
+
+        1857074 (Job #99822) *
+            P4VS will no longer display an error message for "Unable to
+            find the specified file." when that error is returned in a
+            non-English language. This error is meant to be caught and
+            ignored when it occurs prior to a connection being made.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2019.2 Patch 1
+
+        1840211 (Job #99521) *
+            P4VS will no longer cause Visual Studio to crash when clicking
+            Get Revision on a Changelist in the Submitted Changelists Tool
+            Window.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2019.2
+
+        #1823005 (Job #73742)
+            P4VS now integrates with CodeLens in the Visual Studio editor.
+            The Show Submitted Changelists option for CodeLens will
+            display the name of the user who last changed the file above
+            classes and methods in C# files. Clicking on the name will
+            expand a pop-up showing the last 5 Submitted Changelists
+            related to the file. From the pop-up, Submitted Changelists
+            can be opened and Time-lapse View or File History can be
+            launched for the file.
+
+        #1795450 (Job #98550)
+            The Submitted Changelist dialog now has a Time-lapse View
+            context menu.
+
+        #1795450 (Job #98549)
+            The Submitted Changelist dialog now has a Diff Against
+            Previous context menu.
+
+        #1795450 (Job #98548)
+            The Submitted Changelist dialog now has a File History context
+            menu.
+
+        #1795236 (Job #98551)
+            The Submitted Changelist dialog launched from the "View
+            Changelist" action is now read only.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2019.2
+
+        #1832750 (Job #99374)
+            Listviews no longer display all listview items as highlighted
+            in Visual Studio 2017 (15.8.9 and later) and Visual Studio
+            2019.
+
+        #1828706 (Job #99296)
+            Tool Windows will no longer appear blank and transparent in
+            Visual Studio 2019 when the "Optimize rendering..." option
+            under Environment->General is checked.
+
+        #1826836 (Job #99236)
+            P4VS will no longer show a status of submitted in the details
+            pane for Pending Changelists.
+
+        #1819691 (Job #99107)
+            P4VS will no longer display an unnecessary error dialog when
+            the Helix Core Server button is clicked on the Start Page
+            prior to the plugin being loaded.
+
+        #1797611 (Job #98576)
+            Diff against previous no longer displays diffed files in the
+            wrong order when launched from a file under a Submitted
+            Changelist.
+
+        #1788867 (Job #97922)
+            Reconcile will no longer check out items that are unchecked
+            in the Reconcile dialog.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2019.1
+
+        #1756786 (Job #83460)
+            P4VS now has a System Info dialog that can be accessed via
+            Help->P4VS System Info. This dialog shows OS version, P4VS
+            version, Connection info and P4VS preference settings.
+
+        #1745664 (Job #97076)
+            P4VS now supports Visual Studio 2019.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2019.1
+
+        #1771674 (Job #98071)
+            P4VS will no longer attempt to add .cpp or .h files when they
+            are opened in Visual Studio from outside of the current
+            solution or project.
+
+        #1766043 (Job #97971)
+            P4VS will no longer prompt for delete of .cpp or .h files that
+            are not in the current solution, but opened in the IDE on close
+            of the related editor tab.
+
+        #1762328 (Job #97844)
+            Files in the default pending changelist will no longer be
+            moved to a new changelist on checkout of files to a new
+            pending changelist.
+
+        #1761171 (Job #97864)
+            P4VS will now correctly mark files for delete when the drive
+            letter in the file patch differs in case from the drive letter
+            in the workspace root.
+
+        #1754546 (Job #97550)
+            Cancelling the connection dialog when launched from the depot
+            browser will no longer disconnect existing connection.
+
+        #1732995 (Job #97112)
+            P4VS will no longer prompt for delete of files when the only
+            NuGet package in the solution is uninstalled.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2018.4
+
+        #1724361 (Job #67030)
+            The Submit dialog now has improved tabbing behavior and
+            accelerator keys. Ctrl+D will do a diff against have on
+            the selected file in the dialog.
+
+        #1723888 (Job #96845)
+            Swarm reviews will now be opened in the IDE by default. To
+            have reviews opened in an external browser, check the setting
+            in Tools -> Options -> Source Control -> Helix Core -
+            Diff/Merge/Reviews.
+
+        #1723759 (Job #76175)
+            The saved most recently used connections can be viewed and
+            individually removed in. Tools -> Options -> Source Control ->
+            Helix Core - Connections -> Saved Connections.
+
+        #1719372 (Job #74660)
+            P4VS now checks for an out of date solution file, and will
+            prompt for sync if it is. This prompt can be turned of in
+            Tools -> Options -> Source Control -> Helix Core -
+            General -> Projects and solution files.
+
+        #1717269 (Job #66552, 59357)
+            P4VS now implements some of EnvDTE.SourceControl. Other
+            Visual Studio tools can now call IsItemUnderSCC,
+            IsItemCheckedOut, and CheckOutItem. This will enable files
+            like packages.config to be checked out when they are being
+            edited by NuGet package manager.
+
+        #1716248 (Job #69017)
+            P4VS will now checkout a file in solution explorer when a
+            different file of the same name is dragged and dropped onto
+            it from outside of Visual Studio (e.g. File Explorer)
+
+        #1697525 (Job #96251, 95917)
+            There is now an option to Check out writable files on save
+            which can be set in Tools -> Options -> Source Control ->
+            Helix Core - General -> Files and folders.
+
+        #1669093 (Job #84294)
+            P4VS will now do a save-all in Visual Studio prior to any diff
+            or submit command.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2018.4
+
+        #1736049 (Job #97142)
+            P4VS is now reported correctly as the command issuing
+            application in the server log.
+
+        #1729081 (Job #78254)
+            P4VS no longer fails to select files for submit when "Checkout all
+            in Solution" is immediately followed by "Submit" in the solution
+            explorer.
+
+        #1727875 (Job #96972)
+            Correct out-of-date icon is now shown on file that has been
+            marked for add, shelved and submitted.
+
+        #1727831 (Job #95109)
+            P4VS now refreshes the file status prior to check out, to ensure
+            user has the latest version of the file.
+
+        #1727615 (Job #96345)
+            P4VS now switches to new workspace after user has corrected
+            error during new workspace creation.
+
+        #1726967 (Job #95955)
+            The shelved files list is now displayed correctly in the Pending
+            Changelists tool window when the sort order of the Changelist
+            column is changed.
+
+        #1726858 (Job #77273)
+            File is now checked out when changes were made, but file was
+            reverted outside of Visual Studio by another client application.
+
+        #1726858 (Job #74005)
+            New projects are now synced along with a solution that has been
+            changed by another user and checked in with new projects.
+
+        #1726789 (Job #96963)
+            P4VS no longer denies a delete/remove when the current
+            connection is null.
+
+        #1725859 (Job #94930)
+            "Cannot locate P4Merge" is no longer displayed twice on a Diff
+            against previous Revision from the File History tool window when
+            P4Merge is not installed.
+
+        #1725836 (Job #94401)
+            P4VS will no longer display non-shelved files error when
+            changelist does not contain any unshelved files.
+
+        #1725591 (Job #96565)
+            "Restrict access to changelist" is no longer grayed out when
+            creating a new pending change.
+
+        #1725340 (Job #94836)
+            Cancelling new connection when not connected, no longer adds
+            invalid connection information to the connection toolbar.
+
+        #1725188 (Job #94703)
+            Pending changelist in status bar is now updated after submit.
+
+        #1724991 (Job #91638)
+            P4VS now correctly refreshes files in the default pending
+            changelist after resolving a conflict with an unshelve operation.
+
+        #1724884 (Job #95830)
+            Saving the default pending changelist to a new changelist will
+            now correctly remove the files from under the default pending
+            changelist.
+
+        #1724671 (Job #91543)
+            P4VS now correctly refreshes the default pending changelist after
+            a submit.
+
+        #1706623 (Job #95153)
+            P4VS no longer ignores the server configuration for
+            defaultChangeType=restricted.
+
+        #1704412 (Job #96385)
+            P4VS no longer attempts to tag solution files that are already
+            tagged when the solution is built.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2018.3 Patch 2
+
+        1715202 (Job #96290) *
+            P4VS will no longer crash on Double-clicking of a shelved file.
+
+        1715200 (Job #95961, 94879) *
+            P4VS will no longer prompt for delete of files when a file is
+            deleted by Visual Studio and is not under the workspace root.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2018.3 Patch 1
+
+        1696278 (Job #95961, 94879) *
+            P4VS will no longer prompt for delete of files when a temp file
+            is closed (and deleted) in Visual Studio.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2018.3
+
+        1677922 (Job #71653) *
+            In Visual Studio 2017, applying the Pending Changes filter
+            in the Solution Explorer will limit the view to files that are
+            checked out under the opened solution and project.
+
+        1670643 (Job #59364) *
+            The Change Filetype dialog now has correct tab order and
+            accelerator keys for all menu items.
+
+        1670260 (Job #90231, 72311) *
+            There is a new option for Prompting for delete when deleting
+            or excluding files from a project. This option is checked by
+            default.
+
+        1669177 (Job #55916) *
+            The Depot Browser dialog now only shows the file name of the
+            selected project or solution, not the full path.
+
+        1669093 (Job #77780, 77127, 76639) *
+            Prior to Diff Against Have or Submit actions, P4VS now does a
+            Save All on files open in Visual Studio.
+
+        1668957 (Job #67147) *
+            Diff Against Have Revision now only diffs the files selected
+            (rather than the children of a project or solution).
+
+        1668439 (Job #94957) *
+            The File History tool window now has a Diff Selected menu item
+            that will be available when 2 revisions are selected.
+
+        1668329 (Job #71652) *
+            The File History tool window now has menu items for Time-lapse
+            View and Revision Graph.
+
+        1668269 (Job #94958) *
+            Files and revisions in the File History tool window can now
+            be double clicked to open them in the editor.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2018.3
+
+        1682600 (Job #95845) *
+            P4VS will no longer cause a "Package did not load correctly"
+            error on startup when a solution under source control is opened
+            from outside of visual studio and does not have a related .suo
+            file for user settings.
+
+        1681167 (Job #95798) *
+            P4VS will no longer make files writable when they are
+            read-only but have a status of being checked out. In this case
+            of conflicting file properties the file status will be
+            refreshed.
+
+        1676931 (Job #95683) *
+            P4VS can now locate HMFA when it is installed separately and
+            in a different location than P4V.
+
+        1673045 (Job #95440) *
+            P4VS will no longer display and "unknown problem" error
+            message after failed fstat commands due to an idle timeout.
+
+        1669939 (Job #72046) *
+            P4VS now builds a list of files to potentially mark for delete
+            to eliminate multiple prompts for delete triggered by Visual
+            Studio calling OnQueryRemoveFiles for each file individually.
+
+        1669304 (Job #95502) *
+            Files are now automatically selected from default Pending
+            Changelist when adding jobs to create a new Pending Changelist.
+
+        1669266 (Job #76145) *
+            P4VS will now allow files to be marked for delete when opened
+            by multiple users.
+
+        1668006 (Job #95573) *
+            When P4VS cannot get user and source control information from
+            Visual Studio solution load events, it no longer attempts to
+            re-register the .sln file.
+
+        1668006 (Job #95429) *
+            The "Connect to the server using solution-specific settings"
+            will now work correctly when Visual Studio is opened by
+            opening a solution that is under source control.
+
+        1667832 (Job #95374) *
+            P4VS no longer launches p4merge with UseShellExecute set to
+            false, which could leave IDLE connections open until p4merge
+            is closed.
+
+        1667299 (Job #95401) *
+            Removing a job from a Pending Changelist will now correctly
+            remove it from the Pending Changelist object in the Pending
+            Changelist tool window.
+
+        1667299 (Job #95400) *
+            Shelved files can now be deleted when clicking on the shelved
+            file object under the Pending Changelist.
+
+        1667299 (Job #95399) *
+            Unshelving action on shelved file object will now populate
+            the unshelve dialog with the checked file.
+
+        1667299 (Job #95398) *
+            Diff against on file under Pending Changelist now works
+            correctly.
+
+        1667299 (Job #95391) *
+            Double click on file or shelved file in Pending Changelist
+            now correctly opens it in the editor.
+
+        1666357 (Job #58285) *
+            The default description of a new Pending Changelist and the
+            Submit dialog are now consistent with each other.
+
+        1666340 (Job #62466) *
+            Files of type "text+w" can now be edited without being checked
+            out.
+
+        1666308 (Job #92606) *
+            The OK and Cancel buttons on the Pending Changelist dialog are
+            now correctly aligned.
+
+        1665343 (Job #95335) *
+            P4VS will no longer crash when editing a Changelist with more
+            than one job attached.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2018.2 Patch 1
+
+        #1661562 (Job #94970) *
+            The P4VS package now supports background load and implements
+            asynchronous initialization for Visual Studio 2015 and 2017.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2018.2
+
+        #1647087 (Job #94956) *
+            The File History tool window now expands the file object to
+            display all revisions when there is only one file.
+
+        #1644984 (Job #91845) *
+            The File History tool window now launches a Diff Against
+            Previous Revision with Ctrl+D.
+
+        #1635893 (Job #91276) *
+            P4VS now supports working with servers requiring two-factor
+            authentication by launching Helix MFA Authenticator to
+            authenticate the user.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2018.2
+
+        1644974 (Job #51794) *
+            When a file is the selected item in the File History tool
+            window, the Revision field in the details pane no longer shows
+            the file path.
+
+        #1644974 (Job #54191) *
+            Files and revisions can now be traversed in the File History
+            tool window using the up and down arrow keys.
+
+        #1637454 (Job #91542) *
+            In the Pending Changelists tool window, the revision for the
+            default pending changelist is no longer displayed as "-1".
+
+        #1640053 (Job #92009) *
+            The "Prompt for Changelist" option no longer gets unset when
+            closing connection via the connection toolbar.
+
+        #1640999 (Job #92108) *
+            P4VS now shows an invalid mapping error rather than a generic
+            "object reference not set to an instance of an object" when
+            entering an invalid mapping in a workspace spec.
+
+        #1640943 (Job #93342) *
+            The "Prompt for Changelist" option no longer gets unset when
+            checking out a file.
+
+        #1638991 (Job #93359) *
+            The select changelist dialog will no longer display when
+            attempting to edit an exclusively opened file.
+
+        #1641797 (Job #93363) *
+            P4VS will no longer throw an "object reference not set to an
+            instance of an object" error when user attempts to check out
+            and exclusively opened file.
+
+        #1649619 (Job #94986) *
+            P4VS no longer causes Visual Studio to stop working if the
+            Pending or Submitted Changelists tool windows are opened
+            without an active connection.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2018.1
+
+        1631127 (Job 94298) *
+            When creation of a Swarm review fails, P4VS now shows a
+            "Review could not be created" message instead of "Internal
+            Server Error".
+
+        1631055 (Job 87212) *
+            The performance for sync from the Get Revision dialog has
+            been improved. If a directory is selected or [] Treat
+            Solution/Projects as directories when selected is set, the
+            dialog will not be populated with all of the files under
+            those directories. Also when populating the dialog with
+            files to sync, P4VS first attempts to use cached file data
+            to limit the potential running of fstat commands.
+
+        1327975 (Job 85999) *
+            P4VS now finds the location of P4V and P4Merge whether or not
+            they have been installed in the default location.
+
+        1626046 (Job 93772, 93773, 93951) *
+            Parallel sync, shelve and submit can now be disabled via
+            Tools->Options->Source Control->Perforce-Data Retrieval->
+            Parallel commands.
+
+        1615854 (Job 90189, 94185) *
+            P4VS now supports adding groups as reviewers in the creation
+            of Swarm reviews.
+
+        1612381 (Job 93771) * **
+            P4VS now supports autotune when net.autotune=1 is set on the
+            client in a p4config file in the workspace root.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2018.1
+
+        1634063 (Job 94096) *
+            The Select Changelist dialog checkbox tab order has been
+            fixed, accelerator keys have been added for buttons, and the
+            dialog can be exited with Esc.
+
+        1633646 (Job 94092) *
+            On ticket expiration, P4VS now shows a "Your session has
+            expired" message, disposes of the current Repository and
+            changes the connection toolbar to show Offline state.
+
+        1631900 (Job 94259) *
+            P4VS no longer returns an unexpected API error during a shelve
+            action that attempts to revert files that are not open.
+
+        1631127 (Job 94554) *
+            P4VS will no longer crash Visual Studio if a Swarm connection
+            or configuration is broken after pending or submitted
+            changelist tool windows have been loaded.
+
+        1327975 (Job 94481) *
+            P4VS no longer displays multiple error messages when the
+            P4Merge application cannot be located.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2017.2 Patch 3
+
+        1613327 (Job 94091, 93690) *
+        P4VS no longer forces the update of cached file data when
+        checking if the file can be edited. This could cause performance
+        issues while editing, particularly with designer files.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2017.2 Patch 2
+
+        1587872 (Job 91031, 93281) *
+        P4VS no longer allows in memory edits of files that are
+        exclusively opened and will display a message to the user on
+        attempt to edit.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2017.2 Patch 1
+
+        1581978 (Job 92376) *
+        P4VS can now be installed on Visual Studio 2013 and 2015 without
+        installing an old version and then upgrading.
+
+--------------------------------------------------------------------------
+
+New Functionality in 2017.2
+
+        1568080 (Job 91880) *
+            "Helix Core" is now a Source Control provider option under the
+            Add to Source Control ^ button in the Visual Studio status
+            bar.
+
+        1563334 (Job 91843) *
+            P4VS now integrates with the Visual Studio 2017 Start Page.
+            "Helix Server" is an available link on the Start Page under
+            the Open->Checkout from: menu.
+
+        1560496 (Job 91281) *
+            Shelved files in the Pending Changelists tool window are now
+            displayed in a shelved files folder underneath the changelist
+            item to better differentiate them from unshelved files.
+
+        1551926 (Job 85668) *
+            The focus has changed from Ok button to changelist dropdown
+            when opening the changelist prompt on edit of a file. Now,
+            enter or space will not trigger a checkout of the file to the
+            default pending changelist if the user continues typing during
+            the edit.
+
+        1542745 (Job 92351) *
+            "<n> Pending Changes" will now be available in the Visual
+            Studio status bar. When clicked, it will bring up the Pending
+            Changelists tool window.
+
+        1533676 (Job 91909) *
+            P4VS now uses online help files.
+
+        1529976 (Job 87941) *
+            The P4VS Connection toolbar now displays "OFFLINE" when
+            disconnected and updates dynamically.
+
+        1529902 (Job 70502) *
+            P4VS now has a Reconcile Offline Work command which is
+			available under "Manage Files" and the P4VS command toolbar.
+			It will check for files that have been modified, added or
+			deleted under the workspace root and offer the option to
+			check out, mark for add or mark for delete.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2017.2
+
+        1566588 (Job 84556) *
+            P4VS now removes files under a submitted changelist before
+            removing the changelist from the Pending Changelists tool
+            window so that the files do not remain as active nodes in the
+            display.
+
+        1566579 (Job 87397) *
+            P4VS now refreshes all changelists affected by a file action
+            that may impact files distributed over multiple changelists.
+
+        1566351 (Job 84768) *
+            P4VS now correctly refreshes pending changelists after a resolve.
+
+        1565812 (Job 92695) *
+            P4VS will no longer crash Visual Studio when clicking resolve
+            on a file in the 'edit pending change' dialog.
+
+        1561829 (Job 81180) *
+            P4VS will no longer mark a file for delete if the OnDelete
+            signal from Visual Studio has been erroneously sent for a file
+            closed in the editor that is under source control, but not
+            part of the currently active solution.
+
+        1561289 (Job 81424) *
+            P4VS will no longer create 2 changelists when 'new' changelist
+            is selected in the changelist prompt for delete of a file.
+
+        1560630 (Job 92370) *
+            The 'matches' label in the Pending Changelists tool window
+            now updates on addition of a new changelist.
+
+        1560610 (Job 77043) *
+            Swarm review state is now updated on refresh of changelist
+            in Submitted Changelists tool window.
+
+        1556072 (Job 89524) *
+            When connecting to an ssl enabled server with environment
+            settings, P4VS will now bring up a dialog for the user to
+            accept the fingerprint if trust has not been established.
+
+        1551604 (Job 91917) *
+            P4VS will no longer crash Visual Studio when editing a
+            submitted changelist that has multiple jobs attached.
+
+        1536664 (Job 91685) *
+            P4VS now correctly uses the active changelist from the
+            Connection toolbar when <Prompt for changelist> is set as
+            the active changelist.
+
+        1536246 (Job 92249) *
+            Connecting with environment settings no longer allows
+            connections without a valid client.
+
+        1536246 (Job 92248) *
+            Connecting with environment settings from depot browser now
+            broadcasts the new connection.
+
+        1534446 (Job 87200) *
+            P4VS now handles "/" in a workspace root, by converting it back
+            to "\" for the Add to Perforce file action.
+
+        1534034 (Job 88759) *
+            P4VS now successfully submits solutions that exist in a
+            workspace with a null client root.
+
+        1533676 (Job 91679) *
+            The help button [?] on the connection dialog now properly
+            brings up context sensitive help for connecting.
+
+        1531248 (Job 90817) *
+            P4VS no longer shows an active connection after a log out.
+
+        1526181 (Job 91654) *
+            P4VS no longer shows "OFFLINE" when connected.
+
+        1526181 (Job 89888) *
+            The P4VS status bar in the lower left of Visual Studio has
+            been removed in order to no longer obscure other Visual
+            Studio information that is displayed there. Information for
+            OFFLINE and connected status can be seen in the P4VS
+            Connection toolbar.
+
+--------------------------------------------------------------------------
+
+New Functionality in 2017.1
+
+        1513736 (Job 89770, 90392) *
+            P4VS now supports Visual Studio 2017.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2017.1
+
+        1520175 (Job 91227, 71150) *
+            P4VS no longer treats .sln files as not under source control
+            and will not attempt to add the file to Perforce. P4VS also
+            no longer automatically checks out an unchanged .sln file on
+            build or save.
+
+        1518056 (Job 84376) *
+            Swarm connection will now succeed when setting P4PASSWD with
+            a password or a hash when connecting to the server using
+            Perforce environment settings.
+
+                (Job 91648) *
+            P4VS no longer crashes Visual Studio on shutdown with a null
+            reference exception.
+
+        1516635 (Job 91483) *
+            Stream Graph is now accessible from the Solution Explorer
+            Views context menu.
+
+                (Job 91581) *
+            Copy/Merge is now accessible from the Solution Explorer
+            context menu.
+
+        1516341 (Job 91488) *
+            Swarm related menu items and view columns are now accessible
+            from the Pending and Submitted Changelist views.
+
+        1515965 (Job 91489) *
+            Visual Studio will no longer crash when attempting to perform
+            a Copy or Merge that requires swtitching workspaces.
+
+        1491159 (Job 87558) *
+            P4VS now correctly checks out .vcxproj.filters files when a
+            new file is added to a project.
+
+        1491165 (Job 81240) *
+            P4VS now correctly checks out .vcxproj files when a Platform
+            edit is made in the Configuration Manager.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2016.2 Patch 1
+
+        1478562 (Job 89838) *
+            Due to performance improvements related to connections to a
+            Helix Server, a fix was implemented to the retrieval of active
+            changelists.
+
+        1478579 (Job 89850) *
+            Fix to suppress unnecessary login prompt due to Client
+            connection errors.
+
+--------------------------------------------------------------------------
+
+New Functionality in 2016.2
+
+       (Job 71634) *
+            P4VS better handles dropped connections.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2016.2
+
+        1475861 (Job 89715) *
+            Workspace root now supports 'c:\', 'c:/' and 'null' paths.
+
+
+        1464046 (Job 89237) *
+
+                (Job 70466) *
+            Visual Studio crashes due to VPN connections is resolved.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2016.1 Patch 3
+
+        1451375 (Job 80007) *
+            Security fix when launching P4V or one of its components.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2016.1 Patch 2
+
+        1397939 (Job 86957) *
+            File state is now updated when re-adding a file with the
+            same name as a deleted file.
+
+        1390590 (Job 75726) *
+            Increased connection and command timeout to 30 seconds. This
+            should allow slower network connections to successfully connect
+            without timeout errors.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2016.1 Patch 1
+
+        1372945 (Job 85900) *
+            Added support for utf8 file type when connected to a 2015.2 or
+            newer server.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2016.1
+
+        1264563 (Job 79885) *
+            Ignore case when determining if a file is under the
+            workspace root before checking if it is ignored by p4ignore.
+
+        1258236 (Job 80241) *
+            Checkout in VS did not refresh file state glyph when the file
+            was a dependent file (I.e. a designer file for a form in c#)
+
+        1263475 (Job 81112) *
+            Display a "Not under client root" error like a warning in the
+            output pane like a warning instead of popping up a model
+            dialog box when VS tries to autoadd a file that is not under
+            client root.
+
+--------------------------------------------------------------------------
+
+What's New (2015.2)
+
+	Multiselect is now enabled in Pending Changlist tool window. You
+        can select multiple objects of the same type (changelist, open
+        files, shelved files, etc.) to perform the same operation on
+	through the context menu. For example, you can select mutiple
+	open files located in one or more change lists, and move them to
+	a new changelist.
+
+	Context menu added to the File History tool window to facilitate
+        fast axis to common actions, such as viewing a past revision of a
+        file.
+
+	All the controls for performance tuning features are now located
+	in a new section on the "Perforce - Data Retrieval" panel of the
+	options dialog.
+
+	Visual Studio 2015 support
+
+	NOTE: This is the last version of the plugin to support Visual
+	Studio 2010. Future versions will only support Visual Studio 2012
+	and later versions.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2015.2
+
+        1219610 (Job 75594)*
+            Truncated text for some P4VS preferences depending on the font used.
+
+        1203204 (Job 55196)*
+            Add context menu to File History tool window.
+
+        1198690 (Job 77797)*
+            Lazy load file icon was showing for files when disconnected.
+
+        1197378 (Job 78847)*
+            Perforce login dialog can sometimes get hidden by Visual
+	    Studio's loading solution status dialog leaving Visual
+            Studio in a non-respondent state. Fix: By default, the login
+	    dialog opens 25% of the way down instead of centered. The old
+            default centered in parent window is the same setting as the
+	    Visual Studio status dialog.
+
+        1172345 (Job 78959)*
+            Never perform recursive fstat when lazy mode enabled and the
+	    selection changes. Fix: When 'Lazy loading' and 'Update status
+            on Selection Changed" are both enabled, when a folder or
+            other container is selected, only load status of the first
+            file in container.
+
+        1071597 (Job 79227)*
+            Enable multi-select in Pending Tool window.
+
+        983152 (Job 76801)*
+            Support Visual Studio 2015.
+
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2015.1 Patch 1
+
+        1043352 (Job 68310) *
+            P4VS update version link should link to release notes rather
+            than online help. After updating in P4VS from the Visual
+            Studio Gallery, this latest version of this file will be
+            displayed instead of the help page for P4VS.
+
+        1041753 (Job 78327) *
+            Broken Context menu options in Solution Explorer. "Exclude
+            From Project" and "Delete" Context menu options only work for
+            items in Perforce.
+
+        1041753 (Job 78342) *
+            "Lazy Load" broke Auto-Checkout.
+
+        1041753 (Job 78252) *
+            With lazy loading, upon adding a new existing file to a C++
+            project the file does not show up in Solution Explorer.
+
+        1046981 (Job 78520) *
+            If when initially connecting to Swarm using a secure
+            connection a problem is detected with the SSL certificate used
+            by the Swarm server such as a self signed certificate, a
+            dialog will be displayed allowing the user to reject the
+            certificate or add an exception to allow the certificate to be
+            used for future access to the Swarm server.
+
+--------------------------------------------------------------------------
+
+What's New (2015.1)
+
+        "Lazy Load" feature to cut down load time and general performance
+	on large projects and/or slow connections.
+
+        The online and local help have been updated with the following
+        text to provide guidance for which performance tuning features to
+        use base on the speed of the connection and the size of the solution
+        loaded.
+
+        "Note: The Treat Solution/Projects as directories when selected,
+        Preload file state, and Lazy load file state options are used to
+        tune the performance of P4VS for your environment. If none of
+        these options are selected, P4VS will load the metadata for each
+        file individually. Unless you have a small project you should look
+        to use one of these options.
+
+        "* Treat Solution/Projects as directories when selected: Select to
+        treat solutions and projects as directories when P4VS runs Perforce
+        commands.
+
+        "Use this option to improve performance when working with solutions
+        that contain a large number of projects or files. Do not use this
+        option if the directories in the solution contain a large number of
+        other Perforce controlled files that are not included in the solution.
+
+        "This option does not require that all the files and directories
+        referenced by the solution are under the solution directory.
+
+        "* Preload file state: Select to preload the metadata for all of the
+        files in the perforce depot in or under the directory containing the
+        solution file.
+
+        "Use this option to improve performance when loading small to medium
+        sized solutions where all the files that make up the solution are
+        under the solution root. Only use this when there are few if any
+        files under the solution root that are Perforce controlled that are
+        not part of the solution.
+
+        "This option tends to work best with solutions and projects created
+        and managed by Visual Studio. Do not use this option if the files for
+        the solution are intermixed in directories with large numbers of other
+        Perforce controlled files. This option will provide little improvement
+        in performance if most of the files composing the solution are outside
+        of the solution root.
+
+        "* Lazy load file state: Select to only load the Perforce metadata
+        files in the solution as they are operated on using P4VS.
+
+        "With this option, Perforce metadata for a file is only retreived from
+        the server when you select a P4VS operation on a file. At that point,
+        the Perforce metadata will be obtained from the server, the operation
+        performed, and the Perforce metadata updated to reflect the results of
+        the operation. When this option is selected, the file will by badged in
+        the solution explorer to indicate that its status is unknown (in Visual
+        Studio 2010, this will be a blank badge). After a Perforce operation is
+        performed on a file it will be badged to indicate its current state.
+
+        "Use this option to improve performance loading large to very large sized
+        solutions where you are interested in only working on a few select files.
+        This is best for solutions and projects which include large amounts of code
+        from libraries or frameworks, large numbers of asset files such as graphical
+        elements for a game, or large numbers of files that are generated by another
+        development system or plugin. This option is also useful in situations where
+        the connection to the Perforce server is over a slow network or VPN.
+
+        "* Full menu: Select to allow the full P4VS menu to be displayed on files
+        that have not had their metadata loaded.
+
+        "This option is displayed if the Lazy load file state option is enabled. This
+        allows you to perform an operation on a file before P4VS loads its state. If
+        this option is not selected, you are given the option to refresh the file which
+        will load the metadata of the file from the server and then enable the
+        appropriate P4VS operations on that file. Please note that if you choose this
+        option and perform P4VS operations on a file that are not valid based on its
+        current state, you are very likely to get error messages back from those
+        operations."
+
+
+--------------------------------------------------------------------------
+
+New functionality in 2015.1
+
+        1022071 (Job 74695) *
+            Support 'leaveunchanged' option of the 'p4 shelve' command in the
+            'Shelve Files' and 'Create Review' dialog boxes.
+
+        1020819 (Job 77607) *
+            Added a "Lazy Load" feature to cut down load time and
+            general performance on large projects and/or slow connections.
+
+        The help file has been expanded to include a section on how to tune
+        the performance when loading a solution into VS as follows:
+
+            Note: The Treat Solution/Projects as directories when selected, Preload
+            file state, and Lazy load file state options are used to tune the
+            performance of P4VS for your environment. If none of these options are
+            selected, P4VS will load the metadata for each file individually. Unless
+            you have a small project you should look to use one of these options.
+
+            Treat Solution/Projects as directories when selected: Select to treat
+            solutions and projects as directories when P4VS runs Perforce commands.
+
+            Use this option to improve performance when working with solutions that
+            contain a large number of projects or files. Do not use this option if
+            the directories in the solution contain a large number of other Perforce
+            controlled files that are not included in the solution.
+
+            This option does not require that all the files and directories referenced
+            by the solution are under the solution directory.
+
+            Preload file state: Select to preload the metadata for all of the files in
+            the perforce depot in or under the directory containing the solution file.
+
+            Use this option to improve performance when loading small to medium sized
+            solutions where all the files that make up the solution are under the solution
+            root. Only use this when there are few if any files under the solution root that
+            are Perforce controlled that are not part of the solution.
+
+            This option tends to work best with solutions and projects created and managed by
+            Visual Studio. Do not use this option if the files for the solution are intermixed
+            in directories with large numbers of other Perforce controlled files. This option
+            will provide little improvement in performance if most of the files composing the
+            solution are outside of the solution root.
+
+            Lazy load file state: Select to only load the Perforce metadata files in the
+            solution as they are operated on using P4VS.
+
+            With this option, Perforce metadata for a file is only retreived from the server
+            when you select a P4VS operation on a file. At that point, the Perforce metadata
+            will be obtained from the server, the operation performed, and the Perforce
+            metadata updated to reflect the results of the operation. When this option is
+            selected, the file will by badged in the solution explorer to indicate that its
+            status is unknown (in Visual Studio 2010, this will be a blank badge). After a
+            Perforce operation is performed on a file it will be badged to indicate its current
+            state.
+
+            Use this option to improve performance loading large to very large sized solutions
+            where you are interested in only working on a few select files. This is best for
+            solutions and projects which include large amounts of code from libraries or
+            frameworks, large numbers of asset files such as graphical elements for a game, or
+            large numbers of files that are generated by another development system or plugin.
+            This option is also useful in situations where the connection to the Perforce server
+            is over a slow network or VPN.
+
+            Full menu: Select to allow the full P4VS menu to be displayed on files that have not
+            had their metadata loaded.
+
+            This option is displayed if the Lazy load file state option is enabled. This allows
+            you to perform an operation on a file before P4VS loads its state. If this option is
+            not selected, you are given the option to refresh the file which will load the
+            metadata of the file from the server and then enable the appropriate P4VS operations
+            on that file. Please note that if you choose this option and perform P4VS operations
+            on a file that are not valid based on its current state, you are very likely to get
+            error messages back from those operations.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2015.1
+
+        1014861 (Job #77511) *
+            Checkout All in Solution and Submit do not work from context
+            menu on solution object.
+
+        1025571(Job #77579) *
+            Mark for Add missing from context menu.
+
+--------------------------------------------------------------------------
+
+New functionality in 2014.3
+
+        #975733 (Job #74329) *
+            Integrate Swarm functionality into P4VS. Includes the
+            following new features:
+
+        #975733 (Job #74328) *
+            Request a Swarm review for a changelist in the Pending
+            changelist tool window or submitted changelist tool window
+
+        #975733 (Job #74327) *
+            Update a Swarm review with a changelist in the Pending
+            changelist tool window or submitted changelist tool window
+
+        #975733 (Job #74328) *
+            Open a Swarm review in the Swarm browser from Pending
+            changelist tool window or submitted changelist tool window
+
+        #975733 (Job #74303) *
+            Badge changelist associated with a Swarm review in the lists
+            in the Pending changelist tool window and submitted changelist
+            tool windows. Add columns to display the Review ID and Review
+            State.
+
+        #975238 (Job #76316) *
+            A new option has been added to the depot browser to use
+            Perforce environment variables to connect to the server.
+
+        #975238 (Job #76317) *
+            Get Latest Revision and Remove from Workspace actions can
+            now be performed on items in the depot browser.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2014.2 Patch 2
+
+        #976861 (Job #71195) *
+            Extra white spaces on the end of P4CHARSET value resulted in
+            an "Unknown or unsupported charset" error.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2014.2 Patch 1
+
+        #960568 (Job #75389, #75997) *
+            A memory leak has been fixed which could previously cause
+            Visual Studio to crash and connections are now properly closed
+            on the server side after a command has run.
+
+--------------------------------------------------------------------------
+
+New functionality in 2014.2
+
+        #904317 (Job #72562) *
+            New checkout options have been added for files about to be
+            edited when they are not synced to the head revision. The
+            prompt to get latest can now be turned on or off and if it is
+            off, the user can choose to always sync or never sync files
+            that are about to be edited but are out of date.
+
+        #902336 (Job #73434) *
+            If a charset is in use it is displayed in the log pane with
+            other connection information on connection to a Perforce
+            server.
+
+        #902203 (Job #64537) *
+            P4VS now sets the following environment variables for the
+            current connection:
+                P4VS_USER
+                P4VS_CLIENT
+                P4VS_PORT
+                P4VS_ACTIVE_CHANGELIST
+            These are exposed for use in batch scripts or custom tools.
+
+        #901971 (Job #73820) *
+            The "Treat Solution/Projects as directories" preference is now
+            checked by default.
+
+        #834455 (Job #72525) *
+            The dialog for moving files to another changelist now behaves
+            the same as creating a new changelist - the Ok button is
+            disabled until a description is entered and red notification
+            text appears while a description is missing or left as the
+            default.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2014.2
+
+        #905121 (Job #70796) *
+            The password dialog should popup on same monitor as Visual
+            Studio.
+
+        #904320 (Job #74421) *
+            Password Prompt ( a.k.a. Perforce Login ) and Connection
+            dialog do not retain size after expanding on secondary monitor.
+
+        #903440 (Job #72779) *
+            A project modified outside of Visual Studio will no longer
+            result in a continual checkout dialogs appearing on edit of a
+            file.
+
+        #902574 (Job #72795) *
+            After reverting a project file, the check out project option
+            now correctly only includes the project file and not files
+            under it.
+
+        #902335 (Job #74337) *
+            Clicking the Browse button for user or workspace in the
+            connection dialog will no longer result in a "Parameter
+            "escapedValue" cannot be null." error.
+
+        #842075 (Job #53564) *
+            In the Diff Against dialog, the Diff button is no longer
+            enabled  f either of the paths are empty, or if either of the
+            revision specifiers are selected and have no value in the
+            specifier text box..
+
+        #841511 (Job #53854) *
+            If the current user is not the owner of a workspace the delete
+            workspace menu item is no longer available.
+
+        #839938 (Job #49598, Bug #70903) *
+            P4VS will no longer save latest connection information if the
+            connection was not successful.
+
+        #838824 (Job #51174) *
+            Tab order has been correctly set in the Workspaces browser.
+
+        #834870 (Job #49413) *
+            In the connection dialogs, the most recently used connections
+            drop-down will expand to fit the widest saved connection text.
+
+        #834778 (Job #68992) *
+            CTRL+A now selects all text in job text fields (i.e. the
+            description field).
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2014.1 Patch 2
+
+        #842472 (Job #72727) *
+            P4VS no longer fails on shelve of a file in the default
+            pending changelist that needs to be moved to a new pending
+            changelist.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2014.1 Patch 1
+
+        #835536 (Job #72501, #72513) *
+            On dialog initialization P4VS now sets the layout performed
+            flag for all AutoSize dialogs.  This corrects the potential
+            display situation where dialogs launched for the first time
+            would need to be resized minimally to correctly display the
+            buttons and other controls in the dialog.
+
+        #833142 (Job #72483) *
+            P4VS will no longer crash when moving files to a new
+            changelist without providing a description.
+
+        #829323 (Job #72427) *
+            P4VS now correctly gives initial focus to the checkout button
+            when prompting the user to check out a file being edited.
+
+        #827696 (Job #72520, #72404) *
+            P4VS no longer incorrectly uses P4 environment settings when
+            "connect using solution specific settings" is set in the
+            preferences.
+
+--------------------------------------------------------------------------
+
+New functionality in 2014.1
+
+        #816177 (Job #71833) *
+            P4VS now supports Greek encoding.
+
+        #786897 (Job #70450) *
+            The copy dialog now has an auto-submit radio button.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2014.1
+
+        #814727 (Job #70504) *
+            P4VS will no longer run an fstat on saves of a.file that is
+            not opened for edit (this was causing Ctrl-S to perform
+            slowly).
+
+        #811126 (Job #62277) *
+            P4VS now correctly works with config files that reside in
+            the workspace root.
+
+        #803165 (Job #71832) *
+            The date time fields in the Labels tool window now respect the
+            P4VS date format preference.
+
+        #803114 (Job #71821) *
+            The modified and access fields in the Labels tool window are
+            now consistent between the list and details.
+
+        #803114 (Job #71700) *
+            Pending changelists now properly display updated times in
+            server time.
+
+        #792776 (Job #71456) *
+            Move to pending changelist dialog now accepts the text from
+            a form-out trigger.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2013.3 Patch 4/781524
+
+        #779910 (Job #71083) *
+            The solution explorer file state is now correctly refreshed
+            after saving a pending changelist after a Submit action.
+            Previously, files with out of date status could result in a
+            "None of the selected files could be submitted" error.
+
+        #779392 (Job #71125) *
+            The Submit dialog now correctly submits selected files in
+            a numbered pending changelist.
+
+        #779392 (Job #71012) *
+            There is no longer a hang after canceling a Submit action
+            launched from the solution explorer.
+
+        #778663 (Job #70910) *
+            The Submit dialog now launches faster from the solution
+            explorer with a single file selected.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2013.3/771041 Patch 3
+
+        #766722 (Job #70517) *
+            The Submit dialog now correctly launches from the solution
+            explorer with related files selected. Previously a "None of
+            the files could be submitted" error would appear if the
+            current workspace root had forward slashes in the path.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2013.3/759575 Patch 2
+
+        #755079 (Job #70244) *
+            The Submit dialog now correctly saves the collapsed or
+            expanded state of the individual panels.
+
+        #753424 (Job #69687) *
+            P4VS will no longer change the read-only attributes of files
+            not controlled by Perforce.
+
+        #752910 (Job #70192) *
+            P4VS will no longer return an object reference error when
+            canceling the sync of a large solution.
+
+        #751691 (Job #69729) *
+            P4VS will no longer attempt to add projects that reside outside
+            the client root.
+
+        #746437 (Job #69357) *
+            p4 add and p4fstat are no longer run on files that are ignored.
+
+        #745543 (Job #68263) *
+            When diffing files, the newest file or revision is shown on
+            the right pane of P4Merge.
+
+        #745543 (Job #68294) *
+            Caching file state and ignored file processing has been
+            improved to more efficiently open solutions that are under
+            Perforce version control.
+
+        #745212 (Job #69956) *
+            In the Merge/Copy workflow, users will now be given the chance
+            to save or submit the related changelist, when the [] Prompt
+            for changelist option is unchecked in preferences.
+
+        #745203 (Job #69927) *
+            P4VS will no longer crash when attempting to switch to a
+            workspace with a root that is longer than 248 characters.
+
+        #744776 (Job #66027, Bug #69084) *
+            Deleted pending changelists no longer remain visible in the
+            Pending Changelists tool window after refresh..
+
+        #742690 (Job #69188) *
+            Long text entries are no longer cut off in filter combo
+            boxes.
+
+        #742646 (Job #69727) *
+            Full descriptions are now fetched for the listview items in
+            the Pending and Submitted Changelist tool windows.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2013.3/727223 Patch 1
+
+        #726283 (Job #69494) *
+            P4VS will no longer return an input string format error on
+            opening of a solution.
+
+--------------------------------------------------------------------------
+
+New functionality in 2013.3/721621
+
+        #712005 (Job #68903) *
+            The submit dialog now shows a red label indicating that files
+            selected need resolve before the submit can proceed.
+
+        #712005 (Job #68902) *
+            The Submit button in the Submit dialog is disabled if files
+            selected need resolve.
+
+        #707364 (Job #68782) *
+            Current connection information is now displayed on the Merge
+            and Copy dialogs.
+
+        #698811 (Job #60031) *
+            P4VS now has a Streams tool window. All Streams in a
+            particular depot can be filtered by several criteria. The list
+            is displayed in a hierarchical view with pending Merge and Copy
+            indicators on each Stream item in the list. Merge and Copy
+            actions can be performed on Streams via the context menu.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2013.3/721621
+
+        #719860 (Job #68294) *
+            Performance has been improved for solution load by only
+            invoking SccGlyphChanges when in a separate thread from the
+            UI.
+
+        #719670 (Job #69192) *
+            The Add Files dialog now properly cancels on click of [X]
+            rather than marking files for add.
+
+        #717960 (Job #69112) *
+            In the Merge or Copy workflow, any edits to the select
+            changelist dialog with a new changelist are now carried over
+            to the saved changelist or the Submit dialog.
+
+        #717238 (Job #69092) *
+            The Merge or Copy dialog will no longer appear if a stream
+            is unloaded from outside of P4VS and Merge or Copy is clicked
+            in the Streams tool window.
+
+        #717238 (Job #69085) *
+            The Merge or Copy dialog will not longer launch if the only
+            source stream is "none".
+
+        #716376 (Job #69023) *
+            When a pending changelist is submitted, it is now removed
+            from the list in the P4 Connection toolbar.
+
+        #716188 (Job #69076) *
+            In the Merge or Copy dialog, the source stream drop down
+            will change to a text box if there is only one available
+            source.
+
+        #716095 (Job #69012) *
+            The Pending Changelists tool window now correctly handles a
+            resolve action on a changelist with shelved files and files
+            needing resolve.
+
+        #715175 (Job #69018) *
+            When a new changelist is created via "New..." in the P4
+            Connection toolbar, it is no longer assigned the number -1.
+
+        #715175 (Job #69010) *
+            The resolve icon on files has improved visibility in the case
+            where other file icon overlays are also present (checked out,
+            checked out by other, locked).
+
+        #715158 (Job #68529) *
+            The Submitted Changelists tool window now properly refreshes
+            the list of changelists when clicking 'Refresh Submitted.
+            Changelist List' context menu item.
+
+        #714567 (Job #68989) *
+            Diffing a shelved file against workspace version no longer
+            results in an error: "Invalid changelist/client/label/date
+            '@=-1'" when the file is not unshelved in the related
+            changelist.
+
+        #714084 (Job #68873) *
+            Diffing a shelved file against source revision no longer
+            results in an error: "Invalid changelist/client/label/date
+            '@=-1'" when the file is not unshelved in the related
+            changelist.
+
+        #712906 (Job #68940) *
+            Submit dialog now properly updates file resolve status when
+            the Resolve dialog is launched from the Submit dialog.
+
+        #712443 (Job #68806) *
+            When "Automatically update files status" is set in preferences
+            P4VS will no longer crash due to an attempted update of file
+            status on a file that has been deleted.
+
+        #709796 (Job #67996) *
+            The Submit dialog will no longer have display issues when the
+            system text scaling has been changed.
+
+        #703970 (Job #68512) *
+            The Integrations tab in the History Tool Window now properly
+            clears revision entries on item click or change of selected
+            item.
+
+        #703768 (Job #68586) *
+            The spacing of items in the Workspace browser details pane
+            has been improved.
+
+        #702800 (Job #62590) *
+            The tabbing order in the Get Revision dialog has been
+            improved.
+
+        #702127 (Job #67894) *
+            P4VS no longer prompts for add of solution files when the
+            [] Automatically add new files to Perforce is unchecked.
+
+        #702127 (Job #67436) *
+            Choose Solution / Project in Depot dialog no longer displays
+            folder names containing special characters @ # encoded as
+            %23 %40.
+
+        #702050 (Job #68479) *
+            Preview in the Copy dialog now properly displays file data.
+
+        #695455 (Job #67724) *
+            P4VS no longer displays Open Connection dialog when starting
+            builds from a command line.
+
+        #677093 (Job #67528) *
+            Deleting shelved files no longer fails when unshelving a C++
+            project file containing a .filters file.
+
+        #675982 (Job #60605) *
+            Deleting multiple items from the solution explorer will no
+            longer create multiple new changelists.
+
+        #671438 (Job #54178) *
+            The S-filetype flag is no longer listed twice in reopen
+            command.
+
+        #668967 (Job #61761) *
+            The Select Changelist dialog now has Checkout as the default
+            focused button, the tab ordering has been improved, and esc
+            now correctly cancels the dialog.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2013.2/706702 PATCH 2
+
+        #703017 (Job #68386, Bug #68385) *
+            The submit dialog now correctly initializes the file-selected
+            checkbox image. They are no longer appear unchecked when the
+            status of the list item is item.checked.
+
+        #701224 (Job #68405) *
+            The resource file for the no diffs dialog is now correctly
+            referenced in P4VS11.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2013.2/692386 PATCH 1
+
+        #691914 (Job #68125) *
+            The jobs list in the submit dialog no longer flickers or
+            disappears on hovering over the list items.
+
+        #684787 (Job #67836) *
+            The files list in the submit dialog can now be sorted by
+            column.
+
+        #684787 (Job #67834) *
+            The submit dialog now properly draws the all of its child
+            controls without delay or flickering.
+
+        #684787 (Job #67508) *
+            The submit dialog no longer has a long loading delay when a
+            large number of files are in the related changelist.
+
+        #675467 (Job #53609) *
+            P4VS now supports Integrated Shell versions of Visual Studio.
+
+        #675408 (Job #66934) *
+            P4VS no longer crashes while unshelving a VC++ project that
+            includes a filters file.
+
+        #672705 (Job #67408) *
+            P4VS no longer refreshes file glyphs asynchronously as that
+            could potentially cause performance issues with solutions
+            containing a large number of projects and/or files.
+
+        #671397 (Job #67302) *
+            P4VS now only checks for .ini file changes if the last check
+            has been longer than .2 seconds ago.
+
+        #671389 (Job #67256) *
+            P4VS now correctly picks up P4CHARSET.
+
+        #671389 (Job #67133) *
+            P4VS now correctly handles users with non-ascii characters in
+            their name.
+
+        #671248 (Job #62563) *
+            P4VS no longer shows multiple "The files are identical"
+            prompts for files that do not differ from have revision. It
+            now displays a list of all files in a single dialog.
+
+        #668829 (Job #67239 Bug #62551) *
+            P4VS no longer shows the "Remove from Changelist" menu item
+            on jobs listed under a default pending changelist.
+
+--------------------------------------------------------------------------
+
+New functionality in 2013.2/666852
+
+        #639971 (Job #66149) * **
+            In the Merge and Copy operations, task streams are now
+            supported.
+
+        #635829 (Job #62631) *
+            The 'Diff Against Have Revision' command in pending changelists
+            now has a shortcut key.
+
+        #633567 (Job #65902) *
+            In Visual Studio 2012, files marked for integrate have an
+            integrate glyph on the file icon in solution explorer.
+
+        #627398 (Job #64864) *
+            Shelved files can now be diffed against source revision or
+            workspace file.
+
+        #627247 (Job #62124) * **
+            Shelved files can now be submitted without a workspace update.
+
+        #625056 (Job #50267) *
+            A toolbar has been added to P4VS to view and change the
+            current connection and active pending changelist.
+
+        #623677 (Job #64936) *
+            There is now an option to treat solutions and projects as
+            directories when running Perforce commands. This option is
+            to improve performance when loading solutions with a large
+            number of projects and/or projects with a large number of
+            files. The preference is off by default, but can be enabled
+            via Tools -> Options -> Source Control -> Perforce - General
+            -> [] Treat Solution/Projects as directories when selected.
+
+        #606604 (Job #57698) *
+            P4VS now supports the creation and editing of jobs.
+
+        #605082 (Job #48077) *
+            P4VS now has a Labels tool window.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2013.2/666852
+
+        #660945 (Job #66927) *
+            In the check out, unshelve, and change filetype dialogs the
+            changelist dropdowns now show full descriptions.
+
+        #644525 (Job #61686) *
+            P4VS now correctly uses solution specific connections.
+
+        #643713 (Job #65248) *
+            The Ignore commands are no longer listed in the context menus
+            or shown in the toolbar if the server is older than 2012.1.
+
+        #642620 (Job #65274) *
+            P4VS will now use P4VC, if it is installed, to launch Revision
+            Graph, Time-lapse View, and Stream Graph so it will no longer
+            fail with paths or depot names containing non-ascii
+            characters.
+
+        #641630 (Job #65273) *
+            P4VS will no longer show an out of range error when the user
+            attempts to 'Get Revision by context clicking file(s) in the
+            solution explorer and the related files cause the Get Revision
+            dialog to be resized.
+
+        #641630 (Job #65271) *
+            P4VS will no longer crash when the user attempts to 'Get
+            Revision by context clicking on a changelist in the Submitted
+            Changelists tool window and the related files cause the Get
+            Revision dialog to be resized.
+
+        #639499 (Job #66109) *
+            The select/unselect all checkbox in the shelve dialog now
+            works correctly on successive clicks.
+
+        #638944 (Job #65845) *
+            The Submitted Changelist dialog now shows icons in the file
+            list.
+
+        #638944 (Job #65616) *
+            When moving files to another changelist in the Pending
+            Changelists tool window, if "new" is selected as the target
+            changelist, that new numbered changelist is added to the list
+            upon completion of the move.
+
+        #635829 (Job #65961) *
+            The 'Clear changelist of previously shelved files' checkbox is
+            now disabled if no shelved files exist in the related
+            changelist.
+
+        #635809 (Job #65463) *
+            Jobs and Workspaces tool windows no longer have the item icons
+            indented in the list.
+
+        #633012 (Job #65569) *
+            Tool windows will no longer show an "Index was outside the
+            bounds of the array." error when entering numbers 0-9 in the
+            Folder/file filter.
+
+        #631816 (Job #64147) *
+            P4VS now saves blank filters for tool windows.
+
+        #626419 (Job #64746) *
+            Tool window columns now correctly show data if there is a
+            carriage return in the first line of the field.
+
+        #625705 (Job #62946) *
+            The Select User dialog can now be sorted by columns.
+
+        #622281 (Job #65193) *
+            In the Pending Changelist editor and Submit dialog, the OK,
+            Save, and Submit buttons are now disabled when there is no
+            text or the default text in the description field.
+
+        #622281 (Job #65192) *
+            The red text in the Pending Changelist editor now reacts
+            correctly to changes in the description field.
+
+        #622281 (Job #65191) *
+            When an edit of the default pending changelist creates a new
+            numbered changelist the new numbered changelist will now
+            be added to the list of changes in the Pending Changelists
+            tool window after successful creation and the default pending
+            changelist will be refreshed.
+
+        #621826 (Job #60212) *
+            Changelists and jobs can no longer be submitted with the
+            default description.
+
+        #620128 (Job #64925) *
+            When fetching additional data in Pending and Submitted
+            Changelists tool windows, scroll position no longer moves to
+            the top of the list.
+
+        #615569 (Job #64643) *
+            In the Pending Changelists tool window, the 'Diff Against
+            Have' menu option now uses the correct source files and is
+            hidden when it should not be used for files opened for add,
+            delete, and move [rename].
+
+        #615034 (Job #63990) *
+            P4VS now properly handles files opened for branch or
+            integrate, allowing them to be checked out if there is an
+            attempt to edit them.
+
+        #612553 (Job #64704) *
+            Multi line fields in the Jobs tool window now correctly show
+            line breaks.
+
+        #612093 (Job #64705) *
+            In the Workspaces tool window details pane, the Alt Roots
+            field is no longer enabled.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2013.1/621957 Patch 1
+
+        #621188 (Job #64362) *
+            P4VS now correctly iterates through the list of files being
+            edited to determine if they need to be checked out.
+
+--------------------------------------------------------------------------
+
+New functionality in 2013.1/592857
+
+Important security note
+
+           This version addresses the heartbleed CVE-2014-0160
+           vulnerability in OpenSSL by linking in version 1.0.1g of
+           the library.
+
+
+        #586163 (Job #58532) *
+            P4VS now presents a dialog when a command is taking a long
+            time to complete, giving the user an opportunity to cancel the
+            command.
+
+        #579604 (Job #57132, #58433) *
+            P4VS now does solution explorer updates in the background and
+            groups those updates in chunks of 100 files, only notifying
+            Visual Studio to update glyphs for files that have had a
+            status change.
+
+        #560545 (Job #61470) *
+            P4VS dialogs now have a specific icon for pending changelists,
+            submitted changelists, and workspaces.
+
+        #559345 (Job #53611) *
+            Streams depots now have a different icon than local depots.
+
+        #558487 (Job #58146, #61590) *
+            Tool windows now keep the 10 most recent entries for filter
+            fields (keywords, path, user, workspace, etc).
+
+        #556575 (Job #61588) *
+            When renaming a file and selecting an existing changelist,
+            the description for that changelist will no longer be
+            overwritten.
+
+        #556575 (Job #53640, #57734) *
+            Archive, remote, and spec depots are no longer shown in the
+            solution/project browser.
+
+        #555733 (Job #55829) *
+            The Workspace column in the Workspaces tool window is now
+            wider by default.
+
+        #552906 (Job #48923) * **
+            P4VS now has extended support for P4IGNORE, allowing users to
+            add and remove files from an ignore list and to edit an ignore
+            list directly from the IDE.
+
+        #552137 (Job #52012) *
+            Shelved files can now be viewed in a viewer dialog or in a
+            tab in Visual Studio.
+
+        #547711 (Job #53853) *
+            There is now an option to have the "New Project" location
+            match the current workspace root. This option is on by
+            default..
+
+        #544626 (Job #50204, #58228) *
+            When opening a solution or project in a Perforce depot, the
+            tree view can now be filtered by workspace view and does not
+            show deleted files.
+
+        #542681 (Job #50197, #59326) *
+            "Diff Against Have Revision" is now available in the Pending
+            Changelist dialog and Pending Changelist tool window.
+
+        #541860 (Job #53852) *
+            Files under pending changelists now have a "Resolve..."
+            context menu.
+
+        #541118 (Job #56534) *
+            "Open Solution in Perforce Depot..." is now "Open
+            Solution/Project in Perforce Depot...".
+
+        #533786 (Job #53619, #60371, #60372) *
+            Double-clicking on an item in a list browser (users, jobs,
+            workspaces, changelists) will now select that item and close
+            the browser.
+
+        #532064 (Job #60324) *
+            "Move to Another Changelist..." has been added to the solution
+            explorer context menu and the P4VS toolbar.
+
+        #529700 (Job #53485) *
+            When browsing for a changelist from the Diff Against dialog,
+            the changelists are initially filtered by the file being
+            diffed.
+
+        #501642 (Job #57444) *
+            P4VS now has support for internationalization.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2013.1/592857
+
+        #588527 (Job #63268) *
+            P4VS now respects the setting for "Number of changelists or
+            jobs to fetch at a time" on initial tool window load. It would
+            previously fetch 100 on initial load and only fetch the
+            specified amount when the filter button was clicked.
+
+        #587099 (Job #53332) *
+            A revert of a rename/move involving files in folders will now
+            re-add the related file to the project underneath its original
+            folder location rather than the project root.
+
+        #586742 (Job #63130) *
+            P4VS will no longer attempt to add files to a changelist that
+            differ only in case (e.g. File, file). Only one of these files
+            can exist locally on a Windows client machine.
+
+        #579169 (Job #62679) *
+            P4VS no longer crashes when moving all files under a project
+            from the default pending changelist to a numbered changelist.
+
+        #573523 (Job #61951) *
+            P4VS no longer crashes when loosing server connection.
+
+        #565542 (Job #61950, #61781) *
+            The load and filtering of the Jobs tool window will no longer
+            result in a crash due to a multi-threading exception.
+
+        #560657 (Job #61673) *
+            P4VS11 now uses a P4VS11-specific icon for general dialogs.
+
+        #560570 (Job #61694) *
+            When attaching jobs to the default changelist, the change is
+            now saved as a numbered changelist and then the related fixes
+            are applied. This will avoid any conflicts with change-submit
+            triggers that may be in place.
+
+        #558057 (Job #58327) *
+            All dialogs can be canceled with ESC and Enter will cause the
+            same effect as an OK or YES button, unless the current focus
+            is a textbox that accepts returns.
+
+        #557034 (Job #61238) *
+            Depot Browser will remain visible after an invalid solution
+            or project is attempted to be selected.
+
+        #552313 (Job #59866) *
+            "Prompt for changelist..." preference is now correctly
+            persisted.
+
+        #551855 (Job #56327) *
+            P4VS now checks to see if a saved dialog position is visible.
+
+        #547193 (Job #60863) *
+            Submitted, Accessed, and Updated times are now properly
+            converted to show the time in local format.
+
+        #547193 (Job #61179) *
+            History tool window and Edit Changelist dialog now respect the
+            date preference setting.
+
+        #541286 (Job #49588) *
+            Files are now removed when synced to revision #0.
+
+        #540997 (Job #60808) *
+            P4MERGE now properly assigns "source" and "target" when called
+            from P4VS.
+
+        #539778 (Job #60587) *
+            The submit option in the submit dialog is now initialized
+            correctly based on the submit option set in the currently
+            connected workspace.
+
+        #538750 (Job #57063) *
+            Date/time format parsing has been improved to better handle
+            multiple locale formats.
+
+        #538698 (Job #56752) *
+            An error message is now shown if Additional Actions -> Open
+            File -> Merged is selected in the Resolve dialog and no
+            merged file exists..
+
+        #538432 (Job #60536) *
+            Workspace viewmap editing is disabled if a stream root exists
+            in the Workspace editor form.
+
+        #535567 (Job #58537) *
+            Canceling edit of read-only file now properly cancels the
+            edit, rather than allowing the file to be edited in memory.
+
+        #535396 (Job #58531) *
+            Timeout error dialog is now set to be topmost.
+
+        #535334 (Job #60472) *
+            Submit of numbered pending changelist now properly refreshes
+            the pending changelists tool window.
+
+        #535169 (Job #54130) *
+            The server connection lost error message now properly displays
+            the related server address.
+
+        #534620 (Job #56616) *
+            Revision history for Target in the Resolve dialog has been
+            resized to better fit the window.
+
+        #533858 (Job #60375) *
+            P4VS no longer crashes when attempting to sort File History
+            by clicking column headers.
+
+        #533786 (Job #60374) *
+            The Diff Against dialog will now remain visible when browsing
+            for a workspace and clicking the OK button when no workspace
+            has been selected.
+
+        #533782 (Job #60051) *
+            Filter button is no longer cut off in the Workspaces tool
+            window.
+
+        #530808 (Job #58361) *
+            The tab traversal in the connection dialog is now in the
+            correct order.
+
+        #528761 (Job #59545) *
+            a non-functional [?] button has been removed from the New
+            Workspace dialog.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2012.2/545344 Patch 1
+
+        #544093 (Job #60020) *
+            The Open Connection dialog is now correctly displayed when
+            opening a tagged project with the "Tag project and solution
+            files as controlled by P4VS" option set.
+
+--------------------------------------------------------------------------
+
+New functionality in 2012.2/527122
+
+        #527055 (Job #59977) *
+            The command timeout has been increased to 30 seconds.
+
+        #525100 (Job #59040) *
+            P4VS now contains a option for automatically adding new files
+            to Perforce.
+
+        #517704 (Job #57444) *
+            P4VS now supports internationalization.
+
+        #507279 (Job #50226) *
+            Tool window lists can now be sorted by clicking on the column
+            headers.
+
+        #503752 (Job #49455) *
+            Perforce commands are now clearly labeled in the Keyboard
+            Customization preference in Visual Studio for assigning hot
+            keys.
+
+        #503030 (Job #58028) *
+            Double clicking on a file in the Pending Changelists tool
+            Window will open that file in the Visual Studio editor if the
+            file exists locally.
+
+        #501411 (Job #56779) *
+            P4VS now supports diffing of file revisions in the History
+            tool window via drag and drop of one revision on another.
+
+        #501223 (Job #55249) *
+            Perforce menu items are now accessible from on the document
+            tabs in Visual Studio.
+
+        #463760 (Job #55345) *
+            P4VS now supports Visual Studio 2012 (version 11).
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2012.2/527122
+
+        #525095 (Job #59398) *
+            The Jobs tool window now clears the list of jobs when there
+            are no jobs to display based on the keywords entered in the
+            filter.
+
+        #525095 (Job #59344) *
+            The Jobs tool window no longer returns an index error when
+            filtering on a space in the Folder/file field.
+
+        #521319 (Job #59556) *
+            Files marked for move/delete are now checked in the submit
+            dialog along with the related move/add file when Submit... is
+            clicked on a file in the solution explorer on a file that is
+            marked for move/add.
+
+        #519141 (Job #59437) *
+            The changelist description for moved files no longer contains
+            "\n\n" text between the files names.
+
+        #518697 (Job #59339) *
+            "Create Workspace From" menu option now correctly creates a
+             new workspace from a template of the selected workspace in
+             the Workspaces tool window.
+
+        #517647 (Job #59329) *
+            Diff no longer uses the preferences saved for the merge tool.
+
+        #515341 (Job #51554) *
+            The connection dialog now allows users to set passwords when
+            connecting to a security level 3 server.
+
+        #511709 (Job #56279) *
+            P4VS no longer displays an erroneous "None of the selected files
+            could be submitted" error on "Mark for add" immediately followed
+            by "Submit..." on a solution file.
+
+        #509930 (Job #58842, #56341) *
+            P4VS no longer returns an "Empty string..." error on "Get
+            Latest Revision" when the selection of solution is out of date.
+
+        #509802 (Job #57719) *
+            P4VS no longer displays an empty resolve dialog when there
+            are no files to resolve.
+
+        #509643 (Job #56579) *
+            P4VS no longer incorrectly detects that a solution is not
+            in the client root when using .p4config and p4broker.
+
+        #509392 (Job #57666) *
+            Solution explorer glyphs are now properly refreshed after
+            a "Mark for add" on a solution then "Revert" on a project
+            under that solution.
+
+        #509313 (Job #50201) *
+            "Get Revision" is no longer allowed on a nonexistent revision.
+
+        #509228 (Job #56394) *
+            Connection dialog no longer passes an invalid user name
+            with the commands for browsing or creating a new user.
+
+        #509221 (Job #54181) *
+            Get Revision button in the Get Revision dialog is no longer
+            enabled if there are no files in the file list.
+
+        #509221 (Job #54102) *
+            Get Revision button in the Get Revision dialog is no longer
+            enabled if there is no revision specifier in the revision
+            specifier field.
+
+        #509102 (Job #54928) *
+            When moving files between changelists, if a file is a move/add or
+            move/delete, P4VS will move both files in the move/add/delete
+            pair to help prevent future submit errors.
+
+        #509099 (Job #54971) *
+            P4VS no longer returns an error message when canceling workspace
+            creation of a workspace with a bad view mapping.
+
+        #509097 (Job #56539) *
+            Browse button for workspace in the connection dialog no
+            longer displays an error if an invalid workspace is in the
+            workspace field.
+
+        #508877 (Job #58289) *
+            The revert warning dialog no longer lists all files in the
+            changelist when revert is clicked on a single file under that
+            changelist in the Pending Changelists tool window.
+
+        #508821 (Job #58618) *
+            P4VS no longer runs excessive fstats on project load.
+
+        #508821 (Job #58903) *
+            P4VS no longer does excessive fstats on certain keypresses
+            when ReSharper is installed.
+
+        #507901 (Job #55043) *
+            the P4VS log file is now written to in the new location after it
+            is changed in Tools -> Options -> Source Control -> Perforce-
+            Logging.
+
+        #507410 (Job #58135) *
+            Multiple Global Selection lines created by tag option no
+            longer triggers Visual Studio errors.
+
+        #504674 (Job #57716) *
+            The Copy dialog no longer disappears after clicking the
+            Preview button.
+
+        #504672 (Job #57874) *
+            The pending changelist dialog is now properly refreshed when
+            a shelved file in the changelist is deleted.
+
+        #504349 (Job #54009) *
+            Attribute resolves can now be selected in the resolve dialog
+            regardless of whether or not the file's content resolve has been
+            completed.
+
+        #504237 (Job #57873) *
+            Shelved files in the pending changelist dialog are no longer
+            shown with backslashes in their depot paths.
+
+        #501950 (Job #57733) *
+            The Workspaces tool window no longer uses the -E flag for
+            filtering workspaces on the "name contains:" field when
+            connected to a server that is older than 2011.1.
+
+        #500521 (Job #58486) *
+            P4VS now correctly saves display format for date/time.
+
+        #500521 (Job #58424) *
+            Numerical fields in the Jobs tool window are no longer
+            converted to date/time format.
+
+        #500521 (Job #58421) *
+            Values in columns in the Jobs tool window no longer shift to
+            the left when a field is empty.
+
+        #500521 (Job #56282) *
+            Change and Status fields in the Pending Changelists tool
+            window now display "default" for the default pending changelist
+            rather than "new".
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2012.1/505818 Patch 1
+
+        #502802 (Job #58238) *
+            P4VS no longer repeatedly prompts for login when logged out of
+            a server with an auth-check trigger in place.
+
+        #501404 (Job #58250) *
+            P4VS no longer causes Visual Studio to become unresponsive due
+            to a timeout during a resolve involving a manual merge.
+
+        #496842 (Job #56646) *
+            When diffing a file under a pending changelist P4VS no longer
+            incorrectly shows a "Files are identical" message for diffs
+            against workspace version on local disk.
+
+--------------------------------------------------------------------------
+
+New functionality in 2012.1/486881
+
+        # 452729 *
+            Initial release of P4VS
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2012.1/486881
+
+        #483357 (Job #54789) *
+            Parent stream is no longer listed as a preferred source in the
+            Merge to Stream dialog when using a development stream with the
+            options set to nofromparent.
+
+        #483357 (Job #54785) *
+            Parent stream is no longer listed as a preferred source in the
+            Copy to Stream dialog when using a release stream with the
+            options set to nofromparent and development stream children are
+            now listed as preferred source streams.
+
+        #483081 (Job #56653) *
+            The prompt for checkout now has an "Apply to all" checkbox to
+            automatically perform the same action on subsequent files.
+
+        #483081 (Job #56400) *
+            Visual Studio no longer hangs when a Perforce operation is
+            performed in the IDE and the server db tables are locked.
+
+        #481329 (Job #56847) *
+            Files can now be marked for add when using a null rooted client.
+
+        #480940 (Job #55909) *
+            Perforce menu items now have icons next to them.
+
+        #479892 (Job #56275) *
+            Menu items have been added to allow Checkout of all in solution
+            or project, or only Checkout of the solution or project file.
+
+        #479005 (Job #55899) *
+            The majority of the Perforce context menu items have been placed
+            in 4 submenus (Manage Files, Revisions, Diff, and Views).
+
+        #478475 (Job #55832) *
+            A P4VS toolbar has been implemented with icons for the buttons.
+            Buttons are enabled when the related action is applicable to the
+            item in Visual Studio with focus. All buttons are enabled when a
+            project or solution is selected.
+
+        #477389 (Job #56661) *
+            Visual Studio no longer crashes when attempting to open a merged
+            file from the resolve dialog when P4Merge is not installed.
+
+        #477389 (Job #56654) *
+            There is now an option to tag project and solution files as
+            controlled by P4VS. This option is off by default.
+
+        #477389 (Job #56030) *
+            P4VS no longer returns an "Index was out of range" error when
+            attempting to launch Revision Graph on a solution that is not
+            in the depot.
+
+        #477389 (Job #52943) *
+            The left and right arrow keys now expand and collapse changelist
+            items in the Pending Changelists and Submitted Changelists tool
+            windows.
+
+        #476701 (Job #56155) *
+            There is now an option to cancel a Perforce delete in the select
+            changelist dialog when a file has been excluded from a project.
+
+        #476701 (Job #53262) *
+            P4VS now automatically approves project files for in memory edit
+            to avoid automatic check out of project files on load of solution.
+
+        #475993 (Job #55539) *
+            Connection information in the Connection dialog will override
+            the preference to use environment settings when the Connection
+            dialog is opened from the Visual Studio File menu.
+
+        #475333 (Job #51167) *
+            During login, a message is passed on to the user if sso validation
+            has failed.
+
+        #474452 (Job #56235) *
+            Visual Studio no longer hangs when context clicking consecutive
+            times in the Pending Changelists tool window.
+
+        #472527 (Job #56287) *
+            Workspaces with null roots are now usable with P4VS.
+
+        #472527 (Job #56025) *
+            The Open Connection dialog now correctly passes the entered
+            connection information when connection options are set to "Show
+            the Perforce Connection dialog".
+
+        #470186 (Job #56291) *
+            Visual Studio no longer crashes when context clicking white space
+            in the Submitted Changelists tool window.
+
+        #469311 (Job #56292) *
+            Visual Studio no longer crashes when refreshing a job item with
+            no connection.
+
+        #467882 (Job #56238) *
+            Ctrl-A now selects full description text in the Pending Changelist
+            dialog when focus is in that text box.
+
+        #467493 (Job #55792) *
+            During connection, if the workspace root does not exist, P4VS
+            now gives the user the option to create it.
+
+        #467105 (Job #56130) *
+            Submit of a rename no longer fails when using the default pending
+            changelist.
+
+        #467105 (Job #56029) *
+            P4VS no longer returns an "Unexpected API error when attempting
+            to launch Stream Graph on a solution that is not in the depot.
+
+        #467105 (Job #55979) *
+            Sandbox can now be configured for a Unicode server.
+
+        #467105 (Job #55836) *
+            The Submit button is now disabled when no files are selected in
+            the Submit dialog.
+
+        #466508 (Job #55830) *
+            The splitter controls on Perforce tool windows are now more
+            visible.
+
+        #465292 (Job #54841) *
+            The "OK" and "Cancel" buttons have been changed on several dialogs
+            to match Windows UI standards.
+
+        #464944 (Job #56109) *
+            When submit is invoked from the Solution Explorer only the files
+            that were selected in the Solution Explorer are checked in the
+            Submit dialog.
+
+        #461459 (Job #53644) *
+            When a file is renamed or moved and the server is at version
+            2009.2 or later, the file is checked out automatically for the
+            Perforce move command if it had not been checked out already.
+
+        #461448 (Job #55949) *
+            Solution and project files can now be controlled without being
+            checked into the depot.
+
+        #460845 (Job #55804) *
+            P4VS no longer crashes on revert of a rename or move.
+
+        #460193 (Job #55948) *
+            Character encoding is now set based on the current codepage
+            on the user's system.
+
+        #459513 (Job #54086) *
+            The "Merge binary files as text..." option in the Resolve
+            dialog now stays checked if it is checked and the "Set as Auto
+            Default" button is clicked.
+
+        #459420 (Job #55813) *
+            Redundant commands are no longer run when the selected
+            changelist in the Pending Changelists tool window is
+            expanded.
+
+        #459148 (Job #55798) *
+            Diff Against... now works correctly when set to perform the
+            same diff operation as Diff Against Have Revision.
+
+        #459148 (Job #55267) *
+            Redundant commands are no longer run when the selected
+            changelist in the Pending Changelists tool window changes.
+
+        #458874 (Job #53627) *
+            Check-out icon now shows on file in solution explorer when
+            the file is automatically checked out.
+
+        #458874 (Job #55193) *
+            Automatic check-outs no longer fail due to the solution not
+            being registered as under Perforce source control.
+
+        #457939 (Job #54163) *
+            The Submit dialog now has a control to select/deselect all
+            files in the changelist.
+
+        #457890 (Job #54863) *
+            Changelists containing files that are reverted during an
+            unshelve operation are now properly refreshed.
+
+        #457837 (Job #55783) *
+            P4VS no longer crashes on creation of a new project.
+
+        #457686 (Job #53295) *
+            Tool window filters are now populated with user and workspace
+            values from current connection.
+
+        #457561 (Job #54628) *
+            The fstat command is not longer run twice when operating on
+            a file in the solution explorer.
+
+        #456805 (Job #53621) *
+            P4VS now checks for a valid client root and notifies the user
+            if that root path does not exist.
+
+        #456736 (Job #54190) *
+            The History tool window no longer displays '-1' for File Size
+            for deleted revisions.
+
+        #456636 (Job #54087) *
+            Information dialogs can no longer be minimized.
+
+        #456604 (Job #53296, #54121) *
+            Tool window filters are now updated with user and workspace
+            values when connection changes.
+
+        #456503 (Job #54194) *
+            Clearing a field while editing a workspace no longer causes
+            column data in the Workspaces tool window to shift over.
+
+        #456382 (Job #54174) *
+            The Submitted Changelists tool window will no longer display
+            an empty context menu on file items with no actions available.
+
+        #456197 (Job #54075) *
+            Jobs can now be multi-selected in the Jobs tool window and
+            Jobs browser.
+
+        #455432 (Job #55026) *
+            P4VS no longer opens and closes connections to the Perforce
+            server for each command run.
+
+--------------------------------------------------------------------------

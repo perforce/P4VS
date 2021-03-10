@@ -1,0 +1,1773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainer1.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="threadMonitorControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 91</value>
+  </data>
+  <data name="threadMonitorControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>373, 46</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="threadMonitorControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;threadMonitorControl1.Name" xml:space="preserve">
+    <value>threadMonitorControl1</value>
+  </data>
+  <data name="&gt;&gt;threadMonitorControl1.Type" xml:space="preserve">
+    <value>Perforce.P4VS.UI.ThreadMonitorControl, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;threadMonitorControl1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;threadMonitorControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dividerGB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
+  </data>
+  <data name="dividerGB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>527, 5</value>
+  </data>
+  <data name="dividerGB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2, 50</value>
+  </data>
+  <data name="dividerGB.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;dividerGB.Name" xml:space="preserve">
+    <value>dividerGB</value>
+  </data>
+  <data name="&gt;&gt;dividerGB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;dividerGB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;dividerGB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pathLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pathLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pathLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pathLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="pathLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="pathLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="pathLbl.Text" xml:space="preserve">
+    <value>Folder/file:</value>
+  </data>
+  <data name="&gt;&gt;pathLbl.Name" xml:space="preserve">
+    <value>pathLbl</value>
+  </data>
+  <data name="&gt;&gt;pathLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;pathLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;pathLbl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pendingTreeListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="changelistContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>42, 16</value>
+  </metadata>
+  <data name="submitTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="submitTSMI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="submitTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="submitTSMI.Text" xml:space="preserve">
+    <value>Submit...</value>
+  </data>
+  <data name="submitTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 6</value>
+  </data>
+  <data name="toolStripSeparator1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="revertUnchangedFilesTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="revertUnchangedFilesTMSI.Text" xml:space="preserve">
+    <value>Revert Unchanged Files</value>
+  </data>
+  <data name="revertFilesTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="revertFilesTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="revertFilesTMSI.Text" xml:space="preserve">
+    <value>Revert Files</value>
+  </data>
+  <data name="revertFilesTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="revertTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="revertTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="revertTMSI.Text" xml:space="preserve">
+    <value>Revert</value>
+  </data>
+  <data name="revertTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resolveFilesTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resolveFilesTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="resolveFilesTMSI.Text" xml:space="preserve">
+    <value>Resolve Files...</value>
+  </data>
+  <data name="resolveFilesTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="moveFilesToAnTMSI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+M</value>
+  </data>
+  <data name="moveFilesToAnTMSI.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="moveFilesToAnTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="moveFilesToAnTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="moveFilesToAnTMSI.Text" xml:space="preserve">
+    <value>Move All Files to Another Changelist...</value>
+  </data>
+  <data name="moveFilesToAnTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="moveToAnotherChangelistTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="moveToAnotherChangelistTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="moveToAnotherChangelistTMSI.Text" xml:space="preserve">
+    <value>Move to Another Changelist...</value>
+  </data>
+  <data name="moveToAnotherChangelistTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="resolveTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="resolveTMSI.Text" xml:space="preserve">
+    <value>Resolve...</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 6</value>
+  </data>
+  <data name="toolStripSeparator2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="shelveFilesTSMI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+H</value>
+  </data>
+  <data name="shelveFilesTSMI.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="shelveFilesTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="shelveFilesTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="shelveFilesTSMI.Text" xml:space="preserve">
+    <value>Shelve Files...</value>
+  </data>
+  <data name="shelveFilesTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="shelveTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="shelveTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="shelveTSMI.Text" xml:space="preserve">
+    <value>Shelve...</value>
+  </data>
+  <data name="shelveTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="submitShelvedFilesTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="submitShelvedFilesTMSI.Text" xml:space="preserve">
+    <value>Submit Shelved Files...</value>
+  </data>
+  <data name="unshelveFilesTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="unshelveFilesTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="unshelveFilesTMSI.Text" xml:space="preserve">
+    <value>Unshelve Files...</value>
+  </data>
+  <data name="unshelveFilesTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="unshelveTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="unshelveTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="unshelveTMSI.Text" xml:space="preserve">
+    <value>Unshelve...</value>
+  </data>
+  <data name="unshelveTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="deleteShelvedFilesTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="deleteShelvedFilesTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="deleteShelvedFilesTMSI.Text" xml:space="preserve">
+    <value>Delete Shelved Files</value>
+  </data>
+  <data name="deleteShelvedFilesTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="openShelvedFileTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="openShelvedFileTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="openShelvedFileTSMI.Text" xml:space="preserve">
+    <value>Open Shelved File</value>
+  </data>
+  <data name="openShelvedFileTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="deleteTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="deleteTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="deleteTSMI.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="deleteTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 6</value>
+  </data>
+  <data name="toolStripSeparator3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="diffAgainstHaveTMSI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+D</value>
+  </data>
+  <data name="diffAgainstHaveTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="diffAgainstHaveTMSI.Text" xml:space="preserve">
+    <value>Diff Against Have Revision</value>
+  </data>
+  <data name="diffAgainstHavesTMSI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+D</value>
+  </data>
+  <data name="diffAgainstHavesTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="diffAgainstHavesTMSI.Text" xml:space="preserve">
+    <value>Diff Files Against Have Revisions</value>
+  </data>
+  <data name="diffAgainstTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="diffAgainstTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="diffAgainstTSMI.Text" xml:space="preserve">
+    <value>Diff Against...</value>
+  </data>
+  <data name="diffAgainstTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="diffAgainstSourceRevTMSI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+D</value>
+  </data>
+  <data name="diffAgainstSourceRevTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="diffAgainstSourceRevTMSI.Text" xml:space="preserve">
+    <value>Diff Against Source Revision</value>
+  </data>
+  <data name="diffAgainstWorkspaceFileTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="diffAgainstWorkspaceFileTMSI.Text" xml:space="preserve">
+    <value>Diff Against Workspace File</value>
+  </data>
+  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 6</value>
+  </data>
+  <data name="toolStripSeparator4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="changeFiletypeTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="changeFiletypeTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="changeFiletypeTSMI.Text" xml:space="preserve">
+    <value>Change Filetype...</value>
+  </data>
+  <data name="changeFiletypeTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lockTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lockTSMI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+L</value>
+  </data>
+  <data name="lockTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="lockTSMI.Text" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="lockTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 6</value>
+  </data>
+  <data name="toolStripSeparator5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RequestReviewTSMI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+R</value>
+  </data>
+  <data name="RequestReviewTSMI.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RequestReviewTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RequestReviewTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="RequestReviewTSMI.Text" xml:space="preserve">
+    <value>Request New Swarm Review...</value>
+  </data>
+  <data name="RequestReviewTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="UpdateReviewTSMI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+U</value>
+  </data>
+  <data name="UpdateReviewTSMI.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="UpdateReviewTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="UpdateReviewTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="UpdateReviewTSMI.Text" xml:space="preserve">
+    <value>Update a Swarm Review...</value>
+  </data>
+  <data name="UpdateReviewTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="openReviewInSwarmTSMI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="openReviewInSwarmTSMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="openReviewInSwarmTSMI.Text" xml:space="preserve">
+    <value>Open Review in Swarm...</value>
+  </data>
+  <data name="openReviewInSwarmTSMI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SwarmReviewTSS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 6</value>
+  </data>
+  <data name="SwarmReviewTSS.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="newPendingChangelistTMSI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+N</value>
+  </data>
+  <data name="newPendingChangelistTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="newPendingChangelistTMSI.Text" xml:space="preserve">
+    <value>New Pending Changelist...</value>
+  </data>
+  <data name="editPendingChangelistTMSI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+E</value>
+  </data>
+  <data name="editPendingChangelistTMSI.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="editPendingChangelistTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="editPendingChangelistTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="editPendingChangelistTMSI.Text" xml:space="preserve">
+    <value>Edit Pending Changelist ''</value>
+  </data>
+  <data name="editPendingChangelistTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="deletePendingChangelistTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="deletePendingChangelistTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="deletePendingChangelistTMSI.Text" xml:space="preserve">
+    <value>Delete Pending Changelist''</value>
+  </data>
+  <data name="deletePendingChangelistTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="changeOwnershipTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="changeOwnershipTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="changeOwnershipTMSI.Text" xml:space="preserve">
+    <value>Change Ownership...</value>
+  </data>
+  <data name="changeOwnershipTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 6</value>
+  </data>
+  <data name="refreshPendingChangelistListTMSI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+L</value>
+  </data>
+  <data name="refreshPendingChangelistListTMSI.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="refreshPendingChangelistListTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="refreshPendingChangelistListTMSI.Text" xml:space="preserve">
+    <value>Refresh Pending Changelist List</value>
+  </data>
+  <data name="refreshPendingChangelistTMSI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+P</value>
+  </data>
+  <data name="refreshPendingChangelistTMSI.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="refreshPendingChangelistTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="refreshPendingChangelistTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="refreshPendingChangelistTMSI.Text" xml:space="preserve">
+    <value>Refresh Pending Changelist ''</value>
+  </data>
+  <data name="refreshPendingChangelistTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="removeJobTMSI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="removeJobTMSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 22</value>
+  </data>
+  <data name="removeJobTMSI.Text" xml:space="preserve">
+    <value>Remove from Changelist</value>
+  </data>
+  <data name="removeJobTMSI.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="changelistContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 772</value>
+  </data>
+  <data name="&gt;&gt;changelistContextMenuStrip.Name" xml:space="preserve">
+    <value>changelistContextMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;changelistContextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pendingTreeListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 59</value>
+  </data>
+  <data name="pendingTreeListView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>608, 98</value>
+  </data>
+  <data name="pendingTreeListView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pendingTreeListView.Name" xml:space="preserve">
+    <value>pendingTreeListView</value>
+  </data>
+  <data name="&gt;&gt;pendingTreeListView.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridP4ObjectTreeListView, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;pendingTreeListView.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;pendingTreeListView.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="workspaceCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="workspaceCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 32</value>
+  </data>
+  <data name="workspaceCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 21</value>
+  </data>
+  <data name="workspaceCB.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;workspaceCB.Name" xml:space="preserve">
+    <value>workspaceCB</value>
+  </data>
+  <data name="&gt;&gt;workspaceCB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridFilterComboBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;workspaceCB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;workspaceCB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="userLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="userLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="userLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="userLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 36</value>
+  </data>
+  <data name="userLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="userLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="userLbl.Text" xml:space="preserve">
+    <value>User:</value>
+  </data>
+  <data name="&gt;&gt;userLbl.Name" xml:space="preserve">
+    <value>userLbl</value>
+  </data>
+  <data name="&gt;&gt;userLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;userLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;userLbl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pathCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="pathCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 4</value>
+  </data>
+  <data name="pathCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>454, 21</value>
+  </data>
+  <data name="pathCB.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pathCB.Name" xml:space="preserve">
+    <value>pathCB</value>
+  </data>
+  <data name="&gt;&gt;pathCB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridFilterComboBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;pathCB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;pathCB.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="filterBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="filterBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="filterBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="filterBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>536, 3</value>
+  </data>
+  <data name="filterBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="filterBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="filterBtn.Text" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="&gt;&gt;filterBtn.Name" xml:space="preserve">
+    <value>filterBtn</value>
+  </data>
+  <data name="&gt;&gt;filterBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;filterBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;filterBtn.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="workspaceLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="workspaceLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="workspaceLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="workspaceLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 36</value>
+  </data>
+  <data name="workspaceLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="workspaceLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="workspaceLbl.Text" xml:space="preserve">
+    <value>Workspace:</value>
+  </data>
+  <data name="&gt;&gt;workspaceLbl.Name" xml:space="preserve">
+    <value>workspaceLbl</value>
+  </data>
+  <data name="&gt;&gt;workspaceLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;workspaceLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;workspaceLbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="userCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="userCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 32</value>
+  </data>
+  <data name="userCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 21</value>
+  </data>
+  <data name="userCB.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;userCB.Name" xml:space="preserve">
+    <value>userCB</value>
+  </data>
+  <data name="&gt;&gt;userCB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridFilterComboBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;userCB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;userCB.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="matchesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="matchesLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="matchesLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="matchesLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>536, 36</value>
+  </data>
+  <data name="matchesLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="matchesLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="matchesLbl.Text" xml:space="preserve">
+    <value>no connection</value>
+  </data>
+  <data name="&gt;&gt;matchesLbl.Name" xml:space="preserve">
+    <value>matchesLbl</value>
+  </data>
+  <data name="&gt;&gt;matchesLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;matchesLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;matchesLbl.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="gridLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>614, 160</value>
+  </data>
+  <data name="gridLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.Name" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainer1.Panel2.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="typeTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="typeTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 55</value>
+  </data>
+  <data name="typeTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 20</value>
+  </data>
+  <data name="typeTB.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;typeTB.Name" xml:space="preserve">
+    <value>typeTB</value>
+  </data>
+  <data name="&gt;&gt;typeTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;typeTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;typeTB.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="changeLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="changeLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="changeLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="changeLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="changeLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="changeLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="changeLbl.Text" xml:space="preserve">
+    <value>Change:</value>
+  </data>
+  <data name="&gt;&gt;changeLbl.Name" xml:space="preserve">
+    <value>changeLbl</value>
+  </data>
+  <data name="&gt;&gt;changeLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;changeLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;changeLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="workspaceTB2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="workspaceTB2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 55</value>
+  </data>
+  <data name="workspaceTB2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 20</value>
+  </data>
+  <data name="workspaceTB2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;workspaceTB2.Name" xml:space="preserve">
+    <value>workspaceTB2</value>
+  </data>
+  <data name="&gt;&gt;workspaceTB2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;workspaceTB2.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;workspaceTB2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dateLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="dateLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dateLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="dateLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="dateLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="dateLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="dateLbl.Text" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="&gt;&gt;dateLbl.Name" xml:space="preserve">
+    <value>dateLbl</value>
+  </data>
+  <data name="&gt;&gt;dateLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;dateLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;dateLbl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="statusTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="statusTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 29</value>
+  </data>
+  <data name="statusTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 20</value>
+  </data>
+  <data name="statusTB.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;statusTB.Name" xml:space="preserve">
+    <value>statusTB</value>
+  </data>
+  <data name="&gt;&gt;statusTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;statusTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;statusTB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="changeTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="changeTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 3</value>
+  </data>
+  <data name="changeTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 20</value>
+  </data>
+  <data name="changeTB.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;changeTB.Name" xml:space="preserve">
+    <value>changeTB</value>
+  </data>
+  <data name="&gt;&gt;changeTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;changeTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;changeTB.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="UserTB2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="UserTB2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 3</value>
+  </data>
+  <data name="UserTB2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 20</value>
+  </data>
+  <data name="UserTB2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;UserTB2.Name" xml:space="preserve">
+    <value>UserTB2</value>
+  </data>
+  <data name="&gt;&gt;UserTB2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;UserTB2.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;UserTB2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="statusLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="statusLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="statusLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="statusLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 32</value>
+  </data>
+  <data name="statusLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="statusLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="statusLbl.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="&gt;&gt;statusLbl.Name" xml:space="preserve">
+    <value>statusLbl</value>
+  </data>
+  <data name="&gt;&gt;statusLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;statusLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;statusLbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="dateTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="dateTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 29</value>
+  </data>
+  <data name="dateTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 20</value>
+  </data>
+  <data name="dateTB.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dateTB.Name" xml:space="preserve">
+    <value>dateTB</value>
+  </data>
+  <data name="&gt;&gt;dateTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;dateTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;dateTB.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="filesLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="filesLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="filesLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 200</value>
+  </data>
+  <data name="filesLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="filesLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="filesLbl.Text" xml:space="preserve">
+    <value>Files:</value>
+  </data>
+  <data name="&gt;&gt;filesLbl.Name" xml:space="preserve">
+    <value>filesLbl</value>
+  </data>
+  <data name="&gt;&gt;filesLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;filesLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;filesLbl.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="filesTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="filesTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 209</value>
+  </data>
+  <data name="filesTB.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="filesTB.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="filesTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>537, 54</value>
+  </data>
+  <data name="filesTB.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;filesTB.Name" xml:space="preserve">
+    <value>filesTB</value>
+  </data>
+  <data name="&gt;&gt;filesTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;filesTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;filesTB.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="userLbl2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="userLbl2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="userLbl2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="userLbl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 6</value>
+  </data>
+  <data name="userLbl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="userLbl2.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="userLbl2.Text" xml:space="preserve">
+    <value>User:</value>
+  </data>
+  <data name="&gt;&gt;userLbl2.Name" xml:space="preserve">
+    <value>userLbl2</value>
+  </data>
+  <data name="&gt;&gt;userLbl2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;userLbl2.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;userLbl2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="jobsTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="jobsTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 149</value>
+  </data>
+  <data name="jobsTB.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jobsTB.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="jobsTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>537, 54</value>
+  </data>
+  <data name="jobsTB.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;jobsTB.Name" xml:space="preserve">
+    <value>jobsTB</value>
+  </data>
+  <data name="&gt;&gt;jobsTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;jobsTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;jobsTB.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="jobsLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jobsLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jobsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 140</value>
+  </data>
+  <data name="jobsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="jobsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="jobsLbl.Text" xml:space="preserve">
+    <value>Jobs:</value>
+  </data>
+  <data name="&gt;&gt;jobsLbl.Name" xml:space="preserve">
+    <value>jobsLbl</value>
+  </data>
+  <data name="&gt;&gt;jobsLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;jobsLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;jobsLbl.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="workspaceLbl2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="workspaceLbl2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="workspaceLbl2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="workspaceLbl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="workspaceLbl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="workspaceLbl2.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="workspaceLbl2.Text" xml:space="preserve">
+    <value>Workspace:</value>
+  </data>
+  <data name="&gt;&gt;workspaceLbl2.Name" xml:space="preserve">
+    <value>workspaceLbl2</value>
+  </data>
+  <data name="&gt;&gt;workspaceLbl2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;workspaceLbl2.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;workspaceLbl2.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="descriptionTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="descriptionTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 87</value>
+  </data>
+  <data name="descriptionTB.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="descriptionTB.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="descriptionTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>537, 56</value>
+  </data>
+  <data name="descriptionTB.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;descriptionTB.Name" xml:space="preserve">
+    <value>descriptionTB</value>
+  </data>
+  <data name="&gt;&gt;descriptionTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;descriptionTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;descriptionTB.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="descriptionLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="descriptionLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="descriptionLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 78</value>
+  </data>
+  <data name="descriptionLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="descriptionLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="descriptionLbl.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="&gt;&gt;descriptionLbl.Name" xml:space="preserve">
+    <value>descriptionLbl</value>
+  </data>
+  <data name="&gt;&gt;descriptionLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;descriptionLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;descriptionLbl.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="typeLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="typeLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="typeLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="typeLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 58</value>
+  </data>
+  <data name="typeLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="typeLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="typeLbl.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="&gt;&gt;typeLbl.Name" xml:space="preserve">
+    <value>typeLbl</value>
+  </data>
+  <data name="&gt;&gt;typeLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;typeLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;typeLbl.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="gridLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>614, 260</value>
+  </data>
+  <data name="gridLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Name" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 428</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>162</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>135</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
+    <value>595, 421</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 428</value>
+  </data>
+  <data name="&gt;&gt;submitTSMI.Name" xml:space="preserve">
+    <value>submitTSMI</value>
+  </data>
+  <data name="&gt;&gt;submitTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;revertUnchangedFilesTMSI.Name" xml:space="preserve">
+    <value>revertUnchangedFilesTMSI</value>
+  </data>
+  <data name="&gt;&gt;revertUnchangedFilesTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;revertFilesTMSI.Name" xml:space="preserve">
+    <value>revertFilesTMSI</value>
+  </data>
+  <data name="&gt;&gt;revertFilesTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;revertTMSI.Name" xml:space="preserve">
+    <value>revertTMSI</value>
+  </data>
+  <data name="&gt;&gt;revertTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;resolveFilesTMSI.Name" xml:space="preserve">
+    <value>resolveFilesTMSI</value>
+  </data>
+  <data name="&gt;&gt;resolveFilesTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveFilesToAnTMSI.Name" xml:space="preserve">
+    <value>moveFilesToAnTMSI</value>
+  </data>
+  <data name="&gt;&gt;moveFilesToAnTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveToAnotherChangelistTMSI.Name" xml:space="preserve">
+    <value>moveToAnotherChangelistTMSI</value>
+  </data>
+  <data name="&gt;&gt;moveToAnotherChangelistTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;resolveTMSI.Name" xml:space="preserve">
+    <value>resolveTMSI</value>
+  </data>
+  <data name="&gt;&gt;resolveTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shelveFilesTSMI.Name" xml:space="preserve">
+    <value>shelveFilesTSMI</value>
+  </data>
+  <data name="&gt;&gt;shelveFilesTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shelveTSMI.Name" xml:space="preserve">
+    <value>shelveTSMI</value>
+  </data>
+  <data name="&gt;&gt;shelveTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;submitShelvedFilesTMSI.Name" xml:space="preserve">
+    <value>submitShelvedFilesTMSI</value>
+  </data>
+  <data name="&gt;&gt;submitShelvedFilesTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unshelveFilesTMSI.Name" xml:space="preserve">
+    <value>unshelveFilesTMSI</value>
+  </data>
+  <data name="&gt;&gt;unshelveFilesTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unshelveTMSI.Name" xml:space="preserve">
+    <value>unshelveTMSI</value>
+  </data>
+  <data name="&gt;&gt;unshelveTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteShelvedFilesTMSI.Name" xml:space="preserve">
+    <value>deleteShelvedFilesTMSI</value>
+  </data>
+  <data name="&gt;&gt;deleteShelvedFilesTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openShelvedFileTSMI.Name" xml:space="preserve">
+    <value>openShelvedFileTSMI</value>
+  </data>
+  <data name="&gt;&gt;openShelvedFileTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteTSMI.Name" xml:space="preserve">
+    <value>deleteTSMI</value>
+  </data>
+  <data name="&gt;&gt;deleteTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;diffAgainstHaveTMSI.Name" xml:space="preserve">
+    <value>diffAgainstHaveTMSI</value>
+  </data>
+  <data name="&gt;&gt;diffAgainstHaveTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;diffAgainstHavesTMSI.Name" xml:space="preserve">
+    <value>diffAgainstHavesTMSI</value>
+  </data>
+  <data name="&gt;&gt;diffAgainstHavesTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;diffAgainstTSMI.Name" xml:space="preserve">
+    <value>diffAgainstTSMI</value>
+  </data>
+  <data name="&gt;&gt;diffAgainstTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;diffAgainstSourceRevTMSI.Name" xml:space="preserve">
+    <value>diffAgainstSourceRevTMSI</value>
+  </data>
+  <data name="&gt;&gt;diffAgainstSourceRevTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;diffAgainstWorkspaceFileTMSI.Name" xml:space="preserve">
+    <value>diffAgainstWorkspaceFileTMSI</value>
+  </data>
+  <data name="&gt;&gt;diffAgainstWorkspaceFileTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
+    <value>toolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changeFiletypeTSMI.Name" xml:space="preserve">
+    <value>changeFiletypeTSMI</value>
+  </data>
+  <data name="&gt;&gt;changeFiletypeTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lockTSMI.Name" xml:space="preserve">
+    <value>lockTSMI</value>
+  </data>
+  <data name="&gt;&gt;lockTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
+    <value>toolStripSeparator5</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RequestReviewTSMI.Name" xml:space="preserve">
+    <value>RequestReviewTSMI</value>
+  </data>
+  <data name="&gt;&gt;RequestReviewTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UpdateReviewTSMI.Name" xml:space="preserve">
+    <value>UpdateReviewTSMI</value>
+  </data>
+  <data name="&gt;&gt;UpdateReviewTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openReviewInSwarmTSMI.Name" xml:space="preserve">
+    <value>openReviewInSwarmTSMI</value>
+  </data>
+  <data name="&gt;&gt;openReviewInSwarmTSMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SwarmReviewTSS.Name" xml:space="preserve">
+    <value>SwarmReviewTSS</value>
+  </data>
+  <data name="&gt;&gt;SwarmReviewTSS.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newPendingChangelistTMSI.Name" xml:space="preserve">
+    <value>newPendingChangelistTMSI</value>
+  </data>
+  <data name="&gt;&gt;newPendingChangelistTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editPendingChangelistTMSI.Name" xml:space="preserve">
+    <value>editPendingChangelistTMSI</value>
+  </data>
+  <data name="&gt;&gt;editPendingChangelistTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deletePendingChangelistTMSI.Name" xml:space="preserve">
+    <value>deletePendingChangelistTMSI</value>
+  </data>
+  <data name="&gt;&gt;deletePendingChangelistTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changeOwnershipTMSI.Name" xml:space="preserve">
+    <value>changeOwnershipTMSI</value>
+  </data>
+  <data name="&gt;&gt;changeOwnershipTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator6.Name" xml:space="preserve">
+    <value>toolStripSeparator6</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshPendingChangelistListTMSI.Name" xml:space="preserve">
+    <value>refreshPendingChangelistListTMSI</value>
+  </data>
+  <data name="&gt;&gt;refreshPendingChangelistListTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshPendingChangelistTMSI.Name" xml:space="preserve">
+    <value>refreshPendingChangelistTMSI</value>
+  </data>
+  <data name="&gt;&gt;refreshPendingChangelistTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;removeJobTMSI.Name" xml:space="preserve">
+    <value>removeJobTMSI</value>
+  </data>
+  <data name="&gt;&gt;removeJobTMSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PendingChangelistsToolWindowControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Perforce.P4VS.P4ToolWindowControlBase, P4VS10, Version=2015.2.99.6270, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+</root>

@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>ベースのファイルタイプ:</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>ワークスペース関連の属性:</value>
+  </data>
+  <data name="PreserveLocalModTimeCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 17</value>
+  </data>
+  <data name="PreserveLocalModTimeCB.Text" xml:space="preserve">
+    <value>+m   ローカルの変更時刻を保存</value>
+  </data>
+  <data name="AlwaywsWritableCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 17</value>
+  </data>
+  <data name="AlwaywsWritableCB.Text" xml:space="preserve">
+    <value>+w   常にワークスペースに書き込み可能</value>
+  </data>
+  <data name="ExcecBitSetCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 17</value>
+  </data>
+  <data name="ExcecBitSetCB.Text" xml:space="preserve">
+    <value>+x   ワークスペースでビットセットを実行</value>
+  </data>
+  <data name="RcsKeywordExpansionCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 17</value>
+  </data>
+  <data name="RcsKeywordExpansionCB.Text" xml:space="preserve">
+    <value>+k   RCSキーワード拡張</value>
+  </data>
+  <data name="RcsLimitedKeywordExpansionCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 17</value>
+  </data>
+  <data name="RcsLimitedKeywordExpansionCB.Text" xml:space="preserve">
+    <value>+ko  $Id$, $Header$のみRCSキーワード拡張</value>
+  </data>
+  <data name="ExclusiveCheckoutsCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 17</value>
+  </data>
+  <data name="ExclusiveCheckoutsCB.Text" xml:space="preserve">
+    <value>+l   排他チェックアウト（同時チェックアウトを禁止）</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>サーバ格納方法:</value>
+  </data>
+  <data name="MaxRevsCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 391</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 13</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>ファイルを作業中チェンジリストに追加:</value>
+  </data>
+  <data name="TargetChangeListCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 21</value>
+  </data>
+  <data name="OkBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 475</value>
+  </data>
+  <data name="CancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 475</value>
+  </data>
+  <data name="CancelBtn.Text" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="LimitRevsCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 17</value>
+  </data>
+  <data name="LimitRevsCB.Text" xml:space="preserve">
+    <value>+S   サーバではここに格納されるリビジョンの数を制限</value>
+  </data>
+  <data name="AddAtrributesRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 17</value>
+  </data>
+  <data name="AddAtrributesRB.Text" xml:space="preserve">
+    <value>ファイル属性を追加</value>
+  </data>
+  <data name="ChangeBaseTypeRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 17</value>
+  </data>
+  <data name="ChangeBaseTypeRB.Text" xml:space="preserve">
+    <value>ベースのファイルタイプおよび/またはファイル属性を変更</value>
+  </data>
+  <data name="FullFileRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 17</value>
+  </data>
+  <data name="FullFileRB.Text" xml:space="preserve">
+    <value>+F  サーバではリビジョンごとに完全なファイルを格納</value>
+  </data>
+  <data name="RCSDeltasRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 17</value>
+  </data>
+  <data name="RCSDeltasRB.Text" xml:space="preserve">
+    <value>+D   サーバではRCSフォーマットでdeltaを格納（テキストのデフォルト）</value>
+  </data>
+  <data name="CompressedFilesRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>356, 17</value>
+  </data>
+  <data name="CompressedFilesRB.Text" xml:space="preserve">
+    <value>+C   サーバではリビジョンごとに圧縮ファイルを格納（バイナリのデフォルト）</value>
+  </data>
+  <data name="UseDefaultForTypeRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 17</value>
+  </data>
+  <data name="UseDefaultForTypeRB.Text" xml:space="preserve">
+    <value>サーバではベース・ファイルタイプに対するデフォルトの方法でリビジョンを格納</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>395, 89</value>
+  </data>
+  <data name="divider1GB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 71</value>
+  </data>
+  <data name="divider1GB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 2</value>
+  </data>
+  <data name="divider4GB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 427</value>
+  </data>
+  <data name="divider4GB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 2</value>
+  </data>
+  <data name="divider3GB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 2</value>
+  </data>
+  <data name="divider2GB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 2</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>405, 510</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAQAMAABMLAAATCwAAAAAAAAAA
+        AADaoCzYni7WmzDUmDLSljTQlDbOkjjMjzrLjTzIhzivcCSzcyvJiELFhEPAgkXBgUbboirZoCzXnS7V
+        mzDSmDLRljTPlDbNkTjPjTLAjkyIj5psbm+rcS7MjETBgkPBgkXdpSjboirZoCzXnS7goTHhoTPenjXd
+        nDjblzLam0XI1OKeqbmeaCjglkPKiUTCg0TfpybepSrcpCzbnymwexamcRKnchSncRenbRelahW6urqq
+        s79yTiKhZyG4fDjKiUTjqyXkpx7npBPkpB7DytWzu8ixtr+ss7ykq7eboamztbi4uLeZnaSEk6ZxWTvQ
+        iTnprh3CljORdDSObinO1eTq7fPd3+DR0tHY2tzGy9S7vsWysrS0tbe1wtF7cWXGgTDiowLo1qr7///Q
+        1uSrkFzt9f/d4eiJg3mmagDmmx3LqXW6x9uDfna4eiTPk0TKiTziowDr1Z3////W3uuaXADrxGzZ4O/k
+        7PhyZk7DeQDdqlK9yuCJjI+rbhbZljvIiz3kpwDq1pr+///m6e2JfGCWfk2FhYSQkJPW4PJuWTXRjxnI
+        zdaWoa+YaSHbmjnKjTvlqQDr1Zr6///19vb7///p9f/j5eiWlZWZm5vEzt1wTQ/Hv7Cns8eJZSvdmjPM
+        kDroqgDs1pr////k5+/MuILq0pnb3ufb3N19f4PT1t2goaKjnZe7w9J+aEHZlSjPkznorADt15r////Q
+        1N2iZQDplwDSzLnb4vGakoLIxsbIzNe+vb26wcx+cl7Rjx7TljnqrQDt15r////o6O6KfFqfj2bX2tvV
+        4PqfhEbosDTJ0uu2uLrAw8eEgXrFhRfYmzfqrgDu3qv////7///8///t+//f6v+7wNDJlBPpoQDgvXG9
+        zOy5xNmHlKqueRbeoDTutQTtzGTx3KPs15fm0pXiz5jXwYXWoRzqrRbhqSbhoAnauXTFt5m1pojEjifb
+        nTDwvhzuuAvrsQfssAfrrgfrrgfsrgjstB3msCfkriniqyripRnhohfkpB7gpTLYoDUAAJAoAAAAAAAA
+        HR0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ファイルタイプを変更</value>
+  </data>
+  <data name="MaxRevsCB.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MaxRevsCB.Items1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="MaxRevsCB.Items10" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="MaxRevsCB.Items11" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="MaxRevsCB.Items12" xml:space="preserve">
+    <value>64</value>
+  </data>
+  <data name="MaxRevsCB.Items13" xml:space="preserve">
+    <value>128</value>
+  </data>
+  <data name="MaxRevsCB.Items14" xml:space="preserve">
+    <value>256</value>
+  </data>
+  <data name="MaxRevsCB.Items15" xml:space="preserve">
+    <value>512</value>
+  </data>
+  <data name="MaxRevsCB.Items2" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="MaxRevsCB.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="MaxRevsCB.Items4" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="MaxRevsCB.Items5" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="MaxRevsCB.Items6" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="MaxRevsCB.Items7" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="MaxRevsCB.Items8" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="MaxRevsCB.Items9" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="OkBtn.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+</root>

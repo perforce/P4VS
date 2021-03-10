@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="diffFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>16, 15</value>
+  </metadata>
+  <metadata name="mergeFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>156, 15</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="reviewsChkBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="reviewsChkBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="reviewsChkBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 279</value>
+  </data>
+  <data name="reviewsChkBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 17</value>
+  </data>
+  <data name="reviewsChkBox.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="reviewsChkBox.Text" xml:space="preserve">
+    <value>Open Swarm reviews in external browser</value>
+  </data>
+  <data name="&gt;&gt;reviewsChkBox.Name" xml:space="preserve">
+    <value>reviewsChkBox</value>
+  </data>
+  <data name="&gt;&gt;reviewsChkBox.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;reviewsChkBox.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;reviewsChkBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gridLayoutSubpanel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="reviewsLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="reviewsLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="reviewsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="reviewsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="reviewsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="reviewsLbl.Text" xml:space="preserve">
+    <value>Swarm reviews</value>
+  </data>
+  <data name="&gt;&gt;reviewsLbl.Name" xml:space="preserve">
+    <value>reviewsLbl</value>
+  </data>
+  <data name="&gt;&gt;reviewsLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;reviewsLbl.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel5</value>
+  </data>
+  <data name="&gt;&gt;reviewsLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 2</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel5</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gridLayoutSubpanel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 260</value>
+  </data>
+  <data name="gridLayoutSubpanel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>434, 13</value>
+  </data>
+  <data name="gridLayoutSubpanel5.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel5.Name" xml:space="preserve">
+    <value>gridLayoutSubpanel5</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel5.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel5.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gridLayoutSubpanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="gridLayoutSubpanel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridLayoutSubpanel3.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="gridPanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="gridPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 3</value>
+  </data>
+  <data name="gridPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 17</value>
+  </data>
+  <data name="gridPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;gridPanel3.Name" xml:space="preserve">
+    <value>gridPanel3</value>
+  </data>
+  <data name="&gt;&gt;gridPanel3.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel3.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel3</value>
+  </data>
+  <data name="&gt;&gt;gridPanel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="p4MergeRB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="p4MergeRB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="p4MergeRB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="p4MergeRB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="p4MergeRB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 3</value>
+  </data>
+  <data name="p4MergeRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 17</value>
+  </data>
+  <data name="p4MergeRB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="p4MergeRB.Text" xml:space="preserve">
+    <value>P4Merge</value>
+  </data>
+  <data name="&gt;&gt;p4MergeRB.Name" xml:space="preserve">
+    <value>p4MergeRB</value>
+  </data>
+  <data name="&gt;&gt;p4MergeRB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;p4MergeRB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel3</value>
+  </data>
+  <data name="&gt;&gt;p4MergeRB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="otherAppRB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="otherAppRB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="otherAppRB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="otherAppRB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="otherAppRB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 3</value>
+  </data>
+  <data name="otherAppRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 17</value>
+  </data>
+  <data name="otherAppRB.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="otherAppRB.Text" xml:space="preserve">
+    <value>Other application</value>
+  </data>
+  <data name="&gt;&gt;otherAppRB.Name" xml:space="preserve">
+    <value>otherAppRB</value>
+  </data>
+  <data name="&gt;&gt;otherAppRB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;otherAppRB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel3</value>
+  </data>
+  <data name="&gt;&gt;otherAppRB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gridLayoutSubpanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 22</value>
+  </data>
+  <data name="gridLayoutSubpanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>424, 43</value>
+  </data>
+  <data name="gridLayoutSubpanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel3.Name" xml:space="preserve">
+    <value>gridLayoutSubpanel3</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel3.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel3.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gridPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 68</value>
+  </data>
+  <data name="gridPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="gridPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 20</value>
+  </data>
+  <data name="gridPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;gridPanel2.Name" xml:space="preserve">
+    <value>gridPanel2</value>
+  </data>
+  <data name="&gt;&gt;gridPanel2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel2.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gridPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="gridPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 302</value>
+  </data>
+  <data name="gridPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 63</value>
+  </data>
+  <data name="gridPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Name" xml:space="preserve">
+    <value>gridPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="gridLayoutSubpanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="mergeAppLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mergeAppLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mergeAppLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mergeAppLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 13</value>
+  </data>
+  <data name="mergeAppLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mergeAppLbl.Text" xml:space="preserve">
+    <value>Default merge application</value>
+  </data>
+  <data name="&gt;&gt;mergeAppLbl.Name" xml:space="preserve">
+    <value>mergeAppLbl</value>
+  </data>
+  <data name="&gt;&gt;mergeAppLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;mergeAppLbl.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel2</value>
+  </data>
+  <data name="&gt;&gt;mergeAppLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 2</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel2</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gridLayoutSubpanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 135</value>
+  </data>
+  <data name="gridLayoutSubpanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>434, 13</value>
+  </data>
+  <data name="gridLayoutSubpanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel2.Name" xml:space="preserve">
+    <value>gridLayoutSubpanel2</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel2.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="diffLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="diffLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="diffLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="diffLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="diffLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 13</value>
+  </data>
+  <data name="diffLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="diffLbl.Text" xml:space="preserve">
+    <value>Default diff application</value>
+  </data>
+  <data name="&gt;&gt;diffLbl.Name" xml:space="preserve">
+    <value>diffLbl</value>
+  </data>
+  <data name="&gt;&gt;diffLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;diffLbl.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;diffLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="diffAppLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="diffAppLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="diffAppLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="diffAppLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 13</value>
+  </data>
+  <data name="diffAppLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diffAppLbl.Text" xml:space="preserve">
+    <value>Default diff application</value>
+  </data>
+  <data name="&gt;&gt;diffAppLbl.Name" xml:space="preserve">
+    <value>diffAppLbl</value>
+  </data>
+  <data name="&gt;&gt;diffAppLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;diffAppLbl.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;diffAppLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 5</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 2</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>434, 13</value>
+  </data>
+  <data name="gridLayoutSubpanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.Name" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="diffLocationLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="diffLocationLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="diffLocationLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="diffLocationLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 77</value>
+  </data>
+  <data name="diffLocationLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="diffLocationLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diffLocationLbl.Text" xml:space="preserve">
+    <value>Location:</value>
+  </data>
+  <data name="&gt;&gt;diffLocationLbl.Name" xml:space="preserve">
+    <value>diffLocationLbl</value>
+  </data>
+  <data name="&gt;&gt;diffLocationLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;diffLocationLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;diffLocationLbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="mergeLocationTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="mergeLocationTB.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mergeLocationTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 205</value>
+  </data>
+  <data name="mergeLocationTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 20</value>
+  </data>
+  <data name="mergeLocationTB.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;mergeLocationTB.Name" xml:space="preserve">
+    <value>mergeLocationTB</value>
+  </data>
+  <data name="&gt;&gt;mergeLocationTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;mergeLocationTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;mergeLocationTB.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="diffArgumentsTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="diffArgumentsTB.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="diffArgumentsTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 102</value>
+  </data>
+  <data name="diffArgumentsTB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 10</value>
+  </data>
+  <data name="diffArgumentsTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 20</value>
+  </data>
+  <data name="diffArgumentsTB.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="diffArgumentsTB.Text" xml:space="preserve">
+    <value>%1 %2</value>
+  </data>
+  <data name="&gt;&gt;diffArgumentsTB.Name" xml:space="preserve">
+    <value>diffArgumentsTB</value>
+  </data>
+  <data name="&gt;&gt;diffArgumentsTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;diffArgumentsTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;diffArgumentsTB.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="mergeBrowseBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="mergeBrowseBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mergeBrowseBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mergeBrowseBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mergeBrowseBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 203</value>
+  </data>
+  <data name="mergeBrowseBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 25</value>
+  </data>
+  <data name="mergeBrowseBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="mergeBrowseBtn.Text" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="&gt;&gt;mergeBrowseBtn.Name" xml:space="preserve">
+    <value>mergeBrowseBtn</value>
+  </data>
+  <data name="&gt;&gt;mergeBrowseBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;mergeBrowseBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;mergeBrowseBtn.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="diffArgumentsLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="diffArgumentsLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="diffArgumentsLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="diffArgumentsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 109</value>
+  </data>
+  <data name="diffArgumentsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="diffArgumentsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="diffArgumentsLbl.Text" xml:space="preserve">
+    <value>Arguments:</value>
+  </data>
+  <data name="&gt;&gt;diffArgumentsLbl.Name" xml:space="preserve">
+    <value>diffArgumentsLbl</value>
+  </data>
+  <data name="&gt;&gt;diffArgumentsLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;diffArgumentsLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;diffArgumentsLbl.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="mergeArgumentsTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="mergeArgumentsTB.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mergeArgumentsTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 234</value>
+  </data>
+  <data name="mergeArgumentsTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 20</value>
+  </data>
+  <data name="mergeArgumentsTB.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="mergeArgumentsTB.Text" xml:space="preserve">
+    <value>%b %1 %2 %r</value>
+  </data>
+  <data name="&gt;&gt;mergeArgumentsTB.Name" xml:space="preserve">
+    <value>mergeArgumentsTB</value>
+  </data>
+  <data name="&gt;&gt;mergeArgumentsTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;mergeArgumentsTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;mergeArgumentsTB.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="diffBrowseBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="diffBrowseBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="diffBrowseBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="diffBrowseBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="diffBrowseBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 71</value>
+  </data>
+  <data name="diffBrowseBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 25</value>
+  </data>
+  <data name="diffBrowseBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="diffBrowseBtn.Text" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="&gt;&gt;diffBrowseBtn.Name" xml:space="preserve">
+    <value>diffBrowseBtn</value>
+  </data>
+  <data name="&gt;&gt;diffBrowseBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;diffBrowseBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;diffBrowseBtn.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="mergeArgumentsLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="mergeArgumentsLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mergeArgumentsLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mergeArgumentsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 237</value>
+  </data>
+  <data name="mergeArgumentsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="mergeArgumentsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mergeArgumentsLbl.Text" xml:space="preserve">
+    <value>Arguments:</value>
+  </data>
+  <data name="&gt;&gt;mergeArgumentsLbl.Name" xml:space="preserve">
+    <value>mergeArgumentsLbl</value>
+  </data>
+  <data name="&gt;&gt;mergeArgumentsLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;mergeArgumentsLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;mergeArgumentsLbl.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="mergeLocationLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="mergeLocationLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mergeLocationLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mergeLocationLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 209</value>
+  </data>
+  <data name="mergeLocationLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="mergeLocationLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mergeLocationLbl.Text" xml:space="preserve">
+    <value>Location:</value>
+  </data>
+  <data name="&gt;&gt;mergeLocationLbl.Name" xml:space="preserve">
+    <value>mergeLocationLbl</value>
+  </data>
+  <data name="&gt;&gt;mergeLocationLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;mergeLocationLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;mergeLocationLbl.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="diffLocationTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="diffLocationTB.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="diffLocationTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 73</value>
+  </data>
+  <data name="diffLocationTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 20</value>
+  </data>
+  <data name="diffLocationTB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;diffLocationTB.Name" xml:space="preserve">
+    <value>diffLocationTB</value>
+  </data>
+  <data name="&gt;&gt;diffLocationTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;diffLocationTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;diffLocationTB.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="gridLayoutSubpanel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="gridLayoutSubpanel4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridLayoutSubpanel4.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="gridPanel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="gridPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 3</value>
+  </data>
+  <data name="gridPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 17</value>
+  </data>
+  <data name="gridPanel4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;gridPanel4.Name" xml:space="preserve">
+    <value>gridPanel4</value>
+  </data>
+  <data name="&gt;&gt;gridPanel4.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel4.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel4</value>
+  </data>
+  <data name="&gt;&gt;gridPanel4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="p4Merge2RB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="p4Merge2RB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="p4Merge2RB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="p4Merge2RB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="p4Merge2RB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 3</value>
+  </data>
+  <data name="p4Merge2RB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 17</value>
+  </data>
+  <data name="p4Merge2RB.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="p4Merge2RB.Text" xml:space="preserve">
+    <value>P4Merge</value>
+  </data>
+  <data name="&gt;&gt;p4Merge2RB.Name" xml:space="preserve">
+    <value>p4Merge2RB</value>
+  </data>
+  <data name="&gt;&gt;p4Merge2RB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;p4Merge2RB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel4</value>
+  </data>
+  <data name="&gt;&gt;p4Merge2RB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="otherApp2RB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="otherApp2RB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="otherApp2RB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="otherApp2RB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="otherApp2RB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 3</value>
+  </data>
+  <data name="otherApp2RB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 17</value>
+  </data>
+  <data name="otherApp2RB.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="otherApp2RB.Text" xml:space="preserve">
+    <value>Other application</value>
+  </data>
+  <data name="&gt;&gt;otherApp2RB.Name" xml:space="preserve">
+    <value>otherApp2RB</value>
+  </data>
+  <data name="&gt;&gt;otherApp2RB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;otherApp2RB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel4</value>
+  </data>
+  <data name="&gt;&gt;otherApp2RB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gridLayoutSubpanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 154</value>
+  </data>
+  <data name="gridLayoutSubpanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>421, 43</value>
+  </data>
+  <data name="gridLayoutSubpanel4.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel4.Name" xml:space="preserve">
+    <value>gridLayoutSubpanel4</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel4.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel4.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel4.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="gridLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 368</value>
+  </data>
+  <data name="gridLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Name" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mergeAppGB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 12</value>
+  </data>
+  <data name="mergeAppGB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 2</value>
+  </data>
+  <data name="mergeAppGB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mergeAppGB.Name" xml:space="preserve">
+    <value>mergeAppGB</value>
+  </data>
+  <data name="&gt;&gt;mergeAppGB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
+    <value>394, 275</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 368</value>
+  </data>
+  <data name="&gt;&gt;diffFileDialog1.Name" xml:space="preserve">
+    <value>diffFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;diffFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mergeFileDialog2.Name" xml:space="preserve">
+    <value>mergeFileDialog2</value>
+  </data>
+  <data name="&gt;&gt;mergeFileDialog2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>P4DiffMergePreferencesControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

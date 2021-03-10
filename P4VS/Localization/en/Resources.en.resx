@@ -1,0 +1,1947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="100" xml:space="preserve">
+    <value>P4VS - Perforce Plugin for Visual Studio</value>
+    <comment>original:|P4VS - Perforce Plugin for Visual Studio|:</comment>
+  </data>
+  <data name="101" xml:space="preserve">
+    <value>This package implements the Perforce Plugin for Visual Studio.</value>
+    <comment>original:|This package implements the Perforce Plugin for Visual Studio.|:</comment>
+  </data>
+  <data name="ApplyProviderOptions" xml:space="preserve">
+    <value>Press Cancel to cancel this OnApply.  OK to continue</value>
+    <comment>original:|Press Cancel to cancel this OnApply.  OK to continue|:</comment>
+  </data>
+  <data name="ProviderName" xml:space="preserve">
+    <value>Managed Source Code Control Provider</value>
+    <comment>original:|Managed Source Code Control Provider|:</comment>
+  </data>
+  <data name="QEQS_EditUncontrolledReadOnly" xml:space="preserve">
+    <value>The file {0} you are trying to edit is read only on disk. Do you want do make the file writable so you can continue editing it?</value>
+    <comment>original:|The file {0} you are trying to edit is read only on disk. Do you want do make the file writable so you can continue editing it?|:</comment>
+  </data>
+  <data name="Status_CheckedIn" xml:space="preserve">
+    <value>Checked in</value>
+    <comment>original:|Checked in|:</comment>
+  </data>
+  <data name="Status_CheckedOut" xml:space="preserve">
+    <value>Checked out by you</value>
+    <comment>original:|Checked out by you|:</comment>
+  </data>
+  <data name="Status_PendingAdd" xml:space="preserve">
+    <value>Pending add</value>
+    <comment>original:|Pending add|:</comment>
+  </data>
+  <data name="Sample Tool Window" xml:space="preserve">
+    <value>Perforce Sample Tool Window</value>
+    <comment>original:|Perforce Sample Tool Window|:</comment>
+  </data>
+  <data name="LabelsToolWindowControl_Caption" xml:space="preserve">
+    <value>Labels</value>
+    <comment>original:|Labels|:</comment>
+  </data>
+  <data name="JobsToolWindow_Caption" xml:space="preserve">
+    <value>Jobs</value>
+    <comment>original:|Jobs|:</comment>
+  </data>
+  <data name="WorkspacesBrowserDlg_Caption" xml:space="preserve">
+    <value>Workspaces</value>
+    <comment>original:|Workspaces|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindow_Caption" xml:space="preserve">
+    <value>Pending</value>
+    <comment>original:|Pending|:</comment>
+  </data>
+  <data name="SubmittedChangelistsToolWindow_Caption" xml:space="preserve">
+    <value>Submitted</value>
+    <comment>original:|Submitted|:</comment>
+  </data>
+  <data name="StreamsToolWindow_Caption" xml:space="preserve">
+    <value>Streams</value>
+    <comment>original:|Streams|:</comment>
+  </data>
+  <data name="SccHistoryToolWindow_Caption" xml:space="preserve">
+    <value>File History</value>
+    <comment>original:|File History|:</comment>
+  </data>
+  <data name="TPD_DeleteControlledFile" xml:space="preserve">
+    <value>The file {0} you are going to delete is a source controlled file. Are you sure you want to continue and delete this file?</value>
+    <comment>original:|The file {0} you are going to delete is a source controlled file. Are you sure you want to continue and delete this file?|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedAction_ae" xml:space="preserve">
+    <value>Click the "Run Merge" button below.</value>
+    <comment>original:|Click the "Run Merge" button below.|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedAction_am" xml:space="preserve">
+    <value>Click the "Accept Merged" button below.</value>
+    <comment>original:|Click the "Accept Merged" button below.|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedAction_at" xml:space="preserve">
+    <value>Click the "Accept Source" button below.</value>
+    <comment>original:|Click the "Accept Source" button below.|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedAction_ay" xml:space="preserve">
+    <value>Click the "Accept Target" button below.</value>
+    <comment>original:|Click the "Accept Target" button below.|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedAction_default" xml:space="preserve">
+    <value />
+    <comment>original:||:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedReason_ae" xml:space="preserve">
+    <value>Both the source and target files dffer from the common base and there are conflicts.</value>
+    <comment>original:|Both the source and target files dffer from the common base and there are conflicts.|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedReason_am" xml:space="preserve">
+    <value>Both the source and target files dffer from the common base and there are no conflicts.</value>
+    <comment>original:|Both the source and target files dffer from the common base and there are no conflicts.|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedReason_at" xml:space="preserve">
+    <value>Only  source file differs from the common base file.</value>
+    <comment>original:|Only  source file differs from the common base file.|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedReason_ay" xml:space="preserve">
+    <value>Only  target file differs from the common base file.</value>
+    <comment>original:|Only  target file differs from the common base file.|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedReason_default" xml:space="preserve">
+    <value>???</value>
+    <comment>original:|???|:</comment>
+  </data>
+  <data name="PerforceSCM" xml:space="preserve">
+    <value>Perforce SCM</value>
+    <comment>original:|Perforce SCM|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_ResolveSaveChanges" xml:space="preserve">
+    <value>Do you want to keep the merged file?
+Click on "No" to rerun merge tool.</value>
+    <comment>original:|Do you want to keep the merged file?
+Click on "No" to rerun merge tool.|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedAction_e" xml:space="preserve">
+    <value>Click the "Run Merge Tool" button below.</value>
+    <comment>original:|Click the "Run Merge Tool" button below.|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SuggestedReason_e" xml:space="preserve">
+    <value>Conflicts exist between target file and source file.</value>
+    <comment>original:|Conflicts exist between target file and source file.|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_BranchActionReason" xml:space="preserve">
+    <value>The target file does not currently exist in the depot.</value>
+    <comment>original:|The target file does not currently exist in the depot.|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_DeleteActionReason" xml:space="preserve">
+    <value>The source file has been deleted but the corresponding target file still exists.</value>
+    <comment>original:|The source file has been deleted but the corresponding target file still exists.|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_AttributeAcceptMergedLabel" xml:space="preserve">
+    <value>Add source's propagating attributes to target file</value>
+    <comment>original:|Add source's propagating attributes to target file|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_AttributeAcceptSourceLabel" xml:space="preserve">
+    <value>Replace target file's attributes with those from source</value>
+    <comment>original:|Replace target file's attributes with those from source|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_AttributeAcceptTargetLabel" xml:space="preserve">
+    <value>Leave target file's attributes unchanged</value>
+    <comment>original:|Leave target file's attributes unchanged|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_BranchAcceptSourceLabel" xml:space="preserve">
+    <value>Branch target file from source</value>
+    <comment>original:|Branch target file from source|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_BranchAcceptTargetLabel" xml:space="preserve">
+    <value>Do not branch from source file (ignore)</value>
+    <comment>original:|Do not branch from source file (ignore)|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_BranchActionSource" xml:space="preserve">
+    <value>Branch target file from source</value>
+    <comment>original:|Branch target file from source|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_BranchActionTarget" xml:space="preserve">
+    <value>Do not branch from source file (ignore)</value>
+    <comment>original:|Do not branch from source file (ignore)|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_DeleteAcceptSourceLabel" xml:space="preserve">
+    <value>Delete the target file</value>
+    <comment>original:|Delete the target file|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_DeleteAcceptTargetLabel" xml:space="preserve">
+    <value>Do not delete the target file (ignore)</value>
+    <comment>original:|Do not delete the target file (ignore)|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_MoveAcceptMergedLabel" xml:space="preserve">
+    <value>Combine the name changes made to both the source and target</value>
+    <comment>original:|Combine the name changes made to both the source and target|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_MoveAcceptSourceLabel" xml:space="preserve">
+    <value>Rename the file to match the source file</value>
+    <comment>original:|Rename the file to match the source file|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_MoveAcceptTargetLabel" xml:space="preserve">
+    <value>Keep the current name of the target file</value>
+    <comment>original:|Keep the current name of the target file|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_RenameActionMerge" xml:space="preserve">
+    <value>Combine the name changes made to both the source and target:</value>
+    <comment>original:|Combine the name changes made to both the source and target:|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_RenameActionSource" xml:space="preserve">
+    <value>Rename the file to match the source file:</value>
+    <comment>original:|Rename the file to match the source file:|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_RenameActionTarget" xml:space="preserve">
+    <value>Keep the current name of the target file:</value>
+    <comment>original:|Keep the current name of the target file:|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_AttributeReason" xml:space="preserve">
+    <value>The attributes of {0} file have changed</value>
+    <comment>original:|The attributes of {0} file have changed|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_MoveActionMergeReason" xml:space="preserve">
+    <value>The source and target have been renamed.</value>
+    <comment>original:|The source and target have been renamed.|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_MoveActionReasonSource" xml:space="preserve">
+    <value>The source file has been renamed or moved.</value>
+    <comment>original:|The source file has been renamed or moved.|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_MoveActionReasonTarget" xml:space="preserve">
+    <value>The target has been renamed or moved.</value>
+    <comment>original:|The target has been renamed or moved.|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_RenameActionMergeReason" xml:space="preserve">
+    <value>The source and target have been renamed.</value>
+    <comment>original:|The source and target have been renamed.|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_RenameActionReasonSource" xml:space="preserve">
+    <value>The source file has been renamed or moved.</value>
+    <comment>original:|The source file has been renamed or moved.|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_RenameActionReasonTarget" xml:space="preserve">
+    <value>The target has been renamed or moved.</value>
+    <comment>original:|The target has been renamed or moved.|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_Resolve_BothFiles" xml:space="preserve">
+    <value>both the source and target file</value>
+    <comment>original:|both the source and target file|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_Resolve_SourceFile" xml:space="preserve">
+    <value>source file</value>
+    <comment>original:|source file|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_Resolve_TargetFile" xml:space="preserve">
+    <value>target file</value>
+    <comment>original:|target file|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_FileTypeAcceptMergedLabel" xml:space="preserve">
+    <value>Combine the filetypes of both the source and target</value>
+    <comment>original:|Combine the filetypes of both the source and target|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_FileTypeAcceptSourceLabel" xml:space="preserve">
+    <value>Match the filetype of the source file</value>
+    <comment>original:|Match the filetype of the source file|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_FileTypeAcceptTargetLabel" xml:space="preserve">
+    <value>Keep the filetype of the target file</value>
+    <comment>original:|Keep the filetype of the target file|:</comment>
+  </data>
+  <data name="ResolveFileActionControl_FileTypeResolveReason" xml:space="preserve">
+    <value>The filetypes of both the source and target files have changed.</value>
+    <comment>original:|The filetypes of both the source and target files have changed.|:</comment>
+  </data>
+  <data name="WarningStyle_GetLatest_Prompt" xml:space="preserve">
+    <value>You do not have the latest revision of the following file(s).
+Would you like to get the latest revision before the checkout?</value>
+    <comment>original:|You do not have the latest revision of the following file(s).
+Would you like to get the latest revision before the checkout?|:</comment>
+  </data>
+  <data name="WarningStyle_Locked_Prompt" xml:space="preserve">
+    <value>The following files are locked by other users. Would you like to proceed with the checkout?</value>
+    <comment>original:|The following files are locked by other users. Would you like to proceed with the checkout?|:</comment>
+  </data>
+  <data name="WarningStyle_Locked_WarningClmLbl" xml:space="preserve">
+    <value>Locked By</value>
+    <comment>original:|Locked By|:</comment>
+  </data>
+  <data name="Conection_Caption" xml:space="preserve">
+    <value>{0},{1} on {2}</value>
+    <comment>original:|{0},{1} on {2}|:</comment>
+  </data>
+  <data name="ChangeOwnerDlg_UserError" xml:space="preserve">
+    <value>User '{0}' does not exist</value>
+    <comment>original:|User '{0}' does not exist|:</comment>
+  </data>
+  <data name="ChangeOwnerDlg_WorkspaceError" xml:space="preserve">
+    <value>Workspace '{0}' does not exist</value>
+    <comment>original:|Workspace '{0}' does not exist|:</comment>
+  </data>
+  <data name="JobsToolWindowControl_0Matches" xml:space="preserve">
+    <value>0 matches</value>
+    <comment>original:|0 matches|:</comment>
+  </data>
+  <data name="JobsToolWindowControl_1Match" xml:space="preserve">
+    <value>1 match</value>
+    <comment>original:|1 match|:</comment>
+  </data>
+  <data name="JobsToolWindowControl_NoConnection" xml:space="preserve">
+    <value>no connection</value>
+    <comment>original:|no connection|:</comment>
+  </data>
+  <data name="JobsToolWindowControl_NoItemsAvailable" xml:space="preserve">
+    <value>No Items Available</value>
+    <comment>original:|No Items Available|:</comment>
+  </data>
+  <data name="JobsToolWindowControl_NoMatches" xml:space="preserve">
+    <value>no matches</value>
+    <comment>original:|no matches|:</comment>
+  </data>
+  <data name="Changelist_Default" xml:space="preserve">
+    <value>Default</value>
+    <comment>original:|Default|:</comment>
+  </data>
+  <data name="Changelist_New" xml:space="preserve">
+    <value>New</value>
+    <comment>original:|New|:</comment>
+  </data>
+  <data name="DiffDlg_EnterLabelName" xml:space="preserve">
+    <value>Enter label name</value>
+    <comment>original:|Enter label name|:</comment>
+  </data>
+  <data name="DiffDlg_EnterRevisionNumber" xml:space="preserve">
+    <value>Enter revision number</value>
+    <comment>original:|Enter revision number|:</comment>
+  </data>
+  <data name="DiffDlg_InvalidChangelistSpecifier" xml:space="preserve">
+    <value>invalid changelist specifier {0}</value>
+    <comment>original:|invalid changelist specifier {0}|:</comment>
+  </data>
+  <data name="DiffDlg_InvalidRevisionSpecifier" xml:space="preserve">
+    <value>invalid revision specifier {0}</value>
+    <comment>original:|invalid revision specifier {0}|:</comment>
+  </data>
+  <data name="DiffDlg_MissingFileError" xml:space="preserve">
+    <value>The file, {0}, is not in the depot and cannot be diffed.</value>
+    <comment>original:|The file, {0}, is not in the depot and cannot be diffed.|:</comment>
+  </data>
+  <data name="Error_ClosingProject" xml:space="preserve">
+    <value>Error closing project</value>
+    <comment>original:|Error closing project|:</comment>
+  </data>
+  <data name="Error_ClosingSolution" xml:space="preserve">
+    <value>Error closing solution</value>
+    <comment>original:|Error closing solution|:</comment>
+  </data>
+  <data name="FileAttributesDlg_UseDefaultForTypeRB_Text_1" xml:space="preserve">
+    <value>Server stores revisions using default method for base file type</value>
+    <comment>Same as UseDefaultForTypeRB.Text in FileAttributesDlg.resx
+original:|Server stores revisions using default method for base file type|:</comment>
+  </data>
+  <data name="FileAttributesDlg_UseDefaultForTypeRB_Text_2" xml:space="preserve">
+    <value>Do not change how the server stores file contents</value>
+    <comment>original:|Do not change how the server stores file contents|:</comment>
+  </data>
+  <data name="GetRevisionDlg_UpdatingProjWarninig" xml:space="preserve">
+    <value>The 'Get Revision' operation will replace one or more project files, so they will be updated and then the solution reopened.</value>
+    <comment>original:|The 'Get Revision' operation will replace one or more project files, so they will be updated and then the solution reopened.|:</comment>
+  </data>
+  <data name="GetRevisionDlg_UpdatingSlnWarninig" xml:space="preserve">
+    <value>The 'Get Revision' operation includes the solution file, so the solution will be closed before it is updated and then reopened.</value>
+    <comment>original:|The 'Get Revision' operation includes the solution file, so the solution will be closed before it is updated and then reopened.|:</comment>
+  </data>
+  <data name="P4VS" xml:space="preserve">
+    <value>P4VS</value>
+    <comment>original:|P4VS|:</comment>
+  </data>
+  <data name="DefaultChangeListDescription" xml:space="preserve">
+    <value>&lt;enter description here&gt;</value>
+    <comment>original:|&lt;enter description here&gt;|:</comment>
+  </data>
+  <data name="EmptyString" xml:space="preserve">
+    <value />
+    <comment>original:||:</comment>
+  </data>
+  <data name="GetRevisionDlg_AddFilesFoldersPrompt" xml:space="preserve">
+    <value>Add Files/Folders</value>
+    <comment>original:|Add Files/Folders|:</comment>
+  </data>
+  <data name="GetRevisionDlg_InvalidRevisionSpecifierWarninig" xml:space="preserve">
+    <value>Invalid revision specifier {0}</value>
+    <comment>original:|Invalid revision specifier {0}|:</comment>
+  </data>
+  <data name="GetRevisionDlg_RemovingProjWarninig" xml:space="preserve">
+    <value>Getting revision will remove the file(s) from the local workspace.</value>
+    <comment>original:|Getting revision will remove the file(s) from the local workspace.|:</comment>
+  </data>
+  <data name="GetRevisionDlg_RemovingSlnWarninig" xml:space="preserve">
+    <value>Getting revision will remove the solution file from the local workspace, and the solution cannot be reopened.</value>
+    <comment>original:|Getting revision will remove the solution file from the local workspace, and the solution cannot be reopened.|:</comment>
+  </data>
+  <data name="IntegrateDlg_Copy" xml:space="preserve">
+    <value>Copy</value>
+    <comment>original:|Copy|:</comment>
+  </data>
+  <data name="IntegrateDlg_CopyMethod" xml:space="preserve">
+    <value>Copy Method:</value>
+    <comment>original:|Copy Method:|:</comment>
+  </data>
+  <data name="IntegrateDlg_FilesToBeCopied" xml:space="preserve">
+    <value>{0} files to be copied</value>
+    <comment>original:|{0} files to be copied|:</comment>
+  </data>
+  <data name="IntegrateDlg_FilesToBeMerged" xml:space="preserve">
+    <value>{0} files to be merged</value>
+    <comment>original:|{0} files to be merged|:</comment>
+  </data>
+  <data name="IntegrateDlg_FileToBeCopied" xml:space="preserve">
+    <value>{0} file to be copied</value>
+    <comment>original:|{0} file to be copied|:</comment>
+  </data>
+  <data name="IntegrateDlg_FileToBeMerged" xml:space="preserve">
+    <value>{0} file to be merged</value>
+    <comment>original:|{0} file to be merged|:</comment>
+  </data>
+  <data name="IntegrateDlg_Merge" xml:space="preserve">
+    <value>Merge</value>
+    <comment>original:|Merge|:</comment>
+  </data>
+  <data name="IntegrateDlg_MergeMethod" xml:space="preserve">
+    <value>Merge Method:</value>
+    <comment>original:|Merge Method:|:</comment>
+  </data>
+  <data name="IntegrateDlg_StreamToStream" xml:space="preserve">
+    <value>Stream to Stream</value>
+    <comment>original:|Stream to Stream|:</comment>
+  </data>
+  <data name="JobsToolWindowControl_nMatches" xml:space="preserve">
+    <value>{0} matches</value>
+    <comment>original:|{0} matches|:</comment>
+  </data>
+  <data name="NewUserDlg_NameContainsSpacesWarning" xml:space="preserve">
+    <value>The name contains spaces and will be automatically corrected.</value>
+    <comment>original:|The name contains spaces and will be automatically corrected.|:</comment>
+  </data>
+  <data name="NewUserDlg_PasswordsDontMatchWarning" xml:space="preserve">
+    <value>The new password and confirm new password fields do not match.
+Please re-enter your new password.</value>
+    <comment>original:|The new password and confirm new password fields do not match.
+Please re-enter your new password.|:</comment>
+  </data>
+  <data name="NewUserDlg_UserExistsWarning" xml:space="preserve">
+    <value>The user, {0}, already exists</value>
+    <comment>original:|The user, {0}, already exists|:</comment>
+  </data>
+  <data name="OpenConnectionDlg_EmptyWorkspaceNameWarning" xml:space="preserve">
+    <value>name cannot be empty</value>
+    <comment>original:|name cannot be empty|:</comment>
+  </data>
+  <data name="OpenConnectionDlg_NameContainsSpacesWarning" xml:space="preserve">
+    <value>The name contains spaces and will be automatically corrected.</value>
+    <comment>original:|The name contains spaces and will be automatically corrected.|:</comment>
+  </data>
+  <data name="OpenConnectionDlg_NewWorkspaceDlgPrompt" xml:space="preserve">
+    <value>Enter a name for the new workspace:</value>
+    <comment>original:|Enter a name for the new workspace:|:</comment>
+  </data>
+  <data name="OpenConnectionDlg_NewWorkspaceDlgTitle" xml:space="preserve">
+    <value>New Workspace</value>
+    <comment>original:|New Workspace|:</comment>
+  </data>
+  <data name="OpenConnectionDlg_WorkspaceExistsWarning" xml:space="preserve">
+    <value>a workspace named {0} already exists</value>
+    <comment>original:|a workspace named {0} already exists|:</comment>
+  </data>
+  <data name="P4DiffMergePreferencesControl_openFileDialogFilter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+    <comment>original:|All files (*.*)|*.*|:</comment>
+  </data>
+  <data name="P4DiffMergePreferencesControl_openFileDialogTitle" xml:space="preserve">
+    <value>Choose an application</value>
+    <comment>original:|Choose an application|:</comment>
+  </data>
+  <data name="P4Directory_InvalidNullPathError" xml:space="preserve">
+    <value>P4Directory requires a valid Repository</value>
+    <comment>original:|P4Directory requires a valid Repository|:</comment>
+  </data>
+  <data name="P4Directory_InvalidRepositoryError" xml:space="preserve">
+    <value>P4Directory requires a valid Repository</value>
+    <comment>original:|P4Directory requires a valid Repository|:</comment>
+  </data>
+  <data name="P4ErrorDlg_Details" xml:space="preserve">
+    <value>Details:</value>
+    <comment>original:|Details:|:</comment>
+  </data>
+  <data name="P4ErrorDlg_Errors" xml:space="preserve">
+    <value>Errors:</value>
+    <comment>original:|Errors:|:</comment>
+  </data>
+  <data name="P4ErrorDlg_PromptLabel" xml:space="preserve">
+    <value>Results from Last Command</value>
+    <comment>original:|Results from Last Command|:</comment>
+  </data>
+  <data name="P4FileTreeListViewItem_Resolved" xml:space="preserve">
+    <value>Resolved</value>
+    <comment>original:|Resolved|:</comment>
+  </data>
+  <data name="P4FileTreeListViewItem_Unresolved" xml:space="preserve">
+    <value>Unresolved</value>
+    <comment>original:|Unresolved|:</comment>
+  </data>
+  <data name="PendingChangelistDlg_CantCreateChanglistError" xml:space="preserve">
+    <value>Can't create new changelist</value>
+    <comment>original:|Can't create new changelist|:</comment>
+  </data>
+  <data name="PendingChangelistDlg_JobAlreadyLinkedError" xml:space="preserve">
+    <value>Job {0} is already linked to this changelist.</value>
+    <comment>original:|Job {0} is already linked to this changelist.|:</comment>
+  </data>
+  <data name="PendingChangelistDlg_JobDoesntExistError" xml:space="preserve">
+    <value>Job {0} does not exist.</value>
+    <comment>original:|Job {0} does not exist.|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_ClmTitleAccessType" xml:space="preserve">
+    <value>Access Type</value>
+    <comment>original:|Access Type|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_ClmTitleChange" xml:space="preserve">
+    <value>Change</value>
+    <comment>original:|Change|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_ClmTitleDate" xml:space="preserve">
+    <value>Date</value>
+    <comment>original:|Date|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_ClmTitleDescription" xml:space="preserve">
+    <value>Description</value>
+    <comment>original:|Description|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_ClmTitleUser" xml:space="preserve">
+    <value>User</value>
+    <comment>original:|User|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_ClmTitleWorkspace" xml:space="preserve">
+    <value>Workspace</value>
+    <comment>original:|Workspace|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_DeleteChangelistContainsShelvedFilesWarning1" xml:space="preserve">
+    <value>Changelist {0} contains shelved files and cannot be deleted
+Do you want to delete the shelved files?</value>
+    <comment>original:|Changelist {0} contains shelved files and cannot be deleted
+Do you want to delete the shelved files?|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_DeletePendingChangelistCaption" xml:space="preserve">
+    <value>Delete Pending Changelist Form</value>
+    <comment>original:|Delete Pending Changelist Form|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_DeletePendingChangelistWarning" xml:space="preserve">
+    <value>You are about to delete Pending Changelist '{0}' from the server.
+Are you sure you want to continue?</value>
+    <comment>original:|You are about to delete Pending Changelist '{0}' from the server.
+Are you sure you want to continue?|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_DeleteShelved2FilesWarning" xml:space="preserve">
+    <value>Are you sure you want to delete the shelved files
+'{0}'
+'{1}'?</value>
+    <comment>original:|Are you sure you want to delete the shelved files
+'{0}'
+'{1}'?|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_DeleteShelvedFilesWarning" xml:space="preserve">
+    <value>Are you sure you want to delete the selected shelved files?</value>
+    <comment>original:|Are you sure you want to delete the selected shelved files?|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_DeleteShelvedFileWarning" xml:space="preserve">
+    <value>Are you sure you want to delete the shelved file
+'{0}'?</value>
+    <comment>original:|Are you sure you want to delete the shelved file
+'{0}'?|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_FileCount" xml:space="preserve">
+    <value>There are {0} files in this changelist.</value>
+    <comment>original:|There are {0} files in this changelist.|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemDeletePendingChangelist" xml:space="preserve">
+    <value>Delete Pending Changelist '{0}'</value>
+    <comment>original:|Delete Pending Changelist '{0}'|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemEditPendingChangelist" xml:space="preserve">
+    <value>Edit Pending Changelist '{0}'</value>
+    <comment>original:|Edit Pending Changelist '{0}'|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemLock" xml:space="preserve">
+    <value>Lock</value>
+    <comment>original:|Lock|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemRefreshPendingChangelist" xml:space="preserve">
+    <value>Refresh Pending Changelist '{0}'</value>
+    <comment>original:|Refresh Pending Changelist '{0}'|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemUnlock" xml:space="preserve">
+    <value>Unlock</value>
+    <comment>original:|Unlock|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_NoFilesToMoveWarning" xml:space="preserve">
+    <value>no files to move</value>
+    <comment>original:|no files to move|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_PendingChangelistDlgCaption" xml:space="preserve">
+    <value>Pending Changelist: New({0},{1})	</value>
+    <comment>{0} is server:port, {1} is user name
+original:|Pending Changelist: New({0},{1})	|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_PendingChangelistDlgTitle" xml:space="preserve">
+    <value>Pending Changelist: {0}({1},{2})</value>
+    <comment>{0} = Changelist Id (#|'new'|'default') {1}= server:port {2} = user name
+original:|Pending Changelist: {0}({1},{2})|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_SelectChangelistDlgCaption" xml:space="preserve">
+    <value>Move to Another Changelist</value>
+    <comment>original:|Move to Another Changelist|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_SelectChangelistDlgCaption2" xml:space="preserve">
+    <value>Move Files to Another Changelist</value>
+    <comment>original:|Move Files to Another Changelist|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning" xml:space="preserve">
+    <value>The selected changelist has been deleted and no longer exists on the server</value>
+    <comment>original:|The selected changelist has been deleted and no longer exists on the server|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_SubmitChangelistContainsShelvedFilesWarning" xml:space="preserve">
+    <value>Changelist {0} contains shelved files and cannot be submitted.
+Do you want to delete the shelved files?</value>
+    <comment>original:|Changelist {0} contains shelved files and cannot be submitted.
+Do you want to delete the shelved files?|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_SubmitShelvedChangelistContainsFilesWarning" xml:space="preserve">
+    <value>Changelist {0} contains non-shelved files and therefore the cannot be submitted.</value>
+    <comment>original:|Changelist {0} contains non-shelved files and therefore the cannot be submitted.|:</comment>
+  </data>
+  <data name="ResolveFileAutoControl_FilesNotResolvedWarning" xml:space="preserve">
+    <value>{0} of the files could not be resolved using the Auto resolve action chosen. Please use a different Auto resolve method or the Interactive option on the remaining files.</value>
+    <comment>original:|{0} of the files could not be resolved using the Auto resolve action chosen. Please use a different Auto resolve method or the Interactive option on the remaining files.|:</comment>
+  </data>
+  <data name="ResolveFileDlg_NoFileToResolveWarning" xml:space="preserve">
+    <value>There are no files to resolve</value>
+    <comment>original:|There are no files to resolve|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_BaseFile" xml:space="preserve">
+    <value>Base ({0})</value>
+    <comment>original:|Base ({0})|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_DiffToolNotFoundWarning" xml:space="preserve">
+    <value>
+    (Warning, merge tool not located!)</value>
+    <comment>original:|(Warning, merge tool not located!)|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_MergedSourceTarget" xml:space="preserve">
+    <value>Merged Source/Target</value>
+    <comment>original:|Merged Source/Target|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_MergeOfFiles" xml:space="preserve">
+    <value>Merge of {0}, {1}</value>
+    <comment>original:|Merge of {0}, {1}|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_SourceFile" xml:space="preserve">
+    <value>Source ({0})</value>
+    <comment>original:|Source ({0})|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_TargetFile" xml:space="preserve">
+    <value>Target ({0})</value>
+    <comment>original:|Target ({0})|:</comment>
+  </data>
+  <data name="SccHistoryDetailsControl_FileSizeBytes" xml:space="preserve">
+    <value>{0} bytes</value>
+    <comment>original:|{0} bytes|:</comment>
+  </data>
+  <data name="SccHistoryDetailsControl_FileSizeGigaBytes" xml:space="preserve">
+    <value>{0:F3} GB</value>
+    <comment>original:|{0:F3} GB|:</comment>
+  </data>
+  <data name="SccHistoryDetailsControl_FileSizeKiloBytes" xml:space="preserve">
+    <value>{0:F3} KB</value>
+    <comment>original:|{0:F3} KB|:</comment>
+  </data>
+  <data name="SccHistoryDetailsControl_FileSizeMegaBytes" xml:space="preserve">
+    <value>{0:F3} MB</value>
+    <comment>original:|{0:F3} MB|:</comment>
+  </data>
+  <data name="SccHistoryDetailsControl_FileSizeTeraBytes" xml:space="preserve">
+    <value>{0:F3} TB</value>
+    <comment>original:|{0:F3} TB|:</comment>
+  </data>
+  <data name="SccHistoryIntegrationsControl_OtherIntegrations" xml:space="preserve">
+    <value>Other integrations</value>
+    <comment>original:|Other integrations|:</comment>
+  </data>
+  <data name="SccHistoryIntegrationsControl_SourcesContributingContent" xml:space="preserve">
+    <value>Sources contributing content to this revision</value>
+    <comment>original:|Sources contributing content to this revision|:</comment>
+  </data>
+  <data name="SccHistoryIntegrationsControl_TargetsReceivingContent" xml:space="preserve">
+    <value>Targets receiving content from this revision</value>
+    <comment>original:|Targets receiving content from this revision|:</comment>
+  </data>
+  <data name="SelectChangelistDlg_ApplyToAllFilesEditLabel" xml:space="preserve">
+    <value>Do this for all files being edited</value>
+    <comment>original:|Do this for all files being edited|:</comment>
+  </data>
+  <data name="SelectChangelistDlg_ApplyToAllFilesSaveLabel" xml:space="preserve">
+    <value>Do this for all files being saved</value>
+    <comment>original:|Do this for all files being saved|:</comment>
+  </data>
+  <data name="SelectChangelistDlg_DefaultNewChangeDesc" xml:space="preserve">
+    <value>&lt;Opened by P4VS&gt;</value>
+    <comment>original:|&lt;Opened by P4VS&gt;|:</comment>
+  </data>
+  <data name="SelectChangelistDlg_QueryEditOrSavePrompt" xml:space="preserve">
+    <value>The read only file, {0}, is under source control and checked in. What do you want to do?</value>
+    <comment>original:|The read only file, {0}, is under source control and checked in. What do you want to do?|:</comment>
+  </data>
+  <data name="ShelveFileDlg_FilesShelvedFromDefaultChangelist" xml:space="preserve">
+    <value>Files shelved from default changelist</value>
+    <comment>original:|Files shelved from default changelist|:</comment>
+  </data>
+  <data name="ShelveFileDlg_FilesShelvedFromNumberedChangelist" xml:space="preserve">
+    <value>Files shelved from changelist {0}</value>
+    <comment>original:|Files shelved from changelist {0}|:</comment>
+  </data>
+  <data name="ShelveFileDlg_NoShelveableFilesWarning" xml:space="preserve">
+    <value>None of the selected files could be shelved</value>
+    <comment>original:|None of the selected files could be shelved|:</comment>
+  </data>
+  <data name="ShowFileContentsDlg_FileNotFoundWarning" xml:space="preserve">
+    <value>File not found:
+{0}</value>
+    <comment>original:|File not found:
+{0}|:</comment>
+  </data>
+  <data name="SubmitDlg_DefaultChangelistDescription" xml:space="preserve">
+    <value>&lt;Submitted by P4VS&gt;</value>
+    <comment>original:|&lt;Submitted by P4VS&gt;|:</comment>
+  </data>
+  <data name="SubmitDlg_NoFilesToSubmitWarning" xml:space="preserve">
+    <value>None of the selected files could be submitted</value>
+    <comment>original:|None of the selected files could be submitted|:</comment>
+  </data>
+  <data name="SubmitDlg_SubmitPendingChanglistTitle" xml:space="preserve">
+    <value>Submit Changelist: {0}</value>
+    <comment>original:|Submit Changelist: {0}|:</comment>
+  </data>
+  <data name="SubmittedChangelistsToolWindowControl_EditSubmittedChangelistMenuItemText" xml:space="preserve">
+    <value>Edit Submitted Changelist '{0}'</value>
+    <comment>original:|Edit Submitted Changelist '{0}'|:</comment>
+  </data>
+  <data name="SubmittedChangelistsToolWindowControl_RefreshSubmittedChangelistMenuItemText1" xml:space="preserve">
+    <value>Refresh Submitted Changelist '{0}'</value>
+    <comment>original:|Refresh Submitted Changelist '{0}'|:</comment>
+  </data>
+  <data name="SubmittedChangelistsToolWindowControl_SubmittedChangelistDlgCaption" xml:space="preserve">
+    <value>Submitted Changelist: {0}({1},{2})	</value>
+    <comment>{0} is server:port, {1} is user name
+original:|Submitted Changelist: {0}({1},{2})	|:</comment>
+  </data>
+  <data name="UnshelveFileDialog_CannotGetShelvedFileContentsError" xml:space="preserve">
+    <value>Cannot get contents of shelved file</value>
+    <comment>original:|Cannot get contents of shelved file|:</comment>
+  </data>
+  <data name="UnshelveFileDialog_DefaultChangelistDescription" xml:space="preserve">
+    <value>&lt;Unshelved in P4VS&gt;</value>
+    <comment>original:|&lt;Unshelved in P4VS&gt;|:</comment>
+  </data>
+  <data name="UnshelveFileDialog_NoShelvedFilesWarning" xml:space="preserve">
+    <value>The changelist does not contain any shelved files.</value>
+    <comment>original:|The changelist does not contain any shelved files.|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_CreateWorkspaceFromMenuItem_Text" xml:space="preserve">
+    <value>Create Workspace from '{0}'...</value>
+    <comment>original:|Create Workspace from '{0}'...|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_DeleteWorkspaceCaption" xml:space="preserve">
+    <value>Delete Workspace Form</value>
+    <comment>original:|Delete Workspace Form|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_DeleteWorkspaceMenuItem_Text" xml:space="preserve">
+    <value>Delete Workspace '{0}'...</value>
+    <comment>original:|Delete Workspace '{0}'...|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_DeleteWorkspaceWarning" xml:space="preserve">
+    <value>You are about to delete Workspace '{0}' from the server.
+Are you sure you want to continue?</value>
+    <comment>original:|You are about to delete Workspace '{0}' from the server.
+Are you sure you want to continue?|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_EditWorkspaceMenuItem_Text" xml:space="preserve">
+    <value>Edit Workspace '{0}'...</value>
+    <comment>original:|Edit Workspace '{0}'...|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_EmptyNameWarning" xml:space="preserve">
+    <value>name cannot be empty</value>
+    <comment>original:|name cannot be empty|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_EnterNameForNewWorkspace" xml:space="preserve">
+    <value>Enter a name for the new workspace:</value>
+    <comment>original:|Enter a name for the new workspace:|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_NewWorkspace" xml:space="preserve">
+    <value>New Workspace</value>
+    <comment>original:|New Workspace|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_RefreshWorkspaceMenuItem_Text" xml:space="preserve">
+    <value>RefreshWorkspace '{0}'...</value>
+    <comment>original:|RefreshWorkspace '{0}'...|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_SelectAWorkspaceForCopying" xml:space="preserve">
+    <value>Select a workspace for {0} to '{1}'</value>
+    <comment>original:|Select a workspace for {0} to '{1}'|:</comment>
+  </data>
+  <data name="WorkspacesWindowControl_WorkspaceExistsWarning" xml:space="preserve">
+    <value>a workspace named {0} already exists</value>
+    <comment>original:|a workspace named {0} already exists|:</comment>
+  </data>
+  <data name="P4ScmProvider_LoginCaption" xml:space="preserve">
+    <value>Perforce Login</value>
+    <comment>original:|Perforce Login|:</comment>
+  </data>
+  <data name="P4ScmProvider_LoginLoginExpireInfo" xml:space="preserve">
+    <value>Connection will expire at {0}</value>
+    <comment>original:|Connection will expire at {0}|:</comment>
+  </data>
+  <data name="P4ScmProvider_LoginPrompt" xml:space="preserve">
+    <value>Please enter password for {0} on {1}</value>
+    <comment>{0} is user name, {1} is server:port
+original:|Please enter password for {0} on {1}|:</comment>
+  </data>
+  <data name="P4VsProviderService_AddNewSlnFiles" xml:space="preserve">
+    <value>Adding new solution's files to the Perforce depot:</value>
+    <comment>original:|Adding new solution's files to the Perforce depot:|:</comment>
+  </data>
+  <data name="P4VsProviderService_AddSlnWantUpdateClientMapWarning" xml:space="preserve">
+    <value>The solution file is not in your client map, would you like to update your client map?</value>
+    <comment>original:|The solution file is not in your client map, would you like to update your client map?|:</comment>
+  </data>
+  <data name="P4VsProviderService_AfterMove1FileSummary" xml:space="preserve">
+    <value>Moved: {0} to: {1}</value>
+    <comment>{0} is old file name, {1} is new file name
+original:|Moved: {0} to: {1}|:</comment>
+  </data>
+  <data name="P4VsProviderService_AfterMoveDefaultSummary" xml:space="preserve">
+    <value>Moving {0} files</value>
+    <comment>{0} is file count
+original:|Moving {0} files|:</comment>
+  </data>
+  <data name="P4VsProviderService_AfterMovee1FileSummary" xml:space="preserve">
+    <value>Moved: {0} to: {1}</value>
+    <comment>{0} is old file name, {1} is new file name
+original:|Moved: {0} to: {1}|:</comment>
+  </data>
+  <data name="P4VsProviderService_AfterRenameChangeDescription" xml:space="preserve">
+    <value>Renamed: {0} to: {1}</value>
+    <comment>{0} is old file name, {1} is new file name
+original:|Renamed: {0} to: {1}|:</comment>
+  </data>
+  <data name="P4VsProviderService_AfterRenameSummary" xml:space="preserve">
+    <value>Rename 
+Name: {0}
+New Name: {1}</value>
+    <comment>{0} is file count
+original:|Rename 
+Name: {0}
+New Name: {1}|:</comment>
+  </data>
+  <data name="P4VsProviderService_CantAddSlnClientRootError" xml:space="preserve">
+    <value>The solution file is not under your client's root folder, and cannot be controlled by P4VS</value>
+    <comment>original:|The solution file is not under your client's root folder, and cannot be controlled by P4VS|:</comment>
+  </data>
+  <data name="P4VsProviderService_Copy1ChangeDescription" xml:space="preserve">
+    <value>Copied file to Stream {0}</value>
+    <comment>original:|Copied file to Stream {0}|:</comment>
+  </data>
+  <data name="P4VsProviderService_Copy1Summary" xml:space="preserve">
+    <value>Copying 1 file</value>
+    <comment>original:|Copying 1 file|:</comment>
+  </data>
+  <data name="P4VsProviderService_CopyChangeDescription" xml:space="preserve">
+    <value>Copied files to Stream {0}</value>
+    <comment>original:|Copied files to Stream {0}|:</comment>
+  </data>
+  <data name="P4VsProviderService_CopyNeedDedicatedStreamWarning" xml:space="preserve">
+    <value>You need a dedicated stream client in order to copy changes</value>
+    <comment>original:|You need a dedicated stream client in order to copy changes|:</comment>
+  </data>
+  <data name="P4VsProviderService_CopyNoPreferedStreamsWarning" xml:space="preserve">
+    <value>{0} has no preferred source streams to copy from.</value>
+    <comment>original:|{0} has no preferred source streams to copy from.|:</comment>
+  </data>
+  <data name="P4VsProviderService_CopySummary" xml:space="preserve">
+    <value>Copying {0} files</value>
+    <comment>{0} is file count
+original:|Copying {0} files|:</comment>
+  </data>
+  <data name="P4VsProviderService_MarkAddSlnFileQuestion" xml:space="preserve">
+    <value>The solution file, {0}, is not checked into the Perforce Depot. Would you like to mark it for add?</value>
+    <comment>original:|The solution file, {0}, is not checked into the Perforce Depot. Would you like to mark it for add?|:</comment>
+  </data>
+  <data name="P4VsProviderService_Merge1ChangeDescription" xml:space="preserve">
+    <value>Merged file to Stream {0}</value>
+    <comment>original:|Merged file to Stream {0}|:</comment>
+  </data>
+  <data name="P4VsProviderService_Merge1Summary" xml:space="preserve">
+    <value>Merging 1 file</value>
+    <comment>original:|Merging 1 file|:</comment>
+  </data>
+  <data name="P4VsProviderService_MergeChangeDescription" xml:space="preserve">
+    <value>Merged files to Stream {0}</value>
+    <comment>original:|Merged files to Stream {0}|:</comment>
+  </data>
+  <data name="P4VsProviderService_MergeNeedDedicatedStreamWarning" xml:space="preserve">
+    <value>You need a dedicated stream client in order to merge changes</value>
+    <comment>original:|You need a dedicated stream client in order to merge changes|:</comment>
+  </data>
+  <data name="P4VsProviderService_MergeNoPreferedStreamsWarning" xml:space="preserve">
+    <value>{0} has no preferred source streams to merge from.</value>
+    <comment>original:|{0} has no preferred source streams to merge from.|:</comment>
+  </data>
+  <data name="P4VsProviderService_MergeSummary" xml:space="preserve">
+    <value>Merging {0} files</value>
+    <comment>{0} is file count
+original:|Merging {0} files|:</comment>
+  </data>
+  <data name="P4VsProviderService_NewSlnDialogPromptString" xml:space="preserve">
+    <value>Add to Perforce SCM</value>
+    <comment>original:|Add to Perforce SCM|:</comment>
+  </data>
+  <data name="P4VsProviderService_QueryAddFilesQuestion" xml:space="preserve">
+    <value>Would you like to add the new file(s) to Perforce?</value>
+    <comment>original:|Would you like to add the new file(s) to Perforce?|:</comment>
+  </data>
+  <data name="P4VsProviderService_QueryDeleteFileQuestion" xml:space="preserve">
+    <value>Would you like to Mark for Delete the file in the Depot?</value>
+    <comment>original:|Would you like to Mark for Delete the file in the Depot?|:</comment>
+  </data>
+  <data name="P4VsProviderService_QueryDeleteFilesQuestion" xml:space="preserve">
+    <value>Would you like to Mark for Delete the files in the Depot?</value>
+    <comment>original:|Would you like to Mark for Delete the files in the Depot?|:</comment>
+  </data>
+  <data name="P4VsProviderService_QueryDeleteFilesRevertAddNote" xml:space="preserve">
+    <value>(Files that are marked for add will be reverted.)</value>
+    <comment>original:|(Files that are marked for add will be reverted.)|:</comment>
+  </data>
+  <data name="P4VsProviderService_QueryRenameCheckedinWarning" xml:space="preserve">
+    <value>Files must be checked in to be renamed or moved</value>
+    <comment>original:|Files must be checked in to be renamed or moved|:</comment>
+  </data>
+  <data name="P4VsProviderService_QueryRenameDefaultChangelistDecription" xml:space="preserve">
+    <value>rename file</value>
+    <comment>original:|rename file|:</comment>
+  </data>
+  <data name="P4VsProviderService_QueryRenameDeletedWarning" xml:space="preserve">
+    <value>Files cannot be renamed or moved at a deleted revision</value>
+    <comment>original:|Files cannot be renamed or moved at a deleted revision|:</comment>
+  </data>
+  <data name="P4VsProviderService_RegisterSlnFileQuestion" xml:space="preserve">
+    <value>The solution file needs to be registered with P4VS. Would you like to check out the solution file to complete the registration?</value>
+    <comment>original:|The solution file needs to be registered with P4VS. Would you like to check out the solution file to complete the registration?|:</comment>
+  </data>
+  <data name="P4VsProviderService_UnderOtherSCMWarning" xml:space="preserve">
+    <value>The project, {0} is under the control of a different SCM provider, would you like to proceed?</value>
+    <comment>original:|The project, {0} is under the control of a different SCM provider, would you like to proceed?|:</comment>
+  </data>
+  <data name="P4VsProvider_AddFilesDefaultChangelistDescription" xml:space="preserve">
+    <value>&lt;Files added by P4VS&gt;</value>
+    <comment>original:|&lt;Files added by P4VS&gt;|:</comment>
+  </data>
+  <data name="P4VsProvider_AddFilesPrompt" xml:space="preserve">
+    <value>Add the files to the Perforce Depot</value>
+    <comment>original:|Add the files to the Perforce Depot|:</comment>
+  </data>
+  <data name="P4VsProvider_AddSlnWantUpdateClientMapQuestion" xml:space="preserve">
+    <value>The solution file is not in your client map, would you like to update your client map?</value>
+    <comment>original:|The solution file is not in your client map, would you like to update your client map?|:</comment>
+  </data>
+  <data name="P4VsProvider_CantAddSlnClientRootError" xml:space="preserve">
+    <value>The solution file is not under your client's root folder, and cannot be added</value>
+    <comment>original:|The solution file is not under your client's root folder, and cannot be added|:</comment>
+  </data>
+  <data name="P4VsProvider_CantOpenMarkedForDeleteSlnError" xml:space="preserve">
+    <value>The solution file is marked for delete in your workspace and cannot be opened</value>
+    <comment>original:|The solution file is marked for delete in your workspace and cannot be opened|:</comment>
+  </data>
+  <data name="P4VsProvider_CantOpenSlnClientRootError" xml:space="preserve">
+    <value>The solution file is not under your client's root folder, and cannot be added</value>
+    <comment>original:|The solution file is not under your client's root folder, and cannot be added|:</comment>
+  </data>
+  <data name="P4VsProvider_CheckoutFilePrompt" xml:space="preserve">
+    <value>Checkout file in the Depot:</value>
+    <comment>original:|Checkout file in the Depot:|:</comment>
+  </data>
+  <data name="P4VsProvider_CheckoutFilesDefaultChangelistDescription" xml:space="preserve">
+    <value>&lt;Checked out by P4VS&gt;</value>
+    <comment>original:|&lt;Checked out by P4VS&gt;|:</comment>
+  </data>
+  <data name="P4VsProvider_CheckoutFilesPrompt" xml:space="preserve">
+    <value>Checkout files in the Depot:</value>
+    <comment>original:|Checkout files in the Depot:|:</comment>
+  </data>
+  <data name="P4VsProvider_ErrorClosingProject" xml:space="preserve">
+    <value>Error closing solution</value>
+    <comment>original:|Error closing solution|:</comment>
+  </data>
+  <data name="P4VsProvider_ErrorClosingSolution" xml:space="preserve">
+    <value>Error closing solution</value>
+    <comment>original:|Error closing solution|:</comment>
+  </data>
+  <data name="P4VsProvider_GetLatestReplaceSlnWarning" xml:space="preserve">
+    <value>The 'Get Latest Revision' operation will replace the solution file, so the solution will be closed before it is updated and then reopened.</value>
+    <comment>original:|The 'Get Latest Revision' operation will replace the solution file, so the solution will be closed before it is updated and then reopened.|:</comment>
+  </data>
+  <data name="P4VsProvider_GetLatestReplacProjWarning" xml:space="preserve">
+    <value>The 'Get Latest Revision' operation will replace one or more project files, so those projects updated and then reopened.</value>
+    <comment>original:|The 'Get Latest Revision' operation will replace one or more project files, so those projects updated and then reopened.|:</comment>
+  </data>
+  <data name="P4VsProvider_OpenSlnRevertCheckedoutDeletedFilesQuestion" xml:space="preserve">
+    <value>The deleted solution has files that have been opened. If they have also been deleted in the workspace, the solution may not successfully open. Would you like to revert the files before updating the workspace?</value>
+    <comment>original:|The deleted solution has files that have been opened. If they have also been deleted in the workspace, the solution may not successfully open. Would you like to revert the files before updating the workspace?|:</comment>
+  </data>
+  <data name="P4VsProvider_OpenSlnRevertDeletedButCheckoutQuestion" xml:space="preserve">
+    <value>The selected solution file is checked out but has been deleted in your local workspace, would you like to revert the checkout and update your workspace to the current version?</value>
+    <comment>original:|The selected solution file is checked out but has been deleted in your local workspace, would you like to revert the checkout and update your workspace to the current version?|:</comment>
+  </data>
+  <data name="P4VsProvider_OpenSlnWantSyncClientQuestion" xml:space="preserve">
+    <value>The selected solution has been removed from your local workspace, would you like to update your workspace to the current version?</value>
+    <comment>original:|The selected solution has been removed from your local workspace, would you like to update your workspace to the current version?|:</comment>
+  </data>
+  <data name="P4VsProvider_OpenSlnWantUpdateClientMapQuestion" xml:space="preserve">
+    <value>The selected solution is not in your client map, would you like to update your client map?</value>
+    <comment>original:|The selected solution is not in your client map, would you like to update your client map?|:</comment>
+  </data>
+  <data name="P4VsProvider_RevertReplaceSlnWarning" xml:space="preserve">
+    <value>The 'Revert' operation will replace the solution file, so the solution will be updated and then reopened.</value>
+    <comment>original:|The 'Revert' operation will replace the solution file, so the solution will be updated and then reopened.|:</comment>
+  </data>
+  <data name="P4VsProvider_RevertReplacProjWarning" xml:space="preserve">
+    <value>The 'Revert' operation will replace one or more project files, so those projects updated and then reopened.</value>
+    <comment>original:|The 'Revert' operation will replace one or more project files, so those projects updated and then reopened.|:</comment>
+  </data>
+  <data name="P4VsProvider_SlnDoesNotExistError" xml:space="preserve">
+    <value>The specified solution file does not exist in the depot</value>
+    <comment>original:|The specified solution file does not exist in the depot|:</comment>
+  </data>
+  <data name="P4VS_ProductDescription" xml:space="preserve">
+    <value>P4VS is the Perforce integration for Microsoft Visual Studio. P4VS gives developers working in Visual Studio access to Perforce version control features.  P4VS gives you easy access to all of the Perforce version control tools and information you need to do your daily work. Check out, check in, see history, and more, directly from Visual Studio. P4VS is a fully compliant Visual Studio Integration Package, designed for full compatibility and ease of use. P4VS is built on P4API.NET, Perforce's fully supported API for the .NET environment. Perforce Software provides fast, robust version control to teams of all sizes working on any type of digital asset development.</value>
+    <comment>original:|P4VS is the Perforce integration for Microsoft Visual Studio. P4VS gives developers working in Visual Studio access to Perforce version control features.  P4VS gives you easy access to all of the Perforce version control tools and information you need to do your daily work. Check out, check in, see history, and more, directly from Visual Studio. P4VS is a fully compliant Visual Studio Integration Package, designed for full compatibility and ease of use. P4VS is built on P4API.NET, Perforce's fully supported API for the .NET environment. Perforce Software provides fast, robust version control to teams of all sizes working on any type of digital asset development.|:</comment>
+  </data>
+  <data name="P4VS_ProductName" xml:space="preserve">
+    <value>P4VS - Perforce Plugin for Visual Studio</value>
+    <comment>original:|P4VS - Perforce Plugin for Visual Studio|:</comment>
+  </data>
+  <data name="icmdAddToSourceControl" xml:space="preserve">
+    <value>Mark for Add</value>
+    <comment>original:|Mark for Add|:</comment>
+  </data>
+  <data name="icmdChangeFileType" xml:space="preserve">
+    <value>Change Filetype...</value>
+    <comment>original:|Change Filetype...|:</comment>
+  </data>
+  <data name="icmdCheckin" xml:space="preserve">
+    <value>Submit...</value>
+    <comment>original:|Submit...|:</comment>
+  </data>
+  <data name="icmdCheckout" xml:space="preserve">
+    <value>Checkout {0}</value>
+    <comment>original:|Checkout {0}|:</comment>
+  </data>
+  <data name="icmdCheckoutProject" xml:space="preserve">
+    <value>Checkout All in Project</value>
+    <comment>original:|Checkout All in Project|:</comment>
+  </data>
+  <data name="icmdCheckoutProjectFiles" xml:space="preserve">
+    <value>Checkout selected project files</value>
+    <comment>original:|Checkout selected project files|:</comment>
+  </data>
+  <data name="icmdCheckoutSelectedFiles" xml:space="preserve">
+    <value>Checkout selected files</value>
+    <comment>original:|Checkout selected files|:</comment>
+  </data>
+  <data name="icmdCheckoutSolution" xml:space="preserve">
+    <value>Checkout All in Solution</value>
+    <comment>original:|Checkout All in Solution|:</comment>
+  </data>
+  <data name="icmdCloseConnection" xml:space="preserve">
+    <value>Close Connection to the Perforce Depot</value>
+    <comment>original:|Close Connection to the Perforce Depot|:</comment>
+  </data>
+  <data name="icmdDiffVsAny" xml:space="preserve">
+    <value>Diff Against...</value>
+    <comment>original:|Diff Against...|:</comment>
+  </data>
+  <data name="icmdDiffVsHave" xml:space="preserve">
+    <value>Diff Against Have Revision</value>
+    <comment>original:|Diff Against Have Revision|:</comment>
+  </data>
+  <data name="icmdFileOpenInDepot" xml:space="preserve">
+    <value>Open Solution/Project in Perforce Depot...</value>
+    <comment>original:|Open Solution/Project in Perforce Depot...|:</comment>
+  </data>
+  <data name="icmdLock" xml:space="preserve">
+    <value>Lock</value>
+    <comment>original:|Lock|:</comment>
+  </data>
+  <data name="icmdOpenConnection" xml:space="preserve">
+    <value>Open Connection to a Perforce Depot...</value>
+    <comment>original:|Open Connection to a Perforce Depot...|:</comment>
+  </data>
+  <data name="icmdP4V" xml:space="preserve">
+    <value>View in P4V</value>
+    <comment>original:|View in P4V|:</comment>
+  </data>
+  <data name="icmdP4VSHelp" xml:space="preserve">
+    <value>P4VS Help</value>
+    <comment>original:|P4VS Help|:</comment>
+  </data>
+  <data name="icmdResolve" xml:space="preserve">
+    <value>Resolve...</value>
+    <comment>original:|Resolve...|:</comment>
+  </data>
+  <data name="icmdRevert" xml:space="preserve">
+    <value>Revert</value>
+    <comment>original:|Revert|:</comment>
+  </data>
+  <data name="icmdRevertUnchanged" xml:space="preserve">
+    <value>Revert if Unchanged</value>
+    <comment>original:|Revert if Unchanged|:</comment>
+  </data>
+  <data name="icmdRevGraph" xml:space="preserve">
+    <value>Revision Graph</value>
+    <comment>original:|Revision Graph|:</comment>
+  </data>
+  <data name="icmdScmCopy" xml:space="preserve">
+    <value>Copy to Stream...</value>
+    <comment>original:|Copy to Stream...|:</comment>
+  </data>
+  <data name="icmdScmMerge" xml:space="preserve">
+    <value>Merge to Stream...</value>
+    <comment>original:|Merge to Stream...|:</comment>
+  </data>
+  <data name="icmdScmRefresh" xml:space="preserve">
+    <value>Refresh View</value>
+    <comment>original:|Refresh View|:</comment>
+  </data>
+  <data name="icmdShelve" xml:space="preserve">
+    <value>Shelve...</value>
+    <comment>original:|Shelve...|:</comment>
+  </data>
+  <data name="icmdShowHistory" xml:space="preserve">
+    <value>Show History</value>
+    <comment>original:|Show History|:</comment>
+  </data>
+  <data name="icmdStreamGraph" xml:space="preserve">
+    <value>Stream Graph</value>
+    <comment>original:|Stream Graph|:</comment>
+  </data>
+  <data name="icmdSync" xml:space="preserve">
+    <value>Get Revision...</value>
+    <comment>original:|Get Revision...|:</comment>
+  </data>
+  <data name="icmdSyncHead" xml:space="preserve">
+    <value>Get Latest Revision</value>
+    <comment>original:|Get Latest Revision|:</comment>
+  </data>
+  <data name="icmdTimeLapse" xml:space="preserve">
+    <value>Time-lapse View</value>
+    <comment>original:|Time-lapse View|:</comment>
+  </data>
+  <data name="icmdUnlock" xml:space="preserve">
+    <value>Unlock</value>
+    <comment>original:|Unlock|:</comment>
+  </data>
+  <data name="icmdViewHistoryToolWindow" xml:space="preserve">
+    <value>&amp;File History</value>
+    <comment>original:|&amp;File History|:</comment>
+  </data>
+  <data name="icmdViewJobsToolWindow" xml:space="preserve">
+    <value>Jobs</value>
+    <comment>original:|Jobs|:</comment>
+  </data>
+  <data name="icmdViewPendingChangelistsToolWindow" xml:space="preserve">
+    <value>Pending Changelists</value>
+    <comment>original:|Pending Changelists|:</comment>
+  </data>
+  <data name="icmdViewSubmittedChangelistsToolWindow" xml:space="preserve">
+    <value>Submitted Changelists</value>
+    <comment>original:|Submitted Changelists|:</comment>
+  </data>
+  <data name="icmdViewWorkspaceToolWindow" xml:space="preserve">
+    <value>Workspaces</value>
+    <comment>original:|Workspaces|:</comment>
+  </data>
+  <data name="imnuCopyMergeMenu" xml:space="preserve">
+    <value>Copy/Merge</value>
+    <comment>original:|Copy/Merge|:</comment>
+  </data>
+  <data name="imnuDiffMenu" xml:space="preserve">
+    <value>Diff</value>
+    <comment>original:|Diff|:</comment>
+  </data>
+  <data name="imnuFileSourceControlMenu" xml:space="preserve">
+    <value>Perforce</value>
+    <comment>original:|Perforce|:</comment>
+  </data>
+  <data name="imnuManageMenu" xml:space="preserve">
+    <value>Manage Files</value>
+    <comment>original:|Manage Files|:</comment>
+  </data>
+  <data name="imnuRevisionsMenu" xml:space="preserve">
+    <value>Revisions</value>
+    <comment>original:|Revisions|:</comment>
+  </data>
+  <data name="imnuViewsMenu" xml:space="preserve">
+    <value>Views</value>
+    <comment>original:|Views|:</comment>
+  </data>
+  <data name="P4ScmProvider_CannotCreateWorkspaceRootError" xml:space="preserve">
+    <value>The workspace root, {0}, cannot be created. 
+
+Error: {1}</value>
+    <comment>original:|The workspace root, {0}, cannot be created. 
+
+Error: {1}|:</comment>
+  </data>
+  <data name="P4ScmProvider_CannotFindConfiguredDiffApp" xml:space="preserve">
+    <value>The configured diff application does not exist at the specified path</value>
+    <comment>original:|The configured diff application does not exist at the specified path|:</comment>
+  </data>
+  <data name="P4ScmProvider_CannotFindP4VError" xml:space="preserve">
+    <value>Cannot find P4V.exe</value>
+    <comment>original:|Cannot find P4V.exe|:</comment>
+  </data>
+  <data name="P4ScmProvider_CannotFindP4VMerge" xml:space="preserve">
+    <value>Cannot locate P4Merge</value>
+    <comment>original:|Cannot locate P4Merge|:</comment>
+  </data>
+  <data name="P4ScmProvider_CantDiffMissingDepotFile" xml:space="preserve">
+    <value>The file, {0}, is not in the depot and cannot be diffed.</value>
+    <comment>original:|The file, {0}, is not in the depot and cannot be diffed.|:</comment>
+  </data>
+  <data name="P4ScmProvider_CantDiffMissingLocalFile" xml:space="preserve">
+    <value>The file, {0}, is not on the local disk and cannot be diffed.</value>
+    <comment>original:|The file, {0}, is not on the local disk and cannot be diffed.|:</comment>
+  </data>
+  <data name="P4ScmProvider_CantSubmitNewChangelistError" xml:space="preserve">
+    <value>Cannot submit a new change list</value>
+    <comment>original:|Cannot submit a new change list|:</comment>
+  </data>
+  <data name="P4ScmProvider_CommandTimeOutError" xml:space="preserve">
+    <value>Time out executing command on server, {0}. Would you like to attempt to reconnect?</value>
+    <comment>original:|Time out executing command on server, {0}. Would you like to attempt to reconnect?|:</comment>
+  </data>
+  <data name="P4ScmProvider_ConnectingToPerforceServer" xml:space="preserve">
+    <value>Connecting to Perforce server on {0} as {1} using client {2}</value>
+    <comment>original:|Connecting to Perforce server on {0} as {1} using client {2}|:</comment>
+  </data>
+  <data name="P4ScmProvider_CreatWorkspaceRootPrompt" xml:space="preserve">
+    <value>The workspace root, {0}, does not exist. Would you like to create it?</value>
+    <comment>original:|The workspace root, {0}, does not exist. Would you like to create it?|:</comment>
+  </data>
+  <data name="P4ScmProvider_DepotPathDoesNotExist" xml:space="preserve">
+    <value>Depot path mapped to '{0}' does not exist on '{1}'.</value>
+    <comment>original:|Depot path mapped to '{0}' does not exist on '{1}'.|:</comment>
+  </data>
+  <data name="P4ScmProvider_ErrorRunningServerDiff" xml:space="preserve">
+    <value>Encountered an error running the server's diff command.
+
+{0}</value>
+    <comment>original:|Encountered an error running the server's diff command.
+
+{0}|:</comment>
+  </data>
+  <data name="P4ScmProvider_ErrorSeverityFailed" xml:space="preserve">
+    <value>Failed</value>
+    <comment>original:|Failed|:</comment>
+  </data>
+  <data name="P4ScmProvider_ErrorSeverityFatal" xml:space="preserve">
+    <value>Info</value>
+    <comment>original:|Info|:</comment>
+  </data>
+  <data name="P4ScmProvider_ErrorSeverityInfo" xml:space="preserve">
+    <value>Info</value>
+    <comment>original:|Info|:</comment>
+  </data>
+  <data name="P4ScmProvider_ErrorSeverityWarning" xml:space="preserve">
+    <value>Warning</value>
+    <comment>original:|Warning|:</comment>
+  </data>
+  <data name="P4ScmProvider_FilesAreIdentical" xml:space="preserve">
+    <value>The files are identical.</value>
+    <comment>original:|The files are identical.|:</comment>
+  </data>
+  <data name="P4ScmProvider_LocalFileLabel" xml:space="preserve">
+    <value>{0} (local file)</value>
+    <comment>original:|{0} (local file)|:</comment>
+  </data>
+  <data name="P4ScmProvider_NonexistentWorkspaceRootError" xml:space="preserve">
+    <value>Nonexistent workspace root, {0}</value>
+    <comment>original:|Nonexistent workspace root, {0}|:</comment>
+  </data>
+  <data name="P4ScmProvider_OldServerError" xml:space="preserve">
+    <value>Only 2009.2 or later servers are supported by P4VS.</value>
+    <comment>original:|Only 2009.2 or later servers are supported by P4VS.|:</comment>
+  </data>
+  <data name="P4ScmProvider_TimeoutConnectingToServer" xml:space="preserve">
+    <value>Timeout connecting to server</value>
+    <comment>original:|Timeout connecting to server|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipCheckedIn" xml:space="preserve">
+    <value> Checked In</value>
+    <comment>original:|Checked In|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipDeletedAtHeadRevision" xml:space="preserve">
+    <value>Deleted at head revision </value>
+    <comment>original:|Deleted at head revision|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipFileRevisionAndType" xml:space="preserve">
+    <value>#{0}/{1}&lt;{2}&gt;</value>
+    <comment>{0} haveRev, {1} headRev, {2} fileType
+original:|#{0}/{1}&lt;{2}&gt;|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipLocked" xml:space="preserve">
+    <value>, locked</value>
+    <comment>original:|, locked|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipNeedsResolve" xml:space="preserve">
+    <value>Needs Resolve </value>
+    <comment>original:|Needs Resolve|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipNotInPerforce" xml:space="preserve">
+    <value>Not in Perforce </value>
+    <comment>original:|Not in Perforce|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipOpenedBy" xml:space="preserve">
+    <value> Opened by: {0}</value>
+    <comment>original:|Opened by: {0}|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipOtherAction" xml:space="preserve">
+    <value>{0}: {1}({2})</value>
+    <comment>{0} other user name, {1} action, {2} changelist#
+original:|{0}: {1}({2})|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipSelfAction" xml:space="preserve">
+    <value>Self: {0}({1})</value>
+    <comment>{0} action, {1} changelist#
+original:|Self: {0}({1})|:</comment>
+  </data>
+  <data name="P4ScmProvider_UsingEnvironmentSettingsToConnect" xml:space="preserve">
+    <value>Using environment settings to connect to Perforce server on {0} as {1} using client {2}</value>
+    <comment>original:|Using environment settings to connect to Perforce server on {0} as {1} using client {2}|:</comment>
+  </data>
+  <data name="P4ScmProvider_WorkspaceInvalidError" xml:space="preserve">
+    <value>Invalid Workspace, {0}</value>
+    <comment>original:|Invalid Workspace, {0}|:</comment>
+  </data>
+  <data name="P4ScmProvider_WorkspaceRootInvalidError" xml:space="preserve">
+    <value>The workspace root, {0}, is invalid</value>
+    <comment>original:|The workspace root, {0}, is invalid|:</comment>
+  </data>
+  <data name="P4ScmProvider_UsingConfigSettingsToConnect" xml:space="preserve">
+    <value>Using config file, "{3}", to connect to Perforce server on {0} as {1} using client {2}</value>
+    <comment>original:|Using config file, "{3}", to connect to Perforce server on {0} as {1} using client {2}|:</comment>
+  </data>
+  <data name="NewUserDlg_PasswordTooShortOrSimple" xml:space="preserve">
+    <value>Passwords must be at least eight characters long and must contain upper and lower case letters, or letters plus one or more symbols or numbers.</value>
+    <comment>original:|Passwords must be at least eight characters long and must contain upper and lower case letters, or letters plus one or more symbols or numbers.|:</comment>
+  </data>
+  <data name="P4ErrorDlg_LoggedOutMsg" xml:space="preserve">
+    <value>You have logged out of the Perforce Server.</value>
+    <comment>original:|You have logged out of the Perforce Server.|:</comment>
+  </data>
+  <data name="P4ScmProvider_ErrorSeverityEmpty" xml:space="preserve">
+    <value>E_EMPTY</value>
+    <comment>original:|E_EMPTY|:</comment>
+  </data>
+  <data name="106" xml:space="preserve">
+    <value>Source Control</value>
+    <comment>original:|Source Control|:</comment>
+  </data>
+  <data name="107" xml:space="preserve">
+    <value>Perforce - General</value>
+    <comment>original:|Perforce - General|:</comment>
+  </data>
+  <data name="108" xml:space="preserve">
+    <value>Perforce - Connections</value>
+    <comment>original:|Perforce - Connections|:</comment>
+  </data>
+  <data name="109" xml:space="preserve">
+    <value>Perforce - Diff/Merge</value>
+    <comment>original:|Perforce - Diff/Merge|:</comment>
+  </data>
+  <data name="110" xml:space="preserve">
+    <value>Perforce - Logging</value>
+    <comment>original:|Perforce - Logging|:</comment>
+  </data>
+  <data name="111" xml:space="preserve">
+    <value>Perforce - Data Retrieval</value>
+    <comment>original:|Perforce - Data Retrieval|:</comment>
+  </data>
+  <data name="DlgEditWorkspace_Title" xml:space="preserve">
+    <value>Workspace: {0} ({1}, {2})</value>
+    <comment>{0} is workspace.Name,{1} is  Server Port,  {2} is Peforce User
+original:|Workspace: {0} ({1}, {2})|:</comment>
+  </data>
+  <data name="P4VsOutputWindow_PanelName" xml:space="preserve">
+    <value>Perforce Source Control</value>
+    <comment>original:|Perforce Source Control|:</comment>
+  </data>
+  <data name="PendingChangelistDlg_DescriptionPanel_ButtonText" xml:space="preserve">
+    <value>Write a changelist description</value>
+    <comment>original:|Write a changelist description|:</comment>
+  </data>
+  <data name="PendingChangelistDlg_FilesPanel_ButtonText" xml:space="preserve">
+    <value>Files</value>
+    <comment>original:|Files|:</comment>
+  </data>
+  <data name="PendingChangelistDlg_JobsPanel_ButtonText" xml:space="preserve">
+    <value>Jobs</value>
+    <comment>original:|Jobs|:</comment>
+  </data>
+  <data name="PendingChangelistDlg_ShelvedFilesPanel_ButtonText" xml:space="preserve">
+    <value>Shelved files</value>
+    <comment>original:|Shelved files|:</comment>
+  </data>
+  <data name="SubmitDlg_SubmitChangelistTitle" xml:space="preserve">
+    <value>Submit Changelist: {0}</value>
+    <comment>{0} is changelist id #
+original:|Submit Changelist: {0}|:</comment>
+  </data>
+  <data name="SubmitDlg_SubmitFilesTitle" xml:space="preserve">
+    <value>Submit Files</value>
+    <comment>original:|Submit Files|:</comment>
+  </data>
+  <data name="icmdMoveToChangelist" xml:space="preserve">
+    <value>Move to Another Changelist...</value>
+    <comment>original:|Move to Another Changelist...|:</comment>
+  </data>
+  <data name="MoveToChangelistPrompt" xml:space="preserve">
+    <value>Move selected files to pending changelist</value>
+    <comment>original:|Move selected files to pending changelist|:</comment>
+  </data>
+  <data name="P4ScmProvider_LostConectionError" xml:space="preserve">
+    <value>The connection to the Perforce server at {0} has been lost</value>
+    <comment>original:|The connection to the Perforce server at {0} has been lost|:</comment>
+  </data>
+  <data name="ResolveFileInteractiveControl_CannotCreateMergedFile" xml:space="preserve">
+    <value>Cannot Create Merged File</value>
+    <comment>original:|Cannot Create Merged File|:</comment>
+  </data>
+  <data name="DepotPathDlg_Connection" xml:space="preserve">
+    <value>Connection: {0}</value>
+    <comment>original:|Connection: {0}|:</comment>
+  </data>
+  <data name="DepotPathDlg_NoConnection" xml:space="preserve">
+    <value>Not connected to a Perforce depot</value>
+    <comment>original:|Not connected to a Perforce depot|:</comment>
+  </data>
+  <data name="icmdAddToIgnoreList" xml:space="preserve">
+    <value>Add to Ignore List</value>
+    <comment>original:|Add to Ignore List|:</comment>
+  </data>
+  <data name="112" xml:space="preserve">
+    <value>Perforce - Ignoring Files</value>
+    <comment>original:|Perforce - Ignoring Files|:</comment>
+  </data>
+  <data name="icmdRemoveFromIgnoreList" xml:space="preserve">
+    <value>Remove from Ignore List</value>
+    <comment>original:|Remove from Ignore List|:</comment>
+  </data>
+  <data name="AddToIgnoreList_Add" xml:space="preserve">
+    <value>Create new, mark for add</value>
+    <comment>original:|Create new, mark for add|:</comment>
+  </data>
+  <data name="AddToIgnoreList_CheckOut" xml:space="preserve">
+    <value>Check Out</value>
+    <comment>original:|Check Out|:</comment>
+  </data>
+  <data name="AddToIgnoreList_TemplateFile" xml:space="preserve">
+    <value># Here you can specify files to ignore when adding files to the depot.
+#
+# The syntax for P4IGNORE files is not the same as Perforce syntax. 
+# Instead, it is similar to that used by other versioning systems: 
+#
+# - Files are specified in local syntax
+# - a # character at the beginning of a line denotes a comment
+# - a ! character at the beginning of a line excludes the file specification
+# - a * wildcard matches substrings.
+#
+# For example:
+# 
+# foo.txt    Ignore files called "foo.txt"
+# *.exe      Ignore all executables
+# !bar.exe   Exclude bar.exe from being ignored
+</value>
+    <comment>original:|# Here you can specify files to ignore when adding files to the depot.
+#
+# The syntax for P4IGNORE files is not the same as Perforce syntax. 
+# Instead, it is similar to that used by other versioning systems: 
+#
+# - Files are specified in local syntax
+# - a # character at the beginning of a line denotes a comment
+# - a ! character at the beginning of a line excludes the file specification
+# - a * wildcard matches substrings.
+#
+# For example:
+# 
+# foo.txt    Ignore files called "foo.txt"
+# *.exe      Ignore all executables
+# !bar.exe   Exclude bar.exe from being ignored|:</comment>
+  </data>
+  <data name="icmdEditIgnoreList" xml:space="preserve">
+    <value>Edit Ignore List</value>
+    <comment>original:|Edit Ignore List|:</comment>
+  </data>
+  <data name="P4VsProvider_EditIgnoreFilesPrompt" xml:space="preserve">
+    <value>To add files to their corresponding Ignore Lists, the following actions must take place:</value>
+    <comment>original:|To add files to their corresponding Ignore Lists, the following actions must take place:|:</comment>
+  </data>
+  <data name="P4ScmProvider_SelectedFileDeletedAtHeadRevisionWarning" xml:space="preserve">
+    <value>Cannot complete the operation, the seleted file or files are deleted at the head revison.</value>
+    <comment>original:|Cannot complete the operation, the seleted file or files are deleted at the head revison.|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_PendingFileCount" xml:space="preserve">
+    <value>There are {0} shelved files in this changelist.</value>
+    <comment>original:|There are {0} shelved files in this changelist.|:</comment>
+  </data>
+  <data name="FilterComboBox_BrowseBtn" xml:space="preserve">
+    <value>Browse...</value>
+    <comment>original:|Browse...|:</comment>
+  </data>
+  <data name="ActiveChangeListWarning" xml:space="preserve">
+    <value>You are setting the active changelist.
+
+You will no longer be prompted for a changelist when checking out and adding files. The active pending changelist will always be used.</value>
+    <comment>original:|You are setting the active changelist.
+
+You will no longer be prompted for a changelist when checking out and adding files. The active pending changelist will always be used.|:</comment>
+  </data>
+  <data name="NewChangelist" xml:space="preserve">
+    <value>New...</value>
+    <comment>original:|New...|:</comment>
+  </data>
+  <data name="NewChangeListDlgPrompt" xml:space="preserve">
+    <value>Enter a description for the new changelist.</value>
+    <comment>original:|Enter a description for the new changelist.|:</comment>
+  </data>
+  <data name="NoActiveChangelist" xml:space="preserve">
+    <value>&lt;Prompt for changelist&gt;</value>
+    <comment>original:|&lt;Prompt for changelist&gt;|:</comment>
+  </data>
+  <data name="ConnectionDropDownCombo_CloseConnection" xml:space="preserve">
+    <value>&lt;Close Connection&gt;</value>
+    <comment>original:|&lt;Close Connection&gt;|:</comment>
+  </data>
+  <data name="ConnectionDropDownCombo_NewConnection" xml:space="preserve">
+    <value>&lt;New Connection&gt;</value>
+    <comment>original:|&lt;New Connection&gt;|:</comment>
+  </data>
+  <data name="IgnoreFileCreatedFor" xml:space="preserve">
+    <value># Ignore file created for: {0}</value>
+    <comment>original:|# Ignore file created for: {0}|:</comment>
+  </data>
+  <data name="NoDiffsDlg_SingleFile" xml:space="preserve">
+    <value>No differences found for the following file comparison:</value>
+    <comment>original:|No differences found for the following file comparison:|:</comment>
+  </data>
+  <data name="NoDiffsDlg_MultiFile" xml:space="preserve">
+    <value>No differences found for the following {0} file comparisons:</value>
+    <comment>original:|No differences found for the following {0} file comparisons:|:</comment>
+  </data>
+  <data name="SubmitDlg_DescriptionPanelBtnText" xml:space="preserve">
+    <value>Write a changelist description</value>
+    <comment>original:|Write a changelist description|:</comment>
+  </data>
+  <data name="SubmitDlg_FileListPanelBtnText" xml:space="preserve">
+    <value>Choose files to submit</value>
+    <comment>original:|Choose files to submit|:</comment>
+  </data>
+  <data name="SubmitDlg_JobListPanelBtnText" xml:space="preserve">
+    <value>Link jobs to changelist (optional)</value>
+    <comment>original:|Link jobs to changelist (optional)|:</comment>
+  </data>
+  <data name="cmdidCancelActiveCommand" xml:space="preserve">
+    <value>Cancel Command</value>
+    <comment>original:|Cancel Command|:</comment>
+  </data>
+  <data name="icmdViewLabelsToolWindow" xml:space="preserve">
+    <value>Labels</value>
+    <comment>original:|Labels|:</comment>
+  </data>
+  <data name="icmdViewSwarmToolWindow" xml:space="preserve">
+    <value>Swarm</value>
+    <comment>original:|Swarm|:</comment>
+  </data>
+  <data name="SwarmToolWindowControl_Caption" xml:space="preserve">
+    <value>Swarm</value>
+    <comment>original:|Swarm|:</comment>
+  </data>
+  <data name="icmdViewStreamsToolWindow" xml:space="preserve">
+    <value>Streams</value>
+    <comment>original:|Streams|:</comment>
+  </data>
+  <data name="StreamsToolWindowControl_Caption" xml:space="preserve">
+    <value>Streams</value>
+    <comment>original:|Streams|:</comment>
+  </data>
+  <data name="StreamsToolWindow_CopyToParentStreamMenuText" xml:space="preserve">
+    <value>Copy to parent from '{0}'...</value>
+    <comment>original:|Copy to parent from '{0}'...|:</comment>
+  </data>
+  <data name="StreamsToolWindow_MergeToParentStreamMenuText" xml:space="preserve">
+    <value>Merge to parent from '{0}'...</value>
+    <comment>original:|Merge to parent from '{0}'...|:</comment>
+  </data>
+  <data name="StreamsToolWindow_NothingToCopyMenuText" xml:space="preserve">
+    <value>Nothing to Copy</value>
+    <comment>original:|Nothing to Copy|:</comment>
+  </data>
+  <data name="StreamsToolWindow_NothingToMergeMenuText" xml:space="preserve">
+    <value>Nothing to Merge</value>
+    <comment>original:|Nothing to Merge|:</comment>
+  </data>
+  <data name="StreamsToolWindow_RefreshStreamMenuText" xml:space="preserve">
+    <value>Refresh Stream '{0}'</value>
+    <comment>original:|Refresh Stream '{0}'|:</comment>
+  </data>
+  <data name="StreamsToolWindow_RefreshStreamsListMenuText" xml:space="preserve">
+    <value>Refresh Streams List</value>
+    <comment>original:|Refresh Streams List|:</comment>
+  </data>
+  <data name="StreamsToolWindow_CopyFromParentStreamMenuText" xml:space="preserve">
+    <value>Copy to '{0}' from parent</value>
+    <comment>original:|Copy to '{0}' from parent|:</comment>
+  </data>
+  <data name="StreamsToolWindow_MergeBeforeCopyStreamMenuText" xml:space="preserve">
+    <value>Merge prior to copying</value>
+    <comment>original:|Merge prior to copying|:</comment>
+  </data>
+  <data name="StreamsToolWindow_MergeFromParentStreamMenuText" xml:space="preserve">
+    <value>Merge to '{0}' from parent</value>
+    <comment>original:|Merge to '{0}' from parent|:</comment>
+  </data>
+  <data name="StreamWorkspaceCreateText" xml:space="preserve">
+    <value>You must create a new workspace in order to complete the {0} operation. Proceed?</value>
+    <comment>original:|You must create a new workspace in order to complete the {0} operation. Proceed?|:</comment>
+  </data>
+  <data name="StreamWorkspaceCreateTitle" xml:space="preserve">
+    <value>Create Workspace</value>
+    <comment>original:|Create Workspace|:</comment>
+  </data>
+  <data name="StreamWorkspaceSwitchText" xml:space="preserve">
+    <value>You must switch to workspace '{0}' in order to complete the {1} operation. Proceed?</value>
+    <comment>original:|You must switch to workspace '{0}' in order to complete the {1} operation. Proceed?|:</comment>
+  </data>
+  <data name="StreamWorkspaceSwitchTitle" xml:space="preserve">
+    <value>Switch Workspace</value>
+    <comment>original:|Switch Workspace|:</comment>
+  </data>
+  <data name="P4VsProvider_AddFileDefaultChangelistDescription" xml:space="preserve">
+    <value>&lt;File added by P4VS&gt;</value>
+    <comment>original:|&lt;File added by P4VS&gt;|:</comment>
+  </data>
+  <data name="P4VsProvider_AddFilePrompt" xml:space="preserve">
+    <value>Add the file to the Perforce Depot</value>
+    <comment>original:|Add the file to the Perforce Depot|:</comment>
+  </data>
+  <data name="P4IgnorePreferencesControl_PromptForIgnoreListAdd" xml:space="preserve">
+    <value>Would you like to add the wildcard, '*.*' to the ignore file in your workspace root to limit fstats on all files in your workspace?
+
+For files that you want to manage with P4VS, select them in Solution Explorer and choose 'Manage Files/Remove from Ignore List" in the context menu.</value>
+    <comment>original:|Would you like to add the wildcard, '*.*' to the ignore file in your workspace root to limit fstats on all files in your workspace?
+
+For files that you want to manage with P4VS, select them in Solution Explorer and choose 'Manage Files/Remove from Ignore List" in the context menu.|:</comment>
+  </data>
+  <data name="P4IgnorePreferencesControl_PromptForIgnoreListRemove" xml:space="preserve">
+    <value>Would you like to edit the ignore file in your workspace root to remove the wildcard, '*.*' that will now make all uncontrolled files in your workspace ignored?</value>
+    <comment>original:|Would you like to edit the ignore file in your workspace root to remove the wildcard, '*.*' that will now make all uncontrolled files in your workspace ignored?|:</comment>
+  </data>
+  <data name="P4ScmProvider_ConnectingToUnicodeServer" xml:space="preserve">
+    <value>Connecting to Unicode enabled server using Charset {0}</value>
+    <comment>{0} is charset name
+original:|Connecting to Unicode enabled server using Charset {0}|:</comment>
+  </data>
+  <data name="icmdViewReviewsToolWindow" xml:space="preserve">
+    <value>Reviews</value>
+    <comment>original:|Reviews|:</comment>
+  </data>
+  <data name="SwarmReviewsToolWindowControl_Caption" xml:space="preserve">
+    <value>Code Reviews</value>
+    <comment>original:|Code Reviews|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_CantReviewMixedChangelist" xml:space="preserve">
+    <value>Can't request a review on a changelist containing both shelved and opened files.</value>
+    <comment>original:|Can't request a review on a changelist containing both shelved and opened files.|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_CreateFromSubmittedPrompt" xml:space="preserve">
+    <value>The following files will be sent for review:</value>
+    <comment>original:|The following files will be sent for review:|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_CreateFromPendingPrompt" xml:space="preserve">
+    <value>The following files will be shelved for review:</value>
+    <comment>original:|The following files will be shelved for review:|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_CantFindUser" xml:space="preserve">
+    <value>Can't find a user with that Id</value>
+    <comment>original:|Can't find a user with that Id|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_OpenReviewInSwarm" xml:space="preserve">
+    <value>Open Review in Swarm</value>
+    <comment>original:|Open Review in Swarm|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_ReviewCreated" xml:space="preserve">
+    <value>Created review, {0}:
+
+{1}</value>
+    <comment>{0} review id, {1} is review description
+original:|Created review, {0}:
+
+{1}|:</comment>
+  </data>
+  <data name="P4ScmProvider_SwarmLoginPrompt" xml:space="preserve">
+    <value>Please enter password for {0} on {1}</value>
+    <comment>{0} is user name, {1} is swarm url
+original:|Please enter password for {0} on {1}|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_ClearShelfBefore" xml:space="preserve">
+    <value>Clear changelist of all previously shelved files before shelving.</value>
+    <comment>original:|Clear changelist of all previously shelved files before shelving.|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_RevertAfterShelving" xml:space="preserve">
+    <value>Revert checked-out files after they are shelved.</value>
+    <comment>original:|Revert checked-out files after they are shelved.|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_ClmTitleReviewStatus" xml:space="preserve">
+    <value>Review State</value>
+    <comment>original:|Review State|:</comment>
+  </data>
+  <data name="P4ErrorDlg_SwarmPromptLabel" xml:space="preserve">
+    <value>Swarm Server Error</value>
+    <comment>original:|Swarm Server Error|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_UpdateReview" xml:space="preserve">
+    <value>Update a Swarm Review</value>
+    <comment>original:|Update a Swarm Review|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_ClmTitleReviewId" xml:space="preserve">
+    <value>Review Id</value>
+    <comment>original:|Review Id|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemOpenSwarmReview" xml:space="preserve">
+    <value>Open Review '{0}' in Swarm...</value>
+    <comment>original:|Open Review '{0}' in Swarm...|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemUpdateReview" xml:space="preserve">
+    <value>Update Swarm Review '{0}'...</value>
+    <comment>original:|Update Swarm Review '{0}'...|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemUpdateReview2" xml:space="preserve">
+    <value>Update a Swarm Review...</value>
+    <comment>original:|Update a Swarm Review...|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_AddToReview" xml:space="preserve">
+    <value>Add to a Swarm Review...</value>
+    <comment>original:|Add to a Swarm Review...|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_RefreshReview" xml:space="preserve">
+    <value>Update Swarm Review, '{0}'</value>
+    <comment>original:|Update Swarm Review, '{0}'|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_CreateReview" xml:space="preserve">
+    <value>Request New Swarm Review</value>
+    <comment>original:|Request New Swarm Review|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_RefreshFromPendingPrompt" xml:space="preserve">
+    <value>The following files will be shelved in pending changelist '{0}' to update the review:</value>
+    <comment>{1} is id of changelist
+original:|The following files will be shelved in pending changelist '{0}' to update the review:|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_UpdateFromPendingPrompt" xml:space="preserve">
+    <value>The following files will be shelved and added to the review:</value>
+    <comment>original:|The following files will be shelved and added to the review:|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_UpdateFromSubmittedPrompt1" xml:space="preserve">
+    <value>The following files will be sent for review:</value>
+    <comment>original:|The following files will be sent for review:|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_DefaultChangelistDescription" xml:space="preserve">
+    <value>Files for review</value>
+    <comment>original:|Files for review|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipIgnoredFile" xml:space="preserve">
+    <value>Ignored File</value>
+    <comment>original:|Ignored File|:</comment>
+  </data>
+  <data name="P4ScmProvider_ToolTipLazyLoad" xml:space="preserve">
+    <value>Status not loaded, choose 'Refresh' from context menu to fetch status</value>
+    <comment>original:|Status not loaded, choose 'Refresh' from context menu to fetch status|:</comment>
+  </data>
+  <data name="CreateSwarmReviewDlg_DontShelveUnchangedFiles" xml:space="preserve">
+    <value>Don't shelve unchanged files</value>
+    <comment>original:|Don't shelve unchanged files|:</comment>
+  </data>
+  <data name="P4LoggingPreferencesControl_CreateDirectory" xml:space="preserve">
+    <value>"The Directory. {0}, does not exist, would you like to create it?"</value>
+    <comment>original:|"The Directory. {0}, does not exist, would you like to create it?"|:</comment>
+  </data>
+  <data name="P4ScmProvider_ConnectedToSwarmServer" xml:space="preserve">
+    <value>Connected to Swarm {0}  {1}</value>
+    <comment>original:|Connected to Swarm {0}  {1}|:</comment>
+  </data>
+  <data name="SSLCertificateHandler_SSLCertificateError" xml:space="preserve">
+    <value>"SSL certificate error: {0}"</value>
+    <comment>original:|"SSL certificate error: {0}"|:</comment>
+  </data>
+  <data name="P4ScmProvider_RemoteCertificateNameMismatch" xml:space="preserve">
+    <value>Remote Certificate Name Mismatch</value>
+    <comment>original:|Remote Certificate Name Mismatch|:</comment>
+  </data>
+  <data name="SSLCertificateErrorDlg_CertificateData" xml:space="preserve">
+    <value>
+Certificate Data:
+</value>
+    <comment>original:|Certificate Data:|:</comment>
+  </data>
+  <data name="SSLCertificateErrorDlg_Errors" xml:space="preserve">
+    <value>Errors:</value>
+    <comment>original:|Errors:|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemDeleteSelectedPendingChangelists" xml:space="preserve">
+    <value>Delete Selected Pending Changelists</value>
+    <comment>original:|Delete Selected Pending Changelists|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemEditSelectedPendingChangelists" xml:space="preserve">
+    <value>Edit Selected Pending Changelists</value>
+    <comment>original:|Edit Selected Pending Changelists|:</comment>
+  </data>
+  <data name="PendingChangelistsToolWindowControl_MenuItemRefreshSelectedPendingChangelists" xml:space="preserve">
+    <value>Refresh Selected Pending Changelists</value>
+    <comment>original:|Refresh Selected Pending Changelists|:</comment>
+  </data>
+  <data name="FileExceedsMaxPreviewSizeWarning" xml:space="preserve">
+    <value>Warning, the file is {0}, larger than the configured "Maximum size of files to preview". Would you still like to open the file?</value>
+    <comment>original:|Warning, the file is {0}, larger than the configured "Maximum size of files to preview". Would you still like to open the file?|:</comment>
+  </data>
+</root>

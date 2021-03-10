@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="WarningTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="WarningTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 26</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="WarningTB.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="WarningTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 84</value>
+  </data>
+  <data name="WarningTB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="WarningTB.Text" xml:space="preserve">
+    <value>It is possible that someone is intercepting your connection
+to the Helix Core server P4PORT '10.0.50.39:1667'
+If this is not a scheduled key change, then you should contact
+your Helix Core server administrator.
+The fingerprint for the mismatched key sent to your client is
+19:4F:E0:B8:C9:C8:2B:EF:30:72:7F:DF:C1:95:5A:11:77:37:BA:39
+</value>
+  </data>
+  <data name="&gt;&gt;WarningTB.Name" xml:space="preserve">
+    <value>WarningTB</value>
+  </data>
+  <data name="&gt;&gt;WarningTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;WarningTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;WarningTB.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="WarningLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="WarningLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="WarningLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 10</value>
+  </data>
+  <data name="WarningLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>340, 13</value>
+  </data>
+  <data name="WarningLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="WarningLbl.Text" xml:space="preserve">
+    <value>******* WARNING P4PORT IDENTIFICATION HAS CHANGED! *******</value>
+  </data>
+  <data name="&gt;&gt;WarningLbl.Name" xml:space="preserve">
+    <value>WarningLbl</value>
+  </data>
+  <data name="&gt;&gt;WarningLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;WarningLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;WarningLbl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 36</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 64</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPictureBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TrustCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="TrustCB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TrustCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 116</value>
+  </data>
+  <data name="TrustCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 17</value>
+  </data>
+  <data name="TrustCB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TrustCB.Text" xml:space="preserve">
+    <value>&amp;Trust the connection for future connections</value>
+  </data>
+  <data name="&gt;&gt;TrustCB.Name" xml:space="preserve">
+    <value>TrustCB</value>
+  </data>
+  <data name="&gt;&gt;TrustCB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridCheckBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;TrustCB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;TrustCB.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ConnectBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ConnectBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ConnectBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 139</value>
+  </data>
+  <data name="ConnectBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="ConnectBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ConnectBtn.Text" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="&gt;&gt;ConnectBtn.Name" xml:space="preserve">
+    <value>ConnectBtn</value>
+  </data>
+  <data name="&gt;&gt;ConnectBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ConnectBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ConnectBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CancelBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="CancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 139</value>
+  </data>
+  <data name="CancelBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="CancelBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="CancelBtn.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.Name" xml:space="preserve">
+    <value>CancelBtn</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gridPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="gridPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 139</value>
+  </data>
+  <data name="gridPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 23</value>
+  </data>
+  <data name="gridPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Name" xml:space="preserve">
+    <value>gridPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gridLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridLayoutPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="gridLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 175</value>
+  </data>
+  <data name="gridLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Name" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>430, 175</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAGACoDAAAFgAAACgAAAAgAAAAQAAAAAEAGAAAAAAAgAwAABMLAAATCwAAAAAAAAAA
+        AADaoCzZny3Yni7XnC/WmzDVmjHUmTLTlzPSljTRlTXQlDbPkzfOkjjNkTnMjzrMjjrLjTvKjDzJiz3L
+        iz/OjkHPj0POjUTMi0PHh0PEhULDhEPDg0TCgkTBgkXBgUXBgUbaoSvZoCzYny3XnS7WnC/WmzDVmjHU
+        mDLTlzPSljTRlTXQlDbPkzfOkjjNkDnMjzrLjjvLjTvNjj26fjCTXx+QXR6PXCCaZSm/gz/Ih0PEhULD
+        hEPCg0TCgkTBgkXBgUXboiraoSvZoCzYni3XnS7WnC/VmzDUmjHTmDLTlzPSljTRlTXQlDbPkzfOkTjN
+        kDnMjzrLjjvPjDSlh2Fsa2xqZV9raGVVTkWbZyvMjETFhkLEhULDhEPCg0TCgkTBgkXcoynboiraoSvZ
+        nyzYni3XnS7WnC/VmzDUmTHTmDLSlzPRljTQlTXQkzbPkjfOkTjNkDnMjzvLhyrGp33Cztu8vcHDx8yD
+        ipB/Uh/NjELGhkHEhULDhELDhEPCg0TCgkTdpCncoyrboivaoSzZoC3Yni7XnS7WnDDVmzHVmjHUmDLT
+        lzPRljTRlTXQlDbPkjfOkTjNkDrNiy7Elle7wsyxsLC3uLeTmJ5xTSLLij7IiULFhkHEhULEhUPDhEPC
+        g0TepijdpCjcoynboiraoSvZoCzYni3XnS7XnDDWmzHVmjLUmTLTmDXSljTRlTXRlDbQkzfPkznPjjHJ
+        lEm/xc2wsLK0tbWjp69nSijEhTnLjELGiEHHhkHEhULDhULDhEPfpyfepSjdpCncoyrboivaoCzZoC3a
+        ny3eoS3eoi/doDDcnzHbnjLbnTPanDTZmTXYmDjXmDjYlTXRkjvIycqwsrWzs7Kvs7phTTS7ey7TkELM
+        jD/Li0LIiEPEhULDhEPgqCbfpifepSfdpCncoynboireoyzNliWRZhN+WA2BWA6AWBB/VxF/VhJ+VhN/
+        VhR+VRR/VRZ+VBR3TAy5tbG4uLyysrK4u79YUERhOgx4UB9ySx6DWCe7fzzJiUPEhULhqSXgqCbfpyfe
+        pSjdpCncoyveoB7Lo1WrtMSjpaujpquhpKmfoaaboKSZnKGXmp+Ul5uSlZmPkpaKjI6wsbG4uLiysrG0
+        tLSfoKKFiIyFiY6Ij5hYVVKUYSXNjEPFhkHiqiThqSXjqSflrCrnqyvmqyzkpBvZsmHw+P/n6Onl5uji
+        4+Xf4OLc3d7Y2tvV1dfR09TOztDLy83GyMm6vLy1tbWzs7OwsLCzsrKztbWxsbK6vL93eXx5ThvNi0HI
+        h0HiqyPkrCXXnRi1gAiwfQqxfgywdwCwiz/X3uvc3NvZ2NjV1dXT0tLQz8/O0NDLy83Fx8jCxMW+v8K7
+        vcC3uLq0tLSzs7OxsbGurq6qqqynqKitrq+IjpViQh3EhjvJikLjrCPmqRjBn0+EfGt9c1x8c1x+c1pt
+        ZFOvs73g4OLa2tjW1tbT09PR0dPJysnS0dDNztLGyc7Cxsq/wcXBw8e+v8OysrKxsbGvr7CwsrWwtLuv
+        tLydqblyWjvDgjbJikHkriPenwXl0qL////////7//////+opqGZg1Lv9v/Y2NrX19fU1NTb3d+Jh4Vl
+        RArKkzDTmzfMlTfLkjPJkz7Ly8uxtLa0s7OusrhqXEetezjGkEjAj0zCiUHLij3IiT/mryLeoQPiy5P8
+        ///z8/Hu7u36/P+mpaSPWwDx2KTj7P7U1NTV1dTW1tbU195kXFCDVQHbnC3bnC3XlyzOix7HwLS0uL+z
+        s7K2usBfVkilbBnXkjfNjTXMjTvJiz3Iij7nsCHfogPizJP8///z8vHu7u76/P+mp6eVZwDjoRHt4MPe
+        5fXU1NTT09La2trFytRNQiyVZxHcnzTYnDXQjR3Jt5q4vsiysrG7vcBvbWmQYBrVlT3MjzvKjTzKjDzJ
+        iz3osSDgowLjzJP8///08vPv7+77/f+op6eZbAbvrhzjpBzx6tjf4+zb29rV1dXc3d6ts7tMOhumcxfe
+        oTTVkx/Jq3i7xNGysbG7vL5/gYR9VBbUlDrOkTrLjjvKjTzJjD3nsh/hpAHkzZT9///09PPx8O/9//+j
+        o6JRMgCHYAWBVgCBXRCLi4uRkZO9vb3U1NTd3uCjqLFMORWuehzgnSfMoFTAx9SxsbG5ubqSmJ9sSxzP
+        kDTPkjnMjzrLjjvKjTzpsyDipQDkzpL9///19fTx8fHz8/Pa29ynp6emp6ujpamfnpuZmZVtb29SUlKd
+        nZ3T09Pb3d+OkppTOgzHix/Vnj3EyNCysrW2treip69jSiTHiy/SlTrNkDnMjzrLjjvqtB7ipgDlzpL+
+        ///29fXy8vHu7u3v7+/09vbw8fPs7O7m5+rj5OXi4uKjo6NPT0+oqKjS0tLW2N53enxrRgLJjiPNy8az
+        trq1tbSutLtfTza6gCfVlznOkTjNkDnMjzrptR3jpgDlz5L+///29vXz8/Lv7+7r6+nl5eXh4eDd3NvY
+        2NbU1NTT09Pi4uKYmJhdXV3Dw8PPz8/Mz9ZbVk13SADQw6y5vcWzsrK4vMJkWk2ocx3XmTnPkjjNkTjN
+        kDnrth7kqADlz5P////39/bz8/Pv8PDz8/bw9v/m7f7i6fvd4u3U1NTR0dHR0dHW1tZiYmKWlpbPz8/M
+        zMzAxc1OQSmXh2rIy9GysbG8vsFwb2yRYhbZmjjQlDfOkjjNkTjsthzkqADm0JP////39/b09PL8/f+2
+        tLCwkT/guFfasEzp2LPe4u/R0dHOzs7b29qUlZV1dXfLy8vHxsbMzc2rrbGCfXfFxcezs7K8vb+ChYh9
+        VhTYmjbRlTbPkzfOkjjttxvlqQDm0JP////4+Pf18/P///+YlY+ebgDurw/lpgjfoxPk4tzS1dvQz8/U
+        1taura19fX7KzdPGxsbCwsLGxsa/v8G5ubm0tLS6uruTmKBuThnUljDUlzXQlDbPkzftuBzlqgDm0ZP/
+        ///4+Pf09PP///+gn5itfQH6vyX0uCXamwDNw6bY3OXPz8/U1dWytLp/ZCnk49/GydPBwb+/v7+9vb25
+        ubm2tra3t7ekqbNjTSTOkSrWmjbRlTXQlDbuuRrmqwDn0ZL////5+Pj29vT///+YlYxtRwCpfAChcgCV
+        cxrP0tXY2dzQ0NDX19mnrbiQYQDmtEjg4uq/wcfAwL+9vb26urq2tra2trawtb1fUDbAhyLanTXQljTR
+        lTXtuRnnqwDn0ZL////5+fj19vb+/v7Ky8mGgniOi4GHhHu7vcPi5erW1tXS0tDY3OOSj4i3hA3jogzh
+        uFzV3fC8vL6+vr66urq3t7e1tbW6vsJlXVGveRrcnzXTlzPSljTvuhnnrADn0pL////6+fn39/bz8/L5
+        +vn9///4+v/z9fvo6Ora2trW1dXX19fHzeCReDreohjjqijbmwzlypDO1+y5ubm7u7u4uLi1tbS9v8Jw
+        b22dbRTeoTTUmTLSlzPuuxjorQDn0pD////6+vn49/f08/Tv7+/r6+rn5+bj4+Le3t3b29rZ2trY4PKm
+        n5LGjwrorSTgqCffpSHbmw3l06/Hz+K2tra4t7e0tLO8vr+AgoeHXhLeoDHVmjLTmDPwuhjprgDr2aL/
+        ///+///8///5///1+//w9//s8//n7//j6fze5fnT2e24rpbEkhnprhvjqyXhqSTgqCffpB3cnxfi177C
+        zeS3vsu3vcm6ws6PnLJ+XB7cnizWmzHUmTLvuxfutQbuylft2Zbq0orq0Ynn0InlzofjzIbhyoXhx4Te
+        xoPXvnrPpjndoQjqsBrlriLjqyPiqiThqSXgqCffoxvepCPWwZLFsonFsIfGsoi4qIi4ijLbnivXnDDV
+        mjDvuxbvuxfttgfqsADprwDqrgDqrgDprQDprADorADprAHoqwLorAbqsBLosR/lryDkrSHkrCLjqyPi
+        qiThqSXgqCbfpSHenxPenhTdnBXcnBbdnRveoSrZni7XnS/WnDDwvBXvuxbvuxfuuxjuuhrtuBntuRvs
+        uBrrthvrtRzqtBzpsx3osh7osh/nsR/msB/lriDkrSHjrCLjqyPiqiThqSXgqCbfpyjepyndpCrcoyvb
+        oizaoCzZny3Yni7XnS8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>446, 500</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>446, 213</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>P4VS Security Warning</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SslPromptDlg</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Perforce.P4VS.AutoSizeForm, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+</root>

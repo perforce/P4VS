@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="workspaceDescriptionFormRTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 30</value>
+  </data>
+  <data name="workspaceViewMapFormRTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 130</value>
+  </data>
+  <data name="workspaceAltRootsFormRTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 30</value>
+  </data>
+  <data name="hostFormTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="workspaceStreamRootFormTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 20</value>
+  </data>
+  <data name="workspaceRootFormTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 20</value>
+  </data>
+  <data name="workspaceFormBrowseBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 174</value>
+  </data>
+  <data name="workspaceFormBrowseBtn.Text" xml:space="preserve">
+    <value>表示</value>
+  </data>
+  <data name="workspaceFormCancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 527</value>
+  </data>
+  <data name="workspaceFormCancelBtn.Text" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="workspaceFormOKBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 527</value>
+  </data>
+  <data name="viewFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="viewFormLbl.Text" xml:space="preserve">
+    <value>ビュー:</value>
+  </data>
+  <data name="streamFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
+  </data>
+  <data name="streamFormLbl.Text" xml:space="preserve">
+    <value>ストリームのルート:</value>
+  </data>
+  <data name="optionsFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="optionsFormLbl.Text" xml:space="preserve">
+    <value>オプション:</value>
+  </data>
+  <data name="lineEndingsFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="lineEndingsFormLbl.Text" xml:space="preserve">
+    <value>行末:</value>
+  </data>
+  <data name="descriptionFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="descriptionFormLbl.Text" xml:space="preserve">
+    <value>コメント:</value>
+  </data>
+  <data name="rootFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="rootFormLbl.Text" xml:space="preserve">
+    <value>ルート:</value>
+  </data>
+  <data name="altRootsFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
+  <data name="altRootsFormLbl.Text" xml:space="preserve">
+    <value>代替ルート:</value>
+  </data>
+  <data name="hostFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="hostFormLbl.Text" xml:space="preserve">
+    <value>ホスト:</value>
+  </data>
+  <data name="submitOptionsFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 13</value>
+  </data>
+  <data name="submitOptionsFormLbl.Text" xml:space="preserve">
+    <value>サブミット・オプション:</value>
+  </data>
+  <data name="dateModifiedFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="dateModifiedFormLbl.Text" xml:space="preserve">
+    <value>変更日付:</value>
+  </data>
+  <data name="lastAccessedFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="lastAccessedFormLbl.Text" xml:space="preserve">
+    <value>最終アクセス日:</value>
+  </data>
+  <data name="OwnerFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="OwnerFormLbl.Text" xml:space="preserve">
+    <value>所有者:</value>
+  </data>
+  <data name="workspaceFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="workspaceFormLbl.Text" xml:space="preserve">
+    <value>ワークスペース:</value>
+  </data>
+  <data name="workspacesStreamAtChangeFormTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 20</value>
+  </data>
+  <data name="streamAtChangeFormLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="streamAtChangeFormLbl.Text" xml:space="preserve">
+    <value>変更時:</value>
+  </data>
+  <data name="workspacesServerIDFormTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 20</value>
+  </data>
+  <data name="submitOptionsFormCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>382, 71</value>
+  </data>
+  <data name="lineEndingsFormCB.Items" xml:space="preserve">
+    <value>local</value>
+  </data>
+  <data name="lineEndingsFormCB.Items1" xml:space="preserve">
+    <value>unix</value>
+  </data>
+  <data name="lineEndingsFormCB.Items2" xml:space="preserve">
+    <value>mac</value>
+  </data>
+  <data name="lineEndingsFormCB.Items3" xml:space="preserve">
+    <value>win</value>
+  </data>
+  <data name="lineEndingsFormCB.Items4" xml:space="preserve">
+    <value>share</value>
+  </data>
+  <data name="lineEndingsFormCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>382, 111</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>536, 558</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAGBhYdtTVFP/Nzk3/wMDA/8CAQX/FRQX/ysqLP8dHB3/ERAR/wADAf8AAAHTAAAASAAA
+        ABcAAAAAAAAAAgAAAAlZWVn/09PT/9HR0f/Pz8//zs7O/8vLy//FxcX/wsLC/7S0tP+pqan/BAUG/wAA
+        AE8AAAAiAAAABwAAAAoAAAAkW1xc/8zMzP/CwsL/uLi4/6urq/+ioqL/mpqa/5GRkf+Li4v/fHx8/wYE
+        AfoAAABaAAAAPAAAABxVVVVgODg42QACAP8CBAX/CQcM/woLEP8NCxH/CgsL/woLC/8KDAv/DQ0L/wUC
+        Bf8GAwT6AwMBxwICAH4AAAA1YmJi3/Dw8P/x7+3/8Ozp/+rk4P/o4Nz/5dvX/+LY0//e087/2MnC/8y9
+        tf/Bsqz/vK+o/6OXkv8CAAK7AAAAR2lpaf//////+Pf3//f08//08vD/+fj3//n49//39fT/8/Hw//Px
+        8P8AAP//ZdQA/zBdGP/Ow77/AwAD/wAAAExvcHD//////5KRkf99fHz/bGtr/3Jzc/95eXn/e3x8/35/
+        f/99fHz/fX5+/4CBgP9+fn7/1MrG/wMAA/8AAABMd3d3//////9fXl7//OjE//fdrP/uzpr/58WO/+C/
+        hf/btnr/17Jz/9Kra//PqGj/lZSU/+Lc2f8DAAP/AAAATH9/f///////QD8+//3t1//558P/99qw//LU
+        ov/uzZr/58aO/9+7gf/ZsnT/0Kts/42Njf/l4N7/AwAD/wAAAEyHiIj//////0FAP//99OH//e3Q//vl
+        wf/53rH/99uo//PTov/rzJT/4b6E/9Swcv+EhYX/7erp/wsIC/8AAABMj5CQ//////8yMTD//vTr//3w
+        3f/869D//ObF//riuf/53bL/9Nik/+rJk//dt4D/fn19//Py8f8NCg3/AAAATJeXl///////PDs6//76
+        9f/99+3//PPg//zt1f/86sr/++bB//nftf/x06D/5cON/3Z1df/6+vr/DQoN/wAAAEydnp7//////2Zm
+        Zv///fn//vrz//757//98uP//fPe//3u0f/858T/9t60/+/NmP9nZ2f/+/v7/xwZHP8AAABLo6Sk////
+        //98e3v/Tk1N/zc2Nf83NTT/Ojg3/zo4N/86ODf/ODY1/z08O/9EQ0L/j46O//v7+/9AP0H/AAAAP6eo
+        qO7////////////////////////////////////////////////////////////////5+fn/VlVX6wAA
+        ACKLjIwcpqen2aSlpf+foKD/mpub/5SVlf+Njo7/hoeH/4CAgP95eXn/cnJy/2xsbP9nZ2f/YWFh31la
+        WkkAAAAIwAEAAAAAdkAAAAAAAACGQAAAAAAAAPC/AAAAAAAAAAAAAAAAAACOQAAAAgAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ワークスペース: </value>
+  </data>
+  <data name="allwriteFormChk.Text" xml:space="preserve">
+    <value>allwrite</value>
+  </data>
+  <data name="clobberFormChk.Text" xml:space="preserve">
+    <value>clobber</value>
+  </data>
+  <data name="compressFormChk.Text" xml:space="preserve">
+    <value>compress</value>
+  </data>
+  <data name="lockedFormChk.Text" xml:space="preserve">
+    <value>locked</value>
+  </data>
+  <data name="modtimeFormChk.Text" xml:space="preserve">
+    <value>modtime</value>
+  </data>
+  <data name="rmdirFormChk.Text" xml:space="preserve">
+    <value>rmdir</value>
+  </data>
+  <data name="serverIDFormLbl.Text" xml:space="preserve">
+    <value>サーバID:</value>
+  </data>
+  <data name="submitOptionsFormCB.Items" xml:space="preserve">
+    <value>submitunchanged</value>
+  </data>
+  <data name="submitOptionsFormCB.Items1" xml:space="preserve">
+    <value>submitunchanged+reopen</value>
+  </data>
+  <data name="submitOptionsFormCB.Items2" xml:space="preserve">
+    <value>revertunchanged</value>
+  </data>
+  <data name="submitOptionsFormCB.Items3" xml:space="preserve">
+    <value>revertunchanged+reopen</value>
+  </data>
+  <data name="submitOptionsFormCB.Items4" xml:space="preserve">
+    <value>leaveunchanged</value>
+  </data>
+  <data name="submitOptionsFormCB.Items5" xml:space="preserve">
+    <value>leaveunchanged+reopen</value>
+  </data>
+  <data name="workspaceFormOKBtn.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+</root>

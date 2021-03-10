@@ -1,0 +1,14 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<!--
+ This file defines the Guid data for the custom monikers and the ID symbols for individual 
+ icons. This file is used in conjunction with the imagemanifest file to provide the necessary 
+ data to display your custom icons in menu buttons, toolbars, etc.
+ -->
+ 
+ <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+  <Symbols>
+    <GuidSymbol name="HelixMoniker" value="{26bf1301-2eea-459a-b0c2-165099c6c313}">
+      <IDSymbol name="Helix" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+ This file defines icon ID's and which image files they correspond to. This file is used in 
+ conjunction with the CustomMoniker.vsct file to provide the necessary data to display your 
+ custom moniker in menu buttons, toolbars, etc.
+-->
+<ImageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/VisualStudio/ImageManifestSchema/2014">
+  <Symbols>
+    <String Name="Resources" Value="/P4VS;Component/Resources" />
+    <Guid Name="HelixMoniker" Value="{26bf1301-2eea-459a-b0c2-165099c6c313}" />
+    <ID Name="Helix" Value="1" />
+  </Symbols>
+  <Images>
+    <Image Guid="$(HelixMoniker)" ID="$(Helix)">
+      <Source Uri="$(Resources)/Helix.16.16.png">
+        <Size Value="16" />
+      </Source>
+      <Source Uri="$(Resources)/Helix.xaml" />
+    </Image>
+  </Images>
+  <ImageLists />
+</ImageManifest>

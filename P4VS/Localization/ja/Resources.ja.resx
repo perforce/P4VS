@@ -1,0 +1,1595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="100" xml:space="preserve">
+    <value>P4VS - Visual Studio 用 Perforce プラグイン</value>
+  </data>
+	<data name="101" xml:space="preserve">
+    <value>このパッケージは、Visual Studio 用 Perforceプラグインをインストールします。</value>
+  </data>
+	<data name="ApplyProviderOptions" xml:space="preserve">
+    <value>この適用をキャンセルする場合は、[キャンセル] を選択してください。操作を継続する場合は [OK] を選択します</value>
+  </data>
+	<data name="Changelist_Default" xml:space="preserve">
+    <value>デフォルト</value>
+  </data>
+	<data name="Changelist_New" xml:space="preserve">
+    <value>新規</value>
+  </data>
+	<data name="ChangeOwnerDlg_UserError" xml:space="preserve">
+    <value>ユーザ '{0}' は存在しません</value>
+  </data>
+	<data name="ChangeOwnerDlg_WorkspaceError" xml:space="preserve">
+    <value>ワークスペース '{0}' は存在しません</value>
+  </data>
+	<data name="Conection_Caption" xml:space="preserve">
+    <value>{0},{1} on {2}</value>
+  </data>
+	<data name="DefaultChangeListDescription" xml:space="preserve">
+    <value>&lt;ここに説明を入力&gt;</value>
+  </data>
+	<data name="DiffDlg_EnterLabelName" xml:space="preserve">
+    <value>ラベル名を入力</value>
+  </data>
+	<data name="DiffDlg_EnterRevisionNumber" xml:space="preserve">
+    <value>リビジョン番号を入力</value>
+  </data>
+	<data name="DiffDlg_InvalidChangelistSpecifier" xml:space="preserve">
+    <value>無効なチェンジリスト指定子 {0}</value>
+  </data>
+	<data name="DiffDlg_InvalidRevisionSpecifier" xml:space="preserve">
+    <value>無効なリビジョン指定子 {0}</value>
+    <comment>※同　GetRevisionDlg_InvalidRevisionSpecifierWarninig</comment>
+  </data>
+	<data name="DiffDlg_MissingFileError" xml:space="preserve">
+    <value>ファイル {0} はディポに存在しないため、比較できません。</value>
+    <comment>※同　P4ScmProvider_CantDiffMissingDepotFile</comment>
+  </data>
+	<data name="EmptyString" xml:space="preserve">
+    <value />
+  </data>
+	<data name="Error_ClosingProject" xml:space="preserve">
+    <value>エラーが発生したため、プロジェクトを閉じます</value>
+    <comment>※同　P4VsProvider_ErrorClosingProject</comment>
+  </data>
+	<data name="Error_ClosingSolution" xml:space="preserve">
+    <value>エラーが発生したため、ソリューションを閉じます</value>
+    <comment>※同　P4VsProvider_ErrorClosingSolution　
+</comment>
+  </data>
+	<data name="FileAttributesDlg_UseDefaultForTypeRB_Text_1" xml:space="preserve">
+    <value>サーバは、ベースのファイルタイプに使用されるデフォルト・メソッドを用いてリビジョンを保存します。</value>
+    <comment>Same as UseDefaultForTypeRB.Text in FileAttributesDlg.resx
+</comment>
+  </data>
+	<data name="FileAttributesDlg_UseDefaultForTypeRB_Text_2" xml:space="preserve">
+    <value>サーバがファイルを保存する方法は、変更しないでください</value>
+  </data>
+	<data name="GetRevisionDlg_AddFilesFoldersPrompt" xml:space="preserve">
+    <value>ファイル/フォルダを追加</value>
+  </data>
+	<data name="GetRevisionDlg_InvalidRevisionSpecifierWarninig" xml:space="preserve">
+    <value>無効なリビジョン指定子 {0}</value>
+    <comment>※同　DiffDlg_InvalidRevisionSpecifier</comment>
+  </data>
+	<data name="GetRevisionDlg_RemovingProjWarninig" xml:space="preserve">
+    <value>リビジョンを取得することで、ローカル・ワークスペースからファイルが削除されます。</value>
+    <comment>※the file(s)</comment>
+  </data>
+	<data name="GetRevisionDlg_RemovingSlnWarninig" xml:space="preserve">
+    <value>リビジョンを取得することで、ローカル・ワークスペースからソリューション・ファイルが削除されます。ソリューション・ファイルが削除された場合、そのソリューションは開くことができなくなります。</value>
+    <comment>※</comment>
+  </data>
+	<data name="GetRevisionDlg_UpdatingProjWarninig" xml:space="preserve">
+    <value>[リビジョンを取得]を実行することで、1つ以上のプロジェクトファイルが置き換えられます。これらのプロジェクトファイルが更新された後、改めてソリューションが開かれます。</value>
+    <comment>※1つ</comment>
+  </data>
+	<data name="GetRevisionDlg_UpdatingSlnWarninig" xml:space="preserve">
+    <value>[リビジョンを取得]を実行することで、ソリューション・ファイルがインクルードされます。ソリューションは更新される前に閉じられ、更新終了後に改めて開かれます。</value>
+  </data>
+	<data name="IntegrateDlg_Copy" xml:space="preserve">
+    <value>コピー</value>
+  </data>
+	<data name="IntegrateDlg_CopyMethod" xml:space="preserve">
+    <value>次のメソッドをコピー:</value>
+  </data>
+	<data name="IntegrateDlg_FilesToBeCopied" xml:space="preserve">
+    <value>{0} 個のファイルがコピーされます</value>
+    <comment>※　file"s"</comment>
+  </data>
+	<data name="IntegrateDlg_FilesToBeMerged" xml:space="preserve">
+    <value>{0} 個のファイルがマージされます</value>
+    <comment>※　file"s"</comment>
+  </data>
+	<data name="IntegrateDlg_FileToBeCopied" xml:space="preserve">
+    <value>{0} 個のファイルがコピーされます</value>
+  </data>
+	<data name="IntegrateDlg_FileToBeMerged" xml:space="preserve">
+    <value>{0} 個のファイルがマージされます</value>
+  </data>
+	<data name="IntegrateDlg_Merge" xml:space="preserve">
+    <value>マージ</value>
+  </data>
+	<data name="IntegrateDlg_MergeMethod" xml:space="preserve">
+    <value>次のメソッドをマージ:</value>
+  </data>
+	<data name="IntegrateDlg_StreamToStream" xml:space="preserve">
+    <value>ストリームからストリームへ</value>
+  </data>
+	<data name="JobsToolWindowControl_0Matches" xml:space="preserve">
+    <value>0 個の一致</value>
+  </data>
+	<data name="JobsToolWindowControl_1Match" xml:space="preserve">
+    <value>1 個の一致</value>
+  </data>
+	<data name="JobsToolWindowControl_nMatches" xml:space="preserve">
+    <value>{0} 個の一致</value>
+  </data>
+	<data name="JobsToolWindowControl_NoConnection" xml:space="preserve">
+    <value>接続がありません</value>
+  </data>
+	<data name="JobsToolWindowControl_NoItemsAvailable" xml:space="preserve">
+    <value>利用可能な項目がありません</value>
+  </data>
+	<data name="JobsToolWindowControl_NoMatches" xml:space="preserve">
+    <value>一致しない</value>
+  </data>
+	<data name="JobsToolWindow_Caption" xml:space="preserve">
+    <value>ジョブ</value>
+  </data>
+	<data name="LabelsToolWindowControl_Caption" xml:space="preserve">
+    <value>ラベル</value>
+  </data>
+	<data name="NewUserDlg_NameContainsSpacesWarning" xml:space="preserve">
+    <value>名前にスペースが含まれている場合は、スペースが自動的に削除されます。</value>
+    <comment>※同 OpenConnectionDlg_NameContainsSpacesWarning</comment>
+  </data>
+	<data name="NewUserDlg_PasswordsDontMatchWarning" xml:space="preserve">
+    <value>新しいパスワードとパスワード確認フィールドの入力内容が一致しません。
+新しいパスワードを再入力してください。</value>
+  </data>
+	<data name="NewUserDlg_UserExistsWarning" xml:space="preserve">
+    <value>ユーザ名 {0} は既に使用されています</value>
+  </data>
+	<data name="OpenConnectionDlg_EmptyWorkspaceNameWarning" xml:space="preserve">
+    <value>ワークスペースの名前は空白にできません</value>
+  </data>
+	<data name="OpenConnectionDlg_NameContainsSpacesWarning" xml:space="preserve">
+    <value>名前にスペースが含まれている場合は、スペースが自動的に削除されます。</value>
+    <comment>※同 NewUserDlg_NameContainsSpacesWarning </comment>
+  </data>
+	<data name="OpenConnectionDlg_NewWorkspaceDlgPrompt" xml:space="preserve">
+    <value>新しいワークスペースの名前を入力:</value>
+  </data>
+	<data name="OpenConnectionDlg_NewWorkspaceDlgTitle" xml:space="preserve">
+    <value>新しいワークスペース</value>
+  </data>
+	<data name="OpenConnectionDlg_WorkspaceExistsWarning" xml:space="preserve">
+    <value>ワークスペース {0} は既に存在します</value>
+  </data>
+	<data name="P4DiffMergePreferencesControl_openFileDialogFilter" xml:space="preserve">
+    <value>すべてのファイル (*.*)|*.*</value>
+  </data>
+	<data name="P4DiffMergePreferencesControl_openFileDialogTitle" xml:space="preserve">
+    <value>アプリケーションを選択</value>
+  </data>
+	<data name="P4Directory_InvalidNullPathError" xml:space="preserve">
+    <value>P4Directory は有効なリポジトリを要求しています</value>
+  </data>
+	<data name="P4Directory_InvalidRepositoryError" xml:space="preserve">
+    <value>P4Directory は有効なリポジトリを要求しています</value>
+  </data>
+	<data name="P4ErrorDlg_Details" xml:space="preserve">
+    <value>詳細:</value>
+  </data>
+	<data name="P4ErrorDlg_Errors" xml:space="preserve">
+    <value>エラー:</value>
+  </data>
+	<data name="P4ErrorDlg_PromptLabel" xml:space="preserve">
+    <value>最後に実行したコマンドの結果</value>
+  </data>
+	<data name="P4FileTreeListViewItem_Resolved" xml:space="preserve">
+    <value>衝突解決済み</value>
+  </data>
+	<data name="P4FileTreeListViewItem_Unresolved" xml:space="preserve">
+    <value>衝突未解決</value>
+  </data>
+	<data name="P4ScmProvider_LoginCaption" xml:space="preserve">
+    <value>Perforce にログイン</value>
+  </data>
+	<data name="P4ScmProvider_LoginLoginExpireInfo" xml:space="preserve">
+    <value>接続は {0} に終了します</value>
+  </data>
+	<data name="P4ScmProvider_LoginPrompt" xml:space="preserve">
+    <value>{1} 上の {0} のパスワードを入力してください</value>
+    <comment>{0} is user name, {1} is server:port</comment>
+  </data>
+	<data name="P4VS" xml:space="preserve">
+    <value>P4VS</value>
+  </data>
+	<data name="P4VsProviderService_AddNewSlnFiles" xml:space="preserve">
+    <value>Perforce ディポに新しいソリューション・ファイルを追加:</value>
+  </data>
+	<data name="P4VsProviderService_AddSlnWantUpdateClientMapWarning" xml:space="preserve">
+    <value>このソリューション・ファイルはクライアント・マップに存在しません。クライアント・マップを更新しますか?</value>
+    <comment>※同　P4VsProvider_AddSlnWantUpdateClientMapQuestion</comment>
+  </data>
+	<data name="P4VsProviderService_AfterMove1FileSummary" xml:space="preserve">
+    <value>移動済み: {0} から: {1} へ</value>
+    <comment>{0} is old file name, {1} is new file name</comment>
+  </data>
+	<data name="P4VsProviderService_AfterMoveDefaultSummary" xml:space="preserve">
+    <value>{0} 個のファイルを移動</value>
+    <comment>{0} is file count</comment>
+  </data>
+	<data name="P4VsProviderService_AfterMovee1FileSummary" xml:space="preserve">
+    <value>移動済み: {0} から: {1} へ</value>
+    <comment>{0} is old file name, {1} is new file name</comment>
+  </data>
+	<data name="P4VsProviderService_AfterRenameChangeDescription" xml:space="preserve">
+    <value>リネーム: {0} から: {1} へ</value>
+    <comment>{0} is old file name, {1} is new file name　</comment>
+  </data>
+	<data name="P4VsProviderService_AfterRenameSummary" xml:space="preserve">
+    <value>リネーム 
+変更前: {0}
+変更後: {1}</value>
+  </data>
+	<data name="P4VsProviderService_CantAddSlnClientRootError" xml:space="preserve">
+    <value>このソリューション・ファイルはクライアント・ルート・フォルダの配下に存在しないため、P4VS で管理することができません</value>
+  </data>
+	<data name="P4VsProviderService_Copy1ChangeDescription" xml:space="preserve">
+    <value>ファイルを次のストリームへコピーしました
+{0}</value>
+    <comment>※同P4VsProviderService_CopyChangeDescription</comment>
+  </data>
+	<data name="P4VsProviderService_Copy1Summary" xml:space="preserve">
+    <value>1個のファイルをコピーしています</value>
+  </data>
+	<data name="P4VsProviderService_CopyChangeDescription" xml:space="preserve">
+    <value>ファイルを次のストリームへコピーしました
+{0}</value>
+    <comment>※同　P4VsProviderService_Copy1ChangeDescription</comment>
+  </data>
+	<data name="P4VsProviderService_CopyNeedDedicatedStreamWarning" xml:space="preserve">
+    <value>変更をコピーするには、専用のストリーム・クライアントが必要です</value>
+  </data>
+	<data name="P4VsProviderService_CopyNoPreferedStreamsWarning" xml:space="preserve">
+    <value>{0} はコピー元となる適切なソース・ストリームを持っていません。</value>
+  </data>
+	<data name="P4VsProviderService_CopySummary" xml:space="preserve">
+    <value>{0} 個のファイルをコピーしています</value>
+    <comment>{0} is file count</comment>
+  </data>
+	<data name="P4VsProviderService_MarkAddSlnFileQuestion" xml:space="preserve">
+    <value>ソリューション・ファイル {0} は、Perforce ディポにチェックインされていません。追加目的でマーキングしますか?</value>
+  </data>
+	<data name="P4VsProviderService_Merge1ChangeDescription" xml:space="preserve">
+    <value>ファイルを次のストリームへマージしました
+{0}</value>
+    <comment>※　"file"　</comment>
+  </data>
+	<data name="P4VsProviderService_Merge1Summary" xml:space="preserve">
+    <value>1個のファイルをマージしています</value>
+  </data>
+	<data name="P4VsProviderService_MergeChangeDescription" xml:space="preserve">
+    <value>ファイルを次のストリームへマージしました
+{0}</value>
+    <comment>※　"files"</comment>
+  </data>
+	<data name="P4VsProviderService_MergeNeedDedicatedStreamWarning" xml:space="preserve">
+    <value>変更をマージするには、専用のストリーム・クライアントが必要です</value>
+  </data>
+	<data name="P4VsProviderService_MergeNoPreferedStreamsWarning" xml:space="preserve">
+    <value>{0} はマージ元となる適切なソース・ストリームを持っていません。</value>
+  </data>
+	<data name="P4VsProviderService_MergeSummary" xml:space="preserve">
+    <value>{0} 個のファイルをマージしています</value>
+    <comment>{0} is file count</comment>
+  </data>
+	<data name="P4VsProviderService_NewSlnDialogPromptString" xml:space="preserve">
+    <value>Perforce SCMに追加</value>
+  </data>
+	<data name="P4VsProviderService_QueryAddFilesQuestion" xml:space="preserve">
+    <value>新しいファイルを Perforce に追加しますか?</value>
+  </data>
+	<data name="P4VsProviderService_QueryDeleteFileQuestion" xml:space="preserve">
+    <value>ディポ内のファイルを削除目的でマーキングしますか?</value>
+    <comment>※　"file"</comment>
+  </data>
+	<data name="P4VsProviderService_QueryDeleteFilesQuestion" xml:space="preserve">
+    <value>ディポ内のファイルを削除目的でマーキングしますか?</value>
+    <comment>※　"files"</comment>
+  </data>
+	<data name="P4VsProviderService_QueryDeleteFilesRevertAddNote" xml:space="preserve">
+    <value>(追加目的でマーキングしたファイルを元に戻します)</value>
+  </data>
+	<data name="P4VsProviderService_QueryRenameCheckedinWarning" xml:space="preserve">
+    <value>ファイルをリネームまたは移動するためには、そのファイルをチェックインする必要があります</value>
+  </data>
+	<data name="P4VsProviderService_QueryRenameDefaultChangelistDecription" xml:space="preserve">
+    <value>ファイル名をリネームする</value>
+  </data>
+	<data name="P4VsProviderService_QueryRenameDeletedWarning" xml:space="preserve">
+    <value>削除されたリビジョンでは、ファイルをリネームまたは移動できません</value>
+  </data>
+	<data name="P4VsProviderService_RegisterSlnFileQuestion" xml:space="preserve">
+    <value>ソリューション・ファイルを P4VS に登録する必要があります。登録を完了するために、ソリューション・ファイルをチェックアウトしますか?</value>
+  </data>
+	<data name="P4VsProviderService_UnderOtherSCMWarning" xml:space="preserve">
+    <value>プロジェクト {0} は異なる SCM プロバイダによって管理されています。処理を継続しますか?</value>
+  </data>
+	<data name="P4VsProvider_AddFilesDefaultChangelistDescription" xml:space="preserve">
+    <value>&lt;P4VSにより追加されたファイル&gt;</value>
+  </data>
+	<data name="P4VsProvider_AddFilesPrompt" xml:space="preserve">
+    <value>ファイルをPerforceディポに追加</value>
+  </data>
+	<data name="P4VsProvider_AddSlnWantUpdateClientMapQuestion" xml:space="preserve">
+    <value>このソリューション・ファイルはクライアント・マップに存在しません。クライアント・マップを更新しますか?</value>
+    <comment>※同　P4VsProviderService_AddSlnWantUpdateClientMapWarning</comment>
+  </data>
+	<data name="P4VsProvider_CantAddSlnClientRootError" xml:space="preserve">
+    <value>このソリューション・ファイルはクライアント・ルート・フォルダの配下に存在せず、追加することもできません</value>
+    <comment>※同 P4VsProvider_CantOpenSlnClientRootError</comment>
+  </data>
+	<data name="P4VsProvider_CantOpenMarkedForDeleteSlnError" xml:space="preserve">
+    <value>ワークスペース内において削除目的でマーキングされているため、このソリューション・ファイルを開くことはできません</value>
+  </data>
+	<data name="P4VsProvider_CantOpenSlnClientRootError" xml:space="preserve">
+    <value>このソリューション・ファイルはクライアント・ルート・フォルダの配下に存在せず、追加することもできません</value>
+    <comment>※同 P4VsProvider_CantAddSlnClientRootError</comment>
+  </data>
+	<data name="P4VsProvider_CheckoutFilePrompt" xml:space="preserve">
+    <value>このディポに含まれているファイルをチェックアウト:</value>
+  </data>
+	<data name="P4VsProvider_CheckoutFilesDefaultChangelistDescription" xml:space="preserve">
+    <value>&lt;P4VSによりチェックアウト済み&gt;</value>
+  </data>
+	<data name="P4VsProvider_CheckoutFilesPrompt" xml:space="preserve">
+    <value>このディポに含まれているファイルをチェックアウト:</value>
+  </data>
+	<data name="P4VsProvider_ErrorClosingProject" xml:space="preserve">
+    <value>エラーが発生したため、プロジェクトを閉じます</value>
+    <comment>※　同 Error_ClosingProject　
+</comment>
+  </data>
+	<data name="P4VsProvider_ErrorClosingSolution" xml:space="preserve">
+    <value>エラーが発生したため、ソリューションを閉じます</value>
+    <comment>※　同　Error_ClosingSolution　
+</comment>
+  </data>
+	<data name="P4VsProvider_GetLatestReplaceSlnWarning" xml:space="preserve">
+    <value>[最新リビジョンを取得]を実行することで、ソリューション・ファイルが置き換えられます。ソリューションはこれらのソリューション・ファイルが更新される前に閉じられ、更新終了後に改めて開かれます。</value>
+  </data>
+	<data name="P4VsProvider_GetLatestReplacProjWarning" xml:space="preserve">
+    <value>[最新リビジョンを取得]を実行することで、1つ以上のプロジェクトファイルが置き換えられます。これらのプロジェクトは更新され、更新終了後に改めて開かれます。</value>
+  </data>
+	<data name="P4VsProvider_OpenSlnRevertCheckedoutDeletedFilesQuestion" xml:space="preserve">
+    <value>削除されたソリューションには、現在作業中のファイルが含まれています(これらのファイルをワークスペースでも同様に削除した場合、このソリューションを開けなくなる可能性があります)。ファイルを、ワークスペースを更新する前の状態に戻しますか?</value>
+  </data>
+	<data name="P4VsProvider_OpenSlnRevertDeletedButCheckoutQuestion" xml:space="preserve">
+    <value>選択されたソリューション・ファイルをチェックアウトしましたが、ローカル・ワークスペースからは削除されています。チェックアウトしたファイルを元の状態に戻し、ワークスペースを現在のバージョンに更新しますか?</value>
+  </data>
+	<data name="P4VsProvider_OpenSlnWantSyncClientQuestion" xml:space="preserve">
+    <value>選択されたソリューションは、ローカル・ワークスペースから削除されています。ワークスペースを現在のバージョンに更新しますか?</value>
+  </data>
+	<data name="P4VsProvider_OpenSlnWantUpdateClientMapQuestion" xml:space="preserve">
+    <value>選択されたソリューションはクライアント・マップに存在しません。クライアント・マップを更新しますか?</value>
+  </data>
+	<data name="P4VsProvider_RevertReplaceSlnWarning" xml:space="preserve">
+    <value>[元に戻す]を実行することで、ソリューション・ファイルが置き換えられます。このソリューションは更新され、更新終了後に改めて開かれます。</value>
+  </data>
+	<data name="P4VsProvider_RevertReplacProjWarning" xml:space="preserve">
+    <value>[元に戻す]を実行することで、1つ以上のプロジェクトファイルが置き換えられます。これらのプロジェクトは更新され、更新終了後に改めて開かれます。</value>
+  </data>
+	<data name="P4VsProvider_SlnDoesNotExistError" xml:space="preserve">
+    <value>指定されたソリューション・ファイルはディポ内に存在しません</value>
+  </data>
+	<data name="P4VS_ProductDescription" xml:space="preserve">
+    <value>P4VS は、Microsoft Visual Studio 用の Perforce プラグインです。Visual Studio を使用している開発者は、P4VS を利用することで、Perforce のバージョン管理機能を使用することができます。Perforce のバージョン管理ツールと日々の業務で必要となる情報へのアクセスは非常に簡単で、チェックアウト、チェックイン、履歴の確認など、様々な操作を Visual Studio から直接行うことができます。また、P4VS は、Visual Studio インテグレーション・パッケージ への完全な適合と、高度な操作性および互換性を兼ね備えており、.NET環境を完全にサポートしている Perforce の API P4API.NET 上にインストールすることが可能です。Perforce ソフトウェアは、開発の種類、規模を問わず、信頼性の高いバージョン管理ツールを提供します。</value>
+  </data>
+	<data name="P4VS_ProductName" xml:space="preserve">
+    <value>P4VS - Visual Studio 用 Perforce プラグイン</value>
+  </data>
+	<data name="PendingChangelistDlg_CantCreateChanglistError" xml:space="preserve">
+    <value>新規チェンジリストを作成できません</value>
+  </data>
+	<data name="PendingChangelistDlg_JobAlreadyLinkedError" xml:space="preserve">
+    <value>ジョブ {0} は、既にこのチェンジリストにリンクされています。</value>
+  </data>
+	<data name="PendingChangelistDlg_JobDoesntExistError" xml:space="preserve">
+    <value>ジョブ {0} は存在しません。</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_ClmTitleAccessType" xml:space="preserve">
+    <value>アクセス・タイプ</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_ClmTitleChange" xml:space="preserve">
+    <value>チェンジ</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_ClmTitleDate" xml:space="preserve">
+    <value>日付</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_ClmTitleDescription" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_ClmTitleUser" xml:space="preserve">
+    <value>ユーザ</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_ClmTitleWorkspace" xml:space="preserve">
+    <value>ワークスペース</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_DeleteChangelistContainsShelvedFilesWarning1" xml:space="preserve">
+    <value>保留中のファイルが含まれているため、チェンジリスト {0} を削除できません。保留中のファイルを削除しますか?</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_DeletePendingChangelistCaption" xml:space="preserve">
+    <value>作業中チェンジリスト・フォームを削除</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_DeletePendingChangelistWarning" xml:space="preserve">
+    <value>サーバから作業中チェンジリスト '{0}' を削除しようとしています。
+削除してよろしいですか?</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_DeleteShelved2FilesWarning" xml:space="preserve">
+    <value>以下の保留されたファイルを本当に削除しますか?
+'{0}'
+'{1}'</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_DeleteShelvedFilesWarning" xml:space="preserve">
+    <value>選択された保留中のファイルを本当に削除しますか?</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_DeleteShelvedFileWarning" xml:space="preserve">
+    <value>保留中のファイル '{0}' を本当に削除しますか?</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_FileCount" xml:space="preserve">
+    <value>このチェンジリストには、 {0} 個のファイルが含まれています。</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemDeletePendingChangelist" xml:space="preserve">
+    <value>作業中チェンジリスト '{0}' を削除</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemEditPendingChangelist" xml:space="preserve">
+    <value>作業中チェンジリスト '{0}' を編集</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemLock" xml:space="preserve">
+    <value>ロック</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemRefreshPendingChangelist" xml:space="preserve">
+    <value>作業中チェンジリスト '{0}' を更新</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemUnlock" xml:space="preserve">
+    <value>ロック解除</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_NoFilesToMoveWarning" xml:space="preserve">
+    <value>移動できるファイルがありません</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_PendingChangelistDlgCaption" xml:space="preserve">
+    <value>作業中チェンジリスト: 新規({0},{1})</value>
+    <comment>{0} is server:port, {1} is user name</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_PendingChangelistDlgTitle" xml:space="preserve">
+    <value>作業中チェンジリスト: {0}({1},{2})</value>
+    <comment>{0} = Changelist Id (#|'new'|'default') {1}= server:port {2} = user name</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_SelectChangelistDlgCaption" xml:space="preserve">
+    <value>別のチェンジリストに移動</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_SelectChangelistDlgCaption2" xml:space="preserve">
+    <value>ファイルを別のチェンジリストに移動</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning" xml:space="preserve">
+    <value>選択したチェンジリストは既に削除されているため、サーバ上に存在しません</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_SubmitChangelistContainsShelvedFilesWarning" xml:space="preserve">
+    <value>保留中のファイルが含まれているため、チェンジリスト {0} をサブミットできません。保留中のファイルを削除しますか?</value>
+  </data>
+	<data name="PendingChangelistsToolWindow_Caption" xml:space="preserve">
+    <value>作業中</value>
+  </data>
+	<data name="PerforceSCM" xml:space="preserve">
+    <value>Perforce SCM</value>
+  </data>
+	<data name="ProviderName" xml:space="preserve">
+    <value>管理されているソースコード管理プロバイダ</value>
+  </data>
+	<data name="QEQS_EditUncontrolledReadOnly" xml:space="preserve">
+    <value>ディスク上では、ファイル {0} は読み取り専用に設定されています。このファイルを編集可能に変更しますか?</value>
+  </data>
+	<data name="ResolveFileActionControl_AttributeAcceptMergedLabel" xml:space="preserve">
+    <value>反映元ファイルの伝播属性を反映先ファイルに追加</value>
+  </data>
+	<data name="ResolveFileActionControl_AttributeAcceptSourceLabel" xml:space="preserve">
+    <value>反映先ファイルの属性を反映元ファイルの属性で置き換える</value>
+  </data>
+	<data name="ResolveFileActionControl_AttributeAcceptTargetLabel" xml:space="preserve">
+    <value>反映先ファイルの属性を変更しない</value>
+  </data>
+	<data name="ResolveFileActionControl_AttributeReason" xml:space="preserve">
+    <value>{0} 個のファイルの属性が変更されました</value>
+  </data>
+	<data name="ResolveFileActionControl_BranchAcceptSourceLabel" xml:space="preserve">
+    <value>反映元ファイルから派生したブランチの反映先ファイル</value>
+    <comment>※同　ResolveFileActionControl_BranchActionSource</comment>
+  </data>
+	<data name="ResolveFileActionControl_BranchAcceptTargetLabel" xml:space="preserve">
+    <value>反映元ファイルからブランチを作成しない(拒否する)</value>
+    <comment>※同　ResolveFileActionControl_BranchActionTarget</comment>
+  </data>
+	<data name="ResolveFileActionControl_BranchActionReason" xml:space="preserve">
+    <value>反映先ファイルがディポに存在しません。</value>
+  </data>
+	<data name="ResolveFileActionControl_BranchActionSource" xml:space="preserve">
+    <value>反映元ファイルから派生したブランチの反映先ファイル</value>
+    <comment>※同　ResolveFileActionControl_BranchAcceptSourceLabel</comment>
+  </data>
+	<data name="ResolveFileActionControl_BranchActionTarget" xml:space="preserve">
+    <value>反映元ファイルからブランチを作成しない(拒否する)</value>
+    <comment>※同　ResolveFileActionControl_BranchAcceptTargetLabel</comment>
+  </data>
+	<data name="ResolveFileActionControl_DeleteAcceptSourceLabel" xml:space="preserve">
+    <value>反映先ファイルを削除</value>
+  </data>
+	<data name="ResolveFileActionControl_DeleteAcceptTargetLabel" xml:space="preserve">
+    <value>反映先ファイルを削除しない(拒否する)</value>
+  </data>
+	<data name="ResolveFileActionControl_DeleteActionReason" xml:space="preserve">
+    <value>反映元ファイルは削除されましたが、対応する反映先ファイルは残されています。</value>
+  </data>
+	<data name="ResolveFileActionControl_FileTypeAcceptMergedLabel" xml:space="preserve">
+    <value>反映元ファイルと反映先ファイルのファイルタイプを結合する</value>
+  </data>
+	<data name="ResolveFileActionControl_FileTypeAcceptSourceLabel" xml:space="preserve">
+    <value>反映元ファイルのファイルタイプと一致させる</value>
+  </data>
+	<data name="ResolveFileActionControl_FileTypeAcceptTargetLabel" xml:space="preserve">
+    <value>反映先ファイルのファイルタイプを保持する</value>
+  </data>
+	<data name="ResolveFileActionControl_FileTypeResolveReason" xml:space="preserve">
+    <value>反映元ファイルと反映先ファイル両方のファイルタイプが変更されています。</value>
+  </data>
+	<data name="ResolveFileActionControl_MoveAcceptMergedLabel" xml:space="preserve">
+    <value>反映元ファイル名と反映先ファイル名に加えられた変更を結合する</value>
+  </data>
+	<data name="ResolveFileActionControl_MoveAcceptSourceLabel" xml:space="preserve">
+    <value>反映元のファイル名と一致させるため、ファイル名をリネームする</value>
+    <comment>※類似　ResolveFileActionControl_RenameActionSource</comment>
+  </data>
+	<data name="ResolveFileActionControl_MoveAcceptTargetLabel" xml:space="preserve">
+    <value>反映先の現在のファイル名を保持する</value>
+    <comment>※類似　ResolveFileActionControl_RenameActionTarget</comment>
+  </data>
+	<data name="ResolveFileActionControl_MoveActionMergeReason" xml:space="preserve">
+    <value>反映元と反映先の両方のファイル名がリネームされています。</value>
+    <comment>※同 ResolveFileActionControl_RenameActionMergeReason</comment>
+  </data>
+	<data name="ResolveFileActionControl_MoveActionReasonSource" xml:space="preserve">
+    <value>反映元ファイルは削除または移動されています。</value>
+    <comment>※同 ResolveFileActionControl_RenameActionReasonSource
+
+</comment>
+  </data>
+	<data name="ResolveFileActionControl_MoveActionReasonTarget" xml:space="preserve">
+    <value>反映先ファイルは削除または移動されています。</value>
+    <comment>※同 ResolveFileActionControl_RenameActionReasonTarget</comment>
+  </data>
+	<data name="ResolveFileActionControl_RenameActionMerge" xml:space="preserve">
+    <value>反映元ファイル名と反映先ファイル名に加えられた変更を結合する:</value>
+  </data>
+	<data name="ResolveFileActionControl_RenameActionMergeReason" xml:space="preserve">
+    <value>反映元と反映先の両方のファイル名がリネームされています。</value>
+    <comment>※同 ResolveFileActionControl_MoveActionMergeReason</comment>
+  </data>
+	<data name="ResolveFileActionControl_RenameActionReasonSource" xml:space="preserve">
+    <value>反映元ファイルは削除または移動されています。</value>
+    <comment>※同 ResolveFileActionControl_MoveActionReasonSource</comment>
+  </data>
+	<data name="ResolveFileActionControl_RenameActionReasonTarget" xml:space="preserve">
+    <value>反映先ファイルは削除または移動されています。</value>
+    <comment>※同 ResolveFileActionControl_MoveActionReasonTarget</comment>
+  </data>
+	<data name="ResolveFileActionControl_RenameActionSource" xml:space="preserve">
+    <value>反映元のファイル名と一致させるため、ファイル名をリネームする:</value>
+    <comment>※類似　ResolveFileActionControl_MoveAcceptSourceLabel</comment>
+  </data>
+	<data name="ResolveFileActionControl_RenameActionTarget" xml:space="preserve">
+    <value>反映先の現在のファイル名を保持する</value>
+    <comment>※類似　ResolveFileActionControl_MoveAcceptTargetLabel</comment>
+  </data>
+	<data name="ResolveFileActionControl_Resolve_BothFiles" xml:space="preserve">
+    <value>反映元と反映先ファイルの両方</value>
+  </data>
+	<data name="ResolveFileAutoControl_FilesNotResolvedWarning" xml:space="preserve">
+    <value>選択された自動衝突解決では、{0} 個のファイルを解決できませんでした。別の自動衝突解決または対話型の衝突解決オプションをご利用ください。</value>
+    <comment>※ {0} =ファイル数?</comment>
+  </data>
+	<data name="ResolveFileDlg_NoFileToResolveWarning" xml:space="preserve">
+    <value>衝突解決が必要なファイルはありません</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_BaseFile" xml:space="preserve">
+    <value>ベース ({0})</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_DiffToolNotFoundWarning" xml:space="preserve">
+    <value>(警告: マージ・ツールが見つかりません!)</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_MergedSourceTarget" xml:space="preserve">
+    <value>"マージされる反映元/反映先"</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_MergeOfFiles" xml:space="preserve">
+    <value>{0} と {1} をマージ</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_ResolveSaveChanges" xml:space="preserve">
+    <value>マージされたファイルを保持しますか?
+マージ・ツールを再実行する場合は、[いいえ] をクリックしてください。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_Resolve_SourceFile" xml:space="preserve">
+    <value>反映元ファイル</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_Resolve_TargetFile" xml:space="preserve">
+    <value>反映先ファイル</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SourceFile" xml:space="preserve">
+    <value>反映元ファイル ({0})</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedAction_ae" xml:space="preserve">
+    <value>下に表示されている [マージを実行] ボタンをクリックしてください。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedAction_am" xml:space="preserve">
+    <value>下に表示されている [マージ結果を承諾] ボタンをクリックしてください。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedAction_at" xml:space="preserve">
+    <value>下に表示されている [反映元ファイルを承諾] ボタンをクリックしてください。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedAction_ay" xml:space="preserve">
+    <value>下に表示されている [反映先ファイルを承諾] ボタンをクリックしてください。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedAction_default" xml:space="preserve">
+    <value />
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedAction_e" xml:space="preserve">
+    <value>下に表示されている [マージ・ツールを実行] ボタンをクリックしてください。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedReason_ae" xml:space="preserve">
+    <value>反映元ファイルと反映先ファイルの両方が共通ベースと異なっており、衝突が発生しています。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedReason_am" xml:space="preserve">
+    <value>反映元ファイルと反映先ファイルの両方が共通ベースと異なっていますが、衝突は発生していません。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedReason_at" xml:space="preserve">
+    <value>反映元ファイルのみが共通ベースファイルと異なっています。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedReason_ay" xml:space="preserve">
+    <value>反映先ファイルのみが共通ベースファイルと異なっています。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedReason_default" xml:space="preserve">
+    <value>"???"</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_SuggestedReason_e" xml:space="preserve">
+    <value>反映元ファイルと反映先ファイルが衝突しています。</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_TargetFile" xml:space="preserve">
+    <value>反映先ファイル ({0})</value>
+  </data>
+	<data name="Sample Tool Window" xml:space="preserve">
+    <value>Perforce サンプル・ツール・ウィンドウ</value>
+  </data>
+	<data name="SccHistoryDetailsControl_FileSizeBytes" xml:space="preserve">
+    <value>{0} バイト</value>
+  </data>
+	<data name="SccHistoryDetailsControl_FileSizeGigaBytes" xml:space="preserve">
+    <value>"{0:F3} GB"</value>
+  </data>
+	<data name="SccHistoryDetailsControl_FileSizeKiloBytes" xml:space="preserve">
+    <value>"{0:F3} KB"</value>
+  </data>
+	<data name="SccHistoryDetailsControl_FileSizeMegaBytes" xml:space="preserve">
+    <value>"{0:F3} MB"</value>
+  </data>
+	<data name="SccHistoryDetailsControl_FileSizeTeraBytes" xml:space="preserve">
+    <value>"{0:F3} TB"</value>
+  </data>
+	<data name="SccHistoryIntegrationsControl_OtherIntegrations" xml:space="preserve">
+    <value>その他の反映</value>
+  </data>
+	<data name="SccHistoryIntegrationsControl_SourcesContributingContent" xml:space="preserve">
+    <value>反映元(このリビジョンで使用されている内容)</value>
+  </data>
+	<data name="SccHistoryIntegrationsControl_TargetsReceivingContent" xml:space="preserve">
+    <value>反映先(このリビジョンから内容を取得)</value>
+  </data>
+	<data name="SccHistoryToolWindow_Caption" xml:space="preserve">
+    <value>ファイルの履歴</value>
+  </data>
+	<data name="SelectChangelistDlg_ApplyToAllFilesEditLabel" xml:space="preserve">
+    <value>編集中のすべてのファイルに対してこれを適用</value>
+  </data>
+	<data name="SelectChangelistDlg_ApplyToAllFilesSaveLabel" xml:space="preserve">
+    <value>保存されているすべてのファイルに対してこれを適用</value>
+  </data>
+	<data name="SelectChangelistDlg_DefaultNewChangeDesc" xml:space="preserve">
+    <value>&lt;P4VSによりオープン済み&gt;</value>
+  </data>
+	<data name="SelectChangelistDlg_QueryEditOrSavePrompt" xml:space="preserve">
+    <value>読み取り専用ファイル {0} はソース管理されており、かつ、チェックインされています。次に行いたい操作を指定してください。</value>
+    <comment>{0} is file</comment>
+  </data>
+	<data name="ShelveFileDlg_FilesShelvedFromDefaultChangelist" xml:space="preserve">
+    <value>デフォルト・チェンジリストで保留されたファイル</value>
+  </data>
+	<data name="ShelveFileDlg_FilesShelvedFromNumberedChangelist" xml:space="preserve">
+    <value>チェンジリスト {0} で保留されたファイル</value>
+    <comment>{0} is changelist id #</comment>
+  </data>
+	<data name="ShelveFileDlg_NoShelveableFilesWarning" xml:space="preserve">
+    <value>選択されたファイルを保留できませんでした</value>
+  </data>
+	<data name="ShowFileContentsDlg_FileNotFoundWarning" xml:space="preserve">
+    <value>見つからなかったファイル:
+{0}</value>
+  </data>
+	<data name="Status_CheckedIn" xml:space="preserve">
+    <value>チェックイン</value>
+  </data>
+	<data name="Status_CheckedOut" xml:space="preserve">
+    <value>ユーザ自身によるチェックアウト</value>
+  </data>
+	<data name="Status_PendingAdd" xml:space="preserve">
+    <value>追加目的でマーキング</value>
+  </data>
+	<data name="SubmitDlg_DefaultChangelistDescription" xml:space="preserve">
+    <value>&lt;P4VSによりサブミット済み&gt;</value>
+  </data>
+	<data name="SubmitDlg_NoFilesToSubmitWarning" xml:space="preserve">
+    <value>選択されたファイルをサブミットできませんでした</value>
+  </data>
+	<data name="SubmitDlg_SubmitPendingChanglistTitle" xml:space="preserve">
+    <value>チェンジリスト: {0} をサブミット</value>
+    <comment>{0} is changelist id #</comment>
+  </data>
+	<data name="SubmittedChangelistsToolWindowControl_EditSubmittedChangelistMenuItemText" xml:space="preserve">
+    <value>サブミット済みチェンジリスト '{0}' を編集</value>
+  </data>
+	<data name="SubmittedChangelistsToolWindowControl_RefreshSubmittedChangelistMenuItemText1" xml:space="preserve">
+    <value>サブミット済みチェンジリスト '{0}' を更新</value>
+  </data>
+	<data name="SubmittedChangelistsToolWindowControl_SubmittedChangelistDlgCaption" xml:space="preserve">
+    <value>サブミット済みチェンジリスト: {0}({1},{2})	</value>
+    <comment>{0} is server:port, {1} is user name</comment>
+  </data>
+	<data name="SubmittedChangelistsToolWindow_Caption" xml:space="preserve">
+    <value>サブミット済み</value>
+  </data>
+	<data name="TPD_DeleteControlledFile" xml:space="preserve">
+    <value>削除しようとしているファイル {0} は、ソース管理されたファイルです。操作を継続し、本当にこのファイルを削除しますか?</value>
+  </data>
+	<data name="UnshelveFileDialog_CannotGetShelvedFileContentsError" xml:space="preserve">
+    <value>保留されたファイルの内容を取得できません。</value>
+  </data>
+	<data name="UnshelveFileDialog_DefaultChangelistDescription" xml:space="preserve">
+    <value>&lt;P4VSによりサブミット済み&gt;</value>
+  </data>
+	<data name="UnshelveFileDialog_NoShelvedFilesWarning" xml:space="preserve">
+    <value>このチェンジリストには、保留されたファイルは含まれていません。</value>
+  </data>
+	<data name="WarningStyle_GetLatest_Prompt" xml:space="preserve">
+    <value>以下に示すファイルの最新リビジョンが取得されていません。
+チェックアウトする前に最新リビジョンを取得しますか?</value>
+  </data>
+	<data name="WarningStyle_Locked_Prompt" xml:space="preserve">
+    <value>以下に示すファイルは、他のユーザによってロックされています。
+チェックアウトを実行しますか?</value>
+  </data>
+	<data name="WarningStyle_Locked_WarningClmLbl" xml:space="preserve">
+    <value>ロックしているユーザ</value>
+  </data>
+	<data name="WorkspacesBrowserDlg_Caption" xml:space="preserve">
+    <value>ワークスペース</value>
+  </data>
+	<data name="WorkspacesWindowControl_CreateWorkspaceFromMenuItem_Text" xml:space="preserve">
+    <value>ワークスペースを '{0}' から作成...</value>
+  </data>
+	<data name="WorkspacesWindowControl_DeleteWorkspaceCaption" xml:space="preserve">
+    <value>ワークスペース・フォームを削除</value>
+  </data>
+	<data name="WorkspacesWindowControl_DeleteWorkspaceMenuItem_Text" xml:space="preserve">
+    <value>ワークスペース '{0}' を削除...</value>
+  </data>
+	<data name="WorkspacesWindowControl_DeleteWorkspaceWarning" xml:space="preserve">
+    <value>サーバからワークスペース '{0}' を削除しようとしています。
+このワークスペースを本当に削除しますか?</value>
+  </data>
+	<data name="WorkspacesWindowControl_EditWorkspaceMenuItem_Text" xml:space="preserve">
+    <value>ワークスペース '{0}' を編集...</value>
+  </data>
+	<data name="WorkspacesWindowControl_EmptyNameWarning" xml:space="preserve">
+    <value>ワークスペース の名前は空白にできません</value>
+    <comment>※同　OpenConnectionDlg_EmptyWorkspaceNameWarning </comment>
+  </data>
+	<data name="WorkspacesWindowControl_EnterNameForNewWorkspace" xml:space="preserve">
+    <value>新しいワークスペースの名前を入力:</value>
+    <comment>※同　OpenConnectionDlg_NewWorkspaceDlgPrompt</comment>
+  </data>
+	<data name="WorkspacesWindowControl_NewWorkspace" xml:space="preserve">
+    <value>新規ワークスペース</value>
+  </data>
+	<data name="WorkspacesWindowControl_RefreshWorkspaceMenuItem_Text" xml:space="preserve">
+    <value>ワークスペース '{0}' を更新...</value>
+  </data>
+	<data name="WorkspacesWindowControl_SelectAWorkspaceForCopying" xml:space="preserve">
+    <value>{0} へコピーするワークスペースを選択</value>
+  </data>
+	<data name="WorkspacesWindowControl_WorkspaceExistsWarning" xml:space="preserve">
+    <value>ワークスペース {0} は既に使用されています</value>
+  </data>
+	<data name="icmdAddToSourceControl" xml:space="preserve">
+    <value>追加目的でマーキング</value>
+  </data>
+	<data name="icmdChangeFileType" xml:space="preserve">
+    <value>ファイルタイプを変更...</value>
+  </data>
+	<data name="icmdCheckin" xml:space="preserve">
+    <value>サブミット...</value>
+  </data>
+	<data name="icmdCheckout" xml:space="preserve">
+    <value>{0} をチェックアウト</value>
+  </data>
+	<data name="icmdCheckoutProject" xml:space="preserve">
+    <value>プロジェクト全体をチェックアウト</value>
+    <comment>※comment_02xlsx 参照　</comment>
+  </data>
+	<data name="icmdCheckoutSolution" xml:space="preserve">
+    <value>ソリューション全体をチェックアウト</value>
+  </data>
+	<data name="icmdCloseConnection" xml:space="preserve">
+    <value>Perforce ディポへの接続をクローズ</value>
+  </data>
+	<data name="icmdDiffVsAny" xml:space="preserve">
+    <value>比較...</value>
+  </data>
+	<data name="icmdDiffVsHave" xml:space="preserve">
+    <value>所有リビジョンと比較</value>
+  </data>
+	<data name="icmdFileOpenInDepot" xml:space="preserve">
+    <value>Perforce ディポでソリューション／プロジェクトを開く...</value>
+  </data>
+	<data name="icmdLock" xml:space="preserve">
+    <value>ロック</value>
+  </data>
+	<data name="icmdOpenConnection" xml:space="preserve">
+    <value>Perforce ディポへの接続をオープン...</value>
+  </data>
+	<data name="icmdP4V" xml:space="preserve">
+    <value>P4Vで表示</value>
+    <comment>※comment_02xlsx 参照</comment>
+  </data>
+	<data name="icmdP4VSHelp" xml:space="preserve">
+    <value>P4VS ヘルプ</value>
+  </data>
+	<data name="icmdResolve" xml:space="preserve">
+    <value>衝突解決...</value>
+  </data>
+	<data name="icmdRevert" xml:space="preserve">
+    <value>取消</value>
+  </data>
+	<data name="icmdRevertUnchanged" xml:space="preserve">
+    <value>変更していなければ元に戻す</value>
+  </data>
+	<data name="icmdRevGraph" xml:space="preserve">
+    <value>リビジョン・グラフ</value>
+  </data>
+	<data name="icmdScmCopy" xml:space="preserve">
+    <value>ストリームにコピー...</value>
+  </data>
+	<data name="icmdScmMerge" xml:space="preserve">
+    <value>ストリームにマージ...</value>
+    <comment>※comment_02xlsx 参照</comment>
+  </data>
+	<data name="icmdScmRefresh" xml:space="preserve">
+    <value>ビューの更新</value>
+  </data>
+	<data name="icmdShelve" xml:space="preserve">
+    <value>保留...</value>
+  </data>
+	<data name="icmdShowHistory" xml:space="preserve">
+    <value>履歴を表示</value>
+  </data>
+	<data name="icmdStreamGraph" xml:space="preserve">
+    <value>ストリーム・グラフ</value>
+  </data>
+	<data name="icmdSync" xml:space="preserve">
+    <value>リビジョンを取得...</value>
+  </data>
+	<data name="icmdSyncHead" xml:space="preserve">
+    <value>最新リビジョンを取得</value>
+  </data>
+	<data name="icmdTimeLapse" xml:space="preserve">
+    <value>タイムラップ・ビュー</value>
+  </data>
+	<data name="icmdUnlock" xml:space="preserve">
+    <value>ロック解除</value>
+  </data>
+	<data name="icmdViewHistoryToolWindow" xml:space="preserve">
+    <value>ファイルの履歴</value>
+  </data>
+	<data name="icmdViewJobsToolWindow" xml:space="preserve">
+    <value>ジョブ</value>
+  </data>
+	<data name="icmdViewPendingChangelistsToolWindow" xml:space="preserve">
+    <value>作業中チェンジリスト</value>
+  </data>
+	<data name="icmdViewSubmittedChangelistsToolWindow" xml:space="preserve">
+    <value>サブミット済みチェンジリスト</value>
+  </data>
+	<data name="icmdViewWorkspaceToolWindow" xml:space="preserve">
+    <value>ワークスペース</value>
+  </data>
+	<data name="imnuCopyMergeMenu" xml:space="preserve">
+    <value>コピー/マージ</value>
+  </data>
+	<data name="imnuDiffMenu" xml:space="preserve">
+    <value>比較</value>
+  </data>
+	<data name="imnuRevisionsMenu" xml:space="preserve">
+    <value>リビジョン</value>
+  </data>
+	<data name="imnuViewsMenu" xml:space="preserve">
+    <value>ビュー</value>
+  </data>
+	<data name="imnuFileSourceControlMenu" xml:space="preserve">
+    <value>Perforce</value>
+  </data>
+	<data name="icmdCheckoutProjectFiles" xml:space="preserve">
+    <value>選択したプロジェクトファイルをチェックアウト</value>
+  </data>
+	<data name="icmdCheckoutSelectedFiles" xml:space="preserve">
+    <value>選択したファイルをチェックアウト</value>
+  </data>
+	<data name="imnuManageMenu" xml:space="preserve">
+    <value>ファイルの管理</value>
+  </data>
+	<data name="P4ScmProvider_CannotCreateWorkspaceRootError" xml:space="preserve">
+    <value>ワークスペース・ルート {0} を作成できません。
+
+エラー: {1}</value>
+  </data>
+	<data name="P4ScmProvider_CannotFindConfiguredDiffApp" xml:space="preserve">
+    <value>設定されている比較アプリケーションが、指定されたパスに存在しません</value>
+  </data>
+	<data name="P4ScmProvider_CannotFindP4VError" xml:space="preserve">
+    <value>P4V.exe が見つかりません</value>
+  </data>
+	<data name="P4ScmProvider_CannotFindP4VMerge" xml:space="preserve">
+    <value>P4Merge が見つかりません</value>
+  </data>
+	<data name="P4ScmProvider_CantDiffMissingDepotFile" xml:space="preserve">
+    <value>ファイル {0} はディポに存在しないため、比較できません。</value>
+    <comment>※同 DiffDlg_MissingFileError</comment>
+  </data>
+	<data name="P4ScmProvider_CantDiffMissingLocalFile" xml:space="preserve">
+    <value>ファイル {0} はローカル・ディスクに存在しないため、比較できません。</value>
+  </data>
+	<data name="P4ScmProvider_CantSubmitNewChangelistError" xml:space="preserve">
+    <value>新規チェンジリストをサブミットできません</value>
+  </data>
+	<data name="P4ScmProvider_CommandTimeOutError" xml:space="preserve">
+    <value>サーバ上でタイムアウトコマンド {0} が実行されました。再接続しますか?</value>
+  </data>
+	<data name="P4ScmProvider_ConnectingToPerforceServer" xml:space="preserve">
+    <value>クライアント {2} を使用して、{0} 上の Perforce サーバに {1} として接続します</value>
+  </data>
+	<data name="P4ScmProvider_CreatWorkspaceRootPrompt" xml:space="preserve">
+    <value>ワークスペース・ルート {0} は存在しません。作成しますか?</value>
+  </data>
+	<data name="P4ScmProvider_DepotPathDoesNotExist" xml:space="preserve">
+    <value>'{0}' にマップされたディポ・パスが '{1}' 上に存在しません。</value>
+  </data>
+	<data name="P4ScmProvider_ErrorRunningServerDiff" xml:space="preserve">
+    <value>サーバで diff コマンド を実行した際に、エラーが発生しました。
+
+{0}</value>
+  </data>
+	<data name="P4ScmProvider_ErrorSeverityFailed" xml:space="preserve">
+    <value>失敗</value>
+  </data>
+	<data name="P4ScmProvider_ErrorSeverityFatal" xml:space="preserve">
+    <value>情報</value>
+  </data>
+	<data name="P4ScmProvider_ErrorSeverityInfo" xml:space="preserve">
+    <value>情報</value>
+  </data>
+	<data name="P4ScmProvider_ErrorSeverityWarning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+	<data name="P4ScmProvider_FilesAreIdentical" xml:space="preserve">
+    <value>ファイルは同一です</value>
+  </data>
+	<data name="P4ScmProvider_LocalFileLabel" xml:space="preserve">
+    <value>{0} (ローカル・ファイル)</value>
+  </data>
+	<data name="P4ScmProvider_NonexistentWorkspaceRootError" xml:space="preserve">
+    <value>{0} は、存在しないワークスペース・ルートです</value>
+  </data>
+	<data name="P4ScmProvider_OldServerError" xml:space="preserve">
+    <value>P4VS は、バージョン 2008.1 以降のサーバをサポートします。</value>
+  </data>
+	<data name="P4ScmProvider_TimeoutConnectingToServer" xml:space="preserve">
+    <value>サーバへの接続がタイムアウトしました</value>
+  </data>
+	<data name="P4ScmProvider_ToolTipCheckedIn" xml:space="preserve">
+    <value>チェックイン</value>
+  </data>
+	<data name="P4ScmProvider_ToolTipDeletedAtHeadRevision" xml:space="preserve">
+    <value>最新リビジョンで削除されました</value>
+  </data>
+	<data name="P4ScmProvider_ToolTipFileRevisionAndType" xml:space="preserve">
+    <value>#{0}/{1}&lt;{2}&gt;</value>
+    <comment>{0} haveRev, {1} headRev, {2} fileType</comment>
+  </data>
+	<data name="P4ScmProvider_ToolTipLocked" xml:space="preserve">
+    <value>, ロック状態</value>
+  </data>
+	<data name="P4ScmProvider_ToolTipNeedsResolve" xml:space="preserve">
+    <value>衝突解決が必要</value>
+  </data>
+	<data name="P4ScmProvider_ToolTipNotInPerforce" xml:space="preserve">
+    <value>Perforceに存在しません</value>
+  </data>
+	<data name="P4ScmProvider_ToolTipOpenedBy" xml:space="preserve">
+    <value>開いているユーザ: {0}</value>
+  </data>
+	<data name="P4ScmProvider_ToolTipOtherAction" xml:space="preserve">
+    <value>{0}: {1}({2})</value>
+    <comment>{0} other user name, {1} action, {2} changelist#</comment>
+  </data>
+	<data name="P4ScmProvider_ToolTipSelfAction" xml:space="preserve">
+    <value>自分: {0}({1})</value>
+    <comment>{0} action, {1} changelist#　</comment>
+  </data>
+	<data name="P4ScmProvider_UsingEnvironmentSettingsToConnect" xml:space="preserve">
+    <value>環境設定を利用して、ユーザ {1}、ワークスペース {2} で、ホスト {0} 上の Perforce サーバ に接続します。</value>
+  </data>
+	<data name="P4ScmProvider_WorkspaceInvalidError" xml:space="preserve">
+    <value>{0} は無効なワークスペースです</value>
+  </data>
+	<data name="P4ScmProvider_WorkspaceRootInvalidError" xml:space="preserve">
+    <value>{0} は無効なワークスペース・ルートです</value>
+  </data>
+	<data name="NewUserDlg_PasswordTooShortOrSimple" xml:space="preserve">
+    <value>パスワードは8文字以上で、大文字と小文字を混在させるか、1文字以上の記号または数字を含める必要があります。</value>
+  </data>
+	<data name="106" xml:space="preserve">
+    <value>ソース管理</value>
+  </data>
+	<data name="107" xml:space="preserve">
+    <value>Perforce - 一般</value>
+  </data>
+	<data name="108" xml:space="preserve">
+    <value>Perforce - 接続</value>
+  </data>
+	<data name="109" xml:space="preserve">
+    <value>Perforce - 比較/マージ</value>
+  </data>
+	<data name="110" xml:space="preserve">
+    <value>Perforce - ログ記録</value>
+  </data>
+	<data name="111" xml:space="preserve">
+    <value>Perforce - データ取得</value>
+  </data>
+	<data name="DlgEditWorkspace_Title" xml:space="preserve">
+    <value>ワークスペース: {0} ({1}, {2})</value>
+    <comment>{0} is workspace.Name,{1} is  Server Port,  {2} is Peforce User</comment>
+  </data>
+	<data name="P4VsOutputWindow_PanelName" xml:space="preserve">
+    <value>Perforce ソース管理</value>
+  </data>
+	<data name="PendingChangelistDlg_DescriptionPanel_ButtonText" xml:space="preserve">
+    <value>チェンジリストのコメントを入力</value>
+  </data>
+	<data name="PendingChangelistDlg_FilesPanel_ButtonText" xml:space="preserve">
+    <value>ファイル</value>
+  </data>
+	<data name="PendingChangelistDlg_JobsPanel_ButtonText" xml:space="preserve">
+    <value>ジョブ</value>
+  </data>
+	<data name="PendingChangelistDlg_ShelvedFilesPanel_ButtonText" xml:space="preserve">
+    <value>保留されたファイル</value>
+  </data>
+	<data name="SubmitDlg_SubmitChangelistTitle" xml:space="preserve">
+    <value>チェンジリスト: {0} をサブミット</value>
+    <comment>{0} is changelist id #</comment>
+  </data>
+	<data name="SubmitDlg_SubmitFilesTitle" xml:space="preserve">
+    <value>ファイルをサブミット</value>
+  </data>
+	<data name="112" xml:space="preserve">
+    <value>Perforce - 無視するファイル</value>
+  </data>
+	<data name="AddToIgnoreList_Add" xml:space="preserve">
+    <value>新規作成、追加目的でマーキング</value>
+  </data>
+	<data name="AddToIgnoreList_CheckOut" xml:space="preserve">
+    <value>チェックアウト</value>
+  </data>
+	<data name="AddToIgnoreList_TemplateFile" xml:space="preserve">
+    <value># ファイルをディポに登録する際、無視するファイルを指定することができます。
+# 
+# P4IGNORE ファイルの構文は、PERFORCE の構文と同じではありません。
+# むしろ、他のバージョン化システムで使用されるものに似ています。
+#
+# - ファイルはローカル・シンタックスで指定されます。
+# - 行頭の # 文字は、コメントを示します。
+# - 行頭の ! 文字は、そのファイル指定を除外します。
+# - ワイルドカード * は、サブストリング（部分文字列）に一致します。
+#
+# 例：
+# 
+# foo.txt    "foo.txt"というファイルを無視します。
+# *.exe      すべての実行ファイルを無視します。
+# !bar.exe   無視するファイルから bar.exe を除外します。</value>
+  </data>
+	<data name="DepotPathDlg_Connection" xml:space="preserve">
+    <value>接続: {0}</value>
+  </data>
+	<data name="DepotPathDlg_NoConnection" xml:space="preserve">
+    <value>Perforceディポへ未接続</value>
+  </data>
+	<data name="icmdAddToIgnoreList" xml:space="preserve">
+    <value>無視リストへ追加</value>
+  </data>
+	<data name="icmdEditIgnoreList" xml:space="preserve">
+    <value>無視リストを編集</value>
+  </data>
+	<data name="icmdMoveToChangelist" xml:space="preserve">
+    <value>別のチェンジリストへ移動...</value>
+  </data>
+	<data name="icmdRemoveFromIgnoreList" xml:space="preserve">
+    <value>無視リストから削除</value>
+  </data>
+	<data name="MoveToChangelistPrompt" xml:space="preserve">
+    <value>選択されたファイルを作業中チェンジリストに移動</value>
+  </data>
+	<data name="P4ErrorDlg_LoggedOutMsg" xml:space="preserve">
+    <value>Perforceサーバからログアウトしています</value>
+  </data>
+	<data name="P4ScmProvider_ErrorSeverityEmpty" xml:space="preserve">
+    <value>E_EMPTY</value>
+  </data>
+	<data name="P4ScmProvider_LostConectionError" xml:space="preserve">
+    <value>{0} におけるPerforceサーバへの接続が切れました</value>
+  </data>
+	<data name="P4ScmProvider_SelectedFileDeletedAtHeadRevisionWarning" xml:space="preserve">
+    <value>選択されたファイルの最新リビジョンは削除されており、操作を続行できません</value>
+  </data>
+	<data name="P4ScmProvider_UsingConfigSettingsToConnect" xml:space="preserve">
+    <value>構成ファイル {3} を利用して、ユーザ {1}、ワークスペース {2} で、ホスト {0} 上の Perforce サーバに接続します。</value>
+  </data>
+	<data name="P4VsProvider_EditIgnoreFilesPrompt" xml:space="preserve">
+    <value>対応する無視リストにファイルを追加するために、以下のアクションが実行されなければならない:</value>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_PendingFileCount" xml:space="preserve">
+    <value>このチェンジリストには {0} 個の保留ファイルがあります</value>
+  </data>
+	<data name="ResolveFileInteractiveControl_CannotCreateMergedFile" xml:space="preserve">
+    <value>マージ結果を作成できません</value>
+  </data>
+	<data name="icmdViewLabelsToolWindow" xml:space="preserve">
+    <value>ラベル</value>
+  </data>
+	<data name="P4VsProvider_AddFileDefaultChangelistDescription" xml:space="preserve">
+    <value>&lt;P4VSにより追加されたファイル&gt;</value>
+  </data>
+	<data name="P4VsProvider_AddFilePrompt" xml:space="preserve">
+    <value>ファイルをPerforceディポに追加</value>
+  </data>
+	<data name="NewChangelist" xml:space="preserve">
+    <value>新規...</value>
+  </data>
+	<data name="NewChangeListDlgPrompt" xml:space="preserve">
+    <value>新しいチェンジリストに対してコメントを入力します。</value>
+  </data>
+	<data name="NoActiveChangelist" xml:space="preserve">
+    <value>(チェンジリスト用プロンプト)</value>
+  </data>
+	<data name="NoDiffsDlg_MultiFile" xml:space="preserve">
+    <value>以下の {0} ファイルの比較に対して差分が見つかりません:</value>
+  </data>
+	<data name="NoDiffsDlg_SingleFile" xml:space="preserve">
+    <value>以下ファイルの比較に対して差分が見つかりません:</value>
+  </data>
+	<data name="SubmitDlg_DescriptionPanelBtnText" xml:space="preserve">
+    <value>チェンジリストのコメントを入力</value>
+  </data>
+	<data name="SubmitDlg_FileListPanelBtnText" xml:space="preserve">
+    <value>サブミットするファイルを選択</value>
+  </data>
+	<data name="SubmitDlg_JobListPanelBtnText" xml:space="preserve">
+    <value>ジョブをチェンジリストにリンク（オプション）</value>
+  </data>
+	<data name="ActiveChangeListWarning" xml:space="preserve">
+    <value>アクティブなチェンジリストを設定しています。
+
+今後、ファイルのチェックアウトや追加において、チェンジリストについての問い合わせは行われません。アクティブな作業中チェンジリストが常に使用されます。</value>
+  </data>
+	<data name="ConnectionDropDownCombo_CloseConnection" xml:space="preserve">
+    <value>&lt;接続をクローズ&gt;</value>
+  </data>
+	<data name="ConnectionDropDownCombo_NewConnection" xml:space="preserve">
+    <value>&lt;新しい接続&gt;</value>
+  </data>
+	<data name="FilterComboBox_BrowseBtn" xml:space="preserve">
+    <value>表示...</value>
+  </data>
+	<data name="IgnoreFileCreatedFor" xml:space="preserve">
+    <value># ここで作成されたファイルを無視: {0}</value>
+    <comment>{0} is directory</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_SubmitShelvedChangelistContainsFilesWarning" xml:space="preserve">
+    <value>チェンジリスト {0} は保留解除されたファイルを含んでいないため、サブミットできません。</value>
+  </data>
+	<data name="cmdidCancelActiveCommand" xml:space="preserve">
+    <value>キャンセル・コマンド</value>
+  </data>
+	<data name="StreamsToolWindow_Caption" xml:space="preserve">
+    <value>ストリーム</value>
+    <comment>original:|Streams|:</comment>
+  </data>
+	<data name="icmdViewSwarmToolWindow" xml:space="preserve">
+    <value>Swarm</value>
+    <comment>original:|Swarm|:</comment>
+  </data>
+	<data name="SwarmToolWindowControl_Caption" xml:space="preserve">
+    <value>Swarm</value>
+    <comment>original:|Swarm|:</comment>
+  </data>
+	<data name="icmdViewStreamsToolWindow" xml:space="preserve">
+    <value>ストリーム</value>
+    <comment>original:|Streams|:</comment>
+  </data>
+	<data name="StreamsToolWindowControl_Caption" xml:space="preserve">
+    <value>ストリーム</value>
+    <comment>original:|Streams|:</comment>
+  </data>
+	<data name="StreamsToolWindow_CopyToParentStreamMenuText" xml:space="preserve">
+    <value>'{0}'から親にコピー...</value>
+    <comment>original:|Copy to parent from '{0}'...|:</comment>
+  </data>
+	<data name="StreamsToolWindow_MergeToParentStreamMenuText" xml:space="preserve">
+    <value>'{0}'から親にマージ...</value>
+    <comment>original:|Merge to parent from '{0}'...|:</comment>
+  </data>
+	<data name="StreamsToolWindow_NothingToCopyMenuText" xml:space="preserve">
+    <value>コピーするものがありません</value>
+    <comment>original:|Nothing to Copy|:</comment>
+  </data>
+	<data name="StreamsToolWindow_NothingToMergeMenuText" xml:space="preserve">
+    <value>マージするものがありません</value>
+    <comment>original:|Nothing to Merge|:</comment>
+  </data>
+	<data name="StreamsToolWindow_RefreshStreamMenuText" xml:space="preserve">
+    <value>ストリーム'{0}'を更新</value>
+    <comment>original:|Refresh Stream '{0}'|:</comment>
+  </data>
+	<data name="StreamsToolWindow_RefreshStreamsListMenuText" xml:space="preserve">
+    <value>ストリームリストを更新</value>
+    <comment>original:|Refresh Streams List|:</comment>
+  </data>
+	<data name="StreamsToolWindow_CopyFromParentStreamMenuText" xml:space="preserve">
+    <value>親から'{0}'にコピー</value>
+    <comment>original:|Copy to '{0}' from parent|:</comment>
+  </data>
+	<data name="StreamsToolWindow_MergeBeforeCopyStreamMenuText" xml:space="preserve">
+    <value>コピーする前にマージ</value>
+    <comment>original:|Merge prior to copying|:</comment>
+  </data>
+	<data name="StreamsToolWindow_MergeFromParentStreamMenuText" xml:space="preserve">
+    <value>親から'{0}'にマージ</value>
+    <comment>original:|Merge to '{0}' from parent|:</comment>
+  </data>
+	<data name="StreamWorkspaceCreateText" xml:space="preserve">
+    <value>{0}操作を完了するには、新しいワークスペースを作成する必要があります。 続行しますか？</value>
+    <comment>original:|You must create a new workspace in order to complete the {0} operation. Proceed?|:</comment>
+  </data>
+	<data name="StreamWorkspaceCreateTitle" xml:space="preserve">
+    <value>ワークスペースを作成</value>
+    <comment>original:|Create Workspace|:</comment>
+  </data>
+	<data name="StreamWorkspaceSwitchText" xml:space="preserve">
+    <value>{1}操作を完了するには、ワークスペース'{0}'に切り替える必要があります。 続行しますか？</value>
+    <comment>original:|You must switch to workspace '{0}' in order to complete the {1} operation. Proceed?|:</comment>
+  </data>
+	<data name="StreamWorkspaceSwitchTitle" xml:space="preserve">
+    <value>ワークスペースを切り替え</value>
+    <comment>original:|Switch Workspace|:</comment>
+  </data>
+	<data name="P4IgnorePreferencesControl_PromptForIgnoreListAdd" xml:space="preserve">
+    <value>ワイルドカード'*.*'をワークスペースルートの無視ファイルに追加して、ワークスペースのすべてのファイルのファイル状態を制限しますか？
+
+P4VSで管理するファイルをSolution Explorerで選択し、コンテキストメニューから[無視リストからファイルを管理/削除]を選択します。</value>
+    <comment>original:|Would you like to add the wildcard, '*.*' to the ignore file in your workspace root to limit fstats on all files in your workspace?
+
+For files that you want to manage with P4VS, select them in Solution Explorer and choose 'Manage Files/Remove from Ignore List" in the context menu.|:</comment>
+  </data>
+	<data name="P4IgnorePreferencesControl_PromptForIgnoreListRemove" xml:space="preserve">
+    <value>ワークスペースルートにある無視ファイルを編集して、ワイルドカード'*.*'を削除しますか？削除すると、ワークスペースの管理外のすべてのファイルが無視されるようになります。</value>
+    <comment>original:|Would you like to edit the ignore file in your workspace root to remove the wildcard, '*.*' that will now make all uncontrolled files in your workspace ignored?|:</comment>
+  </data>
+	<data name="P4ScmProvider_ConnectingToUnicodeServer" xml:space="preserve">
+    <value>文字セット{0}を使用してUnicodeが有効なサーバに接続しています</value>
+    <comment>{0} is charset name
+original:|Connecting to Unicode enabled server using Charset {0}|:</comment>
+  </data>
+	<data name="icmdViewReviewsToolWindow" xml:space="preserve">
+    <value>レビュー</value>
+    <comment>original:|Reviews|:</comment>
+  </data>
+	<data name="SwarmReviewsToolWindowControl_Caption" xml:space="preserve">
+    <value>コードレビュー</value>
+    <comment>original:|Code Reviews|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_CantReviewMixedChangelist" xml:space="preserve">
+    <value>保留状態のファイルと開かれているファイルを両方含むチェンジリストのレビューはリクエストできません。</value>
+    <comment>original:|Can't request a review on a changelist containing both shelved and opened files.|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_CreateFromSubmittedPrompt" xml:space="preserve">
+    <value>以下のファイルはレビュー用に送信されます:</value>
+    <comment>original:|The following files will be sent for review:|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_CreateFromPendingPrompt" xml:space="preserve">
+    <value>以下のファイルはレビュー用にシェルブされます:</value>
+    <comment>original:|The following files will be shelved for review:|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_CantFindUser" xml:space="preserve">
+    <value>そのIDを使用しているユーザが見つかりません</value>
+    <comment>original:|Can't find a user with that Id|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_OpenReviewInSwarm" xml:space="preserve">
+    <value>Swarmでレビューを開く</value>
+    <comment>original:|Open Review in Swarm|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_ReviewCreated" xml:space="preserve">
+    <value>レビュー{0}:
+
+{1}を作成しました</value>
+    <comment>{0} review id, {1} is review description
+original:|Created review, {0}:
+
+{1}|:</comment>
+  </data>
+	<data name="P4ScmProvider_SwarmLoginPrompt" xml:space="preserve">
+    <value>{0}のパスワードを{1}に入力してください</value>
+    <comment>{0} is user name, {1} is swarm url
+original:|Please enter password for {0} on {1}|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_ClearShelfBefore" xml:space="preserve">
+    <value>保留前にチェンジリストから保留状態だったファイルをすべて消去します。</value>
+    <comment>original:|Clear changelist of all previously shelved files before shelving.|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_RevertAfterShelving" xml:space="preserve">
+    <value>チェックアウトしたファイルを保留後に元に戻します。</value>
+    <comment>original:|Revert checked-out files after they are shelved.|:</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_ClmTitleReviewStatus" xml:space="preserve">
+    <value>レビュー状態</value>
+    <comment>original:|Review State|:</comment>
+  </data>
+	<data name="P4ErrorDlg_SwarmPromptLabel" xml:space="preserve">
+    <value>Swarmサーバエラー</value>
+    <comment>original:|Swarm Server Error|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_UpdateReview" xml:space="preserve">
+    <value>Swarmレビューを更新</value>
+    <comment>original:|Update a Swarm Review|:</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_ClmTitleReviewId" xml:space="preserve">
+    <value>レビューID</value>
+    <comment>original:|Review Id|:</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemOpenSwarmReview" xml:space="preserve">
+    <value>Swarmでレビュー'{0}'を開く...</value>
+    <comment>original:|Open Review '{0}' in Swarm...|:</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemUpdateReview" xml:space="preserve">
+    <value>Swarmレビュー'{0}'を更新...</value>
+    <comment>original:|Update Swarm Review '{0}'...|:</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemUpdateReview2" xml:space="preserve">
+    <value>Swarmレビューを更新...</value>
+    <comment>original:|Update a Swarm Review...|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_AddToReview" xml:space="preserve">
+    <value>Swarmレビューに追加...</value>
+    <comment>original:|Add to a Swarm Review...|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_RefreshReview" xml:space="preserve">
+    <value>Swarmレビュー'{0}'を更新...</value>
+    <comment>original:|Update Swarm Review, '{0}'|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_CreateReview" xml:space="preserve">
+    <value>新しいSwarmレビューを要求</value>
+    <comment>original:|Request New Swarm Review|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_RefreshFromPendingPrompt" xml:space="preserve">
+    <value>以下のファイルは作業中チェンジリスト'{0}'に保留されてレビューを更新します:</value>
+    <comment>{1} is id of changelist
+original:|The following files will be shelved in pending changelist '{0}' to update the review:|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_UpdateFromPendingPrompt" xml:space="preserve">
+    <value>以下のファイルは保留されてレビューに追加されます:</value>
+    <comment>original:|The following files will be shelved and added to the review:|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_UpdateFromSubmittedPrompt1" xml:space="preserve">
+    <value>以下のファイルはレビュー用に送信されます:</value>
+    <comment>original:|The following files will be sent for review:|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_DefaultChangelistDescription" xml:space="preserve">
+    <value>レビューのためのファイル</value>
+    <comment>original:|Files for review|:</comment>
+  </data>
+	<data name="P4ScmProvider_ToolTipIgnoredFile" xml:space="preserve">
+    <value>無視ファイル</value>
+    <comment>original:|Ignored File|:</comment>
+  </data>
+	<data name="P4ScmProvider_ToolTipLazyLoad" xml:space="preserve">
+    <value>状態が読み込まれていません。コンテキストメニューから[更新]を選択して状態を取得してください</value>
+    <comment>original:|Status not loaded, choose 'Refresh' from context menu to fetch status|:</comment>
+  </data>
+	<data name="CreateSwarmReviewDlg_DontShelveUnchangedFiles" xml:space="preserve">
+    <value>未変更のファイルを保留しない</value>
+    <comment>original:|Don't shelve unchanged files|:</comment>
+  </data>
+	<data name="P4LoggingPreferencesControl_CreateDirectory" xml:space="preserve">
+    <value>「ディレクトリ{0}は存在しません。作成しますか？」</value>
+    <comment>original:|"The Directory. {0}, does not exist, would you like to create it?"|:</comment>
+  </data>
+	<data name="P4ScmProvider_ConnectedToSwarmServer" xml:space="preserve">
+    <value>Swarm{0}  {1}に接続しました</value>
+    <comment>original:|Connected to Swarm {0}  {1}|:</comment>
+  </data>
+	<data name="SSLCertificateHandler_SSLCertificateError" xml:space="preserve">
+    <value>「SSL証明書エラー: {0}」</value>
+    <comment>original:|"SSL certificate error: {0}"|:</comment>
+  </data>
+	<data name="P4ScmProvider_RemoteCertificateNameMismatch" xml:space="preserve">
+    <value>リモート証明書名不一致</value>
+    <comment>original:|Remote Certificate Name Mismatch|:</comment>
+  </data>
+	<data name="SSLCertificateErrorDlg_CertificateData" xml:space="preserve">
+    <value>
+証明書データ:
+</value>
+    <comment>original:|Certificate Data:|:</comment>
+  </data>
+	<data name="SSLCertificateErrorDlg_Errors" xml:space="preserve">
+    <value>エラー:</value>
+    <comment>original:|Errors:|:</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemDeleteSelectedPendingChangelists" xml:space="preserve">
+    <value>選択した作業中チェンジリストを削除</value>
+    <comment>original:|Delete Selected Pending Changelists|:</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemEditSelectedPendingChangelists" xml:space="preserve">
+    <value>選択した作業中チェンジリストを編集</value>
+    <comment>original:|Edit Selected Pending Changelists|:</comment>
+  </data>
+	<data name="PendingChangelistsToolWindowControl_MenuItemRefreshSelectedPendingChangelists" xml:space="preserve">
+    <value>選択した作業中チェンジリストを更新</value>
+    <comment>original:|Refresh Selected Pending Changelists|:</comment>
+  </data>
+	<data name="FileExceedsMaxPreviewSizeWarning" xml:space="preserve">
+    <value>警告: ファイルは{0}で、設定された「プレビューするファイルの最大サイズ」を超えています。 ファイルを開きますか？</value>
+    <comment>original:|Warning, the file is {0}, larger than the configured "Maximum size of files to preview". Would you still like to open the file?|:</comment>
+  </data>
+</root>

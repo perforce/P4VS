@@ -1,0 +1,1470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 13</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 81</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPictureBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Recomended action:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel2</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RecomendationLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="RecomendationLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RecomendationLbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="RecomendationLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 26</value>
+  </data>
+  <data name="RecomendationLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>17, 0, 3, 0</value>
+  </data>
+  <data name="RecomendationLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 13</value>
+  </data>
+  <data name="RecomendationLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="RecomendationLbl.Text" xml:space="preserve">
+    <value>RecomendationLbl</value>
+  </data>
+  <data name="&gt;&gt;RecomendationLbl.Name" xml:space="preserve">
+    <value>RecomendationLbl</value>
+  </data>
+  <data name="&gt;&gt;RecomendationLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;RecomendationLbl.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;RecomendationLbl.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="ReasonLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="ReasonLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ReasonLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 42</value>
+  </data>
+  <data name="ReasonLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>17, 0, 3, 0</value>
+  </data>
+  <data name="ReasonLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="ReasonLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ReasonLbl.Text" xml:space="preserve">
+    <value>ReasonLbl</value>
+  </data>
+  <data name="&gt;&gt;ReasonLbl.Name" xml:space="preserve">
+    <value>ReasonLbl</value>
+  </data>
+  <data name="&gt;&gt;ReasonLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ReasonLbl.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ReasonLbl.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 12</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Common base</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 33</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Source file</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 56</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Target file</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 79</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Merged result</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="BaseFileLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="BaseFileLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 12</value>
+  </data>
+  <data name="BaseFileLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 13</value>
+  </data>
+  <data name="BaseFileLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="BaseFileLbl.Text" xml:space="preserve">
+    <value>BaseFileName</value>
+  </data>
+  <data name="&gt;&gt;BaseFileLbl.Name" xml:space="preserve">
+    <value>BaseFileLbl</value>
+  </data>
+  <data name="&gt;&gt;BaseFileLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;BaseFileLbl.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;BaseFileLbl.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="SourceDifferencesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="SourceDifferencesLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SourceDifferencesLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 33</value>
+  </data>
+  <data name="SourceDifferencesLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 13</value>
+  </data>
+  <data name="SourceDifferencesLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="SourceDifferencesLbl.Text" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="&gt;&gt;SourceDifferencesLbl.Name" xml:space="preserve">
+    <value>SourceDifferencesLbl</value>
+  </data>
+  <data name="&gt;&gt;SourceDifferencesLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;SourceDifferencesLbl.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;SourceDifferencesLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 56</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Differences from base;</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="TargetDifferencesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="TargetDifferencesLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TargetDifferencesLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 56</value>
+  </data>
+  <data name="TargetDifferencesLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 13</value>
+  </data>
+  <data name="TargetDifferencesLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="TargetDifferencesLbl.Text" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="&gt;&gt;TargetDifferencesLbl.Name" xml:space="preserve">
+    <value>TargetDifferencesLbl</value>
+  </data>
+  <data name="&gt;&gt;TargetDifferencesLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;TargetDifferencesLbl.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;TargetDifferencesLbl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ConflictsLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="ConflictsLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ConflictsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 79</value>
+  </data>
+  <data name="ConflictsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 13</value>
+  </data>
+  <data name="ConflictsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="ConflictsLbl.Text" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="&gt;&gt;ConflictsLbl.Name" xml:space="preserve">
+    <value>ConflictsLbl</value>
+  </data>
+  <data name="&gt;&gt;ConflictsLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ConflictsLbl.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;ConflictsLbl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 2</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Resolve options:</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel3</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AcceptSourceBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="AcceptSourceBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 192</value>
+  </data>
+  <data name="AcceptSourceBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 23</value>
+  </data>
+  <data name="AcceptSourceBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="AcceptSourceBtn.Text" xml:space="preserve">
+    <value>Accept Source</value>
+  </data>
+  <data name="&gt;&gt;AcceptSourceBtn.Name" xml:space="preserve">
+    <value>AcceptSourceBtn</value>
+  </data>
+  <data name="&gt;&gt;AcceptSourceBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;AcceptSourceBtn.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;AcceptSourceBtn.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="AcceptTargetBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="AcceptTargetBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 221</value>
+  </data>
+  <data name="AcceptTargetBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 23</value>
+  </data>
+  <data name="AcceptTargetBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="AcceptTargetBtn.Text" xml:space="preserve">
+    <value>Accept Target</value>
+  </data>
+  <data name="&gt;&gt;AcceptTargetBtn.Name" xml:space="preserve">
+    <value>AcceptTargetBtn</value>
+  </data>
+  <data name="&gt;&gt;AcceptTargetBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;AcceptTargetBtn.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;AcceptTargetBtn.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="AcceptMergedBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="AcceptMergedBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 250</value>
+  </data>
+  <data name="AcceptMergedBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 23</value>
+  </data>
+  <data name="AcceptMergedBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="AcceptMergedBtn.Text" xml:space="preserve">
+    <value>Accept Merged</value>
+  </data>
+  <data name="&gt;&gt;AcceptMergedBtn.Name" xml:space="preserve">
+    <value>AcceptMergedBtn</value>
+  </data>
+  <data name="&gt;&gt;AcceptMergedBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;AcceptMergedBtn.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;AcceptMergedBtn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="RunMergeToolBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="RunMergeToolBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 279</value>
+  </data>
+  <data name="RunMergeToolBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 23</value>
+  </data>
+  <data name="RunMergeToolBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="RunMergeToolBtn.Text" xml:space="preserve">
+    <value>Run Merge Tool</value>
+  </data>
+  <data name="&gt;&gt;RunMergeToolBtn.Name" xml:space="preserve">
+    <value>RunMergeToolBtn</value>
+  </data>
+  <data name="&gt;&gt;RunMergeToolBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;RunMergeToolBtn.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;RunMergeToolBtn.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 197</value>
+  </data>
+  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 0, 3, 0</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 13</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Replace target file with a copy of the source file</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 226</value>
+  </data>
+  <data name="label9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 0, 3, 0</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Leave target file unchanged</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 255</value>
+  </data>
+  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 0, 3, 0</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 13</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Replace target file with the merged result of source and target</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RunMergeToolLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RunMergeToolLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 284</value>
+  </data>
+  <data name="RunMergeToolLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 0, 3, 0</value>
+  </data>
+  <data name="RunMergeToolLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 13</value>
+  </data>
+  <data name="RunMergeToolLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="RunMergeToolLbl.Text" xml:space="preserve">
+    <value>Manually merge source and target before accepting</value>
+  </data>
+  <data name="&gt;&gt;RunMergeToolLbl.Name" xml:space="preserve">
+    <value>RunMergeToolLbl</value>
+  </data>
+  <data name="&gt;&gt;RunMergeToolLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;RunMergeToolLbl.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;RunMergeToolLbl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="AdditionalActionsBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <metadata name="AdditionalActionsCtxMnu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>144, 17</value>
+  </metadata>
+  <data name="AAOpenSourceMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
+  <data name="AAOpenSourceMI.Text" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="AAOpenTargetMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
+  <data name="AAOpenTargetMI.Text" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="AAOpenMergedMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
+  <data name="AAOpenMergedMI.Text" xml:space="preserve">
+    <value>Merged</value>
+  </data>
+  <data name="AAOpenMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 22</value>
+  </data>
+  <data name="AAOpenMI.Text" xml:space="preserve">
+    <value>Open File</value>
+  </data>
+  <data name="AADiffSourceVsTargetMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="AADiffSourceVsTargetMI.Text" xml:space="preserve">
+    <value>Source Vs Target</value>
+  </data>
+  <data name="AADiffBaseVsSourceMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="AADiffBaseVsSourceMI.Text" xml:space="preserve">
+    <value>Base Vs Source</value>
+  </data>
+  <data name="AADiffBaseVsTargetMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="AADiffBaseVsTargetMI.Text" xml:space="preserve">
+    <value>Base Vs Target</value>
+  </data>
+  <data name="AADiffBaseVsMergedMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="AADiffBaseVsMergedMI.Text" xml:space="preserve">
+    <value>Base Vs Merged Result</value>
+  </data>
+  <data name="AADiffSourceVsMergedMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="AADiffSourceVsMergedMI.Text" xml:space="preserve">
+    <value>Source Vs Merged Results</value>
+  </data>
+  <data name="AADiffTargetVsMergedMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 22</value>
+  </data>
+  <data name="AADiffTargetVsMergedMI.Text" xml:space="preserve">
+    <value>Target Vs Merged Result</value>
+  </data>
+  <data name="AADiffMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 22</value>
+  </data>
+  <data name="AADiffMI.Text" xml:space="preserve">
+    <value>Diff</value>
+  </data>
+  <data name="AAHistorySourceMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 22</value>
+  </data>
+  <data name="AAHistorySourceMI.Text" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="AAHistoryTargetMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 22</value>
+  </data>
+  <data name="AAHistoryTargetMI.Text" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="AAHistoryMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 22</value>
+  </data>
+  <data name="AAHistoryMI.Text" xml:space="preserve">
+    <value>File History</value>
+  </data>
+  <data name="AATimeLapseSourceMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 22</value>
+  </data>
+  <data name="AATimeLapseSourceMI.Text" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="AATimeLapseTargetMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 22</value>
+  </data>
+  <data name="AATimeLapseTargetMI.Text" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="AATimeLapseMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 22</value>
+  </data>
+  <data name="AATimeLapseMI.Text" xml:space="preserve">
+    <value>Time-lapse View</value>
+  </data>
+  <data name="AARevisionGraphSourceMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 22</value>
+  </data>
+  <data name="AARevisionGraphSourceMI.Text" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="AARevisionGraphTargetMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 22</value>
+  </data>
+  <data name="AARevisionGraphTargetMI.Text" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="AARevisionGraphMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 22</value>
+  </data>
+  <data name="AARevisionGraphMI.Text" xml:space="preserve">
+    <value>Revision Graph</value>
+  </data>
+  <data name="AdditionalActionsCtxMnu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 114</value>
+  </data>
+  <data name="&gt;&gt;AdditionalActionsCtxMnu.Name" xml:space="preserve">
+    <value>AdditionalActionsCtxMnu</value>
+  </data>
+  <data name="&gt;&gt;AdditionalActionsCtxMnu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AdditionalActionsBtn.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="AdditionalActionsBtn.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AdditionalActionsBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 336</value>
+  </data>
+  <data name="AdditionalActionsBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 23</value>
+  </data>
+  <data name="AdditionalActionsBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="AdditionalActionsBtn.Text" xml:space="preserve">
+    <value>Additional Actions</value>
+  </data>
+  <data name="AdditionalActionsBtn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;AdditionalActionsBtn.Name" xml:space="preserve">
+    <value>AdditionalActionsBtn</value>
+  </data>
+  <data name="&gt;&gt;AdditionalActionsBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;AdditionalActionsBtn.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;AdditionalActionsBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 33</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 13</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Differences from base; </value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label13.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 79</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Conflicts:</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 5</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 2</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel3</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 7</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 2</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 318</value>
+  </data>
+  <data name="groupBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 3, 3, 3</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 2</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 7</value>
+  </data>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 21</value>
+  </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPictureBox, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CommonDiffsLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="CommonDiffsLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CommonDiffsLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CommonDiffsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 11</value>
+  </data>
+  <data name="CommonDiffsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 13</value>
+  </data>
+  <data name="CommonDiffsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="CommonDiffsLbl.Text" xml:space="preserve">
+    <value>+{0} common to both</value>
+  </data>
+  <data name="&gt;&gt;CommonDiffsLbl.Name" xml:space="preserve">
+    <value>CommonDiffsLbl</value>
+  </data>
+  <data name="&gt;&gt;CommonDiffsLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;CommonDiffsLbl.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel4</value>
+  </data>
+  <data name="&gt;&gt;CommonDiffsLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="gridPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="gridPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 79</value>
+  </data>
+  <data name="gridPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
+  <data name="gridPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;gridPanel2.Name" xml:space="preserve">
+    <value>gridPanel2</value>
+  </data>
+  <data name="&gt;&gt;gridPanel2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel2.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 33</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 36</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel4.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel4.Name" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel4</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel4.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel4.Parent" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel4.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 57</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>34, 3, 3, 3</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>429, 98</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel1.Name" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel1.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 6</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 17</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel2.Name" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel2</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel2.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel2.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="gridPanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="gridPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 306</value>
+  </data>
+  <data name="gridPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 10</value>
+  </data>
+  <data name="gridPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;gridPanel3.Name" xml:space="preserve">
+    <value>gridPanel3</value>
+  </data>
+  <data name="&gt;&gt;gridPanel3.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel3.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gridPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="gridPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 336</value>
+  </data>
+  <data name="gridPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 23</value>
+  </data>
+  <data name="gridPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Name" xml:space="preserve">
+    <value>gridPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 171</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 3, 3, 3</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>422, 15</value>
+  </data>
+  <data name="RFIgridLayoutSubpanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel3.Name" xml:space="preserve">
+    <value>RFIgridLayoutSubpanel3</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel3.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel3.Parent" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutSubpanel3.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="RFIgridLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="RFIgridLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="RFIgridLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 362</value>
+  </data>
+  <data name="RFIgridLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutPanel1.Name" xml:space="preserve">
+    <value>RFIgridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS10, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RFIgridLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 362</value>
+  </data>
+  <data name="&gt;&gt;AAOpenMI.Name" xml:space="preserve">
+    <value>AAOpenMI</value>
+  </data>
+  <data name="&gt;&gt;AAOpenMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AAOpenSourceMI.Name" xml:space="preserve">
+    <value>AAOpenSourceMI</value>
+  </data>
+  <data name="&gt;&gt;AAOpenSourceMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AAOpenTargetMI.Name" xml:space="preserve">
+    <value>AAOpenTargetMI</value>
+  </data>
+  <data name="&gt;&gt;AAOpenTargetMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AAOpenMergedMI.Name" xml:space="preserve">
+    <value>AAOpenMergedMI</value>
+  </data>
+  <data name="&gt;&gt;AAOpenMergedMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AADiffMI.Name" xml:space="preserve">
+    <value>AADiffMI</value>
+  </data>
+  <data name="&gt;&gt;AADiffMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AADiffSourceVsTargetMI.Name" xml:space="preserve">
+    <value>AADiffSourceVsTargetMI</value>
+  </data>
+  <data name="&gt;&gt;AADiffSourceVsTargetMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AADiffBaseVsSourceMI.Name" xml:space="preserve">
+    <value>AADiffBaseVsSourceMI</value>
+  </data>
+  <data name="&gt;&gt;AADiffBaseVsSourceMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AADiffBaseVsTargetMI.Name" xml:space="preserve">
+    <value>AADiffBaseVsTargetMI</value>
+  </data>
+  <data name="&gt;&gt;AADiffBaseVsTargetMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AADiffBaseVsMergedMI.Name" xml:space="preserve">
+    <value>AADiffBaseVsMergedMI</value>
+  </data>
+  <data name="&gt;&gt;AADiffBaseVsMergedMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AADiffSourceVsMergedMI.Name" xml:space="preserve">
+    <value>AADiffSourceVsMergedMI</value>
+  </data>
+  <data name="&gt;&gt;AADiffSourceVsMergedMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AADiffTargetVsMergedMI.Name" xml:space="preserve">
+    <value>AADiffTargetVsMergedMI</value>
+  </data>
+  <data name="&gt;&gt;AADiffTargetVsMergedMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AAHistoryMI.Name" xml:space="preserve">
+    <value>AAHistoryMI</value>
+  </data>
+  <data name="&gt;&gt;AAHistoryMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AAHistorySourceMI.Name" xml:space="preserve">
+    <value>AAHistorySourceMI</value>
+  </data>
+  <data name="&gt;&gt;AAHistorySourceMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AAHistoryTargetMI.Name" xml:space="preserve">
+    <value>AAHistoryTargetMI</value>
+  </data>
+  <data name="&gt;&gt;AAHistoryTargetMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AATimeLapseMI.Name" xml:space="preserve">
+    <value>AATimeLapseMI</value>
+  </data>
+  <data name="&gt;&gt;AATimeLapseMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AATimeLapseSourceMI.Name" xml:space="preserve">
+    <value>AATimeLapseSourceMI</value>
+  </data>
+  <data name="&gt;&gt;AATimeLapseSourceMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AATimeLapseTargetMI.Name" xml:space="preserve">
+    <value>AATimeLapseTargetMI</value>
+  </data>
+  <data name="&gt;&gt;AATimeLapseTargetMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AARevisionGraphMI.Name" xml:space="preserve">
+    <value>AARevisionGraphMI</value>
+  </data>
+  <data name="&gt;&gt;AARevisionGraphMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AARevisionGraphSourceMI.Name" xml:space="preserve">
+    <value>AARevisionGraphSourceMI</value>
+  </data>
+  <data name="&gt;&gt;AARevisionGraphSourceMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AARevisionGraphTargetMI.Name" xml:space="preserve">
+    <value>AARevisionGraphTargetMI</value>
+  </data>
+  <data name="&gt;&gt;AARevisionGraphTargetMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ResolveFileInteractiveControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

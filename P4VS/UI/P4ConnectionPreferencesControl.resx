@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gridLayoutSubpanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gridLayoutSubpanel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="savedLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="savedLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="savedLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="savedLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 4</value>
+  </data>
+  <data name="savedLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="savedLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="savedLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="savedLbl.Text" xml:space="preserve">
+    <value>Saved connections:</value>
+  </data>
+  <data name="savedLbl.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;savedLbl.Name" xml:space="preserve">
+    <value>savedLbl</value>
+  </data>
+  <data name="&gt;&gt;savedLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;savedLbl.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel3</value>
+  </data>
+  <data name="&gt;&gt;savedLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="savedGB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="savedGB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 10</value>
+  </data>
+  <data name="savedGB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="savedGB.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="savedGB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 2</value>
+  </data>
+  <data name="savedGB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;savedGB.Name" xml:space="preserve">
+    <value>savedGB</value>
+  </data>
+  <data name="&gt;&gt;savedGB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;savedGB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel3</value>
+  </data>
+  <data name="&gt;&gt;savedGB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gridLayoutSubpanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 192</value>
+  </data>
+  <data name="gridLayoutSubpanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 5</value>
+  </data>
+  <data name="gridLayoutSubpanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 20</value>
+  </data>
+  <data name="gridLayoutSubpanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel3.Name" xml:space="preserve">
+    <value>gridLayoutSubpanel3</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel3.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel3.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mruLB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="mruLB.HorizontalScrollbar" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mruLB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 220</value>
+  </data>
+  <data name="mruLB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 69</value>
+  </data>
+  <data name="mruLB.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;mruLB.Name" xml:space="preserve">
+    <value>mruLB</value>
+  </data>
+  <data name="&gt;&gt;mruLB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridListBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;mruLB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;mruLB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="removeBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="removeBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="removeBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>375, 220</value>
+  </data>
+  <data name="removeBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="removeBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="removeBtn.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;removeBtn.Name" xml:space="preserve">
+    <value>removeBtn</value>
+  </data>
+  <data name="&gt;&gt;removeBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;removeBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;removeBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gridPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="gridPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 295</value>
+  </data>
+  <data name="gridPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>447, 119</value>
+  </data>
+  <data name="gridPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Name" xml:space="preserve">
+    <value>gridPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ConnectDialogRB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="ConnectDialogRB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ConnectDialogRB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ConnectDialogRB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 29</value>
+  </data>
+  <data name="ConnectDialogRB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 3, 3</value>
+  </data>
+  <data name="ConnectDialogRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 17</value>
+  </data>
+  <data name="ConnectDialogRB.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ConnectDialogRB.Text" xml:space="preserve">
+    <value>Show the Helix Core server Connection dialog</value>
+  </data>
+  <data name="&gt;&gt;ConnectDialogRB.Name" xml:space="preserve">
+    <value>ConnectDialogRB</value>
+  </data>
+  <data name="&gt;&gt;ConnectDialogRB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ConnectDialogRB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ConnectDialogRB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ConnectRecentRB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="ConnectRecentRB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ConnectRecentRB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ConnectRecentRB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 52</value>
+  </data>
+  <data name="ConnectRecentRB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 3, 3</value>
+  </data>
+  <data name="ConnectRecentRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 17</value>
+  </data>
+  <data name="ConnectRecentRB.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ConnectRecentRB.Text" xml:space="preserve">
+    <value>Connect to the server using my most recent settings</value>
+  </data>
+  <data name="&gt;&gt;ConnectRecentRB.Name" xml:space="preserve">
+    <value>ConnectRecentRB</value>
+  </data>
+  <data name="&gt;&gt;ConnectRecentRB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ConnectRecentRB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ConnectRecentRB.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ConnectSolutionRB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="ConnectSolutionRB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ConnectSolutionRB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ConnectSolutionRB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 75</value>
+  </data>
+  <data name="ConnectSolutionRB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 3, 3</value>
+  </data>
+  <data name="ConnectSolutionRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 17</value>
+  </data>
+  <data name="ConnectSolutionRB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ConnectSolutionRB.Text" xml:space="preserve">
+    <value>Connect to the server using solution-specific settings</value>
+  </data>
+  <data name="&gt;&gt;ConnectSolutionRB.Name" xml:space="preserve">
+    <value>ConnectSolutionRB</value>
+  </data>
+  <data name="&gt;&gt;ConnectSolutionRB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ConnectSolutionRB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ConnectSolutionRB.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ConnectEnvironmentRB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="ConnectEnvironmentRB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ConnectEnvironmentRB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ConnectEnvironmentRB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 98</value>
+  </data>
+  <data name="ConnectEnvironmentRB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 3, 3</value>
+  </data>
+  <data name="ConnectEnvironmentRB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 17</value>
+  </data>
+  <data name="ConnectEnvironmentRB.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ConnectEnvironmentRB.Text" xml:space="preserve">
+    <value>Connect to the server using my Helix Core environment settings</value>
+  </data>
+  <data name="&gt;&gt;ConnectEnvironmentRB.Name" xml:space="preserve">
+    <value>ConnectEnvironmentRB</value>
+  </data>
+  <data name="&gt;&gt;ConnectEnvironmentRB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ConnectEnvironmentRB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ConnectEnvironmentRB.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="useIPChk.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="useIPChk.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="useIPChk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="useIPChk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 149</value>
+  </data>
+  <data name="useIPChk.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 3, 3</value>
+  </data>
+  <data name="useIPChk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 17</value>
+  </data>
+  <data name="useIPChk.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="useIPChk.Text" xml:space="preserve">
+    <value>Use IP-specific tickets when logging in</value>
+  </data>
+  <data name="&gt;&gt;useIPChk.Name" xml:space="preserve">
+    <value>useIPChk</value>
+  </data>
+  <data name="&gt;&gt;useIPChk.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;useIPChk.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;useIPChk.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="autoLogoffChk.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="autoLogoffChk.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="autoLogoffChk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="autoLogoffChk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 172</value>
+  </data>
+  <data name="autoLogoffChk.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 3, 3</value>
+  </data>
+  <data name="autoLogoffChk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 17</value>
+  </data>
+  <data name="autoLogoffChk.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="autoLogoffChk.Text" xml:space="preserve">
+    <value>Automatically log off when closing a connection</value>
+  </data>
+  <data name="&gt;&gt;autoLogoffChk.Name" xml:space="preserve">
+    <value>autoLogoffChk</value>
+  </data>
+  <data name="&gt;&gt;autoLogoffChk.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;autoLogoffChk.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;autoLogoffChk.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="gridLayoutSubpanel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="connectLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="connectLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="connectLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="connectLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 6</value>
+  </data>
+  <data name="connectLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="connectLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 13</value>
+  </data>
+  <data name="connectLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="connectLbl.Text" xml:space="preserve">
+    <value>When opening a project under source control:</value>
+  </data>
+  <data name="&gt;&gt;connectLbl.Name" xml:space="preserve">
+    <value>connectLbl</value>
+  </data>
+  <data name="&gt;&gt;connectLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;connectLbl.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;connectLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="connectGB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="connectGB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 11</value>
+  </data>
+  <data name="connectGB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="connectGB.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="connectGB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 2</value>
+  </data>
+  <data name="connectGB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;connectGB.Name" xml:space="preserve">
+    <value>connectGB</value>
+  </data>
+  <data name="&gt;&gt;connectGB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;connectGB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;connectGB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 5</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 21</value>
+  </data>
+  <data name="gridLayoutSubpanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.Name" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="gridLayoutSubpanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="gridLayoutSubpanel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="openCloseLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="openCloseLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="openCloseLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="openCloseLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="openCloseLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="openCloseLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 13</value>
+  </data>
+  <data name="openCloseLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="openCloseLbl.Text" xml:space="preserve">
+    <value>Opening and closing connections:</value>
+  </data>
+  <data name="openCloseLbl.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;openCloseLbl.Name" xml:space="preserve">
+    <value>openCloseLbl</value>
+  </data>
+  <data name="&gt;&gt;openCloseLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;openCloseLbl.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel2</value>
+  </data>
+  <data name="&gt;&gt;openCloseLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="opencCloseGB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="opencCloseGB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 5</value>
+  </data>
+  <data name="opencCloseGB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="opencCloseGB.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="opencCloseGB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 2</value>
+  </data>
+  <data name="opencCloseGB.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;opencCloseGB.Name" xml:space="preserve">
+    <value>opencCloseGB</value>
+  </data>
+  <data name="&gt;&gt;opencCloseGB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridGroupBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;opencCloseGB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel2</value>
+  </data>
+  <data name="&gt;&gt;opencCloseGB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gridLayoutSubpanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 128</value>
+  </data>
+  <data name="gridLayoutSubpanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 10, 0, 5</value>
+  </data>
+  <data name="gridLayoutSubpanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 13</value>
+  </data>
+  <data name="gridLayoutSubpanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel2.Name" xml:space="preserve">
+    <value>gridLayoutSubpanel2</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel2.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="gridLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="gridLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Name" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 417</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>P4ConnectionPreferencesControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

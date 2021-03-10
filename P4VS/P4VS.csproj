@@ -1,0 +1,1296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="..\packages\Microsoft.VSSDK.BuildTools.16.9.1050\build\Microsoft.VSSDK.BuildTools.props" Condition="Exists('..\packages\Microsoft.VSSDK.BuildTools.16.9.1050\build\Microsoft.VSSDK.BuildTools.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.20201</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AECE07A-5D80-4950-9DA5-A681CE2F5106}</ProjectGuid>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Perforce.P4VS</RootNamespace>
+    <AssemblyName>P4VS_Utils</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>14.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VS2012</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+    <DeployExtension>False</DeployExtension>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;VS2012</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\packages\VSSDK.DTE.7.0.4\lib\net20\envdte.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="envdte80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Deployment.WindowsInstaller, Version=3.0.0.0, Culture=neutral, PublicKeyToken=ce35f76fcda82bad, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualStudio.CommandBars, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.DpiAwareness, Version=6.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.DpiAwareness.6.1.28916\lib\net46\Microsoft.VisualStudio.DpiAwareness.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.GraphModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VSSDK.GraphModel.11.0.4\lib\net45\Microsoft.VisualStudio.GraphModel.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ImageCatalog, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.ImageCatalog.14.0.23205\lib\net45\Microsoft.VisualStudio.ImageCatalog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Imaging, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Imaging.14.3.25407\lib\net45\Microsoft.VisualStudio.Imaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\VSSDK.OLE.Interop.7.0.4\lib\net20\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VSSDK.Shell.12.12.0.4\lib\net45\Microsoft.VisualStudio.Shell.12.0.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Embeddable, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.VisualStudio.Shell.Embeddable.14.3.25407\lib\net45\Microsoft.VisualStudio.Shell.Embeddable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VSSDK.Shell.Immutable.10.10.0.4\lib\net40\Microsoft.VisualStudio.Shell.Immutable.10.0.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VSSDK.Shell.Immutable.11.11.0.4\lib\net45\Microsoft.VisualStudio.Shell.Immutable.11.0.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VSSDK.Shell.Immutable.12.12.0.4\lib\net45\Microsoft.VisualStudio.Shell.Immutable.12.0.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\VSSDK.Shell.Interop.7.0.4\lib\net20\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\VSSDK.Shell.Interop.8.8.0.4\lib\net20\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\VSSDK.Shell.Interop.9.9.0.4\lib\net20\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\VSSDK.TextManager.Interop.7.0.4\lib\net20\Microsoft.VisualStudio.TextManager.Interop.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\VSSDK.TextManager.Interop.8.8.0.4\lib\net20\Microsoft.VisualStudio.TextManager.Interop.8.0.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Threading, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VSSDK.Threading.12.0.4\lib\net45\Microsoft.VisualStudio.Threading.dll</HintPath>
+      <Private>True</Private>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Validation, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Validation.14.1.111\lib\net45\Microsoft.VisualStudio.Validation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.9\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenMcdf, Version=2.1.6.28924, Culture=neutral, PublicKeyToken=fdbb1629d7c00800, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenMcdf.2.1.6.28924\lib\OpenMcdf.dll</HintPath>
+    </Reference>
+    <Reference Include="p4api.net">
+      <HintPath>libs\Release\p4api.net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\packages\VSSDK.DTE.7.0.4\lib\net20\stdole.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncPackageHelpers\AsyncPackageRegistrationAttribute.cs" />
+    <Compile Include="AsyncPackageHelpers\ExtensionMethods.cs" />
+    <Compile Include="AsyncPackageHelpers\ProvideAutoLoadAttribute.cs" />
+    <Compile Include="BackwardsCompatibleAsyncPackage.cs" />
+    <Compile Include="P4ScmProvider\RepositoryFactory.cs" />
+    <Compile Include="P4ScmProvider\CommandLine.cs" />
+    <Compile Include="P4ScmProvider\ConnectionHelper.cs" />
+    <Compile Include="P4ScmProvider\ScmSSLCertificateHandler.cs" />
+    <Compile Include="P4ScmProvider\Swarm.cs" />
+    <Compile Include="P4ScmProvider\Versions.cs" />
+    <Compile Include="P4VsProviderServiceChanges.cs" />
+    <Compile Include="P4VsProvider\ActiveChangeListCombo.cs" />
+    <Compile Include="P4VsProvider\Checkout.cs" />
+    <Compile Include="P4VsProvider\CommandStatus.cs" />
+    <Compile Include="P4VsProvider\Connection.cs" />
+    <Compile Include="P4VsProvider\NodeGlyphs.cs" />
+    <Compile Include="P4VsProvider\Action.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="CustomControls\AutoSizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControls\DoubleBufferedListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\FilterComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GridLayoutCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GridLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GridLayoutPanel.designer.cs">
+      <DependentUpon>GridLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\LabeledControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\LabeledControl.designer.cs">
+      <DependentUpon>LabeledControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\SlidingPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\SlidingPanelContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ThemeManager.cs" />
+    <Compile Include="CustomControls\ThreadMonitorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ThreadMonitorControl.Designer.cs">
+      <DependentUpon>ThreadMonitorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\TreeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\TreeListViewItem.cs" />
+    <Compile Include="Framework\FileLogger.cs" />
+    <Compile Include="Framework\ListViewColumnSorter.cs" />
+    <Compile Include="Framework\P4ToolWindowControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="JSONParser\JSONDoc.cs" />
+    <Compile Include="JSONParser\JSONField.cs" />
+    <Compile Include="JSONParser\JSONToken.cs" />
+    <Compile Include="P4ScmProvider\KeepAliveMonitor.cs" />
+    <Compile Include="P4ScmProvider\SourceControlStatus.cs" />
+    <Compile Include="P4VsProvider\P4VStatus.cs" />
+    <Compile Include="P4VsProvider\SelectedNodes.cs" />
+    <Compile Include="P4VsProvider\Solution.cs" />
+    <Compile Include="P4VsProvider\PersistSolutionProps.cs" />
+    <Compile Include="P4VsProvider\StreamStatus.cs" />
+    <Compile Include="Preferences\DictionaryPreference.cs" />
+    <Compile Include="Preferences\ListHeaderSettings.cs" />
+    <Compile Include="ResourcesDictionary.xaml.cs">
+      <DependentUpon>ResourcesDictionary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SolutionExplorer\SolutionExplorerResourses2012.Designer.cs" />
+    <Compile Include="SwarmAPI\Options.cs" />
+    <Compile Include="SwarmAPI\P4SwarmApi.Net.cs" />
+    <Compile Include="UI\HASCheckDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HASCheckDlg.Designer.cs">
+      <DependentUpon>HASCheckDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LaunchingHMFA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LaunchingHMFA.Designer.cs">
+      <DependentUpon>LaunchingHMFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\P4VSMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\P4VSMessage.Designer.cs" />
+    <Compile Include="UI\SystemInfoDlg.xaml.cs">
+      <DependentUpon>SystemInfoDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\P4ShelvedFolderTreeListViewItem.cs" />
+    <Compile Include="UI\P4LicenseDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\P4LicenseDlg.Designer.cs">
+      <DependentUpon>P4LicenseDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReconcileDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReconcileDlg.Designer.cs">
+      <DependentUpon>ReconcileDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SSLCertificateErrorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SSLCertificateErrorDlg.Designer.cs">
+      <DependentUpon>SSLCertificateErrorDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SwarmAPI\SSLCertificateHandler.cs" />
+    <Compile Include="UI\CreateSwarmReviewDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CreateSwarmReviewDlg.Designer.cs">
+      <DependentUpon>CreateSwarmReviewDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\P4ChangeTreeListViewItem.cs" />
+    <Compile Include="UI\P4JobTreeListViewItem.cs" />
+    <Compile Include="UI\P4ObjectTreeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\P4ObjectTreeListView.Designer.cs">
+      <DependentUpon>P4ObjectTreeListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\P4ObjectTreeListViewItem.cs" />
+    <Compile Include="UI\P4ShelvedFileTreeListViewItem.cs" />
+    <Compile Include="UI\QueryEditSyncWarningDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\QueryEditSyncWarningDlg.Designer.cs">
+      <DependentUpon>QueryEditSyncWarningDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StreamsWorkspaceSwitchCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StreamsWorkspaceSwitchCreate.Designer.cs" />
+    <Compile Include="UI\ChangeOwnerDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChangeOwnerDlg.Designer.cs">
+      <DependentUpon>ChangeOwnerDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StreamsToolWindow.cs" />
+    <Compile Include="UI\StreamsToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SwarmReviewsBrowserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SwarmReviewsBrowserDlg.Designer.cs">
+      <DependentUpon>SwarmReviewsBrowserDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SwarmReviewsToolWindow.cs" />
+    <Compile Include="UI\SwarmReviewsToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SwarmToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SwarmToolWindow.cs" />
+    <Compile Include="UI\DlgEditJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DlgEditJob.Designer.cs">
+      <DependentUpon>DlgEditJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\KeepAliveDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\KeepAliveDlg.Designer.cs">
+      <DependentUpon>KeepAliveDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LabelsBrowserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LabelsBrowserDlg.Designer.cs">
+      <DependentUpon>LabelsBrowserDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LabelsToolWindowControlDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LabelsToolWindowControlDetails.Designer.cs">
+      <DependentUpon>LabelsToolWindowControlDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LabelsToolWindowFilesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LabelsToolWindowFilesControl.Designer.cs">
+      <DependentUpon>LabelsToolWindowFilesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NoDiffsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NoDiffsDlg.Designer.cs">
+      <DependentUpon>NoDiffsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\P4IgnorePreferences.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\P4IgnorePreferencesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\P4IgnorePreferencesControl.Designer.cs">
+      <DependentUpon>P4IgnorePreferencesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PromptNewIgnoreFileDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PromptNewIgnoreFileDlg.Designer.cs">
+      <DependentUpon>PromptNewIgnoreFileDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SelectChangelistDlgBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SelectChangelistDlg2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SelectChangelistDlg2.Designer.cs">
+      <DependentUpon>SelectChangelistDlg2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GetNewWorkspaceStringDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GetNewWorkspaceStringDlg.Designer.cs">
+      <DependentUpon>GetNewWorkspaceStringDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SslPromptDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SslPromptDlg.Designer.cs">
+      <DependentUpon>SslPromptDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SubmitShelvedWarningDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SubmitShelvedWarningDlg.Designer.cs">
+      <DependentUpon>SubmitShelvedWarningDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SubmittedChangelistDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SubmittedChangelistDlg.Designer.cs">
+      <DependentUpon>SubmittedChangelistDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NewUserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NewUserDlg.Designer.cs">
+      <DependentUpon>NewUserDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GroupsBrowserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GroupsBrowserDlg.Designer.cs">
+      <DependentUpon>GroupsBrowserDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UsersBrowserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UsersBrowserDlg.Designer.cs">
+      <DependentUpon>UsersBrowserDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RevertWarnDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RevertWarnDlg.Designer.cs">
+      <DependentUpon>RevertWarnDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FileHistoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FileHistoryDialog.Designer.cs">
+      <DependentUpon>FileHistoryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\P4DataRetrievalPreferences.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\P4DataRetrievalPreferencesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\P4FileTreeListViewItem.cs" />
+    <Compile Include="UI\P4LoggingPreferences.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\P4LoggingPreferencesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\FileAttributesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FileAttributesDlg.Designer.cs">
+      <DependentUpon>FileAttributesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FileListWarningDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FileListWarningDlg.Designer.cs">
+      <DependentUpon>FileListWarningDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResolveFileActionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ResolveFileActionControl.Designer.cs">
+      <DependentUpon>ResolveFileActionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IntegrateDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\IntegrateDlg.Designer.cs">
+      <DependentUpon>IntegrateDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResolveFileAutoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ResolveFileAutoControl.Designer.cs">
+      <DependentUpon>ResolveFileAutoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResolveFileDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ResolveFileDlg.Designer.cs">
+      <DependentUpon>ResolveFileDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResolveFileInteractiveControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ResolveFileInteractiveControl.Designer.cs">
+      <DependentUpon>ResolveFileInteractiveControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShowFileContentsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ShowFileContentsDlg.Designer.cs">
+      <DependentUpon>ShowFileContentsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SubmittedChangelistsBrowserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SubmittedChangelistsBrowserDlg.Designer.cs">
+      <DependentUpon>SubmittedChangelistsBrowserDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\P4DiffMergePreferences.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\P4DiffMergePreferencesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\P4ConnectionPreferences.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\P4ConnectionPreferencesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\P4GeneralPreferences.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\P4GeneralPreferencesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UnshelveFileDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UnshelveFileDlg.Designer.cs">
+      <DependentUpon>UnshelveFileDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DiffDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DiffDlg.Designer.cs">
+      <DependentUpon>DiffDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobsBrowserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobsBrowserDlg.Designer.cs">
+      <DependentUpon>JobsBrowserDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PendingChangelistDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PendingChangelistDlg.Designer.cs">
+      <DependentUpon>PendingChangelistDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SelectSubmittedChangelistDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SelectSubmittedChangelistDlg.Designer.cs">
+      <DependentUpon>SelectSubmittedChangelistDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\TempFile.cs" />
+    <Compile Include="UI\SccHistoryDetailsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SccHistoryDetailsControl.Designer.cs">
+      <DependentUpon>SccHistoryDetailsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SccHistoryIntegrationsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SccHistoryIntegrationsControl.Designer.cs">
+      <DependentUpon>SccHistoryIntegrationsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SccHistoryLabelsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SccHistoryLabelsControl.Designer.cs">
+      <DependentUpon>SccHistoryLabelsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GetRevisionDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GetRevisionDlg.Designer.cs">
+      <DependentUpon>GetRevisionDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SelectChangelistDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SelectChangelistDlg.Designer.cs">
+      <DependentUpon>SelectChangelistDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DepotPathDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DepotPathDlg.Designer.cs">
+      <DependentUpon>DepotPathDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\P4Directory.cs" />
+    <Compile Include="UI\ShelveFileCreateChangelistDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ShelveFileCreateChangelistDlg.Designer.cs">
+      <DependentUpon>ShelveFileCreateChangelistDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShelveFileDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ShelveFileDlg.Designer.cs">
+      <DependentUpon>ShelveFileDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SubmittedChangelistsToolWindow.cs" />
+    <Compile Include="UI\SubmittedChangelistsToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\P4ToolWindow.cs" />
+    <Compile Include="UI\P4ToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Preferences\ConnectionData.cs" />
+    <Compile Include="Preferences\MRUList.cs" />
+    <Compile Include="Preferences\Preferences.cs" />
+    <Compile Include="UI\ChooseStringDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChooseStringDlg.Designer.cs">
+      <DependentUpon>ChooseStringDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LabelsToolWindow.cs" />
+    <Compile Include="UI\LabelsToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PendingChangelistsToolWindow.cs" />
+    <Compile Include="UI\PendingChangelistsToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\JobsToolWindow.cs" />
+    <Compile Include="UI\JobsToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\GetStringDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GetStringDlg.Designer.cs">
+      <DependentUpon>GetStringDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\DataStreamFromComStream.cs" />
+    <Compile Include="P4ScmProvider\P4ScmCache.cs" />
+    <Compile Include="P4ScmProvider\P4ScmProvider.cs" />
+    <Compile Include="SolutionExplorer\P4SolutionExplorer.cs" />
+    <Compile Include="UI\DlgEditWorkspace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DlgEditWorkspace.Designer.cs">
+      <DependentUpon>DlgEditWorkspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Framework\ProvideSolutionProps.cs" />
+    <Compile Include="P4VsProvider\P4VsProvider.cs" />
+    <Compile Include="CommandId.cs" />
+    <Compile Include="Guids.cs" />
+    <Compile Include="Framework\ProvideSourceControlProvider.cs" />
+    <Compile Include="Framework\ProvideToolsOptionsPageVisibility.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OpenConnectionDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OpenConnectionDlg.Designer.cs">
+      <DependentUpon>OpenConnectionDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\P4ErrorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\P4ErrorDlg.Designer.cs">
+      <DependentUpon>P4ErrorDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\P4Options.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\P4OptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="P4VsProviderService.cs" />
+    <Compile Include="UI\SccHistoryToolWindow.cs" />
+    <Compile Include="UI\SccHistoryToolWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CommandOutputWindowPane.cs" />
+    <Compile Include="UI\SubmitDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SubmitDlg.Designer.cs">
+      <DependentUpon>SubmitDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LicenseDlg.xaml.cs">
+      <DependentUpon>LicenseDlg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkspacesWindow.cs" />
+    <Compile Include="UI\WorkspacesWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\WorkspacesBrowserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkspacesBrowserDlg.Designer.cs">
+      <DependentUpon>WorkspacesBrowserDlg.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomControls\DoubleBufferedListView.resx">
+      <DependentUpon>DoubleBufferedListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\GridLayoutPanel.resx">
+      <DependentUpon>GridLayoutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\LabeledControl.resx">
+      <DependentUpon>LabeledControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\SlidingPanel.resx">
+      <DependentUpon>SlidingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\SlidingPanelContainer.resx">
+      <DependentUpon>SlidingPanelContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\ThreadMonitorControl.resx">
+      <DependentUpon>ThreadMonitorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\TreeListView.resx">
+      <DependentUpon>TreeListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SolutionExplorer\SolutionExplorerResourses2012.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HASCheckDlg.resx">
+      <DependentUpon>HASCheckDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LaunchingHMFA.resx">
+      <DependentUpon>LaunchingHMFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4VSMessage.resx" />
+    <EmbeddedResource Include="UI\P4LicenseDlg.resx">
+      <DependentUpon>P4LicenseDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReconcileDlg.resx">
+      <DependentUpon>ReconcileDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SSLCertificateErrorDlg.resx">
+      <DependentUpon>SSLCertificateErrorDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CreateSwarmReviewDlg.resx">
+      <DependentUpon>CreateSwarmReviewDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4ObjectTreeListView.resx">
+      <DependentUpon>P4ObjectTreeListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\QueryEditSyncWarningDlg.resx">
+      <DependentUpon>QueryEditSyncWarningDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StreamsWorkspaceSwitchCreate.resx" />
+    <EmbeddedResource Include="UI\ChangeOwnerDlg.resx">
+      <DependentUpon>ChangeOwnerDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StreamsToolWindowControl.resx">
+      <DependentUpon>StreamsToolWindowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SwarmReviewsBrowserDlg.resx">
+      <DependentUpon>SwarmReviewsBrowserDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SwarmReviewsToolWindow.resx">
+      <DependentUpon>SwarmReviewsToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SwarmReviewsToolWindowControl.resx">
+      <DependentUpon>SwarmReviewsToolWindowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SwarmToolWindowControl.resx">
+      <DependentUpon>SwarmToolWindowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SwarmToolWindow.resx">
+      <DependentUpon>SwarmToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DlgEditJob.resx">
+      <DependentUpon>DlgEditJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\KeepAliveDlg.resx">
+      <DependentUpon>KeepAliveDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LabelsBrowserDlg.resx">
+      <DependentUpon>LabelsBrowserDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LabelsToolWindowControlDetails.resx">
+      <DependentUpon>LabelsToolWindowControlDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LabelsToolWindowFilesControl.resx">
+      <DependentUpon>LabelsToolWindowFilesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NoDiffsDlg.resx">
+      <DependentUpon>NoDiffsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4IgnorePreferencesControl.resx">
+      <DependentUpon>P4IgnorePreferencesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PromptNewIgnoreFileDlg.resx">
+      <DependentUpon>PromptNewIgnoreFileDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SelectChangelistDlg2.resx">
+      <DependentUpon>SelectChangelistDlg2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GetNewWorkspaceStringDlg.resx">
+      <DependentUpon>GetNewWorkspaceStringDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FileListWarningDlg.resx">
+      <DependentUpon>FileListWarningDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResolveFileActionControl.resx">
+      <DependentUpon>ResolveFileActionControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SslPromptDlg.resx">
+      <DependentUpon>SslPromptDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SubmitShelvedWarningDlg.resx">
+      <DependentUpon>SubmitShelvedWarningDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SubmittedChangelistDlg.resx">
+      <DependentUpon>SubmittedChangelistDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NewUserDlg.resx">
+      <DependentUpon>NewUserDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GroupsBrowserDlg.resx">
+      <DependentUpon>GroupsBrowserDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UsersBrowserDlg.resx">
+      <DependentUpon>UsersBrowserDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RevertWarnDlg.resx">
+      <DependentUpon>RevertWarnDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FileHistoryDialog.resx">
+      <DependentUpon>FileHistoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4DataRetrievalPreferencesControl.resx">
+      <DependentUpon>P4DataRetrievalPreferencesControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4LoggingPreferencesControl.resx">
+      <DependentUpon>P4LoggingPreferencesControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FileAttributesDlg.resx">
+      <DependentUpon>FileAttributesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\IntegrateDlg.resx">
+      <DependentUpon>IntegrateDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4DiffMergePreferencesControl.resx">
+      <DependentUpon>P4DiffMergePreferencesControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4ConnectionPreferencesControl.resx">
+      <DependentUpon>P4ConnectionPreferencesControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4GeneralPreferencesControl.resx">
+      <DependentUpon>P4GeneralPreferencesControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResolveFileAutoControl.resx">
+      <DependentUpon>ResolveFileAutoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResolveFileDlg.resx">
+      <DependentUpon>ResolveFileDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResolveFileInteractiveControl.resx">
+      <DependentUpon>ResolveFileInteractiveControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SelectSubmittedChangelistDlg.resx">
+      <DependentUpon>SelectSubmittedChangelistDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ShowFileContentsDlg.resx">
+      <DependentUpon>ShowFileContentsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SubmittedChangelistsBrowserDlg.resx">
+      <DependentUpon>SubmittedChangelistsBrowserDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UnshelveFileDlg.resx">
+      <DependentUpon>UnshelveFileDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DiffDlg.resx">
+      <DependentUpon>DiffDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobsBrowserDlg.resx">
+      <DependentUpon>JobsBrowserDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PendingChangelistDlg.resx">
+      <DependentUpon>PendingChangelistDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SccHistoryDetailsControl.resx">
+      <DependentUpon>SccHistoryDetailsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SccHistoryIntegrationsControl.resx">
+      <DependentUpon>SccHistoryIntegrationsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SccHistoryLabelsControl.resx">
+      <DependentUpon>SccHistoryLabelsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GetRevisionDlg.resx">
+      <DependentUpon>GetRevisionDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SelectChangelistDlg.resx">
+      <DependentUpon>SelectChangelistDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DepotPathDlg.resx">
+      <DependentUpon>DepotPathDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ShelveFileCreateChangelistDlg.resx">
+      <DependentUpon>ShelveFileCreateChangelistDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ShelveFileDlg.resx">
+      <DependentUpon>ShelveFileDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SubmittedChangelistsToolWindowControl.resx">
+      <DependentUpon>SubmittedChangelistsToolWindowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4ToolWindow.resx">
+      <DependentUpon>P4ToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4ToolWindowControl.resx">
+      <DependentUpon>P4ToolWindowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChooseStringDlg.resx">
+      <DependentUpon>ChooseStringDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LabelsToolWindowControl.resx">
+      <DependentUpon>LabelsToolWindowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PendingChangelistsToolWindowControl.resx">
+      <DependentUpon>PendingChangelistsToolWindowControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DlgEditWorkspace.resx">
+      <DependentUpon>DlgEditWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <MergeWithCTO>true</MergeWithCTO>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GetStringDlg.resx">
+      <DependentUpon>GetStringDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobsToolWindowControl.resx">
+      <DependentUpon>JobsToolWindowControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OpenConnectionDlg.resx">
+      <DependentUpon>OpenConnectionDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4ErrorDlg.resx">
+      <DependentUpon>P4ErrorDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\P4OptionsControl.resx">
+      <DependentUpon>P4OptionsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SccHistoryToolWindow.resx">
+      <DependentUpon>SccHistoryToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SccHistoryToolWindowControl.resx">
+      <DependentUpon>SccHistoryToolWindowControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SubmitDlg.resx">
+      <DependentUpon>SubmitDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkspacesWindow.resx">
+      <DependentUpon>WorkspacesWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkspacesWindowControl.resx">
+      <DependentUpon>WorkspacesWindowControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkspacesBrowserDlg.resx">
+      <DependentUpon>WorkspacesBrowserDlg.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon-p4vs11-250px.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="LICENSE.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="libs\Release\p4bridge.dll">
+      <Link>p4bridge.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="p4vs11-32px.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="HelixMoniker.vsct" />
+    <Content Include="HelixMoniker.imagemanifest">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <Resource Include="Resources\icon-p4vs-16px.ico" />
+    <Resource Include="Resources\Helix.16.16.png" />
+    <Content Include="Product.ico" />
+    <Content Include="Resources\add_toolbar_icon16x16.png" />
+    <Content Include="Resources\checkout_toolbar_icon16x16.png" />
+    <Content Include="Resources\delete_toolbar_icon16x16.png" />
+    <None Include="Resources\reconcile_add.bmp" />
+    <None Include="Resources\groups_icon.png" />
+    <None Include="Resources\HMFA-spinner-78x78.gif" />
+    <None Include="Resources\download-icon.png" />
+    <Resource Include="Resources\label.ico" />
+    <Content Include="Resources\shelve_icon_folder.png" />
+    <Content Include="Resources\toolwindow_icons_strip.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_0.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_1.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_10.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_11.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_12.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_13.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_14.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_15.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_18.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_2.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_20.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_21.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_23.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_3.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_22.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_33.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_35.png" />
+    <None Include="SolutionExplorer\Resources2012\Glyph_37.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_38.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_4.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_28.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_44.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_5.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_6.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_7.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_8.png" />
+    <Content Include="SolutionExplorer\Resources2012\Glyph_9.png" />
+    <None Include="Resources\503.bmp" />
+    <None Include="Resources\504.bmp" />
+    <None Include="Resources\505.bmp" />
+    <None Include="Resources\506.bmp" />
+    <Content Include="Resources\502.bmp" />
+    <None Include="Resources\502.png" />
+    <None Include="Resources\503.png" />
+    <None Include="Resources\504.png" />
+    <None Include="Resources\505.png" />
+    <None Include="Resources\506.png" />
+    <Content Include="Resources\507.bmp" />
+    <None Include="Resources\508.png" />
+    <Content Include="Resources\addO_badge.png" />
+    <Content Include="Resources\add_badge.png" />
+    <Content Include="Resources\add_moveO_badge.png" />
+    <Content Include="Resources\add_move_badge.png" />
+    <Content Include="Resources\blank.png" />
+    <Content Include="Resources\branchO_badge.png" />
+    <Content Include="Resources\branch_badge.png" />
+    <Content Include="Resources\CheckBox.png" />
+    <Content Include="Resources\collapsed.png" />
+    <Content Include="Resources\deleteO_badge.png" />
+    <Content Include="Resources\delete_badge.png" />
+    <Content Include="Resources\delete_center_badge.png" />
+    <Content Include="Resources\delete_moveO_badge.png" />
+    <Content Include="Resources\delete_move_badge.png" />
+    <Content Include="Resources\delete_move_center_badge.png" />
+    <Content Include="Resources\depot_icon.png" />
+    <Content Include="Resources\editO_badge.png" />
+    <Content Include="Resources\edit_badge.png" />
+    <Content Include="Resources\expanded.png" />
+    <Content Include="Resources\file_changed_icon.png" />
+    <Content Include="Resources\file_depot_icon.png" />
+    <Content Include="Resources\file_local_icon.png" />
+    <Content Include="Resources\file_notInClient_icon.png" />
+    <Content Include="Resources\file_unmapped_icon.png" />
+    <Content Include="Resources\head_dot_badge.png" />
+    <Content Include="Resources\Images_24bit.bmp" />
+    <None Include="Resources\HistoryToolWindow.bmp" />
+    <Content Include="Resources\Images_32bit.bmp" />
+    <Content Include="Resources\integrateO_badge.png" />
+    <Content Include="Resources\integrate_badge.png" />
+    <Content Include="Resources\lock_badge.png" />
+    <Content Include="Resources\lock_other_badge.png" />
+    <Content Include="Resources\minus.png" />
+    <Content Include="Resources\noCheckBox.png" />
+    <Content Include="Resources\out_of_sync_badge.png" />
+    <Content Include="Resources\pending_icon.png" />
+    <Content Include="Resources\pending_other.png" />
+    <Content Include="Resources\pending_resolve.png" />
+    <Content Include="Resources\plus.png" />
+    <None Include="Resources\ResolveCommon.bmp" />
+    <Content Include="Resources\ResolveFlow.bmp" />
+    <None Include="Resources\ResolveFlow.png" />
+    <Content Include="Resources\resolve_badge.png" />
+    <Content Include="Resources\revision_icon_add.png" />
+    <Content Include="Resources\revision_icon_archive.png" />
+    <Content Include="Resources\revision_icon_branch.png" />
+    <Content Include="Resources\revision_icon_delete.png" />
+    <Content Include="Resources\revision_icon_edit.png" />
+    <Content Include="Resources\revision_icon_integrate.png" />
+    <Content Include="Resources\revision_icon_moveadd.png" />
+    <Content Include="Resources\revision_icon_movedelete.png" />
+    <Content Include="Resources\revision_icon_purge.png" />
+    <None Include="Resources\SslWarning.png" />
+    <Content Include="Resources\TriangleDownGray.png" />
+    <Content Include="Resources\TriangleDownRed.png" />
+    <Content Include="Resources\TriangleRightGray.png" />
+    <Content Include="Resources\TriangleRightRed.png" />
+    <Content Include="Resources\virtual_file_badge.png" />
+    <Content Include="Resources\virtual_folder_badge.png" />
+    <None Include="Resources\Product.ico" />
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <VSCTCompile Include="PkgCmd.vsct">
+      <ResourceName>1000</ResourceName>
+      <SubType>Designer</SubType>
+    </VSCTCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="libs\Release\" />
+    <Folder Include="TestDialog\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ResourcesDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scrollbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SystemInfoDlg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\LicenseDlg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup>
+    <!--
+	To specify a different registry root to register your package, uncomment the TargetRegistryRoot
+	tag and specify a registry root in it.
+	<TargetRegistryRoot></TargetRegistryRoot>
+	-->
+    <RegisterOutputPackage>true</RegisterOutputPackage>
+    <RegisterWithCodebase>true</RegisterWithCodebase>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Product.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\VSSDK\Microsoft.VsSDK.targets" Condition="false" />
+  <PropertyGroup>
+    <PreBuildEvent>
+          $(SolutionDir)tools\nuget.exe restore  $(SolutionDir)P4VS.sln
+  </PreBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.VSSDK.BuildTools.16.9.1050\build\Microsoft.VSSDK.BuildTools.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VSSDK.BuildTools.16.9.1050\build\Microsoft.VSSDK.BuildTools.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.VSSDK.BuildTools.16.9.1050\build\Microsoft.VSSDK.BuildTools.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VSSDK.BuildTools.16.9.1050\build\Microsoft.VSSDK.BuildTools.targets'))" />
+  </Target>  
+  <Import Project="..\packages\Microsoft.VSSDK.BuildTools.16.9.1050\build\Microsoft.VSSDK.BuildTools.targets" Condition="Exists('..\packages\Microsoft.VSSDK.BuildTools.16.9.1050\build\Microsoft.VSSDK.BuildTools.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="FilesContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>234, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="FilesContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 48</value>
+  </data>
+  <data name="&gt;&gt;FilesContextMenuStrip.Name" xml:space="preserve">
+    <value>FilesContextMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;FilesContextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DiffvsHaveMI.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+D</value>
+  </data>
+  <data name="DiffvsHaveMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 22</value>
+  </data>
+  <data name="DiffvsHaveMI.Text" xml:space="preserve">
+    <value>Diff Against Have Revision</value>
+  </data>
+  <data name="ResolveMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 22</value>
+  </data>
+  <data name="ResolveMI.Text" xml:space="preserve">
+    <value>Resolve...</value>
+  </data>
+  <metadata name="ShelvedFilesContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ShelvedFilesContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 126</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesContextMenuStrip.Name" xml:space="preserve">
+    <value>ShelvedFilesContextMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesContextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ShowContentsSFCM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 22</value>
+  </data>
+  <data name="ShowContentsSFCM.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 6</value>
+  </data>
+  <data name="UnshelveSFCM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 22</value>
+  </data>
+  <data name="UnshelveSFCM.Text" xml:space="preserve">
+    <value>Unshelve...</value>
+  </data>
+  <data name="DeleteShelvedFileSFCM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 22</value>
+  </data>
+  <data name="DeleteShelvedFileSFCM.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 6</value>
+  </data>
+  <data name="DiffAgainstSourceSFCM.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+D</value>
+  </data>
+  <data name="DiffAgainstSourceSFCM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 22</value>
+  </data>
+  <data name="DiffAgainstSourceSFCM.Text" xml:space="preserve">
+    <value>Diff Against Source Revision</value>
+  </data>
+  <data name="DiffAgainstWorkspaceSFCM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 22</value>
+  </data>
+  <data name="DiffAgainstWorkspaceSFCM.Text" xml:space="preserve">
+    <value>Diff Against Workspace File</value>
+  </data>
+  <data name="OkBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="OkBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OkBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>430, 574</value>
+  </data>
+  <data name="OkBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="OkBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="OkBtn.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;OkBtn.Name" xml:space="preserve">
+    <value>OkBtn</value>
+  </data>
+  <data name="&gt;&gt;OkBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;OkBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;OkBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CancelBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="CancelBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 574</value>
+  </data>
+  <data name="CancelBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 7, 3</value>
+  </data>
+  <data name="CancelBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="CancelBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="CancelBtn.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.Name" xml:space="preserve">
+    <value>CancelBtn</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;CancelBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="slidingPanelContainer1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;DescriptionPanel.Name" xml:space="preserve">
+    <value>DescriptionPanel</value>
+  </data>
+  <data name="&gt;&gt;DescriptionPanel.Type" xml:space="preserve">
+    <value>Perforce.P4VS.SlidingPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;DescriptionPanel.Parent" xml:space="preserve">
+    <value>slidingPanelContainer1</value>
+  </data>
+  <data name="&gt;&gt;DescriptionPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FilesPanel.Name" xml:space="preserve">
+    <value>FilesPanel</value>
+  </data>
+  <data name="&gt;&gt;FilesPanel.Type" xml:space="preserve">
+    <value>Perforce.P4VS.SlidingPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;FilesPanel.Parent" xml:space="preserve">
+    <value>slidingPanelContainer1</value>
+  </data>
+  <data name="&gt;&gt;FilesPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesPanel.Name" xml:space="preserve">
+    <value>ShelvedFilesPanel</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesPanel.Type" xml:space="preserve">
+    <value>Perforce.P4VS.SlidingPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesPanel.Parent" xml:space="preserve">
+    <value>slidingPanelContainer1</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;JobsPanel.Name" xml:space="preserve">
+    <value>JobsPanel</value>
+  </data>
+  <data name="&gt;&gt;JobsPanel.Type" xml:space="preserve">
+    <value>Perforce.P4VS.SlidingPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;JobsPanel.Parent" xml:space="preserve">
+    <value>slidingPanelContainer1</value>
+  </data>
+  <data name="&gt;&gt;JobsPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="slidingPanelContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 83</value>
+  </data>
+  <data name="slidingPanelContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 485</value>
+  </data>
+  <data name="slidingPanelContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;slidingPanelContainer1.Name" xml:space="preserve">
+    <value>slidingPanelContainer1</value>
+  </data>
+  <data name="&gt;&gt;slidingPanelContainer1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridSlidingPanelContainer, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;slidingPanelContainer1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;slidingPanelContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DescriptionPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;DescriptionTB.Name" xml:space="preserve">
+    <value>DescriptionTB</value>
+  </data>
+  <data name="&gt;&gt;DescriptionTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DescriptionTB.Parent" xml:space="preserve">
+    <value>DescriptionPanel</value>
+  </data>
+  <data name="&gt;&gt;DescriptionTB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="DescriptionPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 2</value>
+  </data>
+  <data name="DescriptionPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>569, 71</value>
+  </data>
+  <data name="DescriptionPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;DescriptionPanel.Name" xml:space="preserve">
+    <value>DescriptionPanel</value>
+  </data>
+  <data name="&gt;&gt;DescriptionPanel.Type" xml:space="preserve">
+    <value>Perforce.P4VS.SlidingPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;DescriptionPanel.Parent" xml:space="preserve">
+    <value>slidingPanelContainer1</value>
+  </data>
+  <data name="&gt;&gt;DescriptionPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DescriptionTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="DescriptionTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 30</value>
+  </data>
+  <data name="DescriptionTB.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DescriptionTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>553, 38</value>
+  </data>
+  <data name="DescriptionTB.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;DescriptionTB.Name" xml:space="preserve">
+    <value>DescriptionTB</value>
+  </data>
+  <data name="&gt;&gt;DescriptionTB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DescriptionTB.Parent" xml:space="preserve">
+    <value>DescriptionPanel</value>
+  </data>
+  <data name="&gt;&gt;DescriptionTB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="FilesPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;SelectAllFilesCB.Name" xml:space="preserve">
+    <value>SelectAllFilesCB</value>
+  </data>
+  <data name="&gt;&gt;SelectAllFilesCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectAllFilesCB.Parent" xml:space="preserve">
+    <value>FilesPanel</value>
+  </data>
+  <data name="&gt;&gt;SelectAllFilesCB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;FileFlatList.Name" xml:space="preserve">
+    <value>FileFlatList</value>
+  </data>
+  <data name="&gt;&gt;FileFlatList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileFlatList.Parent" xml:space="preserve">
+    <value>FilesPanel</value>
+  </data>
+  <data name="&gt;&gt;FileFlatList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;FileListLV.Name" xml:space="preserve">
+    <value>FileListLV</value>
+  </data>
+  <data name="&gt;&gt;FileListLV.Type" xml:space="preserve">
+    <value>Perforce.P4VS.P4ObjectTreeListView, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;FileListLV.Parent" xml:space="preserve">
+    <value>FilesPanel</value>
+  </data>
+  <data name="&gt;&gt;FileListLV.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="FilesPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 76</value>
+  </data>
+  <data name="FilesPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>570, 83</value>
+  </data>
+  <data name="FilesPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;FilesPanel.Name" xml:space="preserve">
+    <value>FilesPanel</value>
+  </data>
+  <data name="&gt;&gt;FilesPanel.Type" xml:space="preserve">
+    <value>Perforce.P4VS.SlidingPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;FilesPanel.Parent" xml:space="preserve">
+    <value>slidingPanelContainer1</value>
+  </data>
+  <data name="&gt;&gt;FilesPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SelectAllFilesCB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SelectAllFilesCB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="SelectAllFilesCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 38</value>
+  </data>
+  <data name="SelectAllFilesCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
+  </data>
+  <data name="SelectAllFilesCB.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;SelectAllFilesCB.Name" xml:space="preserve">
+    <value>SelectAllFilesCB</value>
+  </data>
+  <data name="&gt;&gt;SelectAllFilesCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectAllFilesCB.Parent" xml:space="preserve">
+    <value>FilesPanel</value>
+  </data>
+  <data name="&gt;&gt;SelectAllFilesCB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="FileFlatList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="FileFlatList.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="FileFlatList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 35</value>
+  </data>
+  <data name="FileFlatList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>554, 48</value>
+  </data>
+  <data name="FileFlatList.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="FileFlatList.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;FileFlatList.Name" xml:space="preserve">
+    <value>FileFlatList</value>
+  </data>
+  <data name="&gt;&gt;FileFlatList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileFlatList.Parent" xml:space="preserve">
+    <value>FilesPanel</value>
+  </data>
+  <data name="&gt;&gt;FileFlatList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="FileListLV.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="SelectedClm.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="SelectedClm.Width" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="NameClm.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameClm.Width" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="FolderClm.Text" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="FolderClm.Width" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="ResolveStatusClm.Text" xml:space="preserve">
+    <value>Resolve Status</value>
+  </data>
+  <data name="TypeClm.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="PendingActionClm.Text" xml:space="preserve">
+    <value>Pending Action</value>
+  </data>
+  <data name="FileListLV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 36</value>
+  </data>
+  <data name="FileListLV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>554, 47</value>
+  </data>
+  <data name="FileListLV.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;FileListLV.Name" xml:space="preserve">
+    <value>FileListLV</value>
+  </data>
+  <data name="&gt;&gt;FileListLV.Type" xml:space="preserve">
+    <value>Perforce.P4VS.P4ObjectTreeListView, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;FileListLV.Parent" xml:space="preserve">
+    <value>FilesPanel</value>
+  </data>
+  <data name="&gt;&gt;FileListLV.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ShelvedFilesPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesLV.Name" xml:space="preserve">
+    <value>ShelvedFilesLV</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesLV.Type" xml:space="preserve">
+    <value>Perforce.P4VS.DoubleBufferedListView, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesLV.Parent" xml:space="preserve">
+    <value>ShelvedFilesPanel</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesLV.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ShelvedFilesPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 163</value>
+  </data>
+  <data name="ShelvedFilesPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>570, 89</value>
+  </data>
+  <data name="ShelvedFilesPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesPanel.Name" xml:space="preserve">
+    <value>ShelvedFilesPanel</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesPanel.Type" xml:space="preserve">
+    <value>Perforce.P4VS.SlidingPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesPanel.Parent" xml:space="preserve">
+    <value>slidingPanelContainer1</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ShelvedFilesLV.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="ShelvedFileNameClm.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ShelvedFileNameClm.Width" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="ShelvedFileActionClm.Text" xml:space="preserve">
+    <value>Shelved Action</value>
+  </data>
+  <data name="ShelvedFileActionClm.Width" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="ShelvedFileFolderClm.Text" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="ShelvedFileFolderClm.Width" type="System.Int32, mscorlib">
+    <value>256</value>
+  </data>
+  <data name="ShelvedFilesLV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 31</value>
+  </data>
+  <data name="ShelvedFilesLV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>554, 57</value>
+  </data>
+  <data name="ShelvedFilesLV.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesLV.Name" xml:space="preserve">
+    <value>ShelvedFilesLV</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesLV.Type" xml:space="preserve">
+    <value>Perforce.P4VS.DoubleBufferedListView, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesLV.Parent" xml:space="preserve">
+    <value>ShelvedFilesPanel</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFilesLV.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="JobsPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.Name" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.Parent" xml:space="preserve">
+    <value>JobsPanel</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="JobsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 255</value>
+  </data>
+  <data name="JobsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>570, 145</value>
+  </data>
+  <data name="JobsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;JobsPanel.Name" xml:space="preserve">
+    <value>JobsPanel</value>
+  </data>
+  <data name="&gt;&gt;JobsPanel.Type" xml:space="preserve">
+    <value>Perforce.P4VS.SlidingPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;JobsPanel.Parent" xml:space="preserve">
+    <value>slidingPanelContainer1</value>
+  </data>
+  <data name="&gt;&gt;JobsPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gridLayoutPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;BrowseJobsBtn.Name" xml:space="preserve">
+    <value>BrowseJobsBtn</value>
+  </data>
+  <data name="&gt;&gt;BrowseJobsBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;BrowseJobsBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;BrowseJobsBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;JobLbl.Name" xml:space="preserve">
+    <value>JobLbl</value>
+  </data>
+  <data name="&gt;&gt;JobLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;JobLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;JobLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SelectAllJobsCB.Name" xml:space="preserve">
+    <value>SelectAllJobsCB</value>
+  </data>
+  <data name="&gt;&gt;SelectAllJobsCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectAllJobsCB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;SelectAllJobsCB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;JobTB.Name" xml:space="preserve">
+    <value>JobTB</value>
+  </data>
+  <data name="&gt;&gt;JobTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;JobTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;JobTB.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;AddJobBtn.Name" xml:space="preserve">
+    <value>AddJobBtn</value>
+  </data>
+  <data name="&gt;&gt;AddJobBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;AddJobBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;AddJobBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;JobsListLV.Name" xml:space="preserve">
+    <value>JobsListLV</value>
+  </data>
+  <data name="&gt;&gt;JobsListLV.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridDoubleBufferedListView, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;JobsListLV.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;JobsListLV.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="gridLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-3, 27</value>
+  </data>
+  <data name="gridLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>571, 118</value>
+  </data>
+  <data name="gridLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.Name" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.Parent" xml:space="preserve">
+    <value>JobsPanel</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BrowseJobsBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="BrowseJobsBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BrowseJobsBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>504, 92</value>
+  </data>
+  <data name="BrowseJobsBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="BrowseJobsBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="BrowseJobsBtn.Text" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="&gt;&gt;BrowseJobsBtn.Name" xml:space="preserve">
+    <value>BrowseJobsBtn</value>
+  </data>
+  <data name="&gt;&gt;BrowseJobsBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;BrowseJobsBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;BrowseJobsBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="JobLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="JobLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="JobLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="JobLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 97</value>
+  </data>
+  <data name="JobLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>12, 0, 3, 0</value>
+  </data>
+  <data name="JobLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="JobLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="JobLbl.Text" xml:space="preserve">
+    <value>Job:</value>
+  </data>
+  <data name="&gt;&gt;JobLbl.Name" xml:space="preserve">
+    <value>JobLbl</value>
+  </data>
+  <data name="&gt;&gt;JobLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;JobLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;JobLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SelectAllJobsCB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SelectAllJobsCB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="SelectAllJobsCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 14</value>
+  </data>
+  <data name="SelectAllJobsCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
+  </data>
+  <data name="SelectAllJobsCB.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;SelectAllJobsCB.Name" xml:space="preserve">
+    <value>SelectAllJobsCB</value>
+  </data>
+  <data name="&gt;&gt;SelectAllJobsCB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectAllJobsCB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;SelectAllJobsCB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="JobTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="JobTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 93</value>
+  </data>
+  <data name="JobTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>383, 20</value>
+  </data>
+  <data name="JobTB.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;JobTB.Name" xml:space="preserve">
+    <value>JobTB</value>
+  </data>
+  <data name="&gt;&gt;JobTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;JobTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;JobTB.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="AddJobBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="AddJobBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="AddJobBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="AddJobBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>434, 92</value>
+  </data>
+  <data name="AddJobBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="AddJobBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="AddJobBtn.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;AddJobBtn.Name" xml:space="preserve">
+    <value>AddJobBtn</value>
+  </data>
+  <data name="&gt;&gt;AddJobBtn.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;AddJobBtn.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;AddJobBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="JobsListLV.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="JobsListLV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 3</value>
+  </data>
+  <data name="JobsListLV.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>12, 3, 3, 3</value>
+  </data>
+  <data name="JobsListLV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 83</value>
+  </data>
+  <data name="JobsListLV.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;JobsListLV.Name" xml:space="preserve">
+    <value>JobsListLV</value>
+  </data>
+  <data name="&gt;&gt;JobsListLV.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridDoubleBufferedListView, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;JobsListLV.Parent" xml:space="preserve">
+    <value>gridLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;JobsListLV.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="JobClm.Text" xml:space="preserve">
+    <value>      Job</value>
+  </data>
+  <data name="JobClm.Width" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="StatusClm.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StatusClm.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="JobDescriptionClm.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="JobDescriptionClm.Width" type="System.Int32, mscorlib">
+    <value>271</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="gridLayoutSubpanel1.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;ChangelistTB.Name" xml:space="preserve">
+    <value>ChangelistTB</value>
+  </data>
+  <data name="&gt;&gt;ChangelistTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ChangelistTB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;ChangelistTB.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;WorkspaceTB.Name" xml:space="preserve">
+    <value>WorkspaceTB</value>
+  </data>
+  <data name="&gt;&gt;WorkspaceTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;WorkspaceTB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;WorkspaceTB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RestrictAccessCB.Name" xml:space="preserve">
+    <value>RestrictAccessCB</value>
+  </data>
+  <data name="&gt;&gt;RestrictAccessCB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;RestrictAccessCB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;RestrictAccessCB.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;UserTB.Name" xml:space="preserve">
+    <value>UserTB</value>
+  </data>
+  <data name="&gt;&gt;UserTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;UserTB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;UserTB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;DateTB.Name" xml:space="preserve">
+    <value>DateTB</value>
+  </data>
+  <data name="&gt;&gt;DateTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;DateTB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;DateTB.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 10, 10, 5</value>
+  </data>
+  <data name="gridLayoutSubpanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>572, 80</value>
+  </data>
+  <data name="gridLayoutSubpanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.Name" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutSubpanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ChangelistTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="ChangelistTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="ChangelistTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 20</value>
+  </data>
+  <data name="ChangelistTB.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ChangelistTB.Name" xml:space="preserve">
+    <value>ChangelistTB</value>
+  </data>
+  <data name="&gt;&gt;ChangelistTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;ChangelistTB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;ChangelistTB.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Changelist:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="WorkspaceTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="WorkspaceTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>355, 13</value>
+  </data>
+  <data name="WorkspaceTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="WorkspaceTB.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;WorkspaceTB.Name" xml:space="preserve">
+    <value>WorkspaceTB</value>
+  </data>
+  <data name="&gt;&gt;WorkspaceTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;WorkspaceTB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;WorkspaceTB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RestrictAccessCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="RestrictAccessCB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RestrictAccessCB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RestrictAccessCB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 65</value>
+  </data>
+  <data name="RestrictAccessCB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 17</value>
+  </data>
+  <data name="RestrictAccessCB.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RestrictAccessCB.Text" xml:space="preserve">
+    <value>Restrict access to changelist</value>
+  </data>
+  <data name="&gt;&gt;RestrictAccessCB.Name" xml:space="preserve">
+    <value>RestrictAccessCB</value>
+  </data>
+  <data name="&gt;&gt;RestrictAccessCB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;RestrictAccessCB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;RestrictAccessCB.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="UserTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="UserTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>355, 39</value>
+  </data>
+  <data name="UserTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="UserTB.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;UserTB.Name" xml:space="preserve">
+    <value>UserTB</value>
+  </data>
+  <data name="&gt;&gt;UserTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;UserTB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;UserTB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 42</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="DateTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="DateTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 39</value>
+  </data>
+  <data name="DateTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 20</value>
+  </data>
+  <data name="DateTB.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;DateTB.Name" xml:space="preserve">
+    <value>DateTB</value>
+  </data>
+  <data name="&gt;&gt;DateTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;DateTB.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;DateTB.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 16</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Workspace:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 42</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>User:</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>gridLayoutSubpanel1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="panel1.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>572, 566</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Name" xml:space="preserve">
+    <value>gridPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gridLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>572, 607</value>
+  </data>
+  <data name="gridLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Name" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gridLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gridPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="gridPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 574</value>
+  </data>
+  <data name="gridPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>404, 23</value>
+  </data>
+  <data name="gridPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Name" xml:space="preserve">
+    <value>gridPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;gridPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>33</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>572, 607</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAABEAAAA1AAAASgAAAEwAAABMAAAATAAAAEwAAABMAAAATAAAAEwAAABMAAAATAAA
+        AEoAAAA1AAAAAAAAAAAECMLoBgxC/wQLJP8JEBb/CxIS/wsSEv8LEhL/CxIS/wsSEv8LEhL/CxIT/woR
+        GP8PDw/1AAAAQAAAAAAAAAAADhG/3Ft3/P4vTPn/Eivt/w4m3/8OIdj/Cx/M/wscxf8MGr//Chqt/wUW
+        nf8HF6H/CA8X4gAAADIAAAAAAAAAACEkzWwpO/T7ZoD//zhV//8cOf3/FDD1/xEr7P8QKOL/DiPa/wsg
+        zf8HGbT/AAxr+xcXF6MAAAAfAAAAAAAAAAC5uelUCQ3A9I2l//9tiP//RWP//y5N//8bOfz/FDH3/xIq
+        7P8PI9j/Cxu+/ggMHvBCQkJQAAAADgAAAAAAAAAAAAAAAB0fzGcsPPL8l6///3CL//9dd///ME7//xo5
+        //8ULfX/DSLN/wALafgaGhqgAAAAHgAAAAQAAAAAAAAAAAAAAAC8vOpQCg7D9J+1//+JoP//b4r//0Fg
+        //8YO///FC7y/wsgw/0IDB7wTExMTQAAAA4AAAABAAAAAAAAAAAAAAAAAAAAABkdzGowQPT7mbD//32X
+        //9Laf//Gjz//xAo4f8ACm/4Hh4emwAAAB0AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAADCwu1YCg7E+J+1
+        //+Ko///V3T//yxO/v8NI9L9CQ0c809PT0YAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYY
+        zGY9TvT7mLD//2SA//8oSfn/AAxq+CEhIYMAAAAZAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AADAwOxPCxLM+J2y//9wjP//Fzbt/AgMHuNMTEw9AAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAABAT1HhLWvT8hZ7+/wEQe/cjIyNwAAAAFwAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAADExO5SDRLL8n+Y/v8EDk7aTk5OQQAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAABESyV0JEsr4U1RZWwAAAB0AAAAIAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmp+E0CQu4nM7O8IIAAAAKAAAAAwAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAwAAA9cAA9vbAAPb2wAD2K8AAAADgAAAA4AAAAPABAP/wA///+AP///gH///8B////A8AAP4P
+        AAD+DwAA//8AAA==
+</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>450, 525</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PendingChangelistDlg</value>
+  </data>
+  <data name="&gt;&gt;DiffvsHaveMI.Name" xml:space="preserve">
+    <value>DiffvsHaveMI</value>
+  </data>
+  <data name="&gt;&gt;DiffvsHaveMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ResolveMI.Name" xml:space="preserve">
+    <value>ResolveMI</value>
+  </data>
+  <data name="&gt;&gt;ResolveMI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ShowContentsSFCM.Name" xml:space="preserve">
+    <value>ShowContentsSFCM</value>
+  </data>
+  <data name="&gt;&gt;ShowContentsSFCM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UnshelveSFCM.Name" xml:space="preserve">
+    <value>UnshelveSFCM</value>
+  </data>
+  <data name="&gt;&gt;UnshelveSFCM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeleteShelvedFileSFCM.Name" xml:space="preserve">
+    <value>DeleteShelvedFileSFCM</value>
+  </data>
+  <data name="&gt;&gt;DeleteShelvedFileSFCM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DiffAgainstSourceSFCM.Name" xml:space="preserve">
+    <value>DiffAgainstSourceSFCM</value>
+  </data>
+  <data name="&gt;&gt;DiffAgainstSourceSFCM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DiffAgainstWorkspaceSFCM.Name" xml:space="preserve">
+    <value>DiffAgainstWorkspaceSFCM</value>
+  </data>
+  <data name="&gt;&gt;DiffAgainstWorkspaceSFCM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectedClm.Name" xml:space="preserve">
+    <value>SelectedClm</value>
+  </data>
+  <data name="&gt;&gt;SelectedClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NameClm.Name" xml:space="preserve">
+    <value>NameClm</value>
+  </data>
+  <data name="&gt;&gt;NameClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FolderClm.Name" xml:space="preserve">
+    <value>FolderClm</value>
+  </data>
+  <data name="&gt;&gt;FolderClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ResolveStatusClm.Name" xml:space="preserve">
+    <value>ResolveStatusClm</value>
+  </data>
+  <data name="&gt;&gt;ResolveStatusClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TypeClm.Name" xml:space="preserve">
+    <value>TypeClm</value>
+  </data>
+  <data name="&gt;&gt;TypeClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PendingActionClm.Name" xml:space="preserve">
+    <value>PendingActionClm</value>
+  </data>
+  <data name="&gt;&gt;PendingActionClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFileNameClm.Name" xml:space="preserve">
+    <value>ShelvedFileNameClm</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFileNameClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFileActionClm.Name" xml:space="preserve">
+    <value>ShelvedFileActionClm</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFileActionClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFileFolderClm.Name" xml:space="preserve">
+    <value>ShelvedFileFolderClm</value>
+  </data>
+  <data name="&gt;&gt;ShelvedFileFolderClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;JobClm.Name" xml:space="preserve">
+    <value>JobClm</value>
+  </data>
+  <data name="&gt;&gt;JobClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusClm.Name" xml:space="preserve">
+    <value>StatusClm</value>
+  </data>
+  <data name="&gt;&gt;StatusClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;JobDescriptionClm.Name" xml:space="preserve">
+    <value>JobDescriptionClm</value>
+  </data>
+  <data name="&gt;&gt;JobDescriptionClm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PendingChangelistDlg</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Perforce.P4VS.AutoSizeForm, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+</root>
