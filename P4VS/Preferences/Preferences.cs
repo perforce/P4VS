@@ -601,7 +601,7 @@ namespace Perforce.P4VS
 
 		private void RefreshAppData(bool writing)
 		{
-			if (!string.IsNullOrEmpty(_appData) && File.Exists(_appData))
+			if (!string.IsNullOrEmpty(_appData))
 			{
 				// Only check to see if another dev studio instance has changed the prefeneces if it's 
 				// been more than .1 seconds since we last checked
