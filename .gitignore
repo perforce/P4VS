@@ -1,0 +1,8 @@
+obj/
+bin/
+packages/
+p4api.net.dll
+p4bridge.dll
+*.csproj.user
+*.suo
+Release
