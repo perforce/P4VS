@@ -176,7 +176,7 @@ namespace Perforce.P4VS
 
             IntPtr handle = IntPtr.Zero;
 
-            if (window.HWnd != 0)
+            if (window.HWnd != IntPtr.Zero)
             {
                 // We've got the parent
                 handle = (IntPtr)window.HWnd;

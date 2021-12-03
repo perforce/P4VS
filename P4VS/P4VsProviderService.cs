@@ -3726,7 +3726,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 		private uint BaseImageIdx = 0;
 		private ImageList Glyphs;
 
-		public int GetCustomGlyphList(uint BaseIndex, out uint pdwImageListHandle)
+		public int GetCustomGlyphList([ComAliasName("Microsoft.VisualStudio.OLE.Interop.ULONG")] uint BaseIndex, [ComAliasName("Microsoft.VisualStudio.OLE.Interop.ULONG_PTR")] out IntPtr pdwImageListHandle)
 		{
 			if (Glyphs != null && BaseIndex != BaseImageIdx)
 			{
@@ -3747,7 +3747,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 					Glyphs = P4SolutionExplorer.CustomGlyphsLongList;
 				}
 			}
-			pdwImageListHandle = unchecked((uint)Glyphs.Handle);
+			pdwImageListHandle = unchecked((IntPtr)(uint)Glyphs.Handle);
 
 			return VSConstants.S_OK;
 		}

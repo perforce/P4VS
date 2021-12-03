@@ -61,6 +61,7 @@ using MsVsShell = Microsoft.VisualStudio.Shell;
 using ErrorHandler = Microsoft.VisualStudio.ErrorHandler;
 using Perforce.P4Scm;
 using Microsoft.VisualStudio.AsyncPackageHelpers;
+using PackageAutoLoadFlags = Microsoft.VisualStudio.AsyncPackageHelpers.PackageAutoLoadFlags;
 
 namespace Perforce.P4VS
 {
@@ -156,7 +157,7 @@ namespace Perforce.P4VS
 	[ProvideService(typeof(P4VsProviderService), ServiceName = "P4VS - Helix Plugin for Visual Studio")]
 
     // Register the source control provider to be visible in Tools/Options/SourceControl/Plugin dropdown selector
-    [ProvideSourceControlProvider("P4VS - Helix Plugin for Visual Studio", "#100")]
+    [@ProvideSourceControlProvider("P4VS - Helix Plugin for Visual Studio", "#100")]
     //[MsVsShell.ProvideSourceControlProvider("P4VS - Helix Plugin for Visual Studio", "#100",
     //       "{FDA934F4-0492-4F67-A6EB-CBE0953649F0}",
     //       "{8D316614-311A-48F4-85F7-DF7020F62357}",

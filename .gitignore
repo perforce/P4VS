@@ -6,3 +6,4 @@ p4bridge.dll
 *.csproj.user
 *.suo
 Release
+.vs/
