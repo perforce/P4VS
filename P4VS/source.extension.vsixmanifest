@@ -14,11 +14,21 @@
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.25904.2,)" DisplayName="Visual Studio core editor" />
     </Prerequisites>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,17.0)" />
-        <InstallationTarget Id="Microsoft.VisualStudio.VSLS" Version="[14.0,17.0)" />
-        <InstallationTarget Id="Microsoft.VisualStudio.IntegratedShell" Version="[14.0,17.0)" />
-        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0,17.0)" />
-        <InstallationTarget Version="[14.0, 17.0)" Id="Microsoft.VisualStudio.Enterprise" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,18.0)">
+            <ProductArchitecture>x86</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.VSLS" Version="[14.0,18.0)">
+            <ProductArchitecture>x86</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.IntegratedShell" Version="[14.0,18.0)">
+            <ProductArchitecture>x86</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0,18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[14.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+            <ProductArchitecture>x86</ProductArchitecture>
+        </InstallationTarget>
     </Installation>
     <Assets>
         <Asset Type="dll" Path ="p4bridge.dll" />

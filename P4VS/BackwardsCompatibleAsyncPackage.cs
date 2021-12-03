@@ -56,7 +56,7 @@ namespace Perforce.P4VS
         /// <param name="pProfferService">Async service proffer instance</param>
         /// <param name="IAsyncProgressCallback">Progress callback instance</param>
         /// <returns></returns>
-        public IVsTask Initialize(IAsyncServiceProvider asyncServiceProvider, IProfferAsyncService pProfferService, IAsyncProgressCallback pProgressCallback)
+        public IVsTask Initialize(Microsoft.VisualStudio.Shell.Interop.COMAsyncServiceProvider.IAsyncServiceProvider asyncServiceProvider, IProfferAsyncService pProfferService, IAsyncProgressCallback pProgressCallback)
         {
             if (!isAsyncLoadSupported)
             {
