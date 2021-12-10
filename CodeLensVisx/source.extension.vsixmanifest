@@ -7,19 +7,19 @@
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0, 18.0)">
-            <ProductArchitecture>x86</ProductArchitecture>
+            <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
         <InstallationTarget Version="[14.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
-            <ProductArchitecture>x86</ProductArchitecture>
+            <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
         <InstallationTarget Version="[14.0,18.0)" Id="Microsoft.VisualStudio.IntegratedShell">
-            <ProductArchitecture>x86</ProductArchitecture>
+            <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
         <InstallationTarget Version="[14.0,18.0)" Id="Microsoft.VisualStudio.Pro">
             <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
         <InstallationTarget Version="[14.0,18.0)" Id="Microsoft.VisualStudio.VSLS">
-            <ProductArchitecture>x86</ProductArchitecture>
+            <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
     </Installation>
     <Dependencies>
