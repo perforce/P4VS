@@ -1,0 +1,69 @@
+name: Build P4VS
+
+env:
+  codeline:       "r20.2"
+  docker:         "perforce/build-p4vs:2020.2.2"
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: windows-2016
+    strategy:
+      matrix:
+        arch: [x86, x64]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Login to docker hub
+        run: |
+          echo ${{ secrets.DOCKERHUB_TOKEN }}| docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+      - name: Get p4api and p4 binary
+        run: |
+          $WebClient = New-Object System.Net.WebClient ; $WebClient.DownloadFile("ftp://ftp.perforce.com/perforce/$env:codeline/bin.nt${{matrix.arch}}/p4api.net.zip","p4api.net.zip")
+          New-Item -Type Directory -Path ${{ github.workspace }}\..\p4 -force
+          New-Item -Type Directory -Path ${{ github.workspace }}\..\p4-bin\bin.nt${{matrix.arch}} -force
+          Move-Item -Path ${{ github.workspace }}\p4api.net.zip -Destination ${{ github.workspace }}\..\p4-bin\bin.nt${{matrix.arch}}\p4api.net.zip -Force
+          
+          echo "RELEASE = 2021 1 TEST-TEST_ONLY ;" > ${{ github.workspace }}\..\p4\Version
+          echo "PATCHLEVEL = 9999999 ;" >> ${{ github.workspace }}\..\p4\Version
+          echo "SUPPDATE = 2021 12 10 ;" >> ${{ github.workspace }}\..\p4\Version
+          
+          dir
+          pwd
+          dir ..\
+          cat ..\p4\Version
+          dir ..\p4-bin\bin.nt${{ matrix.arch }}
+          
+          
+      - name: Get docker image
+        run: docker pull $Env:docker
+
+      - name: Build P4VS
+        run: |
+          docker run -v ${{ github.workspace }}\..\:c:\build\P4.NET --env arch=${{matrix.arch}} --env Platform="Any CPU" -t $Env:docker c:\build\build.ps1 
+          pwd
+          dir
+          dir ${{ github.workspace }}\..\p4-bin\bin.nt${{ matrix.arch }}
+          move-item -Path ${{ github.workspace }}\..\p4-bin\bin.nt${{ matrix.arch }}\P4VS.vsix -Destination  ${{ github.workspace }}\non-production-P4VS-${{ matrix.arch }}.vsix -Force
+          dir ${{ github.workspace }}\
+          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: non-production-P4VS-${{ matrix.arch }}.vsix
+          path: ${{ github.workspace }}\non-production-P4VS-${{ matrix.arch }}.vsix
