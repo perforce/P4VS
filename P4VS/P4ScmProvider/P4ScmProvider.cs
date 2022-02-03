@@ -2081,6 +2081,7 @@ namespace Perforce.P4Scm
 
         public IVsProject3 RemoveFromProject(string file)
 		{
+				Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
 				string[] remove = new string[1] { file };
 				remove[0] = remove[0].Replace("/", "\\");
 
@@ -2109,6 +2110,7 @@ namespace Perforce.P4Scm
 
 		public bool AddToProject(IVsProject3 project, string file)
 		{
+            Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
 			// add the reverted move/delete
 			int retVal;
 			VSADDRESULT[] addResArr = new VSADDRESULT[1];
@@ -2190,6 +2192,7 @@ namespace Perforce.P4Scm
 
 		public IList<string> RevertFiles(bool unchangedOnly, bool DepotFiles, P4.Options opts, params string[] files)
 		{
+            Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
 			if (Offline || files == null)
             {
 				return null;
@@ -2389,6 +2392,7 @@ namespace Perforce.P4Scm
 
 		public bool RevertFilesInChangelist(P4.Options options, P4.Changelist changelist, params string[] files)
 		{
+            Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
 			if (Offline)
 			{
 				return false;
@@ -2716,7 +2720,6 @@ namespace Perforce.P4Scm
 
 		private string _p4VPath = null;
         private string _p4VCPath = null;
-	    private bool _p4vcExists = false;
 
 		/// <summary>
 		/// find P4V.exe
@@ -2764,50 +2767,38 @@ namespace Perforce.P4Scm
         {
             if (_p4VCPath != null)
             {
-                if ((_p4VCPath.EndsWith("p4vc.bat") && File.Exists(_p4VCPath))||
-                    (_p4VCPath.EndsWith("p4vc.exe")) && File.Exists(_p4VCPath))
+                if ((_p4VCPath.ToLower().EndsWith("p4vc.bat") && File.Exists(_p4VCPath))||
+                    (_p4VCPath.ToLower().EndsWith("p4vc.exe")) && File.Exists(_p4VCPath))
                 {
                     return _p4VCPath;
                 }
             }
+
             string prefString = Preferences.LocalSettings.GetString("P4VC_path", null);
             string installRoot = P4InstallLocation();
 
-            if ((prefString != null) && (prefString.EndsWith("P4V.exe")))
+            if ((prefString != null) && File.Exists(prefString) && (prefString.ToLower().EndsWith("p4vc.bat") || prefString.ToLower().EndsWith("p4vc.exe")))
+            {   
+				_p4VCPath = prefString;
+				return _p4VCPath;
+			}
+            
+            
+            if (installRoot != null && File.Exists(installRoot + "p4vc.exe"))
             {
-                if (installRoot!=null && File.Exists(installRoot + "p4vc.exe"))
-                {
-                    Preferences.LocalSettings["P4VC_path"] = installRoot + "p4vc.exe";
-                    _p4VCPath = installRoot + "p4vc.exe";
-                    _p4vcExists = true;
-                    return _p4VCPath;
-                }
-                else
-                {
-                    _p4VCPath = prefString;
-                }
+                Preferences.LocalSettings["P4VC_path"] = installRoot + "p4vc.exe";
+                _p4VCPath = installRoot + "p4vc.exe";
+                return _p4VCPath;
             }
-            else
+
+            if (installRoot != null && File.Exists(installRoot + "p4vc.bat"))
             {
-                if (installRoot != null && File.Exists(installRoot + "p4vc.exe"))
-                {
-                    Preferences.LocalSettings["P4VC_path"] = installRoot + "p4vc.exe";
-                    _p4VCPath = installRoot + "p4vc.exe";
-                    _p4vcExists = true;
-                    return _p4VCPath;
-                }
-                else if (installRoot != null && File.Exists(installRoot + "p4vc.bat"))
-                {
-                    Preferences.LocalSettings["P4VC_path"] = installRoot + "p4vc.bat";
-                    _p4VCPath = installRoot + "p4vc.bat";
-                    _p4vcExists = true;
-                    return _p4VCPath;
-                }
-                else
-                {
-                    MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError);
-                }
+                Preferences.LocalSettings["P4VC_path"] = installRoot + "p4vc.bat";
+                _p4VCPath = installRoot + "p4vc.bat";
+                return _p4VCPath;
             }
+            
+            MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError);
 
             return _p4VCPath;
         }
