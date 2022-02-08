@@ -3638,11 +3638,21 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             {
 				_P4VsProvider.ResetCommandStatus();
 
-				foreach (string file in files)
-				{
-					RefreshProjectGlyphs(file, forceUpdate);
-				}
-			}
+				// Testing without extracting cached files
+				//var filesNotCached = files.Where(f => !ScmProvider.IsFileCached(f)).ToList();
+
+				// Doing fstat on list of files
+				RefreshProjectGlyphsFiles(files, forceUpdate);
+
+                // Old way, file by file
+                //foreach (string file in files)
+                //{
+                //	if (!ScmProvider.IsFileCached(file))
+                //	{
+                //		RefreshProjectGlyphs(file, forceUpdate);
+                //	}
+                //}
+            }
 		}
 		/// <summary>
 		/// Refreshes the glyphs of the nodes containing the file
@@ -3700,6 +3710,66 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 					IVsHierarchy solHier = (IVsHierarchy)_P4VsProvider.GetService(typeof(SVsSolution));
 					int hr = solHier.SetProperty(VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_StateIconIndex, rgsiGlyphs[0]);
 				}
+			}
+		}
+		/// <summary>
+		/// Refreshes the glyphs of the nodes containing the files
+		/// </summary>
+		public void RefreshProjectGlyphsFiles(IList<string> files, bool forceUpdate = true)
+		{
+			if (ScmProvider == null)
+			{
+				return;
+			}
+
+			_P4VsProvider.ResetCommandStatus();
+
+			// And refresh the solution explorer glyphs of all the projects containing this file to reflect the checked out status
+			IDictionary<string, IList<VSITEMSELECTION>> nodes = new Dictionary<string, IList<VSITEMSELECTION>>();
+
+			string[] rgpszFullPaths = new string[files.Count];
+
+			for (int i = 0; i < files.Count; i++)
+			{
+				nodes[files[i]] = GetControlledProjectsContainingFile(files[i]);
+				rgpszFullPaths[i] = files[i];
+			}
+
+			VsStateIcon[] rgsiGlyphs = new VsStateIcon[files.Count];
+			uint[] rgdwSccStatus = new uint[files.Count];
+
+			// Update files
+			ScmProvider.UpdateFiles(files, forceUpdate);
+
+			GetSccGlyph(files.Count, rgpszFullPaths, rgsiGlyphs, rgdwSccStatus);
+
+			uint[] rguiAffectedNodes = new uint[1];
+
+			uint itemid;
+			int fFound;
+			int iterator = 0;
+
+			foreach (var dic in nodes)
+			{
+				foreach (VSITEMSELECTION node in dic.Value)
+				{
+					IVsProject2 pscp = node.pHier as IVsProject2;
+					IVsSccProject2 sccProject2 = node.pHier as IVsSccProject2;
+
+					VSDOCUMENTPRIORITY[] prio = new VSDOCUMENTPRIORITY[1];
+					if (pscp != null && pscp.IsDocumentInProject(dic.Key, out fFound, prio, out itemid) == VSConstants.S_OK && fFound != 0)
+					{
+						rguiAffectedNodes[0] = itemid;
+						if (sccProject2 != null) sccProject2.SccGlyphChanged(1, rguiAffectedNodes, new VsStateIcon[] { rgsiGlyphs[iterator] }, new uint[] { rgdwSccStatus[iterator] });
+					}
+					else if (pscp == null)
+					{
+						//sololution node
+						IVsHierarchy solHier = (IVsHierarchy)_P4VsProvider.GetService(typeof(SVsSolution));
+						int hr = solHier.SetProperty(VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_StateIconIndex, rgsiGlyphs[iterator]);
+					}
+				}
+				iterator++;
 			}
 		}
 
