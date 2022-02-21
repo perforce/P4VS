@@ -784,8 +784,6 @@ namespace Perforce.P4Scm
 
 		}
 
-		//int maxGlyphstoRefresh = 250;
-
 		private void RefreshFoldersThreadProc()
 		{
 			try
@@ -794,7 +792,7 @@ namespace Perforce.P4Scm
 				while (_runRefreshThread)
 				{
 					int minutes = Preferences.LocalSettings.GetInt("Update_status", 5);
-					int maxGlyphstoRefresh = Preferences.LocalSettings.GetInt("Max_Glyphs_Refresh", 250);
+					int maxGlyphstoRefresh = Preferences.LocalSettings.GetInt("Max_Glyphs_Refresh", 512);
 					logger.Trace("Entering loop in RefreshFoldersThreadProc, LoadingSolution:{0}, WaitTime: {1} ",
 						_scm.LoadingSolution, minutes);
 					if ((_scm.LoadingSolution) || (minutes < 1))

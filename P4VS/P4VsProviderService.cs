@@ -3637,21 +3637,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			if ((files != null) && (ScmProvider != null))
             {
 				_P4VsProvider.ResetCommandStatus();
-
-				// Testing without extracting cached files
-				//var filesNotCached = files.Where(f => !ScmProvider.IsFileCached(f)).ToList();
-
-				// Doing fstat on list of files
 				RefreshProjectGlyphsFiles(files, forceUpdate);
-
-                // Old way, file by file
-                //foreach (string file in files)
-                //{
-                //	if (!ScmProvider.IsFileCached(file))
-                //	{
-                //		RefreshProjectGlyphs(file, forceUpdate);
-                //	}
-                //}
             }
 		}
 		/// <summary>
