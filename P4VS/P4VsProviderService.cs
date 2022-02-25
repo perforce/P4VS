@@ -553,7 +553,7 @@ namespace Perforce.P4VS
 					}
 					else if (status.Test(SourceControlStatus.scsNotOnDisk))
 					{
-						rgsiGlyphs[idx] = (VsStateIcon)0;
+						rgsiGlyphs[idx] = 0;
 						if (rgdwSccStatus != null)
 						{
 							unchecked
@@ -564,7 +564,7 @@ namespace Perforce.P4VS
 					}
 					else
 					{
-						int glyphIdx = ((int)status) & 0x0007;
+						int glyphIdx = status & 0x0007;
 
 						// displaying integrated status trumps displaying locked status
 						if (status.Test(SourceControlStatus.scsLocked) && status.TestNone(SourceControlStatus.scsIntegrated))
@@ -3638,20 +3638,27 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             {
 				_P4VsProvider.ResetCommandStatus();
 
-				// Testing without extracting cached files
-				//var filesNotCached = files.Where(f => !ScmProvider.IsFileCached(f)).ToList();
+				int numberOfFilesToCache = Preferences.LocalSettings.GetInt("Number_files_cache", 500);
 
-				// Doing fstat on list of files
-				RefreshProjectGlyphsFiles(files, forceUpdate);
-
-                // Old way, file by file
-                //foreach (string file in files)
-                //{
-                //	if (!ScmProvider.IsFileCached(file))
-                //	{
-                //		RefreshProjectGlyphs(file, forceUpdate);
-                //	}
-                //}
+				if (files.Count <= numberOfFilesToCache)
+                {
+					RefreshProjectGlyphsFiles(files, forceUpdate);
+				}
+				else 
+				{
+                    int updateIdx = 0;
+                    IList<string> updateList = new List<string>();
+					while (updateIdx < files.Count)
+                    {
+						updateList.Add(files[updateIdx]);
+						if ((updateIdx >= (files.Count - 1)) || (updateList.Count >= numberOfFilesToCache))
+						{
+							RefreshProjectGlyphsFiles(updateList, forceUpdate);
+							updateList = new List<string>();
+                        }
+						updateIdx++;
+					}
+                }
             }
 		}
 		/// <summary>
@@ -3796,30 +3803,39 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 		private uint BaseImageIdx = 0;
 		private ImageList Glyphs;
 
-		public int GetCustomGlyphList([ComAliasName("Microsoft.VisualStudio.OLE.Interop.ULONG")] uint BaseIndex, [ComAliasName("Microsoft.VisualStudio.OLE.Interop.ULONG_PTR")] out IntPtr pdwImageListHandle)
+		public int GetCustomGlyphList(uint BaseIndex, out IntPtr pdwImageListHandle)
 		{
-			if (Glyphs != null && BaseIndex != BaseImageIdx)
-			{
-				Glyphs.Dispose();
-				Glyphs = null;
-			}
-
-			// We give VS all our custom glyphs from baseindex upwards
-			if (Glyphs == null)
-			{
-				BaseImageIdx = BaseIndex;
-				if (BaseIndex == 0)
+			try
+            {
+				if (Glyphs != null && BaseIndex != BaseImageIdx)
 				{
-					Glyphs = P4SolutionExplorer.CustomGlyphs;
+					Glyphs.Dispose();
+					Glyphs = null;
 				}
-				else
-				{
-					Glyphs = P4SolutionExplorer.CustomGlyphsLongList;
-				}
-			}
-			pdwImageListHandle = unchecked((IntPtr)(uint)Glyphs.Handle);
 
-			return VSConstants.S_OK;
+				// We give VS all our custom glyphs from baseindex upwards
+				if (Glyphs == null)
+				{
+					BaseImageIdx = BaseIndex;
+					if (BaseIndex == 0)
+					{
+						Glyphs = P4SolutionExplorer.CustomGlyphs;
+					}
+					else
+					{
+						Glyphs = P4SolutionExplorer.CustomGlyphsLongList;
+					}
+				}
+				pdwImageListHandle = unchecked(Glyphs.Handle);
+
+				return VSConstants.S_OK;
+
+            }
+			catch (Exception)
+            {
+				pdwImageListHandle = (IntPtr)0;
+				return VSConstants.S_FALSE;
+			}
 		}
 
 		#endregion

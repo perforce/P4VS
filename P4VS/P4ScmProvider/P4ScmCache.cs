@@ -639,8 +639,6 @@ namespace Perforce.P4Scm
 		}
 		bool _runRefreshThread = true;
 
-		int maxFilestoRefresh = 100;
-
 		private void RefreshFilesThreadProc()
 		{
 			try
@@ -712,7 +710,7 @@ namespace Perforce.P4Scm
 							{
 								IList<string> filesToRefresh = new List<string>();
 
-								for (int batchCnt = 0; (fileidx < fileCnt) && (batchCnt < maxFilestoRefresh); fileidx++)
+								for (int batchCnt = 0; (fileidx < fileCnt); fileidx++)
 								{
 									CachedFile file = files[fileidx];
 									if (_runRefreshThread == false)
@@ -784,8 +782,6 @@ namespace Perforce.P4Scm
 
 		}
 
-		//int maxGlyphstoRefresh = 250;
-
 		private void RefreshFoldersThreadProc()
 		{
 			try
@@ -794,7 +790,6 @@ namespace Perforce.P4Scm
 				while (_runRefreshThread)
 				{
 					int minutes = Preferences.LocalSettings.GetInt("Update_status", 5);
-					int maxGlyphstoRefresh = Preferences.LocalSettings.GetInt("Max_Glyphs_Refresh", 250);
 					logger.Trace("Entering loop in RefreshFoldersThreadProc, LoadingSolution:{0}, WaitTime: {1} ",
 						_scm.LoadingSolution, minutes);
 					if ((_scm.LoadingSolution) || (minutes < 1))
@@ -866,63 +861,22 @@ namespace Perforce.P4Scm
 									if ((updatedfiles != null) && (updatedfiles.Count > 0))
 									{
                                         logger.Trace("Found {0} files to refresh in RefreshFoldersThreadProc in folder: {1}", updatedfiles.Count, directory);
-										if (updatedfiles.Count <= maxGlyphstoRefresh)
+										Delegate[] targetList = _onUpdatedFiles.GetInvocationList();
+										foreach (UpdatedFiles_Delegate dlgRefreshProjectGlyphs in targetList)
 										{
-                                            logger.Trace("Updating less than {0} files in RefreshFoldersThreadProc", maxGlyphstoRefresh);
-											Delegate[] targetList = _onUpdatedFiles.GetInvocationList();
-											foreach (UpdatedFiles_Delegate dlgRefreshProjectGlyphs in targetList)
+											if (_runRefreshThread == false)
 											{
-												if (_runRefreshThread == false)
-												{
-                                                    logger.Trace("Exiting refresh thread");
-                                                    return;
-												}
-												try
-												{
-													dlgRefreshProjectGlyphs(updatedfiles, false);
-												}
-												catch
-												{
-													// problem with delegate, so remove from the list
-													OnUpdatedFiles -= dlgRefreshProjectGlyphs;
-												}
+                                                logger.Trace("Exiting refresh thread");
+                                                return;
 											}
-										}
-										else
-										{
-                                            logger.Trace("Updating more than {0} files in RefreshFoldersThreadProc", maxGlyphstoRefresh);
-											int updateIdx = 0;
-											IList<string> updateList = new List<string>();
-
-											while (updateIdx < updatedfiles.Count)
+											try
 											{
-												updateList.Add(updatedfiles[updateIdx]);
-
-												if ((updateIdx >= (updatedfiles.Count - 1)) || (updateList.Count >= maxGlyphstoRefresh))
-												{
-                                                    logger.Trace("Updating {0} files at idx, {1} in RefreshFoldersThreadProc", updateList.Count, updateIdx);
-													Delegate[] targetList = _onUpdatedFiles.GetInvocationList();
-													foreach (UpdatedFiles_Delegate dlgRefreshProjectGlyphs in targetList)
-													{
-														if (_runRefreshThread == false)
-														{
-                                                            logger.Trace("Exiting refresh thread");
-                                                            return;
-														}
-														try
-														{
-															dlgRefreshProjectGlyphs(updateList, false);
-														}
-														catch
-														{
-															// problem with delegate, so remove from the list
-															OnUpdatedFiles -= dlgRefreshProjectGlyphs;
-														}
-													}
-													updateList = new List<string>();
-													Thread.Sleep(TimeSpan.FromSeconds(1));
-												}
-												updateIdx++;
+												dlgRefreshProjectGlyphs(updatedfiles, false);
+											}
+											catch
+											{
+												// problem with delegate, so remove from the list
+												OnUpdatedFiles -= dlgRefreshProjectGlyphs;
 											}
 										}
 									}
