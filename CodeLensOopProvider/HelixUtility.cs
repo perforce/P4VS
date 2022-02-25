@@ -147,6 +147,31 @@ namespace CodeLensOopProvider
 
         static List<KeyValuePair<string, Changelist>> changelistCache = new List<KeyValuePair<string, Changelist>>();
 
+        private static string GetSanitisedPath(string path)
+        {
+            string value = path;
+            
+            if (path.Contains("%"))
+            {
+                value = value.Replace("%", "%25");
+            }
+
+            if (path.Contains("@"))
+            {
+                value = value.Replace("@", "%40");
+            }
+
+            if (path.Contains("#"))
+            {
+                value = value.Replace("#", "%23");
+            }
+
+            if (path.Contains("*"))
+            {
+                value = value.Replace("*", "%2A");
+            }
+            return value;
+        }
         public static Changelist GetLastCommit(Repository repo, string filePath)
         {
             IList<Changelist> Changes = new List<Changelist>();
@@ -165,7 +190,7 @@ namespace CodeLensOopProvider
                     ChangesCmdOptions opts = new ChangesCmdOptions(ChangesCmdFlags.FullDescription, null,
                         5, ChangeListStatus.Submitted, null);
                     Changes = repo.GetChangelists(opts, new FileSpec(null,
-                        null, new LocalPath(filePath), null));
+                        null, new LocalPath(GetSanitisedPath(filePath)), null));
                 }
                 catch (P4Exception ex)
                 {
