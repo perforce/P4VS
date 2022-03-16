@@ -1,12 +1,12 @@
                            Release Notes for
                 P4VS, the Helix Plugin for Visual Studio
 
-                            Version 2020.2
+                            Version 2021.2
 
 Introduction
 
         This document lists all user-visible changes in P4VS
-        release 2020.2
+        release 2021.2
 
         Perforce numbers releases YYYY.R/CCCCC, e.g. 2002.2/30547.
         YYYY is the year; R is the release of that year; CCCCC is the
@@ -37,7 +37,7 @@ Compatibility Statements
 
         Compatibility with Previous Releases
 
-          Unless otherwise stated below, the 2020.2 release of P4VS is
+          Unless otherwise stated below, the 2021.2 release of P4VS is
           compatible with previous releases from Perforce Software.
 
         Installation
@@ -63,10 +63,12 @@ Compatibility Statements
           Common7\IDE\VSIXInstaller.exe" /q <path to>\p4vs<version#>.vsix
 
         P4VS User's Guide
-          http://www.perforce.com/perforce/doc.current/manuals/p4vs/p4vs.pdf
           http://www.perforce.com/perforce/doc.current/manuals/p4vs/index.html
 
         Known Limitations
+
+          When Using P4VS for VS2022, only the default overlay icons are present,
+          not the perforce specific.
 
           When using File -> Move into -> <project> with a C++ project, if
           the file selected is currently marked for add a dialog may appear
@@ -155,9 +157,31 @@ Key to symbols used in change notes below.
 
 ---------------------------------------------------------------------------
 
+New Functionality in 2021.2
+
+        (Job #108861) * **
+           Added support for 2021.2 P4D.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2021.2
+
+        #2243457 (Job #076616) *
+           Improved the way P4VS loads and caches files.
+           Resolves UI hanging when loading big projects.
+        
+        #2231931 (Job #107198) *
+           Fixed how P4VS is finding P4V, when calling time-lapse view.
+
+        #2250122 (Job #106265, #106315) *
+           P4VS will no longer display a warning,
+           when it find a file with "@" in the name.
+
+---------------------------------------------------------------------------
+
 Bugs fixed in 2020.2 Patch 1
 
-       2116742 (Job #106060) *
+        #2116742 (Job #106060) *
            P4VS now correctly displays Time-lapse View and Revision
            Graph, when used with 2021.1 version of P4V.
 
@@ -179,7 +203,7 @@ Bugs fixed in 2020.2
 
 Bugs fixed in 2020.1 Patch 1
 
-        1977237 (Job #102731) *
+        #1977237 (Job #102731) *
             P4VS installer has been updated with a new signing certificate.
 
 ---------------------------------------------------------------------------
