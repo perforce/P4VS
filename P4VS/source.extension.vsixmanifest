@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="HelixVS.c157e906-a1dc-4f21-a5a2-ff052038a44e" Version="2011.1" Language="en-US" Publisher="Perforce Software, Inc." />
+        <Identity Id="HelixVSx64.c157e906-a1dc-4f21-a5a2-ff052038a44e" Version="2011.1" Language="en-US" Publisher="Perforce Software" />
         <DisplayName>HelixVS</DisplayName>
         <Description xml:space="preserve">P4VS is the Helix Plugin for Microsoft Visual Studio. P4VS provides developers working within Visual Studio access to Helix Core version control features, including check in/check out, view file history, and more.</Description>
         <MoreInfo>http://www.perforce.com/product/components/visual-studio-plug-in</MoreInfo>
@@ -11,22 +11,22 @@
         <PreviewImage>icon-p4vs11-250px.png</PreviewImage>
     </Metadata>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.25904.2,)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0, )" DisplayName="Visual Studio core editor" />
     </Prerequisites>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,18.0)">
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, )">
             <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
-        <InstallationTarget Id="Microsoft.VisualStudio.VSLS" Version="[14.0,18.0)">
+        <InstallationTarget Id="Microsoft.VisualStudio.VSLS" Version="[17.0, )">
             <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
-        <InstallationTarget Id="Microsoft.VisualStudio.IntegratedShell" Version="[14.0,18.0)">
+        <InstallationTarget Id="Microsoft.VisualStudio.IntegratedShell" Version="[17.0, )">
             <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
-        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0,18.0)">
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[17.0, )">
             <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
-        <InstallationTarget Version="[14.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+        <InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0, )">
             <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
     </Installation>
