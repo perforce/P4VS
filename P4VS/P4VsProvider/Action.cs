@@ -1223,7 +1223,7 @@ namespace Perforce.P4VS
             prefs += "Number_specs: " + Preferences.LocalSettings.GetInt("Number_specs", 100).ToString() + "\n";
             prefs += "AutoUpdateFileData: " + Preferences.LocalSettings.GetBool("AutoUpdateFileData", false).ToString() + "\n";
 
-            prefs += "TreatProjectsAsFolders: " + Preferences.LocalSettings.GetBool("TreatProjectsAsFolders", false).ToString() + "\n";
+            prefs += "TreatProjectsAsFolders: " + Preferences.LocalSettings.GetBool("TreatProjectsAsFolders", true).ToString() + "\n";
             prefs += "PreloadScmCache: " + Preferences.LocalSettings.GetBool("PreloadScmCache", true).ToString() + "\n";
             prefs += "LazyLoadStatus: " + Preferences.LocalSettings.GetBool("LazyLoadStatus", false).ToString() + "\n";
             prefs += "LazyLoadFullMenu: " + Preferences.LocalSettings.GetBool("LazyLoadFullMenu", false).ToString() + "\n";
@@ -1467,7 +1467,7 @@ namespace Perforce.P4VS
             // processing menu commands so obviously no longer loading solution
             SccService.ScmProvider.LoadingSolution = false;
 
-            bool TreatProjectsAsFolders = Preferences.LocalSettings.GetBool("TreatProjectsAsFolders", false);
+            bool TreatProjectsAsFolders = Preferences.LocalSettings.GetBool("TreatProjectsAsFolders", true);
             IList<string> files = null;
             if (TreatProjectsAsFolders)
             {
@@ -1503,7 +1503,7 @@ namespace Perforce.P4VS
             }
             else
             {
-                bool TreatProjectsAsFolders = Preferences.LocalSettings.GetBool("TreatProjectsAsFolders", false);
+                bool TreatProjectsAsFolders = Preferences.LocalSettings.GetBool("TreatProjectsAsFolders", true);
                 if (TreatProjectsAsFolders && (SccService.IsSolutionSelected || SccService.IsaControlledProjectSelected))
                 {
                     IList<VSITEMSELECTION> selectedNodes = SccService.SelectedNodes;

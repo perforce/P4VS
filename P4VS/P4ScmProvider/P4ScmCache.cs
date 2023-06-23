@@ -718,10 +718,10 @@ namespace Perforce.P4Scm
                                         logger.Debug("Exiting refresh thread");
                                         return;
 									}
-									if (DateTime.Now - file.LastUpdate > _refreshInterval)
+									if (file != null && DateTime.Now - file.LastUpdate > _refreshInterval)
 									{
 										batchCnt++;
-										if ((file != null) && (((P4.FileMetaData)file) != null) && (((P4.FileMetaData)file).LocalPath != null))
+										if ((((P4.FileMetaData)file) != null) && (((P4.FileMetaData)file).LocalPath != null))
 										{
 											filesToRefresh.Add(((P4.FileMetaData)file).LocalPath.Path);
 										}

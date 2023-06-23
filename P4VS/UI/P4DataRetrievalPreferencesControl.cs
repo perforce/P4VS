@@ -713,13 +713,13 @@ namespace Perforce.P4VS
 				updateTB.Text = Preferences.LocalSettings.GetInt("Update_status", 5).ToString();
 			}
 			numberFilesTB.Text = Preferences.LocalSettings.GetInt("Number_files",1000).ToString();
-			sizeTB.Text = Preferences.LocalSettings.GetInt("Size_files", 500).ToString();
+            sizeTB.Text = Preferences.LocalSettings.GetInt("Size_files", 500).ToString();
 
 			numberSpecsTB.Text = Preferences.LocalSettings.GetInt("Number_specs",100).ToString();
 
 			AutoUpdateStatudCB.Checked = Preferences.LocalSettings.GetBool("AutoUpdateFileData", false);
 
-            bool TreatProjectsAsDirs = Preferences.LocalSettings.GetBool("TreatProjectsAsFolders", false);
+            bool TreatProjectsAsDirs = Preferences.LocalSettings.GetBool("TreatProjectsAsFolders", true);
             bool LazyLoad = Preferences.LocalSettings.GetBool("LazyLoadStatus", false);
             bool PreloadCache = Preferences.LocalSettings.GetBool("PreloadScmCache", true);
             bool LLFullMenu = Preferences.LocalSettings.GetBool("LazyLoadFullMenu", false);
@@ -834,9 +834,9 @@ namespace Perforce.P4VS
 			{
 				e.Handled = true;
 			}
-		}
+        }
 
-		private void sizeTB_KeyPress(object sender, KeyPressEventArgs e)
+        private void sizeTB_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
 			{

@@ -1,12 +1,11 @@
                            Release Notes for
                 P4VS, the Helix Plugin for Visual Studio
 
-                            Version 2021.2
+                            Version 2023.1
 
 Introduction
 
-        This document lists all user-visible changes in P4VS
-        release 2021.2
+        This document lists all user-visible changes in this P4VS release
 
         Perforce numbers releases YYYY.R/CCCCC, e.g. 2002.2/30547.
         YYYY is the year; R is the release of that year; CCCCC is the
@@ -66,9 +65,6 @@ Compatibility Statements
           http://www.perforce.com/perforce/doc.current/manuals/p4vs/index.html
 
         Known Limitations
-
-          When Using P4VS for VS2022, only the default overlay icons are present,
-          not the perforce specific.
 
           When using File -> Move into -> <project> with a C++ project, if
           the file selected is currently marked for add a dialog may appear
@@ -154,6 +150,74 @@ Key to symbols used in change notes below.
 
           * -- requires new P4VS
          ** -- requires new p4d server program
+
+--------------------------------------------------------------------------
+
+New Functionality in 2023.1 (2023.1/2456196) (2023/06/20)
+
+        (Job #115708) *
+           Rebuilt with the latest p4api.net API. (2023.1/2456134)
+
+--------------------------------------------------------------------------
+
+New Functionality in 2021.2 Patch 7 (2021.2/2413698) (2023/03/02)
+
+        (Job #114624) *
+           Rebuilt with the latest p4api.net API.
+
+---------------------------------------------------------------------------
+
+New functionality in 2021.2 Patch 6 (2021.2/2406440) (2023/02/10)
+
+        Important security note
+            This version addresses vulnerabilities in OpenSSL (CVE-2023-0286, 
+            CVE-2023-0215, CVE-2022-4450, CVE-2022-4304) by linking in version
+            1.1.1t of the library.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2021.2 Patch 5 (2021.2/2400843) (2023/02/02)
+
+        #2394641 (Job #113799, #108919, #111892) *
+            Perforce specific icon overylay are now supported in VS2022.
+            This enables 'mark for add', 'file checked-out by other 
+            developers', etc. icons to be displayed in Solution Explorer.
+
+--------------------------------------------------------------------------
+
+New Functionality in 2021.2 Patch 4 (2021.2/2394148) (2023/01/18)
+        (Job #113519) *
+            Rebuilt with the latest p4api.net API.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2021.2 Patch 3
+
+        (Job #113609) *
+           Rebuilt with the latest p4api.net API.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2021.2 Patch 3
+
+        #2352032 (Job #101904) *
+           Fixed the issue where P4VS was invalidating pre-configured project 
+           properties causing build failures
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2021.2 Patch 2
+
+        #2350293 (Job #112567) *
+           Fixed random opening of browser, when using HAS authentication,
+           and already logged in.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2021.2 Patch 1
+
+        #2333090 (Job #112100) *
+           Rebuilt with latest the p4api.net API.
 
 ---------------------------------------------------------------------------
 
