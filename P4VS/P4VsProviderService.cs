@@ -106,6 +106,8 @@ namespace Perforce.P4VS
         // The list of files approved for in-memory edit
         private Hashtable approvedForInMemoryEdit = new Hashtable();
 
+        private static int lastAccessedIndex = 0;
+
 #if !VS2012
 		internal static P4SolutionExplorer SolutionExplorer = null;
 #endif
@@ -617,9 +619,9 @@ namespace Perforce.P4VS
                 }
                 else
                 {
-                    IList<VSITEMSELECTION> nodes = GetControlledProjectsContainingFile(rgpszFullPaths[idx]);
-                    if (nodes.Count > 0)
-                    {
+                    var anyControlledProject = AnyControlledProjectsContainingFile(rgpszFullPaths[idx]);
+                    if (anyControlledProject)
+					{
                         // If the file is not controlled, but is member of a controlled project, report the item as checked out (same as source control in VS2003 did)
                         // If the provider wants to have special icons for "pending add" files, the IVsSccGlyphs interface needs to be supported
                         rgsiGlyphs[idx] = VsStateIcon.STATEICON_DISABLED;
@@ -3530,11 +3532,110 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             return nodes;
         }
 
+		/// <summary>
+		/// This function returns true in case the file is present in any of the project
+		/// It is an optimized modification to the function GetControlledProjectsContainingFile
+		/// </summary>
+		private bool AnyControlledProjectsContainingFile(string file)
+		{
+			// bail immediately if the path ends with a ... wildcard
+			if (file.EndsWith("..."))
+			{
+				return false;
+			}
 
-        /// <summary>
-        /// Returns a list of controlled projects containing the specified file
-        /// </summary>
-        public IList<VSITEMSELECTION> GetControlledProjectsContainingFiles([In] int cFiles, [In] string[] files)
+			var controlledProjectKeys = controlledProjects.Keys.ToArray();
+			var totalProjects = controlledProjectKeys.Length;
+
+			// It is high likely that this file would also be present in the same project
+			// in which last file checked was present
+			// So check all projects, but just start with last project checked
+			// And as this function can get called via different thread, static lastAccessedIndex is received into local variable
+			var projectToStartSearching = lastAccessedIndex;
+
+			for (int i = 0; i < totalProjects; i = IncrementCounters(i, totalProjects))
+			{
+				// To circle back to first project once already searched in the last project
+				// "% totalProjects" is used
+				var currentProject = (projectToStartSearching + i) % totalProjects;
+				IVsHierarchy pHier = controlledProjectKeys[currentProject];
+
+				IVsHierarchy solHier = (IVsHierarchy)_P4VsProvider.GetService(typeof(SVsSolution));
+				if (solHier == pHier)
+				{
+					// This is the solution
+					if (_P4VsProvider.IsThereASolution())
+					{
+						if (file.ToLower().CompareTo(_P4VsProvider.GetSolutionFileName().ToLower()) == 0)
+						{
+							VSITEMSELECTION vsItem;
+							vsItem.itemid = VSConstants.VSITEMID_ROOT;
+							vsItem.pHier = null;
+
+							return true;
+						}
+					}
+				}
+				else
+				{
+					IVsProject2 pProject = pHier as IVsProject2;
+					// See if the file is member of this project
+					// Caveat: the IsDocumentInProject function is expensive for certain project types, 
+					// you may want to limit its usage by creating your own maps of file2project or folder2project
+					int fFound;
+					uint itemid;
+					VSDOCUMENTPRIORITY[] prio = new VSDOCUMENTPRIORITY[1];
+
+					if (pProject != null && pProject.IsDocumentInProject(file, out fFound, prio, out itemid) == VSConstants.S_OK && fFound != 0)
+					{
+						VSITEMSELECTION vsItem;
+						vsItem.itemid = itemid;
+						vsItem.pHier = pHier;
+
+						return true;
+					}
+					else
+					{
+						IVsSccProject2 sccPrj2 = pHier as IVsSccProject2;
+						if (sccPrj2 != null)
+						{
+							string prjFile = _P4VsProvider.GetProjectFileName(sccPrj2);
+							if (prjFile != null)
+							{
+								if (file.ToLower().CompareTo(prjFile.ToLower()) == 0)
+								{
+									VSITEMSELECTION vsItem;
+									vsItem.itemid = VSConstants.VSITEMID_ROOT;
+									vsItem.pHier = null;
+
+									return true;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			return false;
+		}
+
+		private int IncrementCounters(int i, int totalProjects)
+		{
+			lastAccessedIndex++;
+			if (lastAccessedIndex >= totalProjects)
+			{
+				// Reset the index to start over looping from first element
+				lastAccessedIndex = 0;
+			}
+
+			i++;
+			return i;
+		}
+
+		/// <summary>
+		/// Returns a list of controlled projects containing the specified file
+		/// </summary>
+		public IList<VSITEMSELECTION> GetControlledProjectsContainingFiles([In] int cFiles, [In] string[] files)
         {
             // Accumulate all the controlled projects that contain this file
             IList<VSITEMSELECTION> nodes = new List<VSITEMSELECTION>();

@@ -121,15 +121,85 @@
   <data name="gridLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="numberUpdatedFilesTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="numberUpdatedFilesTB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 143</value>
+  </data>
+  <data name="numberUpdatedFilesTB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="numberUpdatedFilesTB.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="numberUpdatedFilesTB.Text" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="numberUpdatedFilesTB.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;numberUpdatedFilesTB.Name" xml:space="preserve">
+    <value>numberUpdatedFilesTB</value>
+  </data>
+  <data name="&gt;&gt;numberUpdatedFilesTB.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridTextBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;numberUpdatedFilesTB.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;numberUpdatedFilesTB.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numberUpdateFilesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="numberUpdateFilesLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numberUpdateFilesLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="numberUpdateFilesLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 147</value>
+  </data>
+  <data name="numberUpdateFilesLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 3, 3</value>
+  </data>
+  <data name="numberUpdateFilesLbl.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>571, 20</value>
+  </data>
+  <data name="numberUpdateFilesLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 13</value>
+  </data>
+  <data name="numberUpdateFilesLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="numberUpdateFilesLbl.Text" xml:space="preserve">
+    <value>Maximum number of files to cache in one run:</value>
+  </data>
+  <data name="&gt;&gt;numberUpdateFilesLbl.Name" xml:space="preserve">
+    <value>numberUpdateFilesLbl</value>
+  </data>
+  <data name="&gt;&gt;numberUpdateFilesLbl.Type" xml:space="preserve">
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+  </data>
+  <data name="&gt;&gt;numberUpdateFilesLbl.Parent" xml:space="preserve">
+    <value>gridLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;numberUpdateFilesLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="disableParSubmitCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
   <data name="disableParSubmitCB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="disableParSubmitCB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 418</value>
+    <value>66, 483</value>
   </data>
   <data name="disableParSubmitCB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 3, 3, 3</value>
@@ -137,7 +207,6 @@
   <data name="disableParSubmitCB.Size" type="System.Drawing.Size, System.Drawing">
     <value>483, 17</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="disableParSubmitCB.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
@@ -148,13 +217,13 @@
     <value>disableParSubmitCB</value>
   </data>
   <data name="&gt;&gt;disableParSubmitCB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridCheckBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;disableParSubmitCB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;disableParSubmitCB.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="disableParShelveCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -163,13 +232,13 @@
     <value>NoControl</value>
   </data>
   <data name="disableParShelveCB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 451</value>
+    <value>66, 508</value>
   </data>
   <data name="disableParShelveCB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 3, 3, 3</value>
   </data>
   <data name="disableParShelveCB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>483, 17</value>
+    <value>483, 18</value>
   </data>
   <data name="disableParShelveCB.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -181,13 +250,13 @@
     <value>disableParShelveCB</value>
   </data>
   <data name="&gt;&gt;disableParShelveCB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridCheckBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;disableParShelveCB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;disableParShelveCB.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="disableParSyncCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -196,7 +265,7 @@
     <value>NoControl</value>
   </data>
   <data name="disableParSyncCB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 385</value>
+    <value>66, 457</value>
   </data>
   <data name="disableParSyncCB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 3, 3, 3</value>
@@ -214,13 +283,13 @@
     <value>disableParSyncCB</value>
   </data>
   <data name="&gt;&gt;disableParSyncCB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridCheckBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;disableParSyncCB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;disableParSyncCB.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="gridLayoutSubpanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -241,7 +310,7 @@
     <value>0, 0, 3, 0</value>
   </data>
   <data name="gridLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
+    <value>98, 13</value>
   </data>
   <data name="gridLabel4.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -253,7 +322,7 @@
     <value>gridLabel4</value>
   </data>
   <data name="&gt;&gt;gridLabel4.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;gridLabel4.Parent" xml:space="preserve">
     <value>gridLayoutSubpanel3</value>
@@ -265,10 +334,10 @@
     <value>Left, Right</value>
   </data>
   <data name="gridGroupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 5</value>
+    <value>104, 5</value>
   </data>
   <data name="gridGroupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>417, 2</value>
+    <value>461, 2</value>
   </data>
   <data name="gridGroupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -277,7 +346,7 @@
     <value>gridGroupBox2</value>
   </data>
   <data name="&gt;&gt;gridGroupBox2.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridGroupBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridGroupBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;gridGroupBox2.Parent" xml:space="preserve">
     <value>gridLayoutSubpanel3</value>
@@ -286,13 +355,13 @@
     <value>1</value>
   </data>
   <data name="gridLayoutSubpanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 366</value>
+    <value>51, 438</value>
   </data>
   <data name="gridLayoutSubpanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 10, 0, 0</value>
   </data>
   <data name="gridLayoutSubpanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 13</value>
+    <value>568, 13</value>
   </data>
   <data name="gridLayoutSubpanel3.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -301,13 +370,13 @@
     <value>gridLayoutSubpanel3</value>
   </data>
   <data name="&gt;&gt;gridLayoutSubpanel3.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;gridLayoutSubpanel3.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;gridLayoutSubpanel3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="gridLabel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -316,13 +385,13 @@
     <value>NoControl</value>
   </data>
   <data name="gridLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 327</value>
+    <value>61, 396</value>
   </data>
   <data name="gridLabel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 25, 3</value>
   </data>
   <data name="gridLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>481, 26</value>
+    <value>533, 26</value>
   </data>
   <data name="gridLabel3.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -334,16 +403,19 @@
     <value>gridLabel3</value>
   </data>
   <data name="&gt;&gt;gridLabel3.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;gridLabel3.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;gridLabel3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="gridLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="gridLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="gridLabel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>-311, 526</value>
@@ -361,13 +433,13 @@
     <value>gridLabel1</value>
   </data>
   <data name="&gt;&gt;gridLabel1.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;gridLabel1.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;gridLabel1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="gridLayoutSubpanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -400,7 +472,7 @@
     <value>gridLabel2</value>
   </data>
   <data name="&gt;&gt;gridLabel2.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;gridLabel2.Parent" xml:space="preserve">
     <value>gridLayoutSubpanel2</value>
@@ -415,7 +487,7 @@
     <value>143, 5</value>
   </data>
   <data name="gridGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 2</value>
+    <value>422, 2</value>
   </data>
   <data name="gridGroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -424,7 +496,7 @@
     <value>gridGroupBox1</value>
   </data>
   <data name="&gt;&gt;gridGroupBox1.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridGroupBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridGroupBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;gridGroupBox1.Parent" xml:space="preserve">
     <value>gridLayoutSubpanel2</value>
@@ -433,13 +505,13 @@
     <value>1</value>
   </data>
   <data name="gridLayoutSubpanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 191</value>
+    <value>51, 239</value>
   </data>
   <data name="gridLayoutSubpanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 10, 0, 0</value>
   </data>
   <data name="gridLayoutSubpanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 13</value>
+    <value>568, 13</value>
   </data>
   <data name="gridLayoutSubpanel2.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -448,13 +520,13 @@
     <value>gridLayoutSubpanel2</value>
   </data>
   <data name="&gt;&gt;gridLayoutSubpanel2.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;gridLayoutSubpanel2.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;gridLayoutSubpanel2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="gridLayoutSubpanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -487,7 +559,7 @@
     <value>dataRetrievalLbl</value>
   </data>
   <data name="&gt;&gt;dataRetrievalLbl.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;dataRetrievalLbl.Parent" xml:space="preserve">
     <value>gridLayoutSubpanel1</value>
@@ -502,7 +574,7 @@
     <value>79, 5</value>
   </data>
   <data name="dataRetrievalGB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 2</value>
+    <value>480, 2</value>
   </data>
   <data name="dataRetrievalGB.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -511,7 +583,7 @@
     <value>dataRetrievalGB</value>
   </data>
   <data name="&gt;&gt;dataRetrievalGB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridGroupBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridGroupBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;dataRetrievalGB.Parent" xml:space="preserve">
     <value>gridLayoutSubpanel1</value>
@@ -520,10 +592,10 @@
     <value>1</value>
   </data>
   <data name="gridLayoutSubpanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>54, 6</value>
   </data>
   <data name="gridLayoutSubpanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>510, 13</value>
+    <value>562, 13</value>
   </data>
   <data name="gridLayoutSubpanel1.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -532,13 +604,13 @@
     <value>gridLayoutSubpanel1</value>
   </data>
   <data name="&gt;&gt;gridLayoutSubpanel1.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLayoutSubpanel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;gridLayoutSubpanel1.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;gridLayoutSubpanel1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="LLFullMenuCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -547,13 +619,13 @@
     <value>NoControl</value>
   </data>
   <data name="LLFullMenuCB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 284</value>
+    <value>81, 347</value>
   </data>
   <data name="LLFullMenuCB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>30, 0, 3, 0</value>
   </data>
   <data name="LLFullMenuCB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>483, 17</value>
+    <value>535, 17</value>
   </data>
   <data name="LLFullMenuCB.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -565,13 +637,13 @@
     <value>LLFullMenuCB</value>
   </data>
   <data name="&gt;&gt;LLFullMenuCB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridCheckBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;LLFullMenuCB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;LLFullMenuCB.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="PreloadCacheCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -580,13 +652,13 @@
     <value>NoControl</value>
   </data>
   <data name="PreloadCacheCB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 244</value>
+    <value>81, 301</value>
   </data>
   <data name="PreloadCacheCB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>30, 0, 3, 0</value>
   </data>
   <data name="PreloadCacheCB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>483, 17</value>
+    <value>535, 17</value>
   </data>
   <data name="PreloadCacheCB.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -598,13 +670,13 @@
     <value>PreloadCacheCB</value>
   </data>
   <data name="&gt;&gt;PreloadCacheCB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridCheckBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;PreloadCacheCB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;PreloadCacheCB.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="TreatProjectsAsDirsCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -613,13 +685,13 @@
     <value>NoControl</value>
   </data>
   <data name="TreatProjectsAsDirsCB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 227</value>
+    <value>81, 281</value>
   </data>
   <data name="TreatProjectsAsDirsCB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>30, 0, 3, 0</value>
   </data>
   <data name="TreatProjectsAsDirsCB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>483, 17</value>
+    <value>535, 17</value>
   </data>
   <data name="TreatProjectsAsDirsCB.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -631,13 +703,13 @@
     <value>TreatProjectsAsDirsCB</value>
   </data>
   <data name="&gt;&gt;TreatProjectsAsDirsCB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridCheckBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;TreatProjectsAsDirsCB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;TreatProjectsAsDirsCB.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="NoFstatOptimizatioRDO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -646,13 +718,13 @@
     <value>NoControl</value>
   </data>
   <data name="NoFstatOptimizatioRDO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 304</value>
+    <value>61, 370</value>
   </data>
   <data name="NoFstatOptimizatioRDO.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
   </data>
   <data name="NoFstatOptimizatioRDO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>503, 17</value>
+    <value>555, 17</value>
   </data>
   <data name="NoFstatOptimizatioRDO.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -664,13 +736,13 @@
     <value>NoFstatOptimizatioRDO</value>
   </data>
   <data name="&gt;&gt;NoFstatOptimizatioRDO.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridRadioButton, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;NoFstatOptimizatioRDO.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;NoFstatOptimizatioRDO.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="LazyLoadRDO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -679,13 +751,13 @@
     <value>NoControl</value>
   </data>
   <data name="LazyLoadRDO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 264</value>
+    <value>61, 324</value>
   </data>
   <data name="LazyLoadRDO.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
   </data>
   <data name="LazyLoadRDO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>503, 17</value>
+    <value>555, 17</value>
   </data>
   <data name="LazyLoadRDO.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -697,13 +769,13 @@
     <value>LazyLoadRDO</value>
   </data>
   <data name="&gt;&gt;LazyLoadRDO.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridRadioButton, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;LazyLoadRDO.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;LazyLoadRDO.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="OptimizeFstatsRDO.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -712,13 +784,13 @@
     <value>NoControl</value>
   </data>
   <data name="OptimizeFstatsRDO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 207</value>
+    <value>61, 258</value>
   </data>
   <data name="OptimizeFstatsRDO.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
   </data>
   <data name="OptimizeFstatsRDO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>503, 17</value>
+    <value>555, 17</value>
   </data>
   <data name="OptimizeFstatsRDO.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -730,13 +802,13 @@
     <value>OptimizeFstatsRDO</value>
   </data>
   <data name="&gt;&gt;OptimizeFstatsRDO.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridRadioButton, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridRadioButton, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;OptimizeFstatsRDO.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;OptimizeFstatsRDO.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="AutoUpdateStatudCB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -748,7 +820,7 @@
     <value>NoControl</value>
   </data>
   <data name="AutoUpdateStatudCB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 126</value>
+    <value>66, 172</value>
   </data>
   <data name="AutoUpdateStatudCB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 3, 3, 3</value>
@@ -766,13 +838,13 @@
     <value>AutoUpdateStatudCB</value>
   </data>
   <data name="&gt;&gt;AutoUpdateStatudCB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridCheckBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridCheckBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;AutoUpdateStatudCB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;AutoUpdateStatudCB.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="infoLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -781,13 +853,13 @@
     <value>NoControl</value>
   </data>
   <data name="infoLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 149</value>
+    <value>61, 198</value>
   </data>
   <data name="infoLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 25, 3</value>
   </data>
   <data name="infoLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>481, 29</value>
+    <value>533, 25</value>
   </data>
   <data name="infoLbl.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -799,19 +871,19 @@
     <value>infoLbl</value>
   </data>
   <data name="&gt;&gt;infoLbl.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;infoLbl.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;infoLbl.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>17</value>
   </data>
   <data name="updateTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="updateTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 22</value>
+    <value>293, 27</value>
   </data>
   <data name="updateTB.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -829,19 +901,19 @@
     <value>updateTB</value>
   </data>
   <data name="&gt;&gt;updateTB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridTextBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;updateTB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;updateTB.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>18</value>
   </data>
   <data name="numberFilesTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="numberFilesTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 48</value>
+    <value>293, 56</value>
   </data>
   <data name="numberFilesTB.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -859,19 +931,19 @@
     <value>numberFilesTB</value>
   </data>
   <data name="&gt;&gt;numberFilesTB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridTextBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;numberFilesTB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;numberFilesTB.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>19</value>
   </data>
   <data name="sizeTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="sizeTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 74</value>
+    <value>293, 85</value>
   </data>
   <data name="sizeTB.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -889,19 +961,19 @@
     <value>sizeTB</value>
   </data>
   <data name="&gt;&gt;sizeTB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridTextBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;sizeTB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;sizeTB.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>20</value>
   </data>
   <data name="numberSpecsTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="numberSpecsTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 100</value>
+    <value>293, 114</value>
   </data>
   <data name="numberSpecsTB.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -919,13 +991,13 @@
     <value>numberSpecsTB</value>
   </data>
   <data name="&gt;&gt;numberSpecsTB.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridTextBox, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridTextBox, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;numberSpecsTB.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;numberSpecsTB.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>21</value>
   </data>
   <data name="minutesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -937,7 +1009,7 @@
     <value>NoControl</value>
   </data>
   <data name="minutesLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 25</value>
+    <value>364, 31</value>
   </data>
   <data name="minutesLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 8, 0</value>
@@ -955,13 +1027,13 @@
     <value>minutesLbl</value>
   </data>
   <data name="&gt;&gt;minutesLbl.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;minutesLbl.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;minutesLbl.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>22</value>
   </data>
   <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -973,7 +1045,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 77</value>
+    <value>364, 89</value>
   </data>
   <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 8, 0</value>
@@ -991,13 +1063,13 @@
     <value>label3</value>
   </data>
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>23</value>
   </data>
   <data name="numberSpecsLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -1009,7 +1081,7 @@
     <value>NoControl</value>
   </data>
   <data name="numberSpecsLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 103</value>
+    <value>61, 118</value>
   </data>
   <data name="numberSpecsLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -1030,13 +1102,13 @@
     <value>numberSpecsLbl</value>
   </data>
   <data name="&gt;&gt;numberSpecsLbl.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;numberSpecsLbl.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;numberSpecsLbl.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>24</value>
   </data>
   <data name="numberFilesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -1048,7 +1120,7 @@
     <value>NoControl</value>
   </data>
   <data name="numberFilesLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 51</value>
+    <value>61, 60</value>
   </data>
   <data name="numberFilesLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -1069,13 +1141,13 @@
     <value>numberFilesLbl</value>
   </data>
   <data name="&gt;&gt;numberFilesLbl.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;numberFilesLbl.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;numberFilesLbl.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>25</value>
   </data>
   <data name="allLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1087,7 +1159,7 @@
     <value>NoControl</value>
   </data>
   <data name="allLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 103</value>
+    <value>364, 118</value>
   </data>
   <data name="allLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 8, 0</value>
@@ -1105,13 +1177,13 @@
     <value>allLbl</value>
   </data>
   <data name="&gt;&gt;allLbl.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;allLbl.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;allLbl.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>26</value>
   </data>
   <data name="sizeLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -1123,7 +1195,7 @@
     <value>NoControl</value>
   </data>
   <data name="sizeLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 77</value>
+    <value>61, 89</value>
   </data>
   <data name="sizeLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -1144,13 +1216,13 @@
     <value>sizeLbl</value>
   </data>
   <data name="&gt;&gt;sizeLbl.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;sizeLbl.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;sizeLbl.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>27</value>
   </data>
   <data name="updateLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -1165,7 +1237,7 @@
     <value>NoControl</value>
   </data>
   <data name="updateLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 25</value>
+    <value>61, 31</value>
   </data>
   <data name="updateLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 3, 3, 3</value>
@@ -1186,43 +1258,19 @@
     <value>updateLbl</value>
   </data>
   <data name="&gt;&gt;updateLbl.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLabel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLabel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;updateLbl.Parent" xml:space="preserve">
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;updateLbl.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="gridPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="gridPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 472</value>
-  </data>
-  <data name="gridPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 21</value>
-  </data>
-  <data name="gridPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;gridPanel1.Name" xml:space="preserve">
-    <value>gridPanel1</value>
-  </data>
-  <data name="&gt;&gt;gridPanel1.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
-  </data>
-  <data name="&gt;&gt;gridPanel1.Parent" xml:space="preserve">
-    <value>gridLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;gridPanel1.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>28</value>
   </data>
   <data name="gridLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="gridLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 496</value>
+    <value>568, 542</value>
   </data>
   <data name="gridLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -1231,7 +1279,7 @@
     <value>gridLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;gridLayoutPanel1.Type" xml:space="preserve">
-    <value>Perforce.I18nControls.GridLayoutPanel, P4VS, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
+    <value>Perforce.I18nControls.GridLayoutPanel, P4VS_Utils, Version=2011.1.0.0, Culture=neutral, PublicKeyToken=5d747d90f174beb1</value>
   </data>
   <data name="&gt;&gt;gridLayoutPanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1255,7 +1303,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>510, 522</value>
+    <value>558, 569</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>P4DataRetrievalPreferencesControl</value>

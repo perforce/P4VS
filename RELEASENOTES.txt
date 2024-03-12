@@ -25,7 +25,7 @@ Compatibility Statements
 
           This release is supported on the following platforms:
 
-              Windows 7 and 10
+              Windows 7, 10 and 11
 
         Visual Studio Compatibility
 
@@ -36,8 +36,8 @@ Compatibility Statements
 
         Compatibility with Previous Releases
 
-          Unless otherwise stated below, the 2021.2 release of P4VS is
-          compatible with previous releases from Perforce Software.
+          Unless otherwise stated below, this release of P4VS is compatible with
+          previous releases from Perforce Software.
 
         Installation
 
@@ -82,10 +82,10 @@ Compatibility Statements
           If the connection dialog does not appear after Visual Studio
           upgrade, it is likely active but not on the screen. Use ALT+TAB
           to attempt to cycle to the Visual Studio application icon that
-          is the P4VS connection dialog and attempt to restore, move, or maximize
-          the dialog. If ALT+TAB does not allow access to the connection dialog,
-          the related screen position saved preference may be edited or deleted.
-          The settings file can be found in:
+          is the P4VS connection dialog and attempt to restore, move, or
+          maximize the dialog. If ALT+TAB does not allow access to the
+          connection dialog, the related screen position saved preference may be
+          edited or deleted. The settings file can be found in:
           C:\Users\<user name>\AppData\Roaming\Perforce\P4VS\localsettings.ini
           and the related lines in that file are:
                 <OpenConnectionDlg_Width type="int">#</OpenConnectionDlg_Width>
@@ -128,9 +128,9 @@ Compatibility Statements
           extension, instead of plain ShiftJis, to avoid mojibake. You need
           to set the following environment variable:
                UNICODEMAP_JP=cp932,nec-vdc
-          Then, when P4V or P4Merge runs, it will use the modified ShiftJis (CP932)
-          implementation, and apply the extension to recognize NEC special
-          characters when encoding/decoding characters.
+          Then, when P4V or P4Merge runs, it will use the modified ShiftJis
+          (CP932) implementation, and apply the extension to recognize NEC
+          special characters when encoding/decoding characters.
 
           When loading a large project under Perforce control, if
           directories containing a large number of files are in an expanded
@@ -153,17 +153,73 @@ Key to symbols used in change notes below.
 
 --------------------------------------------------------------------------
 
+New Functionality in 2023.1 Patch 5 (2023.1/2551959) (2024/02/07)
+        (Job #119182) *
+            Rebuilt with the latest p4api.net API.
+			
+--------------------------------------------------------------------------
+New Functionality in 2023.1 Patch 4 (2023.1/2513916) (2023/11/03)
+        #2513043 (Job #112720 #114096) *
+            In ‘Helix Core - Data Retrieval’ tab in the 'Source Control'
+			preferences settings, overlapping of row ‘Maximum number of
+			files to cache in one run’ is fixed. All rows and controls 
+			behave correctly on resizing the Data Retrieval options window.
+			
+--------------------------------------------------------------------------
+
+New Functionality in 2023.1 Patch 3 (2023.1/2493210) (2023/09/25)
+
+        #2493034, #2493068 (Job #117444) *
+            During solution/project load, Visual Studio queries for the icons 
+            of the files. And the icons are decided based upon whether the 
+            respective file is included in any of the project or not. This 
+            patch improvises the algorithm behind this to improve P4VS solution 
+            load performance.
+
+--------------------------------------------------------------------------
+
+Bugs fixed in 2023.1 Patch 2 (2023.1/2482839) (2023/08/31)
+
+        #2482139, 2482140 (Job #117130) *
+            Fixed the intermittent crash of Visual Studio while accessing 
+            repository. This issue occurs intermittently without any particular
+            pattern, while accessing repository in a different thread than the 
+            main thread.
+
+--------------------------------------------------------------------------
+
+New Functionality in 2023.1 Patch 1 (2023.1/2471431) (2023/08/02)
+
+        #2470221, #2465173 (Job #116595) *
+            During solution/project load, Visual Studio queried for the file
+            state for virtual files which are linked from a different physical
+            location.This caused a substantial numbers of wasteful server calls
+            which degraded P4VS performance. This fix aims to workaround that
+            issue and improve P4VS solution load performance
+            
+        #2470221, #2467811 (Job #116619) *
+            Increased the default value for 'Check server updates for every' (in
+            the Helix Core - Data Retrieval preferences) from 5 mins to 15 mins.
+            Please note that this will only impact fresh P4VS installations.
+
+        #2470221, #2469313, #2468294 (Job #116620) *
+            Enriched P4VS logging by adding details like time to completion for
+            server calls, P4VS settings information and server calls during
+            recurring solution refreshes
+
+--------------------------------------------------------------------------
+
 New Functionality in 2023.1 (2023.1/2456196) (2023/06/20)
 
         (Job #115708) *
-           Rebuilt with the latest p4api.net API. (2023.1/2456134)
+            Rebuilt with the latest p4api.net API. (2023.1/2456134)
 
 --------------------------------------------------------------------------
 
 New Functionality in 2021.2 Patch 7 (2021.2/2413698) (2023/03/02)
 
         (Job #114624) *
-           Rebuilt with the latest p4api.net API.
+            Rebuilt with the latest p4api.net API.
 
 ---------------------------------------------------------------------------
 
