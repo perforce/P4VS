@@ -1,7 +1,7 @@
                            Release Notes for
                 P4VS, the Helix Plugin for Visual Studio
 
-                            Version 2023.1
+                            Version 2023.2
 
 Introduction
 
@@ -151,13 +151,22 @@ Key to symbols used in change notes below.
           * -- requires new P4VS
          ** -- requires new p4d server program
 
+
+--------------------------------------------------------------------------
+New Functionality in 2023.2 (2023.2/2562238) (2024/02/26)
+
+        (Job #119180) * 
+            Rebuilt with the latest p4api.net API.
+
 --------------------------------------------------------------------------
 
 New Functionality in 2023.1 Patch 5 (2023.1/2551959) (2024/02/07)
+
         (Job #119182) *
             Rebuilt with the latest p4api.net API.
 			
 --------------------------------------------------------------------------
+
 New Functionality in 2023.1 Patch 4 (2023.1/2513916) (2023/11/03)
         #2513043 (Job #112720 #114096) *
             In ‘Helix Core - Data Retrieval’ tab in the 'Source Control'
