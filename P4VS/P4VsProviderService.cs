@@ -2131,8 +2131,8 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         continue;
                     }
 
-                    // if the file is not in the workspace, continue
-                    if (!file.StartsWith(ScmProvider.Connection.WorkspaceRoot, StringComparison.OrdinalIgnoreCase))
+                    // if the file is not in the workspace and workspace root is not set to "null", continue
+                    if ( !ScmProvider.Connection.WorkspaceRoot.Equals("null") && !file.StartsWith(ScmProvider.Connection.WorkspaceRoot, StringComparison.OrdinalIgnoreCase))
                     {
                         continue;
                     }

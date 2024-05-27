@@ -5630,7 +5630,32 @@ namespace Perforce.P4Scm
 							charset = " -C " + charset;
 						}
 
-                        if (versionnum >= 2010.2)
+                        // P4V deprecated options p4v -s and p4v -t in 2024.1 release.
+                        // These options needs to be replaced by p4vc -workspacewindow -s / -t
+                        if (versionnum >= 2024.1)
+                        {
+                            string p4vcPath = null;
+                            if (Preferences.LocalSettings.GetBool("P4VC_path", true))
+                            {
+                                // use configured application
+                                p4vcPath = P4VCPath();
+                                if (string.IsNullOrEmpty(p4vcPath) || !File.Exists(p4vcPath))
+                                {
+                                    MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS,
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    return;
+                                }
+                            }
+
+                            if (!string.IsNullOrEmpty(p4vcPath))
+                            {
+                                // Need to reset path from p4v.exe to p4vc.bat to launch P4V.
+                                launchP4V.StartInfo.FileName = Preferences.LocalSettings["P4VC_path"].ToString();
+                                launchP4V.StartInfo.Arguments = " -p " + Connection.Port + " -u " + Connection.User + " -c " + Connection.Workspace + charset + " workspacewindow -s \"" + Path + "\"";
+                                launchP4V.StartInfo.UseShellExecute = false;
+                            }
+                        }
+                        else if (versionnum >= 2010.2)
                         {
                             launchP4V.StartInfo.Arguments = " -p " + Connection.Port + " -u " + Connection.User + " -c " + Connection.Workspace + charset + " -s \"" + Path + "\"";
                         }
@@ -6080,6 +6105,7 @@ namespace Perforce.P4Scm
 					Connection.Repository.Connection.TextResultsReceived -= CommandLine.TextResultsCallbackFn;
 					Connection.Repository.Connection.TaggedOutputReceived -= CommandLine.TaggedOutputCallbackFn;
 					Connection.Repository.Connection.CommandEcho -= CommandLine.CommandEchoCallbackFn;
+					Connection.Repository.Connection.ResponseTimeEcho -= CommandLine.CommandEchoCallbackFn;
 
 					Connection.Repository.Dispose();
 					Connection.Repository = null;

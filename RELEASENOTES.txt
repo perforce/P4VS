@@ -151,7 +151,17 @@ Key to symbols used in change notes below.
           * -- requires new P4VS
          ** -- requires new p4d server program
 
+--------------------------------------------------------------------------
 
+Bugs fixed in 2023.2 Patch 1  (2023.2/2600533) (2024/05/21)
+        #2598068,2598127 (Job #114294) *
+            Fixed the issue where user was not able to mark controlled file
+            for delete in Perforce when client root is set to 'null'.
+
+        #2590799,2589188,2589189 (Job #119483) * 
+            Added changes to make launch of P4V via P4VS to be compatible
+            with latest P4V release.
+			
 --------------------------------------------------------------------------
 New Functionality in 2023.2 (2023.2/2562238) (2024/02/26)
 
