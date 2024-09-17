@@ -4348,6 +4348,42 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rename Workspace.
+        /// </summary>
+        public static string WorkspacesWindowControl_RenameWorkspaceCaption {
+            get {
+                return ResourceManager.GetString("WorkspacesWindowControl_RenameWorkspaceCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rename Workspace &apos;{0}&apos;....
+        /// </summary>
+        public static string WorkspacesWindowControl_RenameWorkspaceMenuItem_Text {
+            get {
+                return ResourceManager.GetString("WorkspacesWindowControl_RenameWorkspaceMenuItem_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Name: .
+        /// </summary>
+        public static string WorkspacesWindowControl_RenameWorkspaceNewNameLabel {
+            get {
+                return ResourceManager.GetString("WorkspacesWindowControl_RenameWorkspaceNewNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rename workspace &apos;{0}&apos;.
+        /// </summary>
+        public static string WorkspacesWindowControl_RenameWorkspaceOldClientPrompt_Text {
+            get {
+                return ResourceManager.GetString("WorkspacesWindowControl_RenameWorkspaceOldClientPrompt_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select a workspace for {0} to &apos;{1}&apos;.
         /// </summary>
         public static string WorkspacesWindowControl_SelectAWorkspaceForCopying {
@@ -4362,6 +4398,15 @@ namespace Perforce.P4VS {
         public static string WorkspacesWindowControl_WorkspaceExistsWarning {
             get {
                 return ResourceManager.GetString("WorkspacesWindowControl_WorkspaceExistsWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recent Connections and saved Pending Changelist Filters will be updated with the new workspace name..
+        /// </summary>
+        public static string WorlspacesWindowControl_RenameWorkspaceWarningInfo {
+            get {
+                return ResourceManager.GetString("WorlspacesWindowControl_RenameWorkspaceWarningInfo", resourceCulture);
             }
         }
     }

@@ -10,20 +10,14 @@ PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 
 ***************************************************************************/
 
+using Perforce.P4;
+using Perforce.P4Scm;
 using System;
-using System.Globalization;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using System.Threading;
 using System.Net;
-using Perforce.P4;
-using IServiceProvider = System.IServiceProvider;
-using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
-using Label = System.Windows.Forms.Label;
-using Perforce.P4Scm;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace Perforce.P4VS
 {
@@ -135,6 +129,7 @@ namespace Perforce.P4VS
         private I18nControls.GridCheckBox compressChk;
         private I18nControls.GridCheckBox clobberChk;
         private I18nControls.GridCheckBox allwriteChk;
+        private ToolStripMenuItem renameWorkspaceToolStripMenuItem;
         private ImageList imageList1;
 
         public WorkspaceToolWindowControl()
@@ -380,6 +375,7 @@ namespace Perforce.P4VS
             this.dateModifiedLbl = new Perforce.I18nControls.GridLabel();
             this.workspaceLbl = new Perforce.I18nControls.GridLabel();
             this.gridLayoutPanel1 = new Perforce.I18nControls.GridLayoutPanel();
+            this.renameWorkspaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -448,8 +444,8 @@ namespace Perforce.P4VS
             this.workspacesTreeListView.ActionColumn = -1;
             this.workspacesTreeListView.AllowColumnReorder = true;
             resources.ApplyResources(this.workspacesTreeListView, "workspacesTreeListView");
-            this.workspacesTreeListView.CellHeight = 148;
-            this.workspacesTreeListView.CellWidth = 576;
+            this.workspacesTreeListView.CellHeight = 181;
+            this.workspacesTreeListView.CellWidth = 769;
             this.workspacesTreeListView.Column = 0;
             this.workspacesTreeListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.workspace,
@@ -530,12 +526,14 @@ namespace Perforce.P4VS
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.getRevisionToolStripMenuItem,
             this.toolStripSeparator1,
             this.newWorkspaceToolStripMenuItem,
             this.createWorkspaceFromToolStripMenuItem,
             this.editWorkspaceToolStripMenuItem,
+            this.renameWorkspaceToolStripMenuItem,
             this.deleteWorkspaceToolStripMenuItem,
             this.toolStripSeparator2,
             this.refreshWorkspaceListToolStripMenuItem,
@@ -599,8 +597,8 @@ namespace Perforce.P4VS
             // ownerCB
             // 
             resources.ApplyResources(this.ownerCB, "ownerCB");
-            this.ownerCB.CellHeight = 29;
-            this.ownerCB.CellWidth = 137;
+            this.ownerCB.CellHeight = 36;
+            this.ownerCB.CellWidth = 191;
             this.ownerCB.Column = 1;
             this.ownerCB.ColumnsSpanned = 0;
             this.ownerCB.FormattingEnabled = true;
@@ -614,8 +612,8 @@ namespace Perforce.P4VS
             // dividerGB
             // 
             resources.ApplyResources(this.dividerGB, "dividerGB");
-            this.dividerGB.CellHeight = 65;
-            this.dividerGB.CellWidth = 10;
+            this.dividerGB.CellHeight = 81;
+            this.dividerGB.CellWidth = 12;
             this.dividerGB.Column = 4;
             this.dividerGB.ColumnsSpanned = 0;
             this.dividerGB.Name = "dividerGB";
@@ -627,8 +625,8 @@ namespace Perforce.P4VS
             // nameCaseFilterChk
             // 
             resources.ApplyResources(this.nameCaseFilterChk, "nameCaseFilterChk");
-            this.nameCaseFilterChk.CellHeight = 23;
-            this.nameCaseFilterChk.CellWidth = 214;
+            this.nameCaseFilterChk.CellHeight = 29;
+            this.nameCaseFilterChk.CellWidth = 298;
             this.nameCaseFilterChk.Column = 3;
             this.nameCaseFilterChk.ColumnsSpanned = 0;
             this.nameCaseFilterChk.Name = "nameCaseFilterChk";
@@ -640,8 +638,8 @@ namespace Perforce.P4VS
             // nameContainsCB
             // 
             resources.ApplyResources(this.nameContainsCB, "nameContainsCB");
-            this.nameContainsCB.CellHeight = 29;
-            this.nameContainsCB.CellWidth = 214;
+            this.nameContainsCB.CellHeight = 36;
+            this.nameContainsCB.CellWidth = 298;
             this.nameContainsCB.Column = 3;
             this.nameContainsCB.ColumnsSpanned = 0;
             this.nameContainsCB.FormattingEnabled = true;
@@ -655,8 +653,8 @@ namespace Perforce.P4VS
             // workspaceHostFilterChk
             // 
             resources.ApplyResources(this.workspaceHostFilterChk, "workspaceHostFilterChk");
-            this.workspaceHostFilterChk.CellHeight = 23;
-            this.workspaceHostFilterChk.CellWidth = 271;
+            this.workspaceHostFilterChk.CellHeight = 29;
+            this.workspaceHostFilterChk.CellWidth = 355;
             this.workspaceHostFilterChk.Column = 0;
             this.workspaceHostFilterChk.ColumnsSpanned = 2;
             this.workspaceHostFilterChk.Name = "workspaceHostFilterChk";
@@ -668,8 +666,8 @@ namespace Perforce.P4VS
             // filterBtn
             // 
             resources.ApplyResources(this.filterBtn, "filterBtn");
-            this.filterBtn.CellHeight = 29;
-            this.filterBtn.CellWidth = 81;
+            this.filterBtn.CellHeight = 36;
+            this.filterBtn.CellWidth = 104;
             this.filterBtn.Column = 5;
             this.filterBtn.ColumnsSpanned = 0;
             this.filterBtn.Name = "filterBtn";
@@ -683,8 +681,8 @@ namespace Perforce.P4VS
             // streamVarLbl
             // 
             resources.ApplyResources(this.streamVarLbl, "streamVarLbl");
-            this.streamVarLbl.CellHeight = 13;
-            this.streamVarLbl.CellWidth = 214;
+            this.streamVarLbl.CellHeight = 16;
+            this.streamVarLbl.CellWidth = 298;
             this.streamVarLbl.Column = 3;
             this.streamVarLbl.ColumnsSpanned = 0;
             this.streamVarLbl.Name = "streamVarLbl";
@@ -695,8 +693,8 @@ namespace Perforce.P4VS
             // ownerCBLbl
             // 
             resources.ApplyResources(this.ownerCBLbl, "ownerCBLbl");
-            this.ownerCBLbl.CellHeight = 29;
-            this.ownerCBLbl.CellWidth = 47;
+            this.ownerCBLbl.CellHeight = 36;
+            this.ownerCBLbl.CellWidth = 56;
             this.ownerCBLbl.Column = 0;
             this.ownerCBLbl.ColumnsSpanned = 0;
             this.ownerCBLbl.Name = "ownerCBLbl";
@@ -708,8 +706,8 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.workspaceMatchesLbl, "workspaceMatchesLbl");
             this.workspaceMatchesLbl.AutoEllipsis = true;
-            this.workspaceMatchesLbl.CellHeight = 23;
-            this.workspaceMatchesLbl.CellWidth = 81;
+            this.workspaceMatchesLbl.CellHeight = 29;
+            this.workspaceMatchesLbl.CellWidth = 104;
             this.workspaceMatchesLbl.Column = 5;
             this.workspaceMatchesLbl.ColumnsSpanned = 0;
             this.workspaceMatchesLbl.Name = "workspaceMatchesLbl";
@@ -720,8 +718,8 @@ namespace Perforce.P4VS
             // nameContainsLbl
             // 
             resources.ApplyResources(this.nameContainsLbl, "nameContainsLbl");
-            this.nameContainsLbl.CellHeight = 29;
-            this.nameContainsLbl.CellWidth = 87;
+            this.nameContainsLbl.CellHeight = 36;
+            this.nameContainsLbl.CellWidth = 108;
             this.nameContainsLbl.Column = 2;
             this.nameContainsLbl.ColumnsSpanned = 0;
             this.nameContainsLbl.Name = "nameContainsLbl";
@@ -774,8 +772,8 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.CellHeight = 36;
-            this.panel6.CellWidth = 454;
+            this.panel6.CellHeight = 44;
+            this.panel6.CellWidth = 617;
             this.panel6.Column = 1;
             this.panel6.ColumnsSpanned = 2;
             this.panel6.Controls.Add(this.rmdirChk);
@@ -797,8 +795,8 @@ namespace Perforce.P4VS
             // rmdirChk
             // 
             resources.ApplyResources(this.rmdirChk, "rmdirChk");
-            this.rmdirChk.CellHeight = 26;
-            this.rmdirChk.CellWidth = 77;
+            this.rmdirChk.CellHeight = 32;
+            this.rmdirChk.CellWidth = 103;
             this.rmdirChk.Column = 5;
             this.rmdirChk.ColumnsSpanned = 0;
             this.rmdirChk.Name = "rmdirChk";
@@ -812,8 +810,8 @@ namespace Perforce.P4VS
             // modtimeChk
             // 
             resources.ApplyResources(this.modtimeChk, "modtimeChk");
-            this.modtimeChk.CellHeight = 26;
-            this.modtimeChk.CellWidth = 77;
+            this.modtimeChk.CellHeight = 32;
+            this.modtimeChk.CellWidth = 103;
             this.modtimeChk.Column = 4;
             this.modtimeChk.ColumnsSpanned = 0;
             this.modtimeChk.Name = "modtimeChk";
@@ -827,8 +825,8 @@ namespace Perforce.P4VS
             // lockedChk
             // 
             resources.ApplyResources(this.lockedChk, "lockedChk");
-            this.lockedChk.CellHeight = 26;
-            this.lockedChk.CellWidth = 77;
+            this.lockedChk.CellHeight = 32;
+            this.lockedChk.CellWidth = 103;
             this.lockedChk.Column = 3;
             this.lockedChk.ColumnsSpanned = 0;
             this.lockedChk.Name = "lockedChk";
@@ -842,8 +840,8 @@ namespace Perforce.P4VS
             // compressChk
             // 
             resources.ApplyResources(this.compressChk, "compressChk");
-            this.compressChk.CellHeight = 26;
-            this.compressChk.CellWidth = 77;
+            this.compressChk.CellHeight = 32;
+            this.compressChk.CellWidth = 103;
             this.compressChk.Column = 2;
             this.compressChk.ColumnsSpanned = 0;
             this.compressChk.Name = "compressChk";
@@ -857,8 +855,8 @@ namespace Perforce.P4VS
             // clobberChk
             // 
             resources.ApplyResources(this.clobberChk, "clobberChk");
-            this.clobberChk.CellHeight = 26;
-            this.clobberChk.CellWidth = 77;
+            this.clobberChk.CellHeight = 32;
+            this.clobberChk.CellWidth = 103;
             this.clobberChk.Column = 1;
             this.clobberChk.ColumnsSpanned = 0;
             this.clobberChk.Name = "clobberChk";
@@ -872,8 +870,8 @@ namespace Perforce.P4VS
             // allwriteChk
             // 
             resources.ApplyResources(this.allwriteChk, "allwriteChk");
-            this.allwriteChk.CellHeight = 26;
-            this.allwriteChk.CellWidth = 77;
+            this.allwriteChk.CellHeight = 32;
+            this.allwriteChk.CellWidth = 103;
             this.allwriteChk.Column = 0;
             this.allwriteChk.ColumnsSpanned = 0;
             this.allwriteChk.Name = "allwriteChk";
@@ -887,8 +885,8 @@ namespace Perforce.P4VS
             // viewTB
             // 
             resources.ApplyResources(this.viewTB, "viewTB");
-            this.viewTB.CellHeight = 210;
-            this.viewTB.CellWidth = 454;
+            this.viewTB.CellHeight = 261;
+            this.viewTB.CellWidth = 617;
             this.viewTB.Column = 1;
             this.viewTB.ColumnsSpanned = 2;
             this.viewTB.Name = "viewTB";
@@ -896,13 +894,13 @@ namespace Perforce.P4VS
             this.viewTB.Row = 11;
             this.viewTB.RowsSpanned = 0;
             this.viewTB.TabStop = false;
-            this.viewTB.YOffset = 9;
+            this.viewTB.YOffset = 12;
             // 
             // altRootsTB
             // 
             resources.ApplyResources(this.altRootsTB, "altRootsTB");
-            this.altRootsTB.CellHeight = 45;
-            this.altRootsTB.CellWidth = 454;
+            this.altRootsTB.CellHeight = 55;
+            this.altRootsTB.CellWidth = 617;
             this.altRootsTB.Column = 1;
             this.altRootsTB.ColumnsSpanned = 2;
             this.altRootsTB.Name = "altRootsTB";
@@ -915,8 +913,8 @@ namespace Perforce.P4VS
             // severIDLbl
             // 
             resources.ApplyResources(this.severIDLbl, "severIDLbl");
-            this.severIDLbl.CellHeight = 13;
-            this.severIDLbl.CellWidth = 102;
+            this.severIDLbl.CellHeight = 16;
+            this.severIDLbl.CellWidth = 126;
             this.severIDLbl.Column = 0;
             this.severIDLbl.ColumnsSpanned = 0;
             this.severIDLbl.Name = "severIDLbl";
@@ -927,8 +925,8 @@ namespace Perforce.P4VS
             // workspaceSeverIDLbl
             // 
             resources.ApplyResources(this.workspaceSeverIDLbl, "workspaceSeverIDLbl");
-            this.workspaceSeverIDLbl.CellHeight = 13;
-            this.workspaceSeverIDLbl.CellWidth = 454;
+            this.workspaceSeverIDLbl.CellHeight = 16;
+            this.workspaceSeverIDLbl.CellWidth = 617;
             this.workspaceSeverIDLbl.Column = 1;
             this.workspaceSeverIDLbl.ColumnsSpanned = 2;
             this.workspaceSeverIDLbl.Name = "workspaceSeverIDLbl";
@@ -939,8 +937,8 @@ namespace Perforce.P4VS
             // streamAtChangeLbl
             // 
             resources.ApplyResources(this.streamAtChangeLbl, "streamAtChangeLbl");
-            this.streamAtChangeLbl.CellHeight = 13;
-            this.streamAtChangeLbl.CellWidth = 102;
+            this.streamAtChangeLbl.CellHeight = 16;
+            this.streamAtChangeLbl.CellWidth = 126;
             this.streamAtChangeLbl.Column = 0;
             this.streamAtChangeLbl.ColumnsSpanned = 0;
             this.streamAtChangeLbl.Name = "streamAtChangeLbl";
@@ -951,8 +949,8 @@ namespace Perforce.P4VS
             // workspaceStreamAtChangeLbl
             // 
             resources.ApplyResources(this.workspaceStreamAtChangeLbl, "workspaceStreamAtChangeLbl");
-            this.workspaceStreamAtChangeLbl.CellHeight = 13;
-            this.workspaceStreamAtChangeLbl.CellWidth = 454;
+            this.workspaceStreamAtChangeLbl.CellHeight = 16;
+            this.workspaceStreamAtChangeLbl.CellWidth = 617;
             this.workspaceStreamAtChangeLbl.Column = 1;
             this.workspaceStreamAtChangeLbl.ColumnsSpanned = 2;
             this.workspaceStreamAtChangeLbl.Name = "workspaceStreamAtChangeLbl";
@@ -963,8 +961,8 @@ namespace Perforce.P4VS
             // descriptionTB
             // 
             resources.ApplyResources(this.descriptionTB, "descriptionTB");
-            this.descriptionTB.CellHeight = 42;
-            this.descriptionTB.CellWidth = 454;
+            this.descriptionTB.CellHeight = 51;
+            this.descriptionTB.CellWidth = 617;
             this.descriptionTB.Column = 1;
             this.descriptionTB.ColumnsSpanned = 2;
             this.descriptionTB.Name = "descriptionTB";
@@ -977,8 +975,8 @@ namespace Perforce.P4VS
             // streamLbl
             // 
             resources.ApplyResources(this.streamLbl, "streamLbl");
-            this.streamLbl.CellHeight = 13;
-            this.streamLbl.CellWidth = 102;
+            this.streamLbl.CellHeight = 16;
+            this.streamLbl.CellWidth = 126;
             this.streamLbl.Column = 0;
             this.streamLbl.ColumnsSpanned = 0;
             this.streamLbl.Name = "streamLbl";
@@ -989,8 +987,8 @@ namespace Perforce.P4VS
             // altRootsLbl
             // 
             resources.ApplyResources(this.altRootsLbl, "altRootsLbl");
-            this.altRootsLbl.CellHeight = 45;
-            this.altRootsLbl.CellWidth = 102;
+            this.altRootsLbl.CellHeight = 55;
+            this.altRootsLbl.CellWidth = 126;
             this.altRootsLbl.Column = 0;
             this.altRootsLbl.ColumnsSpanned = 0;
             this.altRootsLbl.Name = "altRootsLbl";
@@ -1001,8 +999,8 @@ namespace Perforce.P4VS
             // optionsLbl
             // 
             resources.ApplyResources(this.optionsLbl, "optionsLbl");
-            this.optionsLbl.CellHeight = 36;
-            this.optionsLbl.CellWidth = 102;
+            this.optionsLbl.CellHeight = 44;
+            this.optionsLbl.CellWidth = 126;
             this.optionsLbl.Column = 0;
             this.optionsLbl.ColumnsSpanned = 0;
             this.optionsLbl.Name = "optionsLbl";
@@ -1013,8 +1011,8 @@ namespace Perforce.P4VS
             // workspaceRootLbl
             // 
             resources.ApplyResources(this.workspaceRootLbl, "workspaceRootLbl");
-            this.workspaceRootLbl.CellHeight = 13;
-            this.workspaceRootLbl.CellWidth = 454;
+            this.workspaceRootLbl.CellHeight = 16;
+            this.workspaceRootLbl.CellWidth = 617;
             this.workspaceRootLbl.Column = 1;
             this.workspaceRootLbl.ColumnsSpanned = 2;
             this.workspaceRootLbl.Name = "workspaceRootLbl";
@@ -1025,8 +1023,8 @@ namespace Perforce.P4VS
             // workspaceStreamRootLbl
             // 
             resources.ApplyResources(this.workspaceStreamRootLbl, "workspaceStreamRootLbl");
-            this.workspaceStreamRootLbl.CellHeight = 13;
-            this.workspaceStreamRootLbl.CellWidth = 185;
+            this.workspaceStreamRootLbl.CellHeight = 16;
+            this.workspaceStreamRootLbl.CellWidth = 256;
             this.workspaceStreamRootLbl.Column = 1;
             this.workspaceStreamRootLbl.ColumnsSpanned = 0;
             this.workspaceStreamRootLbl.Name = "workspaceStreamRootLbl";
@@ -1037,8 +1035,8 @@ namespace Perforce.P4VS
             // rootLbl
             // 
             resources.ApplyResources(this.rootLbl, "rootLbl");
-            this.rootLbl.CellHeight = 13;
-            this.rootLbl.CellWidth = 102;
+            this.rootLbl.CellHeight = 16;
+            this.rootLbl.CellWidth = 126;
             this.rootLbl.Column = 0;
             this.rootLbl.ColumnsSpanned = 0;
             this.rootLbl.Name = "rootLbl";
@@ -1050,8 +1048,8 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.workspaceHostNameLbl, "workspaceHostNameLbl");
             this.workspaceHostNameLbl.AutoEllipsis = true;
-            this.workspaceHostNameLbl.CellHeight = 13;
-            this.workspaceHostNameLbl.CellWidth = 185;
+            this.workspaceHostNameLbl.CellHeight = 16;
+            this.workspaceHostNameLbl.CellWidth = 256;
             this.workspaceHostNameLbl.Column = 3;
             this.workspaceHostNameLbl.ColumnsSpanned = 0;
             this.workspaceHostNameLbl.Name = "workspaceHostNameLbl";
@@ -1062,8 +1060,8 @@ namespace Perforce.P4VS
             // viewLbl
             // 
             resources.ApplyResources(this.viewLbl, "viewLbl");
-            this.viewLbl.CellHeight = 210;
-            this.viewLbl.CellWidth = 102;
+            this.viewLbl.CellHeight = 261;
+            this.viewLbl.CellWidth = 126;
             this.viewLbl.Column = 0;
             this.viewLbl.ColumnsSpanned = 0;
             this.viewLbl.Name = "viewLbl";
@@ -1075,8 +1073,8 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.workspaceSubmitOptionsLbl, "workspaceSubmitOptionsLbl");
             this.workspaceSubmitOptionsLbl.AutoEllipsis = true;
-            this.workspaceSubmitOptionsLbl.CellHeight = 13;
-            this.workspaceSubmitOptionsLbl.CellWidth = 185;
+            this.workspaceSubmitOptionsLbl.CellHeight = 16;
+            this.workspaceSubmitOptionsLbl.CellWidth = 256;
             this.workspaceSubmitOptionsLbl.Column = 3;
             this.workspaceSubmitOptionsLbl.ColumnsSpanned = 0;
             this.workspaceSubmitOptionsLbl.Name = "workspaceSubmitOptionsLbl";
@@ -1088,8 +1086,8 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.workspaceLastAccessedLbl, "workspaceLastAccessedLbl");
             this.workspaceLastAccessedLbl.AutoEllipsis = true;
-            this.workspaceLastAccessedLbl.CellHeight = 13;
-            this.workspaceLastAccessedLbl.CellWidth = 185;
+            this.workspaceLastAccessedLbl.CellHeight = 16;
+            this.workspaceLastAccessedLbl.CellWidth = 256;
             this.workspaceLastAccessedLbl.Column = 1;
             this.workspaceLastAccessedLbl.ColumnsSpanned = 0;
             this.workspaceLastAccessedLbl.Name = "workspaceLastAccessedLbl";
@@ -1100,8 +1098,8 @@ namespace Perforce.P4VS
             // OwnerLbl
             // 
             resources.ApplyResources(this.OwnerLbl, "OwnerLbl");
-            this.OwnerLbl.CellHeight = 13;
-            this.OwnerLbl.CellWidth = 102;
+            this.OwnerLbl.CellHeight = 16;
+            this.OwnerLbl.CellWidth = 126;
             this.OwnerLbl.Column = 0;
             this.OwnerLbl.ColumnsSpanned = 0;
             this.OwnerLbl.Name = "OwnerLbl";
@@ -1113,8 +1111,8 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.workspaceNameLbl, "workspaceNameLbl");
             this.workspaceNameLbl.AutoEllipsis = true;
-            this.workspaceNameLbl.CellHeight = 13;
-            this.workspaceNameLbl.CellWidth = 185;
+            this.workspaceNameLbl.CellHeight = 16;
+            this.workspaceNameLbl.CellWidth = 256;
             this.workspaceNameLbl.Column = 1;
             this.workspaceNameLbl.ColumnsSpanned = 0;
             this.workspaceNameLbl.Name = "workspaceNameLbl";
@@ -1125,8 +1123,8 @@ namespace Perforce.P4VS
             // hostLbl
             // 
             resources.ApplyResources(this.hostLbl, "hostLbl");
-            this.hostLbl.CellHeight = 13;
-            this.hostLbl.CellWidth = 84;
+            this.hostLbl.CellHeight = 16;
+            this.hostLbl.CellWidth = 105;
             this.hostLbl.Column = 2;
             this.hostLbl.ColumnsSpanned = 0;
             this.hostLbl.Name = "hostLbl";
@@ -1137,8 +1135,8 @@ namespace Perforce.P4VS
             // descriptionLbl
             // 
             resources.ApplyResources(this.descriptionLbl, "descriptionLbl");
-            this.descriptionLbl.CellHeight = 42;
-            this.descriptionLbl.CellWidth = 102;
+            this.descriptionLbl.CellHeight = 51;
+            this.descriptionLbl.CellWidth = 126;
             this.descriptionLbl.Column = 0;
             this.descriptionLbl.ColumnsSpanned = 0;
             this.descriptionLbl.Name = "descriptionLbl";
@@ -1149,8 +1147,8 @@ namespace Perforce.P4VS
             // workspaceLineEndingsLbl
             // 
             resources.ApplyResources(this.workspaceLineEndingsLbl, "workspaceLineEndingsLbl");
-            this.workspaceLineEndingsLbl.CellHeight = 13;
-            this.workspaceLineEndingsLbl.CellWidth = 185;
+            this.workspaceLineEndingsLbl.CellHeight = 16;
+            this.workspaceLineEndingsLbl.CellWidth = 256;
             this.workspaceLineEndingsLbl.Column = 3;
             this.workspaceLineEndingsLbl.ColumnsSpanned = 0;
             this.workspaceLineEndingsLbl.Name = "workspaceLineEndingsLbl";
@@ -1161,8 +1159,8 @@ namespace Perforce.P4VS
             // lineEndingsLbl
             // 
             resources.ApplyResources(this.lineEndingsLbl, "lineEndingsLbl");
-            this.lineEndingsLbl.CellHeight = 13;
-            this.lineEndingsLbl.CellWidth = 84;
+            this.lineEndingsLbl.CellHeight = 16;
+            this.lineEndingsLbl.CellWidth = 105;
             this.lineEndingsLbl.Column = 2;
             this.lineEndingsLbl.ColumnsSpanned = 0;
             this.lineEndingsLbl.Name = "lineEndingsLbl";
@@ -1173,8 +1171,8 @@ namespace Perforce.P4VS
             // submitOptionsLbl
             // 
             resources.ApplyResources(this.submitOptionsLbl, "submitOptionsLbl");
-            this.submitOptionsLbl.CellHeight = 13;
-            this.submitOptionsLbl.CellWidth = 84;
+            this.submitOptionsLbl.CellHeight = 16;
+            this.submitOptionsLbl.CellWidth = 105;
             this.submitOptionsLbl.Column = 2;
             this.submitOptionsLbl.ColumnsSpanned = 0;
             this.submitOptionsLbl.Name = "submitOptionsLbl";
@@ -1186,8 +1184,8 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.workspaceOwnerNameLbl, "workspaceOwnerNameLbl");
             this.workspaceOwnerNameLbl.AutoEllipsis = true;
-            this.workspaceOwnerNameLbl.CellHeight = 13;
-            this.workspaceOwnerNameLbl.CellWidth = 185;
+            this.workspaceOwnerNameLbl.CellHeight = 16;
+            this.workspaceOwnerNameLbl.CellWidth = 256;
             this.workspaceOwnerNameLbl.Column = 1;
             this.workspaceOwnerNameLbl.ColumnsSpanned = 0;
             this.workspaceOwnerNameLbl.Name = "workspaceOwnerNameLbl";
@@ -1199,8 +1197,8 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.workspaceUpdatedLbl, "workspaceUpdatedLbl");
             this.workspaceUpdatedLbl.AutoEllipsis = true;
-            this.workspaceUpdatedLbl.CellHeight = 13;
-            this.workspaceUpdatedLbl.CellWidth = 185;
+            this.workspaceUpdatedLbl.CellHeight = 16;
+            this.workspaceUpdatedLbl.CellWidth = 256;
             this.workspaceUpdatedLbl.Column = 1;
             this.workspaceUpdatedLbl.ColumnsSpanned = 0;
             this.workspaceUpdatedLbl.Name = "workspaceUpdatedLbl";
@@ -1211,8 +1209,8 @@ namespace Perforce.P4VS
             // lastAccessedLbl
             // 
             resources.ApplyResources(this.lastAccessedLbl, "lastAccessedLbl");
-            this.lastAccessedLbl.CellHeight = 13;
-            this.lastAccessedLbl.CellWidth = 102;
+            this.lastAccessedLbl.CellHeight = 16;
+            this.lastAccessedLbl.CellWidth = 126;
             this.lastAccessedLbl.Column = 0;
             this.lastAccessedLbl.ColumnsSpanned = 0;
             this.lastAccessedLbl.Name = "lastAccessedLbl";
@@ -1223,8 +1221,8 @@ namespace Perforce.P4VS
             // dateModifiedLbl
             // 
             resources.ApplyResources(this.dateModifiedLbl, "dateModifiedLbl");
-            this.dateModifiedLbl.CellHeight = 13;
-            this.dateModifiedLbl.CellWidth = 102;
+            this.dateModifiedLbl.CellHeight = 16;
+            this.dateModifiedLbl.CellWidth = 126;
             this.dateModifiedLbl.Column = 0;
             this.dateModifiedLbl.ColumnsSpanned = 0;
             this.dateModifiedLbl.Name = "dateModifiedLbl";
@@ -1235,8 +1233,8 @@ namespace Perforce.P4VS
             // workspaceLbl
             // 
             resources.ApplyResources(this.workspaceLbl, "workspaceLbl");
-            this.workspaceLbl.CellHeight = 13;
-            this.workspaceLbl.CellWidth = 102;
+            this.workspaceLbl.CellHeight = 16;
+            this.workspaceLbl.CellWidth = 126;
             this.workspaceLbl.Column = 0;
             this.workspaceLbl.ColumnsSpanned = 0;
             this.workspaceLbl.Name = "workspaceLbl";
@@ -1253,6 +1251,12 @@ namespace Perforce.P4VS
             this.gridLayoutPanel1.MinimumColumnWidth = 10;
             this.gridLayoutPanel1.MinimumRowHeight = 10;
             this.gridLayoutPanel1.Name = "gridLayoutPanel1";
+            // 
+            // renameWorkspaceToolStripMenuItem
+            // 
+            this.renameWorkspaceToolStripMenuItem.Name = "renameWorkspaceToolStripMenuItem";
+            resources.ApplyResources(this.renameWorkspaceToolStripMenuItem, "renameWorkspaceToolStripMenuItem");
+            this.renameWorkspaceToolStripMenuItem.Click += new System.EventHandler(this.renameWorkspaceToolStripMenuItem_Click);
             // 
             // WorkspaceToolWindowControl
             // 
@@ -1637,6 +1641,8 @@ namespace Perforce.P4VS
             }
             editWorkspaceToolStripMenuItem.Text = String.Format(
                     Resources.WorkspacesWindowControl_EditWorkspaceMenuItem_Text, client.Name);
+            renameWorkspaceToolStripMenuItem.Text = String.Format(
+                    Resources.WorkspacesWindowControl_RenameWorkspaceMenuItem_Text, client.Name);
             deleteWorkspaceToolStripMenuItem.Text = String.Format(
                     Resources.WorkspacesWindowControl_DeleteWorkspaceMenuItem_Text, client.Name);
             refreshWorkspaceToolStripMenuItem.Text = String.Format(
@@ -2336,7 +2342,6 @@ namespace Perforce.P4VS
             filterBtn.Enabled = true;
             contextMenuStrip1.Enabled = true;
         }
-
         private void filterBtn_EnabledChanged(object sender, EventArgs e)
         {
             if ((filterBtn.Enabled == false) && ((Scm == null) ||
@@ -2607,6 +2612,75 @@ namespace Perforce.P4VS
             {
                 in_rmdirChk_CheckedChanged = false;
             }
+        }
+
+        //Rename Workspace ''... context menu click
+        private void renameWorkspaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            P4.Client client = (P4.Client)workspacesTreeListView.SelectedItems[0].Tag;
+
+            string newName = DlgRenameWorkspace.Show("Rename Workspace",
+                String.Format("Rename Workspace '{0}'",client.Name),null);
+
+            if (Scm == null)
+            {
+                P4VsProviderService P4VSService = (P4VsProviderService)GetService(typeof(P4VsProviderService));
+                if (P4VSService != null)
+                {
+                    Scm = P4VSService.ScmProvider;
+                }
+            }
+
+            if (Scm == null)
+            {
+                return;
+            }
+
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(newName))
+                {
+                    string result = Scm.RenameClient(client.Name, newName);
+
+                    if (Scm.Connection.Workspace == client.Name)
+                    {
+                        ConnectionData connectionData = new ConnectionData()
+                        {
+                            ServerPort = Scm.Connection.Port,
+                            UserName = Scm.Connection.User,
+                            Workspace = newName
+                        };
+                        Scm.Connection.Connect(connectionData);
+                        P4VsProvider.Instance.currentConnectionDropDownComboChoice = connectionData.ToString();
+                    }
+                }
+            } 
+            catch (P4Exception ex)
+            {
+                string message = ex.Message;
+                string old_workspace_name = client.Name;
+                string new_workspace_name = newName;
+
+                // Check if either old_workspace_name or new_workspace_name exists in the message
+                if (message.Contains(old_workspace_name) || message.Contains(new_workspace_name))
+                {
+                    if (old_workspace_name != new_workspace_name)
+                    {
+                        // Replace occurrences of old_workspace_name and new_workspace_name with quoted versions
+                        message = message.Replace(old_workspace_name, $"'{old_workspace_name}'")
+                                         .Replace(new_workspace_name, $"'{new_workspace_name}'");
+                    }
+                    else
+                    {
+                        message = message.Replace(old_workspace_name, $"'{old_workspace_name}'");
+                    }
+                }
+
+                MessageBox.Show(message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
+            }
+
+            refreshWorkspacesList();
         }
     }
 }

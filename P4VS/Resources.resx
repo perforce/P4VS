@@ -1600,4 +1600,19 @@ Download and install it to continue.</value>
   <data name="HAS_Auth_Fail" xml:space="preserve">
     <value>Unable to URL authorize user '{0}' to the server {1}</value>
   </data>
+  <data name="WorkspacesWindowControl_RenameWorkspaceCaption" xml:space="preserve">
+    <value>Rename Workspace</value>
+  </data>
+  <data name="WorkspacesWindowControl_RenameWorkspaceMenuItem_Text" xml:space="preserve">
+    <value>Rename Workspace '{0}'...</value>
+  </data>
+  <data name="WorkspacesWindowControl_RenameWorkspaceNewNameLabel" xml:space="preserve">
+    <value>New Name: </value>
+  </data>
+  <data name="WorkspacesWindowControl_RenameWorkspaceOldClientPrompt_Text" xml:space="preserve">
+    <value>Rename workspace '{0}'</value>
+  </data>
+  <data name="WorlspacesWindowControl_RenameWorkspaceWarningInfo" xml:space="preserve">
+    <value>Recent Connections and saved Pending Changelist Filters will be updated with the new workspace name.</value>
+  </data>
 </root>

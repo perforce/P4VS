@@ -4048,6 +4048,19 @@ namespace Perforce.P4Scm
 			return value;
 		}
 
+		public string RenameClient(string oldClientName, string newClientName)
+		{
+			string result ;
+            if (Offline)
+            {
+                return string.Empty;
+            }
+
+            result = Connection.Repository.RenameClient(oldClientName, newClientName);
+          
+            return result;
+
+        }
 		public void deleteClient(P4.Client client, P4.Options options)
 		{
 			if (Offline)

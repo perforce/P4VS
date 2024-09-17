@@ -1,7 +1,7 @@
                            Release Notes for
                 P4VS, the Helix Plugin for Visual Studio
 
-                            Version 2023.2
+                            Version 2024.1
 
 Introduction
 
@@ -145,11 +145,35 @@ Compatibility Statements
           can be accessed via the License link in the vsix installer.
 
 ---------------------------------------------------------------------------
+Important End-of-Life Notice
+
+    This major release of P4VS would be the last to support Windows 7.
+    This is part of our commitment to focus on supported technology platforms.
+
+--------------------------------------------------------------------------
 
 Key to symbols used in change notes below.
 
           * -- requires new P4VS
          ** -- requires new p4d server program
+
+--------------------------------------------------------------------------
+New Functionality in 2024.1 (2024.1/2633622) (2024/08/05)
+
+        #2625688,2626203 (Job #120815) *,**
+            User now has an option to Rename Workspace using P4VS.
+
+        (Job #120349) * 
+            Resolved responsiveness issue in Visual Studio
+            in case of very large command being executed with large 
+            number of arguments.
+
+        (Job #120814) *
+            P4VS now uses latest P4API.NET 2024.1.
+
+        #2631065 (Job #121295) *
+            This version addresses vulnerabilities in Newtonsoft.json
+            (CVE-2024-21907).
 
 --------------------------------------------------------------------------
 
@@ -161,7 +185,7 @@ Bugs fixed in 2023.2 Patch 1  (2023.2/2600533) (2024/05/21)
         #2590799,2589188,2589189 (Job #119483) * 
             Added changes to make launch of P4V via P4VS to be compatible
             with latest P4V release.
-			
+
 --------------------------------------------------------------------------
 New Functionality in 2023.2 (2023.2/2562238) (2024/02/26)
 
