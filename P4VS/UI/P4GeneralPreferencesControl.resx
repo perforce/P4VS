@@ -208,7 +208,7 @@
     <value>18</value>
   </data>
   <data name="promptDel.Text" xml:space="preserve">
-    <value>Mark for delete in Helix Core server when deleting files</value>
+    <value>Mark for delete in P4 server when deleting files</value>
   </data>
   <data name="&gt;&gt;promptDel.Name" xml:space="preserve">
     <value>promptDel</value>
@@ -727,7 +727,7 @@
     <value>9</value>
   </data>
   <data name="addChk.Text" xml:space="preserve">
-    <value>Automatically add new files to Helix Core server</value>
+    <value>Automatically add new files to P4 server</value>
   </data>
   <data name="&gt;&gt;addChk.Name" xml:space="preserve">
     <value>addChk</value>
@@ -892,7 +892,7 @@
     <value>2</value>
   </data>
   <data name="P4FormatRB.Text" xml:space="preserve">
-    <value>Format dates using Helix standard (yyyy/mm/dd hh:mm:ss)</value>
+    <value>Format dates using P4 standard (yyyy/mm/dd hh:mm:ss)</value>
   </data>
   <data name="&gt;&gt;P4FormatRB.Name" xml:space="preserve">
     <value>P4FormatRB</value>

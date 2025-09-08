@@ -6,6 +6,7 @@ using System.IO;
 using System.Xml;
 using System.Web;
 using NLog;
+using static Perforce.P4VS.FileLogger;
 
 namespace Perforce.P4VS
 {
@@ -596,6 +597,36 @@ namespace Perforce.P4VS
 					logger.Trace("Error writing local preferences file: {0}\r\n\t{1}", ex.Message, ex.StackTrace);
 				}
 				return xmlStr;
+			}
+		}
+
+		public void LogLocalSettings()
+		{
+			var localSettingsFullPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+			localSettingsFullPath = Path.Combine(localSettingsFullPath, "Perforce\\P4VS\\LocalSettings.ini");
+
+			string localSettingsFolder = Path.GetDirectoryName(localSettingsFullPath);
+			if (!Directory.Exists(localSettingsFolder))
+			{
+				FileLogger.LogMessage((int)FileLogLevel.Warning, "P4VS", "Local Settings folder does not exist: " + localSettingsFolder);
+				return;
+			}
+
+			lock (syncHead)
+			{
+				try
+				{
+					using (var sr = new StreamReader(localSettingsFullPath, false))
+					{
+						var xmlStr = sr.ReadToEnd();
+						FileLogger.LogMessage((int)FileLogLevel.Info, "P4VS", "Local Settings: " + xmlStr);
+					}
+				}
+				catch (Exception ex)
+				{
+					FileLogger.LogMessage((int)FileLogLevel.Error, "P4VS", "Error writing local settings in log. Exception: " + ex);
+					return;
+				}
 			}
 		}
 

@@ -244,7 +244,7 @@ namespace Perforce.P4VS
             }
             catch (Exception ex)
             {
-                logger.Trace("Exception in Helix SCM {0}\r\n\t{1}", ex.Message, ex.StackTrace);
+                logger.Trace("Exception in P4 SCM {0}\r\n\t{1}", ex.Message, ex.StackTrace);
             }
             return projectNodes;
         }

@@ -635,15 +635,22 @@ namespace Perforce.P4Scm
 				}
 				else
 				{
+					int batchSize = 500;
+					//Processing in batches to reduce server load and to improve performance
+					for (int i = 0; i < fileList.Count; i += batchSize)
+					{
+						var batch = fileList.Skip(i).Take(batchSize).ToList();
+
 					P4.Options options = new P4.Options();
 					options["-Olhp"] = null;
-                    IList<P4.FileMetaData> fileMetdata = Connection.Repository.GetFileMetaData(fileList, options);
+						IList<P4.FileMetaData> fileMetdata = Connection.Repository.GetFileMetaData(batch, options);
 
 					if (fileMetdata != null)
 					{
 						FileCache.AddFileMetaData(fileMetdata);
 					}
 				}
+			}
 			}
 			catch (Exception ex)
 			{
@@ -798,12 +805,19 @@ namespace Perforce.P4Scm
 					FileCache.Remove(file);
 				}
 			}
+			//Batching server requests of size 500
+			
+			int batchSize = 500;
+			//Processing in batches to reduce server load and to improve performance
+			for (int i = 0; i < oldFiles.Count; i += batchSize)
+			{
+				var batch = oldFiles.Skip(i).Take(batchSize).ToList();
 			IList<P4.FileMetaData> fileMetdata = null;
 			try
 			{
 				P4.Options options = new P4.Options();
 				options["-Olhp"] = null;
-                fileMetdata = Connection.Repository.GetFileMetaData(options, P4.FileSpec.LocalSpecArray(oldFiles));
+					fileMetdata = Connection.Repository.GetFileMetaData(options, P4.FileSpec.LocalSpecArray(batch));
 			}
 			catch (Exception ex)
 			{
@@ -821,11 +835,12 @@ namespace Perforce.P4Scm
 			}
 			else
 			{
-				foreach (string path in oldFiles)
+					foreach (string path in batch)
 				{
 					FileCache.Set(path, null);
 				}
 			}
+		}
 		}
 
 		public IList<string> UpdateDepotFiles(IList<string> files)
@@ -1885,30 +1900,44 @@ namespace Perforce.P4Scm
 			}
 			try
 			{
-				P4.P4CommandResult results = null;
+				const int batchSize = 500;
+				List<P4.FileSpec> allOpenedFiles = new List<P4.FileSpec>();
+				List<P4.P4CommandResult> allResults = new List<P4.P4CommandResult>();
 
 				P4.Options options = new P4.Options();
 				if (changelistID > 0)
 				{
 					options = new P4.Options(P4.AddFilesCmdFlags.None,changelistID, null);
 				}
+				
 				options["-f"] = null;
-                IList<P4.FileSpec> openedFiles = Connection.Repository.Connection.Client.AddFiles(P4.FileSpec.LocalSpecList(files), options);
-
-                results = Connection.Repository.Connection.LastResults;
-
-				P4ErrorDlg.Show(results, false);
-
-				// If specified, create a new change list and move the opened files into the new list
-				if (changelistID <= -1)
+				
+				//Batch server requests for AddFiles to reduce server load and to improve performance
+				for (int i = 0; i < files.Length; i += batchSize)
 				{
-					P4.Changelist newChange = MoveFilesToChangeList(changelistID, newChangeDescription, openedFiles);
-					if (newChange!=null)
-					{
-						return newChange.Id;
-					}
+					var batch = files.Skip(i).Take(batchSize).ToArray();
+					var openedFiles = Connection.Repository.Connection.Client.AddFiles(P4.FileSpec.LocalSpecList(batch), options);
+					var batchResult = Connection.Repository.Connection.LastResults;
+					
+					if (openedFiles != null)
+						allOpenedFiles.AddRange(openedFiles);
+
+					if (batchResult != null)
+						allResults.Add(batchResult);
 				}
 
+				if (allResults.Count > 0)
+				{
+					P4ErrorDlg.Show(allResults[allResults.Count - 1], false);
+				}
+
+				// If specified, create a new change list and move the opened files into the new list
+				if (changelistID <= -1 && allOpenedFiles.Count > 0)
+				{
+					var newChange = MoveFilesToChangeList(changelistID, newChangeDescription, allOpenedFiles);
+					if (newChange!=null)
+						return newChange.Id;
+					}
 				BroadcastChangelistUpdate(this, new ChangelistUpdateArgs(changelistID, ChangelistUpdateArgs.UpdateType.ContentUpdate));
 			}
 			catch (ThreadAbortException)
@@ -1933,6 +1962,7 @@ namespace Perforce.P4Scm
                 }
 				return -2;
 			}
+
 			return changelistID;
 		}
 

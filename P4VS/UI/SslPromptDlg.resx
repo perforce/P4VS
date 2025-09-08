@@ -137,9 +137,9 @@
   </data>
   <data name="WarningTB.Text" xml:space="preserve">
     <value>It is possible that someone is intercepting your connection
-to the Helix Core server P4PORT '10.0.50.39:1667'
+to the P4 server P4PORT '10.0.50.39:1667'
 If this is not a scheduled key change, then you should contact
-your Helix Core server administrator.
+your P4 server administrator.
 The fingerprint for the mismatched key sent to your client is
 19:4F:E0:B8:C9:C8:2B:EF:30:72:7F:DF:C1:95:5A:11:77:37:BA:39
 </value>

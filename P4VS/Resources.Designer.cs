@@ -70,7 +70,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to P4VS - Helix Plugin for Visual Studio.
+        ///   Looks up a localized string similar to P4VS - P4 for Visual Studio.
         /// </summary>
         public static string _100 {
             get {
@@ -79,7 +79,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This package implements the Helix Plugin for Visual Studio..
+        ///   Looks up a localized string similar to This package implements the P4 for Visual Studio..
         /// </summary>
         public static string _101 {
             get {
@@ -106,7 +106,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Core - General.
+        ///   Looks up a localized string similar to P4 - General.
         /// </summary>
         public static string _107 {
             get {
@@ -115,7 +115,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Core - Connections.
+        ///   Looks up a localized string similar to P4 - Connections.
         /// </summary>
         public static string _108 {
             get {
@@ -124,7 +124,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Core - Diff/Merge/Reviews.
+        ///   Looks up a localized string similar to P4 - Diff/Merge/Reviews.
         /// </summary>
         public static string _109 {
             get {
@@ -133,7 +133,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Core - Logging.
+        ///   Looks up a localized string similar to P4 - Logging.
         /// </summary>
         public static string _110 {
             get {
@@ -142,7 +142,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Core - Data Retrieval.
+        ///   Looks up a localized string similar to P4 - Data Retrieval.
         /// </summary>
         public static string _111 {
             get {
@@ -151,7 +151,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Core - Ignoring Files.
+        ///   Looks up a localized string similar to P4 - Ignoring Files.
         /// </summary>
         public static string _112 {
             get {
@@ -160,7 +160,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Server.
+        ///   Looks up a localized string similar to P4 Server.
         /// </summary>
         public static string _113 {
             get {
@@ -400,7 +400,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Core: OFFLINE.
+        ///   Looks up a localized string similar to P4 Connection: OFFLINE.
         /// </summary>
         public static string ConnectionDropDownCombo_NoConnection {
             get {
@@ -409,7 +409,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add to a Swarm Review....
+        ///   Looks up a localized string similar to Add to a P4 Code Review....
         /// </summary>
         public static string CreateSwarmReviewDlg_AddToReview {
             get {
@@ -472,7 +472,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Request New Swarm Review.
+        ///   Looks up a localized string similar to Request New P4 Code Review.
         /// </summary>
         public static string CreateSwarmReviewDlg_CreateReview {
             get {
@@ -499,7 +499,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open Review in Swarm.
+        ///   Looks up a localized string similar to Open Review in P4 Code Review.
         /// </summary>
         public static string CreateSwarmReviewDlg_OpenReviewInSwarm {
             get {
@@ -517,7 +517,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update Swarm Review, &apos;{0}&apos;.
+        ///   Looks up a localized string similar to Update P4 Code Review, &apos;{0}&apos;.
         /// </summary>
         public static string CreateSwarmReviewDlg_RefreshReview {
             get {
@@ -591,7 +591,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update a Swarm Review.
+        ///   Looks up a localized string similar to Update a P4 Code Review.
         /// </summary>
         public static string CreateSwarmReviewDlg_UpdateReview {
             get {
@@ -627,7 +627,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Not connected to a Helix Core server.
+        ///   Looks up a localized string similar to Not connected to a P4 server.
         /// </summary>
         public static string DepotPathDlg_NoConnection {
             get {
@@ -844,7 +844,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix MFA Authenticator could not be found.
+        ///   Looks up a localized string similar to P4 MFA Authenticator could not be found.
         ///Download and install it to continue..
         /// </summary>
         public static string HMFA_Download {
@@ -854,7 +854,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Launching Helix MFA Authenticator....
+        ///   Looks up a localized string similar to Launching P4 MFA Authenticator....
         /// </summary>
         public static string HMFA_Launch {
             get {
@@ -963,7 +963,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Close Connection to the Helix Core server.
+        ///   Looks up a localized string similar to Close Connection to the P4 server.
         /// </summary>
         public static string icmdCloseConnection {
             get {
@@ -999,7 +999,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open Solution/Project in Helix Core server....
+        ///   Looks up a localized string similar to Open Solution/Project in P4 server....
         /// </summary>
         public static string icmdFileOpenInDepot {
             get {
@@ -1026,7 +1026,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open Connection to a Helix Core server....
+        ///   Looks up a localized string similar to Open Connection to a P4 server....
         /// </summary>
         public static string icmdOpenConnection {
             get {
@@ -1035,7 +1035,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to View in P4V.
+        ///   Looks up a localized string similar to View in P4 Visual Client.
         /// </summary>
         public static string icmdP4V {
             get {
@@ -1062,7 +1062,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Core.
+        ///   Looks up a localized string similar to P4.
         /// </summary>
         public static string icmdPublish {
             get {
@@ -1278,7 +1278,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Swarm.
+        ///   Looks up a localized string similar to P4 Code Review.
         /// </summary>
         public static string icmdViewSwarmToolWindow {
             get {
@@ -1323,7 +1323,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix.
+        ///   Looks up a localized string similar to P4.
         /// </summary>
         public static string imnuFileSourceControlMenu {
             get {
@@ -1702,7 +1702,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You have logged out of the Helix Core server..
+        ///   Looks up a localized string similar to You have logged out of the P4 server..
         /// </summary>
         public static string P4ErrorDlg_LoggedOutMsg {
             get {
@@ -1729,7 +1729,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Swarm Server Error.
+        ///   Looks up a localized string similar to P4 Code Review Server Error.
         /// </summary>
         public static string P4ErrorDlg_SwarmPromptLabel {
             get {
@@ -1805,7 +1805,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot find Helix MFA Authenticator.
+        ///   Looks up a localized string similar to Cannot find P4 MFA Authenticator.
         /// </summary>
         public static string P4ScmProvider_CannotFindHelixMFAError {
             get {
@@ -1868,7 +1868,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Connected to Swarm {0}  {1}.
+        ///   Looks up a localized string similar to Connected to P4 Code Review {0}  {1}.
         /// </summary>
         public static string P4ScmProvider_ConnectedToSwarmServer {
             get {
@@ -1877,7 +1877,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Connecting to Helix Core server on {0} as {1} using client {2}.
+        ///   Looks up a localized string similar to Connecting to P4 server on {0} as {1} using client {2}.
         /// </summary>
         public static string P4ScmProvider_ConnectingToPerforceServer {
             get {
@@ -1987,7 +1987,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Core Login.
+        ///   Looks up a localized string similar to P4 Login.
         /// </summary>
         public static string P4ScmProvider_LoginCaption {
             get {
@@ -2023,7 +2023,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The connection to the Helix Core server at {0} has been lost.
+        ///   Looks up a localized string similar to The connection to the P4 server at {0} has been lost.
         /// </summary>
         public static string P4ScmProvider_LostConectionError {
             get {
@@ -2149,7 +2149,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Not in Helix Core server.
+        ///   Looks up a localized string similar to Not in P4 server.
         /// </summary>
         public static string P4ScmProvider_ToolTipNotInPerforce {
             get {
@@ -2185,7 +2185,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Using config file, &quot;{3}&quot;, to connect to Helix Core server on {0} as {1} using client {2}.
+        ///   Looks up a localized string similar to Using config file, &quot;{3}&quot;, to connect to P4 server on {0} as {1} using client {2}.
         /// </summary>
         public static string P4ScmProvider_UsingConfigSettingsToConnect {
             get {
@@ -2194,7 +2194,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Using environment settings to connect to Helix Core server on {0} as {1} using client {2}.
+        ///   Looks up a localized string similar to Using environment settings to connect to P4 server on {0} as {1} using client {2}.
         /// </summary>
         public static string P4ScmProvider_UsingEnvironmentSettingsToConnect {
             get {
@@ -2239,7 +2239,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to P4VS is the Helix Plugin for Microsoft Visual Studio. P4VS provides developers working within Visual Studio access to Helix version control features, including check in/check out, view file history, and more..
+        ///   Looks up a localized string similar to P4VS is the P4 for Microsoft Visual Studio. P4VS provides developers working within Visual Studio access to P4 version control features, including check in/check out, view file history, and more..
         /// </summary>
         public static string P4VS_ProductDescription {
             get {
@@ -2248,7 +2248,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to P4VS - Helix Plugin for Visual Studio.
+        ///   Looks up a localized string similar to P4VS - P4 for Visual Studio.
         /// </summary>
         public static string P4VS_ProductName {
             get {
@@ -2257,7 +2257,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helix Core Source Control.
+        ///   Looks up a localized string similar to P4 Source Control.
         /// </summary>
         public static string P4VsOutputWindow_PanelName {
             get {
@@ -2275,7 +2275,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add the file to the Helix Core server.
+        ///   Looks up a localized string similar to Add the file to the P4 server.
         /// </summary>
         public static string P4VsProvider_AddFilePrompt {
             get {
@@ -2293,7 +2293,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add the files to the Helix Core server.
+        ///   Looks up a localized string similar to Add the files to the P4 server.
         /// </summary>
         public static string P4VsProvider_AddFilesPrompt {
             get {
@@ -2484,7 +2484,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adding new solution&apos;s files to the Helix Core server:.
+        ///   Looks up a localized string similar to Adding new solution&apos;s files to the P4 server:.
         /// </summary>
         public static string P4VsProviderService_AddNewSlnFiles {
             get {
@@ -2612,7 +2612,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The solution file, {0}, is not checked into the Helix Core server. Would you like to mark it for add?.
+        ///   Looks up a localized string similar to The solution file, {0}, is not checked into the P4 server. Would you like to mark it for add?.
         /// </summary>
         public static string P4VsProviderService_MarkAddSlnFileQuestion {
             get {
@@ -2675,7 +2675,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add to source control using P4VS - Helix Plugin for Visual Studio      .
+        ///   Looks up a localized string similar to Add to source control using P4VS - P4 for Visual Studio      .
         /// </summary>
         public static string P4VsProviderService_NewSlnDialogPromptString {
             get {
@@ -2684,7 +2684,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Would you like to add the new file(s) to Helix Core server?.
+        ///   Looks up a localized string similar to Would you like to add the new file(s) to P4 server?.
         /// </summary>
         public static string P4VsProviderService_QueryAddFilesQuestion {
             get {
@@ -3022,7 +3022,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open Review &apos;{0}&apos; in Swarm....
+        ///   Looks up a localized string similar to Open Review &apos;{0}&apos; in P4 Code Review....
         /// </summary>
         public static string PendingChangelistsToolWindowControl_MenuItemOpenSwarmReview {
             get {
@@ -3058,7 +3058,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update Swarm Review &apos;{0}&apos;....
+        ///   Looks up a localized string similar to Update P4 Code Review &apos;{0}&apos;....
         /// </summary>
         public static string PendingChangelistsToolWindowControl_MenuItemUpdateReview {
             get {
@@ -3067,7 +3067,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update a Swarm Review....
+        ///   Looks up a localized string similar to Update a P4 Code Review....
         /// </summary>
         public static string PendingChangelistsToolWindowControl_MenuItemUpdateReview2 {
             get {
@@ -3158,7 +3158,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Perforce SCM.
+        ///   Looks up a localized string similar to P4 SCM.
         /// </summary>
         public static string PerforceSCM {
             get {
@@ -3694,7 +3694,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Perforce Sample Tool Window.
+        ///   Looks up a localized string similar to P4 Sample Tool Window.
         /// </summary>
         public static string Sample_Tool_Window {
             get {
@@ -4175,7 +4175,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Swarm.
+        ///   Looks up a localized string similar to P4 Code Review.
         /// </summary>
         public static string SwarmToolWindowControl_Caption {
             get {

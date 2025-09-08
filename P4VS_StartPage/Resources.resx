@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="100" xml:space="preserve">
-    <value>P4VS - Helix Plugin for Visual Studio</value>
+    <value>P4VS - P4 for Visual Studio</value>
   </data>
   <data name="101" xml:space="preserve">
     <value>This package implements the Helix Plugin for Visual Studio.</value>
@@ -199,7 +199,7 @@
     <value>???</value>
   </data>
   <data name="PerforceSCM" xml:space="preserve">
-    <value>Perforce SCM</value>
+    <value>P4 SCM</value>
   </data>
   <data name="ResolveFileInteractiveControl_ResolveSaveChanges" xml:space="preserve">
     <value>Do you want to keep the merged file?
@@ -719,7 +719,7 @@ Are you sure you want to continue?</value>
     <value>a workspace named {0} already exists</value>
   </data>
   <data name="P4ScmProvider_LoginCaption" xml:space="preserve">
-    <value>Perforce Login</value>
+    <value>P4 Login</value>
   </data>
   <data name="P4ScmProvider_LoginLoginExpireInfo" xml:space="preserve">
     <value>Connection will expire at {0}</value>
@@ -729,7 +729,7 @@ Are you sure you want to continue?</value>
     <comment>{0} is user name, {1} is server:port</comment>
   </data>
   <data name="P4VsProviderService_AddNewSlnFiles" xml:space="preserve">
-    <value>Adding new solution's files to the Helix Core server:</value>
+    <value>Adding new solution's files to the P4 server:</value>
   </data>
   <data name="P4VsProviderService_AddSlnWantUpdateClientMapWarning" xml:space="preserve">
     <value>The solution file is not in your client view, would you like to update your client view?</value>
@@ -779,7 +779,7 @@ New Name: {1}</value>
     <comment>{0} is file count</comment>
   </data>
   <data name="P4VsProviderService_MarkAddSlnFileQuestion" xml:space="preserve">
-    <value>The solution file, {0}, is not checked into the Helix Core server. Would you like to mark it for add?</value>
+    <value>The solution file, {0}, is not checked into the P4 server. Would you like to mark it for add?</value>
   </data>
   <data name="P4VsProviderService_Merge1ChangeDescription" xml:space="preserve">
     <value>Merged file to Stream {0}</value>
@@ -801,10 +801,10 @@ New Name: {1}</value>
     <comment>{0} is file count</comment>
   </data>
   <data name="P4VsProviderService_NewSlnDialogPromptString" xml:space="preserve">
-    <value>Add to source control using P4VS - Helix Plugin for Visual Studio      </value>
+    <value>Add to source control using P4VS - P4 for Visual Studio      </value>
   </data>
   <data name="P4VsProviderService_QueryAddFilesQuestion" xml:space="preserve">
-    <value>Would you like to add the new file(s) to Helix Core server?</value>
+    <value>Would you like to add the new file(s) to P4 server?</value>
   </data>
   <data name="P4VsProviderService_QueryDeleteFileQuestion" xml:space="preserve">
     <value>Would you like to Mark for Delete the file in the Depot?</value>
@@ -834,7 +834,7 @@ New Name: {1}</value>
     <value>&lt;Files added by P4VS&gt;</value>
   </data>
   <data name="P4VsProvider_AddFilesPrompt" xml:space="preserve">
-    <value>Add the files to the Helix Core server</value>
+    <value>Add the files to the P4 server</value>
   </data>
   <data name="P4VsProvider_AddSlnWantUpdateClientMapQuestion" xml:space="preserve">
     <value>The solution file is not in your client view, would you like to update your client view?</value>
@@ -891,10 +891,10 @@ New Name: {1}</value>
     <value>The specified solution file does not exist in the depot</value>
   </data>
   <data name="P4VS_ProductDescription" xml:space="preserve">
-    <value>P4VS is the Helix Plugin for Microsoft Visual Studio. P4VS provides developers working within Visual Studio access to Helix version control features, including check in/check out, view file history, and more.</value>
+    <value>P4VS is the P4 for Microsoft Visual Studio. P4VS provides developers working within Visual Studio access to P4 version control features, including check in/check out, view file history, and more.</value>
   </data>
   <data name="P4VS_ProductName" xml:space="preserve">
-    <value>P4VS - Helix Plugin for Visual Studio</value>
+    <value>P4VS - P4 for Visual Studio</value>
   </data>
   <data name="icmdAddToSourceControl" xml:space="preserve">
     <value>Mark for Add</value>
@@ -921,7 +921,7 @@ New Name: {1}</value>
     <value>Checkout All in Solution</value>
   </data>
   <data name="icmdCloseConnection" xml:space="preserve">
-    <value>Close Connection to the Helix Core server</value>
+    <value>Close Connection to the P4 server</value>
   </data>
   <data name="icmdDiffVsAny" xml:space="preserve">
     <value>Diff Against...</value>
@@ -930,16 +930,16 @@ New Name: {1}</value>
     <value>Diff Against Have Revision</value>
   </data>
   <data name="icmdFileOpenInDepot" xml:space="preserve">
-    <value>Open Solution/Project in Helix Core server...</value>
+    <value>Open Solution/Project in P4 server...</value>
   </data>
   <data name="icmdLock" xml:space="preserve">
     <value>Lock</value>
   </data>
   <data name="icmdOpenConnection" xml:space="preserve">
-    <value>Open Connection to a Helix Core server...</value>
+    <value>Open Connection to a P4 server...</value>
   </data>
   <data name="icmdP4V" xml:space="preserve">
-    <value>View in P4V</value>
+    <value>View in P4 Visual Client</value>
   </data>
   <data name="icmdP4VSHelp" xml:space="preserve">
     <value>P4VS Help</value>
@@ -1052,7 +1052,7 @@ Error: {1}</value>
     <value>Time out executing command on server, {0}. Would you like to attempt to reconnect?</value>
   </data>
   <data name="P4ScmProvider_ConnectingToPerforceServer" xml:space="preserve">
-    <value>Connecting to Helix Core server on {0} as {1} using client {2}</value>
+    <value>Connecting to P4 server on {0} as {1} using client {2}</value>
   </data>
   <data name="P4ScmProvider_CreatWorkspaceRootPrompt" xml:space="preserve">
     <value>The workspace root, {0}, does not exist. Would you like to create it?</value>
@@ -1109,7 +1109,7 @@ Error: {1}</value>
     <value>Needs Resolve </value>
   </data>
   <data name="P4ScmProvider_ToolTipNotInPerforce" xml:space="preserve">
-    <value>Not in Helix Core server </value>
+    <value>Not in P4 server </value>
   </data>
   <data name="P4ScmProvider_ToolTipOpenedBy" xml:space="preserve">
     <value> Opened by: {0}</value>
@@ -1123,7 +1123,7 @@ Error: {1}</value>
     <comment>{0} action, {1} changelist#</comment>
   </data>
   <data name="P4ScmProvider_UsingEnvironmentSettingsToConnect" xml:space="preserve">
-    <value>Using environment settings to connect to Helix Core server on {0} as {1} using client {2}</value>
+    <value>Using environment settings to connect to P4 server on {0} as {1} using client {2}</value>
   </data>
   <data name="P4ScmProvider_WorkspaceInvalidError" xml:space="preserve">
     <value>Invalid Workspace, {0}</value>
@@ -1135,13 +1135,13 @@ Error: {1}</value>
     <value>The workspace root, {0}, is invalid</value>
   </data>
   <data name="P4ScmProvider_UsingConfigSettingsToConnect" xml:space="preserve">
-    <value>Using config file, "{3}", to connect to Helix Core server on {0} as {1} using client {2}</value>
+    <value>Using config file, "{3}", to connect to P4 server on {0} as {1} using client {2}</value>
   </data>
   <data name="NewUserDlg_PasswordTooShortOrSimple" xml:space="preserve">
     <value>Passwords must be at least eight characters long and must contain upper and lower case letters, or letters plus one or more symbols or numbers.</value>
   </data>
   <data name="P4ErrorDlg_LoggedOutMsg" xml:space="preserve">
-    <value>You have logged out of the Helix Core Server.</value>
+    <value>You have logged out of the P4 Server.</value>
   </data>
   <data name="P4ScmProvider_ErrorSeverityEmpty" xml:space="preserve">
     <value>E_EMPTY</value>
@@ -1150,26 +1150,26 @@ Error: {1}</value>
     <value>Source Control</value>
   </data>
   <data name="107" xml:space="preserve">
-    <value>Perforce - General</value>
+    <value>P4 - General</value>
   </data>
   <data name="108" xml:space="preserve">
-    <value>Perforce - Connections</value>
+    <value>P4 - Connections</value>
   </data>
   <data name="109" xml:space="preserve">
-    <value>Perforce - Diff/Merge/Reviews</value>
+    <value>P4 - Diff/Merge/Reviews</value>
   </data>
   <data name="110" xml:space="preserve">
-    <value>Perforce - Logging</value>
+    <value>P4 - Logging</value>
   </data>
   <data name="111" xml:space="preserve">
-    <value>Perforce - Data Retrieval</value>
+    <value>P4 - Data Retrieval</value>
   </data>
   <data name="DlgEditWorkspace_Title" xml:space="preserve">
     <value>Workspace: {0} ({1}, {2})</value>
     <comment>{0} is workspace.Name,{1} is  Server Port,  {2} is Peforce User</comment>
   </data>
   <data name="P4VsOutputWindow_PanelName" xml:space="preserve">
-    <value>Perforce Source Control</value>
+    <value>P4 Source Control</value>
   </data>
   <data name="PendingChangelistDlg_DescriptionPanel_ButtonText" xml:space="preserve">
     <value>Write a changelist description</value>
@@ -1197,7 +1197,7 @@ Error: {1}</value>
     <value>Move selected files to pending changelist</value>
   </data>
   <data name="P4ScmProvider_LostConectionError" xml:space="preserve">
-    <value>The connection to the Helix Core server at {0} has been lost</value>
+    <value>The connection to the P4 server at {0} has been lost</value>
   </data>
   <data name="ResolveFileInteractiveControl_CannotCreateMergedFile" xml:space="preserve">
     <value>Cannot Create Merged File</value>
@@ -1206,13 +1206,13 @@ Error: {1}</value>
     <value>Connection: {0}</value>
   </data>
   <data name="DepotPathDlg_NoConnection" xml:space="preserve">
-    <value>Not connected to a Helix Core server</value>
+    <value>Not connected to a P4 server</value>
   </data>
   <data name="icmdAddToIgnoreList" xml:space="preserve">
     <value>Add to Ignore List</value>
   </data>
   <data name="112" xml:space="preserve">
-    <value>Perforce - Ignoring Files</value>
+    <value>P4 - Ignoring Files</value>
   </data>
   <data name="icmdRemoveFromIgnoreList" xml:space="preserve">
     <value>Remove from Ignore List</value>
@@ -1277,7 +1277,7 @@ You will no longer be prompted for a changelist when checking out and adding fil
     <value>&lt;New Connection&gt;</value>
   </data>
   <data name="ConnectionDropDownCombo_NoConnection" xml:space="preserve">
-    <value>Perforce: OFFLINE</value>
+    <value>P4 Connection: OFFLINE</value>
   </data>
   <data name="IgnoreFileCreatedFor" xml:space="preserve">
     <value># Ignore file created for: {0}</value>
@@ -1304,10 +1304,10 @@ You will no longer be prompted for a changelist when checking out and adding fil
     <value>Labels</value>
   </data>
   <data name="icmdViewSwarmToolWindow" xml:space="preserve">
-    <value>Swarm</value>
+    <value>P4 Code Review</value>
   </data>
   <data name="SwarmToolWindowControl_Caption" xml:space="preserve">
-    <value>Swarm</value>
+    <value>P4 Code Review</value>
   </data>
   <data name="icmdViewStreamsToolWindow" xml:space="preserve">
     <value>Streams</value>
@@ -1358,7 +1358,7 @@ You will no longer be prompted for a changelist when checking out and adding fil
     <value>&lt;File added by P4VS&gt;</value>
   </data>
   <data name="P4VsProvider_AddFilePrompt" xml:space="preserve">
-    <value>Add the file to the Helix Core server</value>
+    <value>Add the file to the P4 server</value>
   </data>
   <data name="P4IgnorePreferencesControl_PromptForIgnoreListAdd" xml:space="preserve">
     <value>Would you like to add the wildcard, '*.*' to the ignore file in your workspace root to limit fstats on all files in your workspace?
@@ -1391,7 +1391,7 @@ For files that you want to manage with P4VS, select them in Solution Explorer an
     <value>Can't find a user with that Id</value>
   </data>
   <data name="CreateSwarmReviewDlg_OpenReviewInSwarm" xml:space="preserve">
-    <value>Open Review in Swarm</value>
+    <value>Open Review in P4 Code Review</value>
   </data>
   <data name="CreateSwarmReviewDlg_ReviewCreated" xml:space="preserve">
     <value>Created review, {0}:
@@ -1405,7 +1405,7 @@ For files that you want to manage with P4VS, select them in Solution Explorer an
   </data>
   <data name="P4ScmProvider_SwarmLoginPrompt" xml:space="preserve">
     <value>Please enter password for {0} on {1}</value>
-    <comment>{0} is user name, {1} is swarm url</comment>
+    <comment>{0} is user name, {1} is P4 Code Review url</comment>
   </data>
   <data name="CreateSwarmReviewDlg_ClearShelfBefore" xml:space="preserve">
     <value>Clear changelist of all previously shelved files before shelving.</value>
@@ -1417,34 +1417,34 @@ For files that you want to manage with P4VS, select them in Solution Explorer an
     <value>Review State</value>
   </data>
   <data name="P4ErrorDlg_SwarmPromptLabel" xml:space="preserve">
-    <value>Swarm Server Error</value>
+    <value>P4 Code Review Server Error</value>
   </data>
   <data name="P4ErrorDlg_ReviewNotFound" xml:space="preserve">
     <value>Review ID not found</value>
   </data>
   <data name="CreateSwarmReviewDlg_UpdateReview" xml:space="preserve">
-    <value>Update a Swarm Review</value>
+    <value>Update a P4 Code Review</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_ClmTitleReviewId" xml:space="preserve">
     <value>Review Id</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_MenuItemOpenSwarmReview" xml:space="preserve">
-    <value>Open Review '{0}' in Swarm...</value>
+    <value>Open Review '{0}' in P4 Code Review...</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_MenuItemUpdateReview" xml:space="preserve">
-    <value>Update Swarm Review '{0}'...</value>
+    <value>Update P4 Code Review '{0}'...</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_MenuItemUpdateReview2" xml:space="preserve">
-    <value>Update a Swarm Review...</value>
+    <value>Update a P4 Code Review...</value>
   </data>
   <data name="CreateSwarmReviewDlg_AddToReview" xml:space="preserve">
-    <value>Add to a Swarm Review...</value>
+    <value>Add to a P4 Code Review...</value>
   </data>
   <data name="CreateSwarmReviewDlg_RefreshReview" xml:space="preserve">
-    <value>Update Swarm Review, '{0}'</value>
+    <value>Update P4 Code Review, '{0}'</value>
   </data>
   <data name="CreateSwarmReviewDlg_CreateReview" xml:space="preserve">
-    <value>Request New Swarm Review</value>
+    <value>Request New P4 Code Review</value>
   </data>
   <data name="CreateSwarmReviewDlg_RefreshFromPendingPrompt" xml:space="preserve">
     <value>The following files will be shelved in pending changelist '{0}' to update the review:</value>
@@ -1472,7 +1472,7 @@ For files that you want to manage with P4VS, select them in Solution Explorer an
     <value>"The Directory. {0}, does not exist, would you like to create it?"</value>
   </data>
   <data name="P4ScmProvider_ConnectedToSwarmServer" xml:space="preserve">
-    <value>Connected to Swarm {0}  {1}</value>
+    <value>Connected to P4 Code Review {0}  {1}</value>
   </data>
   <data name="SSLCertificateHandler_SSLCertificateError" xml:space="preserve">
     <value>"SSL certificate error: {0}"</value>
@@ -1501,13 +1501,13 @@ Certificate Data:
     <value>Warning, the file is {0}, larger than the configured "Maximum size of files to preview". Would you still like to open the file?</value>
   </data>
   <data name="113" xml:space="preserve">
-    <value>Helix Core Server</value>
+    <value>P4 Server</value>
   </data>
   <data name="114" xml:space="preserve">
     <value>Lightning-fast version control to manage and deliver your files to large, distributed teams.</value>
   </data>
   <data name="icmdPublish" xml:space="preserve">
-    <value>Helix Core</value>
+    <value>P4</value>
   </data>
   <data name="StartPagePluginRegError" xml:space="preserve">
     <value>Unable to open Depot Browser. Please confirm that P4VS is set as the active Source Control Plug-in Tools -&gt; Options -&gt; Source Control -&gt; Plug-in Selection.</value>

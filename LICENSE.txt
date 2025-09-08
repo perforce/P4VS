@@ -1,1523 +1,1467 @@
-Copyright (c) 2024, Perforce Software, Inc.  All rights reserved.
+Copyright (c) 2025, Perforce Software, Inc. All rights reserved.
+
+
+BY INSTALLING OR DOWNLOADING THE SOFTWARE, YOU ARE ACCEPTING AND AGREEING TO THE TERMS OF
+THIS END USER LICENSE AGREEMENT (THE "LICENSE AGREEMENT"), AND IT LEGALLY BINDS YOU AND
+YOUR EMPLOYER (COLLECTIVELY THE "LICENSEE"), AND PERFORCE SOFTWARE, INC., A DELAWARE
+CORPORATION ("PERFORCE"), TO THE TERMS AND CONDITIONS OF THE LICENSE AGREEMENT (INCLUDING
+ANY TERMS, CONDITIONS, AND RESTRICTIONS CONTAINED IN ANY ORDER RELATING TO THE SOFTWARE).
+IF THE LICENSEE DOES NOT ACCEPT AND AGREE TO THE TERMS AND CONDITIONS OF THE LICENSE
+AGREEMENT THEN DO NOT DOWNLOAD, INSTALL, OR OTHERWISE USE THE SOFTWARE.
+
+THE RIGHT TO USE THE SOFTWARE IS CONDITIONAL UPON ACCEPTANCE OF THE LICENSE AGREEMENT,
+UNLESS THE LICENSEE HAS ENTERED INTO A WRITTEN AND DULY SIGNED LICENSE AGREEMENT WITH
+PERFORCE, IN WHICH CASE SUCH SIGNED LICENSE AGREEMENT WILL GOVERN THE LICENSEE'S USE OF
+THE SOFTWARE.
+
+Redistribution and use in source and binary forms, with or without modification, are
+permitted provided that the following conditions are met:
+
+
+
+1. Redistributions of source code must retain the above copyright notice, this list of
+conditions and the following disclaimer.
+
+
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of
+conditions and the following disclaimer in the documentation and/or other materials
+provided with the distribution.
+
+
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used
+to endorse or promote products derived from this software without specific prior written
+permission.
+
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ This distribution also includes the following third party software; please consult the
+accompanying license file for the license terms that apply to that software only:
+
+Microsoft.VisualStudio.CommandBars-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Debugger.Interop.10.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Debugger.Interop.11.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Debugger.Interop.12.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Debugger.Interop.14.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Debugger.Interop.15.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Debugger.Interop.16.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Debugger.InteropA-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Designer.Interfaces-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.GraphModel-17.0.31723
+  Licenses:
+Microsoft.VisualStudio.GraphModel-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.ImageCatalog-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Imaging-17.0.31723
+  Licenses:
+Microsoft.VisualStudio.Imaging-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime-17.0.31723
+  Licenses:
+Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Interop-17.0.31723
+  Licenses:
+Microsoft.VisualStudio.Interop-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.OLE.Interop-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Package.LanguageService.15.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.ProjectAggregator-17.0.31723
+  Licenses:
+Microsoft.VisualStudio.ProjectAggregator-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Shell.15.0-17.0.31723
+  Licenses:
+Microsoft.VisualStudio.Shell.15.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Shell.Design-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Shell.Framework-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Shell.Interop-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Shell.Interop.10.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Shell.Interop.11.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Shell.Interop.12.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Shell.Interop.8.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Shell.Interop.9.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextManager.Interop-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextManager.Interop.10.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextManager.Interop.11.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextManager.Interop.12.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextManager.Interop.8.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextManager.Interop.9.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextTemplating-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextTemplating.Interfaces-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextTemplating.Interfaces.10.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextTemplating.Interfaces.11.0-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.TextTemplating.VSHost-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.Utilities-17.0.31723
+  Licenses:
+Microsoft.VisualStudio.Utilities-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.VCProjectEngine-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.VSHelp-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.VSHelp80-17.0.31902
+  Licenses:
+Microsoft.VisualStudio.WCFReference.Interop-17.0.31902
+  Licenses:
+VSLangProj-17.0.31902
+  Licenses:
+VSLangProj100-17.0.31902
+  Licenses:
+VSLangProj110-17.0.31902
+  Licenses:
+VSLangProj140-17.0.31902
+  Licenses:
+VSLangProj150-17.0.31902
+  Licenses:
+VSLangProj157-17.0.31902
+  Licenses:
+VSLangProj158-17.0.31902
+  Licenses:
+VSLangProj165-17.0.31902
+  Licenses:
+VSLangProj2-17.0.31902
+  Licenses:
+VSLangProj80-17.0.31902
+  Licenses:
+VSLangProj90-17.0.31902
+  Licenses:
+envdte-17.0.31902
+  Licenses:
+envdte100-17.0.31902
+  Licenses:
+envdte80-17.0.31902
+  Licenses:
+envdte90-17.0.31902
+  Licenses:
+envdte90a-17.0.31902
+  Licenses:
+microsoft.build.framework.16.5.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c44642ba-e43d-41fa-90f1-bdbf399ecb43
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/c44642ba-e43d-41fa-90f1-bdbf399ecb43
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c44642ba-e43d-41fa-90f1-bdbf399ecb43
+    Author:      Microsoft Corporation
+
+microsoft.codeanalysis.bannedapianalyzers.3.3.2.nupkg
+  Licenses:
+    License:     Apache 2.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e771f422-a68c-4e80-8576-a7c3d10112ff
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e771f422-a68c-4e80-8576-a7c3d10112ff
+    Author:      Microsoft Corporation
+
+microsoft.csharp.4.7.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/bc95aea5-1618-4850-9d2b-59bbc8eb24b6
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/bc95aea5-1618-4850-9d2b-59bbc8eb24b6
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/8bb96e75-3536-4c78-9ab9-43c2bc9b2a11
+    Author:      Microsoft Corporation
+
+microsoft.servicehub.analyzers.3.0.3078.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.servicehub.analyzers/3.0.3078
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/b8b7e0d1-2d8e-498b-806f-2b442e23114f
+    Author:      Microsoft Corporation
+
+microsoft.servicehub.framework.3.0.2061.nupkg
+  Licenses:
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/01da6951-cb00-49d3-8ac9-25575cbe92a4
+    Author:      Microsoft Corporation
+
+microsoft.servicehub.framework.3.0.3078.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.servicehub.framework/3.0.3078
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/95760b7a-9489-4334-9c74-8e099aef09bb
+    Author:      Microsoft Corporation
+
+microsoft.servicehub.resources.3.0.3078.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.servicehub.resources/3.0.3078
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c4dff012-bd9c-45d7-a2f6-6694150132fc
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.componentmodelhost.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.componentmodelhost/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e256b8fb-c92f-44c6-8f62-d8e1e90ca6c0
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.coreutility.17.0.448.nupkg
+  Licenses:
+    License:     Microsoft Public
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/11fffb6c-0c86-43ca-9e27-e35c5e889cef
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/6bc84f43-b347-462c-bd14-5399271992a1
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.coreutility.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.coreutility/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e2fb2aa0-9fb6-4dfd-a42a-628f83ba0954
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.editor.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.editor/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5a3282f2-2f52-40f6-b5ec-6d277b464979
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.language.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.language/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8d28250a-6bc1-4bc8-b362-388c61ce5dd3
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.language.intellisense.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.language.intellisense/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2862c0a4-3144-45c3-9962-f2ef8cb78e7e
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.language.navigateto.interfaces.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.language.navigateto.interfaces/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/310a147f-d380-40cc-b95c-916c067956e7
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.language.standardclassification.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.language.standardclassification/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f325e91e-7ab8-43e9-8afa-36bbcd0ae406
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.languageserver.client.17.0.5158.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.languageserver.client/17.0.5158
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/73c68b88-5c97-4678-b8bb-5df206f6c10b
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.remotecontrol.16.3.32.nupkg
+  Licenses:
+    License:     Microsoft Public
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/11fffb6c-0c86-43ca-9e27-e35c5e889cef
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/c109a60e-d5be-433a-a7e7-5fe18562fcf2
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d3c0d1c0-5b4c-4927-9fa1-cae47c2ff89f
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.remotecontrol.16.3.41.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.remotecontrol/16.3.41
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/61a2c168-32a8-4e38-8d85-d3d5787b0352
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/a3d8d037-d39a-4fe2-a2e9-1577bb0b9c37
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.rpccontracts.17.0.51.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.rpccontracts/17.0.51
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/4780e5c3-e585-4b0a-bbb9-4adedd081bd9
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.sdk.analyzers.15.8.33.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://github.com/Microsoft/VSSDK-Analyzers/blob/v15.8.33/LICENSE
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://github.com/Microsoft/VSSDK-Analyzers/blob/v15.8.33/LICENSE
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.setup.configuration.interop.3.0.4492.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.setup.configuration.interop/3.0.4492
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d25b3c63-4859-4d9b-be3f-59d3d5ca0583
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.taskrunnerexplorer.14.0.14.0.0.nupkg
+  Licenses:
+    License:     Microsoft .NET Library
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/2f733785-6c5a-4f84-bc57-1056f3f9f46a
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/2f733785-6c5a-4f84-bc57-1056f3f9f46a
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.telemetry.16.3.176.nupkg
+  Licenses:
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/a264977c-a1ed-44a8-b121-b13c884bdab3
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c55a06e2-1306-4c44-8ac2-3983d80b84b7
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.telemetry.16.3.250.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.telemetry/16.3.250
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2145e68a-386b-4d1e-9bda-41cca9f0b116
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.text.data.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.text.data/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1892c272-512d-4b92-a567-e1a37ed69467
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.text.logic.17.0.448.nupkg
+  Licenses:
+    License:     Microsoft Public
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/11fffb6c-0c86-43ca-9e27-e35c5e889cef
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8bf29806-4b77-48d8-a4d9-38385d4de6ef
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.text.logic.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.text.logic/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2573d20e-628c-4845-b95c-1171fc8ee903
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.text.ui.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.text.ui/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9455623c-ab3b-443a-8095-a8ac63d11900
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.text.ui.wpf.17.0.487.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.text.ui.wpf/17.0.487
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3eb5b0d3-13f3-4e11-865f-b4f769937ce4
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.threading.17.0.63.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/233881aa-9d9b-4048-b471-d1cadc9bf699
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/233881aa-9d9b-4048-b471-d1cadc9bf699
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.threading.17.0.64.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/091b7383-2660-4668-9276-53ee40bcf2e1
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/091b7383-2660-4668-9276-53ee40bcf2e1
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.threading.analyzers.16.10.56.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d37ef522-25f5-4931-80f3-63c381f35300
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d37ef522-25f5-4931-80f3-63c381f35300
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.utilities.internal.16.3.23.nupkg
+  Licenses:
+    License:     Proprietary
+    Reference:   https://www.nuget.org/packages/microsoft.visualstudio.utilities.internal/16.3.23
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/6f46c887-e53b-486c-970d-6d8b5c9f5771
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f3038924-6eb9-435d-950c-014629d62801
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.validation.17.0.28.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f49f2248-0850-494c-bb76-0fe940b57d80
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f49f2248-0850-494c-bb76-0fe940b57d80
+    Author:      Microsoft Corporation
+
+microsoft.visualstudio.web.browserlink.12.0.12.0.0.nupkg
+  Licenses:
+    License:     Microsoft .NET Library
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3d05d905-0f5c-4730-8756-b743af194b5c
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3d05d905-0f5c-4730-8756-b743af194b5c
+    Author:      Microsoft Corporation
+
+microsoft.win32.primitives.4.3.0.nupkg
+  Licenses:
+    License:     Microsoft .NET Library
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/04d48f6c-3079-478f-ad5c-75f9d465e595
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://www.nuget.org/packages/Microsoft.Win32.Primitives/4.3.0
+    Author:      Microsoft Corporation
+
+microsoft.win32.registry.4.5.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/21507598-0699-41ca-8b38-97228c1c4b2f
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/21507598-0699-41ca-8b38-97228c1c4b2f
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://www.nuget.org/packages/Microsoft.Win32.Registry/4.5.0
+    Author:      Microsoft Corporation
+
+microsoft.win32.registry.5.0.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/552e1743-602f-446b-b284-4a2c1117ad84
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/552e1743-602f-446b-b284-4a2c1117ad84
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/1ee9f360-0d8b-417c-8e60-4f132ac466b3
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/32bf4fe5-92a2-4ad7-9704-66b0d8ff436e
+    Author:      Microsoft Corporation
+
+netstandard.library.1.6.1.nupkg
+  Licenses:
+    License:     Microsoft .NET Library
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/55bd8cc5-9ead-4ec7-8c6f-4670103158ea
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/9945fe8f-3c1a-46aa-b9fa-d48cec8e703d
+    Author:      Microsoft Corporation
+
+newtonsoft.json.13.0.1.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/7ff54984-0dbd-4eb8-b704-aed9079098d8
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/7ff54984-0dbd-4eb8-b704-aed9079098d8
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2008 James Newton-King
+    Reference:   https://www.nuget.org/packages/Newtonsoft.Json/13.0.1
+    Author:      James Newton-King
+
+newtonsoft.json.9.0.1.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/23f9e91d-d1ee-424a-aa8f-2ac7722f0bfb
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright 2021 Newtonsoft 
+    Reference:   https://www.newtonsoft.com/json
+
+nlog.4.7.12.nupkg
+  Licenses:
+    License:     BSD 3
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/66fe4da9-80b8-4b64-b115-5d60ceb20d4c
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright 2004-2021 NLog Project
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/66fe4da9-80b8-4b64-b115-5d60ceb20d4c
+    Author:      NLog Project
+
+nlog.schema.4.7.12.nupkg
+  Licenses:
+    License:     BSD 3
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/00c4e2d5-b9eb-4814-a24b-f63ddcfffd1d
+    LicenseText: License Text Under Appendix
+
+stdole-17.0.31902
+  Licenses:
+streamjsonrpc.2.7.70.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8b942225-fdb8-4281-8c7d-1a97cbc969b0
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8b942225-fdb8-4281-8c7d-1a97cbc969b0
+    Author:      Microsoft Corporation
+
+streamjsonrpc.2.8.28.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9504f0ba-0ad0-46a5-a535-2e302366e471
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9504f0ba-0ad0-46a5-a535-2e302366e471
+    Author:      Microsoft Corporation
+
+system.buffers.4.5.1.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/98064bcc-a0b8-4378-9d29-d1d4da985033
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/98064bcc-a0b8-4378-9d29-d1d4da985033
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/31cc977f-4723-4d5c-b899-a469f345f144
+    Author:      Microsoft Corporation
+
+system.collections.immutable.5.0.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/073c0d83-7342-4a1f-b93c-7e1142631b67
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5e290edc-a226-4249-ab79-8e5d863c8870
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/073c0d83-7342-4a1f-b93c-7e1142631b67
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/b686b382-d186-4dc0-b5f8-39c86d7541db
+    Author:      Microsoft Corporation
+
+system.componentmodel.composition.4.5.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/1eec1045-4c89-464e-b406-9b4ea35cd836
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/1eec1045-4c89-464e-b406-9b4ea35cd836
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/2edeebf6-50e3-4fb5-b8b8-6dccb5889cf8
+    Author:      Microsoft Corporation
+
+system.configuration.configurationmanager.4.5.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bf989e61-a6b5-49d5-93be-45401cd7edc6
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bf989e61-a6b5-49d5-93be-45401cd7edc6
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://www.nuget.org/packages/System.Configuration.ConfigurationManager/4.5.0
+    Author:      Microsoft Corporation
+
+system.diagnostics.performancecounter.5.0.1.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/ffb3aa18-0640-4e4f-8c99-d2dbc395f6ca
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/ffb3aa18-0640-4e4f-8c99-d2dbc395f6ca
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/53a7600e-7201-41ca-a165-50e2f0de35c2
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/30805525-6362-4009-a934-d8d22a9f18d3
+    Author:      Microsoft Corporation
+
+system.diagnostics.process.4.3.0.nupkg
+  Licenses:
+    License:     Microsoft .NET Library
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5cc50a23-7c4e-492e-8e57-30f3ca7c8450
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/4bb8e3d7-fc6f-4b78-9636-7980fa621edb
+    Author:      Microsoft Corporation
+
+system.diagnostics.tracesource.4.3.0.nupkg
+  Licenses:
+    License:     Microsoft .NET Library
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/27a0b1ba-caf7-421b-bc23-eca179d935a0
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/c9a2f1a2-672a-49b9-ad5f-cbed2dc2af6b
+    Author:      Microsoft Corporation
+
+system.diagnostics.tracing.4.3.0.nupkg
+  Licenses:
+    License:     Microsoft .NET Library
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5751dda5-a231-41af-86a0-b1a1d74a1512
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/915be5f2-00d4-45f4-9db1-f78c9dc13d15
+    Author:      Microsoft Corporation
+
+system.io.filesystem.accesscontrol.4.5.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5a8a8d28-6f24-47fd-b09c-8c0730c4e323
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5a8a8d28-6f24-47fd-b09c-8c0730c4e323
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/52d0be0a-7cf0-42b2-81d5-5634f2f9c72b
+    Author:      Microsoft Corporation
+
+system.io.filesystem.accesscontrol.5.0.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1e3f156f-a710-4ed5-bec5-af231d9b9857
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1e3f156f-a710-4ed5-bec5-af231d9b9857
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/4e93fe44-7521-454a-ad3e-a2298330abb6
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/71c4d28d-73f1-4194-91da-d3ce90d17235
+    Author:      Microsoft Corporation
+
+system.io.pipes.4.3.0.nupkg
+  Licenses:
+    License:     Microsoft .NET Library
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/d21b05ab-2fb2-4a06-9f5f-43850c810061
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5b3bf1d4-4309-40df-a3b4-045438672496
+    Author:      Microsoft Corporation
+
+system.management.5.0.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/29b07811-9713-42b3-90d6-573af042e86b
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/fb5e5104-d68a-48a6-b372-117c25a5e992
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/29b07811-9713-42b3-90d6-573af042e86b
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/047100a1-0e8c-44f5-933b-de81b0c2b79e
+    Author:      Microsoft Corporation
+
+system.memory.4.5.4.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/6b62fb40-cc68-448a-88d5-01b895560d7b
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/6b62fb40-cc68-448a-88d5-01b895560d7b
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/550c84df-cfe4-47c4-a218-bf66e24b269a
+    Author:      Microsoft Corporation
+
+system.private.uri.4.3.2.nupkg
+  Licenses:
+    License:     Microsoft .NET Library
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/7e39b236-3b38-44ca-a895-90ce1127bfed
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://www.nuget.org/packages/System.Private.Uri/4.3.2
+    Author:      Microsoft Corporation
+
+system.runtime.compilerservices.unsafe.5.0.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3589e9b0-25f3-45bb-bbbe-4f23ff5ef1c6
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/08887d32-84ff-479e-8480-62a4a11224cf
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3589e9b0-25f3-45bb-bbbe-4f23ff5ef1c6
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/352d796d-cc03-4f16-9510-0b5c865ea3bb
+    Author:      Microsoft Corporation
+
+system.runtime.compilerservices.unsafe.6.0.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9960f8fa-19e2-41e7-836b-f58adca3e6ca
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9960f8fa-19e2-41e7-836b-f58adca3e6ca
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/428992dc-3f4b-4fe2-b04f-ba8b8d7e0d3f
+    Author:      Microsoft Corporation
+
+system.security.accesscontrol.6.0.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/84487273-d4a4-4d40-87f1-b3fbf4284637
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/ebeafa09-9d4d-4c43-8160-6612c107b34f
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/84487273-d4a4-4d40-87f1-b3fbf4284637
+    Author:      .NET Foundation and Contributors
+
+system.security.permissions.4.7.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d7deb279-8d03-4da9-aade-3311e9a7aaf3
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d7deb279-8d03-4da9-aade-3311e9a7aaf3
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/01b91571-bc91-430d-9944-42931bf63e22
+    Author:      Microsoft Corporation
+
+system.security.principal.windows.4.7.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/15310ade-cdab-4d51-9cbd-abcdb76ebbae
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/15310ade-cdab-4d51-9cbd-abcdb76ebbae
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5ec5facd-2f6d-473a-926b-02ea88503372
+    Author:      Microsoft Corporation
+
+system.security.principal.windows.5.0.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/100a24e8-4beb-4d8c-8eba-1da9c1da24cd
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/100a24e8-4beb-4d8c-8eba-1da9c1da24cd
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/6e821a2e-d64a-48f3-939c-e383a38441ad
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/a59949c4-b2b3-4f6e-8548-4e0d91826c86
+    Author:      Microsoft Corporation
+
+system.threading.tasks.dataflow.5.0.0.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/474527f5-3312-4722-8508-450644f3ea89
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/474527f5-3312-4722-8508-450644f3ea89
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/11764963-35da-42b8-9f1b-ee34372f668e
+    Author:      Microsoft Corporation
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://www.nuget.org/packages/System.Threading.Tasks.Dataflow/5.0.0
+    Author:      Microsoft Corporation
+
+system.threading.tasks.extensions.4.5.4.nupkg
+  Licenses:
+    License:     MIT
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/4b69bf82-3564-4a0a-8ac1-1d4a59831857
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/4b69bf82-3564-4a0a-8ac1-1d4a59831857
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/390c2dbe-bcb7-490c-80be-0ce6623c0e63
+    Author:      Microsoft Corporation
+
+vssdk.dte.7.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.graphmodel.11.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.ide.10.10.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Unspecified Copyright
+    Reference:   
+
+vssdk.ide.11.11.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.ide.12.12.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Copyright 2010-2012 If you find this package installed in an extension that is supposed to target Visual Studio
+    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/cb147be1-28e4-43fc-88ae-8c0fa524f279
+    Author:      If you find this package installed in an extension that is supposed to target Visual Studio
+
+vssdk.ide.7.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.ide.8.8.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.ide.9.9.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.ole.interop.7.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.shell.immutable.10.10.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.shell.immutable.11.11.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.shell.immutable.12.12.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Unspecified Copyright
+    Reference:   
+
+vssdk.shell.interop.7.0.4.nupkg
+  Licenses:
+vssdk.shell.interop.8.8.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.shell.interop.9.9.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Unspecified Copyright
+    Reference:   
+
+vssdk.textmanager.interop.7.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.textmanager.interop.8.8.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+  Copyrights:
+    Copyright:   Unspecified Copyright
+    Reference:   
+
+vssdk.threading.12.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+vssdk.threading.12.12.0.4.nupkg
+  Licenses:
+    License:     Unspecified License
+    Reference:   Cannot be established
+    LicenseText: License Text Under Appendix
+
+P4API.net license:
+Copyright (c) 2025, Perforce Software, Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+
+
+1. Redistributions of source code must retain the above copyright notice, this 
+list of conditions and the following disclaimer.
+
+
+
+2. Redistributions in binary form must reproduce the above copyright notice, 
+this list of conditions and the following disclaimer in the documentation 
+and/or other materials provided with the distribution.
+
+
+
+3. Neither the name of the copyright holder nor the names of its contributors 
+may be used to endorse or promote products derived from this software without 
+specific prior written permission.
+
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE 
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL 
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR 
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-----------------------
+
+The following are the license statements for code used in
+this program.
+
+
+P4/P4API License
+-----------------------
+Copyright (c) 1995-2025, Perforce Software, Inc.
+All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 
-1  Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
+    Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimer.
 
-2.  Redistributions in binary form must reproduce the above copyright
+    Redistributions in binary form must reproduce the above copyright
     notice, this list of conditions and the following disclaimer in the
     documentation and/or other materials provided with the distribution.
 
-3. Neither the name of the copyright holder nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL PERFORCE
-SOFTWARE, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
-ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
-TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
-THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
-DAMAGE.
-
---------------------------------------------------------------------------------
-
-This product uses following components:
-
-******************************************************
-1. Library: microsoft.bcl.asyncinterfaces.1.1.1.nupkg
-******************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/fa291ee3-c206-4bd0-8daf-dc785c9a6660
-
-License Text Under Appendix
-
-
-
-****************************************************************
-2. Library: microsoft.visualstudio.coreutility.15.0.26201.nupkg
-****************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-**************************************************************
-3. Library: microsoft.visualstudio.coreutility.15.8.525.nupkg
-**************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-*************************************************************
-4. Library: microsoft.visualstudio.coreutility.16.1.89.nupkg
-*************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-****************************************************************
-5. Library: microsoft.visualstudio.dpiawareness.6.1.28916.nupkg
-****************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-*****************************************************************
-6. Library: microsoft.visualstudio.imagecatalog.14.0.23205.nupkg
-*****************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-************************************************************
-7. Library: microsoft.visualstudio.imaging.14.3.25407.nupkg
-************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-************************************************************
-8. Library: microsoft.visualstudio.imaging.15.0.26201.nupkg
-************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-************************************************************************************
-9. Library: microsoft.visualstudio.imaging.interop.14.0.designtime.14.3.25408.nupkg
-************************************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-************************************************************
-10. Library: microsoft.visualstudio.language.15.8.525.nupkg
-************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://docs.microsoft.com/en-us/visualstudio/extensibility/visual-studio-sdk?view=vs-2019
-
-License Text Under Appendix
-
-
-
-***********************************************************
-11. Library: microsoft.visualstudio.language.16.1.89.nupkg
-***********************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: https://aka.ms/pexunj
-
-License Text Under Appendix
-
-
-
-****************************************************************
-12. Library: microsoft.visualstudio.ole.interop.7.10.6070.nupkg
-****************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-****************************************************************
-13. Library: microsoft.visualstudio.ole.interop.7.10.6071.nupkg
-****************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://docs.microsoft.com/en-us/visualstudio/extensibility/visual-studio-sdk?view=vs-2019
-
-License Text Under Appendix
-
-
-
-****************************************************************
-14. Library: microsoft.visualstudio.sdk.analyzers.15.8.33.nupkg
-****************************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://raw.githubusercontent.com/Microsoft/vssdk-analyzers/88eb0cf403/LICENSE
-
-License Text Under Appendix
-
-
-
-************************************************************************
-15. Library: microsoft.visualstudio.sdk.embedinteroptypes.15.0.10.nupkg
-************************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-****************************************************************
-16. Library: microsoft.visualstudio.shell.14.0.14.3.25407.nupkg
-****************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-****************************************************************
-17. Library: microsoft.visualstudio.shell.15.0.15.0.26201.nupkg
-****************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-**********************************************************************
-18. Library: microsoft.visualstudio.shell.embeddable.14.3.25407.nupkg
-**********************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-*********************************************************************
-19. Library: microsoft.visualstudio.shell.framework.15.0.26201.nupkg
-*********************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-**************************************************************************
-20. Library: microsoft.visualstudio.shell.immutable.10.0.10.0.30319.nupkg
-**************************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-**************************************************************************
-21. Library: microsoft.visualstudio.shell.immutable.11.0.11.0.50727.nupkg
-**************************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-**************************************************************************
-22. Library: microsoft.visualstudio.shell.immutable.12.0.12.0.21003.nupkg
-**************************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-**************************************************************************
-23. Library: microsoft.visualstudio.shell.immutable.14.0.14.3.25407.nupkg
-**************************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-************************************************************************
-24. Library: microsoft.visualstudio.shell.interop.10.0.10.0.30319.nupkg
-************************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-************************************************************************
-25. Library: microsoft.visualstudio.shell.interop.11.0.11.0.61030.nupkg
-************************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-************************************************************************
-26. Library: microsoft.visualstudio.shell.interop.12.0.12.0.30110.nupkg
-************************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-***********************************************************************************
-27. Library: microsoft.visualstudio.shell.interop.14.0.designtime.14.3.25407.nupkg
-***********************************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://aka.ms/vsextensibility
-
-License Text Under Appendix
-
-
-
-******************************************************************
-28. Library: microsoft.visualstudio.shell.interop.7.10.6071.nupkg
-******************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-**********************************************************************
-29. Library: microsoft.visualstudio.shell.interop.8.0.8.0.50727.nupkg
-**********************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-**********************************************************************
-30. Library: microsoft.visualstudio.shell.interop.9.0.9.0.30729.nupkg
-**********************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-*************************************************************
-31. Library: microsoft.visualstudio.text.data.15.8.525.nupkg
-*************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-************************************************************
-32. Library: microsoft.visualstudio.text.data.16.1.89.nupkg
-************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-**************************************************************
-33. Library: microsoft.visualstudio.text.logic.15.8.525.nupkg
-**************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-*************************************************************
-34. Library: microsoft.visualstudio.text.logic.16.1.89.nupkg
-*************************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-***********************************************************
-35. Library: microsoft.visualstudio.text.ui.15.8.525.nupkg
-***********************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-************************************************************************
-37. Library: microsoft.visualstudio.textmanager.interop.7.10.6070.nupkg
-************************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-****************************************************************************
-38. Library: microsoft.visualstudio.textmanager.interop.8.0.8.0.50727.nupkg
-****************************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-*************************************************************
-39. Library: microsoft.visualstudio.threading.14.1.111.nupkg
-*************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-*************************************************************
-40. Library: microsoft.visualstudio.threading.15.0.240.nupkg
-*************************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://raw.githubusercontent.com/Microsoft/vs-threading/a9a5dc3fe7/LICENSE
-
-License Text Under Appendix
-
-
-
-************************************************************
-41. Library: microsoft.visualstudio.threading.16.8.55.nupkg
-************************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://licenses.nuget.org/MIT
-
-License Text Under Appendix
-
-
-
-***********************************************************************
-42. Library: microsoft.visualstudio.threading.analyzers.15.8.122.nupkg
-***********************************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://raw.githubusercontent.com/Microsoft/vs-threading/963649814b/LICENSE
-
-License Text Under Appendix
-
-
-
-**********************************************************************
-43. Library: microsoft.visualstudio.threading.analyzers.16.8.55.nupkg
-**********************************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://licenses.nuget.org/MIT
-
-License Text Under Appendix
-
-
-
-***************************************************************
-44. Library: microsoft.visualstudio.utilities.14.3.25407.nupkg
-***************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-**************************************************************
-46. Library: microsoft.visualstudio.validation.14.1.111.nupkg
-**************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft Public
-License terms can be found at: http://go.microsoft.com/fwlink/?LinkID=614949
-
-License Text Under Appendix
-
-
-
-*************************************************************
-47. Library: microsoft.visualstudio.validation.15.0.82.nupkg
-*************************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://raw.githubusercontent.com/Microsoft/vs-validation/1fc5bdcf81/LICENSE
-
-License Text Under Appendix
-
-
-
-*************************************************************
-48. Library: microsoft.visualstudio.validation.16.8.33.nupkg
-*************************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://licenses.nuget.org/MIT
-
-License Text Under Appendix
-
-
-
-********************************************************
-49. Library: microsoft.vssdk.buildtools.16.9.1050.nupkg
-********************************************************
-========
-LICENSES
-========
-Licensed under Proprietary
-License terms can be found at: https://visualstudio.microsoft.com/
-
-License Text Under Appendix
-
-
-
-**************************************************
-50. Library: microsoft.win32.registry.4.7.0.nupkg
-**************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/0bf172aa-d33e-4afa-8d85-5a727b84d567
-
-License Text Under Appendix
-
-
-
-*******************************************
-51. Library: nerdbank.streams.2.1.37.nupkg
-*******************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://raw.githubusercontent.com/AArnott/Nerdbank.Streams/0230c2ab16/LICENSE.txt
-
-License Text Under Appendix
-
-
-
-*****************************************
-52. Library: newtonsoft.json.9.0.1.nupkg
-*****************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://raw.github.com/JamesNK/Newtonsoft.Json/master/LICENSE.md
-
-License Text Under Appendix
-
-
-
-******************************
-53. Library: nlog.4.3.9.nupkg
-******************************
-========
-LICENSES
-========
-Licensed under BSD 3
-License terms can be found at: http://raw.github.com/NLog/NLog/master/LICENSE.txt
-
-License Text Under Appendix
-
-
-
-*************************************
-54. Library: nlog.config.4.3.9.nupkg
-*************************************
-========
-LICENSES
-========
-Licensed under BSD 3
-License terms can be found at: http://raw.github.com/NLog/NLog/master/LICENSE.txt
-
-License Text Under Appendix
-
-
-
-*************************************
-55. Library: nlog.schema.4.3.9.nupkg
-*************************************
-========
-LICENSES
-========
-Licensed under BSD 3
-License terms can be found at: http://raw.github.com/NLog/NLog/master/LICENSE.txt
-
-License Text Under Appendix
-
-
-
-*******************************************
-56. Library: nuget.commandline.4.1.0.nupkg
-*******************************************
-========
-LICENSES
-========
-Licensed under Apache 2.0
-License terms can be found at: https://raw.githubusercontent.com/NuGet/NuGet.Client/dev/LICENSE.txt
-
-License Text Under Appendix
-
-
-
-****************************************
-57. Library: openmcdf.2.1.6.28924.nupkg
-****************************************
-========
-LICENSES
-========
-Licensed under Mozilla 2.0
-License terms can be found at: https://opensource.org/licenses/MPL-2.0
-
-License Text Under Appendix
-
-
-
-****************************************
-58. Library: streamjsonrpc.1.3.23.nupkg
-****************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://raw.githubusercontent.com/Microsoft/vs-streamjsonrpc/12717cad3d/LICENSE
-
-License Text Under Appendix
-
-
-
-*****************************************
-59. Library: streamjsonrpc.2.0.167.nupkg
-*****************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://licenses.nuget.org/MIT
-
-License Text Under Appendix
-
-
-
-****************************************
-60. Library: system.buffers.4.5.1.nupkg
-****************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/33ac1ac5-0672-45f0-8d30-0b7fb9192566
-
-License Text Under Appendix
-
-
-
-*********************************************
-61. Library: system.collections.4.0.11.nupkg
-*********************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/18831ead-5638-4870-b3b7-68cc1f894eaa
-
-License Text Under Appendix
-
-
-
-********************************************************
-62. Library: system.collections.concurrent.4.0.12.nupkg
-********************************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5ef4ccff-5402-4cd6-be96-034981af32f1
-
-License Text Under Appendix
-
-
-
-******************************************************
-63. Library: system.collections.immutable.1.7.1.nupkg
-******************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/27280de0-f694-4881-81fe-9f140f82e007
-
-License Text Under Appendix
-
-
-
-***********************************************
-64. Library: system.globalization.4.0.11.nupkg
-***********************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/16d15649-4996-48b3-89ec-b76325e9ec1a
-
-License Text Under Appendix
-
-
-
-***********************************
-65. Library: system.io.4.3.0.nupkg
-***********************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/25a8adff-902b-4635-9642-20f3c4b348e0
-
-License Text Under Appendix
-
-
-
-*********************************************
-66. Library: system.io.pipelines.4.5.3.nupkg
-*********************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/9a9df062-e757-4430-b0d5-6a8ad9e21ef9
-
-License Text Under Appendix
-
-
-
-*************************************
-67. Library: system.linq.4.1.0.nupkg
-*************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/3a9def04-6409-4c4f-99a5-cbccc2b04647
-
-License Text Under Appendix
-
-
-
-***************************************
-68. Library: system.memory.4.5.4.nupkg
-***************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/b8ae8fdd-d14e-454c-9476-9684039295c5
-
-License Text Under Appendix
-
-
-
-*****************************************
-69. Library: system.net.http.4.3.3.nupkg
-*****************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/b546efaa-7d72-49b9-b83d-f34e53559660
-
-License Text Under Appendix
-
-
-
-***********************************************
-70. Library: system.net.websockets.4.3.0.nupkg
-***********************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/b93e4902-069b-4003-ad9b-2320c4f62cf0
-
-License Text Under Appendix
-
-
-
-*************************************************
-71. Library: system.numerics.vectors.4.5.0.nupkg
-*************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/69813ca4-e397-409f-bd2f-43488a31750f
-
-License Text Under Appendix
-
-
-
-************************************************
-72. Library: system.reflection.emit.4.3.0.nupkg
-************************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/9ef23adb-448d-406e-99c4-0695b9b2f53a
-
-License Text Under Appendix
-
-
-
-****************************************
-73. Library: system.runtime.4.3.0.nupkg
-****************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/e741a8eb-88ca-4722-880f-161723e8c04f
-
-License Text Under Appendix
-
-
-
-****************************************************************
-74. Library: system.runtime.compilerservices.unsafe.4.5.3.nupkg
-****************************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/cfb59c67-a891-400b-b597-c1acb85a4df6
-
-License Text Under Appendix
-
-
-
-*******************************************************
-75. Library: system.security.accesscontrol.4.7.0.nupkg
-*******************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/d8495a2e-0ffa-4ff1-aeb1-a85ac863d822
-
-License Text Under Appendix
-
-
-
-*****************************************************************
-76. Library: system.security.cryptography.algorithms.4.3.0.nupkg
-*****************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/ccafc689-69e7-4bd9-87e5-7b5b6b6ed7b4
-
-License Text Under Appendix
-
-
-
-***************************************************************
-77. Library: system.security.cryptography.encoding.4.3.0.nupkg
-***************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/82288da2-a958-4342-b546-de99d60dd037
-
-License Text Under Appendix
-
-
-
-*****************************************************************
-78. Library: system.security.cryptography.primitives.4.3.0.nupkg
-*****************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/dacc15b1-f043-49f5-ba0d-f011ee44771d
-
-License Text Under Appendix
-
-
-
-***********************************************************************
-79. Library: system.security.cryptography.x509certificates.4.3.0.nupkg
-***********************************************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5151cbd4-8f7a-41aa-9413-eaee69b0d0a0
-
-License Text Under Appendix
-
-
-
-***********************************************************
-80. Library: system.security.principal.windows.4.7.0.nupkg
-***********************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/219b19d6-a6a2-4a85-a6bf-25139a35b216
-
-License Text Under Appendix
-
-
-
-*******************************************
-81. Library: system.threading.4.0.11.nupkg
-*******************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/058bdf00-d784-4eb3-b378-c17cd604715b
-
-License Text Under Appendix
-
-
-
-*************************************************
-82. Library: system.threading.tasks.4.0.11.nupkg
-*************************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/6ed632f5-603c-4289-afed-f1ec84b9c428
-
-License Text Under Appendix
-
-
-
-***********************************************************
-83. Library: system.threading.tasks.extensions.4.5.4.nupkg
-***********************************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/b5314261-2747-4271-b65f-2a80df57b903
-
-License Text Under Appendix
-
-
-
-*******************************************
-84. Library: system.valuetuple.4.3.0.nupkg
-*******************************************
-========
-LICENSES
-========
-Licensed under Microsoft .NET Library
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/72b7aeeb-5ce2-4c7f-ba46-faedbfef4cbb
-
-License Text Under Appendix
-
-
-
-*******************************************
-85. Library: system.valuetuple.4.5.0.nupkg
-*******************************************
-========
-LICENSES
-========
-Licensed under MIT
-License terms can be found at: https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5e9ba46d-b6b9-4363-ba26-c9a57f23f309
-
-License Text Under Appendix
-
-
-*******************************************
-86. Library: OpenSSL 1.1.1k
-*******************************************
-
-========
-LICENSES
-========
-
-The OpenSSL toolkit stays under a double license, i.e. both the conditions of the OpenSSL License and the original SSLeay license apply to the toolkit.
-License terms can be found at: http://www.openssl.org/source/license.html
-
-License Text Under Appendix.
-
-=========================
-APPENDIX: License Details
-=========================
-
-***********
-Mozilla 2.0
-***********
-License Text:
-Mozilla Public License Version 2.0
-==================================
-
-1. Definitions
---------------
-
-1.1. "Contributor"
-    means each individual or legal entity that creates, contributes to
-    the creation of, or owns Covered Software.
-
-1.2. "Contributor Version"
-    means the combination of the Contributions of others (if any) used
-    by a Contributor and that particular Contributor's Contribution.
-
-1.3. "Contribution"
-    means Covered Software of a particular Contributor.
-
-1.4. "Covered Software"
-    means Source Code Form to which the initial Contributor has attached
-    the notice in Exhibit A, the Executable Form of such Source Code
-    Form, and Modifications of such Source Code Form, in each case
-    including portions thereof.
-
-1.5. "Incompatible With Secondary Licenses"
-    means
-
-    (a) that the initial Contributor has attached the notice described
-        in Exhibit B to the Covered Software; or
-
-    (b) that the Covered Software was made available under the terms of
-        version 1.1 or earlier of the License, but not also under the
-        terms of a Secondary License.
-
-1.6. "Executable Form"
-    means any form of the work other than Source Code Form.
-
-1.7. "Larger Work"
-    means a work that combines Covered Software with other material, in
-    a separate file or files, that is not Covered Software.
-
-1.8. "License"
-    means this document.
-
-1.9. "Licensable"
-    means having the right to grant, to the maximum extent possible,
-    whether at the time of the initial grant or subsequently, any and
-    all of the rights conveyed by this License.
-
-1.10. "Modifications"
-    means any of the following:
-
-    (a) any file in Source Code Form that results from an addition to,
-        deletion from, or modification of the contents of Covered
-        Software; or
-
-    (b) any new file in Source Code Form that contains any Covered
-        Software.
-
-1.11. "Patent Claims" of a Contributor
-    means any patent claim(s), including without limitation, method,
-    process, and apparatus claims, in any patent Licensable by such
-    Contributor that would be infringed, but for the grant of the
-    License, by the making, using, selling, offering for sale, having
-    made, import, or transfer of either its Contributions or its
-    Contributor Version.
-
-1.12. "Secondary License"
-    means either the GNU General Public License, Version 2.0, the GNU
-    Lesser General Public License, Version 2.1, the GNU Affero General
-    Public License, Version 3.0, or any later versions of those
-    licenses.
-
-1.13. "Source Code Form"
-    means the form of the work preferred for making modifications.
-
-1.14. "You" (or "Your")
-    means an individual or a legal entity exercising rights under this
-    License. For legal entities, "You" includes any entity that
-    controls, is controlled by, or is under common control with You. For
-    purposes of this definition, "control" means (a) the power, direct
-    or indirect, to cause the direction or management of such entity,
-    whether by contract or otherwise, or (b) ownership of more than
-    fifty percent (50%) of the outstanding shares or beneficial
-    ownership of such entity.
-
-2. License Grants and Conditions
---------------------------------
-
-2.1. Grants
-
-Each Contributor hereby grants You a world-wide, royalty-free,
-non-exclusive license:
-
-(a) under intellectual property rights (other than patent or trademark)
-    Licensable by such Contributor to use, reproduce, make available,
-    modify, display, perform, distribute, and otherwise exploit its
-    Contributions, either on an unmodified basis, with Modifications, or
-    as part of a Larger Work; and
-
-(b) under Patent Claims of such Contributor to make, use, sell, offer
-    for sale, have made, import, and otherwise transfer either its
-    Contributions or its Contributor Version.
-
-2.2. Effective Date
-
-The licenses granted in Section 2.1 with respect to any Contribution
-become effective for each Contribution on the date the Contributor first
-distributes such Contribution.
-
-2.3. Limitations on Grant Scope
-
-The licenses granted in this Section 2 are the only rights granted under
-this License. No additional rights or licenses will be implied from the
-distribution or licensing of Covered Software under this License.
-Notwithstanding Section 2.1(b) above, no patent license is granted by a
-Contributor:
-
-(a) for any code that a Contributor has removed from Covered Software;
-    or
-
-(b) for infringements caused by: (i) Your and any other third party's
-    modifications of Covered Software, or (ii) the combination of its
-    Contributions with other software (except as part of its Contributor
-    Version); or
-
-(c) under Patent Claims infringed by Covered Software in the absence of
-    its Contributions.
-
-This License does not grant any rights in the trademarks, service marks,
-or logos of any Contributor (except as may be necessary to comply with
-the notice requirements in Section 3.4).
-
-2.4. Subsequent Licenses
-
-No Contributor makes additional grants as a result of Your choice to
-distribute the Covered Software under a subsequent version of this
-License (see Section 10.2) or under the terms of a Secondary License (if
-permitted under the terms of Section 3.3).
-
-2.5. Representation
-
-Each Contributor represents that the Contributor believes its
-Contributions are its original creation(s) or it has sufficient rights
-to grant the rights to its Contributions conveyed by this License.
-
-2.6. Fair Use
-
-This License is not intended to limit any rights You have under
-applicable copyright doctrines of fair use, fair dealing, or other
-equivalents.
-
-2.7. Conditions
-
-Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted
-in Section 2.1.
-
-3. Responsibilities
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+
+OpenSSL:
+-----------------------
+Copyright (c) 1998-2022 The OpenSSL Project
+Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson
+All rights reserved.
+
+OpenSSL License
+-----------------------
+
+                             Apache License
+                       Version 2.0, January 2004
+                    https://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definitions.
+
+   "License" shall mean the terms and conditions for use, reproduction,
+   and distribution as defined by Sections 1 through 9 of this document.
+
+   "Licensor" shall mean the copyright owner or entity authorized by
+   the copyright owner that is granting the License.
+
+   "Legal Entity" shall mean the union of the acting entity and all
+   other entities that control, are controlled by, or are under common
+   control with that entity. For the purposes of this definition,
+   "control" means (i) the power, direct or indirect, to cause the
+   direction or management of such entity, whether by contract or
+   otherwise, or (ii) ownership of fifty percent (50) or more of the
+   outstanding shares, or (iii) beneficial ownership of such entity.
+
+   "You" (or "Your") shall mean an individual or Legal Entity
+   exercising permissions granted by this License.
+
+   "Source" form shall mean the preferred form for making modifications,
+   including but not limited to software source code, documentation
+   source, and configuration files.
+
+   "Object" form shall mean any form resulting from mechanical
+   transformation or translation of a Source form, including but
+   not limited to compiled object code, generated documentation,
+   and conversions to other media types.
+
+   "Work" shall mean the work of authorship, whether in Source or
+   Object form, made available under the License, as indicated by a
+   copyright notice that is included in or attached to the work
+   (an example is provided in the Appendix below).
+
+   "Derivative Works" shall mean any work, whether in Source or Object
+   form, that is based on (or derived from) the Work and for which the
+   editorial revisions, annotations, elaborations, or other modifications
+   represent, as a whole, an original work of authorship. For the purposes
+   of this License, Derivative Works shall not include works that remain
+   separable from, or merely link (or bind by name) to the interfaces of,
+   the Work and Derivative Works thereof.
+
+   "Contribution" shall mean any work of authorship, including
+   the original version of the Work and any modifications or additions
+   to that Work or Derivative Works thereof, that is intentionally
+   submitted to Licensor for inclusion in the Work by the copyright owner
+   or by an individual or Legal Entity authorized to submit on behalf of
+   the copyright owner. For the purposes of this definition, "submitted"
+   means any form of electronic, verbal, or written communication sent
+   to the Licensor or its representatives, including but not limited to
+   communication on electronic mailing lists, source code control systems,
+   and issue tracking systems that are managed by, or on behalf of, the
+   Licensor for the purpose of discussing and improving the Work, but
+   excluding communication that is conspicuously marked or otherwise
+   designated in writing by the copyright owner as "Not a Contribution."
+
+   "Contributor" shall mean Licensor and any individual or Legal Entity
+   on behalf of whom a Contribution has been received by Licensor and
+   subsequently incorporated within the Work.
+
+2. Grant of Copyright License. Subject to the terms and conditions of
+   this License, each Contributor hereby grants to You a perpetual,
+   worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+   copyright license to reproduce, prepare Derivative Works of,
+   publicly display, publicly perform, sublicense, and distribute the
+   Work and such Derivative Works in Source or Object form.
+
+3. Grant of Patent License. Subject to the terms and conditions of
+   this License, each Contributor hereby grants to You a perpetual,
+   worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+   (except as stated in this section) patent license to make, have made,
+   use, offer to sell, sell, import, and otherwise transfer the Work,
+   where such license applies only to those patent claims licensable
+   by such Contributor that are necessarily infringed by their
+   Contribution(s) alone or by combination of their Contribution(s)
+   with the Work to which such Contribution(s) was submitted. If You
+   institute patent litigation against any entity (including a
+   cross-claim or counterclaim in a lawsuit) alleging that the Work
+   or a Contribution incorporated within the Work constitutes direct
+   or contributory patent infringement, then any patent licenses
+   granted to You under this License for that Work shall terminate
+   as of the date such litigation is filed.
+
+4. Redistribution. You may reproduce and distribute copies of the
+   Work or Derivative Works thereof in any medium, with or without
+   modifications, and in Source or Object form, provided that You
+   meet the following conditions:
+
+   (a) You must give any other recipients of the Work or
+       Derivative Works a copy of this License; and
+
+   (b) You must cause any modified files to carry prominent notices
+       stating that You changed the files; and
+
+   (c) You must retain, in the Source form of any Derivative Works
+       that You distribute, all copyright, patent, trademark, and
+       attribution notices from the Source form of the Work,
+       excluding those notices that do not pertain to any part of
+       the Derivative Works; and
+
+   (d) If the Work includes a "NOTICE" text file as part of its
+       distribution, then any Derivative Works that You distribute must
+       include a readable copy of the attribution notices contained
+       within such NOTICE file, excluding those notices that do not
+       pertain to any part of the Derivative Works, in at least one
+       of the following places: within a NOTICE text file distributed
+       as part of the Derivative Works; within the Source form or
+       documentation, if provided along with the Derivative Works; or,
+       within a display generated by the Derivative Works, if and
+       wherever such third-party notices normally appear. The contents
+       of the NOTICE file are for informational purposes only and
+       do not modify the License. You may add Your own attribution
+       notices within Derivative Works that You distribute, alongside
+       or as an addendum to the NOTICE text from the Work, provided
+       that such additional attribution notices cannot be construed
+       as modifying the License.
+
+   You may add Your own copyright statement to Your modifications and
+   may provide additional or different license terms and conditions
+   for use, reproduction, or distribution of Your modifications, or
+   for any such Derivative Works as a whole, provided Your use,
+   reproduction, and distribution of the Work otherwise complies with
+   the conditions stated in this License.
+
+5. Submission of Contributions. Unless You explicitly state otherwise,
+   any Contribution intentionally submitted for inclusion in the Work
+   by You to the Licensor shall be under the terms and conditions of
+   this License, without any additional terms or conditions.
+   Notwithstanding the above, nothing herein shall supersede or modify
+   the terms of any separate license agreement you may have executed
+   with Licensor regarding such Contributions.
+
+6. Trademarks. This License does not grant permission to use the trade
+   names, trademarks, service marks, or product names of the Licensor,
+   except as required for reasonable and customary use in describing the
+   origin of the Work and reproducing the content of the NOTICE file.
+
+7. Disclaimer of Warranty. Unless required by applicable law or
+   agreed to in writing, Licensor provides the Work (and each
+   Contributor provides its Contributions) on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+   implied, including, without limitation, any warranties or conditions
+   of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+   PARTICULAR PURPOSE. You are solely responsible for determining the
+   appropriateness of using or redistributing the Work and assume any
+   risks associated with Your exercise of permissions under this License.
+
+8. Limitation of Liability. In no event and under no legal theory,
+   whether in tort (including negligence), contract, or otherwise,
+   unless required by applicable law (such as deliberate and grossly
+   negligent acts) or agreed to in writing, shall any Contributor be
+   liable to You for damages, including any direct, indirect, special,
+   incidental, or consequential damages of any character arising as a
+   result of this License or out of the use or inability to use the
+   Work (including but not limited to damages for loss of goodwill,
+   work stoppage, computer failure or malfunction, or any and all
+   other commercial damages or losses), even if such Contributor
+   has been advised of the possibility of such damages.
+
+9. Accepting Warranty or Additional Liability. While redistributing
+   the Work or Derivative Works thereof, You may choose to offer,
+   and charge a fee for, acceptance of support, warranty, indemnity,
+   or other liability obligations and/or rights consistent with this
+   License. However, in accepting such obligations, You may act only
+   on Your own behalf and on Your sole responsibility, not on behalf
+   of any other Contributor, and only if You agree to indemnify,
+   defend, and hold each Contributor harmless for any liability
+   incurred by, or claims asserted against, such Contributor by reason
+   of your accepting any such warranty or additional liability.
+
+
+CDC File Transfer
+-----------------------
+
+Copyright 2022 Lutz Justen
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+  Appendix:
+-------------------
+Unspecified License
 -------------------
 
-3.1. Distribution of Source Form
 
-All distribution of Covered Software in Source Code Form, including any
-Modifications that You create or to which You contribute, must be under
-the terms of this License. You must inform recipients that the Source
-Code Form of the Covered Software is governed by the terms of this
-License, and how they can obtain a copy of this License. You may not
-attempt to alter or restrict the recipients' rights in the Source Code
-Form.
-
-3.2. Distribution of Executable Form
-
-If You distribute Covered Software in Executable Form then:
-
-(a) such Covered Software must also be made available in Source Code
-    Form, as described in Section 3.1, and You must inform recipients of
-    the Executable Form how they can obtain a copy of such Source Code
-    Form by reasonable means in a timely manner, at a charge no more
-    than the cost of distribution to the recipient; and
-
-(b) You may distribute such Executable Form under the terms of this
-    License, or sublicense it under different terms, provided that the
-    license for the Executable Form does not attempt to limit or alter
-    the recipients' rights in the Source Code Form under this License.
-
-3.3. Distribution of a Larger Work
-
-You may create and distribute a Larger Work under terms of Your choice,
-provided that You also comply with the requirements of this License for
-the Covered Software. If the Larger Work is a combination of Covered
-Software with a work governed by one or more Secondary Licenses, and the
-Covered Software is not Incompatible With Secondary Licenses, this
-License permits You to additionally distribute such Covered Software
-under the terms of such Secondary License(s), so that the recipient of
-the Larger Work may, at their option, further distribute the Covered
-Software under the terms of either this License or such Secondary
-License(s).
-
-3.4. Notices
-
-You may not remove or alter the substance of any license notices
-(including copyright notices, patent notices, disclaimers of warranty,
-or limitations of liability) contained within the Source Code Form of
-the Covered Software, except that You may alter any license notices to
-the extent required to remedy known factual inaccuracies.
-
-3.5. Application of Additional Terms
-
-You may choose to offer, and to charge a fee for, warranty, support,
-indemnity or liability obligations to one or more recipients of Covered
-Software. However, You may do so only on Your own behalf, and not on
-behalf of any Contributor. You must make it absolutely clear that any
-such warranty, support, indemnity, or liability obligation is offered by
-You alone, and You hereby agree to indemnify every Contributor for any
-liability incurred by such Contributor as a result of warranty, support,
-indemnity or liability terms You offer. You may include additional
-disclaimers of warranty and limitations of liability specific to any
-jurisdiction.
-
-4. Inability to Comply Due to Statute or Regulation
----------------------------------------------------
-
-If it is impossible for You to comply with any of the terms of this
-License with respect to some or all of the Covered Software due to
-statute, judicial order, or regulation then You must: (a) comply with
-the terms of this License to the maximum extent possible; and (b)
-describe the limitations and the code they affect. Such description must
-be placed in a text file included with all distributions of the Covered
-Software under this License. Except to the extent prohibited by statute
-or regulation, such description must be sufficiently detailed for a
-recipient of ordinary skill to be able to understand it.
-
-5. Termination
---------------
-
-5.1. The rights granted under this License will terminate automatically
-if You fail to comply with any of its terms. However, if You become
-compliant, then the rights granted under this License from a particular
-Contributor are reinstated (a) provisionally, unless and until such
-Contributor explicitly and finally terminates Your grants, and (b) on an
-ongoing basis, if such Contributor fails to notify You of the
-non-compliance by some reasonable means prior to 60 days after You have
-come back into compliance. Moreover, Your grants from a particular
-Contributor are reinstated on an ongoing basis if such Contributor
-notifies You of the non-compliance by some reasonable means, this is the
-first time You have received notice of non-compliance with this License
-from such Contributor, and You become compliant prior to 30 days after
-Your receipt of the notice.
-
-5.2. If You initiate litigation against any entity by asserting a patent
-infringement claim (excluding declaratory judgment actions,
-counter-claims, and cross-claims) alleging that a Contributor Version
-directly or indirectly infringes any patent, then the rights granted to
-You by any and all Contributors for the Covered Software under Section
-2.1 of this License shall terminate.
-
-5.3. In the event of termination under Sections 5.1 or 5.2 above, all
-end user license agreements (excluding distributors and resellers) which
-have been validly granted by You or Your distributors under this License
-prior to termination shall survive termination.
-
-************************************************************************
-*                                                                      *
-*  6. Disclaimer of Warranty                                           *
-*  -------------------------                                           *
-*                                                                      *
-*  Covered Software is provided under this License on an "as is"       *
-*  basis, without warranty of any kind, either expressed, implied, or  *
-*  statutory, including, without limitation, warranties that the       *
-*  Covered Software is free of defects, merchantable, fit for a        *
-*  particular purpose or non-infringing. The entire risk as to the     *
-*  quality and performance of the Covered Software is with You.        *
-*  Should any Covered Software prove defective in any respect, You     *
-*  (not any Contributor) assume the cost of any necessary servicing,   *
-*  repair, or correction. This disclaimer of warranty constitutes an   *
-*  essential part of this License. No use of any Covered Software is   *
-*  authorized under this License except under this disclaimer.         *
-*                                                                      *
-************************************************************************
-
-************************************************************************
-*                                                                      *
-*  7. Limitation of Liability                                          *
-*  --------------------------                                          *
-*                                                                      *
-*  Under no circumstances and under no legal theory, whether tort      *
-*  (including negligence), contract, or otherwise, shall any           *
-*  Contributor, or anyone who distributes Covered Software as          *
-*  permitted above, be liable to You for any direct, indirect,         *
-*  special, incidental, or consequential damages of any character      *
-*  including, without limitation, damages for lost profits, loss of    *
-*  goodwill, work stoppage, computer failure or malfunction, or any    *
-*  and all other commercial damages or losses, even if such party      *
-*  shall have been informed of the possibility of such damages. This   *
-*  limitation of liability shall not apply to liability for death or   *
-*  personal injury resulting from such party's negligence to the       *
-*  extent applicable law prohibits such limitation. Some               *
-*  jurisdictions do not allow the exclusion or limitation of           *
-*  incidental or consequential damages, so this exclusion and          *
-*  limitation may not apply to You.                                    *
-*                                                                      *
-************************************************************************
-
-8. Litigation
--------------
-
-Any litigation relating to this License may be brought only in the
-courts of a jurisdiction where the defendant maintains its principal
-place of business and such litigation shall be governed by laws of that
-jurisdiction, without reference to its conflict-of-law provisions.
-Nothing in this Section shall prevent a party's ability to bring
-cross-claims or counter-claims.
-
-9. Miscellaneous
-----------------
-
-This License represents the complete agreement concerning the subject
-matter hereof. If any provision of this License is held to be
-unenforceable, such provision shall be reformed only to the extent
-necessary to make it enforceable. Any law or regulation which provides
-that the language of a contract shall be construed against the drafter
-shall not be used to construe this License against a Contributor.
-
-10. Versions of the License
----------------------------
-
-10.1. New Versions
-
-Mozilla Foundation is the license steward. Except as provided in Section
-10.3, no one other than the license steward has the right to modify or
-publish new versions of this License. Each version will be given a
-distinguishing version number.
-
-10.2. Effect of New Versions
-
-You may distribute the Covered Software under the terms of the version
-of the License under which You originally received the Covered Software,
-or under the terms of any subsequent version published by the license
-steward.
-
-10.3. Modified Versions
-
-If you create software not governed by this License, and you want to
-create a new license for such software, you may create and use a
-modified version of this License if you rename the license and remove
-any references to the name of the license steward (except to note that
-such modified license differs from this License).
-
-10.4. Distributing Source Code Form that is Incompatible With Secondary
-Licenses
-
-If You choose to distribute Source Code Form that is Incompatible With
-Secondary Licenses under the terms of this version of the License, the
-notice described in Exhibit B of this License must be attached.
-
-Exhibit A - Source Code Form License Notice
--------------------------------------------
-
-  This Source Code Form is subject to the terms of the Mozilla Public
-  License, v. 2.0. If a copy of the MPL was not distributed with this
-  file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-If it is not possible or desirable to put the notice in a particular
-file, then You may include the notice in a location (such as a LICENSE
-file in a relevant directory) where a recipient would be likely to look
-for such a notice.
-
-You may add additional accurate notices of copyright ownership.
-
-Exhibit B - "Incompatible With Secondary Licenses" Notice
----------------------------------------------------------
-
-  This Source Code Form is "Incompatible With Secondary Licenses", as
-  defined by the Mozilla Public License, v. 2.0.
-
-
-
-
-**********************
+----------------------
 Microsoft .NET Library
-**********************
-License Text:
+----------------------
 
 MICROSOFT SOFTWARE LICENSE TERMS
 
 
 MICROSOFT .NET LIBRARY
 
-These license terms are an agreement between Microsoft Corporation (or based on where you live, one of its affiliates) and you. Please read them. They apply to the software named above, which includes the media on which you received it, if any. The terms also apply to any Microsoft
+These license terms are an agreement between Microsoft Corporation (or based on where you
+live, one of its affiliates) and you. Please read them. They apply to the software named
+above, which includes the media on which you received it, if any. The terms also apply to
+any Microsoft
 
 ·         updates,
 
@@ -1529,56 +1473,73 @@ These license terms are an agreement between Microsoft Corporation (or based on 
 
 for this software, unless other terms accompany those items. If so, those terms apply.
 
-BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS. IF YOU DO NOT ACCEPT THEM, DO NOT USE THE SOFTWARE.
+BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS. IF YOU DO NOT ACCEPT THEM, DO NOT USE THE
+SOFTWARE.
 
 
 IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE PERPETUAL RIGHTS BELOW.
 
 1.    INSTALLATION AND USE RIGHTS.
 
-a.    Installation and Use. You may install and use any number of copies of the software to design, develop and test your programs.
+a.    Installation and Use. You may install and use any number of copies of the software
+to design, develop and test your programs.
 
-b.    Third Party Programs. The software may include third party programs that Microsoft, not the third party, licenses to you under this agreement. Notices, if any, for the third party program are included for your information only.
+b.    Third Party Programs. The software may include third party programs that Microsoft,
+not the third party, licenses to you under this agreement. Notices, if any, for the third
+party program are included for your information only.
 
 2.    ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.
 
-a.    DISTRIBUTABLE CODE.  The software is comprised of Distributable Code. “Distributable Code” is code that you are permitted to distribute in programs you develop if you comply with the terms below.
+a.    DISTRIBUTABLE CODE.  The software is comprised of Distributable Code. “Distributable
+Code” is code that you are permitted to distribute in programs you develop if you comply
+with the terms below.
 
 i.      Right to Use and Distribute.
 
 ·         You may copy and distribute the object code form of the software.
 
-·         Third Party Distribution. You may permit distributors of your programs to copy and distribute the Distributable Code as part of those programs.
+·         Third Party Distribution. You may permit distributors of your programs to copy
+and distribute the Distributable Code as part of those programs.
 
 ii.    Distribution Requirements. For any Distributable Code you distribute, you must
 
 ·         add significant primary functionality to it in your programs;
 
-·         require distributors and external end users to agree to terms that protect it at least as much as this agreement;
+·         require distributors and external end users to agree to terms that protect it at
+least as much as this agreement;
 
 ·         display your valid copyright notice on your programs; and
 
-·         indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your programs.
+·         indemnify, defend, and hold harmless Microsoft from any claims, including
+attorneys’ fees, related to the distribution or use of your programs.
 
 iii.   Distribution Restrictions. You may not
 
 ·         alter any copyright, trademark or patent notice in the Distributable Code;
 
-·         use Microsoft’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Microsoft;
+·         use Microsoft’s trademarks in your programs’ names or in a way that suggests
+your programs come from or are endorsed by Microsoft;
 
 ·         include Distributable Code in malicious, deceptive or unlawful programs; or
 
-·         modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License. An Excluded License is one that requires, as a condition of use, modification or distribution, that
+·         modify or distribute the source code of any Distributable Code so that any part
+of it becomes subject to an Excluded License. An Excluded License is one that requires, as
+a condition of use, modification or distribution, that
 
 ·         the code be disclosed or distributed in source code form; or
 
 ·         others have the right to modify it.
 
-3.    SCOPE OF LICENSE. The software is licensed, not sold. This agreement only gives you some rights to use the software. Microsoft reserves all other rights. Unless applicable law gives you more rights despite this limitation, you may use the software only as expressly permitted in this agreement. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not
+3.    SCOPE OF LICENSE. The software is licensed, not sold. This agreement only gives you
+some rights to use the software. Microsoft reserves all other rights. Unless applicable
+law gives you more rights despite this limitation, you may use the software only as
+expressly permitted in this agreement. In doing so, you must comply with any technical
+limitations in the software that only allow you to use it in certain ways. You may not
 
 ·         work around any technical limitations in the software;
 
-·         reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;
+·         reverse engineer, decompile or disassemble the software, except and only to the
+extent that applicable law expressly permits, despite this limitation;
 
 ·         publish the software for others to copy;
 
@@ -1588,458 +1549,389 @@ iii.   Distribution Restrictions. You may not
 
 ·         use the software for commercial software hosting services.
 
-4.    BACKUP COPY. You may make one backup copy of the software. You may use it only to reinstall the software.
+4.    BACKUP COPY. You may make one backup copy of the software. You may use it only to
+reinstall the software.
 
-5.    DOCUMENTATION. Any person that has valid access to your computer or internal network may copy and use the documentation for your internal, reference purposes.
+5.    DOCUMENTATION. Any person that has valid access to your computer or internal network
+may copy and use the documentation for your internal, reference purposes.
 
-6.    EXPORT RESTRICTIONS. The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see www.microsoft.com/exporting.
+6.    EXPORT RESTRICTIONS. The software is subject to United States export laws and
+regulations. You must comply with all domestic and international export laws and
+regulations that apply to the software. These laws include restrictions on destinations,
+end users and end use. For additional information, see www.microsoft.com/exporting.
 
-7.    SUPPORT SERVICES. Because this software is “as is,” we may not provide support services for it.
+7.    SUPPORT SERVICES. Because this software is “as is,” we may not provide support
+services for it.
 
-8.    ENTIRE AGREEMENT. This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.
+8.    ENTIRE AGREEMENT. This agreement, and the terms for supplements, updates, Internet-
+based services and support services that you use, are the entire agreement for the
+software and support services.
 
 9.    APPLICABLE LAW.
 
-a.    United States. If you acquired the software in the United States, Washington state law governs the interpretation of this agreement and applies to claims for breach of it, regardless of conflict of laws principles. The laws of the state where you live govern all other claims, including claims under state consumer protection laws, unfair competition laws, and in tort.
+a.    United States. If you acquired the software in the United States, Washington state
+law governs the interpretation of this agreement and applies to claims for breach of it,
+regardless of conflict of laws principles. The laws of the state where you live govern all
+other claims, including claims under state consumer protection laws, unfair competition
+laws, and in tort.
 
-b.    Outside the United States. If you acquired the software in any other country, the laws of that country apply.
+b.    Outside the United States. If you acquired the software in any other country, the
+laws of that country apply.
 
-10.  LEGAL EFFECT. This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.
+10.  LEGAL EFFECT. This agreement describes certain legal rights. You may have other
+rights under the laws of your country. You may also have rights with respect to the party
+from whom you acquired the software. This agreement does not change your rights under the
+laws of your country if the laws of your country do not permit it to do so.
 
-11.  DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+11.  DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING
+IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE
+ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS
+AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES
+THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-
+INFRINGEMENT.
 
-FOR AUSTRALIA – YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.
+FOR AUSTRALIA – YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND
+NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.
 
-12.  LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.
+12.  LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT
+AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER
+DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.
 
 This limitation applies to
 
-·         anything related to the software, services, content (including code) on third party Internet sites, or third party programs; and
+·         anything related to the software, services, content (including code) on third
+party Internet sites, or third party programs; and
 
-·         claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.
+·         claims for breach of contract, breach of warranty, guarantee or condition,
+strict liability, negligence, or other tort to the extent permitted by applicable law.
 
-It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+It also applies even if Microsoft knew or should have known about the possibility of the
+damages. The above limitation or exclusion may not apply to you because your country may
+not allow the exclusion or limitation of incidental, consequential or other damages.
 
-Please note: As this software is distributed in Quebec, Canada, some of the clauses in this agreement are provided below in French.
+Please note: As this software is distributed in Quebec, Canada, some of the clauses in
+this agreement are provided below in French.
 
-Remarque : Ce logiciel étant distribué au Québec, Canada, certaines des clauses dans ce contrat sont fournies ci-dessous en français.
+Remarque : Ce logiciel étant distribué au Québec, Canada, certaines des clauses dans ce
+contrat sont fournies ci-dessous en français.
 
-EXONÉRATION DE GARANTIE. Le logiciel visé par une licence est offert « tel quel ». Toute utilisation de ce logiciel est à votre seule risque et péril. Microsoft n’accorde aucune autre garantie expresse. Vous pouvez bénéficier de droits additionnels en vertu du droit local sur la protection des consommateurs, que ce contrat ne peut modifier. La ou elles sont permises par le droit locale, les garanties implicites de qualité marchande, d’adéquation à un usage particulier et d’absence de contrefaçon sont exclues.
+EXONÉRATION DE GARANTIE. Le logiciel visé par une licence est offert « tel quel ». Toute
+utilisation de ce logiciel est à votre seule risque et péril. Microsoft n’accorde aucune
+autre garantie expresse. Vous pouvez bénéficier de droits additionnels en vertu du droit
+local sur la protection des consommateurs, que ce contrat ne peut modifier. La ou elles
+sont permises par le droit locale, les garanties implicites de qualité marchande,
+d’adéquation à un usage particulier et d’absence de contrefaçon sont exclues.
 
-LIMITATION DES DOMMAGES-INTÉRÊTS ET EXCLUSION DE RESPONSABILITÉ POUR LES DOMMAGES. Vous pouvez obtenir de Microsoft et de ses fournisseurs une indemnisation en cas de dommages directs uniquement à hauteur de 5,00 $ US. Vous ne pouvez prétendre à aucune indemnisation pour les autres dommages, y compris les dommages spéciaux, indirects ou accessoires et pertes de bénéfices.
+LIMITATION DES DOMMAGES-INTÉRÊTS ET EXCLUSION DE RESPONSABILITÉ POUR LES DOMMAGES. Vous
+pouvez obtenir de Microsoft et de ses fournisseurs une indemnisation en cas de dommages
+directs uniquement à hauteur de 5,00 $ US. Vous ne pouvez prétendre à aucune indemnisation
+pour les autres dommages, y compris les dommages spéciaux, indirects ou accessoires et
+pertes de bénéfices.
 
 Cette limitation concerne :
 
-·         tout ce qui est relié au logiciel, aux services ou au contenu (y compris le code) figurant sur des sites Internet tiers ou dans des programmes tiers ; et
+·         tout ce qui est relié au logiciel, aux services ou au contenu (y compris le
+code) figurant sur des sites Internet tiers ou dans des programmes tiers ; et
 
-·         les réclamations au titre de violation de contrat ou de garantie, ou au titre de responsabilité stricte, de négligence ou d’une autre faute dans la limite autorisée par la loi en vigueur.
+·         les réclamations au titre de violation de contrat ou de garantie, ou au titre de
+responsabilité stricte, de négligence ou d’une autre faute dans la limite autorisée par la
+loi en vigueur.
 
-Elle s’applique également, même si Microsoft connaissait ou devrait connaître l’éventualité d’un tel dommage. Si votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit, il se peut que la limitation ou l’exclusion ci-dessus ne s’appliquera pas à votre égard.
+Elle s’applique également, même si Microsoft connaissait ou devrait connaître
+l’éventualité d’un tel dommage. Si votre pays n’autorise pas l’exclusion ou la limitation
+de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce
+soit, il se peut que la limitation ou l’exclusion ci-dessus ne s’appliquera pas à votre
+égard.
 
-EFFET JURIDIQUE. Le présent contrat décrit certains droits juridiques. Vous pourriez avoir d’autres droits prévus par les lois de votre pays. Le présent contrat ne modifie pas les droits que vous confèrent les lois de votre pays si celles-ci ne le permettent pas.
+EFFET JURIDIQUE. Le présent contrat décrit certains droits juridiques. Vous pourriez avoir
+d’autres droits prévus par les lois de votre pays. Le présent contrat ne modifie pas les
+droits que vous confèrent les lois de votre pays si celles-ci ne le permettent pas.
 
 
 
 
-*****
+-----------
+Proprietary
+-----------
+
+
+-----
 BSD 3
-*****
-License Text:
-Copyright (c) {{YEAR}}, {{OWNER}}
-All rights reserved.
+-----
+Copyright (c) <year> <owner>.
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+Redistribution and use in source and binary forms, with or without modification, are
+permitted provided that the following conditions are met:
 
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+1. Redistributions of source code must retain the above copyright notice, this list of
+conditions and the following disclaimer.
 
-Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of
+conditions and the following disclaimer in the documentation and/or other materials
+provided with the distribution.
 
-Neither the name of {{the ORGANIZATION nor the names of its contributors}} may be used to endorse or promote products derived from this software without specific prior written permission.
+3. Neither the name of the copyright holder nor the names of its contributors may be used
+to endorse or promote products derived from this software without specific prior written
+permission.
 
-THIS SOFTWARE IS PROVIDED BY {{THE COPYRIGHT HOLDERS AND CONTRIBUTORS}} "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL {{THE COPYRIGHT HOLDER OR CONTRIBUTORS}} BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-
-
-**********
+----------
 Apache 2.0
-**********
-License Text:
+----------
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
 
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+1. Definitions.
 
-   1. Definitions.
+"License" shall mean the terms and conditions for use, reproduction, and distribution as
+defined by Sections 1 through 9 of this document.
 
- "License" shall mean the terms and conditions for use, reproduction,
- and distribution as defined by Sections 1 through 9 of this document.
+"Licensor" shall mean the copyright owner or entity authorized by the copyright owner that
+is granting the License.
 
- "Licensor" shall mean the copyright owner or entity authorized by
- the copyright owner that is granting the License.
+"Legal Entity" shall mean the union of the acting entity and all other entities that
+control, are controlled by, or are under common control with that entity. For the purposes
+of this definition, "control" means (i) the power, direct or indirect, to cause the
+direction or management of such entity, whether by contract or otherwise, or (ii)
+ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial
+ownership of such entity.
 
- "Legal Entity" shall mean the union of the acting entity and all
- other entities that control, are controlled by, or are under common
- control with that entity. For the purposes of this definition,
- "control" means (i) the power, direct or indirect, to cause the
- direction or management of such entity, whether by contract or
- otherwise, or (ii) ownership of fifty percent (50%) or more of the
- outstanding shares, or (iii) beneficial ownership of such entity.
+"You" (or "Your") shall mean an individual or Legal Entity exercising permissions granted
+by this License.
 
- "You" (or "Your") shall mean an individual or Legal Entity
- exercising permissions granted by this License.
+"Source" form shall mean the preferred form for making modifications, including but not
+limited to software source code, documentation source, and configuration files.
 
- "Source" form shall mean the preferred form for making modifications,
- including but not limited to software source code, documentation
- source, and configuration files.
+"Object" form shall mean any form resulting from mechanical transformation or translation
+of a Source form, including but not limited to compiled object code, generated
+documentation, and conversions to other media types.
 
- "Object" form shall mean any form resulting from mechanical
- transformation or translation of a Source form, including but
- not limited to compiled object code, generated documentation,
- and conversions to other media types.
+"Work" shall mean the work of authorship, whether in Source or Object form, made available
+under the License, as indicated by a copyright notice that is included in or attached to
+the work (an example is provided in the Appendix below).
 
- "Work" shall mean the work of authorship, whether in Source or
- Object form, made available under the License, as indicated by a
- copyright notice that is included in or attached to the work
- (an example is provided in the Appendix below).
+"Derivative Works" shall mean any work, whether in Source or Object form, that is based on
+(or derived from) the Work and for which the editorial revisions, annotations,
+elaborations, or other modifications represent, as a whole, an original work of
+authorship. For the purposes of this License, Derivative Works shall not include works
+that remain separable from, or merely link (or bind by name) to the interfaces of, the
+Work and Derivative Works thereof.
 
- "Derivative Works" shall mean any work, whether in Source or Object
- form, that is based on (or derived from) the Work and for which the
- editorial revisions, annotations, elaborations, or other modifications
- represent, as a whole, an original work of authorship. For the purposes
- of this License, Derivative Works shall not include works that remain
- separable from, or merely link (or bind by name) to the interfaces of,
- the Work and Derivative Works thereof.
+"Contribution" shall mean any work of authorship, including the original version of the
+Work and any modifications or additions to that Work or Derivative Works thereof, that is
+intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by
+an individual or Legal Entity authorized to submit on behalf of the copyright owner. For
+the purposes of this definition, "submitted" means any form of electronic, verbal, or
+written communication sent to the Licensor or its representatives, including but not
+limited to communication on electronic mailing lists, source code control systems, and
+issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose
+of discussing and improving the Work, but excluding communication that is conspicuously
+marked or otherwise designated in writing by the copyright owner as "Not a Contribution."
 
- "Contribution" shall mean any work of authorship, including
- the original version of the Work and any modifications or additions
- to that Work or Derivative Works thereof, that is intentionally
- submitted to Licensor for inclusion in the Work by the copyright owner
- or by an individual or Legal Entity authorized to submit on behalf of
- the copyright owner. For the purposes of this definition, "submitted"
- means any form of electronic, verbal, or written communication sent
- to the Licensor or its representatives, including but not limited to
- communication on electronic mailing lists, source code control systems,
- and issue tracking systems that are managed by, or on behalf of, the
- Licensor for the purpose of discussing and improving the Work, but
- excluding communication that is conspicuously marked or otherwise
- designated in writing by the copyright owner as "Not a Contribution."
+"Contributor" shall mean Licensor and any individual or Legal Entity on behalf of whom a
+Contribution has been received by Licensor and subsequently incorporated within the Work.
 
- "Contributor" shall mean Licensor and any individual or Legal Entity
- on behalf of whom a Contribution has been received by Licensor and
- subsequently incorporated within the Work.
+2. Grant of Copyright License. Subject to the terms and conditions of this License, each
+Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge,
+royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of,
+publicly display, publicly perform, sublicense, and distribute the Work and such
+Derivative Works in Source or Object form.
 
- 2. Grant of Copyright License. Subject to the terms and conditions of
- this License, each Contributor hereby grants to You a perpetual,
- worldwide, non-exclusive, no-charge, royalty-free, irrevocable
- copyright license to reproduce, prepare Derivative Works of,
- publicly display, publicly perform, sublicense, and distribute the
- Work and such Derivative Works in Source or Object form.
+3. Grant of Patent License. Subject to the terms and conditions of this License, each
+Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge,
+royalty-free, irrevocable (except as stated in this section) patent license to make, have
+made, use, offer to sell, sell, import, and otherwise transfer the Work, where such
+license applies only to those patent claims licensable by such Contributor that are
+necessarily infringed by their Contribution(s) alone or by combination of their
+Contribution(s) with the Work to which such Contribution(s) was submitted. If You
+institute patent litigation against any entity (including a cross-claim or counterclaim in
+a lawsuit) alleging that the Work or a Contribution incorporated within the Work
+constitutes direct or contributory patent infringement, then any patent licenses granted
+to You under this License for that Work shall terminate as of the date such litigation is
+filed.
 
- 3. Grant of Patent License. Subject to the terms and conditions of
- this License, each Contributor hereby grants to You a perpetual,
- worldwide, non-exclusive, no-charge, royalty-free, irrevocable
- (except as stated in this section) patent license to make, have made,
- use, offer to sell, sell, import, and otherwise transfer the Work,
- where such license applies only to those patent claims licensable
- by such Contributor that are necessarily infringed by their
- Contribution(s) alone or by combination of their Contribution(s)
- with the Work to which such Contribution(s) was submitted. If You
- institute patent litigation against any entity (including a
- cross-claim or counterclaim in a lawsuit) alleging that the Work
- or a Contribution incorporated within the Work constitutes direct
- or contributory patent infringement, then any patent licenses
- granted to You under this License for that Work shall terminate
- as of the date such litigation is filed.
+4. Redistribution. You may reproduce and distribute copies of the Work or Derivative Works
+thereof in any medium, with or without modifications, and in Source or Object form,
+provided that You meet the following conditions:
 
- 4. Redistribution. You may reproduce and distribute copies of the
- Work or Derivative Works thereof in any medium, with or without
- modifications, and in Source or Object form, provided that You
- meet the following conditions:
+     (a) You must give any other recipients of the Work or Derivative Works a copy of this
+License; and
 
- (a) You must give any other recipients of the Work or
- Derivative Works a copy of this License; and
+     (b) You must cause any modified files to carry prominent notices stating that You
+changed the files; and
 
- (b) You must cause any modified files to carry prominent notices
- stating that You changed the files; and
+     (c) You must retain, in the Source form of any Derivative Works that You distribute,
+all copyright, patent, trademark, and attribution notices from the Source form of the
+Work, excluding those notices that do not pertain to any part of the Derivative Works; and
 
- (c) You must retain, in the Source form of any Derivative Works
- that You distribute, all copyright, patent, trademark, and
- attribution notices from the Source form of the Work,
- excluding those notices that do not pertain to any part of
- the Derivative Works; and
+     (d) If the Work includes a "NOTICE" text file as part of its distribution, then any
+Derivative Works that You distribute must include a readable copy of the attribution
+notices contained within such NOTICE file, excluding those notices that do not pertain to
+any part of the Derivative Works, in at least one of the following places: within a NOTICE
+text file distributed as part of the Derivative Works; within the Source form or
+documentation, if provided along with the Derivative Works; or, within a display generated
+by the Derivative Works, if and wherever such third-party notices normally appear. The
+contents of the NOTICE file are for informational purposes only and do not modify the
+License. You may add Your own attribution notices within Derivative Works that You
+distribute, alongside or as an addendum to the NOTICE text from the Work, provided that
+such additional attribution notices cannot be construed as modifying the License.
 
- (d) If the Work includes a "NOTICE" text file as part of its
- distribution, then any Derivative Works that You distribute must
- include a readable copy of the attribution notices contained
- within such NOTICE file, excluding those notices that do not
- pertain to any part of the Derivative Works, in at least one
- of the following places: within a NOTICE text file distributed
- as part of the Derivative Works; within the Source form or
- documentation, if provided along with the Derivative Works; or,
- within a display generated by the Derivative Works, if and
- wherever such third-party notices normally appear. The contents
- of the NOTICE file are for informational purposes only and
- do not modify the License. You may add Your own attribution
- notices within Derivative Works that You distribute, alongside
-    or as an addendum to the NOTICE text from the Work, provided
- that such additional attribution notices cannot be construed
- as modifying the License.
+     You may add Your own copyright statement to Your modifications and may provide
+additional or different license terms and conditions for use, reproduction, or
+distribution of Your modifications, or for any such Derivative Works as a whole, provided
+Your use, reproduction, and distribution of the Work otherwise complies with the
+conditions stated in this License.
 
- You may add Your own copyright statement to Your modifications and
- may provide additional or different license terms and conditions
- for use, reproduction, or distribution of Your modifications, or
- for any such Derivative Works as a whole, provided Your use,
- reproduction, and distribution of the Work otherwise complies with
- the conditions stated in this License.
+5. Submission of Contributions. Unless You explicitly state otherwise, any Contribution
+intentionally submitted for inclusion in the Work by You to the Licensor shall be under
+the terms and conditions of this License, without any additional terms or conditions.
+Notwithstanding the above, nothing herein shall supersede or modify the terms of any
+separate license agreement you may have executed with Licensor regarding such
+Contributions.
 
- 5. Submission of Contributions. Unless You explicitly state otherwise,
- any Contribution intentionally submitted for inclusion in the Work
- by You to the Licensor shall be under the terms and conditions of
- this License, without any additional terms or conditions.
- Notwithstanding the above, nothing herein shall supersede or modify
- the terms of any separate license agreement you may have executed
- with Licensor regarding such Contributions.
+6. Trademarks. This License does not grant permission to use the trade names, trademarks,
+service marks, or product names of the Licensor, except as required for reasonable and
+customary use in describing the origin of the Work and reproducing the content of the
+NOTICE file.
 
- 6. Trademarks. This License does not grant permission to use the trade
- names, trademarks, service marks, or product names of the Licensor,
- except as required for reasonable and customary use in describing the
- origin of the Work and reproducing the content of the NOTICE file.
+7. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing,
+Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS"
+BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including,
+without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT,
+MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for
+determining the appropriateness of using or redistributing the Work and assume any risks
+associated with Your exercise of permissions under this License.
 
- 7. Disclaimer of Warranty. Unless required by applicable law or
- agreed to in writing, Licensor provides the Work (and each
- Contributor provides its Contributions) on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
- implied, including, without limitation, any warranties or conditions
- of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
- PARTICULAR PURPOSE. You are solely responsible for determining the
- appropriateness of using or redistributing the Work and assume any
- risks associated with Your exercise of permissions under this License.
+8. Limitation of Liability. In no event and under no legal theory, whether in tort
+(including negligence), contract, or otherwise, unless required by applicable law (such as
+deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be
+liable to You for damages, including any direct, indirect, special, incidental, or
+consequential damages of any character arising as a result of this License or out of the
+use or inability to use the Work (including but not limited to damages for loss of
+goodwill, work stoppage, computer failure or malfunction, or any and all other commercial
+damages or losses), even if such Contributor has been advised of the possibility of such
+damages.
 
- 8. Limitation of Liability. In no event and under no legal theory,
- whether in tort (including negligence), contract, or otherwise,
- unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
- liable to You for damages, including any direct, indirect, special,
- incidental, or consequential damages of any character arising as a
- result of this License or out of the use or inability to use the
- Work (including but not limited to damages for loss of goodwill,
- work stoppage, computer failure or malfunction, or any and all
- other commercial damages or losses), even if such Contributor
- has been advised of the possibility of such damages.
+9. Accepting Warranty or Additional Liability. While redistributing the Work or Derivative
+Works thereof, You may choose to offer, and charge a fee for, acceptance of support,
+warranty, indemnity, or other liability obligations and/or rights consistent with this
+License. However, in accepting such obligations, You may act only on Your own behalf and
+on Your sole responsibility, not on behalf of any other Contributor, and only if You agree
+to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or
+claims asserted against, such Contributor by reason of your accepting any such warranty or
+additional liability.
 
- 9. Accepting Warranty or Additional Liability. While redistributing
- the Work or Derivative Works thereof, You may choose to offer,
- and charge a fee for, acceptance of support, warranty, indemnity,
- or other liability obligations and/or rights consistent with this
- License. However, in accepting such obligations, You may act only
- on Your own behalf and on Your sole responsibility, not on behalf
- of any other Contributor, and only if You agree to indemnify,
- defend, and hold each Contributor harmless for any liability
- incurred by, or claims asserted against, such Contributor by reason
- of your accepting any such warranty or additional liability.
+END OF TERMS AND CONDITIONS
 
- END OF TERMS AND CONDITIONS
+APPENDIX: How to apply the Apache License to your work.
 
-   APPENDIX: How to apply the Apache License to your work.
+To apply the Apache License to your work, attach the following boilerplate notice, with
+the fields enclosed by brackets "[]" replaced with your own identifying information.
+(Don't include the brackets!)  The text should be enclosed in the appropriate comment
+syntax for the file format. We also recommend that a file or class name and description of
+purpose be included on the same "printed page" as the copyright notice for easier
+identification within third-party archives.
 
- To apply the Apache License to your work, attach the following
- boilerplate notice, with the fields enclosed by brackets "[]"
- replaced with your own identifying information. (Don't include
- the brackets!)  The text should be enclosed in the appropriate
- comment syntax for the file format. We also recommend that a
- file or class name and description of purpose be included on the
- same "printed page" as the copyright notice for easier
- identification within third-party archives.
+Copyright [yyyy] [name of copyright owner]
 
- Copyright [yyyy] [name of copyright owner]
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
 
- http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 
-
-
-***
+---
 MIT
-***
-License Text:
-The MIT License (MIT)
+---
+MIT License
 
-Copyright (c) .NET Foundation and Contributors
+Copyright (c) <year> <copyright holders>
 
-All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this
+software and associated documentation files (the "Software"), to deal in the Software
+without restriction, including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons
+to whom the Software is furnished to do so, subject to the following conditions:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
 
 
-
-
-****************
+----------------
 Microsoft Public
-****************
-License Text:
+----------------
 Microsoft Public License (Ms-PL)
 
-
-This license governs use of the accompanying software. If you use the software, you accept this license. If you do not accept the license, do not use the software.
+This license governs use of the accompanying software. If you use the software, you accept
+this license. If you do not accept the license, do not use the software.
 
 1.  Definitions
-The terms "reproduce," "reproduction," "derivative works," and "distribution" have the same meaning here as under U.S. copyright law. A "contribution" is the original software, or any additions or changes to the software. A "contributor" is any person that distributes its contribution under this license. "Licensed patents" are a contributor's patent claims that read directly on its contribution.
+The terms "reproduce," "reproduction," "derivative works," and "distribution" have the
+same meaning here as under U.S. copyright law. A "contribution" is the original software,
+or any additions or changes to the software. A "contributor" is any person that
+distributes its contribution under this license. "Licensed patents" are a contributor's
+patent claims that read directly on its contribution.
 
 2.  Grant of Rights
-(A) Copyright Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free copyright license to reproduce its contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create.
-(B) Patent Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free license under its licensed patents to make, have made, use, sell, offer for sale, import, and/or otherwise dispose of its contribution in the software or derivative works of the contribution in the software.
+     (A) Copyright Grant- Subject to the terms of this license, including the license
+conditions and limitations in section 3, each contributor grants you a non-exclusive,
+worldwide, royalty-free copyright license to reproduce its contribution, prepare
+derivative works of its contribution, and distribute its contribution or any derivative
+works that you create.
+
+     (B) Patent Grant- Subject to the terms of this license, including the license
+conditions and limitations in section 3, each contributor grants you a non-exclusive,
+worldwide, royalty-free license under its licensed patents to make, have made, use, sell,
+offer for sale, import, and/or otherwise dispose of its contribution in the software or
+derivative works of the contribution in the software.
 
 3.  Conditions and Limitations
-(A) No Trademark License- This license does not grant you rights to use any contributors' name, logo, or trademarks.
-(B) If you bring a patent claim against any contributor over patents that you claim are infringed by the software, your patent license from such contributor to the software ends automatically.
-(C) If you distribute any portion of the software, you must retain all copyright, patent, trademark, and attribution notices that are present in the software.
-(D) If you distribute any portion of the software in source code form, you may do so only under this license by including a complete copy of this license with your distribution. If you distribute any portion of the software in compiled or object code form, you may only do so under a license that complies with this license.
-(E) The software is licensed "as-is." You bear the risk of using it. The contributors give no express warranties, guarantees, or conditions. You may have additional consumer rights under your local laws which this license cannot change. To the extent permitted under your local laws, the contributors exclude the implied warranties of merchantability, fitness for a particular purpose and non-infringement.
+     (A) No Trademark License- This license does not grant you rights to use any
+contributors' name, logo, or trademarks.
+
+     (B) If you bring a patent claim against any contributor over patents that you claim
+are infringed by the software, your patent license from such contributor to the software
+ends automatically.
+
+     (C) If you distribute any portion of the software, you must retain all copyright,
+patent, trademark, and attribution notices that are present in the software.
+
+     (D) If you distribute any portion of the software in source code form, you may do so
+only under this license by including a complete copy of this license with your
+distribution. If you distribute any portion of the software in compiled or object code
+form, you may only do so under a license that complies with this license.
+
+     (E) The software is licensed "as-is." You bear the risk of using it. The contributors
+give no express warranties, guarantees, or conditions. You may have additional consumer
+rights under your local laws which this license cannot change. To the extent permitted
+under your local laws, the contributors exclude the implied warranties of merchantability,
+fitness for a particular purpose and non-infringement.
 
 
-****************
-OpenSSL License
-****************
-
-/* ====================================================================
- * Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- *
- * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- *
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in
- *    the documentation and/or other materials provided with the
- *    distribution.
- *
- * 3. All advertising materials mentioning features or use of this
- *    software must display the following acknowledgment:
- *    "This product includes software developed by the OpenSSL Project
- *    for use in the OpenSSL Toolkit. (http://www.openssl.org/)"
- *
- * 4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to
- *    endorse or promote products derived from this software without
- *    prior written permission. For written permission, please contact
- *    openssl-core@openssl.org.
- *
- * 5. Products derived from this software may not be called "OpenSSL"
- *    nor may "OpenSSL" appear in their names without prior written
- *    permission of the OpenSSL Project.
- *
- * 6. Redistributions of any form whatsoever must retain the following
- *    acknowledgment:
- *    "This product includes software developed by the OpenSSL Project
- *    for use in the OpenSSL Toolkit (http://www.openssl.org/)"
- *
- * THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY
- * EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
- * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE OpenSSL PROJECT OR
- * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
- * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
- * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
- * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE.
- * ====================================================================
- *
- * This product includes cryptographic software written by Eric Young
- * (eay@cryptsoft.com).  This product includes software written by Tim
- * Hudson (tjh@cryptsoft.com).
- *
- */
-****************
-Original SSLeay License
-****************
-
-/* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
- * All rights reserved.
- *
- * This package is an SSL implementation written
- * by Eric Young (eay@cryptsoft.com).
- * The implementation was written so as to conform with Netscapes SSL.
- *
- * This library is free for commercial and non-commercial use as long as
- * the following conditions are aheared to.  The following conditions
- * apply to all code found in this distribution, be it the RC4, RSA,
- * lhash, DES, etc., code; not just the SSL code.  The SSL documentation
- * included with this distribution is covered by the same copyright terms
- * except that the holder is Tim Hudson (tjh@cryptsoft.com).
- *
- * Copyright remains Eric Young's, and as such any Copyright notices in
- * the code are not to be removed.
- * If this package is used in a product, Eric Young should be given attribution
- * as the author of the parts of the library used.
- * This can be in the form of a textual message at program startup or
- * in documentation (online or textual) provided with the package.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- * 1. Redistributions of source code must retain the copyright
- *    notice, this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *    "This product includes cryptographic software written by
- *     Eric Young (eay@cryptsoft.com)"
- *    The word 'cryptographic' can be left out if the rouines from the library
- *    being used are not cryptographic related :-).
- * 4. If you include any Windows specific code (or a derivative thereof) from
- *    the apps directory (application code) you must include an acknowledgement:
- *    "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"
- *
- * THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
- * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- *
- * The licence and distribution terms for any publically available version or
- * derivative of this code cannot be changed.  i.e. this code cannot simply be
- * copied and put under another distribution licence
- * [including the GNU Public Licence.]
- */

@@ -73,7 +73,13 @@ namespace CodeLensOopProviderVsix
             // Do any initialization that requires the UI thread after switching to the UI thread.
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
 
+            if (cancellationToken.IsCancellationRequested)
+                return;
+
             this.pkgCommandTarget = await this.GetServiceAsync(typeof(IOleCommandTarget)) as IOleCommandTarget;
+
+            if (cancellationToken.IsCancellationRequested)
+                return;
         }
 
         #endregion
@@ -192,13 +198,19 @@ namespace CodeLensOopProviderVsix
         private static void ShowHistory(IServiceProvider serviceProvider)
         {
             P4ScmProvider scm = P4VsProvider.CurrentScm;
+            if (scm != null)
+            {
             scm.LaunchHistoryWindow();
+        }
         }
 
         private static void TimeLapseView(string filePath, IServiceProvider serviceProvider)
         {
             P4ScmProvider scm = P4VsProvider.CurrentScm;
+            if (scm != null)
+            {
             scm.LaunchTimeLapseView(filePath);
+        }
         }
 
         private static bool IsQueryParameterList(IntPtr pvaIn, IntPtr pvaOut, uint nCmdexecopt)

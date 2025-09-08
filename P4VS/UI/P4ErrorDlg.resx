@@ -320,7 +320,7 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Helix Core Command Error</value>
+    <value>P4 Command Error</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>P4ErrorDlg</value>

@@ -81,7 +81,7 @@
             this.launchingGridLbl.RowsSpanned = 0;
             this.launchingGridLbl.Size = new System.Drawing.Size(183, 13);
             this.launchingGridLbl.TabIndex = 5;
-            this.launchingGridLbl.Text = "Launching Helix MFA Authenticator...";
+            this.launchingGridLbl.Text = "Launching P4 MFA Authenticator...";
             this.launchingGridLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.launchingGridLbl.YOffset = 0;
             // 

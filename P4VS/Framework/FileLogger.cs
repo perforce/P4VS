@@ -16,6 +16,15 @@ namespace Perforce.P4VS
 
 		static bool _intialized = false;
 
+		public enum FileLogLevel
+		{ 
+			Fatal = 0,
+			Error = 1, 
+			Warning = 2, 
+			Info = 3,
+			Debug = 4
+		}
+
         internal static void Init()
 		{
 			string logFileDirectory;

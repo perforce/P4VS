@@ -154,7 +154,7 @@
     <value>Change</value>
   </data>
   <data name="DepotPathDlg_NoConnection" xml:space="preserve">
-    <value>Not connected to a Helix Core server</value>
+    <value>Not connected to a P4 server</value>
   </data>
   <data name="icmdRevGraph" xml:space="preserve">
     <value>Revision Graph</value>
@@ -275,7 +275,7 @@ New Name: {1}</value>
     <value>&lt;New Connection&gt;</value>
   </data>
   <data name="109" xml:space="preserve">
-    <value>Helix Core - Diff/Merge/Reviews</value>
+    <value>P4 - Diff/Merge/Reviews</value>
   </data>
   <data name="StreamsToolWindow_RefreshStreamMenuText" xml:space="preserve">
     <value>Refresh Stream '{0}'</value>
@@ -358,10 +358,10 @@ New Name: {1}</value>
     <value>No differences found for the following {0} file comparisons:</value>
   </data>
   <data name="P4VsProviderService_QueryAddFilesQuestion" xml:space="preserve">
-    <value>Would you like to add the new file(s) to Helix Core server?</value>
+    <value>Would you like to add the new file(s) to P4 server?</value>
   </data>
   <data name="P4ScmProvider_CannotFindHelixMFAError" xml:space="preserve">
-    <value>Cannot find Helix MFA Authenticator</value>
+    <value>Cannot find P4 MFA Authenticator</value>
   </data>
   <data name="WorkspacesWindowControl_DeleteWorkspaceCaption" xml:space="preserve">
     <value>Delete Workspace Form</value>
@@ -385,7 +385,7 @@ New Name: {1}</value>
     <value>Do not delete the target file (ignore)</value>
   </data>
   <data name="P4ScmProvider_LoginCaption" xml:space="preserve">
-    <value>Helix Core Login</value>
+    <value>P4 Login</value>
   </data>
   <data name="SubmitDlg_NoFilesToSubmitWarning" xml:space="preserve">
     <value>None of the selected files could be submitted</value>
@@ -408,7 +408,7 @@ New Name: {1}</value>
 One or more of the selected files are checked out by another user. Files that have been assigned the "exclusive open" attribute cannot be checked out by multiple users simultaneously.</value>
   </data>
   <data name="icmdPublish" xml:space="preserve">
-    <value>Helix Core</value>
+    <value>P4</value>
   </data>
   <data name="StreamsToolWindow_CopyFromParentStreamMenuText" xml:space="preserve">
     <value>Copy to '{0}' from parent</value>
@@ -423,7 +423,7 @@ One or more of the selected files are checked out by another user. Files that ha
     <value>{0} matches</value>
   </data>
   <data name="P4VsProvider_AddFilesPrompt" xml:space="preserve">
-    <value>Add the files to the Helix Core server</value>
+    <value>Add the files to the P4 server</value>
   </data>
   <data name="imnuManageMenu" xml:space="preserve">
     <value>Manage Files</value>
@@ -450,7 +450,7 @@ One or more of the selected files are checked out by another user. Files that ha
     <value>Errors:</value>
   </data>
   <data name="P4VsProviderService_MarkAddSlnFileQuestion" xml:space="preserve">
-    <value>The solution file, {0}, is not checked into the Helix Core server. Would you like to mark it for add?</value>
+    <value>The solution file, {0}, is not checked into the P4 server. Would you like to mark it for add?</value>
   </data>
   <data name="CreateSwarmReviewDlg_UpdateReviewBtn" xml:space="preserve">
     <value>Update Review</value>
@@ -474,7 +474,7 @@ One or more of the selected files are checked out by another user. Files that ha
     <value>Get Latest Revision</value>
   </data>
   <data name="113" xml:space="preserve">
-    <value>Helix Server</value>
+    <value>P4 Server</value>
   </data>
   <data name="P4VsProviderService_QueryDeleteFilesRevertAddNote" xml:space="preserve">
     <value>(Files that are marked for add will be reverted.)</value>
@@ -642,16 +642,16 @@ You will no longer be prompted for a changelist when checking out and adding fil
     <comment>{0} is server:port, {1} is user name</comment>
   </data>
   <data name="P4ScmProvider_ConnectingToPerforceServer" xml:space="preserve">
-    <value>Connecting to Helix Core server on {0} as {1} using client {2}</value>
+    <value>Connecting to P4 server on {0} as {1} using client {2}</value>
   </data>
   <data name="DepotPathDlg_Connection" xml:space="preserve">
     <value>Connection: {0}</value>
   </data>
   <data name="CreateSwarmReviewDlg_CreateReview" xml:space="preserve">
-    <value>Request New Swarm Review</value>
+    <value>Request New P4 Code Review</value>
   </data>
   <data name="CreateSwarmReviewDlg_AddToReview" xml:space="preserve">
-    <value>Add to a Swarm Review...</value>
+    <value>Add to a P4 Code Review...</value>
   </data>
   <data name="icmdShowHistory" xml:space="preserve">
     <value>Show History</value>
@@ -681,13 +681,13 @@ You will no longer be prompted for a changelist when checking out and adding fil
     <value>target file</value>
   </data>
   <data name="108" xml:space="preserve">
-    <value>Helix Core - Connections</value>
+    <value>P4 - Connections</value>
   </data>
   <data name="SccHistoryDetailsControl_FileSizeBytes" xml:space="preserve">
     <value>{0} bytes</value>
   </data>
   <data name="P4ScmProvider_UsingConfigSettingsToConnect" xml:space="preserve">
-    <value>Using config file, "{3}", to connect to Helix Core server on {0} as {1} using client {2}</value>
+    <value>Using config file, "{3}", to connect to P4 server on {0} as {1} using client {2}</value>
   </data>
   <data name="P4IgnorePreferencesControl_PromptForIgnoreListAdd" xml:space="preserve">
     <value>Would you like to add the wildcard, '*.*' to the ignore file in your workspace root to limit fstats on all files in your workspace?
@@ -695,7 +695,7 @@ You will no longer be prompted for a changelist when checking out and adding fil
 For files that you want to manage with P4VS, select them in Solution Explorer and choose 'Manage Files/Remove from Ignore List" in the context menu.</value>
   </data>
   <data name="P4VS_ProductName" xml:space="preserve">
-    <value>P4VS - Helix Plugin for Visual Studio</value>
+    <value>P4VS - P4 for Visual Studio</value>
   </data>
   <data name="cmdidCancelActiveCommand" xml:space="preserve">
     <value>Cancel Command</value>
@@ -713,7 +713,7 @@ For files that you want to manage with P4VS, select them in Solution Explorer an
     <value>Move to Another Changelist</value>
   </data>
   <data name="SwarmToolWindowControl_Caption" xml:space="preserve">
-    <value>Swarm</value>
+    <value>P4 Code Review</value>
   </data>
   <data name="PendingChangelistDlg_DescriptionPanel_ButtonText" xml:space="preserve">
     <value>Write a changelist description</value>
@@ -747,7 +747,7 @@ Would you like to get the latest revision before the checkout?</value>
     <value>Link jobs to changelist (optional)</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_MenuItemUpdateReview2" xml:space="preserve">
-    <value>Update a Swarm Review...</value>
+    <value>Update a P4 Code Review...</value>
   </data>
   <data name="SccHistoryDetailsControl_FileSizeKiloBytes" xml:space="preserve">
     <value>{0:F3} KB</value>
@@ -780,13 +780,13 @@ Would you like to get the latest revision before the checkout?</value>
     <value>All files (*.*)|*.*</value>
   </data>
   <data name="P4ScmProvider_LostConectionError" xml:space="preserve">
-    <value>The connection to the Helix Core server at {0} has been lost</value>
+    <value>The connection to the P4 server at {0} has been lost</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_DeletePendingChangelistCaption" xml:space="preserve">
     <value>Delete Pending Changelist Form</value>
   </data>
   <data name="P4ScmProvider_ToolTipNotInPerforce" xml:space="preserve">
-    <value>Not in Helix Core server</value>
+    <value>Not in P4 server</value>
   </data>
   <data name="SelectChangelistDlg_ApplyToAllFilesEditLabel" xml:space="preserve">
     <value>Do this for all files being edited</value>
@@ -814,7 +814,7 @@ Would you like to get the latest revision before the checkout?</value>
     (Warning, merge tool not located!)</value>
   </data>
   <data name="Sample Tool Window" xml:space="preserve">
-    <value>Perforce Sample Tool Window</value>
+    <value>P4 Sample Tool Window</value>
   </data>
   <data name="ResolveFileInteractiveControl_BaseFile" xml:space="preserve">
     <value>Base ({0})</value>
@@ -845,7 +845,7 @@ Would you like to get the latest revision before the checkout?</value>
     <value>Info</value>
   </data>
   <data name="110" xml:space="preserve">
-    <value>Helix Core - Logging</value>
+    <value>P4 - Logging</value>
   </data>
   <data name="P4ScmProvider_ErrorRunningServerDiff" xml:space="preserve">
     <value>Encountered an error running the server's diff command.
@@ -856,7 +856,7 @@ Would you like to get the latest revision before the checkout?</value>
     <value>Source ({0})</value>
   </data>
   <data name="P4ErrorDlg_LoggedOutMsg" xml:space="preserve">
-    <value>You have logged out of the Helix Core server.</value>
+    <value>You have logged out of the P4 server.</value>
   </data>
   <data name="OpenConnectionDlg_NewWorkspaceDlgPrompt" xml:space="preserve">
     <value>Enter a name for the new workspace:</value>
@@ -880,10 +880,10 @@ Would you like to get the latest revision before the checkout?</value>
     <value>Conflicts exist between target file and source file.</value>
   </data>
   <data name="icmdP4V" xml:space="preserve">
-    <value>View in P4V</value>
+    <value>View in P4 Visual Client</value>
   </data>
   <data name="112" xml:space="preserve">
-    <value>Helix Core - Ignoring Files</value>
+    <value>P4 - Ignoring Files</value>
   </data>
   <data name="CreateSwarmReviewDlg_RevertAfterShelving" xml:space="preserve">
     <value>Revert checked-out files after they are shelved.</value>
@@ -937,7 +937,7 @@ Would you like to get the latest revision before the checkout?</value>
     <value>&lt;Unshelved in P4VS&gt;</value>
   </data>
   <data name="P4VsProviderService_AddNewSlnFiles" xml:space="preserve">
-    <value>Adding new solution's files to the Helix Core server:</value>
+    <value>Adding new solution's files to the P4 server:</value>
   </data>
   <data name="ConnectionDropDownCombo_CloseConnection" xml:space="preserve">
     <value>&lt;Close Connection&gt;</value>
@@ -976,7 +976,7 @@ Would you like to get the latest revision before the checkout?</value>
     <value>The file {0} you are going to delete is a source controlled file. Are you sure you want to continue and delete this file?</value>
   </data>
   <data name="P4VsOutputWindow_PanelName" xml:space="preserve">
-    <value>Helix Core Source Control</value>
+    <value>P4 Source Control</value>
   </data>
   <data name="P4VsProviderService_QueryDeleteFileQuestion" xml:space="preserve">
     <value>Would you like to Mark for Delete the file in the Depot?</value>
@@ -1001,7 +1001,7 @@ Would you like to get the latest revision before the checkout?</value>
     <value>Branch target file from source</value>
   </data>
   <data name="CreateSwarmReviewDlg_RefreshReview" xml:space="preserve">
-    <value>Update Swarm Review, '{0}'</value>
+    <value>Update P4 Code Review, '{0}'</value>
   </data>
   <data name="Status_CheckedOut" xml:space="preserve">
     <value>Checked out by you</value>
@@ -1049,7 +1049,7 @@ Would you like to get the latest revision before the checkout?</value>
     <value>Streams</value>
   </data>
   <data name="imnuFileSourceControlMenu" xml:space="preserve">
-    <value>Helix</value>
+    <value>P4</value>
   </data>
   <data name="ResolveFileInteractiveControl_ResolveSaveChanges" xml:space="preserve">
     <value>Do you want to keep the merged file?
@@ -1079,13 +1079,13 @@ Click on "No" to rerun merge tool.</value>
     <value>Diff</value>
   </data>
   <data name="P4VS_ProductDescription" xml:space="preserve">
-    <value>P4VS is the Helix Plugin for Microsoft Visual Studio. P4VS provides developers working within Visual Studio access to Helix version control features, including check in/check out, view file history, and more.</value>
+    <value>P4VS is the P4 for Microsoft Visual Studio. P4VS provides developers working within Visual Studio access to P4 version control features, including check in/check out, view file history, and more.</value>
   </data>
   <data name="ResolveFileAutoControl_FilesNotResolvedWarning" xml:space="preserve">
     <value>{0} of the files could not be resolved using the Auto resolve action chosen. Please use a different Auto resolve method or the Interactive option on the remaining files.</value>
   </data>
   <data name="111" xml:space="preserve">
-    <value>Helix Core - Data Retrieval</value>
+    <value>P4 - Data Retrieval</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_ClmTitleDescription" xml:space="preserve">
     <value>Description</value>
@@ -1150,7 +1150,7 @@ Click on "No" to rerun merge tool.</value>
     <value>New Workspace</value>
   </data>
   <data name="100" xml:space="preserve">
-    <value>P4VS - Helix Plugin for Visual Studio</value>
+    <value>P4VS - P4 for Visual Studio</value>
   </data>
   <data name="P4VsProvider_CantAddSlnClientRootError" xml:space="preserve">
     <value>The solution file is not under your client's root folder, and cannot be added</value>
@@ -1171,7 +1171,7 @@ Click on "No" to rerun merge tool.</value>
     <value>Connection will expire at {0}</value>
   </data>
   <data name="101" xml:space="preserve">
-    <value>This package implements the Helix Plugin for Visual Studio.</value>
+    <value>This package implements the P4 for Visual Studio.</value>
   </data>
   <data name="IntegrateDlg_FilesToBeCopied" xml:space="preserve">
     <value>{0} files to be copied</value>
@@ -1214,7 +1214,7 @@ Click on "No" to rerun merge tool.</value>
     <value>The name contains spaces and will be automatically corrected.</value>
   </data>
   <data name="icmdCloseConnection" xml:space="preserve">
-    <value>Close Connection to the Helix Core server</value>
+    <value>Close Connection to the P4 server</value>
   </data>
   <data name="CreateSwarmReviewDlg_CantReviewMixedChangelist" xml:space="preserve">
     <value>Can't request a review on a changelist containing both shelved and opened files.</value>
@@ -1257,14 +1257,14 @@ Do you want to delete the shelved files?</value>
     <value>{0} (local file)</value>
   </data>
   <data name="ConnectionDropDownCombo_NoConnection" xml:space="preserve">
-    <value>Helix Core: OFFLINE</value>
+    <value>P4 Connection: OFFLINE</value>
   </data>
   <data name="P4ScmProvider_SwarmLoginPrompt" xml:space="preserve">
     <value>Please enter password for {0} on {1}</value>
-    <comment>{0} is user name, {1} is swarm url</comment>
+    <comment>{0} is user name, {1} is P4 Code Review url</comment>
   </data>
   <data name="PerforceSCM" xml:space="preserve">
-    <value>Perforce SCM</value>
+    <value>P4 SCM</value>
   </data>
   <data name="ResolveFileInteractiveControl_MergeOfFiles" xml:space="preserve">
     <value>Merge of {0}, {1}</value>
@@ -1273,7 +1273,7 @@ Do you want to delete the shelved files?</value>
     <value>Nothing to Copy</value>
   </data>
   <data name="icmdOpenConnection" xml:space="preserve">
-    <value>Open Connection to a Helix Core server...</value>
+    <value>Open Connection to a P4 server...</value>
   </data>
   <data name="SSLCertificateErrorDlg_CertificateData" xml:space="preserve">
     <value>
@@ -1316,7 +1316,7 @@ Do you want to delete the shelved files?</value>
     <value>Do not branch from source file (ignore)</value>
   </data>
   <data name="P4ScmProvider_UsingEnvironmentSettingsToConnect" xml:space="preserve">
-    <value>Using environment settings to connect to Helix Core server on {0} as {1} using client {2}</value>
+    <value>Using environment settings to connect to P4 server on {0} as {1} using client {2}</value>
   </data>
   <data name="P4ScmProvider_ToolTipLazyLoad" xml:space="preserve">
     <value>Status not loaded, choose 'Refresh' from context menu to fetch status</value>
@@ -1347,7 +1347,7 @@ Do you want to delete the shelved files?</value>
     <value>Workspace</value>
   </data>
   <data name="P4VsProvider_AddFilePrompt" xml:space="preserve">
-    <value>Add the file to the Helix Core server</value>
+    <value>Add the file to the P4 server</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_DeletePendingChangelistWarning" xml:space="preserve">
     <value>You are about to delete Pending Changelist '{0}' from the server.
@@ -1409,10 +1409,10 @@ Are you sure you want to continue?</value>
     <value>Combine the name changes made to both the source and target</value>
   </data>
   <data name="CreateSwarmReviewDlg_OpenReviewInSwarm" xml:space="preserve">
-    <value>Open Review in Swarm</value>
+    <value>Open Review in P4 Code Review</value>
   </data>
   <data name="icmdFileOpenInDepot" xml:space="preserve">
-    <value>Open Solution/Project in Helix Core server...</value>
+    <value>Open Solution/Project in P4 server...</value>
   </data>
   <data name="IntegrateDlg_Merge" xml:space="preserve">
     <value>Merge</value>
@@ -1436,7 +1436,7 @@ Are you sure you want to continue?</value>
     <value>The name contains spaces and will be automatically corrected.</value>
   </data>
   <data name="107" xml:space="preserve">
-    <value>Helix Core - General</value>
+    <value>P4 - General</value>
   </data>
   <data name="ResolveFileInteractiveControl_SuggestedReason_ay" xml:space="preserve">
     <value>Only  target file differs from the common base file.</value>
@@ -1451,13 +1451,13 @@ Are you sure you want to continue?</value>
     <value>Enter revision number</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_MenuItemOpenSwarmReview" xml:space="preserve">
-    <value>Open Review '{0}' in Swarm...</value>
+    <value>Open Review '{0}' in P4 Code Review...</value>
   </data>
   <data name="503" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\503.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="P4ErrorDlg_SwarmPromptLabel" xml:space="preserve">
-    <value>Swarm Server Error</value>
+    <value>P4 Code Review Server Error</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_MenuItemRefreshSelectedPendingChangelists" xml:space="preserve">
     <value>Refresh Selected Pending Changelists</value>
@@ -1472,13 +1472,13 @@ Are you sure you want to continue?</value>
     <value>Cannot get contents of shelved file</value>
   </data>
   <data name="P4VsProviderService_NewSlnDialogPromptString" xml:space="preserve">
-    <value>Add to source control using P4VS - Helix Plugin for Visual Studio      </value>
+    <value>Add to source control using P4VS - P4 for Visual Studio      </value>
   </data>
   <data name="ResolveFileActionControl_BranchActionSource" xml:space="preserve">
     <value>Branch target file from source</value>
   </data>
   <data name="CreateSwarmReviewDlg_UpdateReview" xml:space="preserve">
-    <value>Update a Swarm Review</value>
+    <value>Update a P4 Code Review</value>
   </data>
   <data name="JobsToolWindowControl_0Matches" xml:space="preserve">
     <value>0 matches</value>
@@ -1561,7 +1561,7 @@ Are you sure you want to continue?</value>
     <value>Diff Against...</value>
   </data>
   <data name="P4ScmProvider_ConnectedToSwarmServer" xml:space="preserve">
-    <value>Connected to Swarm {0}  {1}</value>
+    <value>Connected to P4 Code Review {0}  {1}</value>
   </data>
   <data name="P4ScmProvider_ErrorSeverityFailed" xml:space="preserve">
     <value>Failed</value>
@@ -1570,10 +1570,10 @@ Are you sure you want to continue?</value>
     <value> Checked In</value>
   </data>
   <data name="PendingChangelistsToolWindowControl_MenuItemUpdateReview" xml:space="preserve">
-    <value>Update Swarm Review '{0}'...</value>
+    <value>Update P4 Code Review '{0}'...</value>
   </data>
   <data name="icmdViewSwarmToolWindow" xml:space="preserve">
-    <value>Swarm</value>
+    <value>P4 Code Review</value>
   </data>
   <data name="P4ScmProvider_ToolTipNeedsResolve" xml:space="preserve">
     <value>Needs Resolve </value>
@@ -1582,11 +1582,11 @@ Are you sure you want to continue?</value>
     <value>Resources\download-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HMFA_Download" xml:space="preserve">
-    <value>Helix MFA Authenticator could not be found.
+    <value>P4 MFA Authenticator could not be found.
 Download and install it to continue.</value>
   </data>
   <data name="HMFA_Launch" xml:space="preserve">
-    <value>Launching Helix MFA Authenticator...</value>
+    <value>Launching P4 MFA Authenticator...</value>
   </data>
   <data name="HMFA_Title" xml:space="preserve">
     <value>Verify your identity for {0} on {1}</value>

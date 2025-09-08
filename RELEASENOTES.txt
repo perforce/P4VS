@@ -1,7 +1,7 @@
                            Release Notes for
-                P4VS, the Helix Plugin for Visual Studio
+                P4VS, the P4 for Visual Studio
 
-                            Version 2024.2
+                            Version 2025.1
 
 Introduction
 
@@ -18,8 +18,8 @@ Compatibility Statements
 
         Server Compatibility
 
-          You can use this release of P4VS with any release of the
-          Perforce server at or later than 2018.1
+          This release of P4VS supports the 2025.1 P4 Server.
+          Older releases might work but are not supported.
 
         Platform Compatibility
 
@@ -37,14 +37,14 @@ Compatibility Statements
         Compatibility with Previous Releases
 
           Unless otherwise stated below, this release of P4VS is compatible with
-          previous releases from Perforce Software.
+          previous releases of P4.
 
         Installation
 
           After installing with p4vs.vsix for Visual Studio, confirm that
           P4VS is the current source control plug-in by navigating to
           Tools -> Options -> Source Control -> Plug-in
-          Selection and make sure that P4VS - Helix Plugin for
+          Selection and make sure that P4VS - P4 for
           Visual Studio is the selection in the drop down on that
           options page. If the plug-in does not appear in the drop
           down, confirm that it is enabled by checking the list of
@@ -105,7 +105,7 @@ Compatibility Statements
           occurred loading this property page" appears, Cancel out of the
           options pages and bring them up again to restore the page.
 
-          If connecting to a unicode Perforce server, the Arial Unicode
+          If connecting to a unicode P4 server, the Arial Unicode
           Microsoft font must be installed in order to properly display all
           unicode characters in P4VS.
 
@@ -132,7 +132,7 @@ Compatibility Statements
           (CP932) implementation, and apply the extension to recognize NEC
           special characters when encoding/decoding characters.
 
-          When loading a large project under Perforce control, if
+          When loading a large project under P4 control, if
           directories containing a large number of files are in an expanded
           state during load, the opening of the project may take
           considerably longer to complete. To avoid this issue, collapse
@@ -144,13 +144,62 @@ Compatibility Statements
           third parties. License information can be found in LICENSE.txt which
           can be accessed via the License link in the vsix installer.
 
---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+Important End-of-Life Notice
+
+        This major release of P4 for Visual Studio would be the last to support 
+        'Visual Studio 2015'. This is part of our commitment to focus 
+        on supported IDE platforms.
+
+---------------------------------------------------------------------------
+
+Important Product Rebrand Notice
+
+        Helix Core is now P4.
+        Perforce has a new look and logo that reflects our place in DevOps
+        workflows. As part of these changes, Helix Core is now P4. Name updates
+        and new icons to align with the P4 branding will be rolled out soon.
+        To learn more, see:
+         https://www.perforce.com/blog/vcs/introducing-the-p4-platform
+
+---------------------------------------------------------------------------
 
 Key to symbols used in change notes below.
 
           * -- requires new P4VS
          ** -- requires new p4d server program
-		 
+         
+---------------------------------------------------------------------------
+
+New Functionality in 2025.1
+
+        #2814884,2811523,2811134 (Job #126944) * 
+            Added a new configuration under the "P4 - Data Retrieval" tab to 
+            control project glyph loading on selection. Improves performance 
+            and prevents UI hangs during solution load. Users are notified 
+            of this new configuration via a Visual Studio InfoBar.
+
+        #2813770 (Job #128253) * 
+            Improved solution/project load performance by batching fstat 
+            server requests into smaller groups, preventing hangs 
+            and enhancing responsiveness.
+
+        #2814842 (Job #128285) *
+            Optimized performance during Add to Source Control for large solutions 
+            by batching AddFiles and fstat requests. This prevents hangs 
+            caused by sending all files in a single server call.
+
+        #2813770, 2812987 (Jobs #125710) * 
+            Add to Source Control now filters out ignored files 
+            before sending them to the server, preventing errors and exceptions.
+
+        #2814999,2813040,2812601,2812600 (Job #126569) * ** 
+            Rebranding changes: Renamed Helix Core UI elements to P4 and updated 
+            the Helix logo with latest P4 logo.
+
+        (Job #125787) * ** 
+            P4VS now uses latest P4API.NET 2025.1
+
 --------------------------------------------------------------------------
 
 New Functionality in 2024.2  (2024.2/2707516) (2025/01/23)

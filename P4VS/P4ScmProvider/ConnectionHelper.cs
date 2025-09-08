@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Perforce.P4VS.FileLogger;
 
 namespace Perforce.P4Scm
 {
@@ -187,8 +188,9 @@ namespace Perforce.P4Scm
                     Repository.Connection.TextResultsReceived += CommandLine.TextResultsCallbackFn;
                     Repository.Connection.TaggedOutputReceived += CommandLine.TaggedOutputCallbackFn;
                     Repository.Connection.CommandEcho += CommandLine.CommandEchoCallbackFn;
+					Repository.Connection.ResponseTimeEcho += CommandLine.CommandEchoCallbackFn;
 
-                    _disconnected = false;
+					_disconnected = false;
 
                     // Connection OK, break out of loop
                     break;
@@ -586,9 +588,10 @@ namespace Perforce.P4Scm
             // Log configuration settings
             P4VsOutputWindow.AppendMessage(msg);
 
-            logger.Trace("scm ID:{0}", ID);
+			logger.Trace("scm ID:{0}", ID);
             FileLogger.LogMessage(3, "P4API.NET", msg);
-        }
+			Preferences.LocalSettings.LogLocalSettings();
+		}
 
         /// <summary>Set Perforce Connection for project</summary>
         private void setConfiguration()

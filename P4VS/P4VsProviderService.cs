@@ -729,36 +729,41 @@ namespace Perforce.P4VS
         /// </summary>
         public int UnregisterSccProject([In] IVsSccProject2 pscp2Project)
         {
-            // Get the project's hierarchy
             IVsHierarchy hierProject = null;
+
             if (pscp2Project == null)
             {
-                // If the project's pointer is null, it must be the solution calling to unregister, from OnBeforeCloseSolution
-                logger.Trace("Solution {0} is unregistering with source control.", _P4VsProvider.GetSolutionFileName());
-                hierProject = (IVsHierarchy)_P4VsProvider.GetService(typeof(SVsSolution));
+                logger.Trace("Solution {0} is unregistering with source control.", _P4VsProvider?.GetSolutionFileName());
 
-                if (ScmProvider != null)
+                // Get the solution hierarchy
+                hierProject = _P4VsProvider?.GetService(typeof(SVsSolution)) as IVsHierarchy;
+
+                // Clear SCM cache if needed
+                ScmProvider?.ClearCache();
+            }
+            else
                 {
-                    ScmProvider.ClearCache();
-                }
-            }
-            else
-            {
-                logger.Trace("Project {0} is unregistering with source control.", _P4VsProvider.GetProjectFileName(pscp2Project));
-                hierProject = (IVsHierarchy)pscp2Project;
-            }
+                string projectFileName = _P4VsProvider?.GetProjectFileName(pscp2Project);
+                logger.Trace("Project {0} is unregistering with source control.", projectFileName);
 
-            // Remove the project from the list of controlled projects
-            if ((controlledProjects.ContainsKey(hierProject)) && (controlledProjects[hierProject] != null))
+                hierProject = pscp2Project as IVsHierarchy;
+                }
+
+            // Early return if we couldn’t get a valid hierarchy
+            if (hierProject == null)
             {
-                controlledProjects.Remove(hierProject);
-                return VSConstants.S_OK;
-            }
-            else
-            {
+                logger.Warn("UnregisterSccProject called with null hierarchy.");
                 return VSConstants.S_FALSE;
             }
-        }
+
+            // Attempt to remove from controlled projects
+            if (controlledProjects.Remove(hierProject))
+            {
+                return VSConstants.S_OK;
+            }
+
+                return VSConstants.S_FALSE;
+            }
 
         #endregion
 
@@ -1262,8 +1267,11 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
+                if (Preferences.LocalSettings.GetBool("OptimizeSolutionLoad", false) == false)
+                {
                 // Refresh the glyphs now for solution and solution folders
                 _P4VsProvider.Glyphs.RefreshNodesGlyphs(nodes, null);
+            }
             }
 
             solutionLocation = LoadingControlledSolutionLocation;
@@ -1293,19 +1301,28 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
         public int OnBeforeCloseSolution([In] Object pUnkReserved)
         {
             LogFunctionCall(MethodBase.GetCurrentMethod().Name);
-            // Since we registered the solution with source control from OnAfterOpenSolution, it would be nice to unregister it, too, when it gets closed.
-            // Also, unregister the solution folders
-            Hashtable enumSolFolders = _P4VsProvider.GetSolutionFoldersEnum();
-            foreach (IVsHierarchy pHier in enumSolFolders.Keys)
+
+            if (_P4VsProvider == null)
             {
-                IVsSccProject2 pSccProject = pHier as IVsSccProject2;
-                if (pSccProject != null)
+                logger.Warn("_P4VsProvider is null. Skipping SCC unregistration.");
+                return VSConstants.S_OK;
+            }
+
+            try
+            {
+                var enumSolFolders = _P4VsProvider.GetSolutionFoldersEnum();
+
+                foreach (IVsSccProject2 pSccProject in enumSolFolders?.Keys?.OfType<IVsSccProject2>() ?? Enumerable.Empty<IVsSccProject2>())
                 {
                     UnregisterSccProject(pSccProject);
                 }
-            }
 
-            UnregisterSccProject(null);
+                UnregisterSccProject(null); // Unregister main solution
+            }
+            catch (Exception ex)
+            {
+                logger.Error($"Unhandled exception in OnBeforeCloseSolution: {ex}");
+            }
 
             return VSConstants.S_OK;
         }
@@ -2743,6 +2760,9 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             foreach (string file in files)
             {
+                //Skipping files if not in the workspace root or if ignored
+                if ((file.StartsWith(ScmProvider.Connection.WorkspaceRoot, StringComparison.OrdinalIgnoreCase) == true) && GetFileStatus(file).TestNone(SourceControlStatus.scsIgnored))
+                {
                 // Get all controlled projects containing this file
                 IList<VSITEMSELECTION> nodes = GetControlledProjectsContainingFile(file);
                 if (nodes.Count > 0)
@@ -2750,6 +2770,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     // in at least one controlled project
                     filesToAdd.Add(file);
                 }
+            }
             }
             if (ScmProvider != null)
             {
@@ -3981,7 +4002,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             string newChangeDescription = Resources.P4VsProvider_AddFilesDefaultChangelistDescription;
             int changeListId = 0;
 
-            if (solutionFileMetaData == null || solutionFileMetaData.Count <= 0 || solutionFileMetaData[0] == null)
+            if ((solutionFileMetaData == null || solutionFileMetaData.Count <= 0 || solutionFileMetaData[0] == null) && GetFileStatus(solutionFileName).TestNone(SourceControlStatus.scsIgnored))
             {
                 bool notInWorkspace = true;
                 while (notInWorkspace)
@@ -4357,7 +4378,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                logger.Trace("Exception in Helix SCM OnSelectionChanged {0}\r\n\t{1}", ex.Message, ex.StackTrace);
+                logger.Trace("Exception in P4 SCM OnSelectionChanged {0}\r\n\t{1}", ex.Message, ex.StackTrace);
             }
 
             return;

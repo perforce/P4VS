@@ -142,7 +142,7 @@
     <value>9</value>
   </data>
   <data name="markIgnoreFileForAddChk.Text" xml:space="preserve">
-    <value>Automatically add new Ignore Lists to Helix Core server</value>
+    <value>Automatically add new Ignore Lists to P4 server</value>
   </data>
   <data name="&gt;&gt;markIgnoreFileForAddChk.Name" xml:space="preserve">
     <value>markIgnoreFileForAddChk</value>
@@ -223,7 +223,7 @@
     <value>13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>* Sets/Resets the P4 environment setting P4IGNORE which may affect other Helix clients. Requires connection to a Helix Core server (12.1 or later).</value>
+    <value>* Sets/Resets the P4 environment setting P4IGNORE which may affect other P4 clients. Requires connection to a P4 server (12.1 or later).</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>

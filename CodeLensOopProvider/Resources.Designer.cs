@@ -88,7 +88,7 @@ namespace CodeLensOopProvider {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Submitted Changelists (Helix).
+        ///   Looks up a localized string similar to Submitted Changelists (P4).
         /// </summary>
         internal static string HelixSubmittedChangelistCodeLensProvider {
             get {

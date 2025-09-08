@@ -79,7 +79,7 @@ namespace Perforce.P4Scm
 
             logger.Trace("ConnectToRepository(options) threw P4Exception: {0}\r\n{1}", ex.Message, ex.StackTrace);
 
-            string exception = ex.Message.Replace("Perforce", "Helix Core server");
+            string exception = ex.Message.Replace("Perforce", "P4 server");
             string[] sslMsg = exception.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
 

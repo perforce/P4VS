@@ -19,11 +19,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("Helix Plugin for Visual Studio")]
-[assembly: AssemblyDescription("Helix Plugin for Visual Studio")]
+[assembly: AssemblyTitle("P4 for Visual Studio")]
+[assembly: AssemblyDescription("P4 for Visual Studio")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Perforce Software, Inc.")]
-[assembly: AssemblyProduct("Helix Plugin for Visual Studio")]
+[assembly: AssemblyProduct("P4 for Visual Studio")]
 [assembly: AssemblyCopyright("Copyright (C) 2019 Perforce Software, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]        

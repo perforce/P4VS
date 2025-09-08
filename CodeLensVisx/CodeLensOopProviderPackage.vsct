@@ -59,7 +59,7 @@
         <!-- command accepts args -->
         <CommandFlag>CommandWellOnly</CommandFlag>
         <Strings>
-          <ButtonText>Navigate To Helix Changelist</ButtonText>
+          <ButtonText>Navigate To P4 Changelist</ButtonText>
           <CanonicalName>Helix.NavigateToChangelist</CanonicalName>
           <LocCanonicalName>Helix.NavigateToChangelist</LocCanonicalName>
         </Strings>

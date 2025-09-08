@@ -38,7 +38,7 @@
 				<Parent guid="guidP4VsProviderCmdSet" id="igrpFileSourceControl"/>
 				<CommandFlag>TextChanges</CommandFlag>
 				<Strings>
-					<ButtonText>Perforce</ButtonText>
+					<ButtonText>P4</ButtonText>
 				</Strings>
 			</Menu>
             
@@ -229,7 +229,7 @@
         <CommandFlag>IconIsMoniker</CommandFlag>
         <CommandFlag>TextChanges</CommandFlag>
         <Strings>
-          <ButtonText>Helix Core</ButtonText>
+          <ButtonText>P4</ButtonText>
           <LocCanonicalName>Perforce.P4VS.Helix_Core</LocCanonicalName>
         </Strings>
       </Button>
@@ -378,7 +378,7 @@
 				<CommandFlag>DefaultInvisible</CommandFlag>
 				<CommandFlag>TextChanges</CommandFlag>
 				<Strings>
-					<ButtonText>Open Solution/Project in Helix Core server...</ButtonText>
+					<ButtonText>Open Solution/Project in P4 server...</ButtonText>
           <LocCanonicalName>Perforce.P4VS.Open_Solution_in_Perforce_Depot</LocCanonicalName>
 				</Strings>
 			</Button>
@@ -390,7 +390,7 @@
 				<CommandFlag>DefaultInvisible</CommandFlag>
 				<CommandFlag>TextChanges</CommandFlag>
 				<Strings>
-					<ButtonText>Open Connection to a Helix Core server...</ButtonText>
+					<ButtonText>Open Connection to a P4 server...</ButtonText>
           <LocCanonicalName>Perforce.P4VS.Open_Connection_to_a_Perforce_Depot</LocCanonicalName>
 				</Strings>
 			</Button>
@@ -402,7 +402,7 @@
 				<CommandFlag>DefaultInvisible</CommandFlag>
 				<CommandFlag>TextChanges</CommandFlag>
 				<Strings>
-					<ButtonText>Close Connection to the Helix Core server</ButtonText>
+					<ButtonText>Close Connection to the P4 server</ButtonText>
           <LocCanonicalName>Perforce.P4VS.Close_Connection_to_the_Perforce_Depot</LocCanonicalName>
 				</Strings>
 			</Button>

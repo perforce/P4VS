@@ -142,7 +142,7 @@
     <value>21</value>
   </data>
   <data name="reviewsChkBox.Text" xml:space="preserve">
-    <value>Open Swarm reviews in external browser</value>
+    <value>Open reviews from P4 Code review in external browser</value>
   </data>
   <data name="&gt;&gt;reviewsChkBox.Name" xml:space="preserve">
     <value>reviewsChkBox</value>
@@ -175,7 +175,7 @@
     <value>0</value>
   </data>
   <data name="reviewsLbl.Text" xml:space="preserve">
-    <value>Swarm reviews</value>
+    <value>P4 Code Reviews</value>
   </data>
   <data name="&gt;&gt;reviewsLbl.Name" xml:space="preserve">
     <value>reviewsLbl</value>

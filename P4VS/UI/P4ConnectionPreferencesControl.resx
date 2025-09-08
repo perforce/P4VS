@@ -322,7 +322,7 @@
     <value>1</value>
   </data>
   <data name="ConnectDialogRB.Text" xml:space="preserve">
-    <value>Show the Helix Core server Connection dialog</value>
+    <value>Show the P4 server Connection dialog</value>
   </data>
   <data name="&gt;&gt;ConnectDialogRB.Name" xml:space="preserve">
     <value>ConnectDialogRB</value>
@@ -430,7 +430,7 @@
     <value>4</value>
   </data>
   <data name="ConnectEnvironmentRB.Text" xml:space="preserve">
-    <value>Connect to the server using my Helix Core environment settings</value>
+    <value>Connect to the server using my P4 environment settings</value>
   </data>
   <data name="&gt;&gt;ConnectEnvironmentRB.Name" xml:space="preserve">
     <value>ConnectEnvironmentRB</value>

@@ -459,6 +459,7 @@
     <Compile Include="AsyncPackageHelpers\ExtensionMethods.cs" />
     <Compile Include="AsyncPackageHelpers\ProvideAutoLoadAttribute.cs" />
     <Compile Include="BackwardsCompatibleAsyncPackage.cs" />
+    <Compile Include="InfoBar\InfoBarManager.cs" />
     <Compile Include="P4ScmProvider\RepositoryFactory.cs" />
     <Compile Include="P4ScmProvider\CommandLine.cs" />
     <Compile Include="P4ScmProvider\ConnectionHelper.cs" />

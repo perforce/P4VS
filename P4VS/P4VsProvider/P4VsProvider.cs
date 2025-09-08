@@ -62,6 +62,11 @@ using ErrorHandler = Microsoft.VisualStudio.ErrorHandler;
 using Perforce.P4Scm;
 using Microsoft.VisualStudio.AsyncPackageHelpers;
 using PackageAutoLoadFlags = Microsoft.VisualStudio.AsyncPackageHelpers.PackageAutoLoadFlags;
+using Microsoft.VisualStudio.Imaging;
+using Perforce.P4VS.InfoBar;
+using Microsoft.Internal.VisualStudio.PlatformUI;
+using Microsoft.VisualStudio.Settings;
+using Microsoft.VisualStudio.Shell.Settings;
 
 namespace Perforce.P4VS
 {
@@ -154,10 +159,10 @@ namespace Perforce.P4VS
 	[ProvideToolWindow(typeof(SwarmReviewsToolWindow))]
 
 	// Register the source control provider's service (implementing IVsScciProvider interface)
-	[ProvideService(typeof(P4VsProviderService), ServiceName = "P4VS - Helix Plugin for Visual Studio")]
+	[ProvideService(typeof(P4VsProviderService), ServiceName = "P4VS - P4 for Visual Studio")]
 
     // Register the source control provider to be visible in Tools/Options/SourceControl/Plugin dropdown selector
-    [@ProvideSourceControlProvider("P4VS - Helix Plugin for Visual Studio", "#100")]
+    [@ProvideSourceControlProvider("P4VS - P4 for Visual Studio", "#100")]
     //[MsVsShell.ProvideSourceControlProvider("P4VS - Helix Plugin for Visual Studio", "#100",
     //       "{FDA934F4-0492-4F67-A6EB-CBE0953649F0}",
     //       "{8D316614-311A-48F4-85F7-DF7020F62357}",
@@ -184,6 +189,13 @@ namespace Perforce.P4VS
 		IVsInstalledProduct,
 		IOleCommandTarget, IVsShellPropertyEvents
     {
+
+        private IVsInfoBarUIFactory _factory;
+
+        private IVsInfoBarHost _host;
+
+        private InfoBarManager _infoBarManager;
+
         private static Logger logger = null;    // Initialized in constructor for whole DLL
         
 		private const string _strSolutionBindingsProperty = "SolutionBindings";
@@ -559,6 +571,29 @@ namespace Perforce.P4VS
                 rscp.RegisterSourceControlProvider(GuidList.guidP4VsProvider);
 
                 instance = this;
+
+                _factory = GetService(typeof(SVsInfoBarUIFactory)) as IVsInfoBarUIFactory;
+              
+                object objInfoHost = null;
+                shellService.GetProperty((int)__VSSPROPID7.VSSPROPID_MainWindowInfoBarHost, out objInfoHost);
+                _host = objInfoHost as IVsInfoBarHost;
+
+                _infoBarManager = new InfoBarManager(_factory, _host);
+
+                bool IsSettingEnabled(string key) =>
+                    Preferences.LocalSettings.TryGetValue(key, out var value) && value is bool flag && flag;
+
+                bool optimizeSolutionLoad = IsSettingEnabled("OptimizeSolutionLoad");
+                bool lazyLoad = IsSettingEnabled("LazyLoad");
+
+
+                // If user has selected options other than optimize solution load/ lazy load,
+                // then only show info bar to notify about new option.
+                if (!optimizeSolutionLoad && !lazyLoad)
+                {
+                    _infoBarManager.ShowInfoBar();
+                }
+
             } catch (Exception ex)
             {
                 logger.Error(ex, "Initialize failed");
@@ -988,7 +1023,7 @@ namespace Perforce.P4VS
                     // --- Show the commandbar
                     var dte = GetService(typeof(DTE)) as DTE2;
                     var cbs = ((CommandBars)dte.CommandBars);
-                    CommandBar cb = cbs["Helix Connection"];
+                    CommandBar cb = cbs["P4 Connection"];
                     cb.Visible = true;
 
                     // --- Unsubscribe from events

@@ -238,7 +238,7 @@
     <value>244, 22</value>
   </data>
   <data name="requestReviewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Request New Swarm Review...</value>
+    <value>Request New P4 Code Review...</value>
   </data>
   <data name="updateReviewToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+U</value>
@@ -250,13 +250,13 @@
     <value>244, 22</value>
   </data>
   <data name="updateReviewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add to a Swarm Review...</value>
+    <value>Add to a P4 Code Review...</value>
   </data>
   <data name="openReviewInSwarmToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
   </data>
   <data name="openReviewInSwarmToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open Review in Swarm...</value>
+    <value>Open Review in P4 Code Review...</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 6</value>

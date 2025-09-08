@@ -37,16 +37,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using System;
 using System.Collections.Generic;
 #if !VS2008
-using System.Collections.Concurrent;
 #endif
 using System.IO;
-using System.Text;
 using System.Linq;
 using System.Threading;
 using NLog;
-
-using Perforce;
 using Perforce.P4VS;
+using Perforce.P4;
 
 namespace Perforce.P4Scm
 {
@@ -117,7 +114,7 @@ namespace Perforce.P4Scm
             {
                 _scm = scm;
 
-                int minutes = Preferences.LocalSettings.GetInt("Update_status", 5);
+                int minutes = Preferences.LocalSettings.GetInt("Update_status", P4DataRetrievalPreferencesControl.Update_status_Default);
                 _refreshInterval = TimeSpan.FromMinutes(minutes);
 
                 if ((_scm != null) && (_scm.SccService != null))
@@ -125,7 +122,7 @@ namespace Perforce.P4Scm
                     OnUpdatedFiles += new UpdatedFiles_Delegate(_scm.OnCacheFilesUpdated);
                 }
             }
-        }
+		}
 
         public int Count
         {
@@ -504,11 +501,20 @@ namespace Perforce.P4Scm
 						}
 					}
 
+					if (!Directory.Exists(directoryPath))
+					{
+						// Due to <Link> sections in the csproj, there are files which are not present at the expected physical folder (on where fstat is being called here).
+						// Those are included in the project/solution from outside physical folders.
+						// So as the file is not present at expected physical location, fstat call becomes redundant.
+						LogFile.LogMessage((int)FileLogger.FileLogLevel.Debug, "P4ScmCache", string.Format("Directory path '{0}' does not exist. So avoiding fstat call.", directoryPath));
+						return null;
+					}
+
 					P4.Options opts = new P4.Options();
 					opts["-Olhp"] = null;
 					opts["-m"] = "100000";
                     logger.Trace("WorkspaceRoot: {0}", _scm.Connection.WorkspaceRoot);
-                    
+
 					IList<P4.FileMetaData> files =
 						_repository.GetFileMetaData(opts, P4.FileSpec.LocalSpec(fileSpec));
 
@@ -609,7 +615,7 @@ namespace Perforce.P4Scm
 			add
 			{
 				_onUpdatedFiles += value;
-				if (RefreshThread == null)
+				if (RefreshThread == null && (Preferences.LocalSettings.GetBool("OptimizeSolutionLoad", false) == false))
 				{
 					ThreadStart refreshThreadProc = null;
 					if (Preferences.LocalSettings.GetBool("TreatProjectsAsFolders", true))
@@ -646,7 +652,7 @@ namespace Perforce.P4Scm
 				DateTime updateStarted = DateTime.Now;
 				while (_runRefreshThread)
 				{
-					int minutes = Preferences.LocalSettings.GetInt("Update_status", 5);
+					int minutes = Preferences.LocalSettings.GetInt("Update_status", P4DataRetrievalPreferencesControl.Update_status_Default);
                     logger.Trace("CWD: {0}", _scm.Connection.Repository.Connection.CurrentWorkingDirectory);
                     logger.Trace("Entering loop in RefreshFilesThreadProc, LoadingSolution:{0}, WaitTime: {1} ",
 						_scm.LoadingSolution, minutes);
@@ -779,7 +785,6 @@ namespace Perforce.P4Scm
                 logger.Warn("Refresh thread exception: {0}", ex.Message);
                 logger.Debug("Refresh thread exception: {0}", ex.StackTrace);
             }
-
 		}
 
 		private void RefreshFoldersThreadProc()
@@ -789,7 +794,7 @@ namespace Perforce.P4Scm
 				DateTime updateStarted = DateTime.Now;
 				while (_runRefreshThread)
 				{
-					int minutes = Preferences.LocalSettings.GetInt("Update_status", 5);
+					int minutes = Preferences.LocalSettings.GetInt("Update_status", P4DataRetrievalPreferencesControl.Update_status_Default);
 					logger.Trace("Entering loop in RefreshFoldersThreadProc, LoadingSolution:{0}, WaitTime: {1} ",
 						_scm.LoadingSolution, minutes);
 					if ((_scm.LoadingSolution) || (minutes < 1))
@@ -797,8 +802,8 @@ namespace Perforce.P4Scm
 						minutes = 0;
 
 						Thread.Sleep(15000); //sleep 15 seconds
-						// then check to see if the refresh interval has changed
-						// or the solution has completed loading
+											 // then check to see if the refresh interval has changed
+											 // or the solution has completed loading
 						continue;
 					}
 
@@ -812,22 +817,22 @@ namespace Perforce.P4Scm
 						{
 							if (_runRefreshThread == false)
 							{
-                                logger.Debug("Exiting refresh thread");
-                                return;
+								logger.Debug("Exiting refresh thread");
+								return;
 							}
 							Thread.Sleep(waitIncrement);
 							timeWaited += waitIncrement;
 						}
 					}
 					catch { }
-                    logger.Trace("Finished waiting for solution load or postive refresh interval in RefreshFoldersThreadProc");
+					logger.Trace("Finished waiting for solution load or postive refresh interval in RefreshFoldersThreadProc");
 					updateStarted = DateTime.Now;
 
 					try
 					{
 						if (_runRefreshThread == false)
 						{
-                            logger.Trace("Exiting refresh thread");
+							logger.Trace("Exiting refresh thread");
 							return;
 						}
 						if ((minutes > 0) && (cache.Count > 0) && (_onUpdatedFiles != null))
@@ -840,12 +845,12 @@ namespace Perforce.P4Scm
 								}
 							}
 							string[] directories = new string[CachedDirectories.Count];
-                            logger.Trace("Finished waiting for refresh interval in RefreshFoldersThreadProc, {0} folders in the cache", CachedDirectories.Count);
+							logger.Trace("Finished waiting for refresh interval in RefreshFoldersThreadProc, {0} folders in the cache", CachedDirectories.Count);
 							lock (cache)
 							{
-                                var keys = new List<string>();
-                                foreach (var k in CachedDirectories.Keys)
-                                    keys.Add(k.ToString());
+								var keys = new List<string>();
+								foreach (var k in CachedDirectories.Keys)
+									keys.Add(k.ToString());
 								keys.CopyTo(directories, 0);
 							}
 							int dirIdx = 0;
@@ -855,19 +860,19 @@ namespace Perforce.P4Scm
 								if (DateTime.Now - CachedDirectories[GetKey(directories[dirIdx])] > _refreshInterval)
 								{
 									string directory = CachedDirectories[GetKey(directories[dirIdx])];
-                                    logger.Trace("Checking for files to refresh in RefreshFoldersThreadProc in folder: {0}", directory);
+									logger.Trace("Checking for files to refresh in RefreshFoldersThreadProc in folder: {0}", directory);
 
-                                    IList<string> updatedfiles = AddDirectoryFilesToCache(directory, false);
+									IList<string> updatedfiles = AddDirectoryFilesToCache(directory, false);
 									if ((updatedfiles != null) && (updatedfiles.Count > 0))
 									{
-                                        logger.Trace("Found {0} files to refresh in RefreshFoldersThreadProc in folder: {1}", updatedfiles.Count, directory);
+										logger.Trace("Found {0} files to refresh in RefreshFoldersThreadProc in folder: {1}", updatedfiles.Count, directory);
 										Delegate[] targetList = _onUpdatedFiles.GetInvocationList();
 										foreach (UpdatedFiles_Delegate dlgRefreshProjectGlyphs in targetList)
 										{
 											if (_runRefreshThread == false)
 											{
-                                                logger.Trace("Exiting refresh thread");
-                                                return;
+												logger.Trace("Exiting refresh thread");
+												return;
 											}
 											try
 											{
@@ -884,17 +889,17 @@ namespace Perforce.P4Scm
 								dirIdx++;
 								if (dirIdx < dirCnt)
 								{
-                                    logger.Trace("Done updating files in RefreshFoldersThreadProc in folder: {0}", directories[dirIdx]);
-                                    Thread.Sleep(5000);
+									logger.Trace("Done updating files in RefreshFoldersThreadProc in folder: {0}", directories[dirIdx]);
+									Thread.Sleep(5000);
 								}
-                                else
-                                    logger.Trace("Done updating files in RefreshFoldersThreadProc");
-                            }
+								else
+									logger.Trace("Done updating files in RefreshFoldersThreadProc");
+							}
 						}
 					}
-			        catch (Exception ex) 
-                    {
-                        logger.Warn("Refresh thread exception: {0}", ex.Message);
+					catch (Exception ex)
+					{
+						logger.Warn("Refresh thread exception: {0}", ex.Message);
 					}
 				}
 			}

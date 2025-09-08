@@ -1217,7 +1217,7 @@ namespace Perforce.P4VS
 
             // Data retrieval options
 
-            prefs += "Update_status: " + Preferences.LocalSettings.GetInt("Update_status", 5).ToString() + "\n";
+            prefs += "Update_status: " + Preferences.LocalSettings.GetInt("Update_status", P4DataRetrievalPreferencesControl.Update_status_Default).ToString() + "\n";
             prefs += "Number_files: " + Preferences.LocalSettings.GetInt("Number_files", 1000).ToString() + "\n";
             prefs += "Size_files: " + Preferences.LocalSettings.GetInt("Size_files", 500).ToString() + "\n";
             prefs += "Number_specs: " + Preferences.LocalSettings.GetInt("Number_specs", 100).ToString() + "\n";

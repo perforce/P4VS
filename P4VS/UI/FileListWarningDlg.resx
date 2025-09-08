@@ -456,7 +456,7 @@ Would you like to get the latest revision before the checkout?</value>
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Helix</value>
+    <value>P4</value>
   </data>
   <data name="&gt;&gt;FileNameClm.Name" xml:space="preserve">
     <value>FileNameClm</value>

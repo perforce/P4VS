@@ -127,6 +127,6 @@
     <value>{0} fault hit counts</value>
   </data>
   <data name="HelixSubmittedChangelistCodeLensProvider" xml:space="preserve">
-    <value>Submitted Changelists (Helix)</value>
+    <value>Submitted Changelists (P4)</value>
   </data>
 </root>
