@@ -56,9 +56,9 @@ namespace Perforce.P4VS_StartPage
 		public static readonly Guid guidP4VsProviderPkg = new Guid("{BBBB4F8F-5EDA-4623-8BAC-644EC6501F97}");
 #else //VS2012
         // The guid of the source control provider package (implementing IVsPackage interface)
-        public static readonly Guid guidP4VsProviderPkg = new Guid("{8D316614-311A-48F4-85F7-DF7020F62357}");
+        public static readonly Guid guidP4VsProviderPkg = new Guid("{6C2C3283-424C-44B2-B1A7-B12D635DE7CF}");
 #endif
     // Other guids for menus and commands
-		public static readonly Guid guidP4VsProviderCmdSet = new Guid("{4C690E93-4B58-4866-B02C-6A9E5F0BD0F2}");
+		public static readonly Guid guidP4VsProviderCmdSet = new Guid("{5138FEA3-CFC3-4381-91F8-8F43BBD02A90}");
 	};
 }

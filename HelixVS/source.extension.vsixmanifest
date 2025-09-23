@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="P4VsProviderx64.Perforce.8D316614-311A-48F4-85F7-DF7020F62357" Version="2011.1" Language="en-US" Publisher="Perforce Software" />
+        <Identity Id="P4VsProviderx64.Perforce.6C2C3283-424C-44B2-B1A7-B12D635DE7CF" Version="2011.1" Language="en-US" Publisher="Perforce Software" />
         <DisplayName>P4VS - P4 for Visual Studio</DisplayName>
         <Description xml:space="preserve">P4VS is the P4 for Microsoft Visual Studio. P4VS provides developers working within Visual Studio access to P4 version control features, including check in/check out, view file history, and more.</Description>
         <MoreInfo>http://www.perforce.com/product/components/visual-studio-plug-in</MoreInfo>

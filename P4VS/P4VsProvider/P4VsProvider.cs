@@ -57,6 +57,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Linq;
+using System.Drawing;
 using MsVsShell = Microsoft.VisualStudio.Shell;
 using ErrorHandler = Microsoft.VisualStudio.ErrorHandler;
 using Perforce.P4Scm;
@@ -67,6 +68,7 @@ using Perforce.P4VS.InfoBar;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Settings;
 using Microsoft.VisualStudio.Shell.Settings;
+using Microsoft.VisualStudio.Setup.Configuration;
 
 namespace Perforce.P4VS
 {
@@ -165,7 +167,7 @@ namespace Perforce.P4VS
     [@ProvideSourceControlProvider("P4VS - P4 for Visual Studio", "#100")]
     //[MsVsShell.ProvideSourceControlProvider("P4VS - Helix Plugin for Visual Studio", "#100",
     //       "{FDA934F4-0492-4F67-A6EB-CBE0953649F0}",
-    //       "{8D316614-311A-48F4-85F7-DF7020F62357}",
+    //       "{6C2C3283-424C-44B2-B1A7-B12D635DE7CF}",
     //       "{93C6B80C-A9E4-4F63-A605-51E7FCB9F906}", IsPublishSupported = false)]
 
     // Pre-load the package when the command UI context is asserted (the provider will be automatically loaded after restarting the shell if it was active last time the shell was shutdown)
@@ -183,7 +185,7 @@ namespace Perforce.P4VS
 	[Guid("BBBB4F8F-5EDA-4623-8BAC-644EC6501F97")]
 #else //VS2012
     // Declare the package guid
-	[Guid("8D316614-311A-48F4-85F7-DF7020F62357")]
+	[Guid("6C2C3283-424C-44B2-B1A7-B12D635DE7CF")]
 #endif
     public sealed class P4VsProvider : Action,
 		IVsInstalledProduct,
@@ -249,11 +251,167 @@ namespace Perforce.P4VS
 			return base.GetService(serviceType);
 		}
 
+        private System.Windows.Forms.DialogResult ShowUninstallDialog(string iconPath)
+        {
+            iconPath = iconPath + System.IO.Path.DirectorySeparatorChar + "p4vs11-32px.png";
+
+            using (Form dialog = new Form())
+            {
+                dialog.Text = "  P4VS Extension Conflict";
+                dialog.FormBorderStyle = FormBorderStyle.FixedDialog;
+                dialog.StartPosition = FormStartPosition.CenterParent;
+                dialog.MaximizeBox = false;
+                dialog.MinimizeBox = false;
+                dialog.AutoSize = true;
+                dialog.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                dialog.Padding = new Padding(12);
+
+                try
+                {
+                    using (var bmp = new Bitmap(iconPath)) // load PNG
+                    {
+                        IntPtr hIcon = bmp.GetHicon();
+                        dialog.Icon = Icon.FromHandle(hIcon);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    logger.Info("ShowUninstallDialogWithLogo failed to load logo: {0}", ex.Message);
+                }
+
+                //Preparing uninstall message for dialog
+                Label message = new Label();
+                message.Text = "An older version of the Helix P4VS extension is already installed.\n" +
+                               "To continue with this installation, the older extension must be removed\n" +
+                               "to prevent conflicts or unexpected behavior.\n\n" +
+                               "Visual Studio will need to be closed during the uninstallation process.\n" +
+                               "Would you like to uninstall the older version now?";
+                message.AutoSize = true;
+                message.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular);
+                message.MaximumSize = new System.Drawing.Size(480, 0);
+                message.Location = new System.Drawing.Point(20, 20);
+                dialog.Controls.Add(message);
+
+                // Calculate right-aligned button positions
+                int buttonTop = message.Bottom + 24;
+                int buttonSpacing = 10;
+                int buttonWidth = 90;
+                int buttonHeight = 32;
+
+                //Creating buttons for extension popup dialog
+
+                Button noButton = new Button();
+                noButton.Text = "No";
+                noButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular);
+                noButton.Size = new System.Drawing.Size(buttonWidth, buttonHeight);
+                noButton.Location = new System.Drawing.Point(message.Left + message.MaximumSize.Width - buttonWidth, buttonTop);
+                noButton.DialogResult = System.Windows.Forms.DialogResult.No;
+                dialog.Controls.Add(noButton);
+
+                Button yesButton = new Button();
+                yesButton.Text = "Yes";
+                yesButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular);
+                yesButton.Size = new System.Drawing.Size(buttonWidth, buttonHeight);
+                yesButton.Location = new System.Drawing.Point(noButton.Left - buttonWidth - buttonSpacing, buttonTop);
+                yesButton.DialogResult = System.Windows.Forms.DialogResult.Yes;
+                dialog.Controls.Add(yesButton);
+
+                dialog.AcceptButton = yesButton;
+                dialog.CancelButton = noButton;
+
+                return dialog.ShowDialog();
+            }
+        }
+
+        private void CheckAndUninstallHelixExtension()
+        {
+            const string oldHelixExtensionId = "P4VsProviderx64.Perforce.8D316614-311A-48F4-85F7-DF7020F62357";
+
+            try
+            {
+                string vsixInstallerPath = null;
+                string vsVersion = null;
+                string iconPath = null;
+                bool isOldExtensionFound = false;
+
+                try
+                {
+                    var setupConfig = new SetupConfiguration();
+                    var instance = (ISetupInstance2)setupConfig.GetInstanceForCurrentProcess();
+
+                    string installPath = instance.GetInstallationPath();
+                    vsixInstallerPath = System.IO.Path.Combine(installPath, "Common7", "IDE", "VSIXInstaller.exe");
+
+                    // VS version: "17.0", "16.0", "15.0" ...
+                    vsVersion = new Version(instance.GetInstallationVersion()).Major + ".0";
+
+                    // Check extension manifests under Extensions path
+                    string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                    string instanceId = instance.GetInstanceId();
+                    string extensionsPath = System.IO.Path.Combine(localAppData, "Microsoft", "VisualStudio", vsVersion + "_" + instanceId, "Extensions");
+
+                    if (!Directory.Exists(extensionsPath))
+                        return;
+
+                    foreach (string dir in Directory.GetDirectories(extensionsPath, "*", SearchOption.AllDirectories))
+                    {
+                        //Checking for product GUID in manifest to confirm old Helix extension exists
+                        string manifestPath = System.IO.Path.Combine(dir, "extension.vsixmanifest");
+                        if (File.Exists(manifestPath))
+                        {
+                            string manifestContent = File.ReadAllText(manifestPath);
+                            if (manifestContent.Contains(oldHelixExtensionId))
+                                isOldExtensionFound = true;
+                            else if (manifestContent.Contains("P4VsProviderx64.Perforce.6C2C3283-424C-44B2-B1A7-B12D635DE7CF"))
+                                iconPath = dir;
+
+                            if (isOldExtensionFound && !string.IsNullOrEmpty(iconPath))
+                                break;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    logger.Info("Error locating P4VS Helix extension: {0}", ex.Message);
+                    return;
+                }
+
+                if (!isOldExtensionFound)
+                    return;
+
+                var result = ShowUninstallDialog(iconPath);
+
+                if (result == System.Windows.Forms.DialogResult.Yes && !string.IsNullOrEmpty(vsixInstallerPath))
+                {
+                    // Using vsixInstaller executable to uninstall the Helix extension
+                    string args = $"/u:{oldHelixExtensionId}";
+                    System.Diagnostics.Process.Start(vsixInstallerPath, args);
+                    logger.Info("Uninstallating P4VS Helix extension: {0}", vsixInstallerPath);
+                }
+
+                return;
+            }
+            catch (Exception ex)
+            {
+                logger.Info("Error checking for P4VS Helix extension: {0}", ex.Message);
+            }
+        }
+
         private uint _EventSinkCookie;
         protected override void Initialize()
 		{
             try
             {
+                try
+                {
+                    // Check for old Helix extension before proceeding
+                    CheckAndUninstallHelixExtension();
+                }
+                catch (Exception ex)
+                {
+                    // Log the error but continue initialization
+                    logger.Info("CheckAndUninstallHelixExtension failed: {0}", ex.Message);
+                }
                 // load the local settings
                 Preferences.Initialize();
                 Preferences.LocalSettings.Load(null);

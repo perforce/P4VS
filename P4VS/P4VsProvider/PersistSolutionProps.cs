@@ -34,7 +34,7 @@ namespace Perforce.P4VS
 #else  //VS2012
         // The name of this provider (to be written in solution and project files)
         // As a best practice, to be sure the provider has an unique name, a guid like the provider guid can be used as a part of the name
-        private const string _strProviderName = "Perforce Source Control Provider:{8D316614-311A-48F4-85F7-DF7020F62357}";
+        private const string _strProviderName = "Perforce Source Control Provider:{6C2C3283-424C-44B2-B1A7-B12D635DE7CF}";
 #endif
 
         // IVsPersistSolutionProps::LoadUserOptions

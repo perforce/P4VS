@@ -123,14 +123,14 @@
 			<Menu guid="guidP4VsProviderCmdSet" id="itbrSccConnectionToolbar" priority="0x0000" type="Toolbar">
 				<Parent guid="guidP4VsProviderCmdSet" id="igrpSccNowhere"/>
 				<Strings>
-					<ButtonText>P4Connection</ButtonText>
+					<ButtonText>P4 Connection</ButtonText>
 					<CommandName>P4 Connection</CommandName>
 				</Strings>
 			</Menu>
       <Menu guid="guidP4VsProviderCmdSet" id="itbrSccToolWindowToolbar" priority="0x0000" type="Toolbar">
         <Parent guid="guidP4VsProviderCmdSet" id="igrpSccNowhere"/>
         <Strings>
-          <ButtonText>P4Views</ButtonText>
+          <ButtonText>P4 Views</ButtonText>
           <CommandName>P4 Views</CommandName>
         </Strings>
       </Menu>
@@ -1277,8 +1277,8 @@
     key1="1" mod1="Control" />
   </KeyBindings>-->
 	<Symbols>
-		<GuidSymbol name="guidP4VsProviderPkg" value="{8D316614-311A-48F4-85F7-DF7020F62357}" />
-    <GuidSymbol name="guidP4VsProviderCmdSet" value="{4C690E93-4B58-4866-B02C-6A9E5F0BD0F2}" >
+		<GuidSymbol name="guidP4VsProviderPkg" value="{6C2C3283-424C-44B2-B1A7-B12D635DE7CF}" />
+    <GuidSymbol name="guidP4VsProviderCmdSet" value="{5138FEA3-CFC3-4381-91F8-8F43BBD02A90}" >
 		
       <!-- View Menu 100-10F -->
 			<IDSymbol name="icmdViewWorkspaceToolWindow" value="0x100"/>
