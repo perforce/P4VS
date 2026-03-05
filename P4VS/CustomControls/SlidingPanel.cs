@@ -60,7 +60,7 @@ namespace Perforce.P4VS
 					}
 					else
 					{
-						_showBtn.ForeColor = SystemColors.ControlText;
+						_showBtn.ForeColor = this.ForeColor;
 					}
 				}
 			}
@@ -189,7 +189,7 @@ namespace Perforce.P4VS
 			}
 			else
 			{
-				_showBtn.ForeColor = SystemColors.ControlText;
+				_showBtn.ForeColor = this.ForeColor;
 			}
 			Collapse();
 			SlidingPanelContainer parent = this.Parent as SlidingPanelContainer;

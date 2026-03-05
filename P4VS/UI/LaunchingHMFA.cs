@@ -13,7 +13,7 @@ using System.Windows;
 namespace Perforce.P4VS.UI
 {
 
-    public partial class LaunchingHMFA : Form
+    public partial class LaunchingHMFA : Perforce.P4VS.AutoSizeForm
     {
         internal string user = "";
         internal string port = "";

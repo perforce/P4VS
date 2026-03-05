@@ -121,7 +121,7 @@
     <value>P4VS - P4 for Visual Studio</value>
   </data>
   <data name="101" xml:space="preserve">
-    <value>This package implements the Helix Plugin for Visual Studio.</value>
+    <value>This package implements the P4 for Visual Studio.</value>
   </data>
   <data name="ApplyProviderOptions" xml:space="preserve">
     <value>Press Cancel to cancel this OnApply.  OK to continue</value>

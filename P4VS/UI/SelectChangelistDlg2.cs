@@ -509,7 +509,7 @@ namespace Perforce.P4VS
             }
             if (OkBtn.Enabled)
             {
-                label1.ForeColor = SystemColors.ControlText;
+                label1.ForeColor = this.ForeColor;
             }
             else
             {
@@ -528,7 +528,7 @@ namespace Perforce.P4VS
             }
             if (OkBtn.Enabled)
             {
-                label1.ForeColor = SystemColors.ControlText;
+                label1.ForeColor = this.ForeColor;
             }
             else
             {

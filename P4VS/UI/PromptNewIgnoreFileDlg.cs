@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Perforce.P4VS
 {
-	public partial class PromptNewIgnoreFileDlg : Form
+	public partial class PromptNewIgnoreFileDlg : AutoSizeForm
 	{
 		public new static bool Show()
 		{

@@ -1,7 +1,7 @@
                            Release Notes for
                 P4VS, the P4 for Visual Studio
 
-                            Version 2025.1
+                            Version 2025.2
 
 Introduction
 
@@ -18,8 +18,9 @@ Compatibility Statements
 
         Server Compatibility
 
-          This release of P4VS supports the 2025.1 P4 Server.
-          Older releases might work but are not supported.
+          This release of P4VS is compatible with P4 Server 2022.2 through 2025.2.
+          Earlier P4 Server versions may continue to work but are not actively
+          supported and are handled on a best-effort basis.
 
         Platform Compatibility
 
@@ -29,15 +30,10 @@ Compatibility Statements
 
         Visual Studio Compatibility
 
-          P4VS supports Visual Studio 2015 and later.
+          P4VS supports Visual Studio 2017 and later.
 
           It is important to make sure your Visual Studio installation
           has been updated to the latest available service pack.
-
-        Compatibility with Previous Releases
-
-          Unless otherwise stated below, this release of P4VS is compatible with
-          previous releases of P4.
 
         Installation
 
@@ -144,12 +140,6 @@ Compatibility Statements
           third parties. License information can be found in LICENSE.txt which
           can be accessed via the License link in the vsix installer.
 
----------------------------------------------------------------------------
-Important End-of-Life Notice
-
-        This major release of P4 for Visual Studio would be the last to support 
-        'Visual Studio 2015'. This is part of our commitment to focus 
-        on supported IDE platforms.
 
 ---------------------------------------------------------------------------
 
@@ -169,6 +159,37 @@ Key to symbols used in change notes below.
           * -- requires new P4VS
          ** -- requires new p4d server program
          
+---------------------------------------------------------------------------
+
+New Functionality in 2025.2 (2025.2/2901596) (2026/02/26)
+
+        #2891068,2891366 (Job #131104) *
+            Upgraded P4 Code Review API calls to v11 for all
+            P4 code review operations.
+      
+        #2883579 (Job #129455) *
+            Avoided unnecessary fstat calls for files and projects
+            outside the current workspace to improve performance.
+
+        #2895620,2897046 (Job #129433) *
+            Enhanced theme compatibility across P4VS dialogs so that they
+            now reflect the currently selected Visual Studio theme,
+            improving overall consistency.
+
+        #2894527 (Job #129434) *
+            Removed the prompt to mark the solution file for
+            addition when opening a solution if the file is ignored.
+
+        #2883578 (Jobs #130652) *
+            Fixed the History window so it only refreshes when needed
+            and always shows the history for the selected file.
+
+        #2897084 (Job #131090) *
+            Removed support for Visual Studio 2015.
+
+        (Job #128782) * **
+            P4VS now uses latest P4API.NET 2025.2.
+
 ---------------------------------------------------------------------------
 
 New Functionality in 2025.1

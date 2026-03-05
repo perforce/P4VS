@@ -210,44 +210,50 @@ namespace Perforce.P4Scm
 			{
 				return false;
 			}
-			SwarmApi.SwarmServer.ReviewList l = null;
 			try
 			{
 				bool success = false;
-				List<int> changeIds = null;
-
                 SwarmApi.SwarmServer sw = new SwarmApi.SwarmServer(Connection.Swarm.SwarmUrl, Connection.User, Connection.Swarm.SwarmPassword);
 
-				int[] allChangeIds = changes.Keys.ToArray();
+                // Use a set to track which changes have been updated to avoid redundant queries
+                HashSet<int> processedChanges = new HashSet<int>();
 
-				int idx = 0;
-				while (idx < allChangeIds.Length)
+                List<int> changeIds = new List<int>(changes.Keys);
+
+                foreach (int changeId in changeIds)
 				{
-					changeIds = new List<int>();
-					int cnt = 0;
-					while ((idx < allChangeIds.Length) && (cnt < 50))
-					{
-						changeIds.Add(allChangeIds[idx++]);
-						cnt++;
-					}
-					SwarmApi.Options ops = new SwarmApi.Options();
-					ops["change[]"] = new JSONParser.JSONArray(changeIds.ToArray());
+                    if (processedChanges.Contains(changeId)) continue;
 
-					l = sw.GetReviews(ops);
-					if ((l != null) && (l.Count > 0) && (l[0] != null) && (l[0] is SwarmApi.SwarmServer.Review))
+					try
 					{
-						foreach (SwarmApi.SwarmServer.Review r in l)
+						SwarmApi.Options ops = new SwarmApi.Options();
+						// Swarm v11: Use keywords and keywordsFields to filter by change
+						ops["keywords"] = new JSONParser.JSONStringField(changeId.ToString());
+						ops["keywordsFields[]"] = new JSONParser.JSONArray(new string[] { "changes" });
+
+						SwarmApi.SwarmServer.ReviewList l = sw.GetReviews(ops);
+
+						if ((l != null) && (l.Count > 0))
 						{
-							foreach (int c in r.changes)
+							foreach (SwarmApi.SwarmServer.Review r in l)
 							{
-								if (changes.ContainsKey(c))
+								if (r.changes != null)
 								{
-									changes[c] = r;
+									foreach (int c in r.changes)
+									{
+										if (changes.ContainsKey(c))
+										{
+											changes[c] = r;
+											processedChanges.Add(c);
+											success = true;
+										}
+									}
 								}
 							}
 						}
-						success = true;
 					}
+					catch
+					{ }
 				}
 				return success;
 			}
@@ -511,6 +517,28 @@ namespace Perforce.P4Scm
 			return null;
 		}
 
+		public bool IsFileInWorkspace(string file)
+		{
+			if (string.IsNullOrEmpty(file) || string.IsNullOrEmpty(Connection.WorkspaceRoot))
+				return false;
+			
+			try
+			{
+				string wsRoot = Path.GetFullPath(Connection.WorkspaceRoot.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
+				string filePath = Path.GetFullPath(file);
+				
+				if (!wsRoot.EndsWith(Path.DirectorySeparatorChar.ToString()))
+					wsRoot += Path.DirectorySeparatorChar;
+				
+				return filePath.StartsWith(wsRoot, StringComparison.OrdinalIgnoreCase);
+			}
+			catch
+			{
+			    // If any exception occurs, treat as its in workspace
+			    return true;
+			}
+		}
+		
 		public IList<P4.FileMetaData> GetFileMetaData(IList<string> paths, P4.Options options)
 		{
 			if (Offline)
@@ -602,12 +630,17 @@ namespace Perforce.P4Scm
 
                 if (!string.IsNullOrEmpty(Connection.WorkspaceRoot))
 				{
-                    string wsRoot = Connection.WorkspaceRoot.ToLower();
-
 					foreach (string file in files)
 					{
-						if ((FileCache.ContainsKey(file) == false) && (file.ToLower().StartsWith(wsRoot)))
+						if ((FileCache.ContainsKey(file) == false) && IsFileInWorkspace(file))
 							fileList.Add(P4.FileSpec.LocalSpec(file));
+						else if (!IsFileInWorkspace(file))
+						{
+							// File is not in the workspace, so set its cache entry to null.
+							// This avoids unnecessary GetFileMetaData calls for files outside the workspace.
+							
+							FileCache.Set(file, null);
+						}
 					}
 				}
 
@@ -641,16 +674,16 @@ namespace Perforce.P4Scm
 					{
 						var batch = fileList.Skip(i).Take(batchSize).ToList();
 
-					P4.Options options = new P4.Options();
-					options["-Olhp"] = null;
+						P4.Options options = new P4.Options();
+						options["-Olhp"] = null;
 						IList<P4.FileMetaData> fileMetdata = Connection.Repository.GetFileMetaData(batch, options);
 
-					if (fileMetdata != null)
-					{
-						FileCache.AddFileMetaData(fileMetdata);
+						if (fileMetdata != null)
+						{
+							FileCache.AddFileMetaData(fileMetdata);
+						}
 					}
 				}
-			}
 			}
 			catch (Exception ex)
 			{
@@ -674,8 +707,7 @@ namespace Perforce.P4Scm
 				}
 				if (!string.IsNullOrEmpty(Connection.WorkspaceRoot) && Connection.WorkspaceRoot.ToLower() != "null")
 				{
-					string wsRoot = Connection.WorkspaceRoot.ToLower();
-					if ((FileCache.ContainsKey(file) == false) && (file.ToLower().StartsWith(wsRoot) == false))
+					if ((FileCache.ContainsKey(file) == false) && !IsFileInWorkspace(file))
 					{
 						FileCache.Set(file, null);
 					}
@@ -767,6 +799,17 @@ namespace Perforce.P4Scm
 					continue;
 				}
 				string file = f;
+				if (IsFileInWorkspace(file))
+					oldFiles.Add(file);
+				else
+				{
+					// File is not in the workspace, so set its cache entry to null.
+					// This avoids unnecessary GetFileMetaData calls for files outside the workspace.
+					
+					FileCache.Set(file, null);
+					continue;
+				}
+				
 				if (file.EndsWith("\\..."))
 				{
 					// strip off the \...
@@ -812,35 +855,35 @@ namespace Perforce.P4Scm
 			for (int i = 0; i < oldFiles.Count; i += batchSize)
 			{
 				var batch = oldFiles.Skip(i).Take(batchSize).ToList();
-			IList<P4.FileMetaData> fileMetdata = null;
-			try
-			{
-				P4.Options options = new P4.Options();
-				options["-Olhp"] = null;
+				IList<P4.FileMetaData> fileMetdata = null;
+				try
+				{
+					P4.Options options = new P4.Options();
+					options["-Olhp"] = null;
 					fileMetdata = Connection.Repository.GetFileMetaData(options, P4.FileSpec.LocalSpecArray(batch));
-			}
-			catch (Exception ex)
-			{
-				// If the error is because the repository is now null, it means
-				// the connection was closed in the middle of a command, so ignore it.
-                if (Connection.Repository != null)
-				{
-					ShowException(ex, false, true, (Preferences.LocalSettings.GetBool("Log_reporting", false) == true));
 				}
-				return;
-			}
-			if (fileMetdata != null)
-			{
-				FileCache.AddFileMetaData(fileMetdata);
-			}
-			else
-			{
+				catch (Exception ex)
+				{
+					// If the error is because the repository is now null, it means
+					// the connection was closed in the middle of a command, so ignore it.
+					if (Connection.Repository != null)
+					{
+						ShowException(ex, false, true, (Preferences.LocalSettings.GetBool("Log_reporting", false) == true));
+					}
+					return;
+				}
+				if (fileMetdata != null)
+				{
+					FileCache.AddFileMetaData(fileMetdata);
+				}
+				else
+				{
 					foreach (string path in batch)
-				{
-					FileCache.Set(path, null);
+					{
+						FileCache.Set(path, null);
+					}
 				}
 			}
-		}
 		}
 
 		public IList<string> UpdateDepotFiles(IList<string> files)
@@ -925,6 +968,14 @@ namespace Perforce.P4Scm
 		{
 			if ((Offline) || (string.IsNullOrEmpty(file)))
 			{
+				return null;
+			}
+			if (!IsFileInWorkspace(file))
+			{
+				// File is not in the workspace, so set its cache entry to null.
+				// This avoids unnecessary GetFileMetaData calls for files outside the workspace.
+				
+				FileCache.Set(file, null);
 				return null;
 			}
 			if (!LoadingSolution && (forceUpdate || !FileCache.CacheIsFresh(file, TimeSpan.FromSeconds(60))))
@@ -1903,11 +1954,11 @@ namespace Perforce.P4Scm
 				const int batchSize = 500;
 				List<P4.FileSpec> allOpenedFiles = new List<P4.FileSpec>();
 				List<P4.P4CommandResult> allResults = new List<P4.P4CommandResult>();
-
+				
 				P4.Options options = new P4.Options();
 				if (changelistID > 0)
 				{
-					options = new P4.Options(P4.AddFilesCmdFlags.None,changelistID, null);
+					options = new P4.Options(P4.AddFilesCmdFlags.None, changelistID, null);
 				}
 				
 				options["-f"] = null;
@@ -1921,11 +1972,11 @@ namespace Perforce.P4Scm
 					
 					if (openedFiles != null)
 						allOpenedFiles.AddRange(openedFiles);
-
+					
 					if (batchResult != null)
 						allResults.Add(batchResult);
 				}
-
+				
 				if (allResults.Count > 0)
 				{
 					P4ErrorDlg.Show(allResults[allResults.Count - 1], false);
@@ -1935,9 +1986,9 @@ namespace Perforce.P4Scm
 				if (changelistID <= -1 && allOpenedFiles.Count > 0)
 				{
 					var newChange = MoveFilesToChangeList(changelistID, newChangeDescription, allOpenedFiles);
-					if (newChange!=null)
+					if (newChange != null)
 						return newChange.Id;
-					}
+				}
 				BroadcastChangelistUpdate(this, new ChangelistUpdateArgs(changelistID, ChangelistUpdateArgs.UpdateType.ContentUpdate));
 			}
 			catch (ThreadAbortException)
@@ -1947,19 +1998,19 @@ namespace Perforce.P4Scm
 			}
 			catch (Exception ex)
 			{
-                // If the error is because the repository is now null, it means
-                // the connection was closed in the middle of a command, so ignore it.
-                if (Connection.Repository != null)
-                {
-                    if ((ex is P4.P4Exception) && (((P4.P4Exception)ex).ErrorCode == P4.P4ClientError.MsgDb_NotUnderRoot))
-                    {
-                        P4VsOutputWindow.AppendMessage(ex.Message);
-                    }
-                    else
-                    {
-                        ShowException(ex);
-                    }
-                }
+				// If the error is because the repository is now null, it means
+				// the connection was closed in the middle of a command, so ignore it.
+				if (Connection.Repository != null)
+				{
+					if ((ex is P4.P4Exception) && (((P4.P4Exception)ex).ErrorCode == P4.P4ClientError.MsgDb_NotUnderRoot))
+					{
+						P4VsOutputWindow.AppendMessage(ex.Message);
+					}
+					else
+					{
+						ShowException(ex);
+					}
+				}
 				return -2;
 			}
 
@@ -3755,7 +3806,7 @@ namespace Perforce.P4Scm
 			{
 				try
 				{
-                    if (file.StartsWith(Connection.WorkspaceRoot, StringComparison.OrdinalIgnoreCase) == false)
+					if (!IsFileInWorkspace(file))
 					{
 						return false;
 					}

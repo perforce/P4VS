@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Perforce.P4VS
 {
-    public partial class QueryEditSyncWarningDlg : Form
+    public partial class QueryEditSyncWarningDlg : Perforce.P4VS.AutoSizeForm
     {
         private QueryEditSyncWarningDlg()
         {

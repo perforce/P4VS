@@ -1,4 +1,4 @@
-Copyright (c) 2025, Perforce Software, Inc. All rights reserved.
+Copyright (c) 2026, Perforce Software, Inc. All rights reserved.
 
 
 BY INSTALLING OR DOWNLOADING THE SOFTWARE, YOU ARE ACCEPTING AND AGREEING TO THE TERMS OF
@@ -191,7 +191,7 @@ microsoft.build.framework.16.5.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c44642ba-e43d-41fa-90f1-bdbf399ecb43
+    Reference:   https://www.nuget.org/packages/Microsoft.Build.Framework/16.5.0
     Author:      Microsoft Corporation
 
 microsoft.codeanalysis.bannedapianalyzers.3.3.2.nupkg
@@ -208,16 +208,16 @@ microsoft.codeanalysis.bannedapianalyzers.3.3.2.nupkg
 microsoft.csharp.4.7.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/bc95aea5-1618-4850-9d2b-59bbc8eb24b6
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bc95aea5-1618-4850-9d2b-59bbc8eb24b6
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/bc95aea5-1618-4850-9d2b-59bbc8eb24b6
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bc95aea5-1618-4850-9d2b-59bbc8eb24b6
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/8bb96e75-3536-4c78-9ab9-43c2bc9b2a11
+    Reference:   https://www.nuget.org/packages/Microsoft.CSharp/4.7.0
     Author:      Microsoft Corporation
 
 microsoft.servicehub.analyzers.3.0.3078.nupkg
@@ -425,12 +425,12 @@ microsoft.visualstudio.setup.configuration.interop.3.0.4492.nupkg
 microsoft.visualstudio.taskrunnerexplorer.14.0.14.0.0.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/2f733785-6c5a-4f84-bc57-1056f3f9f46a
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2f733785-6c5a-4f84-bc57-1056f3f9f46a
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/2f733785-6c5a-4f84-bc57-1056f3f9f46a
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2f733785-6c5a-4f84-bc57-1056f3f9f46a
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.telemetry.16.3.176.nupkg
@@ -577,18 +577,18 @@ microsoft.visualstudio.web.browserlink.12.0.12.0.0.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3d05d905-0f5c-4730-8756-b743af194b5c
+    Reference:   https://www.nuget.org/packages/Microsoft.VisualStudio.Web.BrowserLink.12.0/12.0.0
     Author:      Microsoft Corporation
 
 microsoft.win32.primitives.4.3.0.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/04d48f6c-3079-478f-ad5c-75f9d465e595
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/04d48f6c-3079-478f-ad5c-75f9d465e595
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/Microsoft.Win32.Primitives/4.3.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/56d158c8-e9e2-43ca-b90d-0184b7a6ff4b
     Author:      Microsoft Corporation
 
 microsoft.win32.registry.4.5.0.nupkg
@@ -609,12 +609,12 @@ microsoft.win32.registry.4.5.0.nupkg
 microsoft.win32.registry.5.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/552e1743-602f-446b-b284-4a2c1117ad84
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/552e1743-602f-446b-b284-4a2c1117ad84
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/552e1743-602f-446b-b284-4a2c1117ad84
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/552e1743-602f-446b-b284-4a2c1117ad84
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
@@ -622,18 +622,18 @@ microsoft.win32.registry.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/32bf4fe5-92a2-4ad7-9704-66b0d8ff436e
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/32bf4fe5-92a2-4ad7-9704-66b0d8ff436e
     Author:      Microsoft Corporation
 
 netstandard.library.1.6.1.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/55bd8cc5-9ead-4ec7-8c6f-4670103158ea
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/55bd8cc5-9ead-4ec7-8c6f-4670103158ea
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/9945fe8f-3c1a-46aa-b9fa-d48cec8e703d
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9945fe8f-3c1a-46aa-b9fa-d48cec8e703d
     Author:      Microsoft Corporation
 
 newtonsoft.json.13.0.1.nupkg
@@ -705,22 +705,22 @@ streamjsonrpc.2.8.28.nupkg
 system.buffers.4.5.1.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/98064bcc-a0b8-4378-9d29-d1d4da985033
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/98064bcc-a0b8-4378-9d29-d1d4da985033
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/98064bcc-a0b8-4378-9d29-d1d4da985033
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/98064bcc-a0b8-4378-9d29-d1d4da985033
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/31cc977f-4723-4d5c-b899-a469f345f144
+    Reference:   https://www.nuget.org/packages/System.Buffers/4.5.1
     Author:      Microsoft Corporation
 
 system.collections.immutable.5.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/073c0d83-7342-4a1f-b93c-7e1142631b67
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/073c0d83-7342-4a1f-b93c-7e1142631b67
     LicenseText: License Text Under Appendix
 
   Copyrights:
@@ -729,26 +729,26 @@ system.collections.immutable.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/073c0d83-7342-4a1f-b93c-7e1142631b67
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/073c0d83-7342-4a1f-b93c-7e1142631b67
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/b686b382-d186-4dc0-b5f8-39c86d7541db
+    Reference:   https://www.nuget.org/packages/System.Collections.Immutable/5.0.0
     Author:      Microsoft Corporation
 
 system.componentmodel.composition.4.5.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/1eec1045-4c89-464e-b406-9b4ea35cd836
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1eec1045-4c89-464e-b406-9b4ea35cd836
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/1eec1045-4c89-464e-b406-9b4ea35cd836
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1eec1045-4c89-464e-b406-9b4ea35cd836
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/2edeebf6-50e3-4fb5-b8b8-6dccb5889cf8
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2edeebf6-50e3-4fb5-b8b8-6dccb5889cf8
     Author:      Microsoft Corporation
 
 system.configuration.configurationmanager.4.5.0.nupkg
@@ -763,7 +763,7 @@ system.configuration.configurationmanager.4.5.0.nupkg
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/System.Configuration.ConfigurationManager/4.5.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8303aeff-6eb6-4c51-86cb-5a1e8af96a30
     Author:      Microsoft Corporation
 
 system.diagnostics.performancecounter.5.0.1.nupkg
@@ -799,38 +799,38 @@ system.diagnostics.process.4.3.0.nupkg
 system.diagnostics.tracesource.4.3.0.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/27a0b1ba-caf7-421b-bc23-eca179d935a0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/27a0b1ba-caf7-421b-bc23-eca179d935a0
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/c9a2f1a2-672a-49b9-ad5f-cbed2dc2af6b
+    Reference:   https://www.nuget.org/packages/System.Diagnostics.TraceSource/4.3.0
     Author:      Microsoft Corporation
 
 system.diagnostics.tracing.4.3.0.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5751dda5-a231-41af-86a0-b1a1d74a1512
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5751dda5-a231-41af-86a0-b1a1d74a1512
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/915be5f2-00d4-45f4-9db1-f78c9dc13d15
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/915be5f2-00d4-45f4-9db1-f78c9dc13d15
     Author:      Microsoft Corporation
 
 system.io.filesystem.accesscontrol.4.5.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5a8a8d28-6f24-47fd-b09c-8c0730c4e323
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5a8a8d28-6f24-47fd-b09c-8c0730c4e323
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5a8a8d28-6f24-47fd-b09c-8c0730c4e323
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5a8a8d28-6f24-47fd-b09c-8c0730c4e323
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/52d0be0a-7cf0-42b2-81d5-5634f2f9c72b
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/52d0be0a-7cf0-42b2-81d5-5634f2f9c72b
     Author:      Microsoft Corporation
 
 system.io.filesystem.accesscontrol.5.0.0.nupkg
@@ -855,18 +855,18 @@ system.io.filesystem.accesscontrol.5.0.0.nupkg
 system.io.pipes.4.3.0.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/d21b05ab-2fb2-4a06-9f5f-43850c810061
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d21b05ab-2fb2-4a06-9f5f-43850c810061
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/5b3bf1d4-4309-40df-a3b4-045438672496
+    Reference:   https://www.nuget.org/packages/System.IO.Pipes/4.3.0
     Author:      Microsoft Corporation
 
 system.management.5.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/29b07811-9713-42b3-90d6-573af042e86b
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/29b07811-9713-42b3-90d6-573af042e86b
     LicenseText: License Text Under Appendix
 
   Copyrights:
@@ -875,11 +875,11 @@ system.management.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/29b07811-9713-42b3-90d6-573af042e86b
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/29b07811-9713-42b3-90d6-573af042e86b
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/047100a1-0e8c-44f5-933b-de81b0c2b79e
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/047100a1-0e8c-44f5-933b-de81b0c2b79e
     Author:      Microsoft Corporation
 
 system.memory.4.5.4.nupkg
@@ -905,7 +905,7 @@ system.private.uri.4.3.2.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/System.Private.Uri/4.3.2
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f612a8f0-1184-46a0-8d53-7605d0a2b81b
     Author:      Microsoft Corporation
 
 system.runtime.compilerservices.unsafe.5.0.0.nupkg
@@ -1172,7 +1172,7 @@ vssdk.threading.12.12.0.4.nupkg
     LicenseText: License Text Under Appendix
 
 P4API.net license:
-Copyright (c) 2025, Perforce Software, Inc. All rights reserved.
+Copyright (c) 2026, Perforce Software, Inc. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without 
 modification, are permitted provided that the following conditions are met:
@@ -1214,7 +1214,7 @@ this program.
 
 P4/P4API License
 -----------------------
-Copyright (c) 1995-2025, Perforce Software, Inc.
+Copyright (c) 1995-2026, Perforce Software, Inc.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

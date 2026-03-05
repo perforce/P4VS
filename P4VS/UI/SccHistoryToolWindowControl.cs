@@ -534,7 +534,7 @@ namespace Perforce.P4VS
             this.ShowDetailsBtn.ColumnsSpanned = 0;
             this.ShowDetailsBtn.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.ShowDetailsBtn, "ShowDetailsBtn");
-            this.ShowDetailsBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ShowDetailsBtn.ForeColor = this.ForeColor;
             this.ShowDetailsBtn.Name = "ShowDetailsBtn";
             this.ShowDetailsBtn.Row = 0;
             this.ShowDetailsBtn.RowsSpanned = 0;
@@ -707,6 +707,20 @@ namespace Perforce.P4VS
                     //ThreadMonitor.Hide();
                     //FillInListProc = null;
                 }
+                // --- Clearing the UI immediately ---
+                if (HistoryListView.InvokeRequired)
+                {
+                    HistoryListView.Invoke(new MethodInvoker(() =>
+                    {
+                        HistoryListView.Nodes.Clear();
+                        HistoryListView.Items.Clear();
+                    }));
+                }
+                else
+                {
+                    HistoryListView.Nodes.Clear();
+                    HistoryListView.Items.Clear();
+                }
                 DetailsTab.RevisionDetail = null;
                 IntegrationsTab.RevisionDetail = null;
                 LabelsTab.File = null;
@@ -717,10 +731,14 @@ namespace Perforce.P4VS
                 // need to copy the list, otherwise we've got a live reference to the current selection in
                 // solution explorer, so if the user clicks on a new selection while filling in the list view,
                 // the contents of the list will change and we'll get an enumeration error.
-                string[] _value = new string[value.Count];
-                value.CopyTo(_value, 0);
-
+                string[] _value = null;
+                if (value != null)
+                {
+                    _value = new string[value.Count];
+                    value.CopyTo(_value, 0);
+                }
                 FillInListProc.Start(_value);
+
             }
             get { return _files; }
         }
@@ -909,7 +927,7 @@ namespace Perforce.P4VS
 #if VS2012
             ActiveButton.ForeColor = ThemeMgr.ForeColor;
 #else
-            ActiveButton.ForeColor = SystemColors.ControlText;
+            ActiveButton.ForeColor = this.ForeColor;
 #endif
 
             //ActiveTab.Visible = true;

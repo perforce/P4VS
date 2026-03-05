@@ -526,7 +526,6 @@
             this.reviewersGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.reviewersGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.reviewersGridView_CellBeginEdit);
             this.reviewersGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.reviewersGridView_CellClick);
-            this.reviewersGridView.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.reviewersGridView_CellMouseLeave);
             this.reviewersGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.reviewersGridView_CellPainting);
             this.reviewersGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.reviewersGridView_DataError);
             this.reviewersGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.reviewersGridView_EditingControlShowing);

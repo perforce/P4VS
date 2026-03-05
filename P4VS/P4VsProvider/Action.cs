@@ -711,7 +711,8 @@ namespace Perforce.P4VS
 
             SccHistoryToolWindow window = (SccHistoryToolWindow)this.FindToolWindow(typeof(SccHistoryToolWindow), 0, true);
 
-            window.control.Files = files;
+            //Commenting as files will be set in P4VsViewHistoryToolWindow method
+            // window.control.Files = files;
 
             P4VsViewHistoryToolWindow(null, null);
         }

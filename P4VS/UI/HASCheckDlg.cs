@@ -15,7 +15,7 @@ using System.Threading;
 namespace Perforce.P4VS.UI
 {
 
-    public partial class HASCheckDlg : Form
+    public partial class HASCheckDlg : Perforce.P4VS.AutoSizeForm
     {
         internal string user = "";
         internal string port = "";

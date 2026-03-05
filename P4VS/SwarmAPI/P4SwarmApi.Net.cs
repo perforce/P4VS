@@ -278,7 +278,97 @@ namespace Perforce.SwarmApi
 			}
 		}
 
-		public JSONDoc HttpPost(string RequestUrl, string RequestContent)
+		public JSONDoc HttpPostJson(string RequestUrl, string RequestContent)
+		{
+			JSONDoc jDoc = null;
+			HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(RequestUrl);
+
+			SetBasicAuthHeader(req, credentials);
+
+			req.ContentType = "application/json";
+			req.Method = "POST";
+			try
+			{
+
+				byte[] bytedata = Encoding.UTF8.GetBytes(RequestContent);
+				req.ContentLength = bytedata.Length;
+				req.GetRequestStream().Write(bytedata, 0, bytedata.Length);
+
+				WebResponse res = req.GetResponse();
+
+				if (req.HaveResponse && (res != null) && (res.GetResponseStream() != null))
+				{
+					if (res.ContentLength > 0)
+					{
+						// the easy way, we know how much we need to read
+						byte[] buff;
+						buff = new byte[res.ContentLength];
+						int cnt = 0;
+
+						while (cnt < (int)res.ContentLength)
+						{
+							int bytesLeft = (int)res.ContentLength - cnt;
+							cnt += res.GetResponseStream().Read(buff, cnt, bytesLeft);
+						}
+
+						string str = Encoding.UTF8.GetString(buff);
+
+						jDoc = new JSONParser.JSONDoc(str);
+					}
+					else
+					{
+						TextReader str = new StreamReader(res.GetResponseStream(), Encoding.UTF8);
+						jDoc = new JSONParser.JSONDoc(str);
+					}
+				}
+				res.Close();
+
+				return jDoc;
+			}
+			catch (WebException ex)
+			{
+				if ((ex.Response != null) && (ex.Response.GetResponseStream() != null))
+				{
+					if (ex.Response.ContentLength > 0)
+					{
+						// the easy way, we know how much we need to read
+						byte[] buff;
+						buff = new byte[ex.Response.ContentLength];
+						int cnt = 0;
+						while (cnt < (int)ex.Response.ContentLength)
+						{
+							int bytesLeft = (int)ex.Response.ContentLength - cnt;
+							cnt += ex.Response.GetResponseStream().Read(buff, cnt, bytesLeft);
+						}
+
+						string str = Encoding.UTF8.GetString(buff);
+
+						jDoc = new JSONParser.JSONDoc(str);
+
+						throw new SwarmException(jDoc.ToString(), ex);
+					}
+					else
+					{
+						TextReader str = new StreamReader(ex.Response.GetResponseStream(), Encoding.UTF8);
+						jDoc = new JSONParser.JSONDoc(str);
+
+						throw new SwarmException(jDoc.ToString());
+					}
+				}
+				logger.Trace("Exception in SwarmServer.HttpPostJson: {0}", ex.Message);
+				logger.Trace(ex.StackTrace);
+
+				throw new SwarmException(ex.Message);
+			}
+			catch (Exception ex)
+			{
+				logger.Trace("Exception in SwarmServer.HttpPostJson: {0}", ex.Message);
+				logger.Trace(ex.StackTrace);
+
+				throw;
+			}
+		}
+        public JSONDoc HttpPost(string RequestUrl, string RequestContent)
 		{
 			JSONDoc jDoc = null;
 			HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(RequestUrl);
@@ -395,7 +485,6 @@ namespace Perforce.SwarmApi
 			public List<string> apiVersions { get; set; }
 		}
 
-		//private string VersionRequest = "http://{0}/api/v1/version";
 		private string VersionRequest = "{0}/api/version";
 		/// <summary>
 		/// The version information from the Swarm server
@@ -541,10 +630,45 @@ namespace Perforce.SwarmApi
 					throw new Exception("Null object passed to Review creator");
 				}
 				JSONObject ReviewObj = jdoc;
-				if ((jdoc.ContainsKey("review")) && (jdoc["review"] is JSONObject))
+				if (jdoc.ContainsKey("data") && jdoc["data"] is JSONObject)
 				{
-					ReviewObj = (JSONObject) jdoc["review"];
+					JSONObject data = jdoc["data"] as JSONObject;
+					if (data.ContainsKey("reviews"))
+					{
+						if (data["reviews"] is JSONArray)
+						{
+							JSONArray arr = data["reviews"] as JSONArray;
+							if (arr.Value.Count > 0)
+								ReviewObj = arr.Value[0] as JSONObject;
+						}
+						else if (data["reviews"] is JSONObject)
+						{
+							ReviewObj = data["reviews"] as JSONObject;
+						}
+					}
+					else if (data.ContainsKey("review"))
+					{
+						if (data["review"] is JSONArray)
+						{
+							JSONArray arr = data["review"] as JSONArray;
+							if (arr.Value.Count > 0)
+								ReviewObj = arr.Value[0] as JSONObject;
+						}
+						else if (data["review"] is JSONObject)
+						{
+							ReviewObj = data["review"] as JSONObject;
+						}
+					}
 				}
+				else if ((jdoc.ContainsKey("reviews")) && (jdoc["reviews"] is JSONObject))
+				{
+					ReviewObj = (JSONObject)jdoc["reviews"];
+				}
+				else if ((jdoc.ContainsKey("review")) && (jdoc["review"] is JSONObject))
+				{
+					ReviewObj = (JSONObject)jdoc["review"];
+				}
+
 				id = (int) ReviewObj["id"];
 				type = ReviewObj["type"];
 				changes = ReviewObj["changes"];
@@ -565,12 +689,19 @@ namespace Perforce.SwarmApi
 				}
 				author = ReviewObj["author"];
 				participants = new Dictionary<string, Participant>();
-				JSONObject participantsData = ReviewObj["participants"] as JSONObject;
-				if (participantsData == null)
+				JSONObject participantsData = null;
+
+				if (ReviewObj.ContainsKey("participants") && ReviewObj["participants"] is JSONObject)
 				{
-					participants = null;
+					participantsData = ReviewObj["participants"] as JSONObject;
 				}
-				else
+
+				if (participantsData == null && ReviewObj.ContainsKey("participantsData") && ReviewObj["participantsData"] is JSONObject)
+				{
+					participantsData = ReviewObj["participantsData"] as JSONObject;
+				}
+
+				if (participantsData != null)
 				{
 					foreach (string key in participantsData.Value.Keys)
 					{
@@ -585,8 +716,27 @@ namespace Perforce.SwarmApi
 						}
 					}
 				}
+				else if (ReviewObj.ContainsKey("participants") && ReviewObj["participants"] is JSONArray)
+				{
+					JSONArray participantsArray = ReviewObj["participants"] as JSONArray;
+					if (participantsArray != null)
+					{
+						foreach (JSONField field in participantsArray.Value)
+						{
+							string user = field.ToString().Trim('\"');
+							if (!participants.ContainsKey(user))
+							{
+								participants.Add(user, null);
+							}
+						}
+					}
+				}
+				else
+				{
+					participants = null;
+				}
 
-//				hasReviewer = ReviewObj["hasReviewer"];
+				//hasReviewer = ReviewObj["hasReviewer"];
 				description = ReviewObj["description"];
 				created = ReviewObj["created"];
 				updated = ReviewObj["updated"];
@@ -923,10 +1073,9 @@ namespace Perforce.SwarmApi
 //			public int hasReviewer { get; set; }
 		}
 
-		//private string ReviewDetailsRequest = "http://{0}/api/v1/reviews/{1}";
-		private string ReviewDetailsRequest = "{0}/api/v1/reviews/{1}";
+		private string ReviewDetailsRequest = "{0}/api/v11/reviews/{1}";
 
-		public Review GetReview(int reviewId)
+        public Review GetReview(int reviewId)
 		{
 			Review val = null;
 
@@ -1043,26 +1192,36 @@ namespace Perforce.SwarmApi
 			public ReviewList() { }
 			public ReviewList(JSONDoc jdoc)
 			{
-				lastSeen = jdoc["lastSeen"];
-				totalCount = jdoc["totalCount"];
+				JSONObject root = jdoc;
+				// Handle v11 response wrapper
+				if (root.ContainsKey("data") && root["data"] is JSONObject)
+				{
+					root = root["data"] as JSONObject;
+				}
 
-				JSONArray reviews = jdoc["reviews"] as JSONArray;
-                if (reviews != null)
-                {
-                    foreach (JSONObject review in reviews.Value)
-                    {
-                        this.Add(new Review(review));
-                    }
-                }
+				if (root.ContainsKey("lastSeen")) lastSeen = root["lastSeen"];
+				if (root.ContainsKey("totalCount")) totalCount = root["totalCount"];
+
+				if (root.ContainsKey("reviews") && root["reviews"] is JSONArray)
+				{
+					JSONArray reviews = root["reviews"] as JSONArray;
+					if (reviews != null)
+					{
+						foreach (JSONObject review in reviews.Value)
+						{
+							this.Add(new Review(review));
+						}
+					}
+				}
 			}
+
 			public int lastSeen { get; set; }
 			public object totalCount { get; set; }
 		}
 
-		//private string ReviewSearchRequest = "http://{0}/api/v1/reviews/?{1}";
-		private string ReviewSearchRequest = "{0}/api/v1/reviews/?{1}";
+		private string ReviewSearchRequest = "{0}/api/v11/reviews?{1}";
 
-		public ReviewList GetReviews()
+        public ReviewList GetReviews()
 		{
 			ReviewList val = null;
 
@@ -1084,76 +1243,41 @@ namespace Perforce.SwarmApi
 			return val;
 		}
 
-		//private string AddChangeRequest = "http://{0}/api/v1/reviews/{1}";
-		private string AddChangeRequest = "{0}/api/v1/reviews/{1}/changes";
-		private string AddChangeRequest1_1 = "{0}/api/v1.1/reviews/{1}/changes";
-		private string AddChangeContent = "change={0}";
+		private string AddChangeRequest11 = "{0}/api/v11/reviews/{1}/replacewithchange";
 
-		public Review AddChangeToReview(int ReviewId, int ChangeId)
+		public Review AddChangeToReview11(int ReviewId, int ChangeId)
 		{
-			string RequestUrl = string.Format(AddChangeRequest, SwarmUri, ReviewId);
-			string RequestContent = string.Format(AddChangeContent, ChangeId);
+			string RequestUrl = string.Format(AddChangeRequest11, SwarmUri, ReviewId);
 
-			JSONParser.JSONDoc jDoc = HttpPost(RequestUrl, RequestContent);
+			JSONObject content = new JSONObject();
+			content.Add("changeId", new JSONNumericalField(ChangeId));
+
+			JSONParser.JSONDoc jDoc = HttpPostJson(RequestUrl, content.ToString());
 
 			return new Review(jDoc);
 		}
 
-		public Review AddChangeToReview1_1(int ReviewId, int ChangeId)
+		private string CreateReviewRequest11 = "{0}/api/v11/reviews";
+
+		public Review CreateReview11(int ChangeId, JSONObject options)
 		{
-			string RequestUrl = string.Format(AddChangeRequest1_1, SwarmUri, ReviewId);
-			string RequestContent = string.Format(AddChangeContent, ChangeId);
+			string RequestUrl = string.Format(CreateReviewRequest11, SwarmUri);
 
-			JSONParser.JSONDoc jDoc = HttpPost(RequestUrl, RequestContent);
-
-			return new Review(jDoc);
-		}
-		//private string CreateReviewRequest = "http://{0}/api/v1/reviews/";
-		private string CreateReviewRequest = "{0}/api/v1/reviews/";
-		private string CreateReviewRequest1_1 = "{0}/api/v1.1/reviews/";
-        private string CreateReviewRequest7 = "{0}/api/v7/reviews/";
-        private string CreateReviewContent = "change={0}";
-
-		public Review CreateReview(int ChangeId, Options options)
-		{
-			string RequestUrl = string.Format(CreateReviewRequest, SwarmUri);
-
-			string RequestContent = string.Format(CreateReviewContent, ChangeId);
-			if ((options != null) && (options.Count > 0))
+			JSONObject content = new JSONObject();
+			content.Add("change", new JSONStringField(ChangeId.ToString()));
+			if (options != null)
 			{
-				RequestContent += "&" + options.ToString();
-            }
-			JSONParser.JSONDoc jDoc = HttpPost(RequestUrl, RequestContent);
-
-			return new Review(jDoc);
-		}
-
-		public Review CreateReview1_1(int ChangeId, Options options)
-		{
-			string RequestUrl = string.Format(CreateReviewRequest1_1, SwarmUri);
-
-			string RequestContent = string.Format(CreateReviewContent, ChangeId);
-			if ((options != null) && (options.Count > 0))
-			{
-				RequestContent += "&" + options.ToString();
+				foreach (string key in options.Value.Keys)
+				{
+					content.Add(key, options[key]);
+				}
 			}
-			JSONParser.JSONDoc jDoc = HttpPost(RequestUrl, RequestContent);
+
+			JSONParser.JSONDoc jDoc = HttpPostJson(RequestUrl, content.ToString());
 
 			return new Review(jDoc);
 		}
 
-        public Review CreateReview7(int ChangeId, Options options)
-        {
-            string RequestUrl = string.Format(CreateReviewRequest7, SwarmUri);
 
-            string RequestContent = string.Format(CreateReviewContent, ChangeId);
-            if ((options != null) && (options.Count > 0))
-            {
-                RequestContent += "&" + options.ToString();
-            }
-            JSONParser.JSONDoc jDoc = HttpPost(RequestUrl, RequestContent);
-
-            return new Review(jDoc);
-        }
-    }
+	}
 }

@@ -11,7 +11,7 @@ using Perforce.P4Scm;
 
 namespace Perforce.P4VS
 {
-	public partial class NewUserDlg : Form
+	public partial class NewUserDlg : AutoSizeForm
 	{
 		bool SetPasswordOnly { get; set; }
 		public NewUserDlg(P4ScmProvider scm)

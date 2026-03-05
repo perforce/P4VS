@@ -111,8 +111,29 @@ namespace Perforce.P4VS
 			}
 		}
 
+		private ThemeManager _themeManager;
+
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (_themeManager != null))
+			{
+				_themeManager.Dispose();
+				_themeManager = null;
+			}
+			base.Dispose(disposing);
+		}
 		protected override void OnLoad(EventArgs e)
 		{
+			if (this.DesignMode == false)
+			{
+				// Apply ThemeManager to AutoSizeForm on load to ensure consistent theming
+				_themeManager = new ThemeManager(this.Controls, PreferenceKey);
+				_themeManager.SetControlColors();
+				// Explicitly set the form's background and foreground colors from ThemeManager
+				this.BackColor = _themeManager.BackColor;
+				this.ForeColor = _themeManager.ForeColor;
+			}
+
 			if (PreferenceKey != null)
 			{
 				int width = Preferences.LocalSettings.GetInt(PreferenceKey + "_Width", -1);

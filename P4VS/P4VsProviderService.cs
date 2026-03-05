@@ -180,7 +180,8 @@ namespace Perforce.P4VS
             if (VSConstants.VSCOOKIE_NIL != vsSolutionEventsCookie)
             {
                 IVsSolution sol = (IVsSolution)_P4VsProvider.GetService(typeof(SVsSolution));
-                sol.UnadviseSolutionEvents(vsSolutionEventsCookie);
+                if(sol != null)
+                    sol.UnadviseSolutionEvents(vsSolutionEventsCookie);
                 vsSolutionEventsCookie = VSConstants.VSCOOKIE_NIL;
             }
 
@@ -188,7 +189,8 @@ namespace Perforce.P4VS
             if (VSConstants.VSCOOKIE_NIL != tpdTrackProjectDocumentsCookie)
             {
                 IVsTrackProjectDocuments2 tpdService = (IVsTrackProjectDocuments2)_P4VsProvider.GetService(typeof(SVsTrackProjectDocuments));
-                tpdService.UnadviseTrackProjectDocumentsEvents(tpdTrackProjectDocumentsCookie);
+                if(tpdService != null)
+                    tpdService.UnadviseTrackProjectDocumentsEvents(tpdTrackProjectDocumentsCookie);
                 tpdTrackProjectDocumentsCookie = VSConstants.VSCOOKIE_NIL;
             }
 
@@ -196,7 +198,8 @@ namespace Perforce.P4VS
             if (VSConstants.VSCOOKIE_NIL != tpdMonitorSelectionCookie)
             {
                 IVsMonitorSelection MonitorSelectionService = (IVsMonitorSelection)_P4VsProvider.GetService(typeof(SVsShellMonitorSelection));
-                MonitorSelectionService.UnadviseSelectionEvents(tpdMonitorSelectionCookie);
+                if(MonitorSelectionService != null)
+                    MonitorSelectionService.UnadviseSelectionEvents(tpdMonitorSelectionCookie);
                 tpdMonitorSelectionCookie = VSConstants.VSCOOKIE_NIL;
             }
 #if VS2012
@@ -742,12 +745,12 @@ namespace Perforce.P4VS
                 ScmProvider?.ClearCache();
             }
             else
-                {
+            {
                 string projectFileName = _P4VsProvider?.GetProjectFileName(pscp2Project);
                 logger.Trace("Project {0} is unregistering with source control.", projectFileName);
 
                 hierProject = pscp2Project as IVsHierarchy;
-                }
+            }
 
             // Early return if we couldn’t get a valid hierarchy
             if (hierProject == null)
@@ -762,8 +765,8 @@ namespace Perforce.P4VS
                 return VSConstants.S_OK;
             }
 
-                return VSConstants.S_FALSE;
-            }
+            return VSConstants.S_FALSE;
+        }
 
         #endregion
 
@@ -1046,7 +1049,8 @@ namespace Perforce.P4VS
                             ScmProvider.SccService.SyncFiles(null, files);
                         }
                     }
-                    if (SourceControlStatus.scsUncontrolled == solutionFileScmStatus)
+                    //Suppressing notifications if the solution file is ignored
+                    if (solutionFileScmStatus.Test(SourceControlStatus.scsUncontrolled) && solutionFileScmStatus.TestNone(SourceControlStatus.scsIgnored))
                     {
                         P4.P4CommandResult results = null;
                         P4.FileMetaData fmd = _scmProvider.GetFileMetaData(null, _P4VsProvider.GetSolutionFileName(), out results);
@@ -1066,6 +1070,7 @@ namespace Perforce.P4VS
                                     MessageBox.Show(
                                         Resources.P4VsProviderService_CantAddSlnClientRootError,
                                         Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Question);
+                                    RegisterSolution = false;
                                 }
                                 else
                                 {
@@ -1111,7 +1116,7 @@ namespace Perforce.P4VS
 
                     else
                     {
-                        if (string.IsNullOrEmpty(LoadingControlledSolutionLocation))
+                        if (string.IsNullOrEmpty(LoadingControlledSolutionLocation) || solutionFileScmStatus.Test(SourceControlStatus.scsIgnored))
                         {
                             // solution file is in the depot, but it is not marked as being controlled
                             _P4VsProvider.SolutionHasDirtyProps = true;
@@ -1269,9 +1274,9 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 if (Preferences.LocalSettings.GetBool("OptimizeSolutionLoad", false) == false)
                 {
-                // Refresh the glyphs now for solution and solution folders
-                _P4VsProvider.Glyphs.RefreshNodesGlyphs(nodes, null);
-            }
+                    // Refresh the glyphs now for solution and solution folders
+                    _P4VsProvider.Glyphs.RefreshNodesGlyphs(nodes, null);
+                }
             }
 
             solutionLocation = LoadingControlledSolutionLocation;
@@ -2761,16 +2766,16 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             foreach (string file in files)
             {
                 //Skipping files if not in the workspace root or if ignored
-                if ((file.StartsWith(ScmProvider.Connection.WorkspaceRoot, StringComparison.OrdinalIgnoreCase) == true) && GetFileStatus(file).TestNone(SourceControlStatus.scsIgnored))
+                if (ScmProvider.IsFileInWorkspace(file) && GetFileStatus(file).TestNone(SourceControlStatus.scsIgnored))
                 {
-                // Get all controlled projects containing this file
-                IList<VSITEMSELECTION> nodes = GetControlledProjectsContainingFile(file);
-                if (nodes.Count > 0)
-                {
-                    // in at least one controlled project
-                    filesToAdd.Add(file);
+                    // Get all controlled projects containing this file
+                    IList<VSITEMSELECTION> nodes = GetControlledProjectsContainingFile(file);
+                    if (nodes.Count > 0)
+                    {
+                        // in at least one controlled project
+                        filesToAdd.Add(file);
+                    }
                 }
-            }
             }
             if (ScmProvider != null)
             {
@@ -4369,12 +4374,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
-                SccHistoryToolWindow window = (SccHistoryToolWindow)_P4VsProvider.FindToolWindow(typeof(SccHistoryToolWindow), 0, false);
-
-                if ((window != null) && window.isVisible)
-                {
-                    window.control.Files = _selectedFiles;
-                }
+                UpdateHistoryWindowWithDebounce(_selectedFiles);
             }
             catch (Exception ex)
             {
@@ -4382,6 +4382,56 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return;
+        }
+
+        private IList<string> _lastRequestedFiles = null;
+        private System.Windows.Forms.Timer _selectionDebounceTimer;
+        private IList<string> _pendingFiles = null;
+        void UpdateHistoryWindowWithDebounce(IList<string> files)
+        {
+
+            // Checking tool window visibility
+            var window = (SccHistoryToolWindow)_P4VsProvider.FindToolWindow(typeof(SccHistoryToolWindow), 0, false);
+            if (window == null || !window.isVisible || window.control == null)
+                return;
+
+            // Skip if selection is unchanged
+            if (_lastRequestedFiles != null && files.SequenceEqual(_lastRequestedFiles))
+                return;
+
+            _pendingFiles = new List<string>(files);
+
+            // Timer setup (debounce)
+            if (_selectionDebounceTimer == null)
+            {
+                _selectionDebounceTimer = new System.Windows.Forms.Timer();
+                _selectionDebounceTimer.Interval = 50; // ms
+                _selectionDebounceTimer.Tick += (s, e) =>
+                {
+                    _selectionDebounceTimer.Stop();
+
+                    // Checking again in case window was closed during debounce
+                    var win = (SccHistoryToolWindow)_P4VsProvider.FindToolWindow(typeof(SccHistoryToolWindow), 0, false);
+                    if (win == null || !win.isVisible || win.control == null || _pendingFiles == null || _pendingFiles.Count == 0)
+                        return;
+
+                    // Updating last requested files before setting Files
+                    _lastRequestedFiles = new List<string>(_pendingFiles);
+
+                    try
+                    {
+                        win.control.Files = _pendingFiles;
+                    }
+                    catch (Exception ex)
+                    {
+                        logger.Trace("Exception updating history window: {0}", ex.Message);
+                    }
+                };
+            }
+
+            // Restarting debounce timer
+            _selectionDebounceTimer.Stop();
+            _selectionDebounceTimer.Start();
         }
 
         #endregion

@@ -440,10 +440,26 @@ namespace Perforce.P4VS
                         }
                         else
                         {
-                            e.Graphics.DrawString(replaceLineBreaksWithSpaces, f,
-                                new SolidBrush(FgColor), bounds, sf);
+                            // Ensure we use the correct foreground color (FgColor) which handles selection state
+                            using (Brush textBrush = new SolidBrush(FgColor))
+                            {
+                                e.Graphics.DrawString(replaceLineBreaksWithSpaces, f, textBrush, bounds, sf);
+                            }
                         }
                     }
+                }
+            }
+
+            // Draw grid lines if GridLines property is set
+            if (this.GridLines)
+            {
+                // Use a darker color for better visibility in light themes
+                using (Pen gridPen = new Pen(Color.FromArgb(255, 180, 180, 180)))
+                {
+                    // Draw bottom line for every column
+                    e.Graphics.DrawLine(gridPen, e.Bounds.Left, e.Bounds.Bottom - 1, e.Bounds.Right, e.Bounds.Bottom - 1);
+                    // Draw right line for every column
+                    e.Graphics.DrawLine(gridPen, e.Bounds.Right - 1, e.Bounds.Top, e.Bounds.Right - 1, e.Bounds.Bottom);
                 }
             }
         }

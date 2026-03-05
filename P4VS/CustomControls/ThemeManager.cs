@@ -47,6 +47,59 @@ namespace Perforce.P4VS
 
         P4VsProviderService.SetControlColorsDelegate ColorsChangeDelegate = null;
 
+        // Register context menu to apply VS theme colors
+        public void RegisterContextMenu(ContextMenuStrip menu)
+        {
+            if (menu != null)
+            {
+                menu.RenderMode = ToolStripRenderMode.Professional;
+                menu.Renderer = new ThemeManagerRenderer(new ThemeManagerColorTable(this));
+            }
+        }
+
+        // Custom ColorTable to define the colors for the ContextMenuStrip based on VS theme
+        public class ThemeManagerColorTable : ProfessionalColorTable
+        {
+            ThemeManager _owner;
+            public ThemeManagerColorTable(ThemeManager owner)
+            {
+                _owner = owner;
+            }
+            public override Color MenuBorder { get { return _owner.ForeColor; } }
+            public override Color MenuItemSelected { get { return VSColorTheme.GetThemedColor(EnvironmentColors.CommandBarMouseOverBackgroundBeginColorKey); } }
+            public override Color MenuItemBorder { get { return VSColorTheme.GetThemedColor(EnvironmentColors.CommandBarSelectedBorderColorKey); } }
+            public override Color MenuStripGradientBegin { get { return _owner.BackColor; } }
+            public override Color MenuStripGradientEnd { get { return _owner.BackColor; } }
+            public override Color ToolStripDropDownBackground { get { return _owner.BackColor; } }
+            public override Color ImageMarginGradientBegin { get { return _owner.BackColor; } }
+            public override Color ImageMarginGradientMiddle { get { return _owner.BackColor; } }
+            public override Color ImageMarginGradientEnd { get { return _owner.BackColor; } }
+            public override Color MenuItemSelectedGradientBegin { get { return MenuItemSelected; } }
+            public override Color MenuItemSelectedGradientEnd { get { return MenuItemSelected; } }
+            public override Color MenuItemPressedGradientBegin { get { return MenuItemSelected; } }
+            public override Color MenuItemPressedGradientMiddle { get { return MenuItemSelected; } }
+            public override Color MenuItemPressedGradientEnd { get { return MenuItemSelected; } }
+            public override Color SeparatorDark { get { return _owner.ForeColor; } }
+            public override Color SeparatorLight { get { return _owner.ForeColor; } }
+
+        }
+
+        // Custom Renderer to apply the ColorTable and handle item text rendering
+        public class ThemeManagerRenderer : ToolStripProfessionalRenderer
+        {
+            public ThemeManagerRenderer(ProfessionalColorTable table) : base(table) { }
+
+            protected override void OnRenderItemText(ToolStripItemTextRenderEventArgs e)
+            {
+                e.TextColor = (e.Item.Selected) ? VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowTextColorKey) : VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowTextColorKey);
+                base.OnRenderItemText(e);
+            }
+            protected override void OnRenderArrow(ToolStripArrowRenderEventArgs e)
+            {
+                e.ArrowColor = (e.Item.Selected) ? VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowTextColorKey) : VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowTextColorKey);
+                base.OnRenderArrow(e);
+            }
+        }
         public void RegisterImage(Image i)
         {
             if (Images == null)
@@ -96,13 +149,29 @@ namespace Perforce.P4VS
             SetControlColors(Controls, ImageCacheKey);
         }
 
-//#if VS2012
-//        public Color SelectedItemActiveBackColor = VSColorTheme.GetThemedColor(TreeViewColors.SelectedItemActiveColorKey);
-//        public Color SelectedItemActiveForeColor = VSColorTheme.GetThemedColor(TreeViewColors.SelectedItemActiveTextColorKey);
-//        public Color SelectedItemInactiveBackColor = VSColorTheme.GetThemedColor(TreeViewColors.SelectedItemInactiveColorKey);
-//        public Color SelectedItemInactiveForeColor = VSColorTheme.GetThemedColor(TreeViewColors.SelectedItemInactiveTextColorKey);
-//        public Color DisabledItemForeColor = VSColorTheme.GetThemedColor(EnvironmentColors.SystemGrayTextColorKey);
-//#endif
+        // Initialize ThemeManager for the given control and apply colors immediately
+        public static void SetTheme(Control control)
+        {
+            if (control == null)
+            {
+                return;
+            }
+            // Use control name as key or a generic one
+            using (ThemeManager mgr = new ThemeManager(control.Controls, control.GetType().Name))
+            {
+                mgr.SetControlColors();
+                control.BackColor = mgr.BackColor;
+                control.ForeColor = mgr.ForeColor;
+            }
+        }
+
+        //#if VS2012
+        //        public Color SelectedItemActiveBackColor = VSColorTheme.GetThemedColor(TreeViewColors.SelectedItemActiveColorKey);
+        //        public Color SelectedItemActiveForeColor = VSColorTheme.GetThemedColor(TreeViewColors.SelectedItemActiveTextColorKey);
+        //        public Color SelectedItemInactiveBackColor = VSColorTheme.GetThemedColor(TreeViewColors.SelectedItemInactiveColorKey);
+        //        public Color SelectedItemInactiveForeColor = VSColorTheme.GetThemedColor(TreeViewColors.SelectedItemInactiveTextColorKey);
+        //        public Color DisabledItemForeColor = VSColorTheme.GetThemedColor(EnvironmentColors.SystemGrayTextColorKey);
+        //#endif
 
 
         public void SetControlColors(Control.ControlCollection Controls, string ImageCacheKey)
@@ -119,6 +188,27 @@ namespace Perforce.P4VS
 
             foreach (Control c in Controls)
             {
+                // General context menu handling for any control
+                if (c.ContextMenuStrip != null)
+                {
+                   RegisterContextMenu(c.ContextMenuStrip);
+                }
+
+                // Register context menu for ListView column headers if it's a ListView.
+                if (c is ListView)
+                {
+                    try
+                    {
+                        var prop = c.GetType().GetProperty("ColumnContextMenu");
+                        if (prop != null)
+                        {
+                            var menu = prop.GetValue(c, null) as ContextMenuStrip;
+                            RegisterContextMenu(menu);
+                        }
+                    }
+                    catch { }
+                }
+
                 string ImageCacheSubkey = string.Concat(ImageCacheKey, ".", c.Name);
                 //if (c is SplitContainer)
                 //{
@@ -138,9 +228,11 @@ namespace Perforce.P4VS
                 else if (c is Button)
                 {
                     Button b = c as Button;
+
                     b.ForeColor = ForeColor;
                     b.BackColor = BackColor;
                     b.FlatAppearance.BorderColor = VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowBorderColorKey);
+
                     //b.UseVisualStyleBackColor = false;
 #if VS2015
                     b.Image = InvertImage(ImageCacheSubkey, b.Image, (uint)BackColor.ToArgb());
@@ -164,6 +256,7 @@ namespace Perforce.P4VS
                     ListBox lb = c as ListBox;
                     lb.ForeColor = ForeColor;
                     lb.BackColor = BackColor;
+                    lb.BorderStyle = BorderStyle.FixedSingle;
                 }
                 else if (c is ProgressBar)
                 {
@@ -177,6 +270,7 @@ namespace Perforce.P4VS
 
                     lv.ForeColor = ForeColor;
                     lv.BackColor = BackColor;
+                    lv.BorderStyle = BorderStyle.FixedSingle;
 #if !VS2015
                     if (shell5 != null)
                     {
@@ -203,11 +297,28 @@ namespace Perforce.P4VS
 #endif
                     }
                 }
+                else if (c is TreeView)
+                {
+                    // Apply theme colors to TreeView
+                    TreeView tv = c as TreeView;
+                    tv.ForeColor = ForeColor;
+                    tv.BackColor = BackColor;
+                    tv.BorderStyle = BorderStyle.FixedSingle;
+#if !VS2015
+                    if (shell5 != null)
+                    {
+                        InvertImageList(ImageCacheSubkey + ".ImageList", shell5, tv.ImageList, Color.Transparent, (uint)BackColor.ToArgb());
+                    }
+#else
+                    InvertImageList(ImageCacheSubkey + ".ImageList", tv.ImageList, (uint)BackColor.ToArgb());
+#endif
+                }
                 else if (c is ComboBox)
                 {
                     ComboBox cb = c as ComboBox;
                     cb.ForeColor = ForeColor;
                     cb.BackColor = VSColorTheme.GetThemedColor(EnvironmentColors.ComboBoxBackgroundColorKey);
+                    cb.FlatStyle = FlatStyle.Flat;
                 }
                 else if (c is GroupBox)
                 {
@@ -242,6 +353,31 @@ namespace Perforce.P4VS
                     TextBox tb = c as TextBox;
                     tb.ForeColor = ForeColor;
                     tb.BackColor = BackColor;
+                    tb.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else if (c is RichTextBox)
+                {
+                    // Apply theme colors to RichTextBox
+                    RichTextBox tb = c as RichTextBox;
+                    tb.ForeColor = ForeColor;
+                    tb.BackColor = BackColor;
+                    tb.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else if (c is DataGridView)
+                {
+                    DataGridView dgv = c as DataGridView;
+                    dgv.BorderStyle = BorderStyle.FixedSingle;
+                    dgv.BackgroundColor = BackColor;
+                    dgv.GridColor = ForeColor;
+                    dgv.DefaultCellStyle.BackColor = BackColor;
+                    dgv.DefaultCellStyle.ForeColor = ForeColor;
+                    dgv.DefaultCellStyle.SelectionBackColor = VSColorTheme.GetThemedColor(EnvironmentColors.SystemHighlightColorKey);
+                    dgv.DefaultCellStyle.SelectionForeColor = VSColorTheme.GetThemedColor(EnvironmentColors.SystemHighlightTextColorKey);
+                    dgv.ColumnHeadersDefaultCellStyle.BackColor = BackColor;
+                    dgv.ColumnHeadersDefaultCellStyle.ForeColor = ForeColor;
+                    dgv.RowHeadersDefaultCellStyle.BackColor = BackColor;
+                    dgv.RowHeadersDefaultCellStyle.ForeColor = ForeColor;
+                    dgv.EnableHeadersVisualStyles = false;
                 }
                 else if (c is ContainerControl)
                 {

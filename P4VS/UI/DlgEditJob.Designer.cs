@@ -70,7 +70,7 @@
             // 
             resources.ApplyResources(this.splitContainer.Panel1, "splitContainer.Panel1");
             this.splitContainer.Panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer.Panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.splitContainer.Panel1.ForeColor = System.Drawing.SystemColors.WindowText;
             // 
             // splitContainer.Panel2
             // 

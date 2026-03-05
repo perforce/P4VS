@@ -150,42 +150,6 @@ namespace Perforce.P4Scm
         }
 
         public SwarmApi.SwarmServer.Version SwarmVersion { get; private set; }
-        public bool SwarmAPI1_1
-        {
-            get
-            {
-                if ((SwarmVersion != null) && (SwarmVersion.apiVersions != null) && (SwarmVersion.apiVersions.Count > 0))
-                {
-                    foreach (string v in SwarmVersion.apiVersions)
-                    {
-                        if (v == "1.1")
-                        {
-                            return true;
-                        }
-                    }
-                }
-                return false;
-            }
-        }
-
-        public bool SwarmAPI7
-        {
-            get
-            {
-                if ((SwarmVersion != null) && (SwarmVersion.apiVersions != null) && (SwarmVersion.apiVersions.Count > 0))
-                {
-                    foreach (string v in SwarmVersion.apiVersions)
-                    {
-                        if (v == "7")
-                        {
-                            return true;
-                        }
-                    }
-                }
-                return false;
-            }
-        }
-
         public SwarmApi.SwarmServer GetSwarmServer()
         {
             return new SwarmApi.SwarmServer(SwarmUrl, user, SwarmPassword);
@@ -198,44 +162,54 @@ namespace Perforce.P4Scm
                 return false;
             }
             SwarmApi.SwarmServer.ReviewList l = null;
-      
-            bool success = false;
-            List<int> changeIds = null;
 
+            bool success = false;
             SwarmApi.SwarmServer sw = new SwarmApi.SwarmServer(SwarmUrl, user, SwarmPassword);
 
-            int[] allChangeIds = changes.Keys.ToArray();
+            // Use a set to track which changes have been updated to avoid redundant queries
+            // if a single review covers multiple changes in our list.
+            HashSet<int> processedChanges = new HashSet<int>();
 
-            int idx = 0;
-            while (idx < allChangeIds.Length)
+            List<int> changeIds = new List<int>(changes.Keys);
+
+            foreach (int changeId in changeIds)
             {
-                changeIds = new List<int>();
-                int cnt = 0;
-                while ((idx < allChangeIds.Length) && (cnt < 50))
-                {
-                    changeIds.Add(allChangeIds[idx++]);
-                    cnt++;
-                }
-                SwarmApi.Options ops = new SwarmApi.Options();
-                ops["change[]"] = new JSONParser.JSONArray(changeIds.ToArray());
+                if (processedChanges.Contains(changeId)) continue;
 
-                l = sw.GetReviews(ops);
-                if ((l != null) && (l.Count > 0) && (l[0] != null) && (l[0] is SwarmApi.SwarmServer.Review))
+                try
                 {
-                    foreach (SwarmApi.SwarmServer.Review r in l)
+                    SwarmApi.Options ops = new SwarmApi.Options();
+                    // Swarm v11: Use keywords and keywordsFields to filter by change, as change is a keyword
+                    ops["keywords"] = new JSONParser.JSONStringField(changeId.ToString());
+                    ops["keywordsFields[]"] = new JSONParser.JSONArray(new string[] { "changes" });
+
+                    l = sw.GetReviews(ops);
+                    if ((l != null) && (l.Count > 0))
                     {
-                        foreach (int c in r.changes)
+                        foreach (SwarmApi.SwarmServer.Review r in l)
                         {
-                            if (changes.ContainsKey(c))
+                            if (r.changes != null)
                             {
-                                changes[c] = r;
+                                foreach (int c in r.changes)
+                                {
+                                    if (changes.ContainsKey(c))
+                                    {
+                                        changes[c] = r;
+                                        processedChanges.Add(c);
+                                        success = true;
+                                    }
+                                }
                             }
                         }
                     }
-                    success = true;
+                }
+                catch (Exception ex)
+                {
+                    // Ignore errors for individual requests to ensure partial results if possible
+                    FileLogger.LogMessage(3, "Swarm", string.Format("Error checking reviews for change {0}: {1}", changeId, ex.Message));
                 }
             }
-            return success;   
+            return success;
         }
 
         public SwarmApi.SwarmServer.Review IsChangelistAttachedToReview(int change)
@@ -249,7 +223,9 @@ namespace Perforce.P4Scm
             SwarmApi.SwarmServer sw = new SwarmApi.SwarmServer(SwarmUrl, user, SwarmPassword);
 
             SwarmApi.Options ops = new SwarmApi.Options();
-            ops["change[]"] = new JSONParser.JSONArray(new int[] { change });
+            // Swarm v11: Use keywords and keywordsFields to filter by change, as change[] may be ignored
+            ops["keywords"] = new JSONParser.JSONStringField(change.ToString());
+            ops["keywordsFields[]"] = new JSONParser.JSONArray(new string[] { "changes" });
 
             l = sw.GetReviews(ops);
             if ((l != null) && (l.Count > 0) && (l[0] != null) && (l[0] is SwarmApi.SwarmServer.Review))

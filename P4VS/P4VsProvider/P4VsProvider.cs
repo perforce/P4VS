@@ -281,7 +281,7 @@ namespace Perforce.P4VS
 
                 //Preparing uninstall message for dialog
                 Label message = new Label();
-                message.Text = "An older version of the Helix P4VS extension is already installed.\n" +
+                message.Text = "An older version of the P4 for Visual Studio extension is already installed.\n" +
                                "To continue with this installation, the older extension must be removed\n" +
                                "to prevent conflicts or unexpected behavior.\n\n" +
                                "Visual Studio will need to be closed during the uninstallation process.\n" +
@@ -372,7 +372,7 @@ namespace Perforce.P4VS
                 }
                 catch (Exception ex)
                 {
-                    logger.Info("Error locating P4VS Helix extension: {0}", ex.Message);
+                    logger.Info("Error locating P4 for Visual Studio extension: {0}", ex.Message);
                     return;
                 }
 
@@ -386,14 +386,14 @@ namespace Perforce.P4VS
                     // Using vsixInstaller executable to uninstall the Helix extension
                     string args = $"/u:{oldHelixExtensionId}";
                     System.Diagnostics.Process.Start(vsixInstallerPath, args);
-                    logger.Info("Uninstallating P4VS Helix extension: {0}", vsixInstallerPath);
+                    logger.Info("Uninstallating P4 for Visual Studio extension: {0}", vsixInstallerPath);
                 }
 
                 return;
             }
             catch (Exception ex)
             {
-                logger.Info("Error checking for P4VS Helix extension: {0}", ex.Message);
+                logger.Info("Error checking for P4 for Visual Studio extension: {0}", ex.Message);
             }
         }
 

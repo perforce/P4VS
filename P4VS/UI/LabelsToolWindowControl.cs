@@ -537,7 +537,7 @@ namespace Perforce.P4VS
             this.ShowDetailsBtn.Column = 0;
             this.ShowDetailsBtn.ColumnsSpanned = 0;
             this.ShowDetailsBtn.FlatAppearance.BorderSize = 0;
-            this.ShowDetailsBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ShowDetailsBtn.ForeColor = this.ForeColor;
             this.ShowDetailsBtn.Name = "ShowDetailsBtn";
             this.ShowDetailsBtn.Row = 0;
             this.ShowDetailsBtn.RowsSpanned = 0;
@@ -1229,7 +1229,7 @@ namespace Perforce.P4VS
 			ActiveTab = NewTab;
 
 			ActiveButton.ImageIndex = 0;
-			ActiveButton.ForeColor = SystemColors.ControlText;
+			ActiveButton.ForeColor = this.ForeColor;
 
 			if (ActiveButton.Text == ShowFilesBtn.Text)
 			{

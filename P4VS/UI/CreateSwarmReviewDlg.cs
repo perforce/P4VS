@@ -190,89 +190,63 @@ namespace Perforce.P4VS
 				MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				return false;
 			}
-            SwarmServer sw = Scm.Connection.Swarm.GetSwarmServer();
+			SwarmServer sw = Scm.Connection.Swarm.GetSwarmServer();
 
 			if (sw != null)
 			{
-				SwarmApi.Options options = new SwarmApi.Options();
-				options["description"] = new JSONParser.JSONStringField(description);
-				if (dlg.reviewersGridView.RowCount>0) 
+				// v11 uses JSON body
+				JSONParser.JSONObject jsonOptions = new JSONParser.JSONObject();
+				jsonOptions.Add("description", new JSONParser.JSONStringField(description));
+
+				if (dlg.reviewersGridView.RowCount > 0)
 				{
-                    if (Scm.Connection.Swarm.SwarmAPI7)
-                    {
-                        // users: required or optional
-                        IList<string> reviewers = dlg.GetReviewers(ReviewerType.optional);
-                        options["reviewers[]"] = new JSONParser.JSONArray(reviewers);
-                        reviewers = dlg.GetReviewers(ReviewerType.reqired);
-                        options["requiredReviewers[]"] = new JSONParser.JSONArray(reviewers);
+					// users: required or optional
+					IList<string> reviewers = dlg.GetReviewers(ReviewerType.optional);
+					jsonOptions.Add("reviewers", new JSONParser.JSONArray(reviewers)); // v11: reviewers
 
-                        // keep an index of all group reviewers
-                        int totalReviewerGroups = 0;
+					reviewers = dlg.GetReviewers(ReviewerType.reqired);
+					jsonOptions.Add("requiredReviewers", new JSONParser.JSONArray(reviewers)); // v11: requiredReviewers (v11 uses requiredReviewers, v1.1 did too)
 
-                        IList<string> groups = new List<string>();
+					// reviewerGroups array
+					JSONParser.JSONArray groupsArray = new JSONParser.JSONArray();
 
-
-
-                        // groups: all members optional
-                        reviewers = dlg.GetReviewers(ReviewerType.optionalGroup);
-                        for (int i = 0; i < reviewers.Count; i++)
-                        {
-                            options["reviewerGroups[" + totalReviewerGroups + "][name]"] =
-                                new JSONParser.JSONStringField(reviewers[i]);
-                            totalReviewerGroups++;
-                        }
-                        // groups: one members required
-                        reviewers = dlg.GetReviewers(ReviewerType.oneRequiredInGroup);
-                        for (int i = 0; i < reviewers.Count; i++)
-                        {
-                            options["reviewerGroups[" + totalReviewerGroups + "][name]"] =
-                                new JSONParser.JSONStringField(reviewers[i]);
-                            options["reviewerGroups[" + totalReviewerGroups + "][required]"] =
-                                new JSONParser.JSONStringField("true");
-                            options["reviewerGroups[" + totalReviewerGroups + "][quorum]"] =
-                                new JSONParser.JSONStringField("1");
-                            totalReviewerGroups++;
-                        }
-                        // groups: all members required
-                        reviewers = dlg.GetReviewers(ReviewerType.requiredGroup);
-                        for (int i = 0; i < reviewers.Count; i++)
-                        {
-                            options["reviewerGroups[" + totalReviewerGroups + "][name]"] =
-                                new JSONParser.JSONStringField(reviewers[i]);
-                            options["reviewerGroups[" + totalReviewerGroups + "][required]"] =
-                                new JSONParser.JSONStringField("true");
-                            totalReviewerGroups++;
-                        }
-
-                    }
-                    else if (Scm.Connection.Swarm.SwarmAPI1_1)
+					// groups: all members optional
+					reviewers = dlg.GetReviewers(ReviewerType.optionalGroup);
+					for (int i = 0; i < reviewers.Count; i++)
 					{
-						IList<string> reviewers = dlg.GetReviewers(ReviewerType.optional);
-						options["reviewers"] = new JSONParser.JSONArray(reviewers);
-						reviewers = dlg.GetReviewers(ReviewerType.reqired);
-						options["requiredReviewers"] = new JSONParser.JSONArray(reviewers);
+						JSONParser.JSONObject group = new JSONParser.JSONObject();
+						group.Add("name", new JSONParser.JSONStringField(reviewers[i]));
+						groupsArray.Add(group);
 					}
-					else
+					// groups: one members required
+					reviewers = dlg.GetReviewers(ReviewerType.oneRequiredInGroup);
+					for (int i = 0; i < reviewers.Count; i++)
 					{
-						IList<string> reviewers = dlg.GetReviewers();
-						options["reviewers"] = new JSONParser.JSONArray(reviewers);
+						JSONParser.JSONObject group = new JSONParser.JSONObject();
+						group.Add("name", new JSONParser.JSONStringField(reviewers[i]));
+						group.Add("required", new JSONParser.JSONStringField("true"));
+						group.Add("quorum", new JSONParser.JSONStringField("1"));
+						groupsArray.Add(group);
+					}
+					// groups: all members required
+					reviewers = dlg.GetReviewers(ReviewerType.requiredGroup);
+					for (int i = 0; i < reviewers.Count; i++)
+					{
+						JSONParser.JSONObject group = new JSONParser.JSONObject();
+						group.Add("name", new JSONParser.JSONStringField(reviewers[i]));
+						group.Add("required", new JSONParser.JSONStringField("true"));
+						groupsArray.Add(group);
+					}
+
+					if (groupsArray.Value.Count > 0)
+					{
+						jsonOptions.Add("reviewerGroups", groupsArray);
 					}
 				}
-                SwarmServer.Review reveiw = null;
-                try
-                {
-                    if (Scm.Connection.Swarm.SwarmAPI7)
-                    {
-                        reveiw = sw.CreateReview7(change, options);
-                    }
-                    else if (Scm.Connection.Swarm.SwarmAPI1_1)
-					{
-						reveiw = sw.CreateReview1_1(change, options);
-					}
-					else
-					{
-						reveiw = sw.CreateReview(change, options);
-					}
+				SwarmServer.Review reveiw = null;
+				try
+				{
+					reveiw = sw.CreateReview11(change, jsonOptions); // v11 JSON
 					if (reveiw != null)
 					{
 						if (dlg.Option4Checked)
@@ -295,21 +269,21 @@ namespace Perforce.P4VS
 				}
 				catch (Exception ex)
 				{
-                    if (reveiw == null && ex.InnerException != null)
-                    {
-                        P4ErrorDlg.Show(Resources.CreateSwarmReviewDlg_ReviewCouldNotBeCreated +
-                             "\r\n" + ex.InnerException.Message, false, false);
-                    }
-                    else
-                    {
-                        P4ErrorDlg.Show(ex.Message, false, false);
-                    }
-                }
+					if (reveiw == null && ex.InnerException != null)
+					{
+						P4ErrorDlg.Show(Resources.CreateSwarmReviewDlg_ReviewCouldNotBeCreated +
+								"\r\n" + ex.InnerException.Message, false, false);
+					}
+					else
+					{
+						P4ErrorDlg.Show(ex.Message, false, false);
+					}
+				}
 			}
 			return true;
 		}
 
-		public static bool UpdateReview(P4ScmProvider Scm, int changeId)//, bool pending)
+        public static bool UpdateReview(P4ScmProvider Scm, int changeId)//, bool pending)
 		{
 			CreateSwarmReviewDlg dlg = new CreateSwarmReviewDlg(Scm, "UpdateSwarmReviewDlg");
 
@@ -433,38 +407,14 @@ namespace Perforce.P4VS
 				MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				return false;
 			}
-            SwarmServer sw = Scm.Connection.Swarm.GetSwarmServer();
+			SwarmServer sw = Scm.Connection.Swarm.GetSwarmServer();
 
 			if (sw != null)
 			{
-				SwarmApi.Options options = new SwarmApi.Options();
-				options["description"] = new JSONParser.JSONStringField(description);
-                if (dlg.reviewersGridView.RowCount>0)
-                {
-                    if (Scm.Connection.Swarm.SwarmAPI1_1)
-                    {
-                        IList<string> reviewers = dlg.GetReviewers(ReviewerType.optional);
-                        options["reviewers"] = new JSONParser.JSONArray(reviewers);
-                        reviewers = dlg.GetReviewers(ReviewerType.reqired);
-                        options["requiredReviewers"] = new JSONParser.JSONArray(reviewers);
-                    }
-                    else
-                    {
-                        IList<string> reviewers = dlg.GetReviewers();
-                        options["reviewers"] = new JSONParser.JSONArray(reviewers);
-                    }
-                }
-                try
+				try
 				{
 					SwarmServer.Review review = null;
-                    if (Scm.Connection.Swarm.SwarmAPI1_1)
-					{
-						review = sw.AddChangeToReview1_1(_selectedReviewID, change);
-					}
-					else
-					{
-						review = sw.AddChangeToReview(_selectedReviewID, change);
-					}
+					review = sw.AddChangeToReview11(_selectedReviewID, change);
 					if (review != null)
 					{
 						if (dlg.Option4Checked)
@@ -625,7 +575,6 @@ namespace Perforce.P4VS
 			return true;
 		}
 
-		private bool Swarm1_1 = false;
 
 		public CreateSwarmReviewDlg(P4ScmProvider scm, string _preferenceKey)
 		{
@@ -634,7 +583,7 @@ namespace Perforce.P4VS
 			_scm = scm;
 
 			InitializeComponent();
-            this.Icon = Images.icon_p4vs_16px;
+			this.Icon = Images.icon_p4vs_16px;
 			if (this.components == null)
 			{
 				this.components = new System.ComponentModel.Container();
@@ -644,23 +593,51 @@ namespace Perforce.P4VS
 			// ListImages
 			// 
 			ListImages.TransparentColor = System.Drawing.Color.Transparent;
-            ListImages.Images.Add("noCheckBox.png", Images.noCheckBox);
-            ListImages.Images.Add("CheckBox.png", Images.CheckBox);
-            ListImages.Images.Add("users_icon.png", Images.users_icon);
-            ListImages.Images.Add("groups_icon.png", Images.groups_icon);
+			ListImages.Images.Add("noCheckBox.png", Images.noCheckBox);
+			ListImages.Images.Add("CheckBox.png", Images.CheckBox);
+			ListImages.Images.Add("users_icon.png", Images.users_icon);
+			ListImages.Images.Add("groups_icon.png", Images.groups_icon);
 
-            //ReviewersLV.SmallImageList = ListImages;
+			//ReviewersLV.SmallImageList = ListImages;
 
-            ChangelistFilesLV.ListViewItemSorter = (System.Collections.IComparer) new FileListViewSorter();
+			ChangelistFilesLV.ListViewItemSorter = (System.Collections.IComparer) new FileListViewSorter();
 
-            Swarm1_1 = scm.Connection.Swarm.SwarmAPI1_1;
-			if (!Swarm1_1)
-			{
-				// remove the required reviewers column
-				reviewersGridView.Columns.RemoveAt(0);
-			}
+			reviewersGridView.EnableHeadersVisualStyles = false;
+			reviewersGridView.ColumnHeadersDefaultCellStyle.BackColor = SystemColors.Control;
+			reviewersGridView.ColumnHeadersDefaultCellStyle.ForeColor = SystemColors.WindowText;
+			reviewersGridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = SystemColors.Control;
+			reviewersGridView.ColumnHeadersDefaultCellStyle.SelectionForeColor = SystemColors.WindowText;
+
 		}
 
+		protected override void OnLoad(EventArgs e)
+		{
+			base.OnLoad(e);
+
+			// Fix for header selection visual glitch in dark mode
+			// ThemeManager sets BackColor but misses SelectionBackColor for headers
+			if (reviewersGridView != null)
+			{
+				reviewersGridView.EnableHeadersVisualStyles = false;
+				reviewersGridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = reviewersGridView.ColumnHeadersDefaultCellStyle.BackColor;
+				reviewersGridView.ColumnHeadersDefaultCellStyle.SelectionForeColor = reviewersGridView.ColumnHeadersDefaultCellStyle.ForeColor;
+
+				// Ensure the "Required" column (ComboBox) respects the dark theme
+				// We must modify the column style directly as it might not inherit correctly
+				if (reqClm != null)
+				{
+					// Use FlatStyle so the background color is respected instead of system 3D look
+					reqClm.FlatStyle = FlatStyle.Flat;
+
+					// Force the cell style to match the grid's theme
+					var gridStyle = reviewersGridView.DefaultCellStyle;
+					reqClm.DefaultCellStyle.BackColor = gridStyle.BackColor;
+					reqClm.DefaultCellStyle.ForeColor = gridStyle.ForeColor;
+					reqClm.DefaultCellStyle.SelectionBackColor = gridStyle.SelectionBackColor;
+					reqClm.DefaultCellStyle.SelectionForeColor = gridStyle.SelectionForeColor;
+				}
+			}
+		}
 		public string Description
 		{
 			get { return DescriptionTB.Text; }
@@ -973,8 +950,11 @@ namespace Perforce.P4VS
 			}
 		}
 
-        public enum ReviewerType { all, reqired, optional, optionalGroup,
-            requiredGroup, oneRequiredInGroup };
+		public enum ReviewerType
+		{
+			all, reqired, optional, optionalGroup,
+			requiredGroup, oneRequiredInGroup
+		};
 
         public IList<string> GetReviewers()
         {
@@ -1110,7 +1090,7 @@ namespace Perforce.P4VS
             ReviewerMap[GroupTB.Text.Trim()] = group;
 
             reviewersGridView.Rows.Add(Images.groups_icon, group.Id, string.Empty,
-                "All members optional");
+				"All group members' reviews are optional");
 
             reviewersGridView.Rows[reviewersGridView.Rows.Count - 1].Tag = group;
             reviewersGridView.Rows[reviewersGridView.Rows.Count - 1].Selected=true;
@@ -1121,9 +1101,9 @@ namespace Perforce.P4VS
                     (DataGridViewComboBoxCell)reviewersGridView.
                     Rows[reviewersGridView.SelectedRows[0].Index].Cells[3];
 
-            cell.Items.Add("All members optional");
-            cell.Items.Add("All members required");
-            cell.Items.Add("One review required");
+			cell.Items.Add("All group members' reviews are optional");
+			cell.Items.Add("All group members' reviews are required");
+			cell.Items.Add("Only one group member's review is required");
 
             cell.Value = cell.Items[0];
             
@@ -1404,7 +1384,22 @@ namespace Perforce.P4VS
                 
                 int y = e.CellBounds.Bottom - 18;         // font height
                 string user = reviewersGridView.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value.ToString();
-                e.Graphics.DrawString(user, reviewersGridView.Font, Brushes.Black, e.CellBounds.Left + 24, y);
+                //e.Graphics.DrawString(user, reviewersGridView.Font, Brushes.Black, e.CellBounds.Left + 24, y);
+                Brush textBrush;
+                if ((e.State & DataGridViewElementStates.Selected) == DataGridViewElementStates.Selected)
+                {
+                    textBrush = SystemBrushes.HighlightText;
+                }
+                else
+                {
+                    textBrush = new SolidBrush(reviewersGridView.DefaultCellStyle.ForeColor);
+                }
+
+                e.Graphics.DrawString(user, reviewersGridView.Font, textBrush, e.CellBounds.Left + 24, y);
+                if (textBrush is SolidBrush && textBrush != SystemBrushes.HighlightText)
+                {
+                    textBrush.Dispose();
+                }
                 e.Handled = true;                        // done with the image column 
             }
         }
@@ -1424,110 +1419,141 @@ namespace Perforce.P4VS
             e.Cancel=true;
         }
 
-        private void reviewersGridView_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
-        {
-            DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)reviewersGridView.CurrentCell;
+		private void reviewersGridView_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+		{
+			DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)reviewersGridView.CurrentCell;
 
-            // It is a group
-            if (cell.Items.Count > 2)
-            {
-                
-                string selected = cell.FormattedValue.ToString();
-                cell.Items.Clear();
-                cell.Items.Add("All group members' reviews are optional");
-                cell.Items.Add("All group members' reviews are required");
-                cell.Items.Add("Only one group member's review is required");
-                
-                if (selected.Contains("optional"))
-                {
-                    cell.Value = cell.Items[0];
-                }
-                else if (selected.Contains("members required"))
-                {
-                    cell.Value = cell.Items[1];
-                }
-                else if (selected.Contains("review required"))
-                {
-                    cell.Value = cell.Items[2];
-                }
-            }
-            else
-            {
-                string selected = cell.FormattedValue.ToString();
-                cell.Items.Clear();
-                cell.Items.Add("Optional");
-                cell.Items.Add("Required");
-            }
-            //"All members optional",
-            //"All group members\' reviews are optional",
-            //"All members required",
-            //"All group members\' reviews are required",
-            //"One review required",
-            //"Only one group member\'s review is required",
-            //"Optional",
-            //"Required"
-        }
+			// It is a group
+			if (cell.Items.Count > 2)
+			{
 
-        private void reviewersGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            if (e.Control is ComboBox)
-            {
-                ComboBox CB = (ComboBox)e.Control;
-                CB.DrawMode = DrawMode.OwnerDrawFixed;
-                CB.DrawItem += combobox_DrawItem;
-            }
-        }
+				string selected = cell.FormattedValue.ToString();
+				cell.Items.Clear();
+				cell.Items.Add("All group members' reviews are optional");
+				cell.Items.Add("All group members' reviews are required");
+				cell.Items.Add("Only one group member's review is required");
 
-       
-        private void combobox_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            string s = "";
-            Brush br = SystemBrushes.WindowText;
-            Brush brBack;
-            Rectangle rDraw;
-            bool bSelected = e.State == DrawItemState.Selected;
-            bool bValue = e.State == DrawItemState.ComboBoxEdit;
+				if (selected.Contains("optional"))
+				{
+					cell.Value = cell.Items[0];
+				}
+				else if (selected.Contains("members required"))
+				{
+					cell.Value = cell.Items[1];
+				}
+				else if (selected.Contains("review required"))
+				{
+					cell.Value = cell.Items[2];
+				}
+			}
+			else
+			{
+				string selected = cell.FormattedValue.ToString();
+				cell.Items.Clear();
+				cell.Items.Add("Optional");
+				cell.Items.Add("Required");
+			}
+		}
 
-            rDraw = e.Bounds;
-            rDraw.Inflate(-1, -1);
+		private void reviewersGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+		{
+			if (e.Control is ComboBox)
+			{
+				ComboBox CB = (ComboBox)e.Control;
 
-            if (bSelected & !bValue)
-            {
-                brBack = Brushes.LightBlue;
-                g.FillRectangle(Brushes.LightBlue, rDraw);
-                g.DrawRectangle(Pens.Blue, rDraw);
-            }
-            else
-            {
-                brBack = Brushes.White;
-                g.FillRectangle(brBack, e.Bounds);
-            }
+				// Set FlatStyle to Popup or Flat to respect background color better in some themes
+				CB.FlatStyle = FlatStyle.Popup;
 
-            try
-            {
-                s = ((ComboBox)sender).Items[e.Index].ToString();
-            }
-            catch
-            {
-                s = "";
-            }
+				CB.DrawMode = DrawMode.OwnerDrawFixed;
+				CB.DrawItem -= combobox_DrawItem; // Prevent duplicate handlers
+				CB.DrawItem += combobox_DrawItem;
 
-            int x, y;
+				// Ensure the ComboBox matches the grid's theme immediately
+				CB.BackColor = reviewersGridView.DefaultCellStyle.BackColor;
+				CB.ForeColor = reviewersGridView.DefaultCellStyle.ForeColor;
+			}
+		}
 
-            x = e.Bounds.Left + 20;
-            y = e.Bounds.Top + 1;
 
-            string selected = reviewersGridView.CurrentCell.Value.ToString();
-            Font f = reviewersGridView.Font;
-            if (s==selected)
-            {
-                e.Graphics.DrawImage(Images.CheckMark, new Point(e.Bounds.Left, e.Bounds.Top));
-                f = new Font(new FontFamily("Microsoft Sans Serif"), 8.25f, FontStyle.Bold);
-            }
-            g.DrawString(s, f, Brushes.Black, x, y);
-        }
+		private void combobox_DrawItem(object sender, DrawItemEventArgs e)
+		{
+			if (e.Index < 0) return; // Don't draw if no item
 
+			Graphics g = e.Graphics;
+			string s = "";
+			Brush brBack;
+			Rectangle rDraw;
+
+			// Check if this item is selected (highlighted)
+			bool bSelected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
+			// bool bValue = (e.State & DrawItemState.ComboBoxEdit) == DrawItemState.ComboBoxEdit;
+
+			rDraw = e.Bounds;
+
+			if (bSelected)
+			{
+				brBack = SystemBrushes.Highlight;
+				g.FillRectangle(brBack, rDraw);
+			}
+			else
+			{
+				brBack = new SolidBrush(reviewersGridView.DefaultCellStyle.BackColor);
+				g.FillRectangle(brBack, rDraw);
+			}
+
+			try
+			{
+				s = ((ComboBox)sender).Items[e.Index].ToString();
+			}
+			catch
+			{
+				s = "";
+			}
+
+			int x, y;
+
+			x = e.Bounds.Left + 20; // Indent for potential checkmark/icon
+			y = e.Bounds.Top + 1;
+			if (y < rDraw.Top) y = rDraw.Top; // coding safe
+
+			// Calculate vertical center
+			if (rDraw.Height > 0)
+			{
+				// Simple vertical centering
+				// y = rDraw.Top + (rDraw.Height - (int)e.Font.Height) / 2;
+			}
+
+			// Determine if this item is the currently selected value in the cell
+			string currentValue = "fail";
+			if (reviewersGridView.CurrentCell != null && reviewersGridView.CurrentCell.Value != null)
+			{
+				currentValue = reviewersGridView.CurrentCell.Value.ToString();
+			}
+
+			Font f = reviewersGridView.Font; // Start with default font
+			if (s == currentValue)
+			{
+				// Mark the current value
+				// e.Graphics.DrawImage(Images.CheckMark, new Point(e.Bounds.Left, e.Bounds.Top)); 
+				f = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold);
+			}
+
+			Brush textBrush;
+			if (bSelected)
+			{
+				textBrush = SystemBrushes.HighlightText;
+			}
+			else
+			{
+				textBrush = new SolidBrush(reviewersGridView.DefaultCellStyle.ForeColor);
+			}
+
+			g.DrawString(s, f, textBrush, x, y);
+
+			// Clean up only if we created the brush
+			if (brBack is SolidBrush && brBack != SystemBrushes.Highlight) brBack.Dispose();
+			if (textBrush is SolidBrush && textBrush != SystemBrushes.HighlightText) textBrush.Dispose();
+		}
 
 
         private void reviewersGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -1535,41 +1561,6 @@ namespace Perforce.P4VS
             if (reviewersGridView.CurrentCell.ColumnIndex==3)
             {
                 reviewersGridView.CurrentCell.ReadOnly = false;
-            }
-        }
-
-        private void reviewersGridView_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
-        {
-            if (reviewersGridView.CurrentCell!=null &&
-                reviewersGridView.CurrentCell.IsInEditMode &&
-                e.ColumnIndex==3 &&
-                reviewersGridView.CurrentRow.Cells[2].Value.ToString()=="")
-            {
-                try
-                {
-                    DataGridViewComboBoxCell cell =
-    (DataGridViewComboBoxCell)reviewersGridView.CurrentCell;
-
-                    cell.Items.Clear();
-                    cell.Items.Add("All members optional");
-                    cell.Items.Add("All members required");
-                    cell.Items.Add("One review required");
-
-                    if (reviewersGridView.CurrentCell.EditedFormattedValue.ToString().Contains("are required"))
-                    {
-                        cell.Items.RemoveAt(1);
-                        cell.Items.Insert(0, "All members required");
-                    }
-                    if (reviewersGridView.CurrentCell.EditedFormattedValue.ToString().Contains("is required"))
-                    {
-                        cell.Items.RemoveAt(2);
-                        cell.Items.Insert(0, "One review required");
-                    }
-                }
-                catch{}
-                
-                reviewersGridView.EndEdit();
-                reviewersGridView.CurrentCell.ReadOnly = true;
             }
         }
     }

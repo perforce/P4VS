@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Perforce.P4VS.UI
 {
-    public partial class P4VSMessage : Form
+    public partial class P4VSMessage : Perforce.P4VS.AutoSizeForm
     {
         public P4VSMessage(string title, string message)
         {

@@ -1109,10 +1109,13 @@ namespace Perforce.P4VS
 
 			 }
 
-			 detailsPanel.Controls.AddRange(labels);
-			 detailsPanel.Controls.AddRange(textboxes);
+			detailsPanel.Controls.AddRange(labels);
+			detailsPanel.Controls.AddRange(textboxes);
 
-			 GotJobFields = true;
+#if VS2012
+			ThemeManager.SetTheme(detailsPanel);
+#endif
+			GotJobFields = true;
 
 		 }
 

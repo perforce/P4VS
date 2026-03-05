@@ -47,7 +47,7 @@ using Perforce.P4;
 
 namespace Perforce.P4Scm
 {
-	public class CachedFile
+    public class CachedFile
 	{
 		internal P4.FileMetaData _file;
 		public CachedFile(P4.FileMetaData file)
@@ -225,17 +225,22 @@ namespace Perforce.P4Scm
 					return false;
 
 				CachedFile c = cache[GetKey(key)];
-                bool result = ((DateTime.Now - c.LastUpdate) < maxAge);
-                if (logger.IsTraceEnabled) 
-                {
-                    var details = "";
-                    if (!result)
-                    {
-                        details = string.Format("({0}) ", (DateTime.Now - c.LastUpdate));
-                    }
-                    logger.Trace("CacheFresh {0} {1}timespan {2} and file {3}",
-                        result, details, maxAge, key);
-                }
+
+				// Checking for null before accessing properties
+				if (c == null)
+					return false;
+
+				bool result = ((DateTime.Now - c.LastUpdate) < maxAge);
+				if (logger.IsTraceEnabled) 
+				{
+					var details = "";
+					if (!result)
+					{
+						details = string.Format("({0}) ", (DateTime.Now - c.LastUpdate));
+					}
+					logger.Trace("CacheFresh {0} {1}timespan {2} and file {3}",
+						result, details, maxAge, key);
+				}
 				return result;
 			}
 		}

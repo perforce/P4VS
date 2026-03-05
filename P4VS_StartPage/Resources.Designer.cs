@@ -79,7 +79,7 @@ namespace Perforce.P4VS_StartPage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This package implements the Helix Plugin for Visual Studio..
+        ///   Looks up a localized string similar to This package implements the P4 for Visual Studio..
         /// </summary>
         internal static string _101 {
             get {

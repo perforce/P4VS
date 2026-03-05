@@ -171,7 +171,51 @@ namespace Perforce.JSONParser
         //    }
         //    return null;
         //}
+        public static string EscapeString(string s)
+        {
+            if (string.IsNullOrEmpty(s)) return s;
+            StringBuilder sb = new StringBuilder();
+            foreach (char c in s)
+            {
+                switch (c)
+                {
+                    case '\"':
+                        sb.Append("\\\"");
+                        break;
+                    case '\\':
+                        sb.Append("\\\\");
+                        break;
+                    case '\b':
+                        sb.Append("\\b");
+                        break;
+                    case '\f':
+                        sb.Append("\\f");
+                        break;
+                    case '\n':
+                        sb.Append("\\n");
+                        break;
+                    case '\r':
+                        sb.Append("\\r");
+                        break;
+                    case '\t':
+                        sb.Append("\\t");
+                        break;
+                    default:
+                        if (c < ' ')
+                        {
+                            sb.AppendFormat("\\u{0:x4}", (int)c);
+                        }
+                        else
+                        {
+                            sb.Append(c);
+                        }
+                        break;
+                }
+            }
+            return sb.ToString();
+        }
     }
+
 
     public class JSONNumericalField : JSONField
     {
@@ -507,11 +551,11 @@ namespace Perforce.JSONParser
 				if (Value[key] is JSONStringField)
 				{
 					// string fields need to be quoted
-					val.AppendFormat("{0}:\"{1}\"", key, Value[key]);
+					val.AppendFormat("\"{0}\":\"{1}\"", EscapeString(key), EscapeString(Value[key].ToString()));
 				}
 				else
 				{
-					val.AppendFormat("{0}:{1}", key, Value[key]);
+					val.AppendFormat("\"{0}\":{1}", EscapeString(key), Value[key]);
 				}
 			}
 			val.Append('}');
@@ -785,10 +829,17 @@ namespace Perforce.JSONParser
 				{
 					val.Append(',');
 				}
-				val.Append(entry.ToString());
+				if (entry is JSONStringField)
+				{
+					val.AppendFormat("\"{0}\"", EscapeString(entry.ToString()));
+				}
+				else
+				{
+					val.Append(entry.ToString());
+				}
 			}
 			val.Append(']');
-
+			
 			return val.ToString();
 		}
 		public override string ToParam(string paramName)

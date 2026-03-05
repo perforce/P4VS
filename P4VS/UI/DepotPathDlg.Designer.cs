@@ -42,9 +42,9 @@ namespace Perforce.P4VS
             this.OpenConnectionBtn = new Perforce.I18nControls.GridButton();
             this.DepotTreeViewImageList = new System.Windows.Forms.ImageList(this.components);
             this.connectionLbl = new System.Windows.Forms.Label();
-            this.filterCB = new System.Windows.Forms.CheckBox();
+            this.filterCB = new Perforce.I18nControls.GridCheckBox();
             this.gridControl1 = new Perforce.I18nControls.GridLayoutPanel();
-            this.envCB = new System.Windows.Forms.CheckBox();
+            this.envCB = new Perforce.I18nControls.GridCheckBox();
             this.contextMenuStrip.SuspendLayout();
             this.gridControl1.SuspendLayout();
             this.SuspendLayout();
@@ -201,9 +201,9 @@ namespace Perforce.P4VS
 		private Perforce.I18nControls.GridButton OpenConnectionBtn;
 		private System.Windows.Forms.ImageList DepotTreeViewImageList;
         private System.Windows.Forms.Label connectionLbl;
-        private System.Windows.Forms.CheckBox filterCB;
-		private I18nControls.GridLayoutPanel gridControl1;
-        private System.Windows.Forms.CheckBox envCB;
+        private Perforce.I18nControls.GridCheckBox filterCB;
+        private I18nControls.GridLayoutPanel gridControl1;
+        private Perforce.I18nControls.GridCheckBox envCB;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem getLatestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeFromToolStripMenuItem;
