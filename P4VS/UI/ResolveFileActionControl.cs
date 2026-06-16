@@ -288,7 +288,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
+				P4VsMessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
 				return;
 			}
 		}
@@ -330,7 +330,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
+				P4VsMessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
 				return;
 			}
 		}
@@ -371,7 +371,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
+				P4VsMessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
 				return;
 			}
 		}
@@ -428,7 +428,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
+				P4VsMessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
 				return;
 			}
 		}

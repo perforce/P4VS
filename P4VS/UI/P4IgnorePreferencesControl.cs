@@ -205,7 +205,7 @@ namespace Perforce.P4VS
                         }
                     }
 					if ((prompt != null) && 
-                        (DialogResult.Yes == MessageBox.Show(prompt, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Question)))
+                        (DialogResult.Yes == P4VsMessageBox.Show(prompt, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Question)))
 					{
                         string ignoreStr = System.IO.Path.Combine(root, "*.*");
 						P4VsProvider.Instance.SccService.AddToIgnoreList(!LocalIgnoreChk.Checked, false, ignoreStr);

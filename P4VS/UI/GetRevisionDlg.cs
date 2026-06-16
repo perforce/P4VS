@@ -316,7 +316,7 @@ namespace Perforce.P4VS
 			}
 			if (updateSolution)
 			{
-				if (DialogResult.Cancel == MessageBox.Show(
+				if (DialogResult.Cancel == P4VsMessageBox.Show(
                     Resources.GetRevisionDlg_UpdatingSlnWarninig,
 					Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Information))
 				{
@@ -328,7 +328,7 @@ namespace Perforce.P4VS
 
 				if (VSConstants.S_OK != solution.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_UnloadProject, null, 0))
 				{
-					MessageBox.Show(Resources.Error_ClosingSolution, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+					P4VsMessageBox.Show(Resources.Error_ClosingSolution, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
 				}
 			}
@@ -340,7 +340,7 @@ namespace Perforce.P4VS
 					if ((pItem.itemid == VSConstants.VSITEMID_ROOT) && (P4VsProvider.Instance.SccService.IsProjectControlled(pItem.pHier)))
 					{
 #if VS2008
-						if (DialogResult.Cancel == MessageBox.Show(Resources.GetRevisionDlg_UpdatingProjWarninig,
+						if (DialogResult.Cancel == P4VsMessageBox.Show(Resources.GetRevisionDlg_UpdatingProjWarninig,
 							Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Information))
 						{
 							return;
@@ -353,7 +353,7 @@ namespace Perforce.P4VS
 
 						if (VSConstants.S_OK != solution.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_UnloadProject, null, 0))
 						{
-							MessageBox.Show(Resources.Error_ClosingSolution, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+							P4VsMessageBox.Show(Resources.Error_ClosingSolution, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 							return;
 						}
 						break;
@@ -363,7 +363,7 @@ namespace Perforce.P4VS
 						{
 							if (needToAsk == true)
 							{
-								if (DialogResult.Cancel == MessageBox.Show(Resources.GetRevisionDlg_UpdatingProjWarninig,
+								if (DialogResult.Cancel == P4VsMessageBox.Show(Resources.GetRevisionDlg_UpdatingProjWarninig,
 								   Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Information))
 								{
 									return;
@@ -382,7 +382,7 @@ namespace Perforce.P4VS
 
 							if (VSConstants.S_OK != solution.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_UnloadProject, pItem.pHier, 0))
 							{
-								MessageBox.Show(Resources.Error_ClosingProject, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+								P4VsMessageBox.Show(Resources.Error_ClosingProject, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 								return;
 							}
 						}
@@ -405,7 +405,7 @@ namespace Perforce.P4VS
 					ValueTB.Text != "none"
 					)
 				{
-					MessageBox.Show(string.Format(Resources.GetRevisionDlg_InvalidRevisionSpecifierWarninig, ValueTB.Text));
+					P4VsMessageBox.Show(string.Format(Resources.GetRevisionDlg_InvalidRevisionSpecifierWarninig, ValueTB.Text));
 					ValueTB.Text = string.Empty;
 					return;
 				}
@@ -469,7 +469,7 @@ namespace Perforce.P4VS
 							{
 								if (_isSolutionIncluded)
 								{
-									if (DialogResult.Cancel == MessageBox.Show(	Resources.GetRevisionDlg_RemovingSlnWarninig,
+									if (DialogResult.Cancel == P4VsMessageBox.Show(	Resources.GetRevisionDlg_RemovingSlnWarninig,
 										Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning))
 									{
 										this.DialogResult = DialogResult.Cancel;
@@ -479,7 +479,7 @@ namespace Perforce.P4VS
 								}
 								else
 								{
-									if (DialogResult.Cancel == MessageBox.Show(Resources.GetRevisionDlg_RemovingProjWarninig,
+									if (DialogResult.Cancel == P4VsMessageBox.Show(Resources.GetRevisionDlg_RemovingProjWarninig,
 										Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning))
 									{
 										this.DialogResult = DialogResult.Cancel;
@@ -830,7 +830,7 @@ namespace Perforce.P4VS
                         {
                             if (!(ex.ErrorCode == P4ClientError.MsgDb_NotUnderRoot))
                             {
-                                MessageBox.Show(ex.Message, Resources.P4VS);
+                                P4VsMessageBox.Show(ex.Message, Resources.P4VS);
                                 return;
                             }
                         }
@@ -870,7 +870,7 @@ namespace Perforce.P4VS
                                 }
                                 else
                                 {
-                                    MessageBox.Show(ex.Message, Resources.P4VS);
+                                    P4VsMessageBox.Show(ex.Message, Resources.P4VS);
                                     //LogExeption(ex);
 
                                     return;
@@ -878,7 +878,7 @@ namespace Perforce.P4VS
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show(ex.Message, Resources.P4VS);
+                                P4VsMessageBox.Show(ex.Message, Resources.P4VS);
                                 return;
                             }
 
@@ -915,7 +915,7 @@ namespace Perforce.P4VS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, Resources.P4VS);
+                P4VsMessageBox.Show(ex.Message, Resources.P4VS);
                 this.DialogResult=DialogResult.Cancel;
             }
 		}

@@ -381,7 +381,7 @@ namespace Perforce.P4VS
 				{
 					if (newName.Contains(" "))
 					{
-						MessageBox.Show(Resources.OpenConnectionDlg_NameContainsSpacesWarning, Resources.P4VS,
+						P4VsMessageBox.Show(Resources.OpenConnectionDlg_NameContainsSpacesWarning, Resources.P4VS,
 							MessageBoxButtons.OK, MessageBoxIcon.Information); 
 					}
 
@@ -402,7 +402,7 @@ namespace Perforce.P4VS
 					}
 					else
 					{
-						MessageBox.Show(string.Format(Resources.OpenConnectionDlg_WorkspaceExistsWarning, newName), 
+						P4VsMessageBox.Show(string.Format(Resources.OpenConnectionDlg_WorkspaceExistsWarning, newName), 
 							Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Information);
 						NewWorkspaceBtn_Click(null, null);
 					}
@@ -412,7 +412,7 @@ namespace Perforce.P4VS
 				{
 					if (newName == string.Empty)
 					{
-						MessageBox.Show(Resources.OpenConnectionDlg_EmptyWorkspaceNameWarning,
+						P4VsMessageBox.Show(Resources.OpenConnectionDlg_EmptyWorkspaceNameWarning,
 							Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Information);
 						NewWorkspaceBtn_Click(null, null);
 					}
@@ -487,7 +487,7 @@ namespace Perforce.P4VS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                P4VsMessageBox.Show(ex.Message);
             }
             this.TopMost = true;
         }

@@ -737,7 +737,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, "P4VS Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				P4VsMessageBox.Show(ex.Message, "P4VS Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
@@ -752,7 +752,7 @@ namespace Perforce.P4VS
 				{
 					msg = string.Format(Resources.PendingChangelistDlg_JobAlreadyLinkedError, JobTB.Text);
 				}
-				MessageBox.Show(msg, Resources.PerforceSCM, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				P4VsMessageBox.Show(msg, Resources.PerforceSCM, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				// still null or it's in the list already;
 				return;
 			}
@@ -1116,7 +1116,7 @@ namespace Perforce.P4VS
             {
                 string size = P4ObjectTreeListViewItem.PrettyPrintFileSize(shelvedSize);
                 string msg = string.Format(Resources.FileExceedsMaxPreviewSizeWarning, size);
-                if (DialogResult.No == MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                if (DialogResult.No == P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                 {
                     return;
                 }

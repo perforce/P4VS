@@ -241,7 +241,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
+				P4VsMessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
 				return;
 			}
 		}
@@ -283,7 +283,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
+				P4VsMessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
 				return;
 			}
 		}
@@ -322,7 +322,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
+				P4VsMessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
 				return;
 			}
 		}
@@ -344,7 +344,7 @@ namespace Perforce.P4VS
 							basePath, _selectedItem.ResolveRecord.BaseFileSpec.ToString(),
 							resultsPath);
 
-						DialogResult answer = MessageBox.Show(Resources.ResolveFileInteractiveControl_ResolveSaveChanges, Resources.PerforceSCM, MessageBoxButtons.YesNoCancel);
+						DialogResult answer = P4VsMessageBox.Show(Resources.ResolveFileInteractiveControl_ResolveSaveChanges, Resources.PerforceSCM, MessageBoxButtons.YesNoCancel);
 
 						if (answer == DialogResult.Cancel)
 						{
@@ -423,7 +423,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
+				P4VsMessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
 				return;
 			}
 		}
@@ -529,7 +529,7 @@ namespace Perforce.P4VS
 
 				if (Scm.MergeLocalFiles(baseFile, sourceFile, targetFile, mergedFile) == false)
 				{
-					MessageBox.Show(Resources.ResolveFileInteractiveControl_CannotCreateMergedFile, Resources.PerforceSCM, MessageBoxButtons.OK);
+					P4VsMessageBox.Show(Resources.ResolveFileInteractiveControl_CannotCreateMergedFile, Resources.PerforceSCM, MessageBoxButtons.OK);
 					mergedFile.Dispose();
 					mergedFile = null;
 					return;
@@ -671,7 +671,7 @@ namespace Perforce.P4VS
 
 				if (Scm.MergeLocalFiles(baseFile, sourceFile, targetFile, mergedFile) == false)
 				{
-					MessageBox.Show(Resources.ResolveFileInteractiveControl_CannotCreateMergedFile, Resources.PerforceSCM, MessageBoxButtons.OK);
+					P4VsMessageBox.Show(Resources.ResolveFileInteractiveControl_CannotCreateMergedFile, Resources.PerforceSCM, MessageBoxButtons.OK);
 					mergedFile.Dispose();
 					mergedFile = null;
 					return;
@@ -721,7 +721,7 @@ namespace Perforce.P4VS
 
 				if (Scm.MergeLocalFiles(baseFile, sourceFile, targetFile, mergedFile) == false)
 				{
-					MessageBox.Show(Resources.ResolveFileInteractiveControl_CannotCreateMergedFile, Resources.PerforceSCM, MessageBoxButtons.OK);
+					P4VsMessageBox.Show(Resources.ResolveFileInteractiveControl_CannotCreateMergedFile, Resources.PerforceSCM, MessageBoxButtons.OK);
 					mergedFile.Dispose();
 					mergedFile = null;
 					return;
@@ -772,7 +772,7 @@ namespace Perforce.P4VS
 
 				if (Scm.MergeLocalFiles(baseFile, sourceFile, targetFile, mergedFile) == false)
 				{
-					MessageBox.Show(Resources.ResolveFileInteractiveControl_CannotCreateMergedFile, Resources.PerforceSCM, MessageBoxButtons.OK);
+					P4VsMessageBox.Show(Resources.ResolveFileInteractiveControl_CannotCreateMergedFile, Resources.PerforceSCM, MessageBoxButtons.OK);
 					mergedFile.Dispose();
 					mergedFile = null;
 					return;

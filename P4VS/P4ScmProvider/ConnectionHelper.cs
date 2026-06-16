@@ -214,7 +214,7 @@ namespace Perforce.P4Scm
                             Repository.Dispose();
                             Repository = null;
                         }
-                        MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         P4VsOutputWindow.AppendMessage(ex.Message);
                     }
                     // If we're not showing the connection dialog return a null
@@ -231,7 +231,7 @@ namespace Perforce.P4Scm
                         Repository.Dispose();
                         Repository = null;
                     }
-                    MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     P4VsOutputWindow.AppendMessage(ex.Message);
 
                     // If we're not showing the login dialog return a null as the credentials are bad
@@ -409,7 +409,7 @@ namespace Perforce.P4Scm
                         if (Repository.Connection.LastResults.ErrorList[0].ErrorCode== P4.P4ClientError.MsgServer_TriggerFailed)
                         {
                             P4VsOutputWindow.AppendMessage(Repository.Connection.LastResults.ErrorList[0].ErrorMessage);
-                            MessageBox.Show(Repository.Connection.LastResults.ErrorList[0].ErrorMessage,
+                            P4VsMessageBox.Show(Repository.Connection.LastResults.ErrorList[0].ErrorMessage,
                                 Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             ssoSuccess = false;
                             return true;
@@ -421,7 +421,7 @@ namespace Perforce.P4Scm
                         if (e.SeverityLevel == ErrorSeverity.E_FATAL)
                         {
                             P4VsOutputWindow.AppendMessage(Repository.Connection.LastResults.ErrorList[0].ErrorMessage);
-                            MessageBox.Show(Repository.Connection.LastResults.ErrorList[0].ErrorMessage,
+                            P4VsMessageBox.Show(Repository.Connection.LastResults.ErrorList[0].ErrorMessage,
                                 Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             ssoSuccess = false;
                             return true;
@@ -437,7 +437,7 @@ namespace Perforce.P4Scm
                     throw p4ex;
                 }
                 P4VsOutputWindow.AppendMessage(ex.Message);
-                MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return false;
         }
@@ -641,7 +641,7 @@ namespace Perforce.P4Scm
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                P4VsMessageBox.Show(ex.Message);
             }
         }
 
@@ -780,7 +780,7 @@ namespace Perforce.P4Scm
         private void createClientRoot(String root)
         {
             String msg = string.Format(Resources.P4ScmProvider_CreatWorkspaceRootPrompt, root);
-            DialogResult answer = MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            DialogResult answer = P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
             if (answer == DialogResult.Yes)
             {

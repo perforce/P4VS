@@ -107,7 +107,7 @@ namespace Perforce.P4VS
                 else
                 {
                     string msg = string.Format(Resources.DiffDlg_MissingFileError, paths[0]);
-                    MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw new ArgumentException(msg);
                 }
             }
@@ -168,7 +168,7 @@ namespace Perforce.P4VS
                 else
                 {
                     string msg = string.Format(Resources.DiffDlg_MissingFileError, paths[0]);
-                    MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw new ArgumentException(msg);
                 }
             }
@@ -291,7 +291,7 @@ namespace Perforce.P4VS
 								}
 								catch (Exception)
 								{
-									MessageBox.Show(string.Format(Resources.DiffDlg_InvalidRevisionSpecifier, dlg.path1ValueTB.Text), 
+									P4VsMessageBox.Show(string.Format(Resources.DiffDlg_InvalidRevisionSpecifier, dlg.path1ValueTB.Text), 
 										Resources.PerforceSCM, MessageBoxButtons.OK);
 									Show(paths, specifier, value, scm);
 									return files;
@@ -337,7 +337,7 @@ namespace Perforce.P4VS
 								}
 								catch (Exception)
 								{
-									MessageBox.Show(string.Format(Resources.DiffDlg_InvalidChangelistSpecifier, dlg.path1ValueTB.Text), 
+									P4VsMessageBox.Show(string.Format(Resources.DiffDlg_InvalidChangelistSpecifier, dlg.path1ValueTB.Text), 
 										Resources.PerforceSCM, MessageBoxButtons.OK);
 									Show(paths, specifier, value, scm);
 									return files;
@@ -406,7 +406,7 @@ namespace Perforce.P4VS
 								}
 								catch (Exception)
 								{
-									MessageBox.Show(string.Format(Resources.DiffDlg_InvalidRevisionSpecifier, dlg.path1ValueTB.Text),
+									P4VsMessageBox.Show(string.Format(Resources.DiffDlg_InvalidRevisionSpecifier, dlg.path1ValueTB.Text),
 										Resources.PerforceSCM, MessageBoxButtons.OK);
 									Show(paths, specifier, value, scm);
 									return files;
@@ -452,7 +452,7 @@ namespace Perforce.P4VS
 								}
 								catch (Exception)
 								{
-									MessageBox.Show(string.Format(Resources.DiffDlg_InvalidChangelistSpecifier, dlg.path1ValueTB.Text),
+									P4VsMessageBox.Show(string.Format(Resources.DiffDlg_InvalidChangelistSpecifier, dlg.path1ValueTB.Text),
 										Resources.PerforceSCM, MessageBoxButtons.OK);
 									Show(paths, specifier, value, scm);
 									return files;
@@ -517,7 +517,7 @@ namespace Perforce.P4VS
 							{
 								message = message + error.ErrorMessage;
 							}
-							MessageBox.Show(message);
+							P4VsMessageBox.Show(message);
 
 							Show(paths, specifier, value, scm);
 							return files;

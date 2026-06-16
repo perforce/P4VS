@@ -211,7 +211,7 @@ namespace Perforce.P4VS
 			}
 			if (dlgShown == false)
 			{
-				MessageBox.Show(Resources.ShelveFileDlg_NoShelveableFilesWarning, Resources.PerforceSCM, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				P4VsMessageBox.Show(Resources.ShelveFileDlg_NoShelveableFilesWarning, Resources.PerforceSCM, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

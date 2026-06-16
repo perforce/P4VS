@@ -257,7 +257,7 @@ New Name: {1}</value>
     <value>Views</value>
   </data>
   <data name="P4ScmProvider_CannotFindP4VMerge" xml:space="preserve">
-    <value>Cannot locate P4Merge</value>
+    <value>Cannot locate P4 Merge</value>
   </data>
   <data name="ProviderName" xml:space="preserve">
     <value>Managed Source Code Control Provider</value>

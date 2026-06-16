@@ -480,7 +480,7 @@ new P4ScmProvider.ChangelistUpdateArgs(0, P4ScmProvider.ChangelistUpdateArgs.Upd
 			}
 			if (dlgShown == false)
 			{
-				MessageBox.Show(Resources.SubmitDlg_NoFilesToSubmitWarning, Resources.PerforceSCM,
+				P4VsMessageBox.Show(Resources.SubmitDlg_NoFilesToSubmitWarning, Resources.PerforceSCM,
 					MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return false;
 			}
@@ -1620,7 +1620,7 @@ new P4ScmProvider.ChangelistUpdateArgs(0, P4ScmProvider.ChangelistUpdateArgs.Upd
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
@@ -1635,7 +1635,7 @@ new P4ScmProvider.ChangelistUpdateArgs(0, P4ScmProvider.ChangelistUpdateArgs.Upd
 				{
 					msg = string.Format(Resources.PendingChangelistDlg_JobAlreadyLinkedError, JobTB.Text);
 				}
-				MessageBox.Show(msg, Resources.PerforceSCM, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				P4VsMessageBox.Show(msg, Resources.PerforceSCM, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				// still null or it's in the list already;
 				return;
 			}

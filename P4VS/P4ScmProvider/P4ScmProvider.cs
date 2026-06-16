@@ -519,22 +519,32 @@ namespace Perforce.P4Scm
 
 		public bool IsFileInWorkspace(string file)
 		{
-			if (string.IsNullOrEmpty(file) || string.IsNullOrEmpty(Connection.WorkspaceRoot))
-				return false;
 			
+			if (string.IsNullOrEmpty(Connection.WorkspaceRoot) ||
+				Connection.WorkspaceRoot.Equals("null", StringComparison.OrdinalIgnoreCase) ||
+				string.IsNullOrEmpty(file))
+			{
+				return true;
+			}
+
 			try
 			{
-				string wsRoot = Path.GetFullPath(Connection.WorkspaceRoot.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
-				string filePath = Path.GetFullPath(file);
-				
+				string wsRoot = Connection.WorkspaceRoot.Replace('/', '\\');
+				string filePath = file.Replace('/', '\\');
+
 				if (!wsRoot.EndsWith(Path.DirectorySeparatorChar.ToString()))
 					wsRoot += Path.DirectorySeparatorChar;
-				
-				return filePath.StartsWith(wsRoot, StringComparison.OrdinalIgnoreCase);
+
+				bool result = filePath.StartsWith(wsRoot, StringComparison.OrdinalIgnoreCase);
+				if (!result)
+				{
+					logger.Warn("IsFileInWorkspace: returning false normalizedFile='{0}', normalizedWsRoot='{1}', rawFile='{2}', rawWsRoot='{3}'", filePath, wsRoot, file, Connection.WorkspaceRoot);
+				}
+				return result;
 			}
-			catch
+			catch (Exception ex)
 			{
-			    // If any exception occurs, treat as its in workspace
+				logger.Warn("IsFileInWorkspace: exception for file='{0}', WorkspaceRoot='{1}': {2} treating as in workspace", file, Connection.WorkspaceRoot, ex.Message);
 			    return true;
 			}
 		}
@@ -799,9 +809,7 @@ namespace Perforce.P4Scm
 					continue;
 				}
 				string file = f;
-				if (IsFileInWorkspace(file))
-					oldFiles.Add(file);
-				else
+				if (!IsFileInWorkspace(file))
 				{
 					// File is not in the workspace, so set its cache entry to null.
 					// This avoids unnecessary GetFileMetaData calls for files outside the workspace.
@@ -1112,17 +1120,17 @@ namespace Perforce.P4Scm
 			{
 				if (ex.Message.Contains("Object reference not set to an instance of an object"))
 				{
-					return (DialogResult.Cancel == MessageBox.Show("Unexpected API error", "Perforce SCM", MessageBoxButtons.OKCancel));
+					return (DialogResult.Cancel == P4VsMessageBox.Show("Unexpected API error", "Perforce SCM", MessageBoxButtons.OKCancel));
 				}
-				return (DialogResult.Cancel == MessageBox.Show(ex.Message, "Perforce SCM", MessageBoxButtons.OKCancel));
+				return (DialogResult.Cancel == P4VsMessageBox.Show(ex.Message, "Perforce SCM", MessageBoxButtons.OKCancel));
 			}
 			else if (ex.Message.Contains("Object reference not set to an instance of an object"))
 			{
-				MessageBox.Show("Unexpected API error", "Perforce SCM", MessageBoxButtons.OK);
+				P4VsMessageBox.Show("Unexpected API error", "Perforce SCM", MessageBoxButtons.OK);
 			}
 			else
 			{
-				MessageBox.Show(ex.Message, "Perforce SCM", MessageBoxButtons.OK);
+				P4VsMessageBox.Show(ex.Message, "Perforce SCM", MessageBoxButtons.OK);
 			}
 			return false;
 		}
@@ -1913,7 +1921,7 @@ namespace Perforce.P4Scm
 					}
 					if (!(string.IsNullOrEmpty(info)))
 					{
-						MessageBox.Show(info);
+						P4VsMessageBox.Show(info);
 						return false;
 					}
 					return true;
@@ -2792,7 +2800,7 @@ namespace Perforce.P4Scm
 				}
 				else
 				{
-                    MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VMerge, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindP4VMerge, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 
@@ -2833,7 +2841,7 @@ namespace Perforce.P4Scm
                 }
                 else
                 {
-                    MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -2879,7 +2887,7 @@ namespace Perforce.P4Scm
                 return _p4VCPath;
             }
             
-            MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError);
+            P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError);
 
             return _p4VCPath;
         }
@@ -3007,7 +3015,7 @@ namespace Perforce.P4Scm
 					diffPath = Preferences.LocalSettings.GetString("P4Diff_path", string.Empty);
 					if (string.IsNullOrEmpty(diffPath) || !File.Exists(diffPath))
 					{
-						MessageBox.Show(Resources.P4ScmProvider_CannotFindConfiguredDiffApp, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+						P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindConfiguredDiffApp, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return;
 					}
 				}
@@ -3125,7 +3133,7 @@ namespace Perforce.P4Scm
 					diffPath = Preferences.LocalSettings.GetString("P4Diff_path", string.Empty);
 					if (string.IsNullOrEmpty(diffPath) || !File.Exists(diffPath))
 					{
-						MessageBox.Show(Resources.P4ScmProvider_CannotFindConfiguredDiffApp, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+						P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindConfiguredDiffApp, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return;
 					}
 				}
@@ -3310,7 +3318,7 @@ namespace Perforce.P4Scm
 
 							if (results.ErrorList != null)
 							{
-								MessageBox.Show(string.Format(Resources.P4ScmProvider_ErrorRunningServerDiff, results.ErrorList[0].ErrorMessage), Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+								P4VsMessageBox.Show(string.Format(Resources.P4ScmProvider_ErrorRunningServerDiff, results.ErrorList[0].ErrorMessage), Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 								continue;
 							}
 							if (results.TextOutput == null)
@@ -3332,13 +3340,13 @@ namespace Perforce.P4Scm
 						else
 						{
 							string msg = string.Format(Resources.P4ScmProvider_CantDiffMissingLocalFile, localFile);
-							MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+							P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 						}
 					}
 					else
 					{
 						string msg = string.Format(Resources.P4ScmProvider_CantDiffMissingDepotFile, localFile);
-						MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+						P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
 				}
 			}
@@ -3416,20 +3424,20 @@ namespace Perforce.P4Scm
 
 						if (results.ErrorList != null)
 						{
-							MessageBox.Show(
+							P4VsMessageBox.Show(
 								string.Format(Resources.P4ScmProvider_ErrorRunningServerDiff,results.ErrorList[0].ErrorMessage), 
 								Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 							return false;
 						}
 						if (results.TaggedOutput != null && results.TaggedOutput[0].ContainsValue("identical"))
 						{
-							MessageBox.Show(Resources.P4ScmProvider_FilesAreIdentical, Resources.P4VS, 
+							P4VsMessageBox.Show(Resources.P4ScmProvider_FilesAreIdentical, Resources.P4VS, 
 								MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 							return false;
 						}
                         if (results.TaggedOutput ==null)
                         {
-                            MessageBox.Show(Resources.P4ScmProvider_FilesAreIdentical, Resources.P4VS,
+                            P4VsMessageBox.Show(Resources.P4ScmProvider_FilesAreIdentical, Resources.P4VS,
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             return false;
                         }
@@ -3447,19 +3455,19 @@ namespace Perforce.P4Scm
 
 						if (results.ErrorList != null)
 						{
-							MessageBox.Show(string.Format(Resources.P4ScmProvider_ErrorRunningServerDiff, results.ErrorList[0].ErrorMessage), 
+							P4VsMessageBox.Show(string.Format(Resources.P4ScmProvider_ErrorRunningServerDiff, results.ErrorList[0].ErrorMessage), 
 								Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 							return false;
 						}
 						if (results.TaggedOutput != null && results.TaggedOutput[0].ContainsValue("identical"))
 						{
-							MessageBox.Show(Resources.P4ScmProvider_FilesAreIdentical, Resources.P4VS,
+							P4VsMessageBox.Show(Resources.P4ScmProvider_FilesAreIdentical, Resources.P4VS,
 								MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 							return false;
 						}
                         if (results.TaggedOutput == null)
                         {
-                            MessageBox.Show(Resources.P4ScmProvider_FilesAreIdentical, Resources.P4VS,
+                            P4VsMessageBox.Show(Resources.P4ScmProvider_FilesAreIdentical, Resources.P4VS,
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             return false;
                         }
@@ -3471,13 +3479,13 @@ namespace Perforce.P4Scm
                         P4.P4CommandResult results2 = Connection.Repository.Connection.LastResults;
 						if (results2.ErrorList != null)
 						{
-							MessageBox.Show(string.Format(Resources.P4ScmProvider_ErrorRunningServerDiff, results2.ErrorList[0].ErrorMessage),
+							P4VsMessageBox.Show(string.Format(Resources.P4ScmProvider_ErrorRunningServerDiff, results2.ErrorList[0].ErrorMessage),
 								Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 							return false;
 						}
 						if (results2.TaggedOutput != null && results2.TaggedOutput[0].ContainsValue("identical"))
 						{
-							MessageBox.Show(Resources.P4ScmProvider_FilesAreIdentical, Resources.P4VS,
+							P4VsMessageBox.Show(Resources.P4ScmProvider_FilesAreIdentical, Resources.P4VS,
 								MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 							return false;
 						}
@@ -3514,7 +3522,7 @@ namespace Perforce.P4Scm
 					mergePath = Preferences.LocalSettings.GetString("P4Diff_path", string.Empty);
 					if (string.IsNullOrEmpty(mergePath) || !File.Exists(mergePath))
 					{
-						MessageBox.Show(Resources.P4ScmProvider_CannotFindConfiguredDiffApp, 
+						P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindConfiguredDiffApp, 
 							Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return false;
 					}
@@ -5696,7 +5704,7 @@ namespace Perforce.P4Scm
 					p4vPath = P4VPath();
 					if (string.IsNullOrEmpty(p4vPath) || !File.Exists(p4vPath))
 					{
-						MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+						P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return;
 					}
 				}
@@ -5735,7 +5743,7 @@ namespace Perforce.P4Scm
                                 p4vcPath = P4VCPath();
                                 if (string.IsNullOrEmpty(p4vcPath) || !File.Exists(p4vcPath))
                                 {
-                                    MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS,
+                                    P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS,
                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     return;
                                 }
@@ -5774,7 +5782,7 @@ namespace Perforce.P4Scm
 				}
 				else
 				{
-                    MessageBox.Show(string.Format(Resources.P4ScmProvider_DepotPathDoesNotExist, Path, Connection.Port));
+                    P4VsMessageBox.Show(string.Format(Resources.P4ScmProvider_DepotPathDoesNotExist, Path, Connection.Port));
 				}
 			}
 			catch (ThreadAbortException)
@@ -5814,7 +5822,7 @@ namespace Perforce.P4Scm
                     p4vcPath = P4VCPath();
                     if (string.IsNullOrEmpty(p4vcPath) || !File.Exists(p4vcPath))
 					{
-						MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS, 
+						P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS, 
 							MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return;
 					}
@@ -5887,7 +5895,7 @@ namespace Perforce.P4Scm
                     p4vcPath = P4VCPath();
                     if (string.IsNullOrEmpty(p4vcPath) || !File.Exists(p4vcPath))
 					{
-						MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS,
+						P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS,
 							MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return;
 					}
@@ -5955,7 +5963,7 @@ namespace Perforce.P4Scm
                     p4vcPath = P4VCPath();
                     if (string.IsNullOrEmpty(p4vcPath) || !File.Exists(p4vcPath))
 					{
-						MessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS,
+						P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindP4VError, Resources.P4VS,
 							MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return;
 					}
@@ -6041,7 +6049,7 @@ namespace Perforce.P4Scm
 					mergePath = Preferences.LocalSettings.GetString("P4Merge_path", string.Empty);
 					if (string.IsNullOrEmpty(mergePath) || !File.Exists(mergePath))
 					{
-						MessageBox.Show(Resources.P4ScmProvider_CannotFindConfiguredDiffApp, Resources.P4VS, 
+						P4VsMessageBox.Show(Resources.P4ScmProvider_CannotFindConfiguredDiffApp, Resources.P4VS, 
 							MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return false;
 					}

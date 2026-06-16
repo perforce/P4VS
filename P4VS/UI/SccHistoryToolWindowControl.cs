@@ -1127,7 +1127,7 @@ namespace Perforce.P4VS
                 messageBoxCS.AppendLine();
                 messageBoxCS.AppendFormat("{0} = {1}", "Item", e.Item);
                 messageBoxCS.AppendLine();
-                MessageBox.Show(messageBoxCS.ToString(), "ItemDrag Event");
+                P4VsMessageBox.Show(messageBoxCS.ToString(), "ItemDrag Event");
             }
         }
 
@@ -1296,7 +1296,7 @@ namespace Perforce.P4VS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -1526,7 +1526,7 @@ namespace Perforce.P4VS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -1823,7 +1823,7 @@ namespace Perforce.P4VS {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot locate P4Merge.
+        ///   Looks up a localized string similar to Cannot locate P4 Merge.
         /// </summary>
         public static string P4ScmProvider_CannotFindP4VMerge {
             get {

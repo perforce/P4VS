@@ -88,7 +88,7 @@ namespace Perforce.P4VS.UI
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show(ex.Message);
+                P4VsMessageBox.Show(ex.Message);
             }
             closeBtn_Click(null, null);
         }

@@ -61,7 +61,7 @@ namespace Perforce.P4VS
 						if (Scm.GetUsers(users, opts) != null)
 						{
 							string msg = string.Format(Resources.NewUserDlg_UserExistsWarning, userNameTB.Text);
-							MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+							P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 							continue;
 						}
 
@@ -107,7 +107,7 @@ namespace Perforce.P4VS
 						if ((p4ex.ErrorCode == P4.P4ClientError.MsgServer_PasswordTooShort) ||
 							(p4ex.ErrorCode == P4.P4ClientError.MsgServer_PasswordTooSimple))
 						{
-							MessageBox.Show(Resources.NewUserDlg_PasswordTooShortOrSimple, Resources.P4VS,
+							P4VsMessageBox.Show(Resources.NewUserDlg_PasswordTooShortOrSimple, Resources.P4VS,
 								MessageBoxButtons.OK, MessageBoxIcon.Information);
 						}
 						else
@@ -131,7 +131,7 @@ namespace Perforce.P4VS
 		{
 			if (userNameTB.Text.Contains(" "))
 			{
-				MessageBox.Show(Resources.NewUserDlg_NameContainsSpacesWarning, Resources.P4VS, 
+				P4VsMessageBox.Show(Resources.NewUserDlg_NameContainsSpacesWarning, Resources.P4VS, 
 					MessageBoxButtons.OK,MessageBoxIcon.Information);
 			}
 
@@ -139,7 +139,7 @@ namespace Perforce.P4VS
 			{
 				if (password1TB.Text != password2TB.Text)
 				{
-					MessageBox.Show(Resources.NewUserDlg_PasswordsDontMatchWarning, Resources.P4VS, 
+					P4VsMessageBox.Show(Resources.NewUserDlg_PasswordsDontMatchWarning, Resources.P4VS, 
 						MessageBoxButtons.OK,MessageBoxIcon.Information);
 					return;
 				}
@@ -158,7 +158,7 @@ namespace Perforce.P4VS
 			else
 			{
 				string msg = string.Format(Resources.NewUserDlg_UserExistsWarning, userNameTB.Text);
-				MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

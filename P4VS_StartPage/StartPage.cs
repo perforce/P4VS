@@ -48,6 +48,29 @@ namespace Perforce.P4VS_StartPage
    
     public partial class HelixContainerProvider :  ICodeContainerProvider
     {
+        static void ShowMessageBox(string message)
+        {
+            IVsUIShell uiShell = Package.GetGlobalService(typeof(SVsUIShell)) as IVsUIShell;
+            if (uiShell != null)
+            {
+                Guid clsid = Guid.Empty;
+                int result;
+                uiShell.ShowMessageBox(
+                    0, ref clsid,
+                    "P4VS",
+                    message,
+                    string.Empty, 0,
+                    OLEMSGBUTTON.OLEMSGBUTTON_OK,
+                    OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST,
+                    OLEMSGICON.OLEMSGICON_CRITICAL,
+                    0, out result);
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show(message);
+            }
+        }
+
         bool ExecuteCommand(string command)
         {
             try
@@ -72,7 +95,7 @@ namespace Perforce.P4VS_StartPage
             {
                 if (ex.HResult != -2147467259)
                 {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    ShowMessageBox(ex.Message);
                 }
                 return false;
             }
@@ -105,7 +128,7 @@ namespace Perforce.P4VS_StartPage
                 }
                 catch (Exception ex)
                 {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    ShowMessageBox(ex.Message);
                 }
 
 
@@ -117,7 +140,7 @@ namespace Perforce.P4VS_StartPage
                 }
             }
 
-            System.Windows.Forms.MessageBox.Show(Resources.StartPagePluginRegError);
+            ShowMessageBox(Resources.StartPagePluginRegError);
             
             return null;
         }

@@ -2085,7 +2085,7 @@ namespace Perforce.P4VS
             {
                 if (newName.Contains(" "))
                 {
-                    MessageBox.Show(Resources.NewUserDlg_NameContainsSpacesWarning);
+                    P4VsMessageBox.Show(Resources.NewUserDlg_NameContainsSpacesWarning);
                 }
 
                 if (Scm == null)
@@ -2131,7 +2131,7 @@ namespace Perforce.P4VS
                 }
                 else
                 {
-                    MessageBox.Show(
+                    P4VsMessageBox.Show(
                         string.Format(Resources.WorkspacesWindowControl_WorkspaceExistsWarning, newName),
                         Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     newWorkspaceToolStripMenuItem_Click(null, null);
@@ -2142,7 +2142,7 @@ namespace Perforce.P4VS
             {
                 if (newName == string.Empty)
                 {
-                    MessageBox.Show(Resources.WorkspacesWindowControl_EmptyNameWarning,
+                    P4VsMessageBox.Show(Resources.WorkspacesWindowControl_EmptyNameWarning,
                         Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     newWorkspaceToolStripMenuItem_Click(null, null);
                 }
@@ -2161,7 +2161,7 @@ namespace Perforce.P4VS
             {
                 if (newName.Contains(" "))
                 {
-                    MessageBox.Show(Resources.NewUserDlg_NameContainsSpacesWarning);
+                    P4VsMessageBox.Show(Resources.NewUserDlg_NameContainsSpacesWarning);
                 }
 
                 if (Scm == null)
@@ -2203,7 +2203,7 @@ namespace Perforce.P4VS
                 {
                     // do a foreach check here to confirm that the name == newName and 
                     // does not just contain part of it.
-                    MessageBox.Show(String.Format(Resources.WorkspacesWindowControl_WorkspaceExistsWarning, newName),
+                    P4VsMessageBox.Show(String.Format(Resources.WorkspacesWindowControl_WorkspaceExistsWarning, newName),
                         Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     createWorkspaceFromToolStripMenuItem_Click(null, null);
                 }
@@ -2213,7 +2213,7 @@ namespace Perforce.P4VS
             {
                 if (newName == string.Empty)
                 {
-                    MessageBox.Show(Resources.WorkspacesWindowControl_EmptyNameWarning,
+                    P4VsMessageBox.Show(Resources.WorkspacesWindowControl_EmptyNameWarning,
                         Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     createWorkspaceFromToolStripMenuItem_Click(null, null);
                 }
@@ -2268,7 +2268,7 @@ namespace Perforce.P4VS
             string prompt = string.Format(Resources.WorkspacesWindowControl_DeleteWorkspaceWarning, client.Name);
             string caption = Resources.WorkspacesWindowControl_DeleteWorkspaceCaption;
 
-            if (DialogResult.No != MessageBox.Show(prompt, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            if (DialogResult.No != P4VsMessageBox.Show(prompt, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 Scm.deleteClient(client, null);
                 workspacesTreeListView.SelectedItems.Clear();
@@ -2676,7 +2676,7 @@ namespace Perforce.P4VS
                     }
                 }
 
-                MessageBox.Show(message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                P4VsMessageBox.Show(message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                
             }
 

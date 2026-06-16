@@ -2686,7 +2686,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     P4.Changelist changelist = it.Tag as P4.Changelist;
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         continue;
@@ -2713,7 +2713,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     changelist = Scm.GetChangelist(changelist.Id);
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         continue;
@@ -2744,7 +2744,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     P4.Changelist changelist = it.Tag as P4.Changelist;
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -2762,7 +2762,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                         changelist = Scm.GetChangelist(0, null);
                         if (changelist == null)
                         {
-                            MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                            P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                                 Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             refreshChangelistObject(selected);
                             return;
@@ -2903,7 +2903,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     P4.Changelist changelist = it.Tag as P4.Changelist;
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                                         Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -2961,7 +2961,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     P4.Changelist changelist = it.Tag as P4.Changelist;
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3036,7 +3036,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     P4.Changelist changelist = it.Tag as P4.Changelist;
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3090,7 +3090,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     }
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3100,7 +3100,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     changelist = Scm.GetChangelist(changelist.Id, opts);
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3149,7 +3149,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     }
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3159,7 +3159,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     changelist = Scm.GetChangelist(changelist.Id, opts);
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3180,7 +3180,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     }
                     string caption = Resources.P4VS;
 
-                    if (DialogResult.No != MessageBox.Show(prompt, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    if (DialogResult.No != P4VsMessageBox.Show(prompt, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
                         // this is all of the files in the changelist, so we do not need a list of files
                         Scm.ShelveFiles(changelist.Id, null, dflags, true, null);
@@ -3203,7 +3203,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
         }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                P4VsMessageBox.Show(ex.Message);
             }
         }
 
@@ -3218,7 +3218,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     P4.ShelvedFile selectedFile = it.Tag as P4.ShelvedFile;
                     if (selectedFile == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3245,7 +3245,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     }
                     if (_changelistId <= 0)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3258,7 +3258,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     {
                         string size = P4ObjectTreeListViewItem.PrettyPrintFileSize(shelvedSize);
                         string msg = string.Format(Resources.FileExceedsMaxPreviewSizeWarning, size);
-                        if (DialogResult.No == MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                        if (DialogResult.No == P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                         {
                             continue;
                         }
@@ -3359,7 +3359,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -3388,7 +3388,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -3413,7 +3413,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                         P4.Changelist change = it.Tag as P4.Changelist;
                         if (change == null)
                         {
-                            MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                            P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                                 Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             refreshChangelistObject((P4ChangeTreeListViewItem)pendingTreeListView.SelectedItems[0]);
                             return;
@@ -3451,7 +3451,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 			}
 		}
@@ -3466,7 +3466,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     P4.Changelist changelist = it.Tag as P4.Changelist;
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3498,7 +3498,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
 
                         if (changelist == null)
                         {
-                            MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                            P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                                 Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             refreshChangelistObject(selected);
                             return;
@@ -3509,7 +3509,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                                 changelist.Id);
                             caption = Resources.P4VS;
 
-                            if (DialogResult.No != MessageBox.Show(prompt, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                            if (DialogResult.No != P4VsMessageBox.Show(prompt, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                             {
                                 IList<string> shelved = new List<string>();
                                 foreach (P4.ShelvedFile shelve in changelist.ShelvedFiles)
@@ -3530,7 +3530,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     prompt = string.Format(Resources.PendingChangelistsToolWindowControl_DeletePendingChangelistWarning, changelist.Id);
                     caption = Resources.PendingChangelistsToolWindowControl_DeletePendingChangelistCaption;
 
-                    if (((changelist.Files.Count == 0) && (changelist.Shelved == false)) || (DialogResult.No != MessageBox.Show(prompt, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question)))
+                    if (((changelist.Files.Count == 0) && (changelist.Shelved == false)) || (DialogResult.No != P4VsMessageBox.Show(prompt, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question)))
                     {
                         opts = new P4.Options();
                         Scm.DeleteChangelist(changelist);
@@ -3554,7 +3554,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
 
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3571,7 +3571,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                         changelist = Scm.GetChangelist(changelist.Id);
                         if (changelist == null)
                         {
-                            MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                            P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                                 Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             refreshChangelistObject(selected);
                             return;
@@ -3621,7 +3621,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
 
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
                         return;
@@ -3667,7 +3667,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
 
                     else
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_NoFilesToMoveWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_NoFilesToMoveWarning,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
@@ -3732,7 +3732,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
 					P4.Changelist changelist = parent.Tag as P4.Changelist;
 					if (changelist == null)
 					{
-						MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+						P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
 										Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 						refreshChangelistObject((TreeListViewItem)pendingTreeListView.SelectedItems[0]);
 						return;
@@ -3889,7 +3889,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
 			}
 			else
 			{
-				MessageBox.Show("no files to move");
+				P4VsMessageBox.Show("no files to move");
 			}
             foreach (int id in affectedChanges.Keys)
             {
@@ -3921,7 +3921,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                     P4.Changelist changelist = parent.Tag as P4.Changelist;
                     if (changelist == null)
                     {
-                        MessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
+                        P4VsMessageBox.Show(Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
                                         Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         continue;
                     }
@@ -4185,7 +4185,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -4333,7 +4333,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
 
                     string caption = Resources.P4VS;
 
-                    if (DialogResult.No != MessageBox.Show(prompt, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    if (DialogResult.No != P4VsMessageBox.Show(prompt, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
                         foreach (int changeId in parentMap.Keys)
                         {
@@ -4719,7 +4719,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
                                     {
                                         string size = P4ObjectTreeListViewItem.PrettyPrintFileSize(shelvedSize);
                                         string msg = string.Format(Resources.FileExceedsMaxPreviewSizeWarning, size);
-                                        if (DialogResult.No == MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                                        if (DialogResult.No == P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                                         {
                                             return;
                                         }
@@ -4938,7 +4938,7 @@ P4ScmProvider.ChangelistUpdateArgs.UpdateType.Delete));
 						changelist = (P4.Changelist) changeItem.Tag;
 						if (changelist == null)
 						{
-							MessageBox.Show(
+							P4VsMessageBox.Show(
 								Resources.PendingChangelistsToolWindowControl_SelectedChangelistDeletedWarning,
 								Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 							refreshChangelistObject(item);

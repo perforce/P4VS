@@ -458,7 +458,7 @@ namespace Perforce.P4VS
             }
             if (files.Count <= 0)
             {
-                MessageBox.Show(Resources.P4ScmProvider_SelectedFileDeletedAtHeadRevisionWarning,
+                P4VsMessageBox.Show(Resources.P4ScmProvider_SelectedFileDeletedAtHeadRevisionWarning,
                     Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 return;
             }
@@ -481,7 +481,7 @@ namespace Perforce.P4VS
             }
             if (updateSolution)
             {
-                if (DialogResult.Cancel == MessageBox.Show(
+                if (DialogResult.Cancel == P4VsMessageBox.Show(
                     Resources.P4VsProvider_GetLatestReplaceSlnWarning,
                     Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Information))
                 {
@@ -493,7 +493,7 @@ namespace Perforce.P4VS
 
                 if (VSConstants.S_OK != solution.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_UnloadProject, null, 0))
                 {
-                    MessageBox.Show(Resources.P4VsProvider_ErrorClosingSolution, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    P4VsMessageBox.Show(Resources.P4VsProvider_ErrorClosingSolution, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -518,7 +518,7 @@ namespace Perforce.P4VS
                                 if (updateProject)
                                 {
 #if VS2008
-								if (DialogResult.Cancel == MessageBox.Show(
+								if (DialogResult.Cancel == P4VsMessageBox.Show(
 									   Resources.P4VsProvider_GetLatestReplacProjWarning,
 									   Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Information))
 								{
@@ -532,14 +532,14 @@ namespace Perforce.P4VS
 
 								if (VSConstants.S_OK != solution.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_UnloadProject, null, 0))
 								{
-									MessageBox.Show(Resources.P4VsProvider_ErrorClosingProject, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+									P4VsMessageBox.Show(Resources.P4VsProvider_ErrorClosingProject, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 									return;
 								}
 								break;
 #else
                                     if (needToAsk == true)
                                     {
-                                        if (DialogResult.Cancel == MessageBox.Show(
+                                        if (DialogResult.Cancel == P4VsMessageBox.Show(
                                            Resources.P4VsProvider_GetLatestReplacProjWarning,
                                            Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Information))
                                         {
@@ -560,7 +560,7 @@ namespace Perforce.P4VS
 
                                     if (VSConstants.S_OK != solution.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_UnloadProject, pItem.pHier, 0))
                                     {
-                                        MessageBox.Show(Resources.P4VsProvider_ErrorClosingProject, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        P4VsMessageBox.Show(Resources.P4VsProvider_ErrorClosingProject, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
 #endif
@@ -584,7 +584,7 @@ namespace Perforce.P4VS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -1090,7 +1090,7 @@ namespace Perforce.P4VS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                P4VsMessageBox.Show(ex.Message);
             }
         }
 
@@ -1117,7 +1117,7 @@ namespace Perforce.P4VS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                P4VsMessageBox.Show(ex.Message);
             }
         }
 
@@ -1637,7 +1637,7 @@ namespace Perforce.P4VS
                         if ((results.ErrorList[0].ErrorCode == P4.P4ClientError.MsgDb_NotUnderRoot) ||
                                 (results.ErrorList[0].ErrorCode == P4.P4ClientError.MsgDb_NotUnderClient))
                         {
-                            MessageBox.Show(Resources.P4VsProvider_CantAddSlnClientRootError,
+                            P4VsMessageBox.Show(Resources.P4VsProvider_CantAddSlnClientRootError,
                                 Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
@@ -1653,7 +1653,7 @@ namespace Perforce.P4VS
                     if ((ex.ErrorCode == P4.P4ClientError.MsgDb_NotUnderRoot) ||
                             (ex.ErrorCode == P4.P4ClientError.MsgDb_NotUnderClient))
                     {
-                        MessageBox.Show(Resources.P4VsProvider_CantAddSlnClientRootError,
+                        P4VsMessageBox.Show(Resources.P4VsProvider_CantAddSlnClientRootError,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
@@ -1662,14 +1662,14 @@ namespace Perforce.P4VS
                         (ex.ErrorCode == P4.P4ClientError.MsgDm_ExVIEW2)))
                     {
                         notInWorkspace = false;
-                        MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK);
+                        P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK);
                     }
                 }
                 if (notInWorkspace)
                 {
                     if(Preferences.LocalSettings.GetBool("WarnSlnWorkspace", true))
                     {
-                        if (DialogResult.No == MessageBox.Show(Resources.P4VsProvider_AddSlnWantUpdateClientMapQuestion,
+                        if (DialogResult.No == P4VsMessageBox.Show(Resources.P4VsProvider_AddSlnWantUpdateClientMapQuestion,
                         Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                         {
                             return;
@@ -1756,7 +1756,7 @@ namespace Perforce.P4VS
                 delList == null &&
                 editList == null)
             {
-                MessageBox.Show("no files to reconcile");
+                P4VsMessageBox.Show("no files to reconcile");
                 return;
             }
 
@@ -1843,13 +1843,13 @@ namespace Perforce.P4VS
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
             if (updateSolution)
             {
-                if (DialogResult.Cancel == MessageBox.Show(
+                if (DialogResult.Cancel == P4VsMessageBox.Show(
                     Resources.P4VsProvider_RevertReplaceSlnWarning,
                     Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Information))
                 {
@@ -1861,7 +1861,7 @@ namespace Perforce.P4VS
 
                 if (VSConstants.S_OK != solution.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_UnloadProject, null, 0))
                 {
-                    MessageBox.Show(Resources.P4VsProvider_ErrorClosingSolution, Resources.P4VS,
+                    P4VsMessageBox.Show(Resources.P4VsProvider_ErrorClosingSolution, Resources.P4VS,
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
@@ -1897,7 +1897,7 @@ namespace Perforce.P4VS
                                 if (updateProject)
                                 {
 #if VS2008
-								if (DialogResult.Cancel == MessageBox.Show(
+								if (DialogResult.Cancel == P4VsMessageBox.Show(
 										Resources.P4VsProvider_RevertReplacProjWarning,
 										Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Information))
 								{
@@ -1911,14 +1911,14 @@ namespace Perforce.P4VS
 
 								if (VSConstants.S_OK != solution.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_UnloadProject, null, 0))
 								{
-										MessageBox.Show(Resources.P4VsProvider_ErrorClosingProject, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+										P4VsMessageBox.Show(Resources.P4VsProvider_ErrorClosingProject, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 									return;
 								}
 								break;
 #else
                                     if (needToAsk == true)
                                     {
-                                        if (DialogResult.Cancel == MessageBox.Show(
+                                        if (DialogResult.Cancel == P4VsMessageBox.Show(
                                            Resources.P4VsProvider_RevertReplacProjWarning,
                                            Resources.P4VS, MessageBoxButtons.OKCancel, MessageBoxIcon.Information))
                                         {
@@ -1939,7 +1939,7 @@ namespace Perforce.P4VS
 
                                     if (VSConstants.S_OK != solution.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_UnloadProject, pItem.pHier, 0))
                                     {
-                                        MessageBox.Show(Resources.P4VsProvider_ErrorClosingProject, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        P4VsMessageBox.Show(Resources.P4VsProvider_ErrorClosingProject, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
 #endif
@@ -2050,7 +2050,7 @@ namespace Perforce.P4VS
 
                     if (fmd == null)
                     {
-                        MessageBox.Show(Resources.P4VsProvider_SlnDoesNotExistError,
+                        P4VsMessageBox.Show(Resources.P4VsProvider_SlnDoesNotExistError,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
@@ -2062,7 +2062,7 @@ namespace Perforce.P4VS
                         if ((results.ErrorList[0].ErrorCode == P4.P4ClientError.MsgDb_NotUnderRoot) ||
                             (results.ErrorList[0].ErrorCode == P4.P4ClientError.MsgDb_NotUnderClient))
                         {
-                            MessageBox.Show(Resources.P4VsProvider_CantOpenSlnClientRootError,
+                            P4VsMessageBox.Show(Resources.P4VsProvider_CantOpenSlnClientRootError,
                                 Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
@@ -2075,7 +2075,7 @@ namespace Perforce.P4VS
 
                     if (fmd.Action == P4.FileAction.Delete)
                     {
-                        MessageBox.Show(Resources.P4VsProvider_CantOpenMarkedForDeleteSlnError,
+                        P4VsMessageBox.Show(Resources.P4VsProvider_CantOpenMarkedForDeleteSlnError,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error); return;
                     }
                 }
@@ -2084,7 +2084,7 @@ namespace Perforce.P4VS
                     if ((ex.ErrorCode == P4.P4ClientError.MsgDb_NotUnderRoot) ||
                         (ex.ErrorCode == P4.P4ClientError.MsgDb_NotUnderClient))
                     {
-                        MessageBox.Show(Resources.P4VsProvider_CantOpenSlnClientRootError,
+                        P4VsMessageBox.Show(Resources.P4VsProvider_CantOpenSlnClientRootError,
                             Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
@@ -2093,13 +2093,13 @@ namespace Perforce.P4VS
                         (ex.ErrorCode == P4.P4ClientError.MsgDm_ExVIEW2))
                     {
                         string msg = ex.Message;
-                        MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
                 while (inWorkspace == false)
                 {
-                    if (DialogResult.No == MessageBox.Show(
+                    if (DialogResult.No == P4VsMessageBox.Show(
                         Resources.P4VsProvider_OpenSlnWantUpdateClientMapQuestion,
                         Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
@@ -2136,7 +2136,7 @@ namespace Perforce.P4VS
                 if ((fmd.LocalPath == null) || (fmd.HaveRev <= 0))
                 {
                     if ((fmd.HaveRev <= 0) &&
-                        (DialogResult.No == MessageBox.Show(
+                        (DialogResult.No == P4VsMessageBox.Show(
                             Resources.P4VsProvider_OpenSlnWantSyncClientQuestion,
                             Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Question)))
                     {
@@ -2162,7 +2162,7 @@ namespace Perforce.P4VS
                 {
                     if (fmd.Action != P4.FileAction.None)
                     {
-                        if (DialogResult.No == MessageBox.Show(
+                        if (DialogResult.No == P4VsMessageBox.Show(
                             Resources.P4VsProvider_OpenSlnRevertDeletedButCheckoutQuestion,
                             Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                         {
@@ -2170,7 +2170,7 @@ namespace Perforce.P4VS
                         }
                         SccService.ScmProvider.RevertFiles(false, false, null, path);
                     }
-                    else if (DialogResult.No == MessageBox.Show(
+                    else if (DialogResult.No == P4VsMessageBox.Show(
                         Resources.P4VsProvider_OpenSlnWantSyncClientQuestion,
                         Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
@@ -2183,7 +2183,7 @@ namespace Perforce.P4VS
                         new P4.GetOpenedFilesOptions(P4.GetOpenedFilesCmdFlags.None, null,
                             SccService.ScmProvider.Connection.Workspace, SccService.ScmProvider.Connection.User, 1));
 
-                    if ((opened != null) && (DialogResult.Yes == MessageBox.Show(
+                    if ((opened != null) && (DialogResult.Yes == P4VsMessageBox.Show(
                         Resources.P4VsProvider_OpenSlnRevertCheckedoutDeletedFilesQuestion,
                         Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Question)))
                     {
@@ -2219,7 +2219,7 @@ namespace Perforce.P4VS
                     {
                         if (VSConstants.S_OK != solution.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_UnloadProject, null, 0))
                         {
-                            MessageBox.Show(Resources.P4VsProvider_ErrorClosingSolution, Resources.P4VS,
+                            P4VsMessageBox.Show(Resources.P4VsProvider_ErrorClosingSolution, Resources.P4VS,
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }

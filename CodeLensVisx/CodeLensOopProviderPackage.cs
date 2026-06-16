@@ -200,8 +200,8 @@ namespace CodeLensOopProviderVsix
             P4ScmProvider scm = P4VsProvider.CurrentScm;
             if (scm != null)
             {
-            scm.LaunchHistoryWindow();
-        }
+                scm.LaunchHistoryWindow();
+            }
         }
 
         private static void TimeLapseView(string filePath, IServiceProvider serviceProvider)
@@ -209,8 +209,8 @@ namespace CodeLensOopProviderVsix
             P4ScmProvider scm = P4VsProvider.CurrentScm;
             if (scm != null)
             {
-            scm.LaunchTimeLapseView(filePath);
-        }
+                scm.LaunchTimeLapseView(filePath);
+            }
         }
 
         private static bool IsQueryParameterList(IntPtr pvaIn, IntPtr pvaOut, uint nCmdexecopt)

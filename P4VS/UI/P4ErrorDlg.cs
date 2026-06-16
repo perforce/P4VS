@@ -219,7 +219,7 @@ namespace Perforce.P4VS
             {
                 if (p4vs.ScmProvider.Connection.isLoggedIn() == false)
                 {
-                    MessageBox.Show(Resources.P4ErrorDlg_LoggedOutMsg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    P4VsMessageBox.Show(Resources.P4ErrorDlg_LoggedOutMsg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return DialogResult.Cancel;
                 }
             }

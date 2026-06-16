@@ -413,6 +413,7 @@ namespace Perforce.P4VS
                     logger.Info("CheckAndUninstallHelixExtension failed: {0}", ex.Message);
                 }
                 // load the local settings
+                LocalPreferenceCache.SetVersionSubfolder(GetVsVersionFolderName());
                 Preferences.Initialize();
                 Preferences.LocalSettings.Load(null);
 
@@ -886,6 +887,31 @@ namespace Perforce.P4VS
 			dte = (EnvDTE.DTE)P4VsProvider.Instance.GetService(typeof(EnvDTE.DTE));
 
 			return dte;
+		}
+
+		private string GetVsVersionFolderName()
+		{
+			try
+			{
+				EnvDTE.DTE dte = GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE;
+				if (dte != null)
+				{
+					string major = dte.Version.Split('.')[0];
+					switch (major)
+					{
+						case "15": return "VS2017";
+						case "16": return "VS2019";
+						case "17": return "VS2022";
+						case "18": return "VS2026";
+						default: return "VS" + major; // future VS versions
+					}
+				}
+				}
+			catch (Exception ex)
+			{
+				logger.Info("GetVsVersionFolderName failed, using legacy settings path: {0}", ex.Message);
+			}
+			return null; // null = use legacy path (backward-compatible fallback)
 		}
 
 		public void OnChangelistUpdated(object Sender, P4ScmProvider.ChangelistUpdateArgs Args)

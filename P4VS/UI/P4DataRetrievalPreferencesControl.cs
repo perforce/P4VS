@@ -34,6 +34,7 @@ namespace Perforce.P4VS
 		/// Required designer variable.
 		/// </summary>
 		private System.ComponentModel.Container components = null;
+        private ToolTip labelToolTip;
 		private I18nControls.GridCheckBox AutoUpdateStatudCB;
 		private I18nControls.GridLabel infoLbl;
 		private I18nControls.GridTextBox updateTB;
@@ -73,6 +74,8 @@ namespace Perforce.P4VS
 
         public static int Update_status_Default = 15;
         private I18nControls.GridRadioButton OptimizeSolutionLoadRDO;
+        private bool _reverting = false;
+        private bool _loading = true;
 
 
 
@@ -211,7 +214,7 @@ namespace Perforce.P4VS
             this.OptimizeSolutionLoadRDO.CellHeight = 31;
             this.OptimizeSolutionLoadRDO.CellWidth = 754;
             this.OptimizeSolutionLoadRDO.Column = 0;
-            this.OptimizeSolutionLoadRDO.ColumnsSpanned = 3;
+            this.OptimizeSolutionLoadRDO.ColumnsSpanned = 2;
             this.OptimizeSolutionLoadRDO.Name = "OptimizeSolutionLoadRDO";
             this.OptimizeSolutionLoadRDO.Row = 9;
             this.OptimizeSolutionLoadRDO.RowsSpanned = 0;
@@ -225,7 +228,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.numberUpdatedFilesTB, "numberUpdatedFilesTB");
             this.numberUpdatedFilesTB.CellHeight = 32;
             this.numberUpdatedFilesTB.CellWidth = 230;
-            this.numberUpdatedFilesTB.Column = 2;
+            this.numberUpdatedFilesTB.Column = 1;
             this.numberUpdatedFilesTB.ColumnsSpanned = 0;
             this.numberUpdatedFilesTB.Name = "numberUpdatedFilesTB";
             this.numberUpdatedFilesTB.Row = 5;
@@ -239,7 +242,7 @@ namespace Perforce.P4VS
             this.numberUpdateFilesLbl.CellHeight = 32;
             this.numberUpdateFilesLbl.CellWidth = 388;
             this.numberUpdateFilesLbl.Column = 0;
-            this.numberUpdateFilesLbl.ColumnsSpanned = 1;
+            this.numberUpdateFilesLbl.ColumnsSpanned = 0;
             this.numberUpdateFilesLbl.Name = "numberUpdateFilesLbl";
             this.numberUpdateFilesLbl.Row = 5;
             this.numberUpdateFilesLbl.RowsSpanned = 0;
@@ -251,7 +254,7 @@ namespace Perforce.P4VS
             this.disableParSubmitCB.CellHeight = 31;
             this.disableParSubmitCB.CellWidth = 754;
             this.disableParSubmitCB.Column = 0;
-            this.disableParSubmitCB.ColumnsSpanned = 3;
+            this.disableParSubmitCB.ColumnsSpanned = 2;
             this.disableParSubmitCB.Name = "disableParSubmitCB";
             this.disableParSubmitCB.Row = 19;
             this.disableParSubmitCB.RowsSpanned = 0;
@@ -264,33 +267,33 @@ namespace Perforce.P4VS
             this.disableParShelveCB.CellHeight = 31;
             this.disableParShelveCB.CellWidth = 754;
             this.disableParShelveCB.Column = 0;
-            this.disableParShelveCB.ColumnsSpanned = 3;
+            this.disableParShelveCB.ColumnsSpanned = 2;
             this.disableParShelveCB.Name = "disableParShelveCB";
             this.disableParShelveCB.Row = 20;
             this.disableParShelveCB.RowsSpanned = 0;
             this.disableParShelveCB.UseVisualStyleBackColor = true;
             this.disableParShelveCB.YOffset = 0;
-            // 
+            //
             // disableParSyncCB
-            // 
+            //
             resources.ApplyResources(this.disableParSyncCB, "disableParSyncCB");
             this.disableParSyncCB.CellHeight = 31;
             this.disableParSyncCB.CellWidth = 754;
             this.disableParSyncCB.Column = 0;
-            this.disableParSyncCB.ColumnsSpanned = 3;
+            this.disableParSyncCB.ColumnsSpanned = 2;
             this.disableParSyncCB.Name = "disableParSyncCB";
             this.disableParSyncCB.Row = 18;
             this.disableParSyncCB.RowsSpanned = 0;
             this.disableParSyncCB.UseVisualStyleBackColor = true;
             this.disableParSyncCB.YOffset = 0;
-            // 
+            //
             // gridLayoutSubpanel3
-            // 
+            //
             resources.ApplyResources(this.gridLayoutSubpanel3, "gridLayoutSubpanel3");
             this.gridLayoutSubpanel3.CellHeight = 30;
             this.gridLayoutSubpanel3.CellWidth = 754;
             this.gridLayoutSubpanel3.Column = 0;
-            this.gridLayoutSubpanel3.ColumnsSpanned = 3;
+            this.gridLayoutSubpanel3.ColumnsSpanned = 2;
             this.gridLayoutSubpanel3.Controls.Add(this.gridLabel4);
             this.gridLayoutSubpanel3.Controls.Add(this.gridGroupBox2);
             this.gridLayoutSubpanel3.EnableDesignerGrid = false;
@@ -334,7 +337,7 @@ namespace Perforce.P4VS
             this.gridLabel3.CellHeight = 42;
             this.gridLabel3.CellWidth = 754;
             this.gridLabel3.Column = 0;
-            this.gridLabel3.ColumnsSpanned = 3;
+            this.gridLabel3.ColumnsSpanned = 2;
             this.gridLabel3.Name = "gridLabel3";
             this.gridLabel3.Row = 16;
             this.gridLabel3.RowsSpanned = 0;
@@ -358,7 +361,7 @@ namespace Perforce.P4VS
             this.gridLayoutSubpanel2.CellHeight = 30;
             this.gridLayoutSubpanel2.CellWidth = 754;
             this.gridLayoutSubpanel2.Column = 0;
-            this.gridLayoutSubpanel2.ColumnsSpanned = 3;
+            this.gridLayoutSubpanel2.ColumnsSpanned = 2;
             this.gridLayoutSubpanel2.Controls.Add(this.gridLabel2);
             this.gridLayoutSubpanel2.Controls.Add(this.gridGroupBox1);
             this.gridLayoutSubpanel2.EnableDesignerGrid = false;
@@ -402,7 +405,7 @@ namespace Perforce.P4VS
             this.gridLayoutSubpanel1.CellHeight = 27;
             this.gridLayoutSubpanel1.CellWidth = 754;
             this.gridLayoutSubpanel1.Column = 0;
-            this.gridLayoutSubpanel1.ColumnsSpanned = 3;
+            this.gridLayoutSubpanel1.ColumnsSpanned = 2;
             this.gridLayoutSubpanel1.Controls.Add(this.dataRetrievalLbl);
             this.gridLayoutSubpanel1.Controls.Add(this.dataRetrievalGB);
             this.gridLayoutSubpanel1.EnableDesignerGrid = false;
@@ -446,7 +449,7 @@ namespace Perforce.P4VS
             this.LLFullMenuCB.CellHeight = 23;
             this.LLFullMenuCB.CellWidth = 754;
             this.LLFullMenuCB.Column = 0;
-            this.LLFullMenuCB.ColumnsSpanned = 3;
+            this.LLFullMenuCB.ColumnsSpanned = 2;
             this.LLFullMenuCB.Name = "LLFullMenuCB";
             this.LLFullMenuCB.Row = 14;
             this.LLFullMenuCB.RowsSpanned = 0;
@@ -459,7 +462,7 @@ namespace Perforce.P4VS
             this.PreloadCacheCB.CellHeight = 23;
             this.PreloadCacheCB.CellWidth = 754;
             this.PreloadCacheCB.Column = 0;
-            this.PreloadCacheCB.ColumnsSpanned = 3;
+            this.PreloadCacheCB.ColumnsSpanned = 2;
             this.PreloadCacheCB.Name = "PreloadCacheCB";
             this.PreloadCacheCB.Row = 12;
             this.PreloadCacheCB.RowsSpanned = 0;
@@ -472,7 +475,7 @@ namespace Perforce.P4VS
             this.TreatProjectsAsDirsCB.CellHeight = 23;
             this.TreatProjectsAsDirsCB.CellWidth = 754;
             this.TreatProjectsAsDirsCB.Column = 0;
-            this.TreatProjectsAsDirsCB.ColumnsSpanned = 3;
+            this.TreatProjectsAsDirsCB.ColumnsSpanned = 2;
             this.TreatProjectsAsDirsCB.Name = "TreatProjectsAsDirsCB";
             this.TreatProjectsAsDirsCB.Row = 11;
             this.TreatProjectsAsDirsCB.RowsSpanned = 0;
@@ -485,7 +488,7 @@ namespace Perforce.P4VS
             this.NoFstatOptimizatioRDO.CellHeight = 31;
             this.NoFstatOptimizatioRDO.CellWidth = 754;
             this.NoFstatOptimizatioRDO.Column = 0;
-            this.NoFstatOptimizatioRDO.ColumnsSpanned = 3;
+            this.NoFstatOptimizatioRDO.ColumnsSpanned = 2;
             this.NoFstatOptimizatioRDO.Name = "NoFstatOptimizatioRDO";
             this.NoFstatOptimizatioRDO.Row = 15;
             this.NoFstatOptimizatioRDO.RowsSpanned = 0;
@@ -500,7 +503,7 @@ namespace Perforce.P4VS
             this.LazyLoadRDO.CellHeight = 31;
             this.LazyLoadRDO.CellWidth = 754;
             this.LazyLoadRDO.Column = 0;
-            this.LazyLoadRDO.ColumnsSpanned = 3;
+            this.LazyLoadRDO.ColumnsSpanned = 2;
             this.LazyLoadRDO.Name = "LazyLoadRDO";
             this.LazyLoadRDO.Row = 13;
             this.LazyLoadRDO.RowsSpanned = 0;
@@ -515,7 +518,7 @@ namespace Perforce.P4VS
             this.OptimizeFstatsRDO.CellHeight = 31;
             this.OptimizeFstatsRDO.CellWidth = 754;
             this.OptimizeFstatsRDO.Column = 0;
-            this.OptimizeFstatsRDO.ColumnsSpanned = 3;
+            this.OptimizeFstatsRDO.ColumnsSpanned = 2;
             this.OptimizeFstatsRDO.Name = "OptimizeFstatsRDO";
             this.OptimizeFstatsRDO.Row = 10;
             this.OptimizeFstatsRDO.RowsSpanned = 0;
@@ -530,7 +533,7 @@ namespace Perforce.P4VS
             this.AutoUpdateStatudCB.CellHeight = 31;
             this.AutoUpdateStatudCB.CellWidth = 754;
             this.AutoUpdateStatudCB.Column = 0;
-            this.AutoUpdateStatudCB.ColumnsSpanned = 3;
+            this.AutoUpdateStatudCB.ColumnsSpanned = 2;
             this.AutoUpdateStatudCB.Name = "AutoUpdateStatudCB";
             this.AutoUpdateStatudCB.Row = 6;
             this.AutoUpdateStatudCB.RowsSpanned = 0;
@@ -544,7 +547,7 @@ namespace Perforce.P4VS
             this.infoLbl.CellHeight = 41;
             this.infoLbl.CellWidth = 754;
             this.infoLbl.Column = 0;
-            this.infoLbl.ColumnsSpanned = 3;
+            this.infoLbl.ColumnsSpanned = 2;
             this.infoLbl.Name = "infoLbl";
             this.infoLbl.Row = 7;
             this.infoLbl.RowsSpanned = 0;
@@ -555,7 +558,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.updateTB, "updateTB");
             this.updateTB.CellHeight = 32;
             this.updateTB.CellWidth = 230;
-            this.updateTB.Column = 2;
+            this.updateTB.Column = 1;
             this.updateTB.ColumnsSpanned = 0;
             this.updateTB.Name = "updateTB";
             this.updateTB.Row = 1;
@@ -567,7 +570,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.numberFilesTB, "numberFilesTB");
             this.numberFilesTB.CellHeight = 32;
             this.numberFilesTB.CellWidth = 230;
-            this.numberFilesTB.Column = 2;
+            this.numberFilesTB.Column = 1;
             this.numberFilesTB.ColumnsSpanned = 0;
             this.numberFilesTB.Name = "numberFilesTB";
             this.numberFilesTB.Row = 2;
@@ -579,7 +582,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.sizeTB, "sizeTB");
             this.sizeTB.CellHeight = 32;
             this.sizeTB.CellWidth = 230;
-            this.sizeTB.Column = 2;
+            this.sizeTB.Column = 1;
             this.sizeTB.ColumnsSpanned = 0;
             this.sizeTB.Name = "sizeTB";
             this.sizeTB.Row = 3;
@@ -591,7 +594,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.numberSpecsTB, "numberSpecsTB");
             this.numberSpecsTB.CellHeight = 32;
             this.numberSpecsTB.CellWidth = 230;
-            this.numberSpecsTB.Column = 2;
+            this.numberSpecsTB.Column = 1;
             this.numberSpecsTB.ColumnsSpanned = 0;
             this.numberSpecsTB.Name = "numberSpecsTB";
             this.numberSpecsTB.Row = 4;
@@ -604,7 +607,7 @@ namespace Perforce.P4VS
             this.minutesLbl.AutoEllipsis = true;
             this.minutesLbl.CellHeight = 32;
             this.minutesLbl.CellWidth = 136;
-            this.minutesLbl.Column = 3;
+            this.minutesLbl.Column = 2;
             this.minutesLbl.ColumnsSpanned = 0;
             this.minutesLbl.Name = "minutesLbl";
             this.minutesLbl.Row = 1;
@@ -618,7 +621,7 @@ namespace Perforce.P4VS
             this.label3.AutoEllipsis = true;
             this.label3.CellHeight = 32;
             this.label3.CellWidth = 136;
-            this.label3.Column = 3;
+            this.label3.Column = 2;
             this.label3.ColumnsSpanned = 0;
             this.label3.Name = "label3";
             this.label3.Row = 3;
@@ -633,7 +636,7 @@ namespace Perforce.P4VS
             this.numberSpecsLbl.CellHeight = 32;
             this.numberSpecsLbl.CellWidth = 388;
             this.numberSpecsLbl.Column = 0;
-            this.numberSpecsLbl.ColumnsSpanned = 1;
+            this.numberSpecsLbl.ColumnsSpanned = 0;
             this.numberSpecsLbl.Name = "numberSpecsLbl";
             this.numberSpecsLbl.Row = 4;
             this.numberSpecsLbl.RowsSpanned = 0;
@@ -646,7 +649,7 @@ namespace Perforce.P4VS
             this.numberFilesLbl.CellHeight = 32;
             this.numberFilesLbl.CellWidth = 388;
             this.numberFilesLbl.Column = 0;
-            this.numberFilesLbl.ColumnsSpanned = 1;
+            this.numberFilesLbl.ColumnsSpanned = 0;
             this.numberFilesLbl.Name = "numberFilesLbl";
             this.numberFilesLbl.Row = 2;
             this.numberFilesLbl.RowsSpanned = 0;
@@ -658,7 +661,7 @@ namespace Perforce.P4VS
             this.allLbl.AutoEllipsis = true;
             this.allLbl.CellHeight = 32;
             this.allLbl.CellWidth = 136;
-            this.allLbl.Column = 3;
+            this.allLbl.Column = 2;
             this.allLbl.ColumnsSpanned = 0;
             this.allLbl.Name = "allLbl";
             this.allLbl.Row = 4;
@@ -673,7 +676,7 @@ namespace Perforce.P4VS
             this.sizeLbl.CellHeight = 32;
             this.sizeLbl.CellWidth = 388;
             this.sizeLbl.Column = 0;
-            this.sizeLbl.ColumnsSpanned = 1;
+            this.sizeLbl.ColumnsSpanned = 0;
             this.sizeLbl.Name = "sizeLbl";
             this.sizeLbl.Row = 3;
             this.sizeLbl.RowsSpanned = 0;
@@ -686,7 +689,7 @@ namespace Perforce.P4VS
             this.updateLbl.CellHeight = 32;
             this.updateLbl.CellWidth = 388;
             this.updateLbl.Column = 0;
-            this.updateLbl.ColumnsSpanned = 1;
+            this.updateLbl.ColumnsSpanned = 0;
             this.updateLbl.Name = "updateLbl";
             this.updateLbl.Row = 1;
             this.updateLbl.RowsSpanned = 0;
@@ -723,6 +726,13 @@ namespace Perforce.P4VS
 
 		private void P4DataRetrievalPreferencesControl_Load(object sender, EventArgs e)
 		{
+            labelToolTip = new ToolTip();
+            labelToolTip.SetToolTip(updateLbl, updateLbl.Text);
+            labelToolTip.SetToolTip(numberFilesLbl, numberFilesLbl.Text);
+            labelToolTip.SetToolTip(sizeLbl, sizeLbl.Text);
+            labelToolTip.SetToolTip(numberSpecsLbl, numberSpecsLbl.Text);
+            labelToolTip.SetToolTip(numberUpdateFilesLbl, numberUpdateFilesLbl.Text);
+
 			bool LocalIgnore = false;
 			if (P4IgnorePreferencesControl.Instance != null)
 			{
@@ -803,6 +813,7 @@ namespace Perforce.P4VS
             disableParSyncCB.Checked = Preferences.LocalSettings.GetBool("DisableParallelSync", false);
             disableParSubmitCB.Checked = Preferences.LocalSettings.GetBool("DisableParallelSubmit", false);
             disableParShelveCB.Checked = Preferences.LocalSettings.GetBool("DisableParallelShelve", false);
+            _loading = false;
         }
 
         private Int32 SafeConvertToInt32(string str)
@@ -850,8 +861,21 @@ namespace Perforce.P4VS
             }
             else
             {
-                Preferences.LocalSettings["TreatProjectsAsFolders"] = TreatProjectsAsDirsCB.Checked && !NoFstatOptimizatioRDO.Checked;
-                Preferences.LocalSettings["PreloadScmCache"] = PreloadCacheCB.Checked && !NoFstatOptimizatioRDO.Checked;
+                bool treatAsDirs = TreatProjectsAsDirsCB.Checked && !NoFstatOptimizatioRDO.Checked;
+                bool preloadCache = PreloadCacheCB.Checked && !NoFstatOptimizatioRDO.Checked;
+
+                // Safety: if "Optimize file state retrieval" is selected but the user
+                // unchecked both sub-options, default to "Treat Solution/Projects as
+                // directories" so the setting is not silently downgraded to "Do not
+                // optimize" on next load. (GitHub issue #17)
+                if (OptimizeFstatsRDO.Checked && !treatAsDirs && !preloadCache)
+                {
+                    treatAsDirs = true;
+                    TreatProjectsAsDirsCB.Checked = true;
+                }
+
+                Preferences.LocalSettings["TreatProjectsAsFolders"] = treatAsDirs;
+                Preferences.LocalSettings["PreloadScmCache"] = preloadCache;
                 Preferences.LocalSettings["LazyLoadFullMenu"] = LLFullMenuCB.Checked;
             }
 
@@ -969,6 +993,7 @@ namespace Perforce.P4VS
         }
         private void RDO_CheckedChanged(object sender, EventArgs e)
         {
+            if (_reverting) return;
             TreatProjectsAsDirsCB.Enabled = OptimizeFstatsRDO.Checked;
             PreloadCacheCB.Enabled = OptimizeFstatsRDO.Checked;
 
@@ -977,10 +1002,10 @@ namespace Perforce.P4VS
             PreloadCacheCB.Checked = Preferences.LocalSettings.GetBool("PreloadScmCache", true);
             LLFullMenuCB.Enabled = LazyLoadRDO.Checked;
 
-            AutoUpdateStatudCB.Checked = Preferences.LocalSettings.GetBool("AutoUpdateFileData", false); 
+            AutoUpdateStatudCB.Checked = Preferences.LocalSettings.GetBool("AutoUpdateFileData", false);
             updateTB.Enabled = !OptimizeSolutionLoadRDO.Checked;
             AutoUpdateStatudCB.Enabled = !OptimizeSolutionLoadRDO.Checked;
-            updateTB.Text = Preferences.LocalSettings.GetInt("Update_status", P4DataRetrievalPreferencesControl.Update_status_Default).ToString(); 
+            updateTB.Text = Preferences.LocalSettings.GetInt("Update_status", P4DataRetrievalPreferencesControl.Update_status_Default).ToString();
 
             if (OptimizeSolutionLoadRDO.Checked)
             {
@@ -1000,13 +1025,128 @@ namespace Perforce.P4VS
                 TreatProjectsAsDirsCB.Checked = false;
                 PreloadCacheCB.Checked = false;
                 LLFullMenuCB.Checked = false;
-            }   
+            }
+
+            // When the user selects "Optimize file state retrieval" mid-session
+            // (not during initial form load), auto-select only the first sub-option
+            // so the mode doesn't silently fall back to "Do not optimize" on save,
+            // without re-reading stale defaults for both sub-options. (GitHub issue #17)
+            if (OptimizeFstatsRDO.Checked && !_loading)
+            {
+                TreatProjectsAsDirsCB.Checked = true;
+                PreloadCacheCB.Checked = false;
+            }
+            // Defensive fallback during load: if stored prefs have both sub-options
+            // off while "Optimize" is selected, enable the first sub-option so the
+            // setting is not silently downgraded to "Do not optimize".
+            else if (OptimizeFstatsRDO.Checked && !TreatProjectsAsDirsCB.Checked && !PreloadCacheCB.Checked)
+            {
+                TreatProjectsAsDirsCB.Checked = true;
+            }
 
         }
 
         private void OptimizeSolutionLoadRDO_CheckedChanged(object sender, EventArgs e)
         {
             RDO_CheckedChanged(sender, e);
+        }
+
+        public void RevertToDefaults()
+        {
+            // Hardcoded defaults — used when a key is absent from the bak file
+            int updateStatus = P4DataRetrievalPreferencesControl.Update_status_Default;
+            int numberFiles = 1000;
+            int numberFilesCache = 500;
+            int sizeFiles = 500;
+            int numberSpecs = 100;
+            bool autoUpdateFileData = false;
+            bool treatProjectsAsFolders = true;
+            bool lazyLoad = false;
+            bool preloadCache = true;
+            bool llFullMenu = false;
+            bool optimizeSolutionLoad = false;
+            bool disableParSync = false;
+            bool disableParSubmit = false;
+            bool disableParShelve = false;
+
+            // Apply to UI — suppress RDO_CheckedChanged so it doesn't clobber values
+            // with the current LocalSettings (not yet updated)
+            _reverting = true;
+            try
+            {
+                updateTB.Text              = updateStatus.ToString();
+                numberFilesTB.Text         = numberFiles.ToString();
+                numberUpdatedFilesTB.Text  = numberFilesCache.ToString();
+                sizeTB.Text                = sizeFiles.ToString();
+                numberSpecsTB.Text         = numberSpecs.ToString();
+                AutoUpdateStatudCB.Checked = autoUpdateFileData;
+                disableParSyncCB.Checked   = disableParSync;
+                disableParSubmitCB.Checked = disableParSubmit;
+                disableParShelveCB.Checked = disableParShelve;
+
+                // Explicitly uncheck all radio buttons first — the custom GridLayoutPanel
+                // container does not guarantee WinForms auto-grouping behaviour.
+                OptimizeSolutionLoadRDO.Checked = false;
+                LazyLoadRDO.Checked = false;
+                NoFstatOptimizatioRDO.Checked = false;
+                OptimizeFstatsRDO.Checked = false;
+
+                if (optimizeSolutionLoad)
+                {
+                    OptimizeSolutionLoadRDO.Checked = true;
+                    AutoUpdateStatudCB.Checked = true;
+                    updateTB.Text = "0";
+                    TreatProjectsAsDirsCB.Checked = false;
+                    PreloadCacheCB.Checked = false;
+                    LLFullMenuCB.Checked = false;
+                }
+                else if (lazyLoad)
+                {
+                    LazyLoadRDO.Checked = true;
+                    TreatProjectsAsDirsCB.Checked = false;
+                    PreloadCacheCB.Checked = false;
+                    LLFullMenuCB.Checked = llFullMenu;
+                }
+                else if (!treatProjectsAsFolders && !preloadCache)
+                {
+                    NoFstatOptimizatioRDO.Checked = true;
+                    TreatProjectsAsDirsCB.Checked = false;
+                    PreloadCacheCB.Checked = false;
+                    LLFullMenuCB.Checked = false;
+                }
+                else
+                {
+                    OptimizeFstatsRDO.Checked = true;
+                    TreatProjectsAsDirsCB.Checked = treatProjectsAsFolders;
+                    PreloadCacheCB.Checked = preloadCache;
+                    LLFullMenuCB.Checked = false;
+                }
+            }
+            finally
+            {
+                _reverting = false;
+                // Sync enabled states to match the selected radio button
+                TreatProjectsAsDirsCB.Enabled = OptimizeFstatsRDO.Checked;
+                PreloadCacheCB.Enabled = OptimizeFstatsRDO.Checked;
+                LLFullMenuCB.Enabled = LazyLoadRDO.Checked;
+                updateTB.Enabled = !OptimizeSolutionLoadRDO.Checked;
+                AutoUpdateStatudCB.Enabled = !OptimizeSolutionLoadRDO.Checked;
+            }
+
+            // Respect the LocalIgnore override (disables the update interval field)
+            bool localIgnore = false;
+            if (P4IgnorePreferencesControl.Instance != null)
+            {
+                localIgnore = P4IgnorePreferencesControl.Instance.LocalIgnoreChkChecked;
+            }
+            else if (P4IgnorePreferencesControl.Scm != null)
+            {
+                localIgnore = P4IgnorePreferencesControl.Scm.EnforceLocalIgnore;
+            }
+            if (localIgnore)
+            {
+                UpdateIntervalEnabled = false;
+            }
         }
     }
 }

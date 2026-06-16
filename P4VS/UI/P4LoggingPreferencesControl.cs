@@ -352,7 +352,7 @@ namespace Perforce.P4VS
 				if (Directory.Exists(logFileDirectory) == false)
 				{
 					string msg = string.Format(Resources.P4LoggingPreferencesControl_CreateDirectory, logFileDirectory);
-					if (DialogResult.Yes == MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+					if (DialogResult.Yes == P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
 					{
 						Directory.CreateDirectory(logFileDirectory);
 					}

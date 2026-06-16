@@ -134,7 +134,7 @@ namespace Perforce.P4VS
 				catch (Exception ex)
 				{
 					string msg = ex.Message;
-					MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+					P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 #endif
                 // How to set a setting for the ide (Generally from tool/options dialog)
@@ -176,7 +176,7 @@ namespace Perforce.P4VS
                     catch (Exception ex)
                     {
                         string msg = ex.Message;
-                        MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 

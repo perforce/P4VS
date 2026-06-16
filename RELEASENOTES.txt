@@ -158,7 +158,54 @@ Key to symbols used in change notes below.
 
           * -- requires new P4VS
          ** -- requires new p4d server program
-         
+
+---------------------------------------------------------------------------
+
+New Functionality in 2025.2 Patch 1 (2025.2/2965326) (2026/06/03)
+
+        #2924404 (Job #132122) *
+            Improved responsiveness when selecting the solution node in Solution
+            Explorer. Selecting the solution now refreshes only the solution file;
+            file status for a project is retrieved when that project or an
+            individual file is selected.
+
+        #2938813 (Job #132682) *
+            The "Optimize file state retrieval" option under the P4 - Data
+            Retrieval preferences now selects "Treat Solution/Projects as
+            directories when selected" by default when no sub-option is chosen,
+            instead of falling back to "Do not optimize".
+
+        #2897084 (Job #131090) *
+            Added a "Revert to Default" button to the P4 - Data Retrieval
+            preferences page, allowing all data retrieval options to be reset to
+            their default values.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2025.2 Patch 1 (2025.2/2965326) (2026/06/03)
+
+        #2955985 (Job #133414, #133177) *
+            Fixed issue where files in a workspace could be incorrectly treated
+            as not under source control, causing Visual Studio to show its generic
+            read-only dialog instead of the P4VS checkout dialog when the file was
+            edited.
+
+        #2934335 (Job #132684) *
+            Fixed a loss of saved settings that could occur when a setting value
+            contained XML-invalid characters, which could invalidate the
+            LocalSettings.ini file. These characters are now handled correctly so
+            settings are saved and persist.
+
+        #2929938 (Job #132347) *
+            Fixed incorrect folder status badges for SDK-style projects (such as
+            .NET 8) in Solution Explorer, where folders under the project could
+            show the uncontrolled badge even though their files were already in
+            the depot.
+
+        #2920010 (Job #131550) *
+            P4VS pop-up dialogs now inherit and apply the active Visual Studio
+            color theme (dark or light) instead of always using the default colors.
+
 ---------------------------------------------------------------------------
 
 New Functionality in 2025.2 (2025.2/2901596) (2026/02/26)

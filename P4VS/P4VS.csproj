@@ -993,6 +993,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="P4VsProviderService.cs" />
+    <Compile Include="UI\P4VsMessageBox.cs" />
     <Compile Include="UI\SccHistoryToolWindow.cs" />
     <Compile Include="UI\SccHistoryToolWindowControl.cs">
       <SubType>UserControl</SubType>

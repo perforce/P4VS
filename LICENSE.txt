@@ -191,7 +191,7 @@ microsoft.build.framework.16.5.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/Microsoft.Build.Framework/16.5.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c44642ba-e43d-41fa-90f1-bdbf399ecb43
     Author:      Microsoft Corporation
 
 microsoft.codeanalysis.bannedapianalyzers.3.3.2.nupkg
@@ -430,7 +430,7 @@ microsoft.visualstudio.taskrunnerexplorer.14.0.14.0.0.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2f733785-6c5a-4f84-bc57-1056f3f9f46a
+    Reference:   https://www.nuget.org/packages/Microsoft.VisualStudio.TaskRunnerExplorer.14.0/14.0.0
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.telemetry.16.3.176.nupkg
@@ -577,7 +577,7 @@ microsoft.visualstudio.web.browserlink.12.0.12.0.0.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/Microsoft.VisualStudio.Web.BrowserLink.12.0/12.0.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3d05d905-0f5c-4730-8756-b743af194b5c
     Author:      Microsoft Corporation
 
 microsoft.win32.primitives.4.3.0.nupkg
@@ -588,7 +588,7 @@ microsoft.win32.primitives.4.3.0.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/56d158c8-e9e2-43ca-b90d-0184b7a6ff4b
+    Reference:   https://www.nuget.org/packages/Microsoft.Win32.Primitives/4.3.0
     Author:      Microsoft Corporation
 
 microsoft.win32.registry.4.5.0.nupkg
@@ -622,7 +622,7 @@ microsoft.win32.registry.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/32bf4fe5-92a2-4ad7-9704-66b0d8ff436e
+    Reference:   https://www.nuget.org/packages/Microsoft.Win32.Registry/5.0.0
     Author:      Microsoft Corporation
 
 netstandard.library.1.6.1.nupkg
@@ -633,7 +633,7 @@ netstandard.library.1.6.1.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9945fe8f-3c1a-46aa-b9fa-d48cec8e703d
+    Reference:   https://www.nuget.org/packages/NETStandard.Library/1.6.1
     Author:      Microsoft Corporation
 
 newtonsoft.json.13.0.1.nupkg
@@ -648,7 +648,7 @@ newtonsoft.json.13.0.1.nupkg
     Author:      James Newton-King
 
     Copyright:   Copyright 2008 James Newton-King
-    Reference:   https://www.nuget.org/packages/Newtonsoft.Json/13.0.1
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/ffd9a461-3d2c-466d-a996-11ed9e77194d
     Author:      James Newton-King
 
 newtonsoft.json.9.0.1.nupkg
@@ -748,7 +748,7 @@ system.componentmodel.composition.4.5.0.nupkg
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2edeebf6-50e3-4fb5-b8b8-6dccb5889cf8
+    Reference:   https://www.nuget.org/packages/System.ComponentModel.Composition/4.5.0
     Author:      Microsoft Corporation
 
 system.configuration.configurationmanager.4.5.0.nupkg
@@ -804,7 +804,7 @@ system.diagnostics.tracesource.4.3.0.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/System.Diagnostics.TraceSource/4.3.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c9a2f1a2-672a-49b9-ad5f-cbed2dc2af6b
     Author:      Microsoft Corporation
 
 system.diagnostics.tracing.4.3.0.nupkg
@@ -815,7 +815,7 @@ system.diagnostics.tracing.4.3.0.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/915be5f2-00d4-45f4-9db1-f78c9dc13d15
+    Reference:   https://www.nuget.org/packages/System.Diagnostics.Tracing/4.3.0
     Author:      Microsoft Corporation
 
 system.io.filesystem.accesscontrol.4.5.0.nupkg

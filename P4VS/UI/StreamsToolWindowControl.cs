@@ -2535,7 +2535,7 @@ namespace Perforce.P4VS
             {
                 if (newName.Contains(" "))
                 {
-                    MessageBox.Show(Resources.NewUserDlg_NameContainsSpacesWarning);
+                    P4VsMessageBox.Show(Resources.NewUserDlg_NameContainsSpacesWarning);
                     return newWorkspace(stream);
                 }
 
@@ -2573,7 +2573,7 @@ namespace Perforce.P4VS
                 }
                 else
                 {
-                    MessageBox.Show(
+                    P4VsMessageBox.Show(
                         string.Format(Resources.WorkspacesWindowControl_WorkspaceExistsWarning, newName),
                         Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return newWorkspace(stream);
@@ -2584,7 +2584,7 @@ namespace Perforce.P4VS
             {
                 if (newName == string.Empty)
                 {
-                    MessageBox.Show(Resources.WorkspacesWindowControl_EmptyNameWarning,
+                    P4VsMessageBox.Show(Resources.WorkspacesWindowControl_EmptyNameWarning,
                         Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return newWorkspace(stream);
                 }

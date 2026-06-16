@@ -513,7 +513,7 @@ namespace Perforce.P4VS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                P4VsMessageBox.Show(ex.Message);
             }
 
             return outputBitmap;

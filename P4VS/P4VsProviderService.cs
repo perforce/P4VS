@@ -627,6 +627,21 @@ namespace Perforce.P4VS
 					{
                         // If the file is not controlled, but is member of a controlled project, report the item as checked out (same as source control in VS2003 did)
                         // If the provider wants to have special icons for "pending add" files, the IVsSccGlyphs interface needs to be supported
+
+                        // SDK-style projects (e.g. .NET 8) report directory paths as members of the project via
+                        // IsDocumentInProject, unlike traditional .csproj projects which only report explicitly
+                        // listed files. Since Perforce does not track directories as versioned objects, directory
+                        // nodes must never receive the STATEICON_DISABLED (question mark) badge.
+                        if (Directory.Exists(rgpszFullPaths[idx]))
+                        {
+                            rgsiGlyphs[idx] = VsStateIcon.STATEICON_BLANK;
+                            if (rgdwSccStatus != null)
+                            {
+                                rgdwSccStatus[idx] = (uint)__SccStatus.SCC_STATUS_NOTCONTROLLED;
+                            }
+                            continue;
+                        }
+
                         rgsiGlyphs[idx] = VsStateIcon.STATEICON_DISABLED;
 
                         if (status != null && status.TestAll(SourceControlStatus.scsIgnored))
@@ -685,7 +700,7 @@ namespace Perforce.P4VS
                 object projName = null;
                 int hr = hierProject.GetProperty(VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_Name, out projName);
                 string msg = string.Format(Resources.P4VsProviderService_UnderOtherSCMWarning, projName);
-                if (DialogResult.Yes != MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo))
+                if (DialogResult.Yes != P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo))
                 {
                     return VSConstants.E_FAIL;
                 }
@@ -1067,14 +1082,14 @@ namespace Perforce.P4VS
                                 if ((results.ErrorList[0].ErrorCode == P4.P4ClientError.MsgDb_NotUnderRoot) ||
 (results.ErrorList[0].ErrorCode == P4.P4ClientError.MsgDb_NotUnderClient))
                                 {
-                                    MessageBox.Show(
+                                    P4VsMessageBox.Show(
                                         Resources.P4VsProviderService_CantAddSlnClientRootError,
                                         Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Question);
                                     RegisterSolution = false;
                                 }
                                 else
                                 {
-                                    MessageBox.Show(
+                                    P4VsMessageBox.Show(
     Resources.P4VsProviderService_AddSlnWantUpdateClientMapWarning,
     Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Question);
                                 }
@@ -1190,13 +1205,13 @@ namespace Perforce.P4VS
                             if ((results.ErrorList[0].ErrorCode == P4.P4ClientError.MsgDb_NotUnderRoot) ||
                             (results.ErrorList[0].ErrorCode == P4.P4ClientError.MsgDb_NotUnderClient))
                             {
-                                MessageBox.Show(
+                                P4VsMessageBox.Show(
                                     Resources.P4VsProviderService_CantAddSlnClientRootError,
                                     Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
-                                MessageBox.Show(Resources.P4VsProviderService_AddSlnWantUpdateClientMapWarning,
+                                P4VsMessageBox.Show(Resources.P4VsProviderService_AddSlnWantUpdateClientMapWarning,
 Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
@@ -1537,8 +1552,19 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         {
                             // refresh the file status before checkout in case it is
                             // at an older revision.
+                            var statusBeforeRefresh = GetFileStatus(rgpszMkDocumentsList[iFile]);
                             _scmProvider.UpdateFileInCache(rgpszMkDocumentsList[iFile], true);
                             status = GetFileStatus(rgpszMkDocumentsList[iFile]);
+
+                            // Guard: if the file was confirmed checked-in before the refresh but
+                            // came back as uncontrolled after (e.g. workspace root misconfiguration),
+                            // trust the pre-refresh status so the correct checkout dialog is shown.
+                            if (statusBeforeRefresh.Test(SourceControlStatus.scsCheckedIn) &&
+                                status.Test(SourceControlStatus.scsUncontrolled))
+                            {
+                                logger.Warn("QueryEditFiles: UpdateFileInCache downgraded status from scsCheckedIn to scsUncontrolled for '{0}' reverting to pre-refresh status", rgpszMkDocumentsList[iFile]);
+                                status = statusBeforeRefresh;
+                            }
 
                             if (status.TestAll(SourceControlStatusFlags.scsStale))
                             {
@@ -2318,7 +2344,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 {
                     if (fmd != null && fmd.Action != P4.FileAction.None)
                     {
-                        MessageBox.Show(Resources.P4VsProviderService_QueryRenameCheckedinWarning);
+                        P4VsMessageBox.Show(Resources.P4VsProviderService_QueryRenameCheckedinWarning);
                         pSummaryResult[0] = VSQUERYRENAMEFILERESULTS.VSQUERYRENAMEFILERESULTS_RenameNotOK;
                         rgResults = pSummaryResult;
                     }
@@ -2327,7 +2353,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         fmd.HeadAction == P4.FileAction.DeleteInto || fmd.HeadAction == P4.FileAction.DeleteFrom ||
                         fmd.HeadAction == P4.FileAction.MoveDelete))
                     {
-                        MessageBox.Show(Resources.P4VsProviderService_QueryRenameDeletedWarning);
+                        P4VsMessageBox.Show(Resources.P4VsProviderService_QueryRenameDeletedWarning);
                         pSummaryResult[0] = VSQUERYRENAMEFILERESULTS.VSQUERYRENAMEFILERESULTS_RenameNotOK;
                         rgResults = pSummaryResult;
                     }
@@ -2350,7 +2376,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     fmd.HeadAction == P4.FileAction.DeleteInto || fmd.HeadAction == P4.FileAction.DeleteFrom ||
                     fmd.HeadAction == P4.FileAction.MoveDelete))
                 {
-                    MessageBox.Show(Resources.P4VsProviderService_QueryRenameDeletedWarning);
+                    P4VsMessageBox.Show(Resources.P4VsProviderService_QueryRenameDeletedWarning);
                     pSummaryResult[0] = VSQUERYRENAMEFILERESULTS.VSQUERYRENAMEFILERESULTS_RenameNotOK;
                     rgResults = pSummaryResult;
                 }
@@ -3369,13 +3395,13 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show(string.Format(Resources.P4VsProviderService_MergeNoPreferedStreamsWarning,
+                    P4VsMessageBox.Show(string.Format(Resources.P4VsProviderService_MergeNoPreferedStreamsWarning,
                         target));
                 }
             }
             else
             {
-                MessageBox.Show(Resources.P4VsProviderService_MergeNeedDedicatedStreamWarning);
+                P4VsMessageBox.Show(Resources.P4VsProviderService_MergeNeedDedicatedStreamWarning);
             }
 
             return VSConstants.S_OK;
@@ -3461,13 +3487,13 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show(string.Format(Resources.P4VsProviderService_CopyNoPreferedStreamsWarning,
+                    P4VsMessageBox.Show(string.Format(Resources.P4VsProviderService_CopyNoPreferedStreamsWarning,
                         target));
                 }
             }
             else
             {
-                MessageBox.Show(Resources.P4VsProviderService_CopyNeedDedicatedStreamWarning);
+                P4VsMessageBox.Show(Resources.P4VsProviderService_CopyNeedDedicatedStreamWarning);
             }
 
             return VSConstants.S_OK;
@@ -4039,7 +4065,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 {
                                     if (Preferences.LocalSettings.GetBool("WarnSlnWorkspace", true))
                                     {
-                                        MessageBox.Show(
+                                        P4VsMessageBox.Show(
                                             Resources.P4VsProviderService_CantAddSlnClientRootError, Resources.P4VS, MessageBoxButtons.OK);
                                         return VSConstants.S_OK;
                                     }
@@ -4064,7 +4090,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         {
                             if (Preferences.LocalSettings.GetBool("WarnSlnWorkspace", true))
                             {
-                                MessageBox.Show(
+                                P4VsMessageBox.Show(
                                 Resources.P4VsProviderService_CantAddSlnClientRootError, Resources.P4VS, MessageBoxButtons.OK);
                                 return VSConstants.S_OK;
                             }
@@ -4075,17 +4101,17 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         {
                             notInWorkspace = false;
                         }
-                        MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     if (notInWorkspace)
                     {
                         if (Preferences.LocalSettings.GetBool("WarnSlnWorkspace", true))
                         {
-                            if (DialogResult.No == MessageBox.Show(
+                            if (DialogResult.No == P4VsMessageBox.Show(
                             Resources.P4VsProviderService_AddSlnWantUpdateClientMapWarning, Resources.P4VS, MessageBoxButtons.YesNo))
                             {
                                 return VSConstants.S_OK; ;
@@ -4370,7 +4396,22 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        _P4VsProvider.Glyphs.RefreshNodesGlyphs(_selectedNodes, _selectedFiles);
+                        // OptimizeSolutionLoad fetches status on selection, but when the solution
+                        // node itself is selected skip fetching all files and only refresh the .sln
+                        // file itself. Status for project files will be fetched when a project or
+                        // individual file is selected.
+                        if (Preferences.LocalSettings.GetBool("OptimizeSolutionLoad", false) && _isSolutionSelected)
+                        {
+                            string solutionFile = _P4VsProvider.GetSolutionFileName();
+                            if (!string.IsNullOrEmpty(solutionFile))
+                            {
+                                RefreshProjectGlyphs(new List<string> { solutionFile }, true);
+                            }
+                        }
+                        else
+                        {
+                            _P4VsProvider.Glyphs.RefreshNodesGlyphs(_selectedNodes, _selectedFiles);
+                        }
                     }
                 }
 

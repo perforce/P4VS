@@ -296,7 +296,7 @@ namespace Perforce.P4VS
 				// no files to resolve
 				if (bFirstInit)
 				{
-					MessageBox.Show(Resources.ResolveFileDlg_NoFileToResolveWarning, Resources.P4VS, 
+					P4VsMessageBox.Show(Resources.ResolveFileDlg_NoFileToResolveWarning, Resources.P4VS, 
 						MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 				else

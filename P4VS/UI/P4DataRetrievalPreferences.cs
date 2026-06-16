@@ -33,6 +33,7 @@ namespace Perforce.P4VS
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private P4DataRetrievalPreferencesControl page = null;
+        private Panel _pageWrapper = null;
 
         /// <include file='doc\DialogPage.uex' path='docs/doc[@for="DialogPage".Window]' />
         /// <devdoc>
@@ -50,9 +51,36 @@ namespace Perforce.P4VS
             {
                 page = new P4DataRetrievalPreferencesControl();
                 page.Location = new Point(0, 0);
-				page.Dock = DockStyle.Fill;
-				page.OptionsPage = this;
-                return page;
+                page.Dock = DockStyle.Fill;
+                page.OptionsPage = this;
+
+                // Non-scrolling footer that sits visually between the page content
+                // and the VS OK/Cancel buttons — always visible regardless of scroll.
+                var footer = new FlowLayoutPanel
+                {
+                    Dock = DockStyle.Bottom,
+                    Height = 36,
+                    FlowDirection = FlowDirection.RightToLeft,
+                    WrapContents = false,
+                    Padding = new Padding(4, 4, 4, 4)
+                };
+                var revertBtn = new Button
+                {
+                    Text = "Revert to Default",
+                    AutoSize = false,
+                    Width = 130,
+                    Height = 27
+                };
+                var capturedPage = page; // capture this specific instance, not the field
+                revertBtn.Click += (s, e) => capturedPage.RevertToDefaults();
+                footer.Controls.Add(revertBtn);
+
+                // Wrapper: footer docked Bottom, page content fills the rest.
+                _pageWrapper = new Panel { Dock = DockStyle.Fill };
+                _pageWrapper.Controls.Add(footer);  // Bottom — added first
+                _pageWrapper.Controls.Add(page);    // Fill  — added last
+
+                return _pageWrapper;
             }
         }
 

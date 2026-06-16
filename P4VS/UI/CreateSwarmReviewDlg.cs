@@ -187,7 +187,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				return false;
 			}
 			SwarmServer sw = Scm.Connection.Swarm.GetSwarmServer();
@@ -257,7 +257,7 @@ namespace Perforce.P4VS
 						{
 							string msg = string.Format(Resources.CreateSwarmReviewDlg_ReviewCreated,
 								reveiw.id, reveiw.description);
-							MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Information);
+							P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Information);
 						}
 						if (newChange != null)
 						{
@@ -404,7 +404,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				return false;
 			}
 			SwarmServer sw = Scm.Connection.Swarm.GetSwarmServer();
@@ -425,7 +425,7 @@ namespace Perforce.P4VS
 						{
 							string msg = string.Format(Resources.CreateSwarmReviewDlg_ReviewUpdated,
 								review.id, review.description);
-							MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Information);
+							P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Information);
 						}
 						if (newChange != null)
 						{
@@ -437,7 +437,7 @@ namespace Perforce.P4VS
 				}
 				catch (Exception ex)
 				{
-					MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
+					P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 			return true;
@@ -569,7 +569,7 @@ namespace Perforce.P4VS
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				P4VsMessageBox.Show(ex.Message, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				return false;
 			}
 			return true;
@@ -1036,7 +1036,7 @@ namespace Perforce.P4VS
 				user = _scm.GetUser(UserTB.Text.Trim());
 				if (user == null)
 				{
-                    MessageBox.Show(Resources.CreateSwarmReviewDlg_CantFindUser, Resources.P4VS,
+                    P4VsMessageBox.Show(Resources.CreateSwarmReviewDlg_CantFindUser, Resources.P4VS,
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     UserTB.Clear();
                     UserTB.Tag = null;
@@ -1079,7 +1079,7 @@ namespace Perforce.P4VS
                 IList<Group> groups = _scm.GetGroups(name,opts);
                 if (groups == null || groups.Count < 1)
                 {
-                    MessageBox.Show(Resources.CreateSwarmReviewDlg_CantFindGroup, Resources.P4VS,
+                    P4VsMessageBox.Show(Resources.CreateSwarmReviewDlg_CantFindGroup, Resources.P4VS,
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     GroupTB.Clear();
                     GroupTB.Tag = null;

@@ -60,7 +60,7 @@ namespace Perforce.P4VS
 
 			if (dlg.ShelvedFilesLV.Items.Count <= 0)
 			{
-				MessageBox.Show(Resources.UnshelveFileDialog_NoShelvedFilesWarning, Resources.P4VS, 
+				P4VsMessageBox.Show(Resources.UnshelveFileDialog_NoShelvedFilesWarning, Resources.P4VS, 
 					MessageBoxButtons.OK, MessageBoxIcon.Information);
 				return;
 			}
@@ -503,7 +503,7 @@ namespace Perforce.P4VS
                         {
                             string size = P4ObjectTreeListViewItem.PrettyPrintFileSize(shelvedSize);
                             string msg = string.Format(Resources.FileExceedsMaxPreviewSizeWarning, size);
-                            if (DialogResult.No == MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                            if (DialogResult.No == P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                             {
                                 return;
                             }
@@ -516,7 +516,7 @@ namespace Perforce.P4VS
                         {
                             if (_scm.GetFileVersion(sourceFile, shelvedSpec) == null)
                             {
-                                MessageBox.Show(Resources.UnshelveFileDialog_CannotGetShelvedFileContentsError,
+                                P4VsMessageBox.Show(Resources.UnshelveFileDialog_CannotGetShelvedFileContentsError,
                                     Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return;
                             }

@@ -130,7 +130,7 @@ namespace Perforce.P4VS
 			v = v.Replace("&gt;", ">");
 			v = v.Replace("&quot;", "\"");
 			v = v.Replace("&apos;", "'");
-			v = s.Replace("&amp;", "&");
+			v = v.Replace("&amp;", "&");
 
 			return v;
 		}
@@ -316,7 +316,7 @@ namespace Perforce.P4VS
 				{
 					if (curNode != null)
 					{
-						base[curNode.Name] = LoadPreference(curNode);
+						base[XmlConvert.DecodeName(curNode.Name)] = LoadPreference(curNode);
 					}
 				}
 		}
@@ -332,7 +332,7 @@ namespace Perforce.P4VS
 			foreach (string key in this.Keys)
 			{
 				object obj = base[key];
-				SavePreference(val, ref tabLevel, key, obj);
+				SavePreference(val, ref tabLevel, XmlConvert.EncodeLocalName(key), obj);
 			}
 			EndBlock(val, ref tablevel, "SolutionSettings");
 
@@ -500,6 +500,16 @@ namespace Perforce.P4VS
 		private DateTime _appDataChecked = DateTime.MinValue;
 		private TimeSpan _minCheckTime = TimeSpan.FromMilliseconds(100); // .1 seconds
 
+		private static string _vsFolderName = null;
+
+		/// <summary>
+		/// Sets the VS version subfolder name (e.g. "VS2022") for per-version settings segregation.
+		/// Must be called before Load(null). If not called, the legacy shared path is used.
+		/// </summary>
+		public static void SetVersionSubfolder(string vsFolderName)
+		{
+			_vsFolderName = vsFolderName;
+		}
 		public override void Load(string xml)
 		{
 			lock (syncHead)
@@ -510,15 +520,18 @@ namespace Perforce.P4VS
 				{
 					if (_appData == null)
 					{
-						_appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-						_appData = Path.Combine(_appData, "Perforce\\P4VS\\LocalSettings.ini");
+						string baseFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+						_appData = !string.IsNullOrEmpty(_vsFolderName)
+							? Path.Combine(baseFolder, "Perforce", "P4VS", _vsFolderName, "LocalSettings.ini")
+							: Path.Combine(baseFolder, "Perforce", "P4VS", "LocalSettings.ini");
+
 					}
 #if DEBUG
-				if (_backupData == null)
-				{
+					if (_backupData == null)
+					{
 					_backupData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 					_backupData = Path.Combine(_backupData, "Perforce\\P4VS\\LocalSettings.bak");
-				}
+					}
 #endif
 					try
 					{
@@ -529,7 +542,22 @@ namespace Perforce.P4VS
 							{
 								xmlStr = sr.ReadToEnd();
 							}
-
+						}
+						// Backward-compatible migration: if versioned file not found,
+						// fall back to legacy LocalSettings.ini one level up (read-once, never written)
+						if (string.IsNullOrEmpty(xmlStr) && !string.IsNullOrEmpty(_vsFolderName))
+						{
+							string legacyPath = Path.Combine(
+								Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+								"Perforce", "P4VS", "LocalSettings.ini");
+							if (File.Exists(legacyPath))
+							{
+								using (StreamReader sr = new StreamReader(legacyPath))
+								{
+									xmlStr = sr.ReadToEnd();
+								}
+								logger.Trace("Migrated local preferences from legacy file: {0}", legacyPath);
+							}
 						}
 						if (string.IsNullOrEmpty(xmlStr) == false)
 						{
@@ -552,8 +580,10 @@ namespace Perforce.P4VS
 				// save the local settings
 				if (_appData == null)
 				{
-					_appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-					_appData = Path.Combine(_appData, "Perforce\\P4VS\\LocalSettings.ini");
+					 string baseFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+					_appData = !string.IsNullOrEmpty(_vsFolderName)
+						? Path.Combine(baseFolder, "Perforce", "P4VS", _vsFolderName, "LocalSettings.ini")
+						: Path.Combine(baseFolder, "Perforce", "P4VS", "LocalSettings.ini");
 				}
 #if DEBUG
 				if (_backupData == null)
@@ -602,8 +632,10 @@ namespace Perforce.P4VS
 
 		public void LogLocalSettings()
 		{
-			var localSettingsFullPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-			localSettingsFullPath = Path.Combine(localSettingsFullPath, "Perforce\\P4VS\\LocalSettings.ini");
+			string baseFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+			var localSettingsFullPath = !string.IsNullOrEmpty(_vsFolderName)
+				? Path.Combine(baseFolder, "Perforce", "P4VS", _vsFolderName, "LocalSettings.ini")
+				: Path.Combine(baseFolder, "Perforce", "P4VS", "LocalSettings.ini");
 
 			string localSettingsFolder = Path.GetDirectoryName(localSettingsFullPath);
 			if (!Directory.Exists(localSettingsFolder))

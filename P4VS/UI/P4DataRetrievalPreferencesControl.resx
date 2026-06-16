@@ -157,7 +157,7 @@
     <value>0</value>
   </data>
   <data name="numberUpdatedFilesTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
+    <value>Left</value>
   </data>
   <data name="numberUpdatedFilesTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>392, 160</value>
@@ -190,10 +190,10 @@
     <value>1</value>
   </data>
   <data name="numberUpdateFilesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+    <value>Left, Right</value>
   </data>
   <data name="numberUpdateFilesLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="numberUpdateFilesLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -454,7 +454,7 @@
     <value>7</value>
   </data>
   <data name="gridLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="gridLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -466,13 +466,16 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="gridLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 16</value>
+    <value>370, 16</value>
+  </data>
+  <data name="gridLabel1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="gridLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
   <data name="gridLabel1.Text" xml:space="preserve">
-    <value>gridLabel1</value>
+    <value></value>
   </data>
   <data name="&gt;&gt;gridLabel1.Name" xml:space="preserve">
     <value>gridLabel1</value>
@@ -940,7 +943,7 @@
     <value>18</value>
   </data>
   <data name="updateTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
+    <value>Left</value>
   </data>
   <data name="updateTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>392, 32</value>
@@ -973,7 +976,7 @@
     <value>19</value>
   </data>
   <data name="numberFilesTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
+    <value>Left</value>
   </data>
   <data name="numberFilesTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>392, 64</value>
@@ -1006,7 +1009,7 @@
     <value>20</value>
   </data>
   <data name="sizeTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
+    <value>Left</value>
   </data>
   <data name="sizeTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>392, 96</value>
@@ -1039,7 +1042,7 @@
     <value>21</value>
   </data>
   <data name="numberSpecsTB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
+    <value>Left</value>
   </data>
   <data name="numberSpecsTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>392, 128</value>
@@ -1072,7 +1075,7 @@
     <value>22</value>
   </data>
   <data name="minutesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Left</value>
   </data>
   <data name="minutesLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1144,10 +1147,10 @@
     <value>24</value>
   </data>
   <data name="numberSpecsLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+    <value>Left, Right</value>
   </data>
   <data name="numberSpecsLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="numberSpecsLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1183,10 +1186,10 @@
     <value>25</value>
   </data>
   <data name="numberFilesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+    <value>Left, Right</value>
   </data>
   <data name="numberFilesLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="numberFilesLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1222,7 +1225,7 @@
     <value>26</value>
   </data>
   <data name="allLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Left</value>
   </data>
   <data name="allLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1258,10 +1261,10 @@
     <value>27</value>
   </data>
   <data name="sizeLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+    <value>Left, Right</value>
   </data>
   <data name="sizeLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="sizeLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1297,10 +1300,10 @@
     <value>28</value>
   </data>
   <data name="updateLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+    <value>Left, Right</value>
   </data>
   <data name="updateLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>False</value>
   </data>
   <data name="updateLbl.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>

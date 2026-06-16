@@ -89,7 +89,7 @@ namespace Perforce.P4VS
 			if (u == null)
 			{
 				string msg = string.Format(Resources.ChangeOwnerDlg_UserError, user);
-				MessageBox.Show(msg);
+				P4VsMessageBox.Show(msg);
 				validated = false;
 			}
 			P4.ClientsCmdFlags flags= P4.ClientsCmdFlags.None;
@@ -97,7 +97,7 @@ namespace Perforce.P4VS
 			if (c==null)
 			{
 				string msg = string.Format(Resources.ChangeOwnerDlg_UserError, user);
-				MessageBox.Show(msg);
+				P4VsMessageBox.Show(msg);
 				validated = false;
 			}
 			if (validated == true)

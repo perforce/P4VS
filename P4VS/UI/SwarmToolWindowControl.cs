@@ -112,7 +112,7 @@ namespace Perforce.P4VS
 				if ((urls == null) || (urls.Count <= 0))
 				{
                     string msg = string.Format("No Url for Swarm configured on {0}\r\n\r\n Please enter the Url for Swarm", newScm.Connection.Port);
-					MessageBox.Show(msg, Resources.P4VS);
+					P4VsMessageBox.Show(msg, Resources.P4VS);
 					SwarmUrlCB.Text = string.Empty;
 					SwarmBrowser.Navigate("about:blank");
 				}

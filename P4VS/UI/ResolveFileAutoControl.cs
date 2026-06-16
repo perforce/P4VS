@@ -137,7 +137,7 @@ namespace Perforce.P4VS
 				}
 				catch (Exception ex)
 				{
-					MessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
+					P4VsMessageBox.Show(ex.Message, Resources.PerforceSCM, MessageBoxButtons.OK);
 					return;
 				}
 			}
@@ -148,7 +148,7 @@ namespace Perforce.P4VS
 			if (failedResolves > 0)
 			{
 				string msg = string.Format(Resources.ResolveFileAutoControl_FilesNotResolvedWarning, failedResolves);
-				MessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Information);
+				P4VsMessageBox.Show(msg, Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 		}
 
