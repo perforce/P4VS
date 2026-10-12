@@ -431,24 +431,26 @@ namespace Perforce.P4VS
 
 		private void DoubleBufferedListView_DrawItem(object sender, DrawListViewItemEventArgs e)
 		{
-			Rectangle bounds = e.Bounds;
-			// not everything uses small image list, check
-			if (SmallImageList != null)
-			{
-				bounds.X += SmallImageList.ImageSize.Width;
-				bounds.Width -= SmallImageList.ImageSize.Width;
-			}
-
 			Color BkColor = base.BackColor;
 			if (e.Item.Selected)
 			{
 				// Draw the background and focus rectangle for a selected item.
 				BkColor = SystemColors.Highlight;
 			}
+			// Always clear the full item bounds first. Under RDP the owner-draw surface is not
+			// pre-cleared by Windows, so stale glyphs from prior scroll positions bleed through.
 			using (Brush brush = new SolidBrush(BkColor))
 			{
-				e.Graphics.FillRectangle(brush, bounds);
+				e.Graphics.FillRectangle(brush, e.Bounds);
 				//e.DrawFocusRectangle();
+			}
+
+			Rectangle bounds = e.Bounds;
+			// not everything uses small image list, check
+			if (SmallImageList != null)
+			{
+				bounds.X += SmallImageList.ImageSize.Width;
+				bounds.Width -= SmallImageList.ImageSize.Width;
 			}
 
 			if (SmallImageList != null)
@@ -488,6 +490,9 @@ namespace Perforce.P4VS
 
         private void DoubleBufferedListView_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
         {
+            Color BkColor = e.Item.Selected ? SystemColors.Highlight : base.BackColor;
+            Color FgColor = e.Item.Selected ? SystemColors.HighlightText : base.ForeColor;
+
             Rectangle bounds = e.Bounds;
             if (e.ColumnIndex == 0 && SmallImageList != null)
             {
@@ -495,7 +500,15 @@ namespace Perforce.P4VS
                 bounds.Width -= SmallImageList.ImageSize.Width;
             }
 
-            Color FgColor = base.ForeColor;
+            // Clear the sub-item text area before drawing. Under RDP the owner-draw surface is
+            // not pre-cleared by Windows, so stale glyphs from prior scroll positions bleed
+            // through. The image gutter is deliberately excluded: DrawItem has already cleared
+            // the full row and drawn the item icon / checkbox glyph there, and filling over it
+            // here would erase it.
+            using (Brush bkBrush = new SolidBrush(BkColor))
+            {
+                e.Graphics.FillRectangle(bkBrush, bounds);
+            }
 
             using (Brush fgBrush = new SolidBrush(FgColor))
             {

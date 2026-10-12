@@ -184,6 +184,10 @@ namespace Perforce.P4VS
 		    _maxLineOffset = 0;
 			TreeListViewItem tlvi = e.Item as TreeListViewItem;
 
+			// NOTE: do not clear the row background before this guard. The Win32 control fires
+			// a second, spurious DrawItem *after* the sub-items have been painted; this guard
+			// makes that event a no-op. Filling here would wipe the row and leave it blank
+			// until the next invalidate. The RDP stale-glyph fix belongs in OnDrawSubItem.
 			if (tlvi != null && ((tlvi.Tagged) && ((e.State & ListViewItemStates.Selected) == 0)))
 				return;
 
@@ -272,6 +276,24 @@ namespace Perforce.P4VS
 
             Color BkColor = base.BackColor;
             Color FgColor = base.ForeColor;
+
+            if (e.Item.Selected)
+            {
+#if VS2012
+                BkColor = InvertColor(BkColor);
+                FgColor = InvertColor(FgColor);
+#else
+                BkColor = SystemColors.Highlight;
+                FgColor = SystemColors.HighlightText;
+#endif
+            }
+
+            // Always clear the full sub-item bounds first. Under RDP the owner-draw surface is not
+            // pre-cleared by Windows, so stale glyphs from prior scroll positions bleed through.
+            using (Brush bkBrush = new SolidBrush(BkColor))
+            {
+                e.Graphics.FillRectangle(bkBrush, e.Bounds);
+            }
 
             Rectangle bounds = e.Bounds;
 
@@ -374,16 +396,6 @@ namespace Perforce.P4VS
                     _maxLineOffset = bounds.Width;
                 }
 
-            }
-            if (e.Item.Selected)
-            {
-#if VS2012
-                BkColor = InvertColor(BkColor);
-                FgColor = InvertColor(FgColor);
-#else
-                BkColor = SystemColors.Highlight;
-				FgColor = SystemColors.HighlightText;
-#endif
             }
 
             // drawing items for action column

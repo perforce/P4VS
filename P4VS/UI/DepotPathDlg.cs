@@ -220,7 +220,7 @@ namespace Perforce.P4VS
                             if (ShowOpenConnectionBtn)
                             {
                                 string ext = Path.GetExtension(file.DepotPath.Path);
-                                if (ext != null && ((ext == ".sln") || ext.Contains("proj") || ext.Contains("proj")))
+                                if (ext != null && (string.Equals(ext, ".sln", StringComparison.OrdinalIgnoreCase) || string.Equals(ext, ".slnx", StringComparison.OrdinalIgnoreCase) || ext.IndexOf("proj", StringComparison.OrdinalIgnoreCase) >= 0))
                                 {
                                     TreeNode child = new TreeNode(file.DepotPath.Path);
                                     child.Tag = file;

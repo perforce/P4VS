@@ -2200,7 +2200,7 @@ namespace Perforce.P4VS
 
                 IVsSolution solution = (IVsSolution)GetService(typeof(SVsSolution));
 
-                if (path != null && path.EndsWith("sln"))
+                if (path != null && (path.EndsWith(".sln", StringComparison.OrdinalIgnoreCase) || path.EndsWith(".slnx", StringComparison.OrdinalIgnoreCase)))
                 {
                     int res = solution.OpenSolutionFile(0, path);
 

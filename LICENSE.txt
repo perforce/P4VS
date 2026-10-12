@@ -182,7 +182,7 @@ envdte90a-17.0.31902
 microsoft.build.framework.16.5.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c44642ba-e43d-41fa-90f1-bdbf399ecb43
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/baa95e0f-24a4-473f-8414-ca9351e4309a
     LicenseText: License Text Under Appendix
 
   Copyrights:
@@ -191,34 +191,98 @@ microsoft.build.framework.16.5.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c44642ba-e43d-41fa-90f1-bdbf399ecb43
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/ae966d88-4d1b-44c1-bce8-34326c0f32f6
     Author:      Microsoft Corporation
 
 microsoft.codeanalysis.bannedapianalyzers.3.3.2.nupkg
   Licenses:
     License:     Apache 2.0
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e771f422-a68c-4e80-8576-a7c3d10112ff
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2652be62-02ca-4509-9db0-8c75b40a323d
     LicenseText: License Text Under Appendix
 
   Copyrights:
-    Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e771f422-a68c-4e80-8576-a7c3d10112ff
+    Copyright:   Copyright 2015-2014 reated by summer
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/b71ccc27-9317-4902-8af4-98fca36b56fe
+    Author:      reated by summer
+
+    Copyright:   Copyright Microsoft
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1959e459-a09c-4349-9f28-96c9aeb93328
+    Author:      Microsoft
+
+    Copyright:   Copyright 2018 .NET Foundation and Contributors
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/77eac451-15f5-457c-a794-159b84579e8d
+    Author:      .NET Foundation and Contributors
+
+    Copyright:   Copyright 2018 Microsoft Corporation
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/77eac451-15f5-457c-a794-159b84579e8d
     Author:      Microsoft Corporation
 
 microsoft.csharp.4.7.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bc95aea5-1618-4850-9d2b-59bbc8eb24b6
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bc95aea5-1618-4850-9d2b-59bbc8eb24b6
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8c1401f9-a7af-4136-bda7-abb6aed2ec71
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/Microsoft.CSharp/4.7.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/73424ba6-025d-47b4-bb7b-89f86dcce594
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2009-2010 2013-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      2013-2016 by the Brotli Authors
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 1995-2017 Jean-loup Gailly and Mark Adler
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean-loup Gailly and Mark Adler
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 1991-2017 Unicode, Inc
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation - All Rights Reserved
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation - All Rights Reserved
 
 microsoft.servicehub.analyzers.3.0.3078.nupkg
   Licenses:
@@ -228,14 +292,18 @@ microsoft.servicehub.analyzers.3.0.3078.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/b8b7e0d1-2d8e-498b-806f-2b442e23114f
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1a266889-6208-4bb9-8988-799c071ab4aa
     Author:      Microsoft Corporation
 
 microsoft.servicehub.framework.3.0.2061.nupkg
   Licenses:
+    License:     Microsoft Visual Studio Add-ons and Extensions
+    Reference:   https://www.nuget.org/packages/Microsoft.ServiceHub.Framework/3.0.2061/License
+    LicenseText: License Text Under Appendix
+
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/01da6951-cb00-49d3-8ac9-25575cbe92a4
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/19740ec3-4696-49e2-b43d-fb3aa4b62b75
     Author:      Microsoft Corporation
 
 microsoft.servicehub.framework.3.0.3078.nupkg
@@ -246,7 +314,7 @@ microsoft.servicehub.framework.3.0.3078.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/95760b7a-9489-4334-9c74-8e099aef09bb
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/50b4d790-8390-4ce0-8381-3b2657759207
     Author:      Microsoft Corporation
 
 microsoft.servicehub.resources.3.0.3078.nupkg
@@ -257,7 +325,7 @@ microsoft.servicehub.resources.3.0.3078.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c4dff012-bd9c-45d7-a2f6-6694150132fc
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/694fbe51-4271-451a-8451-6649a250ddd1
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.componentmodelhost.17.0.487.nupkg
@@ -268,18 +336,18 @@ microsoft.visualstudio.componentmodelhost.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e256b8fb-c92f-44c6-8f62-d8e1e90ca6c0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3b157f7a-92e4-4137-8638-fe6f7418cf32
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.coreutility.17.0.448.nupkg
   Licenses:
-    License:     Microsoft Public
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/11fffb6c-0c86-43ca-9e27-e35c5e889cef
+    License:     Microsoft Visual Studio Add-ons and Extensions
+    Reference:   https://www.nuget.org/packages/Microsoft.VisualStudio.CoreUtility/17.0.448/License
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/6bc84f43-b347-462c-bd14-5399271992a1
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8f2391a1-cbe7-478e-8bdd-1455b1ed71fa
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.coreutility.17.0.487.nupkg
@@ -290,7 +358,7 @@ microsoft.visualstudio.coreutility.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e2fb2aa0-9fb6-4dfd-a42a-628f83ba0954
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/34426a20-9a49-4484-b4f0-ae1126a0e638
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.editor.17.0.487.nupkg
@@ -301,7 +369,7 @@ microsoft.visualstudio.editor.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5a3282f2-2f52-40f6-b5ec-6d277b464979
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3730b620-547f-4b48-8362-528855eacfb3
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.language.17.0.487.nupkg
@@ -312,7 +380,7 @@ microsoft.visualstudio.language.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8d28250a-6bc1-4bc8-b362-388c61ce5dd3
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/a999ac81-c85a-4ad7-96c9-d9f6d06aa346
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.language.intellisense.17.0.487.nupkg
@@ -323,7 +391,7 @@ microsoft.visualstudio.language.intellisense.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2862c0a4-3144-45c3-9962-f2ef8cb78e7e
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3b74c608-2b8c-49da-9868-333499174977
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.language.navigateto.interfaces.17.0.487.nupkg
@@ -334,7 +402,7 @@ microsoft.visualstudio.language.navigateto.interfaces.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/310a147f-d380-40cc-b95c-916c067956e7
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/43e3d503-0941-46ce-9058-614fae70f7fa
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.language.standardclassification.17.0.487.nupkg
@@ -345,7 +413,7 @@ microsoft.visualstudio.language.standardclassification.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f325e91e-7ab8-43e9-8afa-36bbcd0ae406
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/aa09dd8b-e20d-41c9-9062-64b119ad4445
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.languageserver.client.17.0.5158.nupkg
@@ -356,13 +424,13 @@ microsoft.visualstudio.languageserver.client.17.0.5158.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/73c68b88-5c97-4678-b8bb-5df206f6c10b
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/0913defb-cbf2-4eaa-aba4-648671d90b8d
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.remotecontrol.16.3.32.nupkg
   Licenses:
-    License:     Microsoft Public
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/11fffb6c-0c86-43ca-9e27-e35c5e889cef
+    License:     Microsoft Software License Terms
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3ba16818-604b-4b85-9028-86b6805fb23e
     LicenseText: License Text Under Appendix
 
   Copyrights:
@@ -371,7 +439,7 @@ microsoft.visualstudio.remotecontrol.16.3.32.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d3c0d1c0-5b4c-4927-9fa1-cae47c2ff89f
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f3d7e051-e1f4-4f77-9ccd-a0b328c9d599
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.remotecontrol.16.3.41.nupkg
@@ -386,7 +454,7 @@ microsoft.visualstudio.remotecontrol.16.3.41.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/a3d8d037-d39a-4fe2-a2e9-1577bb0b9c37
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d987e802-9064-4357-9a5d-d4a81756efae
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.rpccontracts.17.0.51.nupkg
@@ -397,18 +465,18 @@ microsoft.visualstudio.rpccontracts.17.0.51.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/4780e5c3-e585-4b0a-bbb9-4adedd081bd9
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/6d920d38-54a7-4902-b484-232d00d2f63e
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.sdk.analyzers.15.8.33.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://github.com/Microsoft/VSSDK-Analyzers/blob/v15.8.33/LICENSE
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/7370a20e-4c60-48bc-9632-39ea7530b1fe
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://github.com/Microsoft/VSSDK-Analyzers/blob/v15.8.33/LICENSE
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/16500362-1c27-479c-9da6-80dd09e2485b
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.setup.configuration.interop.3.0.4492.nupkg
@@ -419,7 +487,7 @@ microsoft.visualstudio.setup.configuration.interop.3.0.4492.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d25b3c63-4859-4d9b-be3f-59d3d5ca0583
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/a37c5bf5-c03e-43e2-ab7c-079d568e80d9
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.taskrunnerexplorer.14.0.14.0.0.nupkg
@@ -435,13 +503,17 @@ microsoft.visualstudio.taskrunnerexplorer.14.0.14.0.0.nupkg
 
 microsoft.visualstudio.telemetry.16.3.176.nupkg
   Licenses:
+    License:     Microsoft Software License Terms
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/b90ce5d7-374c-47ac-8469-5a67577f169a
+    LicenseText: License Text Under Appendix
+
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
     Reference:   https://index.whitesourcesoftware.com/gri/app/reader/resource/content/asString/a264977c-a1ed-44a8-b121-b13c884bdab3
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c55a06e2-1306-4c44-8ac2-3983d80b84b7
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/b90ce5d7-374c-47ac-8469-5a67577f169a
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.telemetry.16.3.250.nupkg
@@ -452,7 +524,7 @@ microsoft.visualstudio.telemetry.16.3.250.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2145e68a-386b-4d1e-9bda-41cca9f0b116
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/b8944512-18b3-4619-a799-043d6a8fa373
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.text.data.17.0.487.nupkg
@@ -463,18 +535,18 @@ microsoft.visualstudio.text.data.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1892c272-512d-4b92-a567-e1a37ed69467
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/16212687-7130-453f-a960-f9a42298bccb
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.text.logic.17.0.448.nupkg
   Licenses:
-    License:     Microsoft Public
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/11fffb6c-0c86-43ca-9e27-e35c5e889cef
+    License:     Microsoft Visual Studio Add-ons and Extensions
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/038fb1f9-a91e-4172-b7df-76dbc03f14b7
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8bf29806-4b77-48d8-a4d9-38385d4de6ef
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/fb456aa0-5c84-4f2c-96dc-5b08f31035dc
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.text.logic.17.0.487.nupkg
@@ -485,7 +557,7 @@ microsoft.visualstudio.text.logic.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2573d20e-628c-4845-b95c-1171fc8ee903
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f9b82699-6307-4c7f-8d83-f088118a05ca
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.text.ui.17.0.487.nupkg
@@ -496,7 +568,7 @@ microsoft.visualstudio.text.ui.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9455623c-ab3b-443a-8095-a8ac63d11900
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c1872790-bc1d-487e-8bfd-807b8d379947
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.text.ui.wpf.17.0.487.nupkg
@@ -507,29 +579,29 @@ microsoft.visualstudio.text.ui.wpf.17.0.487.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3eb5b0d3-13f3-4e11-865f-b4f769937ce4
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/99673346-e8eb-418a-8ad8-87d82637ade8
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.threading.17.0.63.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/233881aa-9d9b-4048-b471-d1cadc9bf699
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1c134eb2-c843-4faf-a8f4-c3ca5e91b112
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/233881aa-9d9b-4048-b471-d1cadc9bf699
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/7adb3d80-df1c-43e2-a4eb-419bb4375477
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.threading.17.0.64.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/091b7383-2660-4668-9276-53ee40bcf2e1
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/08dee6d1-012f-4ade-b79f-8ac74fb0e46d
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/091b7383-2660-4668-9276-53ee40bcf2e1
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/0b619834-22e6-4372-b1af-062482935210
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.threading.analyzers.16.10.56.nupkg
@@ -555,18 +627,18 @@ microsoft.visualstudio.utilities.internal.16.3.23.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f3038924-6eb9-435d-950c-014629d62801
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/92fe7b72-75cb-4493-9e88-0770fd1afbe0
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.validation.17.0.28.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f49f2248-0850-494c-bb76-0fe940b57d80
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/61f3d3ef-44bd-436f-bb79-75c8d75be4f2
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f49f2248-0850-494c-bb76-0fe940b57d80
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/61f3d3ef-44bd-436f-bb79-75c8d75be4f2
     Author:      Microsoft Corporation
 
 microsoft.visualstudio.web.browserlink.12.0.12.0.0.nupkg
@@ -577,44 +649,44 @@ microsoft.visualstudio.web.browserlink.12.0.12.0.0.nupkg
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3d05d905-0f5c-4730-8756-b743af194b5c
+    Reference:   https://www.nuget.org/packages/Microsoft.VisualStudio.Web.BrowserLink.12.0/12.0.0
     Author:      Microsoft Corporation
 
 microsoft.win32.primitives.4.3.0.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/04d48f6c-3079-478f-ad5c-75f9d465e595
+    Reference:   http://go.microsoft.com/fwlink/?LinkId=329770
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/Microsoft.Win32.Primitives/4.3.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2122f111-6b1f-4fa5-a052-8d380999eed5
     Author:      Microsoft Corporation
 
 microsoft.win32.registry.4.5.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/21507598-0699-41ca-8b38-97228c1c4b2f
+    Reference:   https://github.com/dotnet/corefx/blob/master/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/21507598-0699-41ca-8b38-97228c1c4b2f
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/42859f4e-96e8-441f-b3d2-68cae9bf1df9
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/Microsoft.Win32.Registry/4.5.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/37a40694-6dd4-4136-b1ca-2d35c6e777fb
     Author:      Microsoft Corporation
 
 microsoft.win32.registry.5.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/552e1743-602f-446b-b284-4a2c1117ad84
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/552e1743-602f-446b-b284-4a2c1117ad84
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d6640b5b-8191-4868-be36-8c8139389002
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
@@ -622,18 +694,142 @@ microsoft.win32.registry.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/Microsoft.Win32.Registry/5.0.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2a2a7d91-f9ce-4d41-83d4-d703c9429a0c
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2018 Alexander Chermyanin
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alexander Chermyanin
+
+    Copyright:   Copyright 2003 The Internet Society (
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society (
+
+    Copyright:   Copyright 2020 Dan Shechter
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Dan Shechter
+
+    Copyright:   Copyright 1997-2005 Sean Eron Anderson
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Sean Eron Anderson
+
+    Copyright:   Copyright 1986 International Organization for Standardization
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      International Organization for Standardization
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 2018 Daniel Lemire
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Daniel Lemire
+
+    Copyright:   Copyright 1998 Microsoft
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 2012 the V8 project authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      the V8 project authors
+
+    Copyright:   Copyright 2011-2020 Microsoft Corp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft Corp
+
+    Copyright:   Copyright 1997 The Internet Society
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation
+
+    Copyright:   Copyright 2012-2014 Yann Collet
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yann Collet
+
+    Copyright:   Copyright 2014 Ryan Juckett
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Ryan Juckett
+
+    Copyright:   Copyright 2009-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by the Brotli Authors
+
+    Copyright:   Copyright 2017 Yoshifumi Kawai
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yoshifumi Kawai
+
+    Copyright:   Copyright 1989 by Hewlett-Packard Company, Palo Alto, Ca. &
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by Hewlett-Packard Company, Palo Alto, Ca. &
+
+    Copyright:   Copyright 2015 THL A29 Limited, a Tencent company, and Milo Yip
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      THL A29 Limited, a Tencent company, and Milo Yip
+
+    Copyright:   Copyright 1995-2017 Jean
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 1991-2020 Unicode, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 1990-1996 Open Software Foundation, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Open Software Foundation, Inc
+
+    Copyright:   Copyright 2013-2017 Milosz Krajewski
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Milosz Krajewski
+
+    Copyright:   Copyright 2011-2018 The Regents of the
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Regents of the
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
 
 netstandard.library.1.6.1.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/55bd8cc5-9ead-4ec7-8c6f-4670103158ea
+    Reference:   http://go.microsoft.com/fwlink/?LinkId=329770
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/NETStandard.Library/1.6.1
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9945fe8f-3c1a-46aa-b9fa-d48cec8e703d
     Author:      Microsoft Corporation
 
 newtonsoft.json.13.0.1.nupkg
@@ -648,7 +844,7 @@ newtonsoft.json.13.0.1.nupkg
     Author:      James Newton-King
 
     Copyright:   Copyright 2008 James Newton-King
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/ffd9a461-3d2c-466d-a996-11ed9e77194d
+    Reference:   https://www.nuget.org/packages/Newtonsoft.Json/13.0.1
     Author:      James Newton-King
 
 newtonsoft.json.9.0.1.nupkg
@@ -664,7 +860,7 @@ newtonsoft.json.9.0.1.nupkg
 nlog.4.7.12.nupkg
   Licenses:
     License:     BSD 3
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/66fe4da9-80b8-4b64-b115-5d60ceb20d4c
+    Reference:   https://github.com/NLog/NLog/blob/master/LICENSE.txt
     LicenseText: License Text Under Appendix
 
   Copyrights:
@@ -675,7 +871,7 @@ nlog.4.7.12.nupkg
 nlog.schema.4.7.12.nupkg
   Licenses:
     License:     BSD 3
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/00c4e2d5-b9eb-4814-a24b-f63ddcfffd1d
+    Reference:   https://github.com/NLog/NLog/blob/master/LICENSE.txt
     LicenseText: License Text Under Appendix
 
 stdole-17.0.31902
@@ -705,22 +901,22 @@ streamjsonrpc.2.8.28.nupkg
 system.buffers.4.5.1.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/98064bcc-a0b8-4378-9d29-d1d4da985033
+    Reference:   https://github.com/dotnet/corefx/blob/master/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/98064bcc-a0b8-4378-9d29-d1d4da985033
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/dfbb7641-9e4e-4db4-929d-94b6c3f256c3
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/System.Buffers/4.5.1
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bd7a3825-bc1f-44ac-affe-9e611cd92d2e
     Author:      Microsoft Corporation
 
 system.collections.immutable.5.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/073c0d83-7342-4a1f-b93c-7e1142631b67
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
@@ -729,52 +925,176 @@ system.collections.immutable.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/073c0d83-7342-4a1f-b93c-7e1142631b67
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/333ff42e-2d26-46e4-82e7-9a1f2adfd43d
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/System.Collections.Immutable/5.0.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c9842ed2-6a4a-4f69-bcd9-c14e1d20b505
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2018 Alexander Chermyanin
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alexander Chermyanin
+
+    Copyright:   Copyright 2003 The Internet Society (
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society (
+
+    Copyright:   Copyright 2020 Dan Shechter
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Dan Shechter
+
+    Copyright:   Copyright 1997-2005 Sean Eron Anderson
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Sean Eron Anderson
+
+    Copyright:   Copyright 1986 International Organization for Standardization
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      International Organization for Standardization
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 2018 Daniel Lemire
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Daniel Lemire
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 1998 Microsoft
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft
+
+    Copyright:   Copyright 2012 the V8 project authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      the V8 project authors
+
+    Copyright:   Copyright 2011-2020 Microsoft Corp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft Corp
+
+    Copyright:   Copyright 1997 The Internet Society
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation
+
+    Copyright:   Copyright 2012-2014 Yann Collet
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yann Collet
+
+    Copyright:   Copyright 2014 Ryan Juckett
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Ryan Juckett
+
+    Copyright:   Copyright 2017 Yoshifumi Kawai
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yoshifumi Kawai
+
+    Copyright:   Copyright 2009-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by the Brotli Authors
+
+    Copyright:   Copyright 1989 by Hewlett-Packard Company, Palo Alto, Ca. &
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by Hewlett-Packard Company, Palo Alto, Ca. &
+
+    Copyright:   Copyright 2015 THL A29 Limited, a Tencent company, and Milo Yip
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      THL A29 Limited, a Tencent company, and Milo Yip
+
+    Copyright:   Copyright 1995-2017 Jean
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 1991-2020 Unicode, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 1990-1996 Open Software Foundation, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Open Software Foundation, Inc
+
+    Copyright:   Copyright 2013-2017 Milosz Krajewski
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Milosz Krajewski
+
+    Copyright:   Copyright 2011-2018 The Regents of the
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Regents of the
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
 
 system.componentmodel.composition.4.5.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1eec1045-4c89-464e-b406-9b4ea35cd836
+    Reference:   https://github.com/dotnet/corefx/blob/master/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1eec1045-4c89-464e-b406-9b4ea35cd836
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e9ceef40-6044-4322-a91a-c578a9666937
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/System.ComponentModel.Composition/4.5.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1be422b2-2ea4-4ea3-bc1a-a4cd85e00c04
     Author:      Microsoft Corporation
 
 system.configuration.configurationmanager.4.5.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bf989e61-a6b5-49d5-93be-45401cd7edc6
+    Reference:   https://github.com/dotnet/corefx/blob/master/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bf989e61-a6b5-49d5-93be-45401cd7edc6
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/24497aaa-02e1-47f0-b0eb-ea5e3a0b0a98
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8303aeff-6eb6-4c51-86cb-5a1e8af96a30
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/7ec9d60e-1d94-4c95-95bb-3ecaca232aae
     Author:      Microsoft Corporation
 
 system.diagnostics.performancecounter.5.0.1.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/ffb3aa18-0640-4e4f-8c99-d2dbc395f6ca
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5159f0e4-a1d8-4aad-81f5-8ca8dce7f1d4
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/ffb3aa18-0640-4e4f-8c99-d2dbc395f6ca
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3195c31c-6144-409d-b5e9-fca6384b9967
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
@@ -782,66 +1102,190 @@ system.diagnostics.performancecounter.5.0.1.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/30805525-6362-4009-a934-d8d22a9f18d3
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/a5016b66-7ea1-4fb7-9612-7f5f22fdf9cb
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2018 Alexander Chermyanin
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Alexander Chermyanin
+
+    Copyright:   Copyright 2003 The Internet Society (
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society (
+
+    Copyright:   Copyright 2020 Dan Shechter
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Dan Shechter
+
+    Copyright:   Copyright 1997-2005 Sean Eron Anderson
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Sean Eron Anderson
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 1986 International Organization for Standardization
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      International Organization for Standardization
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 2018 Daniel Lemire
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Daniel Lemire
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 1998 Microsoft
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft
+
+    Copyright:   Copyright 2012 the V8 project authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      the V8 project authors
+
+    Copyright:   Copyright 2011-2020 Microsoft Corp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft Corp
+
+    Copyright:   Copyright 1997 The Internet Society
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation
+
+    Copyright:   Copyright 2012-2014 Yann Collet
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Yann Collet
+
+    Copyright:   Copyright 2009-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      by the Brotli Authors
+
+    Copyright:   Copyright 2017 Yoshifumi Kawai
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Yoshifumi Kawai
+
+    Copyright:   Copyright 2014 Ryan Juckett
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Ryan Juckett
+
+    Copyright:   Copyright 1989 by Hewlett-Packard Company, Palo Alto, Ca. &
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      by Hewlett-Packard Company, Palo Alto, Ca. &
+
+    Copyright:   Copyright 2015 THL A29 Limited, a Tencent company, and Milo Yip
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      THL A29 Limited, a Tencent company, and Milo Yip
+
+    Copyright:   Copyright 1995-2017 Jean
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 1991-2020 Unicode, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 1990-1996 Open Software Foundation, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Open Software Foundation, Inc
+
+    Copyright:   Copyright 2013-2017 Milosz Krajewski
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Milosz Krajewski
+
+    Copyright:   Copyright 2011-2018 The Regents of the
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      The Regents of the
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.13/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
 
 system.diagnostics.process.4.3.0.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5cc50a23-7c4e-492e-8e57-30f3ca7c8450
+    Reference:   http://go.microsoft.com/fwlink/?LinkId=329770
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/4bb8e3d7-fc6f-4b78-9636-7980fa621edb
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e7932e2a-0d5f-49e2-bb84-3fad077af904
     Author:      Microsoft Corporation
 
 system.diagnostics.tracesource.4.3.0.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/27a0b1ba-caf7-421b-bc23-eca179d935a0
+    Reference:   http://go.microsoft.com/fwlink/?LinkId=329770
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/c9a2f1a2-672a-49b9-ad5f-cbed2dc2af6b
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/77ade9f6-5d00-4e11-9dde-d4aebdb95569
     Author:      Microsoft Corporation
 
 system.diagnostics.tracing.4.3.0.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5751dda5-a231-41af-86a0-b1a1d74a1512
+    Reference:   http://go.microsoft.com/fwlink/?LinkId=329770
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/System.Diagnostics.Tracing/4.3.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/09b8c2c3-f733-4e9e-acf3-123a5374ef7c
     Author:      Microsoft Corporation
 
 system.io.filesystem.accesscontrol.4.5.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5a8a8d28-6f24-47fd-b09c-8c0730c4e323
+    Reference:   https://github.com/dotnet/corefx/blob/master/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5a8a8d28-6f24-47fd-b09c-8c0730c4e323
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/26ef8baf-b11b-40b7-ad2e-8d7542449458
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/52d0be0a-7cf0-42b2-81d5-5634f2f9c72b
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e5ed08db-2c35-46ed-910b-d4ca9614760c
     Author:      Microsoft Corporation
 
 system.io.filesystem.accesscontrol.5.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1e3f156f-a710-4ed5-bec5-af231d9b9857
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1e3f156f-a710-4ed5-bec5-af231d9b9857
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2989a797-5222-405f-8fe1-5c5b60680abc
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
@@ -849,24 +1293,148 @@ system.io.filesystem.accesscontrol.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/71c4d28d-73f1-4194-91da-d3ce90d17235
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/72b3a950-e2ce-4b85-a7a0-33ff099d38b8
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2018 Alexander Chermyanin
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alexander Chermyanin
+
+    Copyright:   Copyright 2003 The Internet Society (
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society (
+
+    Copyright:   Copyright 2020 Dan Shechter
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Dan Shechter
+
+    Copyright:   Copyright 1997-2005 Sean Eron Anderson
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Sean Eron Anderson
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 1986 International Organization for Standardization
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      International Organization for Standardization
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 2018 Daniel Lemire
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Daniel Lemire
+
+    Copyright:   Copyright 1998 Microsoft
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 2012 the V8 project authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      the V8 project authors
+
+    Copyright:   Copyright 2011-2020 Microsoft Corp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft Corp
+
+    Copyright:   Copyright 1997 The Internet Society
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation
+
+    Copyright:   Copyright 2012-2014 Yann Collet
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yann Collet
+
+    Copyright:   Copyright 2017 Yoshifumi Kawai
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yoshifumi Kawai
+
+    Copyright:   Copyright 2014 Ryan Juckett
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Ryan Juckett
+
+    Copyright:   Copyright 2009-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by the Brotli Authors
+
+    Copyright:   Copyright 2015 THL A29 Limited, a Tencent company, and Milo Yip
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      THL A29 Limited, a Tencent company, and Milo Yip
+
+    Copyright:   Copyright 1989 by Hewlett-Packard Company, Palo Alto, Ca. &
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by Hewlett-Packard Company, Palo Alto, Ca. &
+
+    Copyright:   Copyright 1995-2017 Jean
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 1991-2020 Unicode, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 1990-1996 Open Software Foundation, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Open Software Foundation, Inc
+
+    Copyright:   Copyright 2013-2017 Milosz Krajewski
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Milosz Krajewski
+
+    Copyright:   Copyright 2011-2018 The Regents of the
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Regents of the
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
 
 system.io.pipes.4.3.0.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d21b05ab-2fb2-4a06-9f5f-43850c810061
+    Reference:   http://go.microsoft.com/fwlink/?LinkId=329770
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/System.IO.Pipes/4.3.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3f1bc9fb-fcbe-45fb-a6cc-28f336205685
     Author:      Microsoft Corporation
 
 system.management.5.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/29b07811-9713-42b3-90d6-573af042e86b
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
@@ -875,43 +1443,167 @@ system.management.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/29b07811-9713-42b3-90d6-573af042e86b
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/23301d1d-fbde-417b-8d88-f58ab82a5705
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/047100a1-0e8c-44f5-933b-de81b0c2b79e
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bf32b4e6-b6be-46d6-a093-0f1fa3a4626a
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2018 Alexander Chermyanin
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alexander Chermyanin
+
+    Copyright:   Copyright 2003 The Internet Society (
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society (
+
+    Copyright:   Copyright 2020 Dan Shechter
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Dan Shechter
+
+    Copyright:   Copyright 1997-2005 Sean Eron Anderson
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Sean Eron Anderson
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 1986 International Organization for Standardization
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      International Organization for Standardization
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 2018 Daniel Lemire
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Daniel Lemire
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 1998 Microsoft
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft
+
+    Copyright:   Copyright 2012 the V8 project authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      the V8 project authors
+
+    Copyright:   Copyright 2011-2020 Microsoft Corp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft Corp
+
+    Copyright:   Copyright 1997 The Internet Society
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation
+
+    Copyright:   Copyright 2012-2014 Yann Collet
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yann Collet
+
+    Copyright:   Copyright 2014 Ryan Juckett
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Ryan Juckett
+
+    Copyright:   Copyright 2017 Yoshifumi Kawai
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yoshifumi Kawai
+
+    Copyright:   Copyright 2009-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by the Brotli Authors
+
+    Copyright:   Copyright 1989 by Hewlett-Packard Company, Palo Alto, Ca. &
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by Hewlett-Packard Company, Palo Alto, Ca. &
+
+    Copyright:   Copyright 2015 THL A29 Limited, a Tencent company, and Milo Yip
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      THL A29 Limited, a Tencent company, and Milo Yip
+
+    Copyright:   Copyright 1995-2017 Jean
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 1991-2020 Unicode, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 1990-1996 Open Software Foundation, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Open Software Foundation, Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 2013-2017 Milosz Krajewski
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Milosz Krajewski
+
+    Copyright:   Copyright 2011-2018 The Regents of the
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Regents of the
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
 
 system.memory.4.5.4.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/6b62fb40-cc68-448a-88d5-01b895560d7b
+    Reference:   https://github.com/dotnet/corefx/blob/master/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/6b62fb40-cc68-448a-88d5-01b895560d7b
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/b05f39c7-34e2-4cde-bdc5-72199034edba
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/550c84df-cfe4-47c4-a218-bf66e24b269a
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/0ac8ba5c-0a27-44e8-a82d-d8669201c97e
     Author:      Microsoft Corporation
 
 system.private.uri.4.3.2.nupkg
   Licenses:
     License:     Microsoft .NET Library
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/7e39b236-3b38-44ca-a895-90ce1127bfed
+    Reference:   http://go.microsoft.com/fwlink/?LinkId=329770
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/f612a8f0-1184-46a0-8d53-7605d0a2b81b
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/607e0b23-14a5-4dae-9773-2c9d70974e8b
     Author:      Microsoft Corporation
 
 system.runtime.compilerservices.unsafe.5.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3589e9b0-25f3-45bb-bbbe-4f23ff5ef1c6
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
@@ -920,82 +1612,310 @@ system.runtime.compilerservices.unsafe.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3589e9b0-25f3-45bb-bbbe-4f23ff5ef1c6
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3b88c456-eaa9-4f21-acd6-31162ec078aa
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/352d796d-cc03-4f16-9510-0b5c865ea3bb
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/ce5a28eb-34a7-443b-9e37-09563cc78d2c
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2018 Alexander Chermyanin
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alexander Chermyanin
+
+    Copyright:   Copyright 2003 The Internet Society (
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society (
+
+    Copyright:   Copyright 2020 Dan Shechter
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Dan Shechter
+
+    Copyright:   Copyright 1997-2005 Sean Eron Anderson
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Sean Eron Anderson
+
+    Copyright:   Copyright 1986 International Organization for Standardization
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      International Organization for Standardization
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 2018 Daniel Lemire
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Daniel Lemire
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 1998 Microsoft
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft
+
+    Copyright:   Copyright 2012 the V8 project authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      the V8 project authors
+
+    Copyright:   Copyright 2011-2020 Microsoft Corp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft Corp
+
+    Copyright:   Copyright 1997 The Internet Society
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation
+
+    Copyright:   Copyright 2012-2014 Yann Collet
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yann Collet
+
+    Copyright:   Copyright 2014 Ryan Juckett
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Ryan Juckett
+
+    Copyright:   Copyright 2017 Yoshifumi Kawai
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yoshifumi Kawai
+
+    Copyright:   Copyright 2009-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by the Brotli Authors
+
+    Copyright:   Copyright 2015 THL A29 Limited, a Tencent company, and Milo Yip
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      THL A29 Limited, a Tencent company, and Milo Yip
+
+    Copyright:   Copyright 1989 by Hewlett-Packard Company, Palo Alto, Ca. &
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by Hewlett-Packard Company, Palo Alto, Ca. &
+
+    Copyright:   Copyright 1995-2017 Jean
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 1991-2020 Unicode, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 1990-1996 Open Software Foundation, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Open Software Foundation, Inc
+
+    Copyright:   Copyright 2013-2017 Milosz Krajewski
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Milosz Krajewski
+
+    Copyright:   Copyright 2011-2018 The Regents of the
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Regents of the
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
 
 system.runtime.compilerservices.unsafe.6.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9960f8fa-19e2-41e7-836b-f58adca3e6ca
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3a2e2158-fa18-411c-9777-d64049973dee
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/9960f8fa-19e2-41e7-836b-f58adca3e6ca
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8a2f1fed-b3fa-4ebe-8cf5-5f52e1dc41f5
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/428992dc-3f4b-4fe2-b04f-ba8b8d7e0d3f
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/3a2e2158-fa18-411c-9777-d64049973dee
     Author:      Microsoft Corporation
 
 system.security.accesscontrol.6.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/84487273-d4a4-4d40-87f1-b3fbf4284637
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/873824ef-d8bc-4c7a-95c8-f9873903165d
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/ebeafa09-9d4d-4c43-8160-6612c107b34f
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/a5aea0d6-6304-4395-b060-9bbd811024c7
     Author:      Microsoft Corporation
 
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/84487273-d4a4-4d40-87f1-b3fbf4284637
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/873824ef-d8bc-4c7a-95c8-f9873903165d
     Author:      .NET Foundation and Contributors
 
 system.security.permissions.4.7.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d7deb279-8d03-4da9-aade-3311e9a7aaf3
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/d7deb279-8d03-4da9-aade-3311e9a7aaf3
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/e5731c07-fbae-4319-b2af-820b204124d1
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/01b91571-bc91-430d-9944-42931bf63e22
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/22c3ae75-ad79-4bf4-acff-0a8f0748ee65
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2009-2010 2013-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      2013-2016 by the Brotli Authors
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 1995-2017 Jean-loup Gailly and Mark Adler
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean-loup Gailly and Mark Adler
+
+    Copyright:   Copyright 1991-2017 Unicode, Inc
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation - All Rights Reserved
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation - All Rights Reserved
 
 system.security.principal.windows.4.7.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/15310ade-cdab-4d51-9cbd-abcdb76ebbae
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/15310ade-cdab-4d51-9cbd-abcdb76ebbae
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/bbea6064-e07a-49a5-bf16-72c995b1e110
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/5ec5facd-2f6d-473a-926b-02ea88503372
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1e7b77db-9b49-490d-bb41-16e181e3efc8
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2009-2010 2013-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      2013-2016 by the Brotli Authors
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 1995-2017 Jean-loup Gailly and Mark Adler
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean-loup Gailly and Mark Adler
+
+    Copyright:   Copyright 1991-2017 Unicode, Inc
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation - All Rights Reserved
+    Reference:   https://github.com/dotnet/corefx/blob/79ba185ec59093facca47e144c73029675a3f9ea/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation - All Rights Reserved
 
 system.security.principal.windows.5.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/100a24e8-4beb-4d8c-8eba-1da9c1da24cd
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/100a24e8-4beb-4d8c-8eba-1da9c1da24cd
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/1c0f08c2-4ba7-4a35-a3c2-9ad2dd5abf7e
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
@@ -1003,18 +1923,142 @@ system.security.principal.windows.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/a59949c4-b2b3-4f6e-8548-4e0d91826c86
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/344abe14-fc00-4f7b-a8e6-53d669588886
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2018 Alexander Chermyanin
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alexander Chermyanin
+
+    Copyright:   Copyright 2003 The Internet Society (
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society (
+
+    Copyright:   Copyright 2020 Dan Shechter
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Dan Shechter
+
+    Copyright:   Copyright 1997-2005 Sean Eron Anderson
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Sean Eron Anderson
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 1986 International Organization for Standardization
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      International Organization for Standardization
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 2018 Daniel Lemire
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Daniel Lemire
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 1998 Microsoft
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft
+
+    Copyright:   Copyright 2012 the V8 project authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      the V8 project authors
+
+    Copyright:   Copyright 2011-2020 Microsoft Corp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft Corp
+
+    Copyright:   Copyright 1997 The Internet Society
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation
+
+    Copyright:   Copyright 2012-2014 Yann Collet
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yann Collet
+
+    Copyright:   Copyright 2017 Yoshifumi Kawai
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yoshifumi Kawai
+
+    Copyright:   Copyright 2009-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by the Brotli Authors
+
+    Copyright:   Copyright 2014 Ryan Juckett
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Ryan Juckett
+
+    Copyright:   Copyright 1989 by Hewlett-Packard Company, Palo Alto, Ca. &
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by Hewlett-Packard Company, Palo Alto, Ca. &
+
+    Copyright:   Copyright 2015 THL A29 Limited, a Tencent company, and Milo Yip
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      THL A29 Limited, a Tencent company, and Milo Yip
+
+    Copyright:   Copyright 1995-2017 Jean
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 1991-2020 Unicode, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 1990-1996 Open Software Foundation, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Open Software Foundation, Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 2013-2017 Milosz Krajewski
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Milosz Krajewski
+
+    Copyright:   Copyright 2011-2018 The Regents of the
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Regents of the
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
 
 system.threading.tasks.dataflow.5.0.0.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/474527f5-3312-4722-8508-450644f3ea89
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/474527f5-3312-4722-8508-450644f3ea89
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/8d7f456f-26cf-4027-a82c-841b03b5a249
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
@@ -1022,22 +2066,146 @@ system.threading.tasks.dataflow.5.0.0.nupkg
     Author:      Microsoft Corporation
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://www.nuget.org/packages/System.Threading.Tasks.Dataflow/5.0.0
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/df661ae8-815e-40fb-80c3-b129f0dafc3d
     Author:      Microsoft Corporation
+
+    Copyright:   Copyright 2018 Alexander Chermyanin
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alexander Chermyanin
+
+    Copyright:   Copyright 2003 The Internet Society (
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society (
+
+    Copyright:   Copyright 2020 Dan Shechter
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Dan Shechter
+
+    Copyright:   Copyright 1997-2005 Sean Eron Anderson
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Sean Eron Anderson
+
+    Copyright:   Copyright 2011 Novell, Inc (http://www.novell.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Novell, Inc (http://www.novell.com)
+
+    Copyright:   Copyright 1986 International Organization for Standardization
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      International Organization for Standardization
+
+    Copyright:   Copyright 2015 The Chromium Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Chromium Authors
+
+    Copyright:   Copyright 2018 Daniel Lemire
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Daniel Lemire
+
+    Copyright:   Copyright 1998 Microsoft
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft
+
+    Copyright:   Copyright 2011 Google Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Google Inc
+
+    Copyright:   Copyright 2012 the V8 project authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      the V8 project authors
+
+    Copyright:   Copyright 2011-2020 Microsoft Corp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Microsoft Corp
+
+    Copyright:   Copyright 1997 The Internet Society
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Internet Society
+
+    Copyright:   Copyright 2007 James Newton-King
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      James Newton-King
+
+    Copyright:   Copyright 2005-2007 Nick Galbreath
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Nick Galbreath
+
+    Copyright:   Copyright 2004-2006 Intel Corporation
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Intel Corporation
+
+    Copyright:   Copyright 2012-2014 Yann Collet
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yann Collet
+
+    Copyright:   Copyright 2017 Yoshifumi Kawai
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Yoshifumi Kawai
+
+    Copyright:   Copyright 2009-2016 by the Brotli Authors
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by the Brotli Authors
+
+    Copyright:   Copyright 2014 Ryan Juckett
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Ryan Juckett
+
+    Copyright:   Copyright 2015 THL A29 Limited, a Tencent company, and Milo Yip
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      THL A29 Limited, a Tencent company, and Milo Yip
+
+    Copyright:   Copyright 1989 by Hewlett-Packard Company, Palo Alto, Ca. &
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      by Hewlett-Packard Company, Palo Alto, Ca. &
+
+    Copyright:   Copyright 1995-2017 Jean
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Jean
+
+    Copyright:   Copyright 2015 Xamarin, Inc (http://www.xamarin.com)
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Xamarin, Inc (http://www.xamarin.com)
+
+    Copyright:   Copyright 2016-2017 Matthieu Darbois
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Matthieu Darbois
+
+    Copyright:   Copyright 1991-2020 Unicode, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Unicode, Inc
+
+    Copyright:   Copyright 1990-1996 Open Software Foundation, Inc
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Open Software Foundation, Inc
+
+    Copyright:   Copyright 2013-2017 Alfred Klomp
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Alfred Klomp
+
+    Copyright:   Copyright 2013-2017 Milosz Krajewski
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Milosz Krajewski
+
+    Copyright:   Copyright 2011-2018 The Regents of the
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      The Regents of the
+
+    Copyright:   Copyright 2015-2017 Wojciech Mula
+    Reference:   https://github.com/dotnet/runtime/blob/v5.0.0/THIRD-PARTY-NOTICES.TXT
+    Author:      Wojciech Mula
 
 system.threading.tasks.extensions.4.5.4.nupkg
   Licenses:
     License:     MIT
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/4b69bf82-3564-4a0a-8ac1-1d4a59831857
+    Reference:   https://github.com/dotnet/corefx/blob/master/LICENSE.TXT
     LicenseText: License Text Under Appendix
 
   Copyrights:
     Copyright:   Copyright .NET Foundation and Contributors
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/4b69bf82-3564-4a0a-8ac1-1d4a59831857
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/025aec62-1540-455d-bf7e-3f0e9155e869
     Author:      .NET Foundation and Contributors
 
     Copyright:   Copyright Microsoft Corporation
-    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/390c2dbe-bcb7-490c-80be-0ce6623c0e63
+    Reference:   https://index.mend.io/gri/app/reader/resource/content/asString/2231bb71-fc67-4603-827a-4d6a88384fb5
     Author:      Microsoft Corporation
 
 vssdk.dte.7.0.4.nupkg
@@ -1444,6 +2612,119 @@ limitations under the License.
 
 
   Appendix:
+--------------------------------
+Microsoft Software License Terms
+--------------------------------
+MICROSOFT SOFTWARE LICENSE TERMS
+
+These license terms are an agreement between you and Microsoft Corporation (or one of its
+affiliates). They apply to the software named above and any Microsoft services or software
+updates (except to the extent such services or updates are accompanied by new or
+additional terms, in which case those different terms apply prospectively and do not alter
+your or Microsoft's rights relating to pre-updated software or services). IF YOU COMPLY
+WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW. BY USING THE SOFTWARE, YOU ACCEPT
+THESE TERMS.
+
+INSTALLATION AND USE RIGHTS.
+General. You may install and use any number of copies of the software to develop and test
+your applications.
+Third Party Components. The software may include third party components with separate
+legal notices or governed by other agreements, as may be described in the
+ThirdPartyNotices file(s) accompanying the software.
+
+DISTRIBUTABLE CODE. The software may contain code you are permitted to distribute (i.e.
+make available for third parties) in applications you develop, as described in this
+Section.
+Distribution Rights. The code and test files described below are distributable if included
+with the software.
+Distributables. You may copy and distribute the object code form of the software listed in
+the distributables file list in the software; and
+Third Party Distribution. You may permit distributors of your applications to copy and
+distribute any of this distributable code you elect to distribute with your applications.
+Distribution Requirements. For any code you distribute, you must:
+add significant primary functionality to it in your applications; and
+require distributors and external end users to agree to terms that protect it and
+Microsoft at least as much as this agreement.
+Distribution Restrictions. You may not:
+use Microsoft's trademarks or trade dress in your application in any way that suggests
+your application comes from or is endorsed by Microsoft; or
+modify or distribute the source code of any distributable code so that any part of it
+becomes subject to any license that requires that the distributable code, any other part
+of the software, or any of Microsoft's other intellectual property be disclosed or
+distributed in source code form, or that others have the right to modify it.
+
+SCOPE OF LICENSE. The software is licensed, not sold. Microsoft reserves all other rights.
+Unless applicable law gives you more rights despite this limitation, you will not (and
+have no right to):
+work around any technical limitations in the software that only allow you to use it in
+certain ways;
+reverse engineer, decompile or disassemble the software, or otherwise attempt to derive
+the source code for the software, except and to the extent required by third party
+licensing terms governing use of certain open source components that may be included in
+the software;
+remove, minimize, block, or modify any notices of Microsoft or its suppliers in the
+software;
+use the software in any way that is against the law or to create or propagate malware; or
+share, publish, distribute, or lease the software (except for any distributable code,
+subject to the terms above), provide the software as a stand-alone offering for others to
+use, or transfer the software or this agreement to any third party.
+
+DATA. This software may interact with other Microsoft products that collect data that is
+transmitted to Microsoft. To learn more about how Microsoft processes personal data we
+collect, please see the Microsoft Privacy Statement at
+https://go.microsoft.com/fwlink/?LinkId=248681.
+
+EXPORT RESTRICTIONS. You must comply with all domestic and international export laws and
+regulations that apply to the software, which include restrictions on destinations, end
+users, and end use. For further information on export restrictions, visit
+https://aka.ms/exporting.
+
+SUPPORT SERVICES. Microsoft is not obligated under this agreement to provide any support
+services for the software. Any support provided is "as is", "with all faults", and without
+warranty of any kind.
+
+ENTIRE AGREEMENT. This agreement, and any other terms Microsoft may provide for
+supplements, updates, or third-party applications, is the entire agreement for the
+software.
+
+APPLICABLE LAW AND PLACE TO RESOLVE DISPUTES. If you acquired the software in the United
+States or Canada, the laws of the state or province where you live (or, if a business,
+where your principal place of business is located) govern the interpretation of this
+agreement, claims for its breach, and all other claims (including consumer protection,
+unfair competition, and tort claims), regardless of conflict of laws principles. If you
+acquired the software in any other country, its laws apply. If U.S. federal jurisdiction
+exists, you and Microsoft consent to exclusive jurisdiction and venue in the federal court
+in King County, Washington for all disputes heard in court. If not, you and Microsoft
+consent to exclusive jurisdiction and venue in the Superior Court of King County,
+Washington for all disputes heard in court.
+
+CONSUMER RIGHTS; REGIONAL VARIATIONS. This agreement describes certain legal rights. You
+may have other rights, including consumer rights, under the laws of your state or country.
+Separate and apart from your relationship with Microsoft, you may also have rights with
+respect to the party from which you acquired the software. This agreement does not change
+those other rights if the laws of your state or country do not permit it to do so.
+
+DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS IS." YOU BEAR THE RISK OF USING IT.
+MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES, OR CONDITIONS. TO THE EXTENT PERMITTED
+UNDER APPLICABLE LAWS, MICROSOFT EXCLUDES ALL IMPLIED WARRANTIES, INCLUDING
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+LIMITATION ON AND EXCLUSION OF DAMAGES. IF YOU HAVE ANY BASIS FOR RECOVERING DAMAGES
+DESPITE THE PRECEDING DISCLAIMER OF WARRANTY, YOU CAN RECOVER FROM MICROSOFT AND ITS
+SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES,
+INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT, OR INCIDENTAL DAMAGES.
+This limitation applies to (a) anything related to the software, services, content
+(including code) on third party Internet sites, or third party applications; and (b)
+claims for breach of contract, warranty, guarantee, or condition; strict liability,
+negligence, or other tort; or any other claim; in each case to the extent permitted by
+applicable law.
+
+It also applies even if Microsoft knew or should have known about the possibility of the
+damages. The above limitation or exclusion may not apply to you because your state,
+province, or country may not allow the exclusion or limitation of incidental,
+consequential, or other damages.
+
+
 -------------------
 Unspecified License
 -------------------
@@ -1452,30 +2733,25 @@ Unspecified License
 ----------------------
 Microsoft .NET Library
 ----------------------
-
 MICROSOFT SOFTWARE LICENSE TERMS
-
-
 MICROSOFT .NET LIBRARY
-
 These license terms are an agreement between Microsoft Corporation (or based on where you
 live, one of its affiliates) and you. Please read them. They apply to the software named
 above, which includes the media on which you received it, if any. The terms also apply to
 any Microsoft
 
-·         updates,
+-         updates,
 
-·         supplements,
+-         supplements,
 
-·         Internet-based services, and
+-         Internet-based services, and
 
-·         support services
+-         support services
 
 for this software, unless other terms accompany those items. If so, those terms apply.
 
 BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS. IF YOU DO NOT ACCEPT THEM, DO NOT USE THE
 SOFTWARE.
-
 
 IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE PERPETUAL RIGHTS BELOW.
 
@@ -1490,45 +2766,45 @@ party program are included for your information only.
 
 2.    ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.
 
-a.    DISTRIBUTABLE CODE.  The software is comprised of Distributable Code. “Distributable
-Code” is code that you are permitted to distribute in programs you develop if you comply
+a.    DISTRIBUTABLE CODE.  The software is comprised of Distributable Code. "Distributable
+Code" is code that you are permitted to distribute in programs you develop if you comply
 with the terms below.
 
 i.      Right to Use and Distribute.
 
-·         You may copy and distribute the object code form of the software.
+-         You may copy and distribute the object code form of the software.
 
-·         Third Party Distribution. You may permit distributors of your programs to copy
+-         Third Party Distribution. You may permit distributors of your programs to copy
 and distribute the Distributable Code as part of those programs.
 
 ii.    Distribution Requirements. For any Distributable Code you distribute, you must
 
-·         add significant primary functionality to it in your programs;
+-         add significant primary functionality to it in your programs;
 
-·         require distributors and external end users to agree to terms that protect it at
+-         require distributors and external end users to agree to terms that protect it at
 least as much as this agreement;
 
-·         display your valid copyright notice on your programs; and
+-         display your valid copyright notice on your programs; and
 
-·         indemnify, defend, and hold harmless Microsoft from any claims, including
-attorneys’ fees, related to the distribution or use of your programs.
+-         indemnify, defend, and hold harmless Microsoft from any claims, including
+attorneys' fees, related to the distribution or use of your programs.
 
 iii.   Distribution Restrictions. You may not
 
-·         alter any copyright, trademark or patent notice in the Distributable Code;
+-         alter any copyright, trademark or patent notice in the Distributable Code;
 
-·         use Microsoft’s trademarks in your programs’ names or in a way that suggests
+-         use Microsoft's trademarks in your programs' names or in a way that suggests
 your programs come from or are endorsed by Microsoft;
 
-·         include Distributable Code in malicious, deceptive or unlawful programs; or
+-         include Distributable Code in malicious, deceptive or unlawful programs; or
 
-·         modify or distribute the source code of any Distributable Code so that any part
+-         modify or distribute the source code of any Distributable Code so that any part
 of it becomes subject to an Excluded License. An Excluded License is one that requires, as
 a condition of use, modification or distribution, that
 
-·         the code be disclosed or distributed in source code form; or
+-         the code be disclosed or distributed in source code form; or
 
-·         others have the right to modify it.
+-         others have the right to modify it.
 
 3.    SCOPE OF LICENSE. The software is licensed, not sold. This agreement only gives you
 some rights to use the software. Microsoft reserves all other rights. Unless applicable
@@ -1536,18 +2812,18 @@ law gives you more rights despite this limitation, you may use the software only
 expressly permitted in this agreement. In doing so, you must comply with any technical
 limitations in the software that only allow you to use it in certain ways. You may not
 
-·         work around any technical limitations in the software;
+-         work around any technical limitations in the software;
 
-·         reverse engineer, decompile or disassemble the software, except and only to the
+-         reverse engineer, decompile or disassemble the software, except and only to the
 extent that applicable law expressly permits, despite this limitation;
 
-·         publish the software for others to copy;
+-         publish the software for others to copy;
 
-·         rent, lease or lend the software;
+-         rent, lease or lend the software;
 
-·         transfer the software or this agreement to any third party; or
+-         transfer the software or this agreement to any third party; or
 
-·         use the software for commercial software hosting services.
+-         use the software for commercial software hosting services.
 
 4.    BACKUP COPY. You may make one backup copy of the software. You may use it only to
 reinstall the software.
@@ -1560,7 +2836,7 @@ regulations. You must comply with all domestic and international export laws and
 regulations that apply to the software. These laws include restrictions on destinations,
 end users and end use. For additional information, see www.microsoft.com/exporting.
 
-7.    SUPPORT SERVICES. Because this software is “as is,” we may not provide support
+7.    SUPPORT SERVICES. Because this software is "as is," we may not provide support
 services for it.
 
 8.    ENTIRE AGREEMENT. This agreement, and the terms for supplements, updates, Internet-
@@ -1583,7 +2859,7 @@ rights under the laws of your country. You may also have rights with respect to 
 from whom you acquired the software. This agreement does not change your rights under the
 laws of your country if the laws of your country do not permit it to do so.
 
-11.  DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING
+11.  DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING
 IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE
 ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS
 AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES
@@ -1599,10 +2875,10 @@ DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL 
 
 This limitation applies to
 
-·         anything related to the software, services, content (including code) on third
+-         anything related to the software, services, content (including code) on third
 party Internet sites, or third party programs; and
 
-·         claims for breach of contract, breach of warranty, guarantee or condition,
+-         claims for breach of contract, breach of warranty, guarantee or condition,
 strict liability, negligence, or other tort to the extent permitted by applicable law.
 
 It also applies even if Microsoft knew or should have known about the possibility of the
@@ -1616,11 +2892,11 @@ Remarque : Ce logiciel étant distribué au Québec, Canada, certaines des claus
 contrat sont fournies ci-dessous en français.
 
 EXONÉRATION DE GARANTIE. Le logiciel visé par une licence est offert « tel quel ». Toute
-utilisation de ce logiciel est à votre seule risque et péril. Microsoft n’accorde aucune
+utilisation de ce logiciel est à votre seule risque et péril. Microsoft n'accorde aucune
 autre garantie expresse. Vous pouvez bénéficier de droits additionnels en vertu du droit
 local sur la protection des consommateurs, que ce contrat ne peut modifier. La ou elles
 sont permises par le droit locale, les garanties implicites de qualité marchande,
-d’adéquation à un usage particulier et d’absence de contrefaçon sont exclues.
+d'adéquation à un usage particulier et d'absence de contrefaçon sont exclues.
 
 LIMITATION DES DOMMAGES-INTÉRÊTS ET EXCLUSION DE RESPONSABILITÉ POUR LES DOMMAGES. Vous
 pouvez obtenir de Microsoft et de ses fournisseurs une indemnisation en cas de dommages
@@ -1630,23 +2906,21 @@ pertes de bénéfices.
 
 Cette limitation concerne :
 
-·         tout ce qui est relié au logiciel, aux services ou au contenu (y compris le
+-         tout ce qui est relié au logiciel, aux services ou au contenu (y compris le
 code) figurant sur des sites Internet tiers ou dans des programmes tiers ; et
-
-·         les réclamations au titre de violation de contrat ou de garantie, ou au titre de
-responsabilité stricte, de négligence ou d’une autre faute dans la limite autorisée par la
+-         les réclamations au titre de violation de contrat ou de garantie, ou au titre de
+responsabilité stricte, de négligence ou d'une autre faute dans la limite autorisée par la
 loi en vigueur.
 
-Elle s’applique également, même si Microsoft connaissait ou devrait connaître
-l’éventualité d’un tel dommage. Si votre pays n’autorise pas l’exclusion ou la limitation
+Elle s'applique également, même si Microsoft connaissait ou devrait connaître
+l'éventualité d'un tel dommage. Si votre pays n'autorise pas l'exclusion ou la limitation
 de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce
-soit, il se peut que la limitation ou l’exclusion ci-dessus ne s’appliquera pas à votre
+soit, il se peut que la limitation ou l'exclusion ci-dessus ne s'appliquera pas à votre
 égard.
 
 EFFET JURIDIQUE. Le présent contrat décrit certains droits juridiques. Vous pourriez avoir
-d’autres droits prévus par les lois de votre pays. Le présent contrat ne modifie pas les
+d'autres droits prévus par les lois de votre pays. Le présent contrat ne modifie pas les
 droits que vous confèrent les lois de votre pays si celles-ci ne le permettent pas.
-
 
 
 
@@ -1884,54 +3158,111 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 DEALINGS IN THE SOFTWARE.
 
 
-----------------
-Microsoft Public
-----------------
-Microsoft Public License (Ms-PL)
-
-This license governs use of the accompanying software. If you use the software, you accept
-this license. If you do not accept the license, do not use the software.
-
-1.  Definitions
-The terms "reproduce," "reproduction," "derivative works," and "distribution" have the
-same meaning here as under U.S. copyright law. A "contribution" is the original software,
-or any additions or changes to the software. A "contributor" is any person that
-distributes its contribution under this license. "Licensed patents" are a contributor's
-patent claims that read directly on its contribution.
-
-2.  Grant of Rights
-     (A) Copyright Grant- Subject to the terms of this license, including the license
-conditions and limitations in section 3, each contributor grants you a non-exclusive,
-worldwide, royalty-free copyright license to reproduce its contribution, prepare
-derivative works of its contribution, and distribute its contribution or any derivative
-works that you create.
-
-     (B) Patent Grant- Subject to the terms of this license, including the license
-conditions and limitations in section 3, each contributor grants you a non-exclusive,
-worldwide, royalty-free license under its licensed patents to make, have made, use, sell,
-offer for sale, import, and/or otherwise dispose of its contribution in the software or
-derivative works of the contribution in the software.
-
-3.  Conditions and Limitations
-     (A) No Trademark License- This license does not grant you rights to use any
-contributors' name, logo, or trademarks.
-
-     (B) If you bring a patent claim against any contributor over patents that you claim
-are infringed by the software, your patent license from such contributor to the software
-ends automatically.
-
-     (C) If you distribute any portion of the software, you must retain all copyright,
-patent, trademark, and attribution notices that are present in the software.
-
-     (D) If you distribute any portion of the software in source code form, you may do so
-only under this license by including a complete copy of this license with your
-distribution. If you distribute any portion of the software in compiled or object code
-form, you may only do so under a license that complies with this license.
-
-     (E) The software is licensed "as-is." You bear the risk of using it. The contributors
-give no express warranties, guarantees, or conditions. You may have additional consumer
-rights under your local laws which this license cannot change. To the extent permitted
-under your local laws, the contributors exclude the implied warranties of merchantability,
-fitness for a particular purpose and non-infringement.
+----------------------------------------------
+Microsoft Visual Studio Add-ons and Extensions
+----------------------------------------------
+MICROSOFT SOFTWARE LICENSE TERMS
+MICROSOFT VISUAL STUDIO ADD-ONs and EXTENSIONS
+These license terms are an agreement between Microsoft Corporation (or based on where you
+live, one of its affiliates) and you. They apply to the software named above. The terms
+also apply to any Microsoft services or updates for the software, except to the extent
+those have different terms.
+IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW.
+1. INSTALLATION AND USE RIGHTS.
+You may install and use any number of copies of the software to use solely with
+Visual Studio Community
+Visual Studio Professional
+Visual Studio Enterprise
+Visual Studio Code
+2. THIRD PARTY COMPONENTS.
+The software may include third party components with separate legal notices or governed by
+other agreements, as may be described in the ThirdPartyNotices file(s) accompanying the
+software.
+3. DATA.
+a. Data Collection. The software may collect information about you and your use of the
+software, and send that to Microsoft. Microsoft may use this information to provide
+services and improve our products and services.  You may opt-out of many of these
+scenarios, but not all, as described in the software documentation.  There are also some
+features in the software that may enable you and Microsoft to collect data from users of
+your applications. If you use these features, you must comply with applicable law,
+including providing appropriate notices to users of your applications and you should
+provide a copy of Microsoft's privacy statement to your users. The Microsoft privacy
+statement is located here https://go.microsoft.com/fwlink/?LinkID=824704. You can learn
+more about data collection and use from the software documentation and our privacy
+statement. Your use of the software operates as your consent to these practices.
+b. Processing of Personal Data. To the extent Microsoft is a processor or subprocessor of
+personal data in connection with the software, Microsoft makes the commitments in the
+European Union General Data Protection Regulation Terms of the Online Services Terms to
+all customers effective May 25, 2018, at https://docs.microsoft.com/en-us/legal/gdpr.
+4. SCOPE OF LICENSE. The software is licensed, not sold. These license terms only give you
+some rights to use the software. Microsoft reserves all other rights. Unless applicable
+law gives you more rights despite this limitation, you may use the software only as
+expressly permitted in these license terms. In doing so, you must comply with any
+technical limitations in the software that only allow you to use it in certain ways. In
+addition, you may not
+* work around any technical limitations in the software;
+* reverse engineer, decompile or disassemble the software, or otherwise attempt to derive
+the source code for the software except, and only to the extent required by third party
+licensing terms governing the use of certain open source components that may be included
+in the software;
+* remove, minimize, block or modify any notices of Microsoft or its suppliers in the
+software;
+* use the software in any way that is against the law;
+* share, publish, rent, or lease the software; or
+* provide the software as a stand-alone offering or combine it with any of your
+applications for others to use, or transfer the software or this agreement to any third
+party.
+5. EXPORT RESTRICTIONS. You must comply with all domestic and international export laws
+and regulations that apply to the software, which include restrictions on destinations,
+end users, and end use. For further information on export restrictions, visit
+www.microsoft.com/exporting.
+6. SUPPORT SERVICES. Because this software is "as is", we may not provide support services
+for it.
+7. ENTIRE AGREEMENT. This agreement, and the terms for supplements, updates, Internet-
+based services and support services that you use, are the entire agreement for the
+software and support services.
+8. APPLICABLE LAW. If you acquired the software in the United States, Washington law
+applies to interpretation of and claims for breach of this agreement, and the laws of the
+state where you live apply to all other claims. If you acquired the software in any other
+country, its laws apply.
+9. CONSUMER RIGHTS; REGIONAL VARIATIONS. These license terms describe certain legal
+rights. You may have other rights, including consumer rights, under the laws of your state
+or country. You may also have rights with respect to the party from which you acquired the
+software. This agreement does not change those other rights if the laws of your state or
+country do not permit it to do so. For example, if you acquired the software in one of the
+below regions, or mandatory country law applies, then the following provisions apply to
+you:
+a. Australia. You have statutory guarantees under the Australian Consumer Law and nothing
+in this agreement is intended to affect those rights.
+b. Canada. You may stop receiving updates on your device by turning off Internet access.
+If and when you re-connect to the Internet, the software will resume checking for and
+installing updates.
+c. Germany and Austria.
+(i)     Warranty. The properly licensed software will perform substantially as described
+in any Microsoft materials that accompany the software. However, Microsoft gives no
+contractual guarantee in relation to the licensed software.
+(ii)    Limitation of Liability. In case of intentional conduct, gross negligence, claims
+based on the Product Liability Act, as well as, in the case of death or personal or
+physical injury, Microsoft is liable according to the statutory law.
+Subject to the preceding sentence (ii), Microsoft will only be liable for slight
+negligence if Microsoft is in breach of such material contractual obligations, the
+fulfillment of which facilitate the due performance of this agreement, the breach of which
+would endanger the purpose of this agreement and the compliance with which a party may
+constantly trust in (so-called "cardinal obligations"). In other cases of slight
+negligence, Microsoft will not be liable for slight negligence.
+10. DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS".  YOU BEAR THE RISK OF USING
+IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. TO THE EXTENT
+PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+11. LIMITATION ON AND EXCLUSION OF DAMAGES. YOU CAN RECOVER FROM MICROSOFT AND ITS
+SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES,
+INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.
+This limitation applies to (a) anything related to the software, services, content
+(including code) on third party Internet sites, or third party applications; and (b)
+claims for breach of contract, breach of warranty, guarantee or condition, strict
+liability, negligence, or other tort to the extent permitted by applicable law.
+It also applies even if Microsoft knew or should have known about the possibility of the
+damages. The above limitation or exclusion may not apply to you because your country may
+not allow the exclusion or limitation of incidental, consequential or other damages.
 
 

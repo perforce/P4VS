@@ -1,7 +1,7 @@
                            Release Notes for
                 P4VS, the P4 for Visual Studio
 
-                            Version 2025.2
+                            Version 2026.1
 
 Introduction
 
@@ -18,7 +18,7 @@ Compatibility Statements
 
         Server Compatibility
 
-          This release of P4VS is compatible with P4 Server 2022.2 through 2025.2.
+          This release of P4VS is compatible with P4 Server 2022.2 through 2026.1.
           Earlier P4 Server versions may continue to work but are not actively
           supported and are handled on a best-effort basis.
 
@@ -82,8 +82,10 @@ Compatibility Statements
           maximize the dialog. If ALT+TAB does not allow access to the
           connection dialog, the related screen position saved preference may be
           edited or deleted. The settings file can be found in:
-          C:\Users\<user name>\AppData\Roaming\Perforce\P4VS\localsettings.ini
-          and the related lines in that file are:
+          C:\Users\<user name>\AppData\Roaming\Perforce\P4VS\
+          <VS version>\LocalSettings.ini
+          where <VS version> is the Visual Studio version folder, for
+          example VS2022, and the related lines in that file are:
                 <OpenConnectionDlg_Width type="int">#</OpenConnectionDlg_Width>
                 <OpenConnectionDlg_Height type="int">#</OpenConnectionDlg_Height>
                 <OpenConnectionDlg_Top type="int">#</OpenConnectionDlg_Top>
@@ -143,6 +145,14 @@ Compatibility Statements
 
 ---------------------------------------------------------------------------
 
+Important End-of-Life Notice
+
+        This major release of P4 for Visual Studio would be the last to support 
+        'Windows 10'. This is part of our commitment to focus 
+        on supported platforms.
+
+---------------------------------------------------------------------------
+
 Important Product Rebrand Notice
 
         Helix Core is now P4.
@@ -158,6 +168,47 @@ Key to symbols used in change notes below.
 
           * -- requires new P4VS
          ** -- requires new p4d server program
+
+---------------------------------------------------------------------------
+
+New Functionality in 2026.1 (2026.1/3081617) (2026/09/30)
+
+        #3054224,3061892,3062608 (Job #135984) *
+            Added support for Visual Studio's XML-based .slnx solution format.
+            .slnx solutions now appear in, and can be opened from, the P4VS
+            open solution dialog.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2026.1 (2026.1/3081617) (2026/09/30)
+
+        3064097 (Job #120773) *
+            P4VS now correctly reloads the project in Solution Explorer after
+            reverting a changelist. A file marked for delete via the Remove
+            option reappears in Solution Explorer once the changelist is
+            reverted and the file is restored in P4 and on disk.
+
+        #3061356 (Job #113454) *
+            List rows in the Pending Changelist tool window no longer render
+            with overlapping changelist numbers and text when Visual Studio
+            2022 is used over an RDP connection and the list is long enough to
+            show a scroll bar.
+
+        3035881 (Job #134330) *
+            Input fields under Tools -> Options -> Source Control -> P4 - Data
+            Retrieval are no longer cut off, so the numeric values and their
+            associated unit labels are fully visible.
+
+        2920011 (Job #122387) *
+            P4VS now stores its local settings per Visual Studio version, in a
+            version subfolder under
+            C:\Users\<user name>\AppData\Roaming\Perforce\P4VS\ (for example
+            VS2022\LocalSettings.ini), preventing settings conflicts between
+            Visual Studio versions installed side by side. Settings from an
+            earlier shared LocalSettings.ini are read once and carried over.
+
+        (Job #133690) * **
+            P4VS now uses latest P4API.NET 2026.1.
 
 ---------------------------------------------------------------------------
 

@@ -2214,6 +2214,426 @@ namespace Perforce.P4Scm
 			return true;
 		}
 
+		/// <summary>
+		/// Collects the local paths of the files open for delete. Must run before the
+		/// revert, while the pending delete is still reported by fstat. Uses metadata
+		/// already fetched for the revert, so no extra server round trip is made.
+		/// </summary>
+		private List<string> CollectPendingDeletes(IDictionary<string, P4.FileMetaData> metaData, IList<string> files)
+		{
+			List<string> pendingDeletes = new List<string>();
+			if (metaData == null || files == null)
+			{
+				return pendingDeletes;
+			}
+
+			foreach (string file in files)
+			{
+				P4.FileMetaData fmd;
+				if (!metaData.TryGetValue(file, out fmd)
+					|| fmd == null || fmd.Action != P4.FileAction.Delete)
+				{
+					continue;
+				}
+
+				// LocalPath is the OS path; ClientPath is client syntax
+				if (fmd.LocalPath != null && !string.IsNullOrEmpty(fmd.LocalPath.Path))
+				{
+					pendingDeletes.Add(fmd.LocalPath.Path);
+				}
+			}
+
+			return pendingDeletes;
+		}
+
+		/// <summary>
+		/// Fetches metadata for every file in one fstat, keyed by each path form the
+		/// callers use, so the revert paths can look files up instead of issuing a
+		/// round trip per file.
+		/// </summary>
+		private Dictionary<string, P4.FileMetaData> GetFileMetaDataMap(bool depotFiles, IList<string> files)
+		{
+			Dictionary<string, P4.FileMetaData> map =
+				new Dictionary<string, P4.FileMetaData>(StringComparer.OrdinalIgnoreCase);
+			if (files == null || files.Count == 0)
+			{
+				return map;
+			}
+
+			IList<P4.FileSpec> specs = depotFiles
+				? P4.FileSpec.DepotSpecList(files.ToArray())
+				: P4.FileSpec.LocalSpecList(files.ToArray());
+			P4.Options options = new P4.GetFileMetaDataCmdOptions(
+				P4.GetFileMetadataCmdFlags.FileSize, null, null, -1, null, null, null);
+
+			IList<P4.FileMetaData> fetched = GetFileMetaData(specs, options);
+			if (fetched == null)
+			{
+				return map;
+			}
+
+			foreach (P4.FileMetaData fmd in fetched)
+			{
+				if (fmd == null)
+				{
+					continue;
+				}
+				if (fmd.DepotPath != null && !string.IsNullOrEmpty(fmd.DepotPath.Path))
+				{
+					map[fmd.DepotPath.Path] = fmd;
+				}
+				if (fmd.LocalPath != null && !string.IsNullOrEmpty(fmd.LocalPath.Path))
+				{
+					map[fmd.LocalPath.Path] = fmd;
+				}
+				if (fmd.ClientPath != null && !string.IsNullOrEmpty(fmd.ClientPath.Path))
+				{
+					map[fmd.ClientPath.Path] = fmd;
+				}
+			}
+
+			return map;
+		}
+
+		/// <summary>
+		/// Puts reverted deletes back into their projects. Deleting a file removes the
+		/// item from the project file as well, so reverting only the file leaves it on
+		/// disk but missing from Solution Explorer.
+		///
+		/// Files are grouped by owning project so the loaded projects are walked once
+		/// for the whole batch, each folder item is resolved once per project, and each
+		/// project is saved once however many of its files were restored.
+		/// </summary>
+		private void RestoreRevertedDeletesToProjects(IList<string> localPaths)
+		{
+			Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+			if (localPaths == null || localPaths.Count == 0)
+			{
+				return;
+			}
+
+			// one walk of the loaded projects for the whole batch
+			List<KeyValuePair<string, IVsProject3>> projectDirs = GetControllableProjectDirectories();
+			if (projectDirs.Count == 0)
+			{
+				return;
+			}
+
+			List<IVsProject3> ordered = new List<IVsProject3>();
+			Dictionary<IVsProject3, List<string>> byProject = new Dictionary<IVsProject3, List<string>>();
+
+			foreach (string localPath in localPaths)
+			{
+				if (string.IsNullOrEmpty(localPath))
+				{
+					continue;
+				}
+
+				string file = localPath.Replace("/", "\\");
+				if (!File.Exists(file))
+				{
+					// the revert did not restore the file, nothing to put back
+					continue;
+				}
+
+				IVsProject3 project = FindProjectForFile(projectDirs, file);
+				if (project == null)
+				{
+					continue;
+				}
+
+				// only the owning project needs checking, rather than every project
+				int found;
+				uint itemId;
+				VSDOCUMENTPRIORITY[] priority = new VSDOCUMENTPRIORITY[1];
+				if (project.IsDocumentInProject(file, out found, priority, out itemId)
+						== Microsoft.VisualStudio.VSConstants.S_OK
+					&& found != 0)
+				{
+					// still a member of the project, nothing to restore
+					continue;
+				}
+
+				List<string> forProject;
+				if (!byProject.TryGetValue(project, out forProject))
+				{
+					forProject = new List<string>();
+					byProject[project] = forProject;
+					ordered.Add(project);
+				}
+				forProject.Add(file);
+			}
+
+			for (int idx = 0; idx < ordered.Count; idx++)
+			{
+				IVsProject3 project = ordered[idx];
+				bool added = false;
+				Dictionary<string, uint> folderItems =
+					new Dictionary<string, uint>(StringComparer.OrdinalIgnoreCase);
+
+				foreach (string file in byProject[project])
+				{
+					// The item has to be added under the hierarchy item it physically
+					// lives under. Adding under VSITEMID_ROOT makes Visual Studio copy
+					// the file to the project root instead of adding it in place, so
+					// never fall back to it.
+					uint parentItemId = FindParentItemIdForFile(project, file, folderItems);
+					if (parentItemId == Microsoft.VisualStudio.VSConstants.VSITEMID_NIL)
+					{
+						continue;
+					}
+
+					if (AddToProject(project, file, VSADDITEMOPERATION.VSADDITEMOP_OPENFILE, parentItemId))
+					{
+						added = true;
+					}
+				}
+
+				if (added)
+				{
+					// Persist once for the whole project. The project file stays open
+					// for edit: Visual Studio re-inserts items at a different line than
+					// the original, so the file is logically identical to the depot but
+					// not byte identical and cannot be reverted automatically.
+					SaveProject(project);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Saves a single project.
+		/// </summary>
+		private void SaveProject(IVsProject3 project)
+		{
+			Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+			IVsHierarchy hier = project as IVsHierarchy;
+			if (hier == null)
+			{
+				return;
+			}
+
+			IVsSolution sol = (IVsSolution)P4VsProvider.Instance.GetService(typeof(SVsSolution));
+			if (sol == null)
+			{
+				return;
+			}
+
+			// These are distinct flag bits, so they have to be combined with OR.
+			// Combining them with AND collapses to SLNSAVEOPT_NoSave and silently skips
+			// the save.
+			uint opts = (uint)(__VSSLNSAVEOPTIONS.SLNSAVEOPT_SaveIfDirty | __VSSLNSAVEOPTIONS.SLNSAVEOPT_SkipDocs |
+			__VSSLNSAVEOPTIONS.SLNSAVEOPT_SkipSolution | __VSSLNSAVEOPTIONS.SLNSAVEOPT_SkipUserOptFile);
+			sol.SaveSolutionElement(opts, hier, 0);
+		}
+
+		/// <summary>
+		/// Returns each loaded controllable project paired with its directory, walking
+		/// the solution once so callers can resolve many files without re-enumerating.
+		/// </summary>
+		private List<KeyValuePair<string, IVsProject3>> GetControllableProjectDirectories()
+		{
+			Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+			List<KeyValuePair<string, IVsProject3>> projectDirs =
+				new List<KeyValuePair<string, IVsProject3>>();
+
+			System.Collections.Hashtable hash = P4VsProvider.Instance.GetLoadedControllableProjectsEnum();
+			foreach (IVsHierarchy pHier in hash.Keys)
+			{
+				IVsProject3 project = pHier as IVsProject3;
+				if (project == null || !SccService.IsProjectControlled(pHier))
+				{
+					continue;
+				}
+
+				string projectFile;
+				if (project.GetMkDocument(Microsoft.VisualStudio.VSConstants.VSITEMID_ROOT, out projectFile)
+						!= Microsoft.VisualStudio.VSConstants.S_OK
+					|| string.IsNullOrEmpty(projectFile))
+				{
+					continue;
+				}
+
+				string projectDir = Path.GetDirectoryName(projectFile.Replace("/", "\\"));
+				if (string.IsNullOrEmpty(projectDir))
+				{
+					continue;
+				}
+				if (!projectDir.EndsWith("\\"))
+				{
+					projectDir += "\\";
+				}
+
+				projectDirs.Add(new KeyValuePair<string, IVsProject3>(projectDir, project));
+			}
+
+			return projectDirs;
+		}
+
+		/// <summary>
+		/// Finds the project that should own a file which is no longer a member of any
+		/// project, by longest matching project directory.
+		/// </summary>
+		private IVsProject3 FindProjectForFile(List<KeyValuePair<string, IVsProject3>> projectDirs, string file)
+		{
+			if (projectDirs == null || string.IsNullOrEmpty(file))
+			{
+				return null;
+			}
+
+			string target = file.Replace("/", "\\");
+			IVsProject3 best = null;
+			int bestLength = -1;
+
+			for (int idx = 0; idx < projectDirs.Count; idx++)
+			{
+				string projectDir = projectDirs[idx].Key;
+				if (target.StartsWith(projectDir, StringComparison.OrdinalIgnoreCase)
+					&& projectDir.Length > bestLength)
+				{
+					best = projectDirs[idx].Value;
+					bestLength = projectDir.Length;
+				}
+			}
+
+			return best;
+		}
+
+		/// <summary>
+		/// Finds the hierarchy item the file physically lives under. Returns
+		/// VSITEMID_NIL when the owning folder is not in the project; callers must not
+		/// fall back to VSITEMID_ROOT, because AddItem would then copy the file there.
+		/// Resolved folders are cached so files sharing a folder cost one walk.
+		/// </summary>
+		private uint FindParentItemIdForFile(IVsProject3 project, string file, Dictionary<string, uint> folderItems)
+		{
+			Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+			IVsHierarchy hier = project as IVsHierarchy;
+			string projectFile;
+			if (hier == null
+				|| project.GetMkDocument(Microsoft.VisualStudio.VSConstants.VSITEMID_ROOT, out projectFile)
+					!= Microsoft.VisualStudio.VSConstants.S_OK
+				|| string.IsNullOrEmpty(projectFile))
+			{
+				return Microsoft.VisualStudio.VSConstants.VSITEMID_NIL;
+			}
+
+			string projectDir = Path.GetDirectoryName(projectFile.Replace("/", "\\"));
+			string fileDir = Path.GetDirectoryName(file.Replace("/", "\\"));
+			if (string.IsNullOrEmpty(projectDir) || string.IsNullOrEmpty(fileDir)
+				|| !fileDir.StartsWith(projectDir, StringComparison.OrdinalIgnoreCase))
+			{
+				return Microsoft.VisualStudio.VSConstants.VSITEMID_NIL;
+			}
+
+			string relative = fileDir.Substring(projectDir.Length).Trim('\\');
+			if (string.IsNullOrEmpty(relative))
+			{
+				// the file sits directly in the project directory
+				return Microsoft.VisualStudio.VSConstants.VSITEMID_ROOT;
+			}
+
+			uint cached;
+			if (folderItems != null && folderItems.TryGetValue(relative, out cached))
+			{
+				return cached;
+			}
+
+			uint parent = Microsoft.VisualStudio.VSConstants.VSITEMID_ROOT;
+			string[] segments = relative.Split('\\');
+			string walked = null;
+			for (int idx = 0; idx < segments.Length; idx++)
+			{
+				walked = (walked == null) ? segments[idx] : walked + "\\" + segments[idx];
+
+				uint step;
+				if (folderItems != null && folderItems.TryGetValue(walked, out step))
+				{
+					parent = step;
+					continue;
+				}
+
+				parent = FindChildItemByName(hier, parent, segments[idx]);
+				if (parent == Microsoft.VisualStudio.VSConstants.VSITEMID_NIL)
+				{
+					return Microsoft.VisualStudio.VSConstants.VSITEMID_NIL;
+				}
+				if (folderItems != null)
+				{
+					folderItems[walked] = parent;
+				}
+			}
+
+			return parent;
+		}
+
+		private uint FindChildItemByName(IVsHierarchy hier, uint parent, string name)
+		{
+			Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+			object value;
+			if (hier.GetProperty(parent, (int)__VSHPROPID.VSHPROPID_FirstChild, out value)
+					!= Microsoft.VisualStudio.VSConstants.S_OK)
+			{
+				return Microsoft.VisualStudio.VSConstants.VSITEMID_NIL;
+			}
+
+			uint child = ToItemId(value);
+			while (child != Microsoft.VisualStudio.VSConstants.VSITEMID_NIL)
+			{
+				object childName;
+				if (hier.GetProperty(child, (int)__VSHPROPID.VSHPROPID_Name, out childName)
+						== Microsoft.VisualStudio.VSConstants.S_OK
+					&& childName is string
+					&& string.Equals((string)childName, name, StringComparison.OrdinalIgnoreCase))
+				{
+					return child;
+				}
+
+				object sibling;
+				if (hier.GetProperty(child, (int)__VSHPROPID.VSHPROPID_NextSibling, out sibling)
+						!= Microsoft.VisualStudio.VSConstants.S_OK)
+				{
+					break;
+				}
+				child = ToItemId(sibling);
+			}
+
+			return Microsoft.VisualStudio.VSConstants.VSITEMID_NIL;
+		}
+
+		private static uint ToItemId(object value)
+		{
+			if (value is int)
+			{
+				return (uint)(int)value;
+			}
+			if (value is uint)
+			{
+				return (uint)value;
+			}
+			return Microsoft.VisualStudio.VSConstants.VSITEMID_NIL;
+		}
+
+		/// <summary>
+		/// Adds a file to a project under a specific parent item. The single argument
+		/// overload above links at the project root, which is what reverting a move
+		/// needs; a restored delete has to be added in place.
+		/// </summary>
+		public bool AddToProject(IVsProject3 project, string file, VSADDITEMOPERATION op, uint parentItemId)
+		{
+			Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+			int retVal;
+			VSADDRESULT[] addResArr = new VSADDRESULT[1];
+			string[] fileNames = new string[1] { file };
+			fileNames[0] = fileNames[0].Replace("/", "\\");
+			uint cFilesToOpen = 1;
+
+			retVal = project.AddItem(parentItemId, op, fileNames[0], cFilesToOpen,
+						fileNames, IntPtr.Zero, addResArr);
+
+			return retVal == Microsoft.VisualStudio.VSConstants.S_OK
+				&& addResArr[0] == VSADDRESULT.ADDRESULT_Success;
+		}
+
 		public List<string> PreviewRevertFiles(P4.Options options, P4.Changelist changelist, bool depotFiles, params string[] files)
 		{
 			if (Offline)
@@ -2296,6 +2716,24 @@ namespace Perforce.P4Scm
 				{
 					options = new P4.Options(P4.RevertFilesCmdFlags.UnchangedOnly, -1);
 				}
+
+				// A delete also removes the item from the project file, so collect the
+				// pending deletes before the revert and put the items back afterwards.
+				// A preview (-n) reverts nothing, so there is nothing to restore for it.
+				// One fstat covers both this and the move/add detection below.
+				bool updateProject = Preferences.LocalSettings.GetBool("Update_Project", true);
+				bool preview = options != null && options.ContainsKey("-n");
+				Dictionary<string, P4.FileMetaData> revertMetaData = null;
+				List<string> pendingDeletes = null;
+				if (updateProject)
+				{
+					revertMetaData = GetFileMetaDataMap(DepotFiles, files);
+					if (!preview)
+					{
+						pendingDeletes = CollectPendingDeletes(revertMetaData, files);
+					}
+				}
+
 				if (DepotFiles)
 				{
 					if (options != null && (options.ContainsKey("-n") || options.ContainsKey("-a")))
@@ -2308,11 +2746,15 @@ namespace Perforce.P4Scm
 					}
 
 					// check the preference to see if the project should be updated
-					else if (Preferences.LocalSettings.GetBool("Update_Project", true))
+					else if (updateProject)
 					{
 						foreach (string file in files)
 						{
-							P4.FileMetaData fmd = GetFileMetaData(file);
+							P4.FileMetaData fmd;
+							if (!revertMetaData.TryGetValue(file, out fmd))
+							{
+								fmd = null;
+							}
 							if (fmd !=null&&fmd.Action == P4.FileAction.MoveAdd)
 							{
 								string addPath = fmd.ClientPath.Path;
@@ -2367,11 +2809,15 @@ namespace Perforce.P4Scm
 						}
 					}
 					// change this to else if with preference check
-					else if (Preferences.LocalSettings.GetBool("Update_Project", true))
+					else if (updateProject)
 					{
 						foreach (string file in files)
 						{
-							P4.FileMetaData fmd = GetFileMetaData(file);
+							P4.FileMetaData fmd;
+							if (!revertMetaData.TryGetValue(file, out fmd))
+							{
+								fmd = null;
+							}
 							if (fmd == null)
 							{
 								continue;
@@ -2434,6 +2880,9 @@ namespace Perforce.P4Scm
                         }
 					}
 				}
+
+				RestoreRevertedDeletesToProjects(pendingDeletes);
+
                 P4.P4CommandResult results = Connection.Repository.Connection.LastResults;
 				P4ErrorDlg.Show(results, false);
 
@@ -2493,6 +2942,7 @@ namespace Perforce.P4Scm
 				{
 					options["-c"] = "default";
 				}
+
 
 				if (options != null && (options.ContainsKey("-n") || options.ContainsKey("-a")))
 				{

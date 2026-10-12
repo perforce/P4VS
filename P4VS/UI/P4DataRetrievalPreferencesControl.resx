@@ -160,7 +160,7 @@
     <value>Left</value>
   </data>
   <data name="numberUpdatedFilesTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 160</value>
+    <value>304, 160</value>
   </data>
   <data name="numberUpdatedFilesTB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -190,10 +190,10 @@
     <value>1</value>
   </data>
   <data name="numberUpdateFilesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
+    <value>Left</value>
   </data>
   <data name="numberUpdateFilesLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="numberUpdateFilesLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -922,7 +922,7 @@
     <value>13, 4, 33, 4</value>
   </data>
   <data name="infoLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>708, 31</value>
+    <value>708, 32</value>
   </data>
   <data name="infoLbl.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -946,7 +946,7 @@
     <value>Left</value>
   </data>
   <data name="updateTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 32</value>
+    <value>304, 32</value>
   </data>
   <data name="updateTB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -979,7 +979,7 @@
     <value>Left</value>
   </data>
   <data name="numberFilesTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 64</value>
+    <value>304, 64</value>
   </data>
   <data name="numberFilesTB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1012,7 +1012,7 @@
     <value>Left</value>
   </data>
   <data name="sizeTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 96</value>
+    <value>304, 96</value>
   </data>
   <data name="sizeTB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1045,7 +1045,7 @@
     <value>Left</value>
   </data>
   <data name="numberSpecsTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 128</value>
+    <value>304, 128</value>
   </data>
   <data name="numberSpecsTB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1075,7 +1075,7 @@
     <value>22</value>
   </data>
   <data name="minutesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+    <value>Left, Right</value>
   </data>
   <data name="minutesLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1084,7 +1084,7 @@
     <value>NoControl</value>
   </data>
   <data name="minutesLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>519, 35</value>
+    <value>414, 35</value>
   </data>
   <data name="minutesLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 11, 0</value>
@@ -1111,7 +1111,7 @@
     <value>23</value>
   </data>
   <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+    <value>Left, Right</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1120,7 +1120,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>485, 99</value>
+    <value>414, 99</value>
   </data>
   <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 11, 0</value>
@@ -1147,10 +1147,10 @@
     <value>24</value>
   </data>
   <data name="numberSpecsLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
+    <value>Left</value>
   </data>
   <data name="numberSpecsLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="numberSpecsLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1165,7 +1165,7 @@
     <value>761, 25</value>
   </data>
   <data name="numberSpecsLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>328, 16</value>
+    <value>270, 16</value>
   </data>
   <data name="numberSpecsLbl.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1186,10 +1186,10 @@
     <value>25</value>
   </data>
   <data name="numberFilesLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
+    <value>Left</value>
   </data>
   <data name="numberFilesLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="numberFilesLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1204,7 +1204,7 @@
     <value>761, 25</value>
   </data>
   <data name="numberFilesLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>311, 16</value>
+    <value>270, 16</value>
   </data>
   <data name="numberFilesLbl.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1225,7 +1225,7 @@
     <value>26</value>
   </data>
   <data name="allLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+    <value>Left, Right</value>
   </data>
   <data name="allLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1234,7 +1234,7 @@
     <value>NoControl</value>
   </data>
   <data name="allLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>521, 131</value>
+    <value>414, 131</value>
   </data>
   <data name="allLbl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 11, 0</value>
@@ -1261,10 +1261,10 @@
     <value>27</value>
   </data>
   <data name="sizeLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
+    <value>Left</value>
   </data>
   <data name="sizeLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="sizeLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1279,7 +1279,7 @@
     <value>761, 25</value>
   </data>
   <data name="sizeLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 16</value>
+    <value>270, 16</value>
   </data>
   <data name="sizeLbl.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1300,10 +1300,10 @@
     <value>28</value>
   </data>
   <data name="updateLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
+    <value>Left</value>
   </data>
   <data name="updateLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="updateLbl.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8pt</value>
@@ -1321,7 +1321,7 @@
     <value>761, 25</value>
   </data>
   <data name="updateLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 17</value>
+    <value>270, 17</value>
   </data>
   <data name="updateLbl.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1348,7 +1348,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="gridLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>757, 667</value>
+    <value>744, 667</value>
   </data>
   <data name="gridLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>

@@ -212,7 +212,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.OptimizeSolutionLoadRDO, "OptimizeSolutionLoadRDO");
             this.OptimizeSolutionLoadRDO.CellHeight = 31;
-            this.OptimizeSolutionLoadRDO.CellWidth = 754;
+            this.OptimizeSolutionLoadRDO.CellWidth = 546;
             this.OptimizeSolutionLoadRDO.Column = 0;
             this.OptimizeSolutionLoadRDO.ColumnsSpanned = 2;
             this.OptimizeSolutionLoadRDO.Name = "OptimizeSolutionLoadRDO";
@@ -227,7 +227,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.numberUpdatedFilesTB, "numberUpdatedFilesTB");
             this.numberUpdatedFilesTB.CellHeight = 32;
-            this.numberUpdatedFilesTB.CellWidth = 230;
+            this.numberUpdatedFilesTB.CellWidth = 110;
             this.numberUpdatedFilesTB.Column = 1;
             this.numberUpdatedFilesTB.ColumnsSpanned = 0;
             this.numberUpdatedFilesTB.Name = "numberUpdatedFilesTB";
@@ -240,7 +240,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.numberUpdateFilesLbl, "numberUpdateFilesLbl");
             this.numberUpdateFilesLbl.AutoEllipsis = true;
             this.numberUpdateFilesLbl.CellHeight = 32;
-            this.numberUpdateFilesLbl.CellWidth = 388;
+            this.numberUpdateFilesLbl.CellWidth = 300;
             this.numberUpdateFilesLbl.Column = 0;
             this.numberUpdateFilesLbl.ColumnsSpanned = 0;
             this.numberUpdateFilesLbl.Name = "numberUpdateFilesLbl";
@@ -252,7 +252,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.disableParSubmitCB, "disableParSubmitCB");
             this.disableParSubmitCB.CellHeight = 31;
-            this.disableParSubmitCB.CellWidth = 754;
+            this.disableParSubmitCB.CellWidth = 546;
             this.disableParSubmitCB.Column = 0;
             this.disableParSubmitCB.ColumnsSpanned = 2;
             this.disableParSubmitCB.Name = "disableParSubmitCB";
@@ -265,7 +265,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.disableParShelveCB, "disableParShelveCB");
             this.disableParShelveCB.CellHeight = 31;
-            this.disableParShelveCB.CellWidth = 754;
+            this.disableParShelveCB.CellWidth = 546;
             this.disableParShelveCB.Column = 0;
             this.disableParShelveCB.ColumnsSpanned = 2;
             this.disableParShelveCB.Name = "disableParShelveCB";
@@ -278,7 +278,7 @@ namespace Perforce.P4VS
             //
             resources.ApplyResources(this.disableParSyncCB, "disableParSyncCB");
             this.disableParSyncCB.CellHeight = 31;
-            this.disableParSyncCB.CellWidth = 754;
+            this.disableParSyncCB.CellWidth = 546;
             this.disableParSyncCB.Column = 0;
             this.disableParSyncCB.ColumnsSpanned = 2;
             this.disableParSyncCB.Name = "disableParSyncCB";
@@ -291,7 +291,7 @@ namespace Perforce.P4VS
             //
             resources.ApplyResources(this.gridLayoutSubpanel3, "gridLayoutSubpanel3");
             this.gridLayoutSubpanel3.CellHeight = 30;
-            this.gridLayoutSubpanel3.CellWidth = 754;
+            this.gridLayoutSubpanel3.CellWidth = 546;
             this.gridLayoutSubpanel3.Column = 0;
             this.gridLayoutSubpanel3.ColumnsSpanned = 2;
             this.gridLayoutSubpanel3.Controls.Add(this.gridLabel4);
@@ -335,7 +335,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.gridLabel3, "gridLabel3");
             this.gridLabel3.CellHeight = 42;
-            this.gridLabel3.CellWidth = 754;
+            this.gridLabel3.CellWidth = 546;
             this.gridLabel3.Column = 0;
             this.gridLabel3.ColumnsSpanned = 2;
             this.gridLabel3.Name = "gridLabel3";
@@ -359,7 +359,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.gridLayoutSubpanel2, "gridLayoutSubpanel2");
             this.gridLayoutSubpanel2.CellHeight = 30;
-            this.gridLayoutSubpanel2.CellWidth = 754;
+            this.gridLayoutSubpanel2.CellWidth = 546;
             this.gridLayoutSubpanel2.Column = 0;
             this.gridLayoutSubpanel2.ColumnsSpanned = 2;
             this.gridLayoutSubpanel2.Controls.Add(this.gridLabel2);
@@ -403,7 +403,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.gridLayoutSubpanel1, "gridLayoutSubpanel1");
             this.gridLayoutSubpanel1.CellHeight = 27;
-            this.gridLayoutSubpanel1.CellWidth = 754;
+            this.gridLayoutSubpanel1.CellWidth = 546;
             this.gridLayoutSubpanel1.Column = 0;
             this.gridLayoutSubpanel1.ColumnsSpanned = 2;
             this.gridLayoutSubpanel1.Controls.Add(this.dataRetrievalLbl);
@@ -447,7 +447,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.LLFullMenuCB, "LLFullMenuCB");
             this.LLFullMenuCB.CellHeight = 23;
-            this.LLFullMenuCB.CellWidth = 754;
+            this.LLFullMenuCB.CellWidth = 546;
             this.LLFullMenuCB.Column = 0;
             this.LLFullMenuCB.ColumnsSpanned = 2;
             this.LLFullMenuCB.Name = "LLFullMenuCB";
@@ -460,7 +460,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.PreloadCacheCB, "PreloadCacheCB");
             this.PreloadCacheCB.CellHeight = 23;
-            this.PreloadCacheCB.CellWidth = 754;
+            this.PreloadCacheCB.CellWidth = 546;
             this.PreloadCacheCB.Column = 0;
             this.PreloadCacheCB.ColumnsSpanned = 2;
             this.PreloadCacheCB.Name = "PreloadCacheCB";
@@ -473,7 +473,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.TreatProjectsAsDirsCB, "TreatProjectsAsDirsCB");
             this.TreatProjectsAsDirsCB.CellHeight = 23;
-            this.TreatProjectsAsDirsCB.CellWidth = 754;
+            this.TreatProjectsAsDirsCB.CellWidth = 546;
             this.TreatProjectsAsDirsCB.Column = 0;
             this.TreatProjectsAsDirsCB.ColumnsSpanned = 2;
             this.TreatProjectsAsDirsCB.Name = "TreatProjectsAsDirsCB";
@@ -486,7 +486,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.NoFstatOptimizatioRDO, "NoFstatOptimizatioRDO");
             this.NoFstatOptimizatioRDO.CellHeight = 31;
-            this.NoFstatOptimizatioRDO.CellWidth = 754;
+            this.NoFstatOptimizatioRDO.CellWidth = 546;
             this.NoFstatOptimizatioRDO.Column = 0;
             this.NoFstatOptimizatioRDO.ColumnsSpanned = 2;
             this.NoFstatOptimizatioRDO.Name = "NoFstatOptimizatioRDO";
@@ -501,7 +501,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.LazyLoadRDO, "LazyLoadRDO");
             this.LazyLoadRDO.CellHeight = 31;
-            this.LazyLoadRDO.CellWidth = 754;
+            this.LazyLoadRDO.CellWidth = 546;
             this.LazyLoadRDO.Column = 0;
             this.LazyLoadRDO.ColumnsSpanned = 2;
             this.LazyLoadRDO.Name = "LazyLoadRDO";
@@ -516,7 +516,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.OptimizeFstatsRDO, "OptimizeFstatsRDO");
             this.OptimizeFstatsRDO.CellHeight = 31;
-            this.OptimizeFstatsRDO.CellWidth = 754;
+            this.OptimizeFstatsRDO.CellWidth = 546;
             this.OptimizeFstatsRDO.Column = 0;
             this.OptimizeFstatsRDO.ColumnsSpanned = 2;
             this.OptimizeFstatsRDO.Name = "OptimizeFstatsRDO";
@@ -531,7 +531,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.AutoUpdateStatudCB, "AutoUpdateStatudCB");
             this.AutoUpdateStatudCB.CellHeight = 31;
-            this.AutoUpdateStatudCB.CellWidth = 754;
+            this.AutoUpdateStatudCB.CellWidth = 546;
             this.AutoUpdateStatudCB.Column = 0;
             this.AutoUpdateStatudCB.ColumnsSpanned = 2;
             this.AutoUpdateStatudCB.Name = "AutoUpdateStatudCB";
@@ -545,7 +545,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.infoLbl, "infoLbl");
             this.infoLbl.AutoEllipsis = true;
             this.infoLbl.CellHeight = 41;
-            this.infoLbl.CellWidth = 754;
+            this.infoLbl.CellWidth = 546;
             this.infoLbl.Column = 0;
             this.infoLbl.ColumnsSpanned = 2;
             this.infoLbl.Name = "infoLbl";
@@ -557,7 +557,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.updateTB, "updateTB");
             this.updateTB.CellHeight = 32;
-            this.updateTB.CellWidth = 230;
+            this.updateTB.CellWidth = 110;
             this.updateTB.Column = 1;
             this.updateTB.ColumnsSpanned = 0;
             this.updateTB.Name = "updateTB";
@@ -569,7 +569,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.numberFilesTB, "numberFilesTB");
             this.numberFilesTB.CellHeight = 32;
-            this.numberFilesTB.CellWidth = 230;
+            this.numberFilesTB.CellWidth = 110;
             this.numberFilesTB.Column = 1;
             this.numberFilesTB.ColumnsSpanned = 0;
             this.numberFilesTB.Name = "numberFilesTB";
@@ -581,7 +581,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.sizeTB, "sizeTB");
             this.sizeTB.CellHeight = 32;
-            this.sizeTB.CellWidth = 230;
+            this.sizeTB.CellWidth = 110;
             this.sizeTB.Column = 1;
             this.sizeTB.ColumnsSpanned = 0;
             this.sizeTB.Name = "sizeTB";
@@ -593,7 +593,7 @@ namespace Perforce.P4VS
             // 
             resources.ApplyResources(this.numberSpecsTB, "numberSpecsTB");
             this.numberSpecsTB.CellHeight = 32;
-            this.numberSpecsTB.CellWidth = 230;
+            this.numberSpecsTB.CellWidth = 110;
             this.numberSpecsTB.Column = 1;
             this.numberSpecsTB.ColumnsSpanned = 0;
             this.numberSpecsTB.Name = "numberSpecsTB";
@@ -634,7 +634,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.numberSpecsLbl, "numberSpecsLbl");
             this.numberSpecsLbl.AutoEllipsis = true;
             this.numberSpecsLbl.CellHeight = 32;
-            this.numberSpecsLbl.CellWidth = 388;
+            this.numberSpecsLbl.CellWidth = 300;
             this.numberSpecsLbl.Column = 0;
             this.numberSpecsLbl.ColumnsSpanned = 0;
             this.numberSpecsLbl.Name = "numberSpecsLbl";
@@ -647,7 +647,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.numberFilesLbl, "numberFilesLbl");
             this.numberFilesLbl.AutoEllipsis = true;
             this.numberFilesLbl.CellHeight = 32;
-            this.numberFilesLbl.CellWidth = 388;
+            this.numberFilesLbl.CellWidth = 300;
             this.numberFilesLbl.Column = 0;
             this.numberFilesLbl.ColumnsSpanned = 0;
             this.numberFilesLbl.Name = "numberFilesLbl";
@@ -674,7 +674,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.sizeLbl, "sizeLbl");
             this.sizeLbl.AutoEllipsis = true;
             this.sizeLbl.CellHeight = 32;
-            this.sizeLbl.CellWidth = 388;
+            this.sizeLbl.CellWidth = 300;
             this.sizeLbl.Column = 0;
             this.sizeLbl.ColumnsSpanned = 0;
             this.sizeLbl.Name = "sizeLbl";
@@ -687,7 +687,7 @@ namespace Perforce.P4VS
             resources.ApplyResources(this.updateLbl, "updateLbl");
             this.updateLbl.AutoEllipsis = true;
             this.updateLbl.CellHeight = 32;
-            this.updateLbl.CellWidth = 388;
+            this.updateLbl.CellWidth = 300;
             this.updateLbl.Column = 0;
             this.updateLbl.ColumnsSpanned = 0;
             this.updateLbl.Name = "updateLbl";
